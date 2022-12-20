@@ -5,3 +5,5 @@ The purpose of this repository is to keep a well-documented and stored version o
 This repository also hosts some other smaller 'foundational' documents such as a literature review and progress reports. 
 
 For any information about my research or otherwise please contact me via my email at ojohnson@tcd.ie or owenjohnson@berkeley.edu.
+
+---

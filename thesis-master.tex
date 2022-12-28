@@ -1,0 +1,85 @@
+\documentclass[a4paper, oneside]{book}
+
+% --- Packages --- 
+% Fonts & Formatting 
+\usepackage[T1]{fontenc} 
+\usepackage[utf8]{inputenc}
+\usepackage[pdftex]{graphicx}
+\usepackage{fancyhdr}
+\usepackage{enumerate}
+\usepackage[parfill]{parskip} % empty line instead of an indent for new paragraphs
+\usepackage{xcolor}
+% Bib Stuff 
+\usepackage[round,sort,comma,numbers]{natbib}
+\usepackage{hyperref}
+
+% --- Page Setup --- 
+\usepackage[a4paper,top=2.56cm,bottom=2.56cm,left=2.56cm,right=2.56cm, head = 16pt]{geometry}
+\pagestyle{fancy}
+\usepackage{titlesec} % - Chapter Headings 
+\usepackage{epigraph}
+\setlength\epigraphwidth{.8\textwidth}
+\setlength\epigraphrule{1pt}
+
+% \usepackage{cleveref}
+
+% --- Chapter Title Setup --- 
+\newcommand{\hsp}{\hspace{20pt}}
+\definecolor{tcdblue}{cmyk}{0.94, 0.38, 0, 0.27}
+\titleformat{\chapter}[hang]{\Huge\bfseries}{\thechapter\hsp\textcolor{tcdblue}{|}\hsp}{0pt}{\Huge\bfseries}
+
+% --- Command Text Commands --- 
+\newcommand{\thesistitle}{Meaningful Transient Science!}
+\newcommand{\school}{\href{https://chemistry.tcd.ie/}{Astrophysics Research Group}}
+\newcommand{\supervisor}{Assoc. Prof. Evan F. Keane}
+
+\begin{document}
+\input{title/title.tex}
+\pagenumbering{roman}
+
+
+% --- Declearation --- 
+\hspace{0pt}
+\vfill
+\section*{Declaration}
+I hereby declare that this thesis is entirely my own work and that it has not been submitted as an exercise for a degree at this or any other university.
+
+I have read and I understand the plagiarism provisions in the General Regulations of the University Calendar for the current year, found at \url{http://www.tcd.ie/calendar}.
+
+I have also completed the Online Tutorial on avoiding plagiarism `Ready Steady Write', located at \url{http://tcd-ie.libguides.com/plagiarism/ready-steady-write}.
+
+I agree to deposit this thesis in the University’s open access institu-
+tional repository or allow the library to do so on my behalf, subject
+to Irish Copyright Legislation and Trinity College Library conditions
+of use and acknowledgement.
+\vspace{1cm}
+
+Signed:~\rule{5cm}{0.3pt}\hfill Date:~\rule{5cm}{0.3pt}
+
+This is some text to be centered vertically.
+\vfill
+\hspace{0pt}
+
+% --- Abstract --- 
+\newpage
+\chapter*{Abstract}
+Fortunately there are still many open questions about this wild and wondrous cosmos that we find ourselves in.
+
+% --- Important Pages --- 
+\tableofcontents
+\listoffigures
+\listoftables
+\input{misc/nomenclature.tex}
+
+\chapter{Introduction}
+\epigraph{\small\itshape “For a moment, nothing happened. Then, after a second or so, nothing continued to happen.” "\raggedleft\par--- \textup{ Douglas Adams, The Hitchhiker's Guide to the Galaxy}}
+
+Pulsars are a type of neutron star, which is the dense, collapsed core of a massive star that has exploded as a supernova. Pulsars are named for the way they emit bursts of electromagnetic radiation, or light, which can be observed from Earth as pulses. These bursts are created as the neutron star rotates, and a beam of electromagnetic radiation is produced from its magnetic poles. As the beam passes by Earth, it appears as a pulse of light.
+
+Pulsars are some of the most extreme objects in the universe, with densities so high that a sugar cube's worth of material from a pulsar would weigh as much as all the humans on Earth combined. They are also incredibly fast-spinning, with some pulsars completing a full rotation in just a few milliseconds.
+
+So, to sum it up in slang, pulsars are like cosmic lighthouses that spin super fast and are super dense, shooting out beams of light that we can see as pulses. Cool, right?
+
+\section{Background}
+
+\end{document}

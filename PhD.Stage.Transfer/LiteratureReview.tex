@@ -1,0 +1,117 @@
+%
+%                       This is a basic LeTeX Template
+%                       for the First Year PhD literature review 
+\documentclass[a4paper,12pt]{article}
+\usepackage{head,fullpage}     % Add local fullpage and head macros
+\usepackage[pdftex]{graphicx}  % Add graphicx pachage with pdf flag (must use pdflatex)
+\usepackage{datetime}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{cleveref}
+\usepackage[square,numbers]{natbib}
+\bibliographystyle{abbrvnat}
+\usepackage{float}
+\usepackage{setspace}
+
+% Set 1.5 spacing
+\onehalfspacing
+
+% --- Commands --- 
+\newcommand{\smass}{\, \text{M}_\odot}
+
+\newcounter{daggerfootnote}
+\newcommand*{\daggerfootnote}[1]{%
+    \setcounter{daggerfootnote}{\value{footnote}}%
+    \renewcommand*{\thefootnote}{\fnsymbol{footnote}}%
+    \footnote[2]{#1}%
+    \setcounter{footnote}{\value{daggerfootnote}}%
+    \renewcommand*{\thefootnote}{\arabic{footnote}}%
+    }
+
+\newdateformat{monthyeardate}{%
+  \monthname[\THEMONTH], \THEYEAR}
+\parindent=0pt          %  Switch off indent of paragraphs 
+\parskip=5pt            %  Put 5pt between each paragraph  
+
+\begin{document}
+\begin{minipage}[b]{110mm}
+        {\LARGE\bf School of Physics %\\and Astronomy
+        \vspace*{17mm}}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{40mm}               
+        \makebox[40mm]{
+        \includegraphics[width=40mm]{assets/tcd.logo.png}}
+\end{minipage}
+\par\noindent                                           % Centre Title, and name
+\vspace*{2cm}
+\begin{center}
+        \Large\bf The Fast Transient Sky\\
+        \normalsize \textit{Stage Transfer Report}
+\end{center}
+\vspace*{1.5cm}
+\begin{center}
+        Owen Johnson\daggerfootnote{ojohnson@tcd.ie}\\ 
+        Astrophysics Group\\ 
+        \monthyeardate\today            % Submission Date
+\end{center}
+\vspace*{5mm}
+%
+%                       Insert your abstract HERE
+%                       
+\begin{abstract}
+        The abstract is a short concise outline of your 
+        project area, {\bf of no more than 100 words}.
+\end{abstract}
+
+\vspace*{1cm}
+
+% \vspace*{3cm}
+% Signature:\hspace*{8cm}Date:
+
+\vfill
+{\bf Supervisor:} Assoc. Prof. Evan Keane          
+\newpage
+%                                               Through page and setup 
+%                                               fancy headings
+\setcounter{page}{1}                            % Set page number to 1
+\footruleheight{1pt}
+\headruleheight{1pt}
+\lfoot{\small School of Physics}
+\lhead{Stage Transfer Report}
+\rhead{ \thepage}
+\cfoot{}
+\rfoot{Date: \today}
+%
+\tableofcontents  
+\thispagestyle{empty}         
+\newpage 
+                      % Makes Table of Contents
+
+\section*{Publications and Presentations}
+\subsection*{Publications}
+
+\textbf{Johnson, O.A}., Gajjar, V., Keane, E.F., et. al (2023). Simultaneous dual-site SETI with LOFAR international stations. Manuscript accepted for publication to AJ. arXiv:2310.15704
+
+\subsection*{Presentations}
+\begin{enumerate}
+\item Low Frequency's Place in SETI, January, 2024, PSETI Symposium, Penn State. \hfill \textbf{[Invited]}
+\item Technosignatures with NenuFAR, December, 2023, Science at Low Frequencies IX, UvA. 
+\item SETI Science at 30 - 190 MHz, November, 2023, BLUK Workshop, SKAO.\\ \textbf{[Invited]}
+\item Technosignature Science at Low Frequencies, November, 2023, NASA Goddard Flight Center. \hfill \\ \textbf{[Invited]}
+\item Dual Site SETI Searches, 2023, International Astronautical Congress, Baku. 
+\end{enumerate}
+
+\newpage
+\input{sections/section-1}
+
+\section{Work This Far}
+\subsection{Search for Extraterrestrial Intelligence}
+\subsection{M-dwarf Radio Flares}
+\input{sections/section4-PD}
+\section{Summary}
+
+\bibliography{frb,pulsar}       % Multiple bib files.
+
+\end{document}
+

@@ -1,5 +1,0 @@
-\contentsline {section}{\numberline {1}Outline}{2}{}%
-\contentsline {section}{\numberline {2}A prelude to Pulsars}{2}{}%
-\contentsline {section}{\numberline {3}Open Questions}{2}{}%
-\contentsline {section}{\numberline {4}Thesis Proposal}{2}{}%
-\contentsline {section}{\numberline {5}Summary}{2}{}%

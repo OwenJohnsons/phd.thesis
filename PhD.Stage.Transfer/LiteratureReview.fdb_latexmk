@@ -1,21 +1,21 @@
 # Fdb version 4
-["bibtex LiteratureReview"] 1705424799 "LiteratureReview.aux" "LiteratureReview.bbl" "LiteratureReview" 1705425056 0
+["bibtex LiteratureReview"] 1705495483 "LiteratureReview.aux" "LiteratureReview.bbl" "LiteratureReview" 1705495484 0
   "./frb.bib" 1705332780 1711 ff691a5408e7e3d23bb4100ab4fe1f94 ""
   "./pulsar.bib" 1705402126 5588 5e1c6c03325c814e363d53d7c350a7d2 ""
   "/usr/local/texlive/2023/texmf-dist/bibtex/bst/natbib/abbrvnat.bst" 1233624470 26532 66bed5cc59495faaa3f9ae9af9fa5e42 ""
-  "LiteratureReview.aux" 1705425055 3393 53fe8511d2a7d34adf7f3b79bbbe96e7 "pdflatex"
+  "LiteratureReview.aux" 1705495484 3393 53fe8511d2a7d34adf7f3b79bbbe96e7 "pdflatex"
   (generated)
   "LiteratureReview.bbl"
   "LiteratureReview.blg"
   (rewritten before read)
-["makeindex LiteratureReview.idx"] 1705424733 "LiteratureReview.idx" "LiteratureReview.ind" "LiteratureReview" 1705425056 0
-  "LiteratureReview.idx" 1705425055 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+["makeindex LiteratureReview.idx"] 1705424733 "LiteratureReview.idx" "LiteratureReview.ind" "LiteratureReview" 1705495484 0
+  "LiteratureReview.idx" 1705495483 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   (generated)
   "LiteratureReview.ilg"
   "LiteratureReview.ind"
   (rewritten before read)
-["pdflatex"] 1705425054 "/Users/oj/Library/CloudStorage/GoogleDrive-ojohnson@tcd.ie/My Drive/REPOS/phd.thesis/PhD.Stage.Transfer/LiteratureReview.tex" "LiteratureReview.pdf" "LiteratureReview" 1705425056 0
-  "/Users/oj/Library/CloudStorage/GoogleDrive-ojohnson@tcd.ie/My Drive/REPOS/phd.thesis/PhD.Stage.Transfer/LiteratureReview.tex" 1705425054 5977 83136b830bc67dd687716b50a4cd1200 ""
+["pdflatex"] 1705495483 "/Users/oj/Library/CloudStorage/GoogleDrive-ojohnson@tcd.ie/My Drive/REPOS/phd.thesis/PhD.Stage.Transfer/LiteratureReview.tex" "LiteratureReview.pdf" "LiteratureReview" 1705495484 0
+  "/Users/oj/Library/CloudStorage/GoogleDrive-ojohnson@tcd.ie/My Drive/REPOS/phd.thesis/PhD.Stage.Transfer/LiteratureReview.tex" 1705495482 5976 4bd61dce8ede77097eef8f288df11680 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/jknappen/ec/tcrm0700.tfm" 1136768653 1536 73da8e8f1d2a4c957d51ca133585586b ""
@@ -131,12 +131,12 @@
   "/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1684243427 4623355 b8cad38412faebe1ce5b780a45db67bd ""
   "/usr/local/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt" 1684243370 7883454 b4b174c8a6ab4c0400a18b1744003421 ""
   "/usr/local/texlive/2023/texmf.cnf" 1678822455 577 1b2b1af17af2508fb20dd85783af4050 ""
-  "LiteratureReview.aux" 1705425055 3393 53fe8511d2a7d34adf7f3b79bbbe96e7 "pdflatex"
-  "LiteratureReview.bbl" 1705424799 1968 4d1f6c95fa9186af8776776db3db8366 "bibtex LiteratureReview"
-  "LiteratureReview.ind" 1705425055 0 d41d8cd98f00b204e9800998ecf8427e "makeindex LiteratureReview.idx"
-  "LiteratureReview.out" 1705425055 1727 6816f708380b7c4845e22cb1f2491f5b "pdflatex"
-  "LiteratureReview.tex" 1705425054 5977 83136b830bc67dd687716b50a4cd1200 ""
-  "LiteratureReview.toc" 1705425055 928 a5226f60b9210ec64f4c6df4651b7b08 "pdflatex"
+  "LiteratureReview.aux" 1705495484 3393 53fe8511d2a7d34adf7f3b79bbbe96e7 "pdflatex"
+  "LiteratureReview.bbl" 1705495483 1968 4d1f6c95fa9186af8776776db3db8366 "bibtex LiteratureReview"
+  "LiteratureReview.ind" 1705495484 0 d41d8cd98f00b204e9800998ecf8427e "makeindex LiteratureReview.idx"
+  "LiteratureReview.out" 1705495484 1727 6816f708380b7c4845e22cb1f2491f5b "pdflatex"
+  "LiteratureReview.tex" 1705495482 5976 4bd61dce8ede77097eef8f288df11680 ""
+  "LiteratureReview.toc" 1705495484 928 a5226f60b9210ec64f4c6df4651b7b08 "pdflatex"
   "assets/tcd.logo.png" 1705332781 55214 f13da49df288a76e8a3976ab462ebc59 ""
   "figs/PPdot-diagram.pdf" 1705332781 193631 bfeeeade9e7c19daf7befabebaa49a07 ""
   "figs/theory/redback-multiwavelength-emission.jpg" 1705338597 624373 db756e8f3501da58896d36b4c6b47e17 ""

@@ -5,16 +5,24 @@
 \usepackage{head,fullpage}     % Add local fullpage and head macros
 \usepackage[pdftex]{graphicx}  % Add graphicx pachage with pdf flag (must use pdflatex)
 \usepackage{datetime}
-\usepackage{hyperref}
+\usepackage{xcolor}
+\definecolor{tcd-blue}{HTML}{0569b9}
+\definecolor{tcd-lightblue}{HTML}{448fcb}
+\usepackage[colorlinks=true,citecolor=tcd-blue,linkcolor=tcd-lightblue]{hyperref}
 \usepackage{amsmath}
 \usepackage{cleveref}
-\usepackage[square,numbers]{natbib}
+\usepackage[round]{natbib}
 \bibliographystyle{abbrvnat}
 \usepackage{float}
 \usepackage{setspace}
+\usepackage{imakeidx}
+\makeindex
 
 % Set 1.5 spacing
 \onehalfspacing
+
+% Custom Colours 
+
 
 % --- Commands --- 
 \newcommand{\smass}{\, \text{M}_\odot}
@@ -83,12 +91,15 @@
 \cfoot{}
 \rfoot{Date: \today}
 %
-\tableofcontents  
+{
+\hypersetup{linkcolor=black}
+\tableofcontents 
+} 
 \thispagestyle{empty}         
 \newpage 
                       % Makes Table of Contents
 
-\vfill
+% \vspace*{\fill}
 \section*{Declaration}
 I hereby declare that this report is entirely my own work and that it has not been submitted as an exercise for a degree at this or any other university.
 
@@ -98,8 +109,7 @@ I have read and I understand the plagiarism provisions in the General Regulation
 
 Signed:~\rule{5cm}{0.3pt}\hfill Date:~\rule{5cm}{0.3pt}
 
-\vfill
-\hspace{0pt}
+\vspace*{\fill}
 \newpage
 
 \section*{Publications and Presentations}
@@ -117,6 +127,34 @@ Signed:~\rule{5cm}{0.3pt}\hfill Date:~\rule{5cm}{0.3pt}
 \end{enumerate}
 
 \newpage
+\section*{Physical Constants}
+\vspace*{\fill}
+\begin{table}[H]
+        \centering
+        \begin{tabular}{|c|c|c|}
+                \hline
+                Constant & Symbol & Value \\
+                \hline
+                Speed of Light & $c$ & $2.99792458 \times 10^8 \text{ m/s}$ \\
+                Gravitational Constant & $G$ & $6.674 \times 10^{-11} \text{ m}^3 \text{ kg}^{-1} \text{ s}^{-2}$ \\
+                Planck's Constant & $h$ & $6.626 \times 10^{-34} \text{ m}^2 \text{ kg} \text{ s}^{-1}$ \\
+                Boltzmann Constant & $k_B$ & $1.381 \times 10^{-23} \text{ m}^2 \text{ kg} \text{ s}^{-2} \text{ K}^{-1}$ \\
+                Stefan-Boltzmann Constant & $\sigma$ & $5.670 \times 10^{-8} \text{ W} \text{ m}^{-2} \text{ K}^{-4}$ \\
+                Electron Charge & $e$ & $1.602 \times 10^{-19} \text{ C}$ \\
+                Electron Mass & $m_e$ & $9.109 \times 10^{-31} \text{ kg}$ \\
+                Proton Mass & $m_p$ & $1.672 \times 10^{-27} \text{ kg}$ \\
+                Neutron Mass & $m_n$ & $1.675 \times 10^{-27} \text{ kg}$ \\
+                Solar Mass & $M_\odot$ & $1.989 \times 10^{30} \text{ kg}$ \\
+                Solar Radius & $R_\odot$ & $6.957 \times 10^8 \text{ m}$ \\
+                Solar Luminosity & $L_\odot$ & $3.828 \times 10^{26} \text{ W}$ \\
+                Solar Temperature & $T_\odot$ & $5772 \text{ K}$ \\
+                Jansky & Jy & $10^{-26} \text{ W} \text{ m}^{-2} \text{ Hz}^{-1}$ \\
+                \hline
+        \end{tabular}
+\end{table}
+\vspace*{\fill}
+
+\newpage
 \input{sections/section-1}
 
 \section{Work This Far}
@@ -125,7 +163,11 @@ Signed:~\rule{5cm}{0.3pt}\hfill Date:~\rule{5cm}{0.3pt}
 \input{sections/section4-PD}
 \section{Summary}
 
+\newpage
 \bibliography{frb,pulsar}       % Multiple bib files.
+
+\newpage
+\printindex
 
 \end{document}
 

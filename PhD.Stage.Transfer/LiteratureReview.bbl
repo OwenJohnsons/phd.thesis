@@ -1,8 +1,37 @@
-\begin{thebibliography}{0}
+\begin{thebibliography}{4}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[{Lorimer} and {Kramer}(2004)]{pulsar_handbook}
+D.~R. {Lorimer} and M.~{Kramer}.
+\newblock \emph{{Handbook of Pulsar Astronomy}}, volume~4.
+\newblock Cambridge University Press, 2004.
+
+\bibitem[Oppenheimer and Volkoff(1939)]{oppenheimer_massive_1939}
+J.~R. Oppenheimer and G.~M. Volkoff.
+\newblock On {Massive} {Neutron} {Cores}.
+\newblock \emph{Physical Review}, 55\penalty0 (4):\penalty0 374--381, Feb. 1939.
+\newblock \doi{10.1103/PhysRev.55.374}.
+\newblock URL \url{https://link.aps.org/doi/10.1103/PhysRev.55.374}.
+\newblock Publisher: American Physical Society.
+
+\bibitem[Romani et~al.(2022)Romani, Kandel, Filippenko, Brink, and Zheng]{Romani_2022}
+R.~W. Romani, D.~Kandel, A.~V. Filippenko, T.~G. Brink, and W.~Zheng.
+\newblock Psr j0952-0607: The fastest and heaviest known galactic neutron star.
+\newblock \emph{The Astrophysical Journal Letters}, 934\penalty0 (2):\penalty0 L17, jul 2022.
+\newblock \doi{10.3847/2041-8213/ac8007}.
+\newblock URL \url{https://dx.doi.org/10.3847/2041-8213/ac8007}.
+
+\bibitem[Takata et~al.(2014)Takata, Li, Leung, Kong, Tam, Hui, Wu, Xing, Cao, Tang, Wang, and Cheng]{takata_multi-wavelength_2014}
+J.~Takata, K.~L. Li, G.~C.~K. Leung, A.~K.~H. Kong, P.~H.~T. Tam, C.~Y. Hui, E.~M.~H. Wu, Y.~Xing, Y.~Cao, S.~Tang, Z.~Wang, and K.~S. Cheng.
+\newblock Multi-wavelength emissions from the millisecond pulsar binary psr j1023+0038 during an accretion active state.
+\newblock \emph{The Astrophysical Journal}, 785\penalty0 (2):\penalty0 131, Apr. 2014.
+\newblock ISSN 0004-637X.
+\newblock \doi{10.1088/0004-637X/785/2/131}.
+\newblock URL \url{https://dx.doi.org/10.1088/0004-637X/785/2/131}.
+\newblock Publisher: The American Astronomical Society.
 
 \end{thebibliography}

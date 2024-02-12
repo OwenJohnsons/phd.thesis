@@ -1,14 +1,80 @@
-\begin{thebibliography}{4}
+\begin{thebibliography}{14}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
+\bibitem[Baym et~al.(1971)Baym, Bethe, and Pethick]{baym_neutron_1971}
+G.~Baym, H.~A. Bethe, and C.~J. Pethick.
+\newblock Neutron star matter.
+\newblock \emph{Nuclear Physics A}, 175\penalty0 (2):\penalty0 225--271, Nov. 1971.
+\newblock ISSN 0375-9474.
+\newblock \doi{10.1016/0375-9474(71)90281-8}.
+\newblock URL \url{https://www.sciencedirect.com/science/article/pii/0375947471902818}.
+
+\bibitem[Chandrasekhar(1967)]{chandrasekhar_introduction_2012}
+S.~Chandrasekhar.
+\newblock \emph{An {Introduction} to the {Study} of {Stellar} {Structure}}.
+\newblock Dover {Books} on {Astronomy} {Series}. Dover Publications, Incorporated, 1967.
+\newblock ISBN 978-0-486-13628-8.
+\newblock URL \url{https://books.google.ie/books?id=joWn8s2BF04C}.
+
+\bibitem[Halpern et~al.(2022)Halpern, Perez, and Bogdanov]{halpern_luminous_2022}
+J.~P. Halpern, K.~I. Perez, and S.~Bogdanov.
+\newblock Luminous {Optical} and {X}-ray {Flaring} of the {Putative} {Redback} {Millisecond} {Pulsar} {1FGL} {J0523}.5\$-\$2529.
+\newblock \emph{The Astrophysical Journal}, 935\penalty0 (2):\penalty0 151, Aug. 2022.
+\newblock ISSN 0004-637X, 1538-4357.
+\newblock \doi{10.3847/1538-4357/ac8161}.
+\newblock URL \url{http://arxiv.org/abs/2207.08198}.
+\newblock arXiv:2207.08198 [astro-ph].
+
+\bibitem[Heger et~al.(2003)Heger, Fryer, Woosley, Langer, and Hartmann]{heger_how_2003}
+A.~Heger, C.~L. Fryer, S.~E. Woosley, N.~Langer, and D.~H. Hartmann.
+\newblock How {Massive} {Single} {Stars} {End} {Their} {Life}.
+\newblock \emph{The Astrophysical Journal}, 591:\penalty0 288--300, July 2003.
+\newblock ISSN 0004-637X.
+\newblock \doi{10.1086/375341}.
+\newblock URL \url{https://ui.adsabs.harvard.edu/abs/2003ApJ...591..288H}.
+\newblock ADS Bibcode: 2003ApJ...591..288H.
+
+\bibitem[Hewish et~al.(1968)Hewish, Bell, Pilkington, Scott, and Collins]{hewish_observation_1968}
+A.~Hewish, S.~J. Bell, J.~D.~H. Pilkington, P.~F. Scott, and R.~A. Collins.
+\newblock Observation of a {Rapidly} {Pulsating} {Radio} {Source}.
+\newblock \emph{Nature}, 217\penalty0 (5130):\penalty0 709--713, Feb. 1968.
+\newblock ISSN 1476-4687.
+\newblock \doi{10.1038/217709a0}.
+\newblock URL \url{https://doi.org/10.1038/217709a0}.
+
+\bibitem[Kaspi et~al.(2001)Kaspi, Roberts, Vasisht, Gotthelf, Pivovaroff, and Kawai]{kaspi_chandra_2001}
+V.~M. Kaspi, M.~E. Roberts, G.~Vasisht, E.~V. Gotthelf, M.~Pivovaroff, and N.~Kawai.
+\newblock Chandra {X}-{Ray} {Observations} of {G11}.2-0.3: {Implications} for {Pulsar} {Ages}.
+\newblock \emph{The Astrophysical Journal}, 560:\penalty0 371--377, Oct. 2001.
+\newblock ISSN 0004-637X.
+\newblock \doi{10.1086/322515}.
+\newblock URL \url{https://ui.adsabs.harvard.edu/abs/2001ApJ...560..371K}.
+\newblock ADS Bibcode: 2001ApJ...560..371K.
+
+\bibitem[Lattimer and Prakash(2001)]{lattimer_neutron_2001}
+J.~M. Lattimer and M.~Prakash.
+\newblock Neutron {Star} {Structure} and the {Equation} of {State}.
+\newblock \emph{The Astrophysical Journal}, 550\penalty0 (1):\penalty0 426, Mar. 2001.
+\newblock ISSN 0004-637X.
+\newblock \doi{10.1086/319702}.
+\newblock URL \url{https://dx.doi.org/10.1086/319702}.
+
 \bibitem[{Lorimer} and {Kramer}(2004)]{pulsar_handbook}
 D.~R. {Lorimer} and M.~{Kramer}.
 \newblock \emph{{Handbook of Pulsar Astronomy}}, volume~4.
 \newblock Cambridge University Press, 2004.
+
+\bibitem[Michel(1982)]{michel_theory_1982}
+F.~C. Michel.
+\newblock Theory of pulsar magnetospheres.
+\newblock \emph{Reviews of Modern Physics}, 54\penalty0 (1):\penalty0 1--66, Jan. 1982.
+\newblock \doi{10.1103/RevModPhys.54.1}.
+\newblock URL \url{https://link.aps.org/doi/10.1103/RevModPhys.54.1}.
+\newblock Publisher: American Physical Society.
 
 \bibitem[Oppenheimer and Volkoff(1939)]{oppenheimer_massive_1939}
 J.~R. Oppenheimer and G.~M. Volkoff.
@@ -18,12 +84,27 @@ J.~R. Oppenheimer and G.~M. Volkoff.
 \newblock URL \url{https://link.aps.org/doi/10.1103/PhysRev.55.374}.
 \newblock Publisher: American Physical Society.
 
+\bibitem[Ray et~al.(2012)Ray, Abdo, Parent, Bhattacharya, Bhattacharyya, Camilo, Cognard, Theureau, Ferrara, Harding, Thompson, Freire, Guillemot, Gupta, Roy, Hessels, Johnston, Keith, Shannon, Kerr, Michelson, Romani, Kramer, McLaughlin, Ransom, Roberts, Parkinson, Ziegler, Smith, Stappers, Weltevrede, and Wood]{ray_radio_2012}
+P.~S. Ray, A.~A. Abdo, D.~Parent, D.~Bhattacharya, B.~Bhattacharyya, F.~Camilo, I.~Cognard, G.~Theureau, E.~C. Ferrara, A.~K. Harding, D.~J. Thompson, P.~C.~C. Freire, L.~Guillemot, Y.~Gupta, J.~Roy, J.~W.~T. Hessels, S.~Johnston, M.~Keith, R.~Shannon, M.~Kerr, P.~F. Michelson, R.~W. Romani, M.~Kramer, M.~A. McLaughlin, S.~M. Ransom, M.~S.~E. Roberts, P.~M.~S. Parkinson, M.~Ziegler, D.~A. Smith, B.~W. Stappers, P.~Weltevrede, and K.~S. Wood.
+\newblock Radio {Searches} of {Fermi} {LAT} {Sources} and {Blind} {Search} {Pulsars}: {The} {Fermi} {Pulsar} {Search} {Consortium}, May 2012.
+\newblock URL \url{http://arxiv.org/abs/1205.3089}.
+\newblock arXiv:1205.3089 [astro-ph].
+
 \bibitem[Romani et~al.(2022)Romani, Kandel, Filippenko, Brink, and Zheng]{Romani_2022}
 R.~W. Romani, D.~Kandel, A.~V. Filippenko, T.~G. Brink, and W.~Zheng.
 \newblock Psr j0952-0607: The fastest and heaviest known galactic neutron star.
 \newblock \emph{The Astrophysical Journal Letters}, 934\penalty0 (2):\penalty0 L17, jul 2022.
 \newblock \doi{10.3847/2041-8213/ac8007}.
 \newblock URL \url{https://dx.doi.org/10.3847/2041-8213/ac8007}.
+
+\bibitem[Strader et~al.(2014)Strader, Chomiuk, Sonbas, Sokolovsky, Sand, Moskvitin, and Cheung]{strader_1fgl_2014}
+J.~Strader, L.~Chomiuk, E.~Sonbas, K.~Sokolovsky, D.~J. Sand, A.~S. Moskvitin, and C.~C. Cheung.
+\newblock {1FGL} {J0523}.5-2529: {A} {New} {Probable} {Gamma}-ray {Pulsar} {Binary}.
+\newblock \emph{The Astrophysical Journal}, 788\penalty0 (2):\penalty0 L27, June 2014.
+\newblock ISSN 2041-8205, 2041-8213.
+\newblock \doi{10.1088/2041-8205/788/2/L27}.
+\newblock URL \url{http://arxiv.org/abs/1405.5533}.
+\newblock arXiv:1405.5533 [astro-ph].
 
 \bibitem[Takata et~al.(2014)Takata, Li, Leung, Kong, Tam, Hui, Wu, Xing, Cao, Tang, Wang, and Cheng]{takata_multi-wavelength_2014}
 J.~Takata, K.~L. Li, G.~C.~K. Leung, A.~K.~H. Kong, P.~H.~T. Tam, C.~Y. Hui, E.~M.~H. Wu, Y.~Xing, Y.~Cao, S.~Tang, Z.~Wang, and K.~S. Cheng.

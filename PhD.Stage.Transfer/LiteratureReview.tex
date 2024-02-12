@@ -4,6 +4,7 @@
 \documentclass[a4paper,12pt]{article}
 \usepackage{head,fullpage}     % Add local fullpage and head macros
 \usepackage[pdftex]{graphicx}  % Add graphicx pachage with pdf flag (must use pdflatex)
+\usepackage{wrapfig, subcaption, setspace, booktabs}
 \usepackage{datetime}
 \usepackage{xcolor}
 \definecolor{tcd-blue}{HTML}{0569b9}
@@ -16,6 +17,8 @@
 \usepackage{float}
 \usepackage{setspace}
 \usepackage{imakeidx}
+\usepackage{caption}
+\usepackage{subcaption}
 \makeindex
 
 % Set 1.5 spacing
@@ -156,8 +159,9 @@ Signed:~\rule{5cm}{0.3pt}\hfill Date:~\rule{5cm}{0.3pt}
 
 \newpage
 \input{sections/section-1}
+\input{sections/section-2}
 
-\section{Work This Far}
+
 \subsection{Search for Extraterrestrial Intelligence}
 \subsection{M-dwarf Radio Flares}
 \input{sections/section4-PD}

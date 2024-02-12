@@ -1,22 +1,22 @@
 \setcounter{page}{1} 
-\section{A Prelude to Pulsars}
-When stars with a mass of at least $8 \smass$ reach the end of their evolutionary stage and experience a depletion of nuclear fuel will undergo a core collapse and explode as a Supernovae. Depending on the mass of the host star the Supernova will form a Black Hole or a Neutron Star. Based on the electron degeneracy pressure limit (Chan 1967) stars that fall in the range of 20 - 30 $\smass$ form neutron stars (need citation). \\
+\section{A Prelude to Pulsars} \label{sec:prelude}
+When stars with a mass of at least $8 \smass$ reach the end of their evolutionary stage they experience a depletion of nuclear fuel will and undergo a core collapse.  This results in the star exploding as a Supernova. Depending on the mass of the host star the Supernova will form a black Hole or a neutron Star. Based on the electron degeneracy pressure limit \citep[pp. 434 - 443]{chandrasekhar_introduction_2012} stars that fall in the range of 20 - 30 $\smass$ form neutron stars \citep{heger_how_2003}. \\
 
 Neutron stars are supported against further collapse by the presence of neutron degeneracy pressure which arises from the Pauli exclusion principle. Strong Nuclear forces between the neutrons also provides additional support against gravatational collapse. With these two opposing forces a stable equilibrium is formed. \\ 
 
-In turn, this makes neutron stars exceptionally dense, they become the densest known objects in the universe that emit light. The average density of a neutron star is $10^{17} \text{kg/m}^3$ (need citation). The radius of neutron stars are comparable to the size of cities, with radii of 10 - 20 km. \\
+In turn, this makes neutron stars exceptionally dense, they are the densest known objects in the universe that emit light. The average density of a neutron star is $10^{17} \text{kg/m}^3$ \citep{baym_neutron_1971} and their radii are comparable to the size of cities, with radii of 10 - 20 km. \\
 
-During collapse the conservation of magnetic flux plays a crucial role in the large strength magnetic fields that are observed in neutron stars along with contributions from the dynamo effect and frozen-in magnetic fields. The magnetic field of a neutron star are of the order of $10^{12}$ - $10^{15}$ Gauss (Need citation). \\
+During collapse the conservation of magnetic flux plays a crucial role in the large strength magnetic fields that are observed in neutron stars along with contributions from the dynamo effect and frozen-in magnetic fields. The strength of a pulsar's magnetic field is on the order of $10^{12}$ - $10^{15}$ Gauss \citep{michel_theory_1982}. \\
 
-Charged particles accelerate along the magnetic field lines in the magnetosphere of the neutron star. The particles emit electromagnetic radiation in a cone shape along the magnetic axis. If the magnetic axis is not aligned with the rotational axis of the neutron star, the radiation beam will sweep across the sky. This is known as a pulsar and are analogus to cosmic lighthouses.  \\
+Charged particles accelerate along the magnetic field lines in the magnetosphere of the neutron star. These particles emit electromagnetic radiation in a cone shape along the magnetic axis. If the magnetic axis is not aligned with the rotational axis of the neutron star, the radiation beam will sweep across the sky. This is known as a pulsar, a Galacic lighthouse.% analogus to cosmic lighthouses. 
 
 \subsection{The Population of Pulsars}
 
-As of writing there are currently more than 3380 known pulsars. Since their discovery in 1967 by Jocelyn Bell Burnell the population has grown immensly but there remains many questions about pulsar evolution and the subclasses that lie within the population as a whole. Similarly to how exoplanet popilations are shown using the mass-radius diagram and stellar populations are shown using the Hertzsprung-Russell diagram, pulsar populations are shown using what is known as the $P-\dot P$ diagram. \\
+At the time of writing there are currently more than 3380 known pulsars. Since their discovery by Jocelyn Bell Burnell \citep{hewish_observation_1968} the population has grown immensly but there remains many open questions about pulsar evolution and the subclasses that lie within the population as a whole. Similarly to how exoplanet popilations are shown using the mass-radius diagram and stellar populations are shown using the Hertzsprung-Russell diagram, pulsar populations are shown using what is known as the $P-\dot P$ diagram. \\
 
 $P$ representing the Pulsar's rotational period and $\dot P$ it's derivative. These are key ways that pulsars are classified and study in context of their evolution. An example of a $P-\dot P$ diagram is shown in \cref{fig:p-pdot}. Different values on the plot indicate the roughly the Pulsars age and magnetic field strength. \Cref{fig:p-pdot} shows the vastly different values bettween pulsars in the milisecond range and pulsars in the second range. \\ 
 
-Theoretically it has been shown that pulsars exhibit a death line in the $P-\dot P$ diagram. This is the line where pulsars are no longer able to emit radio waves. This is due to the fact that the pulsar's magnetic field is no longer strong enough to accelerate particles along the magnetic field lines. However it has been shown that pulsars do exist below this line. The area below this line is commonly referred to as the "graveyard". \\
+Theoretically it has been shown that pulsars exhibit a death line in the $P-\dot P$ diagram. This is the line where pulsars are no longer able to emit radio waves. This is due to the pulsar's magnetic field is no longer strong enough to accelerate particles along the magnetic field lines. However it has been shown that pulsars do exist below this line. The area below this line is commonly referred to as the "graveyard". \\
 \begin{figure}
     \centering
     \includegraphics[width=0.8\textwidth]{figs/PPdot-diagram.pdf}
@@ -26,15 +26,88 @@ Theoretically it has been shown that pulsars exhibit a death line in the $P-\dot
 
 \subsection{The Properities of Pulsars}
 
+The following section gives a breif non-exhaustive overview of some of the key properities of pulsars. 
+
+\subsubsection{Neutron Star Radius \& Mass}
+
 Understanding the mass of pulsars are important for understanding their evolution and equation of state. \cite{oppenheimer_massive_1939} derived a canonical mass limit of neutron stars to be 1.4 $\smass$, but expermientally this has been shown to be higher with the largest mass of a pulsar being $\sim 2.35 \smass$ \citep{Romani_2022}. The mass-radius relationship of a pulsar is defined by an equation of state and a maximum mass limit. Redshifts and gravatational effects observed in pulsars exhbit the observed temperture and flux to be smaller than the actual value. The observed radius $R_\text{obs}$ can be described as follows \citep{pulsar_handbook}, 
 
 \begin{equation}
-    R_\text{obs} = \frac{R}{\sqrt{1 - \frac{2GM}{Rc^2}}}
+    R_\text{obs} = \frac{R}{\sqrt{1 - \frac{2GM}{Rc^2}}} = \frac{1}{R} \sqrt{1 - \frac{R_s}{R}}
 \end{equation}
 
-\subsection{Pulsar Subclasses}
+where $R$ is the pulsar's radius and M is the gravatational mass, $G$ is the gravatational constant, $c$ is the speed of light and $R_s$ is the Schwarzschild radius. \\ 
+The lower limit of the neutron star radius is decribed by 
 
-The population of pulsars can be broken down into subclasses based on unique patterns in their properities. The main subclasses\footnote{This is a non-exhaustive list.} are as follows:
+\begin{equation}
+    R_\text{min} \simeq 1.5 \ R_s = \frac{3GM}{c^2} = 6.2 \ \text{km} \left( \frac{M}{1.4 \smass} \right)
+\end{equation}
+
+Opposite to this upper limit of the radius is obtained by requiring that there is stability against breaking up due to centrifulgal forces. This gives \cref{eq:radius-max} following as described in \cite[p.~58]{pulsar_handbook}. 
+
+\begin{equation}
+    R_\text{max} \simeq \left(\frac{GMP^2}{4 \pi^2}\right)^{1/3} = 16.8 \ \text{km} \left( \frac{M}{1.4 \smass} \right)^{1/3} \left( \frac{P}{\text{ms}} \right)^{2/3}
+    \label{eq:radius-max}
+\end{equation}
+
+Most pulsars are observed to have radii in the range of 10 - 15 km \citep{lattimer_neutron_2001}, giving them the unique position of 'almost' black holes. 
+
+\subsubsection{Spin Evolution}
+One of the most unique characterstics of pulsars is the spinning that they exhibit. Understanding the spin evolution gives insight into many parameters of the pulsars most notable the stage of their evolution. Pulsar's begin their life in the upper end of the $P-\dot P$ diagram and slowly move down and to the right as they age due to a loss in rotational energy, commonly referred to as spin-down luminosity. The spin-down $(\dot E)$ is decribed as follows  \citep[p.~59]{pulsar_handbook}, 
+
+\begin{equation}
+    \dot E  = - \dfrac{dE_{\text{rot}}}{dt} = 4\pi^2 I \dot P P^{-3}
+    \label{eq:spin-down-energy}
+\end{equation}
+
+Where $I$ is the moment of inertia. It is important to note that the energy loss that is converted into radio emmision is almost negligable in comparison to the total energy loss from spin down. 
+
+% \subsubsection{Radio Emission Beam}
+
+% Pulse width
+
+% \begin{equation}
+%     \cos \rho = \cos \alpha \cos (\alpha + \beta) + \sin \alpha \sin (\alpha + \beta) \cos \left( \frac{W}{2} \right)
+% \end{equation}
+
+\subsubsection{Braking Index}
+
+Pulsar's have strong magnetic dipoles, according to classic mechanics a rotating magnetic doplole that exhibts a moment, $|m|$ emits an electromagnetic wave at the pulsars rotation frequency \citep[p.~60]{pulsar_handbook}. The dipoles radiation power is characterized by, 
+
+\begin{equation}
+    \dot E_{\text{dipole}} = \frac{2}{3c^3} |m|^2 \omega^4 \sin^2 \alpha
+\end{equation}
+
+Where $\alpha$ is the angle between the magnetic axis and the rotation axis. Equating the above equation to the loss of rotational energy described in \cref{eq:spin-down-energy} gives the following for the expected evolution of the period, 
+
+\begin{equation}
+    \dot \Omega = - \frac{2}{3Ic^3} |m|^2 \Omega^3 \sin^2 \alpha
+\end{equation}
+
+This is more commonly written ass a power law, 
+
+\begin{equation}
+    \dot \nu = -K \nu^n 
+    \label{eq:spin-down-power-law}
+\end{equation}
+
+\Cref{eq:spin-down-energy} in terms of the period is, $\dot P = K P^{2-n}$. Since this is a first order differential equation, the solution can be intergrated and given a constant, $K$ which provides and expression of age. 
+
+\begin{equation}
+    T = \frac{P}{(n-1)\dot P} \left\{ 1 - \left( \frac{P_0}{P} \right)^{n - 1} \right\} 
+    \label{eq:age-full}
+\end{equation}
+
+Here $P_0$ is the initial period of the pulsar. Commomly an assumption is made that the current perios is much greater than the intial period $(P_0 \ll P)$. If it is also assumped that the pulsar is spinning down to due dipole magnetic radiaiton ($n=3$), \cref{eq:age-full} can be simplified into a charaactertic age. 
+
+\begin{equation}
+    \tau_c \cong 15.8~\text{Myr} \left( \frac{P}{s} \right) \left( \frac{\dot P}{10^{-15}} \right)^{-1}
+\end{equation}
+
+The above estimation for a pulsars age is known to be inconsistent with theorey to varying degrees. In cases where a Supernovae has been observed and produced a pulsar the age is known to a much higher degree of accuracy. The Crab pulsar is one such example with an observed Supernova event in 1054 AD by Chinese astronmers \citep{kaspi_chandra_2001}. %Supernoave remnants are also used to estimate the age of pulsars. 
+
+\subsection{Pulsar Subclasses}
+Following breif overview of the properities of pulsars, this section will give a breif overview of the subclasses of pulsars. The population of pulsars can be broken down into subclasses based on unique patterns in their properities. The main subclasses\footnote{This is a non-exhaustive list.} are as follows:
 
 \begin{enumerate}
     \item Normal Pulsars: These are the most common type of pulsars. They are characterized by their regular pulses and are often observed in radio wavelengths. They are also known as radio pulsars. %they cover central region of the $P-\dot P$ diagram.
@@ -43,11 +116,9 @@ The population of pulsars can be broken down into subclasses based on unique pat
 
     \item Magnetars: While not exclusively pulsars, magnetars are highly-magnetized neutron stars that can also emit pulsed radiation. They are characterized by extremely strong magnetic fields, much more intense than typical pulsars.
 
-    \item Binary Pulsars: These are pulsars that are in orbit around another star, usually a normal (non-neutron) star. The interaction with the companion star can have significant effects on the pulsar's behavior, and studying binary pulsars has provided important tests of theories of gravitation.
-
+    \item Binary Pulsars: These are pulsars that are in orbit around another star, usually a normal (non-neutron) star. The interaction with the companion star can have significant effects on the pulsar's behavior.
+    
     \item Millisecond Pulsars (MSPs): These are pulsars with very short rotation periods, typically less than 10 milliseconds. They are believed to be old pulsars that have been spun up by the accretion of mass from a companion star in a binary system.
-
-    \item Gamma-ray Pulsars: Pulsars that emit pulsed gamma-ray radiation are known as gamma-ray pulsars. These are often detected by space-based telescopes like the Fermi Gamma-ray Space Telescope.
 
     \item X-ray Pulsars: Pulsars that emit pulsed X-ray radiation fall into this category. These pulsars are typically observed in binary systems where the pulsar accretes matter from its companion star, leading to X-ray emission.
 
@@ -58,16 +129,23 @@ The population of pulsars can be broken down into subclasses based on unique pat
 
 The type of pulsar that is of interest to this project is a subclass of transional miliscond pulsars known as Spider Pulsars. Spider pulsars fall into two categories depending on their orbiting companion. The first category are known as Black Widow pulsars segreated based on their companion mass falling in the range of 0.01 - 0.05 $\smass$ with a compantion orbital period ($P_B$) of less than 10 hours (citation). The second category are known as Redback pulsars and have a companion mass of 0.2 $\smass$ or greater with a $P_B$ of less than 1 day (citation). \\ 
 
-It is thought that most milisecond pulsars are formed through the accretion of matter from a evolved compact binary system, the $\sim 30\%$ found in isolation are thought to have ablated their companion star to the point of dissapaction (citation). Matieral being thrown off the pulsar causes the radio emission to be eclipsed via scattering and absorption, for a segment of the companion's orbit. \\ 
-
-The wind the host pulsar emits causes heating of the companion star, causing the emittance of varying optical radiation (citaiton). 
-
 \begin{figure}
     \centering
     \includegraphics[width=0.8\textwidth]{figs/theory/redback-multiwavelength-emission.jpg}
-    \caption{Figure taken from \cite{takata_multi-wavelength_2014}. Multiwavelength emission from a Redback pulsar.}
+    \caption{Figure taken from \cite{takata_multi-wavelength_2014}. Example of multiwavelength emission from a Redback pulsar.}
 \end{figure}
 
-\subsubsection{4FGL J0523-2529}
+It is thought that most milisecond pulsars are formed through the accretion of matter from a evolved compact binary system, the $\sim 30\%$ found in isolation are thought to have ablated their companion star to the point of dissapaction (citation). Matieral being thrown off the pulsar causes the radio emission to be eclipsed via scattering and absorption, for a segment of the companion's orbit. Rebacks systems exhibit both positive and negative period derivatives that are larger than the expected gravatiational radiation and is thought to a-rise from the interaction of the companion's magnetuc field and the pulsar's wind (citation). \\
+Redback pulsars have been observed in two transional states ablation and accretion states (citation). These states are on sub year timescales. The transition in stages sees the magnitude of optical emission to increase by about $\sim 1$ order of magnitude. Studying optical emission from redback pulsars informs on the heating of the companion. Roche-lobe filling fraction and the mass of the system (citation). \\ Black widow pulsars have been observed to have little to no observable X-ray emission (citation). However, redaback's have been shown to exhibit much more x-ray emission in their thermal spectra with consistent double peaks obseravble when the pulsar is at inferior conjunction (citation). \\
+The observed companions of redbacks are mostly faint stars with tempertures around X on the farside of the star from the pulsar. The companion's interaction with the pulsar dominates the thermal spectrum of spider pulsars from the present heating between the two. \\
+X-ray emission from redbacks shows hard X-ray spectra that follows a power law with photon indices $(\Gamma)$ around 1 - 1.3. The energy of the thermal spectra in the X-ray is higher than what is expected from shock acceleration. Some models suggest tgat a wind-wind shock betweeb the pulsar and companion. However, this approach would require the wind momentum of the pulsar to be much weaker than the companion's. But similarly with the optical emission, the X-ray emission may be influenced by the magnetic field of the companion.  
 
-\subsubsection{4FGL J2054-6904}
+\subsection{Why study Redback Pulsars?}
+
+Redback pulsars have a number of interesting science cases. Redbacks undergo a range of phenomena, including radio and X-ray pulsations, accretion processes, and periodic eclipses as the companion star passes in front of the pulsar. Their study also provides valuable insights into the evolution of binary systems, the behavior of pulsars, and the physics of accretion processes.. Due to their transitional nature they provide a glimpse into the evolution of pulsars in the latter stages of their evolution. Pulsars are also used as tools to study theories of gravity, the interstellar medium and probe for gravatational waves. 
+
+% \subsection{Other exotic transients}
+
+% \subsubsection{4FGL J0523-2529}
+
+% \subsubsection{4FGL J2054-6904}

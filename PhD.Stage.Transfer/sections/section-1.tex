@@ -106,6 +106,29 @@ Here $P_0$ is the initial period of the pulsar. Commomly an assumption is made t
 
 The above estimation for a pulsars age is known to be inconsistent with theorey to varying degrees. In cases where a Supernovae has been observed and produced a pulsar the age is known to a much higher degree of accuracy. The Crab pulsar is one such example with an observed Supernova event in 1054 AD by Chinese astronmers \citep{kaspi_chandra_2001}. %Supernoave remnants are also used to estimate the age of pulsars. 
 
+\subsubsection{Dispersion Measure}
+
+The interstellar medium (ISM) is a complex mixture of gas, dust and magnetic fields that fills the space between stars in a galaxy. Given that the ISM is a cold and ionised plasma any electromagnetic radiation will undergo a frequency-depedant index of refraction as they propagate. The following equation describes the refractive index of the ISM neglciting Galactic magnetic field \citep[p.~85]{pulsar_handbook},
+
+\begin{equation}
+    \mu = \sqrt{1 - \left( \frac{f_p}{f} \right)^2}
+    \label{eq: ism-refractive-index}
+\end{equation}
+
+Where $f_p$ is the plasma frequency, $8.5 ~\text{kHz} \left(n_e/\text{cm}^{-3} \right)^{1/2}$ and $f$ is the frequency of the observed radiation. \\ If the refractive index of the ISM $\mu < 1$ then it can be assumed that the group velocity of the radiation is $v_g = c\mu$ which is sub light speed. The path of radiotion from a pulsar to the observer will be delayed in time with respect to a infinite frequecy by an amount, 
+
+\begin{equation}
+    t = \left( \int^d_0 \frac{dl}{v_g} \right) - \frac{d}{c}
+\end{equation}
+
+If is assmumed to be $f_p \ll f$, $\mu$ can be approximated.
+
+\begin{equation}
+    t = \frac{1}{c} \int^d_0 \left(1 + \frac{f_p^2}{2f^2} \right) dl - \frac{d}{c}  = \frac{e^2}{2 \pi m_e c} \dfrac{\int^d_0 n_e ~dl}{f^2} \equiv \mathcal{D} \cdot \dfrac{\text{DM}}{f^2}
+\end{equation}
+
+Where $\mathcal{D}$ is the dispersion constant and $\text{DM}$ is the dispersion measure. Each are commonly expressed as follows, $\mathcal{D}= 4.15 \times 10^3 ~\text{MHz}^2 ~\text{pc}^{-1} ~ \text{cm}^3 ~\text{s}$ and $\text{DM} = \int^d_0 n_e ~dl ~\text{cm}^{-3} ~\text{pc}$. This definition was adapted from \citet[p.~86]{pulsar_handbook} and \cite{taylor_recent_1977}.
+
 \subsection{Pulsar Subclasses}
 Following breif overview of the properities of pulsars, this section will give a breif overview of the subclasses of pulsars. The population of pulsars can be broken down into subclasses based on unique patterns in their properities. The main subclasses\footnote{This is a non-exhaustive list.} are as follows:
 
@@ -144,7 +167,20 @@ X-ray emission from redbacks shows hard X-ray spectra that follows a power law w
 
 Redback pulsars have a number of interesting science cases. Redbacks undergo a range of phenomena, including radio and X-ray pulsations, accretion processes, and periodic eclipses as the companion star passes in front of the pulsar. Their study also provides valuable insights into the evolution of binary systems, the behavior of pulsars, and the physics of accretion processes.. Due to their transitional nature they provide a glimpse into the evolution of pulsars in the latter stages of their evolution. Pulsars are also used as tools to study theories of gravity, the interstellar medium and probe for gravatational waves. 
 
-% \subsection{Other exotic transients}
+\subsection{Other exotic transients}
+
+Redbacks themselves exotic transients, but there are many other clases of radio exotica that are of interest for the community. In this project work has also been carried out on an array of various radio transients and related objects. This includes the search for extraterrestrial intellgience (SETI), the study of M and Brown dwarf radio flares and the probing of potential radio emission from exoplanets. 
+
+\subsubsection{Dwarf Stars}
+
+\subsubsection{SETI}
+
+The search for life elsewhere in the universe as always been a burning question for many astronmers throughotu history, even more the previlance of intellgient life in the universe. Since the 1960's there has been consisent surveys, mainly in radio that look for signals of artifical origin, commonly referred to as technosignature. These signatures are thought to be similar to that of radio signals produced artifically on Earth. These signals are mainly thought to be narrowband drifiting radio emission that would be produced by a transmitter leaking into space. To date there has been no positive detection of a technosignature. Similar to dark matter searches, the lack of detections has allowed for limits to be placed on the number of previlance of civilizations in the galaxy.
+
+\begin{equation}
+    N = R_* \cdot f_p \cdot n_e \cdot f_l \cdot f_i \cdot f_c \cdot L
+\end{equation}
+
 
 % \subsubsection{4FGL J0523-2529}
 

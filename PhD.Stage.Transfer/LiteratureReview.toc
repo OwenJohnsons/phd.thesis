@@ -4,11 +4,19 @@
 \contentsline {subsubsection}{\numberline {1.2.1}Neutron Star Radius \& Mass}{3}{subsubsection.1.2.1}%
 \contentsline {subsubsection}{\numberline {1.2.2}Spin Evolution}{3}{subsubsection.1.2.2}%
 \contentsline {subsubsection}{\numberline {1.2.3}Braking Index}{4}{subsubsection.1.2.3}%
-\contentsline {subsection}{\numberline {1.3}Pulsar Subclasses}{5}{subsection.1.3}%
+\contentsline {subsubsection}{\numberline {1.2.4}Dispersion Measure}{5}{subsubsection.1.2.4}%
+\contentsline {subsection}{\numberline {1.3}Pulsar Subclasses}{6}{subsection.1.3}%
 \contentsline {subsection}{\numberline {1.4}Spider Pulsars}{6}{subsection.1.4}%
-\contentsline {subsection}{\numberline {1.5}Why study Redback Pulsars?}{7}{subsection.1.5}%
-\contentsline {section}{\numberline {2}Work This Far / Method and Results}{7}{section.2}%
-\contentsline {subsection}{\numberline {2.1}Observation Campaigns}{8}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2}Search for Extraterrestrial Intelligence}{9}{subsection.2.2}%
-\contentsline {subsection}{\numberline {2.3}M-dwarf Radio Flares}{9}{subsection.2.3}%
-\contentsline {section}{\numberline {3}Summary}{9}{section.3}%
+\contentsline {subsection}{\numberline {1.5}Why study Redback Pulsars?}{8}{subsection.1.5}%
+\contentsline {subsection}{\numberline {1.6}Other exotic transients}{8}{subsection.1.6}%
+\contentsline {subsubsection}{\numberline {1.6.1}Dwarf Stars}{8}{subsubsection.1.6.1}%
+\contentsline {subsubsection}{\numberline {1.6.2}SETI}{8}{subsubsection.1.6.2}%
+\contentsline {section}{\numberline {2}Work This Far / Method and Results}{9}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Observation Campaigns}{9}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Observation Data}{10}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Search Strategy}{10}{subsection.2.3}%
+\contentsline {subsubsection}{\numberline {2.3.1}RFI Removal}{11}{subsubsection.2.3.1}%
+\contentsline {subsubsection}{\numberline {2.3.2}Incoherent Dedispersion}{11}{subsubsection.2.3.2}%
+\contentsline {subsubsection}{\numberline {2.3.3}Fast Fourier Transform}{12}{subsubsection.2.3.3}%
+\contentsline {subsubsection}{\numberline {2.3.4}Accelration Searching}{13}{subsubsection.2.3.4}%
+\contentsline {section}{\numberline {3}Summary}{15}{section.3}%

@@ -11,6 +11,7 @@
 \definecolor{tcd-lightblue}{HTML}{448fcb}
 \usepackage[colorlinks=true,citecolor=tcd-blue,linkcolor=tcd-lightblue]{hyperref}
 \usepackage{amsmath}
+\numberwithin{equation}{section}
 \usepackage{cleveref}
 \usepackage[round]{natbib}
 \bibliographystyle{abbrvnat}
@@ -19,6 +20,8 @@
 \usepackage{imakeidx}
 \usepackage{caption}
 \usepackage{subcaption}
+\usepackage{chngcntr}
+\counterwithin{figure}{section}
 \makeindex
 
 % Set 1.5 spacing
@@ -162,8 +165,8 @@ Signed:~\rule{5cm}{0.3pt}\hfill Date:~\rule{5cm}{0.3pt}
 \input{sections/section-2}
 
 
-\subsection{Search for Extraterrestrial Intelligence}
-\subsection{M-dwarf Radio Flares}
+% \subsection{Search for Extraterrestrial Intelligence}
+% \subsection{M-dwarf Radio Flares}
 \input{sections/section4-PD}
 \section{Summary}
 

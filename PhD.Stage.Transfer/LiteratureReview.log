@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.16)  12 FEB 2024 23:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.16)  21 FEB 2024 13:03
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -445,7 +445,11 @@ Package: multicol 2021/11/30 v1.9d multicolumn formatting (FMi)
 \mult@nat@firstbox=\box99
 \colbreak@box=\box100
 \mc@col@check@num=\count329
-))
+)) (/usr/local/texlive/2023/texmf-dist/tex/latex/chngcntr/chngcntr.sty
+Package: chngcntr 2018/04/09 v1.1a change counter resetting
+Package chngcntr Info: \counterwithout already defined.
+(chngcntr)             Quitting chngcntr on input line 21.
+)
 \LiteratureReview@idxfile=\write3
 \openout3 = `LiteratureReview.idx'.
 
@@ -459,24 +463,24 @@ File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
 ) (./LiteratureReview.aux)
 \openout1 = `LiteratureReview.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 47.
-LaTeX Font Info:    ... okay on input line 47.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 50.
+LaTeX Font Info:    ... okay on input line 50.
  (/usr/local/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count332
@@ -503,15 +507,15 @@ Package caption Info: End \AtBeginDocument code.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/fmtcount/fc-english.def
 File: fc-english.def 2016/01/12
 )
-Package hyperref Info: Link coloring ON on input line 47.
+Package hyperref Info: Link coloring ON on input line 50.
  (./LiteratureReview.out) (./LiteratureReview.out)
 \@outlinefile=\write4
 \openout4 = `LiteratureReview.out'.
 
-<assets/tcd.logo.png, id=60, 401.5pt x 401.5pt>
+<assets/tcd.logo.png, id=92, 401.5pt x 401.5pt>
 File: assets/tcd.logo.png Graphic file (type png)
 <use assets/tcd.logo.png>
-Package pdftex.def Info: assets/tcd.logo.png  used on input line 55.
+Package pdftex.def Info: assets/tcd.logo.png  used on input line 58.
 (pdftex.def)             Requested size: 113.81102pt x 113.80992pt.
  [1
 
@@ -523,9 +527,9 @@ Package pdftex.def Info: assets/tcd.logo.png  used on input line 55.
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.102 \newpage
+l.105 \newpage
                [1] [2]
-Overfull \hbox (37.97668pt too wide) in paragraph at lines 121--122
+Overfull \hbox (37.97668pt too wide) in paragraph at lines 124--125
 \OT1/cmr/m/n/12 with LO-FAR in-ter-na-tional sta-tions. Manuscript ac-cepted for pub-li-ca-tion to AJ. arXiv:2310.15704 
  []
 
@@ -565,7 +569,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has b
                    \relax 
 l.18 
       [1]
-<figs/PPdot-diagram.pdf, id=146, 381.809pt x 255.49916pt>
+<figs/PPdot-diagram.pdf, id=187, 381.809pt x 255.49916pt>
 File: figs/PPdot-diagram.pdf Graphic file (type pdf)
 <use figs/PPdot-diagram.pdf>
 Package pdftex.def Info: figs/PPdot-diagram.pdf  used on input line 22.
@@ -586,21 +590,22 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.4}) has b
                    \relax 
 l.105 \end{equation}
                      [4] [5]
-Underfull \hbox (badness 10000) in paragraph at lines 130--131
+Underfull \hbox (badness 10000) in paragraph at lines 153--154
 
  []
 
-<figs/theory/redback-multiwavelength-emission.jpg, id=234, 1889.0575pt x 969.6225pt>
+[6]
+<figs/theory/redback-multiwavelength-emission.jpg, id=289, 1889.0575pt x 969.6225pt>
 File: figs/theory/redback-multiwavelength-emission.jpg Graphic file (type jpg)
 <use figs/theory/redback-multiwavelength-emission.jpg>
-Package pdftex.def Info: figs/theory/redback-multiwavelength-emission.jpg  used on input line 134.
+Package pdftex.def Info: figs/theory/redback-multiwavelength-emission.jpg  used on input line 157.
 (pdftex.def)             Requested size: 362.37567pt x 185.99081pt.
-[6 <./figs/theory/redback-multiwavelength-emission.jpg>]) (./sections/section-2.tex
+ [7 <./figs/theory/redback-multiwavelength-emission.jpg>] [8]) (./sections/section-2.tex
 Underfull \hbox (badness 10000) in paragraph at lines 3--4
 
  []
 
-[7]
+
 Overfull \hbox (1.73991pt too wide) in paragraph at lines 9--10
 \OT1/cmr/m/n/12 J0523 was the first ob-served can-di-date and was ob-served us-ing the Ultra-Wide-Bandwidth,
  []
@@ -610,36 +615,64 @@ Underfull \hbox (badness 10000) in paragraph at lines 9--10
 
  []
 
-<figs/radial-velocity.png, id=258, 271.37386pt x 256.19714pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 18--19
+
+ []
+
+[9]
+<figs/radial-velocity.png, id=330, 271.37386pt x 256.19714pt>
 File: figs/radial-velocity.png Graphic file (type png)
 <use figs/radial-velocity.png>
-Package pdftex.def Info: figs/radial-velocity.png  used on input line 15.
+Package pdftex.def Info: figs/radial-velocity.png  used on input line 24.
 (pdftex.def)             Requested size: 208.36826pt x 196.7251pt.
-<figs/sine-wave-coverage.png, id=259, 405.07335pt x 380.1402pt>
+<figs/sine-wave-coverage.png, id=331, 405.07335pt x 380.1402pt>
 File: figs/sine-wave-coverage.png Graphic file (type png)
 <use figs/sine-wave-coverage.png>
-Package pdftex.def Info: figs/sine-wave-coverage.png  used on input line 17.
+Package pdftex.def Info: figs/sine-wave-coverage.png  used on input line 26.
 (pdftex.def)             Requested size: 208.36826pt x 195.54526pt.
-) (./sections/section4-PD.tex) [8 <./figs/radial-velocity.png> <./figs/sine-wave-coverage.png>] [9] (./LiteratureReview.bbl [10]) [11]
+
+Underfull \hbox (badness 10000) in paragraph at lines 37--38
+
+ []
+
+[10 <./figs/radial-velocity.png> <./figs/sine-wave-coverage.png>]
+<figs/presto-work-flow.drawio.png, id=344, 623.32875pt x 241.90375pt>
+File: figs/presto-work-flow.drawio.png Graphic file (type png)
+<use figs/presto-work-flow.drawio.png>
+Package pdftex.def Info: figs/presto-work-flow.drawio.png  used on input line 41.
+(pdftex.def)             Requested size: 407.66832pt x 158.21002pt.
+<figs/DM_pulse_example.png, id=347, 728.7225pt x 823.075pt>
+File: figs/DM_pulse_example.png Graphic file (type png)
+<use figs/DM_pulse_example.png>
+Package pdftex.def Info: figs/DM_pulse_example.png  used on input line 59.
+(pdftex.def)             Requested size: 271.78348pt x 306.96944pt.
+ [11 <./figs/presto-work-flow.drawio.png>]
+<figs/rfifindexample.png, id=359, 1207.51125pt x 889.3225pt>
+File: figs/rfifindexample.png Graphic file (type png)
+<use figs/rfifindexample.png>
+Package pdftex.def Info: figs/rfifindexample.png  used on input line 74.
+(pdftex.def)             Requested size: 362.37567pt x 266.88022pt.
+ [12 <./figs/DM_pulse_example.png>] [13 <./figs/rfifindexample.png>] [14]) (./sections/section4-PD.tex) [15] (./LiteratureReview.bbl [16]) [17]
 runsystem(makeindex LiteratureReview.idx)...executed safely (allowed).
 
  (./LiteratureReview.ind) (./LiteratureReview.aux)
 Package rerunfilecheck Info: File `LiteratureReview.out' has not changed.
-(rerunfilecheck)             Checksum: 40872E5B343A9DCB82770B06ADF6F831;2405.
+(rerunfilecheck)             Checksum: 20C198C82844ECE4C7015FE3DADDBBE7;3477.
  ) 
 Here is how much of TeX's memory you used:
- 14871 strings out of 476025
- 253127 string characters out of 5790017
- 1865388 words of memory out of 5000000
- 35027 multiletter control sequences out of 15000+600000
+ 14982 strings out of 476025
+ 255733 string characters out of 5790017
+ 1864388 words of memory out of 5000000
+ 35095 multiletter control sequences out of 15000+600000
  521611 words of font info for 64 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,12n,78p,1123b,591s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,14n,78p,1123b,591s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on LiteratureReview.pdf (16 pages, 765914 bytes).
+Output written on LiteratureReview.pdf (22 pages, 1382279 bytes).
 PDF statistics:
- 399 PDF objects out of 1000 (max. 8388607)
- 325 compressed objects within 4 object streams
- 75 named destinations out of 1000 (max. 500000)
- 138 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 542 PDF objects out of 1000 (max. 8388607)
+ 447 compressed objects within 5 object streams
+ 111 named destinations out of 1000 (max. 500000)
+ 217 words of extra memory for PDF output out of 10000 (max. 10000000)
 

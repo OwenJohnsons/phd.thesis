@@ -1,21 +1,21 @@
 # Fdb version 4
-["bibtex LiteratureReview"] 1707780584 "LiteratureReview.aux" "LiteratureReview.bbl" "LiteratureReview" 1707780585 0
+["bibtex LiteratureReview"] 1708445510 "LiteratureReview.aux" "LiteratureReview.bbl" "LiteratureReview" 1708520592 0
   "./frb.bib" 1705332780 1711 ff691a5408e7e3d23bb4100ab4fe1f94 ""
-  "./pulsar.bib" 1707760027 22521 2b585ad9110ad3f950dd8838ab136ea4 ""
+  "./pulsar.bib" 1708097731 28499 02a19935693b59ae4bc4360a3e9faab6 ""
   "/usr/local/texlive/2023/texmf-dist/bibtex/bst/natbib/abbrvnat.bst" 1233624470 26532 66bed5cc59495faaa3f9ae9af9fa5e42 ""
-  "LiteratureReview.aux" 1707780585 6423 63afcc5d350fc37cadb12157ed519b56 "pdflatex"
+  "LiteratureReview.aux" 1708520592 11271 4541cac782aace870cedd9ff63050bbd "pdflatex"
   (generated)
   "LiteratureReview.bbl"
   "LiteratureReview.blg"
   (rewritten before read)
-["makeindex LiteratureReview.idx"] 1707758801 "LiteratureReview.idx" "LiteratureReview.ind" "LiteratureReview" 1707780585 0
-  "LiteratureReview.idx" 1707780584 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+["makeindex LiteratureReview.idx"] 1708092694 "LiteratureReview.idx" "LiteratureReview.ind" "LiteratureReview" 1708520592 0
+  "LiteratureReview.idx" 1708520591 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   (generated)
   "LiteratureReview.ilg"
   "LiteratureReview.ind"
   (rewritten before read)
-["pdflatex"] 1707780584 "/Users/oj/Library/CloudStorage/GoogleDrive-ojohnson@tcd.ie/My Drive/REPOS/phd.thesis/PhD.Stage.Transfer/LiteratureReview.tex" "LiteratureReview.pdf" "LiteratureReview" 1707780585 0
-  "/Users/oj/Library/CloudStorage/GoogleDrive-ojohnson@tcd.ie/My Drive/REPOS/phd.thesis/PhD.Stage.Transfer/LiteratureReview.tex" 1707780455 6078 6b4bfc45c1802cc43e3cd46b481513fc ""
+["pdflatex"] 1708520590 "/Users/oj/Library/CloudStorage/GoogleDrive-ojohnson@tcd.ie/My Drive/REPOS/phd.thesis/PhD.Stage.Transfer/LiteratureReview.tex" "LiteratureReview.pdf" "LiteratureReview" 1708520592 0
+  "/Users/oj/Library/CloudStorage/GoogleDrive-ojohnson@tcd.ie/My Drive/REPOS/phd.thesis/PhD.Stage.Transfer/LiteratureReview.tex" 1708095549 6169 321bf5b1f1a181fda729a1efe2e69988 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/jknappen/ec/tcrm0700.tfm" 1136768653 1536 73da8e8f1d2a4c957d51ca133585586b ""
@@ -94,6 +94,7 @@
   "/usr/local/texlive/2023/texmf-dist/tex/latex/caption/caption.sty" 1678653221 55778 14d5c99aa26410e440820bb9ea5b8b3a ""
   "/usr/local/texlive/2023/texmf-dist/tex/latex/caption/caption3.sty" 1678653221 71836 1a735454ad10692452eb2f2fc37f3865 ""
   "/usr/local/texlive/2023/texmf-dist/tex/latex/caption/subcaption.sty" 1678653221 12462 ecf33913ce1e8012075d24e1f47f0d9b ""
+  "/usr/local/texlive/2023/texmf-dist/tex/latex/chngcntr/chngcntr.sty" 1525297854 4336 84bc4a8edb126e69abec1a67dc0c36cf ""
   "/usr/local/texlive/2023/texmf-dist/tex/latex/cleveref/cleveref.sty" 1525128982 329481 7fc6b003158402a4c694bc0a1b729308 ""
   "/usr/local/texlive/2023/texmf-dist/tex/latex/datetime/datetime-defaults.sty" 1427500626 4105 4c80eaed8cd4f9a80cc6244c0adeb81f ""
   "/usr/local/texlive/2023/texmf-dist/tex/latex/datetime/datetime.sty" 1427500626 27587 b023ffe1328fa89e7f133201d87029de ""
@@ -138,21 +139,24 @@
   "/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1684243427 4623355 b8cad38412faebe1ce5b780a45db67bd ""
   "/usr/local/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt" 1684243370 7883454 b4b174c8a6ab4c0400a18b1744003421 ""
   "/usr/local/texlive/2023/texmf.cnf" 1678822455 577 1b2b1af17af2508fb20dd85783af4050 ""
-  "LiteratureReview.aux" 1707780585 6423 63afcc5d350fc37cadb12157ed519b56 "pdflatex"
-  "LiteratureReview.bbl" 1707780584 6947 87444b3a162a8da0e4629187952d983d "bibtex LiteratureReview"
-  "LiteratureReview.ind" 1707780585 0 d41d8cd98f00b204e9800998ecf8427e "makeindex LiteratureReview.idx"
-  "LiteratureReview.out" 1707780585 2405 40872e5b343a9dcb82770b06adf6f831 "pdflatex"
-  "LiteratureReview.tex" 1707780455 6078 6b4bfc45c1802cc43e3cd46b481513fc ""
-  "LiteratureReview.toc" 1707780585 1228 8f9c19c0de8f0dfc8f10649e1356693e "pdflatex"
+  "LiteratureReview.aux" 1708520592 11271 4541cac782aace870cedd9ff63050bbd "pdflatex"
+  "LiteratureReview.bbl" 1708445510 8179 0bcbc327760e96c9412b697f5e75f9cb "bibtex LiteratureReview"
+  "LiteratureReview.ind" 1708520592 0 d41d8cd98f00b204e9800998ecf8427e "makeindex LiteratureReview.idx"
+  "LiteratureReview.out" 1708520592 3477 20c198c82844ece4c7015fe3daddbbe7 "pdflatex"
+  "LiteratureReview.tex" 1708095549 6169 321bf5b1f1a181fda729a1efe2e69988 ""
+  "LiteratureReview.toc" 1708520592 1937 273fe15710d04db101d517a23ca87c1e "pdflatex"
   "assets/tcd.logo.png" 1705332781 55214 f13da49df288a76e8a3976ab462ebc59 ""
+  "figs/DM_pulse_example.png" 1708092393 217509 b8416da06a5a077c50228daffaa6549b ""
   "figs/PPdot-diagram.pdf" 1707317822 193591 6ee2446a0b69b7696ab65878dacc6060 ""
+  "figs/presto-work-flow.drawio.png" 1708008258 28933 85b04084d2c548d4e3a5ebc77447c53e ""
   "figs/radial-velocity.png" 1707779700 56580 b8eb1c1901ca5303efb4043c09671540 ""
+  "figs/rfifindexample.png" 1708019643 469827 09b2560a214ed4fb52ec063d4328c90d ""
   "figs/sine-wave-coverage.png" 1707780064 71377 1a235e1faf79a1cc25e8cc484ee9b755 ""
   "figs/theory/redback-multiwavelength-emission.jpg" 1705338597 624373 db756e8f3501da58896d36b4c6b47e17 ""
   "fullpage.sty" 1705332780 922 af658679f2618695e605f9ae8b3ece79 ""
   "head.sty" 1705332780 4117 e46f9722720cf8860f48ded6206782b1 ""
-  "sections/section-1.tex" 1707758058 14835 1a149dc9dd2fb0dd0e5e6be68740d89d ""
-  "sections/section-2.tex" 1707780582 2193 bd8236859c19f4871e4f5c0e93f29637 ""
+  "sections/section-1.tex" 1708356639 17939 56a4521cb1632a8ccd5210449f43b9ed ""
+  "sections/section-2.tex" 1708520590 12393 c4306d9513a0133cac6004bc687e45ce ""
   "sections/section4-PD.tex" 1705332781 607 cbacd38cd69559db57a44dc8e08354e7 ""
   (generated)
   "LiteratureReview.aux"

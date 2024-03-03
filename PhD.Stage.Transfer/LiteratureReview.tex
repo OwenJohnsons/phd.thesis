@@ -14,11 +14,13 @@
 \numberwithin{equation}{section}
 \usepackage{cleveref}
 \usepackage[round]{natbib}
-\bibliographystyle{abbrvnat}
+\bibliographystyle{apalike}
+% \usepackage[maxbibnames=3]{biblatex}
 \usepackage{float}
 \usepackage{setspace}
 \usepackage{imakeidx}
 \usepackage{caption}
+\captionsetup{font=footnotesize, labelfont=bf}
 \usepackage{subcaption}
 \usepackage{chngcntr}
 \counterwithin{figure}{section}
@@ -66,17 +68,13 @@
 \vspace*{1.5cm}
 \begin{center}
         Owen Johnson\daggerfootnote{ojohnson@tcd.ie}\\ 
-        Astrophysics Group\\ 
+        Radio Transients Group\\ 
         \monthyeardate\today            % Submission Date
 \end{center}
 \vspace*{5mm}
 %
 %                       Insert your abstract HERE
 %                       
-\begin{abstract}
-        The abstract is a short concise outline of your 
-        project area, {\bf of no more than 100 words}.
-\end{abstract}
 
 \vspace*{1cm}
 
@@ -84,7 +82,15 @@
 % Signature:\hspace*{8cm}Date:
 
 \vfill
-{\bf Supervisor:} Assoc. Prof. Evan Keane          
+{\bf Supervisor:} Assoc. Prof. Evan Keane    
+\thispagestyle{empty} 
+
+\newpage
+\thispagestyle{empty} 
+\begin{abstract}
+        The Universe presents a dynamic canvas of transient objects where rapid changes can be observed over timescales from milliseconds to years. This report details the progress made to answer open questions about an array of objects in the transient sky. This includes the search for exotic subclasses of Pulsars, Fast Radio Bursts, technosignatures, Radio Stars, and Exoplanets.
+\end{abstract}
+
 \newpage
 %                                               Through page and setup 
 %                                               fancy headings
@@ -106,6 +112,7 @@
                       % Makes Table of Contents
 
 % \vspace*{\fill}
+\pagenumbering{roman}
 \section*{Declaration}
 I hereby declare that this report is entirely my own work and that it has not been submitted as an exercise for a degree at this or any other university.
 
@@ -126,10 +133,11 @@ Signed:~\rule{5cm}{0.3pt}\hfill Date:~\rule{5cm}{0.3pt}
 \subsection*{Presentations}
 \begin{enumerate}
 \item Low Frequency's Place in SETI, January, 2024, PSETI Symposium, Penn State. \hfill \textbf{[Invited]}
-\item Technosignatures with NenuFAR, December, 2023, Science at Low Frequencies IX, UvA. 
+\item Technosignatures with NenuFAR, December, 2023, Science at Low Frequencies IX, UvA. \\  \hfill \textbf{[Accepted, Presented by Co-Author]}
 \item SETI Science at 30 - 190 MHz, November, 2023, BLUK Workshop, SKAO.\\ \textbf{[Invited]}
 \item Technosignature Science at Low Frequencies, November, 2023, NASA Goddard Flight Center. \hfill \\ \textbf{[Invited]}
 \item Dual Site SETI Searches, 2023, International Astronautical Congress, Baku. 
+\item SETI using I-LOFAR, 2023, Irish Astonomy Meeting 23, University College Cork. 
 \end{enumerate}
 
 \newpage
@@ -163,15 +171,12 @@ Signed:~\rule{5cm}{0.3pt}\hfill Date:~\rule{5cm}{0.3pt}
 \newpage
 \input{sections/section-1}
 \input{sections/section-2}
+\input{sections/section-3}
+% \input{sections/section4-PD}
 
-
-% \subsection{Search for Extraterrestrial Intelligence}
-% \subsection{M-dwarf Radio Flares}
-\input{sections/section4-PD}
-\section{Summary}
 
 \newpage
-\bibliography{frb,pulsar}       % Multiple bib files.
+\bibliography{frb,pulsar,seti,radio-planets}       % Multiple bib files.
 
 \newpage
 \printindex

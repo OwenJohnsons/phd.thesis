@@ -1,4 +1,6 @@
-\section{Work This Far / Method and Results}
+\newpage
+\setcounter{page}{1} % only for draft purpose to keep page count on track
+\section{Pulsar Searching in a Binary System} \label{sec:method-pulsar-searching}
 
 As outlined in \cref{sec:prelude} the study of redback pulsars has a multitude of science cases. However, the number of known redback is small, in searching for new redback pulsars allows for further inquiry into the nature of the subclass. The search usually begins with the selection of potential candidates from large-scale surveys carried out by optical, X-ray and $\gamma$-ray observatories. Candiates are determined based on the flaring exhibted at these shorter wavelengths, then followed up using radio telescopes. Work to date has been to perform follow-up radio observations of Redback candidates to attempt to confirm radio emission and further compliment prior multiwavelength studies. \\ 
 
@@ -21,14 +23,14 @@ In the case of J2054 less information is known with no accurate phase ephermeris
 
 \begin{figure} %[h!]
     \centering
-    \subfloat[\centering Phased radial velocities observed from the optical counterpart of J0523 with the Keplerian fit overplotted]{{\includegraphics[width = 0.46\textwidth]{figs/radial-velocity.png}}}%
+    \subfloat[\centering]{{\includegraphics[width = 0.46\textwidth]{figs/radial-velocity.png}}}%
     \qquad
         \subfloat[\centering ]{{\includegraphics[width=  .46\textwidth]{figs/sine-wave-coverage.png}}}%
-    \caption{ }%
+    \caption{\textit{(a)} Phased radial velocities observed from the optical counterpart of J0523 with the Keplerian fit overplotted. \textit{(b)} Observed oribital phase of J0523 with Parkes UWL to date. }%
     \label{fig: velocities}%
 \end{figure}
 
-\subsection{Observation Data}
+\subsection{Observation Data} \label{sec:method-observation-data}
 
 Observations from radio telescopes typically includes measurements of intensity, frequency, polarization and time. The data is usually stored in a time series format with the intensity and frequency measurements recorded at each time step. The data is usually stored in a  filterbanks (\texttt{.fil}) or .fits file format. The raw voltages are recorded and then processed into usable Stoke I files. 
 
@@ -153,3 +155,104 @@ Where $T_{\text{obs}}$ is the length of the observation. The search is carried o
     \label{tab:orbital-parameters}
 \end{table}
 
+In cases where the orbital parameters are not known the search is carried out over a range of accelerations from 0 to 200, and even in the case where the value exceeds 200, this is left as a cap on the search. The reason that the search is not carried out over the entire range is due to the computaitonal cost and is often not neccessary with accelerations above 200 starting to exhibit a non-linear relationship as stated in \citet{ransom_new_2001}. Once the search is carried out the results are outputted in the form of candidates with estimates on DM, S/N, period and frequecies. 
+
+\subsubsection{Folding and Timing}
+
+Pulsar folding is a technique commonly used when the pulses are not bright enough to be clearly visible in the observed time series. The term folding comes from the fact that the time series is folded on itself by some trial period of the pulsar, this is illustrated in \cref{fig: folding}. 
+
+\begin{figure}
+    \centering
+    \includegraphics[width = 0.9\textwidth]{figs/folding.png}
+    \caption{Adapted illustration from X of the folding process. The left panel shows the observed time series, the middle panel shows the folded time series and the right panel shows the summed pulse profile.}
+    \label{fig: folding}
+\end{figure}
+
+Using a routine called \texttt{prepfold} each of the candiates over the noise floor are folded with each candidate examined by eye for possible postive pulsar detection. An example of this is shown in \cref{fig: prepfold}. This plot contains integrated pulse profile, time series plot and subband plot. It also shows DM, $P$ and $\dot P$ plots as a function of reduced $\chi^2$ values. 
+
+\begin{figure}
+    \centering
+    \includegraphics[width = 0.9\textwidth]{figs/prepfold.png}
+    \caption{Example of a \texttt{prepfold} plot for a candidate.}
+    \label{fig: prepfold}
+\end{figure}
+
+\section{Technosignature Searches at Low Frequencies} \label{sec:method-technosignature-searches}
+
+The first year of the project primarly entailed the publication \citep{johnson_simultaneous_2023} of results from the first search for technosignatues at low frequency using Irish and Swedish LOw Frequency ARay \citep[I-LOFAR;][] {van_haarlem_lofar_2013}. When carrying out this technosignature search the two main goals were to constrain the prevalance of intellgient civilizations in the Milky Way at an unexplored frequency and use the collected data to search for other exotic transients such as Fast Radio Bursts (FRBs), pulsars, magnetospheres and M-dwarf emission \citep{sheikh_nine_2020}. 
+
+\subsection{LOFAR}
+
+LOFAR, a pioneering low-frequency aperture array telescope, spans hundreds of kilometers across Europe and serves as a pathfinder to the Square Kilometer Array (SKA). The array consists of a core station with outrigger stations situated in the Netherlands and additional international stations spanning multiple countries, such as Germany, France, Sweden, Ireland, Latvia, Poland, and the United Kingdom. Additionally, stations are currently in the process of being constructed in Italy and Bulgaria. The LOFAR array operates using two types of antenna, the Low Band Antenna (LBA) and the High Band Antenna (HBA), operating at 10–90 MHz and 100–250 MHz respectively. In this study, the HBAs at the Irish and Swedish LOFAR station are used to carry out observations noninterferometrically. The field of view (FoV) of an international LOFAR station is rather large; at full width at half maximum, it is 5.3, 3.4, and 2.3 deg$^2$ at frequencies of 120, 150, and 180 MHz, respectively \citep{van_haarlem_lofar_2013}. The station is capable of resolution of 3.3 and 0.2 arcsecond at the bottom and the top of the bad respectively when the entire array is in use making it one of the most sensitive telescopes in the world.
+
+\subsection{Target Selection}
+
+% Observation campaigns for this survey were carried out through the Summers of 2021 and 2022. Targets were selected for the survey based on exoplanet candidates from NASA's Transiting Exoplanet Survey Satellite \citep[TESS;][]{TESS2015}. In modern technosignature survey's the choice of exoplanet's surveyed is indifferent to characterstics of exoplanet and host star. This decision is due to the limited knowledge of ideal life harbouring conditions a planet must have. Instead the survey opts for sensitivity. Thus, targets were selected based on their distance ($\leq 1$ kpc) and altitude during time of observation. In total 44 TESS targets were observed \citep[see Table 2][]{johnson_simultaneous_2023}.
+
+A significant fraction of radio emission from Earth is emitted in the direction of the ecliptic plane. For example, powerful planetary radars are used to explore Solar System objects \citep{Siemion_KEPLER_ApJ}, and high-powered transmitters are used to communicate with Solar System probes \citep{Enriquez2017ApJ}. It is conceivable then that such leakage radiation may also be emanating from other worlds, preferentially in their planetary orbital planes. This is why we chose TESS targets, as these are the closest transiting exoplanet systems known \citep{Kepler_Mission_Design_2010,TESS2015}. Observing these sources with the LOFAR HBAs enables robust constraints on any associated artificial low-frequency radio emission
+
+\subsection{Expanding the Cosmic Haystack}
+
+Searching for technosignatures is akin to searching for a needle is a cosmic sized haystack. The beam of a LOFAR station has an expansive coverage enabling observation of a substantial number of stars in the field of view. The significance of these in-field stars has been highlighted by \cite{Bart-Wlodarczyk-Sroka}. Consequently, during our observations targeting 44 sources from the TESS catalog, we encountered a significant number of in-field stars within our field of view, as shown in Figure 2. \ 
+To determine the list of targets within this field of view, we utilized the Gaia catalog. Some previous major SETI surveys focused their searches toward Sun-like stars \citep{Tarter:1996jf}. However, because our understanding of the origin of life is limited, it makes sense to allow for the possibility of life arising on a planet that is neither Earth-like nor around stars that are Sun-like. Similarly, we should consider planets not necessarily located in the habitable zone. This is typically characterized as the orbital range wherein liquid water could exist \citep{Kasting1993}, as inferred from planetary equilibrium temperatures often ignoring the unknown albedo of the exoplanets. Any sensitive radio SETI survey seeking to maximize the chance of detecting weak radio signals should, insofar as possible, expand its search to encompass nearby stars of a broad range of spectral types and with exoplanets of all sizes and distances from their parent star. Thus, we conducted calculations to determine the number of Gaia stars with a mean distance of 1215 pc, with an accuracy in their distances of at least 20\%. This study used Gaia's third data release \cite[GDR3;][]{GaiaDR3,astroquery}. When analyzing GDR3, two filters were applied to the survey volume and sensitivity accuracy of the in-beam target values. First, a constraint on the R.A. and decl. errors was implemented. If a Gaia source was found to be in the beam but had an error magnitude greater than the FWHM, it was removed from the source pool. \Cref{Gaia:filter1} states the first condition of filtering:
+
+\begin{equation}
+    \theta_{\text{sep}} + \sqrt{\Delta \text{RA}^2 + \Delta \text{Dec}^2} \leq \frac{\text{FWHM}}{2}
+    \label{Gaia:filter1}
+\end{equation}
+
+As the sensitivity of the survey is calculated based on a source's distance, a second filter is implemented to remove sources that have large errors. By taking the difference $(\Delta \sigma_G)$ in the upper and lower confidence levels of GSP-Photometry, we obtain a percentage error on distance. All sources with a $d_{M_G}$ error of 20\% or greater are filtered out of the source list. \Cref{Gaia:filter2} states the second condition of filtering:
+
+\begin{equation}
+    \frac{\Delta \sigma_G}{\sigma_G} \leq 20\%
+    \label{Gaia:filter2}
+\end{equation}
+
+A total of 1,631,152 stars form this list, making it one of the largest samples of stars ever surveyed for SETI purposes.
+
+\subsection{Carrying out a Dual-Site Survey}
+
+% Following the selection of targets the survey is carried out using a custom pipeline. The pipeline developed for carrying out this survey is detailed in \cref{fig:SETI-pipeline}. Narrowband technosignatures have a width of a couple of Hz thus high frequncy resolution is required. As similarly discussed in \cref{sec:method-observation-data} the raw voltages need to be dignitized using a suite of software. In this case \texttt{GUPPI RAW} and \texttt{RAWSPEC}
+
+\begin{figure}
+    \centering
+    \includegraphics[width = 0.9\textwidth]{figs/SETI-pipeline.png}
+    \caption{Outline of the SETI pipeline developed and deployed on Breakthrough Listen nodes at both LOFAR stations.}
+    \label{fig:SETI-pipeline}
+\end{figure}
+
+Typically, international LOFAR stations operate as standalone telescopes $2-3$ days per week, i.e. they do not operate as part of the International LOFAR Telescope's Europe-wide array. This project was undertaken during this standalone time. For this purpose the \emph{international LOFAR in Stand-Alone mode} (\texttt{iLiSA}) package\footnote{\url{https://github.com/2baOrNot2ba/iLiSA/releases/tag/v6.1}} is used to control both telescopes simultaneously. \texttt{iLiSA} provides a high-level operational control of multiple LOFAR stations, including scheduling, processing pipeline dispatching and metadata aggregation. For the observations in this study, an operator-produced list of targets that were close\footnote{In practice as Birr and Onsala are separated by $\sim20\deg$ of longitude, the optimum scheduling is to observe $\sim 40$~min$-T_{\rm obs}/2$ `late' at Onsala and $40$~min$+T_{\rm obs}/2$ `early' at Birr.} to the local meridian was fed into \texttt{iLiSA} at each epoch. Towards each target, one beam per station was formed using \texttt{iLiSA}, and each beam was formed with $412$ HBA sub-bands (corresponding to a bandwidth of $80.46875$~MHz). The scan time on each target was $15$~min, and the whole scheduling block was a few hours per epoch. \ 
+Data was preproccessed\footnote{For detailed explanation of the preprocessing and preperation see \cite{2019_Lebofsky}} and prepared using the \texttt{udpPacketManager} package \citep{David_JOSS}. Which resulted in two sets of filterbanks for each observation, each with different frequency and time resolutions. The first set of filterbanks had a frequency resolution of $2.98$~Hz and a temporal resolution of $0.67$~s. The second set of filterbanks had a frequency resolution of $350$~kHz and a temporal resolution of $349~\mu \text{s}$. The first set of filterbanks was used for the search for narrowband technosignatures, and the second set was used for the search for broadband transients. \
+
+\subsection{Narrowband Search Results}
+
+Using \textit{turboSETI}, a Doppler-drift search was carried out on the observed candidates at both stations. This resulted in the list of “hits” collected, where hits are defined as a narrowband signal detected above the given threshold, S/N = 10. The distribution of narrowband signals detected at both stations is shown in Fig X. A large percentage of hits are seen at both sites in the 120-140 MHz range. This falls within the range of expected RFI leakage seen from neighboring airports\footnote{Shannon \& Goteborg Landvetter.}. \ 
+Using a drift-rate search of $\pm 4 \ \text{Hz/s}$ for this study covers a fraction of the possible drift rates of transmitters from exotic objects that can be detected as outlined by \cite{Sheikh_2019}. \cite{LiNarrowBand} shows that 4~Hs/s is comprehensive in relative to the expected distribution of exoplanet drift rates. The omission of a search in this parameter space is due to its computationally intense nature of searching for narrow-band signals across a sizeable drift-rate range. However, in doing this, the parameter space searched for ETI signal has been drastically reduced. Continual development of search algorithms like \verb|turboSETI| is progressing to make larger drift-rates searches a more computationally feasible. \
+Upon first inspection of \Cref{fig:hits-histogram} it appears that the results at both stations are somewhat similar. However, upon performing a Kolmogorov-Smirnov (KS) test for each set of results for drift-rate, SN and frequency of detected hits the highest $p$-value returned was on the order of $10^{-11}$ indicating that the RFI environments at each of the stations are significantly different. \ 
+In the case of this study, a singular beam observes a single target for 15 minutes at both stations and observations are converted to barycentric reference frame. Narrow-band searches are then performed at both sites, and the results of both searches are compared.
+
+In our analysis, a signal is classified as a mutual extraterrestrial hit only if two conditions are met: \textit{a)} the signals are within a frequency range of $\pm 4 \ \text{Hz}$ of each other in the barycentric reference frame, and \textit{b)} their drift rates are within $\pm 0.2 \ \text{Hz/s}$ of each other after barycentric drift corrections. In Figure \ref{fig:barycentric correction}, an intriguing candidate is depicted. In the topocentric frame, we detected a narrowband signal at 160 MHz that was simultaneously present at both stations. However, when converting to the barycentric reference frame (as illustrated in Figure \ref{fig:barycentric correction}), the signal appears to be seen at different frequencies with opposite signs due to the different line-of-sight velocities towards the target. As a result, this narrowband signal is rejected as a genuine sky-bound signal.
+
+\begin{figure} %[h!]
+    \centering
+    \subfloat[\centering]{{\includegraphics[width = 0.46\textwidth]{figs/hits_comparative_histogram.pdf}}}%
+    \qquad
+        \subfloat[\centering ]{{\includegraphics[width=  .46\textwidth]{figs/DR_scatter_plot.pdf}}}%
+    \caption{\textit{(a)} Comparison of drifting signals or “hits” detected at both stations seen across the HBA frequency band. Each bin within the data set represents a 1 MHz frequency range and is accompanied by a corresponding percentage indicating its proportion to the overall data set. \textit{(b)} A scatter plot of the drift-rate values against detected frequency. The Irish station is shown in pink and the Swedish station is shown in blue.}%
+    \label{fig:hits-histogram}%
+\end{figure}
+
+\subsection{Constraints placed by the Survey}
+\begin{figure}
+    \centering
+    \includegraphics[width = 0.95\textwidth]{figs/EIRP_hist_plot.pdf}
+    \caption{Cumulative histogram of EIRP limits of this survey across the HBA band. Reference luminosities for three civilization Kardeshev levels emitting $10^{17}$,$10^{13}$ or $10^{10}$ W are shown in blue, red, and green respectively. The percentage of targets where the station is sensitive to the transmission of $10^{17}$ W is shown, as a function of frequency across the band. At lower frequencies, sensitivity to $10^{17}$ emitters drops off as the $T_{\text{sys}}$ rises. The $\bar T_{\text{sys}}$ varies from 1260 K down to 322 K as frequency is increased across the band. Detailed calculations are presented in Appendix B of \cite{johnson_simultaneous_2023}.}
+    \label{fig:EIRP-limits}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[width = 0.5\textwidth]{figs/narrowband-fraction.pdf}
+    \caption{The fraction of stars that produce narrow-band emission ($f^n_c$) against the transmitter power of the total target pool. The hashed region (red) shows the constraints this survey places on a value of $f^n_c$ at 110 - 190 MHz.}
+    \label{fig:SETI-constraint}
+\end{figure}

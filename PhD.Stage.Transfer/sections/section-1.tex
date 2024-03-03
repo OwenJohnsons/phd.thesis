@@ -1,4 +1,5 @@
 \setcounter{page}{1} 
+\pagenumbering{arabic}
 \section{A Prelude to Pulsars} \label{sec:prelude}
 When stars with a mass of at least $8 \smass$ reach the end of their evolutionary stage they experience a depletion of nuclear fuel will and undergo a core collapse.  This results in the star exploding as a Supernova. Depending on the mass of the host star the Supernova will form a black Hole or a neutron Star. Based on the electron degeneracy pressure limit \citep[pp. 434 - 443]{chandrasekhar_introduction_2012} stars that fall in the range of 20 - 30 $\smass$ form neutron stars \citep{heger_how_2003}. \\
 
@@ -43,7 +44,8 @@ The lower limit of the neutron star radius is decribed by
     R_\text{min} \simeq 1.5 \ R_s = \frac{3GM}{c^2} = 6.2 \ \text{km} \left( \frac{M}{1.4 \smass} \right)
 \end{equation}
 
-Opposite to this upper limit of the radius is obtained by requiring that there is stability against breaking up due to centrifulgal forces. This gives \cref{eq:radius-max} following as described in \cite[p.~58]{pulsar_handbook}. 
+Opposite to this the
+ upper limit of the radius is obtained by requiring that there is stability against breaking up due to centrifulgal forces. This gives \cref{eq:radius-max} following as described in \cite[p.~58]{pulsar_handbook}. 
 
 \begin{equation}
     R_\text{max} \simeq \left(\frac{GMP^2}{4 \pi^2}\right)^{1/3} = 16.8 \ \text{km} \left( \frac{M}{1.4 \smass} \right)^{1/3} \left( \frac{P}{\text{ms}} \right)^{2/3}
@@ -150,36 +152,58 @@ Following breif overview of the properities of pulsars, this section will give a
 
 \subsection{Spider Pulsars}
 
-The type of pulsar that is of interest to this project is a subclass of transional miliscond pulsars known as Spider Pulsars. Spider pulsars fall into two categories depending on their orbiting companion. The first category are known as Black Widow pulsars segreated based on their companion mass falling in the range of 0.01 - 0.05 $\smass$ with a compantion orbital period ($P_B$) of less than 10 hours (citation). The second category are known as Redback pulsars and have a companion mass of 0.2 $\smass$ or greater with a $P_B$ of less than 1 day (citation). \\ 
+The type of pulsar that is of interest to this project is a subclass of transitional millisecond pulsars known as spider pulsars. Spider pulsars fall into two categories depending on their orbiting companion. The first category are known as Black Widow pulsars, segregated based on their companion mass falling in the range of 0.01 - 0.05 solar masses with a companion orbital period ($P_B$) of less than 10 hours (citation). The second category are known as Redback pulsars and have a companion mass of 0.2 solar masses or greater with a $P_B$ of less than 1 day (citation).
 
 \begin{figure}
-    \centering
-    \includegraphics[width=0.8\textwidth]{figs/theory/redback-multiwavelength-emission.jpg}
-    \caption{Figure taken from \cite{takata_multi-wavelength_2014}. Example of multiwavelength emission from a Redback pulsar.}
+\centering
+\includegraphics[width=0.8\textwidth]{figs/theory/redback-multiwavelength-emission.jpg}
+\caption{Figure taken from \cite{takata_multi-wavelength_2014}. Example of multiwavelength emission from a Redback pulsar.}
 \end{figure}
 
-It is thought that most milisecond pulsars are formed through the accretion of matter from a evolved compact binary system, the $\sim 30\%$ found in isolation are thought to have ablated their companion star to the point of dissapaction (citation). Matieral being thrown off the pulsar causes the radio emission to be eclipsed via scattering and absorption, for a segment of the companion's orbit. Rebacks systems exhibit both positive and negative period derivatives that are larger than the expected gravatiational radiation and is thought to a-rise from the interaction of the companion's magnetuc field and the pulsar's wind (citation). \\
-Redback pulsars have been observed in two transional states ablation and accretion states (citation). These states are on sub year timescales. The transition in stages sees the magnitude of optical emission to increase by about $\sim 1$ order of magnitude. Studying optical emission from redback pulsars informs on the heating of the companion. Roche-lobe filling fraction and the mass of the system (citation). \\ Black widow pulsars have been observed to have little to no observable X-ray emission (citation). However, redaback's have been shown to exhibit much more x-ray emission in their thermal spectra with consistent double peaks obseravble when the pulsar is at inferior conjunction (citation). \\
-The observed companions of redbacks are mostly faint stars with tempertures around X on the farside of the star from the pulsar. The companion's interaction with the pulsar dominates the thermal spectrum of spider pulsars from the present heating between the two. \\
-X-ray emission from redbacks shows hard X-ray spectra that follows a power law with photon indices $(\Gamma)$ around 1 - 1.3. The energy of the thermal spectra in the X-ray is higher than what is expected from shock acceleration. Some models suggest tgat a wind-wind shock betweeb the pulsar and companion. However, this approach would require the wind momentum of the pulsar to be much weaker than the companion's. But similarly with the optical emission, the X-ray emission may be influenced by the magnetic field of the companion.  
+It is thought that most millisecond pulsars are formed through the accretion of matter from an evolved compact binary system; the approximately 30\% found in isolation are thought to have ablated their companion star to the point of disassociation (citation). Material being thrown off the pulsar causes the radio emission to be eclipsed via scattering and absorption, for a segment of the companion's orbit. Redback systems exhibit both positive and negative period derivatives that are larger than the expected gravitational radiation and are thought to arise from the interaction of the companion's magnetic field and the pulsar's wind (citation).
+
+Redback pulsars have been observed in two transitional states: ablation and accretion states (citation). These states are on sub-year timescales. The transition in stages sees the magnitude of optical emission increase by about one order of magnitude. Studying optical emission from redback pulsars informs on the heating of the companion, Roche-lobe filling fraction, and the mass of the system (citation). Black widow pulsars have been observed to have little to no observable X-ray emission (citation). However, redbacks have been shown to exhibit much more X-ray emission in their thermal spectra with consistent double peaks observable when the pulsar is at inferior conjunction (citation).
+
+The observed companions of redbacks are mostly faint stars with temperatures around X on the farside of the star from the pulsar. The companion's interaction with the pulsar dominates the thermal spectrum of spider pulsars from the present heating between the two. X-ray emission from redbacks shows hard X-ray spectra that follow a power law with photon indices ($\Gamma$) around 1 - 1.3. The energy of the thermal spectra in the X-ray is higher than what is expected from shock acceleration. Some models suggest that a wind-wind shock between the pulsar and companion. However, this approach would require the wind momentum of the pulsar to be much weaker than the companion's. Similarly with the optical emission, the X-ray emission may be influenced by the magnetic field of the companion.
 
 \subsection{Why study Redback Pulsars?}
 
-Redback pulsars have a number of interesting science cases. Redbacks undergo a range of phenomena, including radio and X-ray pulsations, accretion processes, and periodic eclipses as the companion star passes in front of the pulsar. Their study also provides valuable insights into the evolution of binary systems, the behavior of pulsars, and the physics of accretion processes.. Due to their transitional nature they provide a glimpse into the evolution of pulsars in the latter stages of their evolution. Pulsars are also used as tools to study theories of gravity, the interstellar medium and probe for gravatational waves. 
+Redback pulsars have a number of interesting science cases. Redbacks undergo a range of phenomena, including radio and X-ray pulsations, accretion processes, and periodic eclipses as the companion star passes in front of the pulsar. Their study also provides valuable insights into the evolution of binary systems, the behavior of pulsars, and the physics of accretion processes. Due to their transitional nature, they provide a glimpse into the evolution of pulsars in the latter stages of their life cycle. Pulsars are also used as tools to study theories of gravity, the interstellar medium, and probe for gravitational waves.
 
 \subsection{Other exotic transients}
 
-Redbacks themselves exotic transients, but there are many other clases of radio exotica that are of interest for the community. In this project work has also been carried out on an array of various radio transients and related objects. This includes the search for extraterrestrial intellgience (SETI), the study of M and Brown dwarf radio flares and the probing of potential radio emission from exoplanets. 
+Redbacks themselves are exotic transients, but there are many other classes of radio exotic that are of interest to the community. In this project, work has also been carried out on an array of various radio transients and related objects. This includes the search for extraterrestrial intelligence (SETI), the study of M and Brown dwarf radio flares, and the probing of potential radio emission from exoplanets.
 
-\subsubsection{Dwarf Stars}
+\subsubsection{Radio Stars and Exoplanets}
 
-\subsubsection{SETI}
+It has been well documented that our own star, the Sun, and planets in the solar system have radio emission associated with originating from auroras and stellar flares \citep{murphy_lofar_2021, zarka_auroral_1998}. With the advancement of modern radio telescopes, the prospect for capturing radio emission from others and even the prospect of detecting exoplanet magnetospheres has become achievable \citep{vedantham_coherent_2020}. \
 
-The search for life elsewhere in the universe as always been a burning question for many astronmers throughotu history, even more the previlance of intellgient life in the universe. Since the 1960's there has been consisent surveys, mainly in radio that look for signals of artifical origin, commonly referred to as technosignature. These signatures are thought to be similar to that of radio signals produced artifically on Earth. These signals are mainly thought to be narrowband drifiting radio emission that would be produced by a transmitter leaking into space. To date there has been no positive detection of a technosignature. Similar to dark matter searches, the lack of detections has allowed for limits to be placed on the number of previlance of civilizations in the galaxy.
+Observing stars especially at low frequency $(\leq 300 \ \text{MHz})$\footnote{$\lambda \sim 1 \ \text{m}$} act as probes into stellar and planetary plasma environments. Coronal Mass Ejections (CMEs) have a low-frequency burst component in which information about the kinematics of plasma can be deduced \citep{villadsen_ultra-wideband_2019}. Incident solar wind is also the primary driving force of auroral emission on magnetized planets. The goal of this project is to explore the viability of detecting radio emission from M and Brown dwarfs using I-LOFAR observations and archive data to put constraints on the prevalence of radio emission from these objects and explore the viability observing radio emission from exoplanets. \
+
+Radio emission from stars is typically produced through CMEs, observed phenomenologically in the Sun as type II and III solar bursts. The radio emission from these events is thought to be produced through the electron-cyclotron maser instability \citep[ECMI;][]{EMI}. The ECMI is a plasma instability that occurs in the presence of a magnetic field and a population of energetic electrons. The instability is thought to be the primary driver of radio emission observed in type II bursts and stars as a whole. With type III bursts being thought to be the result of electron beams that are accelerated in the corona. \
+
+Emission from planets has also been observed in the form of auroral emission. The most notable example of this is the Jovian system. The Jovian system is known to have auroral emission that is driven by the interaction of the solar wind with the magnetosphere of the planet. Coherent radio emission from the aurora is thought to be produced through the cyclotron maser instability \citep[ECM;][]{zarka_auroral_1998} which injects a high-velocity electron population into the magnetosphere. The maximum frequency of the ECM is directly proportional to the magnetic field strength of the object at its emitting point \citep{kavanagh_hunting_2023, joe_nature_review}.
+
+Much time has been spent observing Ultracool Dwarfs ($\text{M7} <$) as they provide a good analogue to the Jovian systems, this allows for direct comparison between the two. 
+
+
+\subsubsection{The Search for Extraterrestrial Intelligence}
+
+The search for life elsewhere in the universe as always been a burning question for many astronmers throughoout history, even more the previlance of intellgient life in the universe. Since the 1960's there has been consisent surveys, mainly in radio that look for signals of artifical origin, commonly referred to as technosignature. These signatures are thought to be similar to that of radio signals produced artifically on Earth. These signals are mainly thought to be narrowband drifiting radio emission that would be produced by a transmitter leaking into space. To date there has been no positive detection of a technosignature. Similar to dark matter searches, the lack of detections has allowed for limits to be placed on the number of previlance of civilizations in the galaxy. During the first radio SETI survey, \cite{Drake61Ozman} coined an equation to estimate the prevalence of civilizations in the local galaxy. 
 
 \begin{equation}
     N = R_* \cdot f_p \cdot n_e \cdot f_l \cdot f_i \cdot f_c \cdot L
+    \label{DrakeEquation}
 \end{equation}
+
+Where $N$ is the number of civilizations in the galaxy, $R_*$ is the rate of star formation, $f_p$ is the fraction of stars that have planets, $n_e$ is the number of planets that could potentially support life, $f_l$ is the fraction of planets that develop life, $f_i$ is the fraction of planets that develop intelligent life, $f_c$ is the fraction of planets that develop technology, and $L$ is the lifetime of the civilization. However, in this endevour there has been little to no SETI conducted at low frequecies in the radio regime as illustrated in \cref{fig:SETI-Frequency-Parameter-Space}. The main science goals of a low frequncy technosignature search is to place tight contraints on the Drake equation at these frequencies, study methods on RFI mitgation and also use the high resolution data collected to search and study other radio transients, such as magnetars, Fast Radio Bursts (FRBs), pulsars and M-dwarfs.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.95\textwidth]{figs/SETI-Frequency-Parameter-Space.pdf}
+    \caption{The radio frequency parameter space covered by technosignature searches as a function of sky coverage and sensitivity. The color coding represents the ablility to detect an Arecibo-like planetary transmitter at various distances. Where $d_* \leq 25 \ \text{pc}$, $d_* \leq 75 \ \text{pc}$ and $d_* \leq 250 \ \text{pc}$ are shown in blue, green and red respectively. With anything beyond 250 pc being shown in pink. The figure is adapted from \cite{ng_search_2022}.}
+    \label{fig:SETI-Frequency-Parameter-Space}
+\end{figure}
 
 
 % \subsubsection{4FGL J0523-2529}

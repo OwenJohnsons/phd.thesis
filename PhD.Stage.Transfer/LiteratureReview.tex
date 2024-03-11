@@ -1,6 +1,3 @@
-%
-%                       This is a basic LeTeX Template
-%                       for the First Year PhD literature review 
 \documentclass[a4paper,12pt]{article}
 \usepackage{head,fullpage}     % Add local fullpage and head macros
 \usepackage[pdftex]{graphicx}  % Add graphicx pachage with pdf flag (must use pdflatex)
@@ -23,6 +20,7 @@
 \captionsetup{font=footnotesize, labelfont=bf}
 \usepackage{subcaption}
 \usepackage{chngcntr}
+\usepackage{upgreek}
 \counterwithin{figure}{section}
 \makeindex
 
@@ -34,6 +32,7 @@
 
 % --- Commands --- 
 \newcommand{\smass}{\, \text{M}_\odot}
+\newcommand{\nodata}{$\cdots$}
 
 \newcounter{daggerfootnote}
 \newcommand*{\daggerfootnote}[1]{%
@@ -43,7 +42,6 @@
     \setcounter{footnote}{\value{daggerfootnote}}%
     \renewcommand*{\thefootnote}{\arabic{footnote}}%
     }
-
 \newdateformat{monthyeardate}{%
   \monthname[\THEMONTH], \THEYEAR}
 \parindent=0pt          %  Switch off indent of paragraphs 
@@ -88,7 +86,13 @@
 \newpage
 \thispagestyle{empty} 
 \begin{abstract}
-        The Universe presents a dynamic canvas of transient objects where rapid changes can be observed over timescales from milliseconds to years. This report details the progress made to answer open questions about an array of objects in the transient sky. This includes the search for exotic subclasses of Pulsars, Fast Radio Bursts, technosignatures, Radio Stars, and Exoplanets.
+        The Universe presents a dynamic canvas of transient objects where rapid changes can be observed over timescales from milliseconds to years. This report details the progress made to answer open questions about an array of objects in the transient sky. This includes the search for Pulsars, Fast Radio Bursts, technosignatures, Radio Stars, and Exoplanets. The amount of content on each topic is reflective of the amount of work carried out on each project to date with a breif abstract on each below. \\ 
+
+        \textbf{Redback pulsars} are a subclass of millisecond pulsars characterized by their intermittent radio emission and close binary systems with low-mass companions, typically white dwarfs or main sequence stars. These pulsars exhibit complex and varied behaviors, including state transitions, eclipses, and outbursts. Their study sheds light on the physics of compact binary evolution, mass transfer processes, and the formation of millisecond pulsars. Understanding redback pulsars provides insights into stellar astrophysics and the population of neutron stars in our Galaxy. To date their our are two dozen confirmed Redbacks systems. This report details on how to conduct radio searching and confirmation of redback candidates produced from the \textit{Fermi} catalog. \\ 
+        
+        The \textbf{Search for Extraterrestrial Intelligence} aims to find evidence of technosignatures, which can point toward the possible existence of technologically advanced extraterrestrial life. Radio signals similar to those engineered on Earth may be transmitted by other civilizations, motivating technosignature searches across the entire radio spectrum. In this endeavor, the low-frequency radio band has remained largely unexplored; with prior radio searches primarily above 1 GHz. This report discusses the methods and results of the first ever low frequency survey and the steps forward in progression the field of low frequency technosignature searches. \\ 
+
+        \textbf{Detecting radio stars and exoplanets} using LOFAR. The significance of radio emission as a probe into stellar and planetary plasma environments, particularly emphasizing the low-frequency range $(\leq 300~\text{MHz})$ as a window into understanding phenomena such as Coronal Mass Ejections (CMEs) and auroral emissions. The project aims to ascertain the prevalence of radio emission from these celestial objects and explore the feasibility of detecting radio emission from exoplanets with LOFAR and the single Irish LOFAR station. The mechanism behind radio emission, notably is observed through CMEs in stars and auroral emissions in planets analogous to Jupiter. With the aim of better understanding radio emission phenomena in stellar and planetary systems, offering insights into their magnetic environments and dynamic processes.
 \end{abstract}
 
 \newpage
@@ -114,7 +118,7 @@
 % \vspace*{\fill}
 \pagenumbering{roman}
 \section*{Declaration}
-I hereby declare that this report is entirely my own work and that it has not been submitted as an exercise for a degree at this or any other university.
+I hereby declare that this stage transfer report is entirely my own work and that it has not been submitted as an exercise for a degree at this or any other university.
 
 I have read and I understand the plagiarism provisions in the General Regulations of the University Calendar for the current year, found at \url{http://www.tcd.ie/calendar}.
 
@@ -137,7 +141,7 @@ Signed:~\rule{5cm}{0.3pt}\hfill Date:~\rule{5cm}{0.3pt}
 \item SETI Science at 30 - 190 MHz, November, 2023, BLUK Workshop, SKAO.\\ \textbf{[Invited]}
 \item Technosignature Science at Low Frequencies, November, 2023, NASA Goddard Flight Center. \hfill \\ \textbf{[Invited]}
 \item Dual Site SETI Searches, 2023, International Astronautical Congress, Baku. 
-\item SETI using I-LOFAR, 2023, Irish Astonomy Meeting 23, University College Cork. 
+\item SETI using I-LOFAR, 2023, Irish Astonomy Meeting 49, University College Cork. 
 \end{enumerate}
 
 \newpage
@@ -172,7 +176,7 @@ Signed:~\rule{5cm}{0.3pt}\hfill Date:~\rule{5cm}{0.3pt}
 \input{sections/section-1}
 \input{sections/section-2}
 \input{sections/section-3}
-% \input{sections/section4-PD}
+\input{sections/section4}
 
 
 \newpage

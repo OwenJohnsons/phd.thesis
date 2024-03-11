@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.16)  21 FEB 2024 13:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.5.16)  3 MAR 2024 19:46
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -463,24 +463,24 @@ File: l3backend-pdftex.def 2023-01-16 L3 backend support: PDF output (pdfTeX)
 ) (./LiteratureReview.aux)
 \openout1 = `LiteratureReview.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
  (/usr/local/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count332
@@ -507,111 +507,59 @@ Package caption Info: End \AtBeginDocument code.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/fmtcount/fc-english.def
 File: fc-english.def 2016/01/12
 )
-Package hyperref Info: Link coloring ON on input line 50.
+Package hyperref Info: Link coloring ON on input line 52.
  (./LiteratureReview.out) (./LiteratureReview.out)
 \@outlinefile=\write4
 \openout4 = `LiteratureReview.out'.
 
-<assets/tcd.logo.png, id=92, 401.5pt x 401.5pt>
+<assets/tcd.logo.png, id=128, 401.5pt x 401.5pt>
 File: assets/tcd.logo.png Graphic file (type png)
 <use assets/tcd.logo.png>
-Package pdftex.def Info: assets/tcd.logo.png  used on input line 58.
+Package pdftex.def Info: assets/tcd.logo.png  used on input line 60.
 (pdftex.def)             Requested size: 113.81102pt x 113.80992pt.
  [1
 
-{/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc} <./assets/tcd.logo.png>] (./LiteratureReview.toc)
+{/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc} <./assets/tcd.logo.png>] [2] (./LiteratureReview.toc
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.30 ...numberline {4}Forward Plan}{13}{section.4}
+                                                  % [1])
 \tf@toc=\write5
 \openout5 = `LiteratureReview.toc'.
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.105 \newpage
-               [1] [2]
-Overfull \hbox (37.97668pt too wide) in paragraph at lines 124--125
-\OT1/cmr/m/n/12 with LO-FAR in-ter-na-tional sta-tions. Manuscript ac-cepted for pub-li-ca-tion to AJ. arXiv:2310.15704 
- []
-
-[3] [4] (./sections/section-1.tex
-Underfull \hbox (badness 10000) in paragraph at lines 3--4
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 5--6
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 7--8
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 9--10
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 15--16
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 17--18
-
- []
-
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.18 
-      [1]
-<figs/PPdot-diagram.pdf, id=187, 381.809pt x 255.49916pt>
-File: figs/PPdot-diagram.pdf Graphic file (type pdf)
-<use figs/PPdot-diagram.pdf>
-Package pdftex.def Info: figs/PPdot-diagram.pdf  used on input line 22.
-(pdftex.def)             Requested size: 362.37567pt x 242.50838pt.
-
 pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.34 
-      [2 <./figs/PPdot-diagram.pdf>]
-pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.61 \end{equation}
-                    [3]
-pdfTeX warning (ext4): destination with the same identifier (name{page.4}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.105 \end{equation}
-                     [4] [5]
-Underfull \hbox (badness 10000) in paragraph at lines 153--154
-
+l.111 \newpage
+               [2] [1]
+Overfull \hbox (37.97668pt too wide) in paragraph at lines 131--132
+\OT1/cmr/m/n/12 with LO-FAR in-ter-na-tional sta-tions. Manuscript ac-cepted for pub-li-ca-tion to AJ. arXiv:2310.15704 
  []
 
-[6]
-<figs/theory/redback-multiwavelength-emission.jpg, id=289, 1889.0575pt x 969.6225pt>
-File: figs/theory/redback-multiwavelength-emission.jpg Graphic file (type jpg)
-<use figs/theory/redback-multiwavelength-emission.jpg>
-Package pdftex.def Info: figs/theory/redback-multiwavelength-emission.jpg  used on input line 157.
-(pdftex.def)             Requested size: 362.37567pt x 185.99081pt.
- [7 <./figs/theory/redback-multiwavelength-emission.jpg>] [8]) (./sections/section-2.tex
-Underfull \hbox (badness 10000) in paragraph at lines 3--4
+[2] [3] (./sections/section-1.tex
+Underfull \hbox (badness 10000) in paragraph at lines 4--5
 
  []
 
 
-Overfull \hbox (1.73991pt too wide) in paragraph at lines 9--10
-\OT1/cmr/m/n/12 J0523 was the first ob-served can-di-date and was ob-served us-ing the Ultra-Wide-Bandwidth,
+Underfull \hbox (badness 10000) in paragraph at lines 6--7
+
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 9--10
+Underfull \hbox (badness 10000) in paragraph at lines 8--9
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 10--11
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 16--17
 
  []
 
@@ -620,59 +568,242 @@ Underfull \hbox (badness 10000) in paragraph at lines 18--19
 
  []
 
-[9]
-<figs/radial-velocity.png, id=330, 271.37386pt x 256.19714pt>
-File: figs/radial-velocity.png Graphic file (type png)
-<use figs/radial-velocity.png>
-Package pdftex.def Info: figs/radial-velocity.png  used on input line 24.
-(pdftex.def)             Requested size: 208.36826pt x 196.7251pt.
-<figs/sine-wave-coverage.png, id=331, 405.07335pt x 380.1402pt>
-File: figs/sine-wave-coverage.png Graphic file (type png)
-<use figs/sine-wave-coverage.png>
-Package pdftex.def Info: figs/sine-wave-coverage.png  used on input line 26.
-(pdftex.def)             Requested size: 208.36826pt x 195.54526pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 37--38
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.19 
+      [1]
+<figs/PPdot-diagram.pdf, id=241, 381.809pt x 255.49916pt>
+File: figs/PPdot-diagram.pdf Graphic file (type pdf)
+<use figs/PPdot-diagram.pdf>
+Package pdftex.def Info: figs/PPdot-diagram.pdf  used on input line 23.
+(pdftex.def)             Requested size: 362.37567pt x 242.50838pt.
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.35 
+      [2 <./figs/PPdot-diagram.pdf>] [3] [4] [5] [6]
+<figs/theory/redback-multiwavelength-emission.jpg, id=347, 1889.0575pt x 969.6225pt>
+File: figs/theory/redback-multiwavelength-emission.jpg Graphic file (type jpg)
+<use figs/theory/redback-multiwavelength-emission.jpg>
+Package pdftex.def Info: figs/theory/redback-multiwavelength-emission.jpg  used on input line 159.
+(pdftex.def)             Requested size: 362.37567pt x 185.99081pt.
+ [7 <./figs/theory/redback-multiwavelength-emission.jpg>] [8] [9]
+<figs/SETI-Frequency-Parameter-Space.pdf, id=400, 910.74924pt x 546.88826pt>
+File: figs/SETI-Frequency-Parameter-Space.pdf Graphic file (type pdf)
+<use figs/SETI-Frequency-Parameter-Space.pdf>
+Package pdftex.def Info: figs/SETI-Frequency-Parameter-Space.pdf  used on input line 203.
+(pdftex.def)             Requested size: 430.3181pt x 258.40607pt.
+) (./sections/section-2.tex [10 <./figs/SETI-Frequency-Parameter-Space.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 5--6
 
  []
 
-[10 <./figs/radial-velocity.png> <./figs/sine-wave-coverage.png>]
-<figs/presto-work-flow.drawio.png, id=344, 623.32875pt x 241.90375pt>
+
+Overfull \hbox (1.73991pt too wide) in paragraph at lines 11--12
+\OT1/cmr/m/n/12 J0523 was the first ob-served can-di-date and was ob-served us-ing the Ultra-Wide-Bandwidth,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 11--12
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 20--21
+
+ []
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.23 
+      [1]
+<figs/radial-velocity.png, id=453, 271.37386pt x 256.19714pt>
+File: figs/radial-velocity.png Graphic file (type png)
+<use figs/radial-velocity.png>
+Package pdftex.def Info: figs/radial-velocity.png  used on input line 26.
+(pdftex.def)             Requested size: 208.36826pt x 196.7251pt.
+<figs/sine-wave-coverage.png, id=454, 405.07335pt x 380.1402pt>
+File: figs/sine-wave-coverage.png Graphic file (type png)
+<use figs/sine-wave-coverage.png>
+Package pdftex.def Info: figs/sine-wave-coverage.png  used on input line 28.
+(pdftex.def)             Requested size: 208.36826pt x 195.54526pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 39--40
+
+ []
+
+<figs/presto-work-flow.drawio.png, id=458, 623.32875pt x 241.90375pt>
 File: figs/presto-work-flow.drawio.png Graphic file (type png)
 <use figs/presto-work-flow.drawio.png>
-Package pdftex.def Info: figs/presto-work-flow.drawio.png  used on input line 41.
+Package pdftex.def Info: figs/presto-work-flow.drawio.png  used on input line 43.
 (pdftex.def)             Requested size: 407.66832pt x 158.21002pt.
-<figs/DM_pulse_example.png, id=347, 728.7225pt x 823.075pt>
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.51 
+      [2 <./figs/radial-velocity.png> <./figs/sine-wave-coverage.png>]
+<figs/DM_pulse_example.png, id=471, 728.7225pt x 823.075pt>
 File: figs/DM_pulse_example.png Graphic file (type png)
 <use figs/DM_pulse_example.png>
-Package pdftex.def Info: figs/DM_pulse_example.png  used on input line 59.
+Package pdftex.def Info: figs/DM_pulse_example.png  used on input line 61.
 (pdftex.def)             Requested size: 271.78348pt x 306.96944pt.
- [11 <./figs/presto-work-flow.drawio.png>]
-<figs/rfifindexample.png, id=359, 1207.51125pt x 889.3225pt>
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.70 \end{equation}
+                    [3 <./figs/presto-work-flow.drawio.png>]
+<figs/rfifindexample.png, id=482, 1207.51125pt x 889.3225pt>
 File: figs/rfifindexample.png Graphic file (type png)
 <use figs/rfifindexample.png>
-Package pdftex.def Info: figs/rfifindexample.png  used on input line 74.
+Package pdftex.def Info: figs/rfifindexample.png  used on input line 76.
 (pdftex.def)             Requested size: 362.37567pt x 266.88022pt.
- [12 <./figs/DM_pulse_example.png>] [13 <./figs/rfifindexample.png>] [14]) (./sections/section4-PD.tex) [15] (./LiteratureReview.bbl [16]) [17]
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.4}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.90 
+      [4 <./figs/DM_pulse_example.png>]
+pdfTeX warning (ext4): destination with the same identifier (name{page.5}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.100 \end{equation}
+                     [5 <./figs/rfifindexample.png>]
+pdfTeX warning (ext4): destination with the same identifier (name{page.6}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.143 
+       [6]
+<figs/folding.png, id=526, 1012.78375pt x 122.4575pt>
+File: figs/folding.png Graphic file (type png)
+<use figs/folding.png>
+Package pdftex.def Info: figs/folding.png  used on input line 166.
+(pdftex.def)             Requested size: 407.66832pt x 49.29044pt.
+<figs/prepfold.png, id=528, 3044.37375pt x 2266.4675pt>
+File: figs/prepfold.png Graphic file (type png)
+<use figs/prepfold.png>
+Package pdftex.def Info: figs/prepfold.png  used on input line 175.
+(pdftex.def)             Requested size: 407.66832pt x 303.4699pt.
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.7}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.183 
+       [7 <./figs/folding.png>]
+pdfTeX warning (ext4): destination with the same identifier (name{page.8}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.187 
+       [8 <./figs/prepfold.png>]
+pdfTeX warning (ext4): destination with the same identifier (name{page.9}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.198 
+       [9]
+<figs/SETI-pipeline.png, id=581, 903.375pt x 456.70625pt>
+File: figs/SETI-pipeline.png Graphic file (type png)
+<use figs/SETI-pipeline.png>
+Package pdftex.def Info: figs/SETI-pipeline.png  used on input line 219.
+(pdftex.def)             Requested size: 407.66832pt x 206.10129pt.
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.10}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.226 
+       [10 <./figs/SETI-pipeline.png>] [11]
+
+LaTeX Warning: Reference `fig:barycentric correction' on page 12 undefined on input line 234.
+
+
+LaTeX Warning: Reference `fig:barycentric correction' on page 12 undefined on input line 234.
+
+<figs/hits_comparative_histogram.pdf, id=621, 257.94797pt x 254.52441pt>
+File: figs/hits_comparative_histogram.pdf Graphic file (type pdf)
+<use figs/hits_comparative_histogram.pdf>
+Package pdftex.def Info: figs/hits_comparative_histogram.pdf  used on input line 238.
+(pdftex.def)             Requested size: 208.36826pt x 205.60826pt.
+<figs/DR_scatter_plot.pdf, id=622, 316.51608pt x 308.85397pt>
+File: figs/DR_scatter_plot.pdf Graphic file (type pdf)
+<use figs/DR_scatter_plot.pdf>
+Package pdftex.def Info: figs/DR_scatter_plot.pdf  used on input line 240.
+(pdftex.def)             Requested size: 208.36826pt x 203.33055pt.
+<figs/EIRP_hist_plot.pdf, id=623, 584.88513pt x 307.47058pt>
+File: figs/EIRP_hist_plot.pdf Graphic file (type pdf)
+<use figs/EIRP_hist_plot.pdf>
+Package pdftex.def Info: figs/EIRP_hist_plot.pdf  used on input line 248.
+(pdftex.def)             Requested size: 430.3181pt x 226.2157pt.
+[12 <./figs/hits_comparative_histogram.pdf> <./figs/DR_scatter_plot.pdf>]
+<figs/narrowband-fraction.pdf, id=655, 499.44028pt x 377.4758pt>
+File: figs/narrowband-fraction.pdf Graphic file (type pdf)
+<use figs/narrowband-fraction.pdf>
+Package pdftex.def Info: figs/narrowband-fraction.pdf  used on input line 255.
+(pdftex.def)             Requested size: 226.48393pt x 171.17577pt.
+) (./sections/section-3.tex
+<figs/PhD_gannt_chart.pdf, id=658, 549.33907pt x 145.60645pt>
+File: figs/PhD_gannt_chart.pdf Graphic file (type pdf)
+<use figs/PhD_gannt_chart.pdf>
+Package pdftex.def Info: figs/PhD_gannt_chart.pdf  used on input line 7.
+(pdftex.def)             Requested size: 430.3181pt x 114.06357pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 12--13
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 14--15
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 16--17
+
+ []
+
+[13 <./figs/EIRP_hist_plot.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 18--19
+
+ []
+
+) [14 <./figs/narrowband-fraction.pdf> <./figs/PhD_gannt_chart.pdf>] (./LiteratureReview.bbl [15] [16] [17] [18] [19]
+LaTeX Font Info:    Trying to load font information for OML+cmr on input line 199.
+ (/usr/local/texlive/2023/texmf-dist/tex/latex/base/omlcmr.fd
+File: omlcmr.fd 2022/07/10 v2.5l Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OML/cmr/m/it' in size <12> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 199.
+ [20] [21]) [22]
 runsystem(makeindex LiteratureReview.idx)...executed safely (allowed).
 
  (./LiteratureReview.ind) (./LiteratureReview.aux)
+
+LaTeX Warning: There were undefined references.
+
 Package rerunfilecheck Info: File `LiteratureReview.out' has not changed.
-(rerunfilecheck)             Checksum: 20C198C82844ECE4C7015FE3DADDBBE7;3477.
+(rerunfilecheck)             Checksum: 51B5898D1D4227D927CE485B24E95510;5409.
  ) 
 Here is how much of TeX's memory you used:
- 14982 strings out of 476025
- 255733 string characters out of 5790017
- 1864388 words of memory out of 5000000
- 35095 multiletter control sequences out of 15000+600000
- 521611 words of font info for 64 fonts, out of 8000000 for 9000
+ 15253 strings out of 476025
+ 261723 string characters out of 5790017
+ 1872388 words of memory out of 5000000
+ 35293 multiletter control sequences out of 15000+600000
+ 522742 words of font info for 68 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,14n,78p,1123b,591s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on LiteratureReview.pdf (22 pages, 1382279 bytes).
+ 75i,14n,78p,7854b,635s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on LiteratureReview.pdf (39 pages, 3467799 bytes).
 PDF statistics:
- 542 PDF objects out of 1000 (max. 8388607)
- 447 compressed objects within 5 object streams
- 111 named destinations out of 1000 (max. 500000)
- 217 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 913 PDF objects out of 1000 (max. 8388607)
+ 733 compressed objects within 8 object streams
+ 169 named destinations out of 1000 (max. 500000)
+ 334 words of extra memory for PDF output out of 10000 (max. 10000000)
 

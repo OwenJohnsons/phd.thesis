@@ -1,49 +1,52 @@
 This is BibTeX, Version 0.99d (TeX Live 2023)
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: LiteratureReview.aux
-The style file: abbrvnat.bst
+The style file: apalike.bst
 Database file #1: frb.bib
 Database file #2: pulsar.bib
+Database file #3: seti.bib
+Database file #4: radio-planets.bib
 Warning--empty school in ransom_new_2001
-You've used 17 entries,
-            2773 wiz_defined-function locations,
-            746 strings with 9539 characters,
-and the built_in function-call counts, 10685 in all, are:
-= -- 951
-> -- 882
-< -- 8
-+ -- 296
-- -- 279
-* -- 1040
-:= -- 1766
-add.period$ -- 102
-call.type$ -- 17
-change.case$ -- 141
-chr.to.int$ -- 17
-cite$ -- 35
-duplicate$ -- 341
-empty$ -- 623
-format.name$ -- 304
-if$ -- 2136
+Warning--empty journal in EMI
+You've used 42 entries,
+            1935 wiz_defined-function locations,
+            755 strings with 29425 characters,
+and the built_in function-call counts, 45475 in all, are:
+= -- 3475
+> -- 5387
+< -- 16
++ -- 2112
+- -- 2106
+* -- 5202
+:= -- 8560
+add.period$ -- 144
+call.type$ -- 42
+change.case$ -- 1259
+chr.to.int$ -- 42
+cite$ -- 44
+duplicate$ -- 591
+empty$ -- 1121
+format.name$ -- 2162
+if$ -- 7831
 int.to.chr$ -- 1
-int.to.str$ -- 1
-missing$ -- 17
-newline$ -- 143
-num.names$ -- 68
-pop$ -- 220
+int.to.str$ -- 0
+missing$ -- 42
+newline$ -- 229
+num.names$ -- 128
+pop$ -- 1168
 preamble$ -- 1
-purify$ -- 127
+purify$ -- 1262
 quote$ -- 0
-skip$ -- 289
+skip$ -- 440
 stack$ -- 0
-substring$ -- 270
-swap$ -- 33
-text.length$ -- 1
+substring$ -- 1097
+swap$ -- 48
+text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 177
-warning$ -- 1
-while$ -- 72
+type$ -- 248
+warning$ -- 2
+while$ -- 137
 width$ -- 0
-write$ -- 326
-(There was 1 warning)
+write$ -- 576
+(There were 2 warnings)

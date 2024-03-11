@@ -1,143 +1,229 @@
-\begin{thebibliography}{17}
-\providecommand{\natexlab}[1]{#1}
-\providecommand{\url}[1]{\texttt{#1}}
-\expandafter\ifx\csname urlstyle\endcsname\relax
-  \providecommand{\doi}[1]{doi: #1}\else
-  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+\begin{thebibliography}{}
 
-\bibitem[Baym et~al.(1971)Baym, Bethe, and Pethick]{baym_neutron_1971}
-G.~Baym, H.~A. Bethe, and C.~J. Pethick.
+\bibitem[Baym et~al., 1971]{baym_neutron_1971}
+Baym, G., Bethe, H.~A., and Pethick, C.~J. (1971).
 \newblock Neutron star matter.
-\newblock \emph{Nuclear Physics A}, 175\penalty0 (2):\penalty0 225--271, Nov. 1971.
-\newblock ISSN 0375-9474.
-\newblock \doi{10.1016/0375-9474(71)90281-8}.
-\newblock URL \url{https://www.sciencedirect.com/science/article/pii/0375947471902818}.
+\newblock {\em Nuclear Physics A}, 175(2):225--271.
 
-\bibitem[Chandrasekhar(1967)]{chandrasekhar_introduction_2012}
-S.~Chandrasekhar.
-\newblock \emph{An {Introduction} to the {Study} of {Stellar} {Structure}}.
-\newblock Dover {Books} on {Astronomy} {Series}. Dover Publications, Incorporated, 1967.
-\newblock ISBN 978-0-486-13628-8.
-\newblock URL \url{https://books.google.ie/books?id=joWn8s2BF04C}.
+\bibitem[Borucki et~al., 2010]{Kepler_Mission_Design_2010}
+Borucki, W.~J., Koch, D., Basri, G., Batalha, N., Brown, T., Caldwell, D., Caldwell, J., Christensen-Dalsgaard, J., Cochran, W.~D., DeVore, E., Dunham, E.~W., Dupree, A.~K., Gautier, T.~N., Geary, J.~C., Gilliland, R., Gould, A., Howell, S.~B., Jenkins, J.~M., Kondo, Y., Latham, D.~W., Marcy, G.~W., Meibom, S., Kjeldsen, H., Lissauer, J.~J., Monet, D.~G., Morrison, D., Sasselov, D., Tarter, J., Boss, A., Brownlee, D., Owen, T., Buzasi, D., Charbonneau, D., Doyle, L., Fortney, J., Ford, E.~B., Holman, M.~J., Seager, S., Steffen, J.~H., Welsh, W.~F., Rowe, J., Anderson, H., Buchhave, L., Ciardi, D., Walkowicz, L., Sherry, W., Horch, E., Isaacson, H., Everett, M.~E., Fischer, D., Torres, G., Johnson, J.~A., Endl, M., MacQueen, P., Bryson, S.~T., Dotson, J., Haas, M., Kolodziejczak, J., Van~Cleve, J., Chandrasekaran, H., Twicken, J.~D., Quintana, E.~V., Clarke, B.~D., Allen, C., Li, J., Wu, H., Tenenbaum, P., Verner, E., Bruhweiler, F., Barnes, J., and Prsa, A. (2010).
+\newblock {Kepler Planet-Detection Mission: Introduction and First Results}.
+\newblock {\em Science}, 327(5):977--.
 
-\bibitem[Halpern et~al.(2022)Halpern, Perez, and Bogdanov]{halpern_luminous_2022}
-J.~P. Halpern, K.~I. Perez, and S.~Bogdanov.
+\bibitem[Callingham et~al., 2024]{joe_nature_review}
+Callingham, J.~R., Pope, B. J.~S., Kavanagh, R.~D., Bellotti, S., Daley-Yates, S., Damasso, M., Grießmeier, J.-M., Güdel, M., Günther, M., Kao, M.~M., Klein, B., Mahadevan, S., Morin, J., Nichols, J.~D., Osten, R.~A., Pérez-Torres, M., Pineda, J.~S., Rigney, J., Saur, J., Stefánsson, G., Turner, J., Vedantham, H., Vidotto, A.~A., Villadsen, J., and Zarka, P. (2024).
+\newblock Radio stars and exoplanets.
+\newblock {\em Nature Astronomy}.
+
+\bibitem[Chandrasekhar, 1967]{chandrasekhar_introduction_2012}
+Chandrasekhar, S. (1967).
+\newblock {\em An {Introduction} to the {Study} of {Stellar} {Structure}}.
+\newblock Dover {Books} on {Astronomy} {Series}. Dover Publications, Incorporated.
+
+\bibitem[{Drake}, 1961]{Drake61Ozman}
+{Drake}, F.~D. (1961).
+\newblock {Project Ozma}.
+\newblock {\em Physics Today}, 14(4):40.
+
+\bibitem[{Enriquez} et~al., 2017]{Enriquez2017ApJ}
+{Enriquez}, J.~E., {Siemion}, A., {Foster}, G., {Gajjar}, V., {Hellbourg}, G., {Hickish}, J., {Isaacson}, H., {Price}, D.~C., {Croft}, S., {DeBoer}, D., {Lebofsky}, M., {MacMahon}, D.~H.~E., and {Werthimer}, D. (2017).
+\newblock {The Breakthrough Listen Search for Intelligent Life: 1.1-1.9 GHz Observations of 692 Nearby Stars}.
+\newblock {\em The Astrophysical Journal}, 849:104.
+
+\bibitem[{Gaia Collaboration} et~al., 2023]{GaiaDR3}
+{Gaia Collaboration}, {Vallenari}, A., {Brown}, A.~G.~A., {Prusti}, T., {de Bruijne}, J.~H.~J., {Arenou}, F., {Babusiaux}, C., {Biermann}, M., {Creevey}, O.~L., {Ducourant}, C., {Evans}, D.~W., {Eyer}, L., {Guerra}, R., {Hutton}, A., {Jordi}, C., {Klioner}, S.~A., {Lammers}, U.~L., {Lindegren}, L., {Luri}, X., {Mignard}, F., {Panem}, C., {Pourbaix}, D., {Randich}, S., {Sartoretti}, P., {Soubiran}, C., {Tanga}, P., {Walton}, N.~A., {Bailer-Jones}, C.~A.~L., {Bastian}, U., {Drimmel}, R., {Jansen}, F., {Katz}, D., {Lattanzi}, M.~G., {van Leeuwen}, F., {Bakker}, J., {Cacciari}, C., {Casta{\~n}eda}, J., {De Angeli}, F., {Fabricius}, C., {Fouesneau}, M., {Fr{\'e}mat}, Y., {Galluccio}, L., {Guerrier}, A., {Heiter}, U., {Masana}, E., {Messineo}, R., {Mowlavi}, N., {Nicolas}, C., {Nienartowicz}, K., {Pailler}, F., {Panuzzo}, P., {Riclet}, F., {Roux}, W., {Seabroke}, G.~M., {Sordo}, R., {Th{\'e}venin}, F., {Gracia-Abril}, G., {Portell}, J., {Teyssier}, D., {Altmann}, M., {Andrae}, R., {Audard}, M., {Bellas-Velidis}, I., {Benson}, K., {Berthier}, J., {Blomme}, R., {Burgess}, P.~W., {Busonero}, D., {Busso}, G., {C{\'a}novas}, H., {Carry}, B., {Cellino}, A., {Cheek}, N., {Clementini}, G., {Damerdji}, Y., {Davidson}, M., {de Teodoro}, P., {Nu{\~n}ez Campos}, M., {Delchambre}, L., {Dell'Oro}, A., {Esquej}, P., {Fern{\'a}ndez-Hern{\'a}ndez}, J., {Fraile}, E., {Garabato}, D., {Garc{\'\i}a-Lario}, P., {Gosset}, E., {Haigron}, R., {Halbwachs}, J.~L., {Hambly}, N.~C., {Harrison}, D.~L., {Hern{\'a}ndez}, J., {Hestroffer}, D., {Hodgkin}, S.~T., {Holl}, B., {Jan{\ss}en}, K., {Jevardat de Fombelle}, G., {Jordan}, S., {Krone-Martins}, A., {Lanzafame}, A.~C., {L{\"o}ffler}, W., {Marchal}, O., {Marrese}, P.~M., {Moitinho}, A., {Muinonen}, K., {Osborne}, P., {Pancino}, E., {Pauwels}, T., {Recio-Blanco}, A., {Reyl{\'e}}, C., {Riello}, M., {Rimoldini}, L., {Roegiers}, T., {Rybizki}, J., {Sarro}, L.~M., {Siopis}, C., {Smith}, M., {Sozzetti}, A., {Utrilla}, E., {van Leeuwen}, M., {Abbas}, U., {{\'A}brah{\'a}m}, P., {Abreu Aramburu}, A., {Aerts}, C., {Aguado}, J.~J., {Ajaj}, M., {Aldea-Montero}, F., {Altavilla}, G., {{\'A}lvarez}, M.~A., {Alves}, J., {Anders}, F., {Anderson}, R.~I., {Anglada Varela}, E., {Antoja}, T., {Baines}, D., {Baker}, S.~G., {Balaguer-N{\'u}{\~n}ez}, L., {Balbinot}, E., {Balog}, Z., {Barache}, C., {Barbato}, D., {Barros}, M., {Barstow}, M.~A., {Bartolom{\'e}}, S., {Bassilana}, J.~L., {Bauchet}, N., {Becciani}, U., {Bellazzini}, M., {Berihuete}, A., {Bernet}, M., {Bertone}, S., {Bianchi}, L., {Binnenfeld}, A., {Blanco-Cuaresma}, S., {Blazere}, A., {Boch}, T., {Bombrun}, A., {Bossini}, D., {Bouquillon}, S., {Bragaglia}, A., {Bramante}, L., {Breedt}, E., {Bressan}, A., {Brouillet}, N., {Brugaletta}, E., {Bucciarelli}, B., {Burlacu}, A., {Butkevich}, A.~G., {Buzzi}, R., {Caffau}, E., {Cancelliere}, R., {Cantat-Gaudin}, T., {Carballo}, R., {Carlucci}, T., {Carnerero}, M.~I., {Carrasco}, J.~M., {Casamiquela}, L., {Castellani}, M., {Castro-Ginard}, A., {Chaoul}, L., {Charlot}, P., {Chemin}, L., {Chiaramida}, V., {Chiavassa}, A., {Chornay}, N., {Comoretto}, G., {Contursi}, G., {Cooper}, W.~J., {Cornez}, T., {Cowell}, S., {Crifo}, F., {Cropper}, M., {Crosta}, M., {Crowley}, C., {Dafonte}, C., {Dapergolas}, A., {David}, M., {David}, P., {de Laverny}, P., {De Luise}, F., {De March}, R., {De Ridder}, J., {de Souza}, R., {de Torres}, A., {del Peloso}, E.~F., {del Pozo}, E., {Delbo}, M., {Delgado}, A., {Delisle}, J.~B., {Demouchy}, C., {Dharmawardena}, T.~E., {Di Matteo}, P., {Diakite}, S., {Diener}, C., {Distefano}, E., {Dolding}, C., {Edvardsson}, B., {Enke}, H., {Fabre}, C., {Fabrizio}, M., {Faigler}, S., {Fedorets}, G., {Fernique}, P., {Fienga}, A., {Figueras}, F., {Fournier}, Y., {Fouron}, C., {Fragkoudi}, F., {Gai}, M., {Garcia-Gutierrez}, A., {Garcia-Reinaldos}, M., {Garc{\'\i}a-Torres}, M., {Garofalo}, A., {Gavel}, A., {Gavras}, P., {Gerlach}, E., {Geyer}, R., {Giacobbe}, P., {Gilmore}, G., {Girona}, S., {Giuffrida}, G., {Gomel}, R., {Gomez}, A., {Gonz{\'a}lez-N{\'u}{\~n}ez}, J., {Gonz{\'a}lez-Santamar{\'\i}a}, I., {Gonz{\'a}lez-Vidal}, J.~J., {Granvik}, M., {Guillout}, P., {Guiraud}, J., {Guti{\'e}rrez-S{\'a}nchez}, R., {Guy}, L.~P., {Hatzidimitriou}, D., {Hauser}, M., {Haywood}, M., {Helmer}, A., {Helmi}, A., {Sarmiento}, M.~H., {Hidalgo}, S.~L., {Hilger}, T., {H{\l}adczuk}, N., {Hobbs}, D., {Holland}, G., {Huckle}, H.~E., {Jardine}, K., {Jasniewicz}, G., {Jean-Antoine Piccolo}, A., {Jim{\'e}nez-Arranz}, {\'O}., {Jorissen}, A., {Juaristi Campillo}, J., {Julbe}, F., {Karbevska}, L., {Kervella}, P., {Khanna}, S., {Kontizas}, M., {Kordopatis}, G., {Korn}, A.~J., {K{\'o}sp{\'a}l}, {\'A}., {Kostrzewa-Rutkowska}, Z., {Kruszy{\'n}ska}, K., {Kun}, M., {Laizeau}, P., {Lambert}, S., {Lanza}, A.~F., {Lasne}, Y., {Le Campion}, J.~F., {Lebreton}, Y., {Lebzelter}, T., {Leccia}, S., {Leclerc}, N., {Lecoeur-Taibi}, I., {Liao}, S., {Licata}, E.~L., {Lindstr{\o}m}, H.~E.~P., {Lister}, T.~A., {Livanou}, E., {Lobel}, A., {Lorca}, A., {Loup}, C., {Madrero Pardo}, P., {Magdaleno Romeo}, A., {Managau}, S., {Mann}, R.~G., {Manteiga}, M., {Marchant}, J.~M., {Marconi}, M., {Marcos}, J., {Marcos Santos}, M.~M.~S., {Mar{\'\i}n Pina}, D., {Marinoni}, S., {Marocco}, F., {Marshall}, D.~J., {Martin Polo}, L., {Mart{\'\i}n-Fleitas}, J.~M., {Marton}, G., {Mary}, N., {Masip}, A., {Massari}, D., {Mastrobuono-Battisti}, A., {Mazeh}, T., {McMillan}, P.~J., {Messina}, S., {Michalik}, D., {Millar}, N.~R., {Mints}, A., {Molina}, D., {Molinaro}, R., {Moln{\'a}r}, L., {Monari}, G., {Mongui{\'o}}, M., {Montegriffo}, P., {Montero}, A., {Mor}, R., {Mora}, A., {Morbidelli}, R., {Morel}, T., {Morris}, D., {Muraveva}, T., {Murphy}, C.~P., {Musella}, I., {Nagy}, Z., {Noval}, L., {Oca{\~n}a}, F., {Ogden}, A., {Ordenovic}, C., {Osinde}, J.~O., {Pagani}, C., {Pagano}, I., {Palaversa}, L., {Palicio}, P.~A., {Pallas-Quintela}, L., {Panahi}, A., {Payne-Wardenaar}, S., {Pe{\~n}alosa Esteller}, X., {Penttil{\"a}}, A., {Pichon}, B., {Piersimoni}, A.~M., {Pineau}, F.~X., {Plachy}, E., {Plum}, G., {Poggio}, E., {Pr{\v{s}}a}, A., {Pulone}, L., {Racero}, E., {Ragaini}, S., {Rainer}, M., {Raiteri}, C.~M., {Rambaux}, N., {Ramos}, P., {Ramos-Lerate}, M., {Re Fiorentin}, P., {Regibo}, S., {Richards}, P.~J., {Rios Diaz}, C., {Ripepi}, V., {Riva}, A., {Rix}, H.~W., {Rixon}, G., {Robichon}, N., {Robin}, A.~C., {Robin}, C., {Roelens}, M., {Rogues}, H.~R.~O., {Rohrbasser}, L., {Romero-G{\'o}mez}, M., {Rowell}, N., {Royer}, F., {Ruz Mieres}, D., {Rybicki}, K.~A., {Sadowski}, G., {S{\'a}ez N{\'u}{\~n}ez}, A., {Sagrist{\`a} Sell{\'e}s}, A., {Sahlmann}, J., {Salguero}, E., {Samaras}, N., {Sanchez Gimenez}, V., {Sanna}, N., {Santove{\~n}a}, R., {Sarasso}, M., {Schultheis}, M., {Sciacca}, E., {Segol}, M., {Segovia}, J.~C., {S{\'e}gransan}, D., {Semeux}, D., {Shahaf}, S., {Siddiqui}, H.~I., {Siebert}, A., {Siltala}, L., {Silvelo}, A., {Slezak}, E., {Slezak}, I., {Smart}, R.~L., {Snaith}, O.~N., {Solano}, E., {Solitro}, F., {Souami}, D., {Souchay}, J., {Spagna}, A., {Spina}, L., {Spoto}, F., {Steele}, I.~A., {Steidelm{\"u}ller}, H., {Stephenson}, C.~A., {S{\"u}veges}, M., {Surdej}, J., {Szabados}, L., {Szegedi-Elek}, E., {Taris}, F., {Taylor}, M.~B., {Teixeira}, R., {Tolomei}, L., {Tonello}, N., {Torra}, F., {Torra}, J., {Torralba Elipe}, G., {Trabucchi}, M., {Tsounis}, A.~T., {Turon}, C., {Ulla}, A., {Unger}, N., {Vaillant}, M.~V., {van Dillen}, E., {van Reeven}, W., {Vanel}, O., {Vecchiato}, A., {Viala}, Y., {Vicente}, D., {Voutsinas}, S., {Weiler}, M., {Wevers}, T., {Wyrzykowski}, {\L}., {Yoldas}, A., {Yvard}, P., {Zhao}, H., {Zorec}, J., {Zucker}, S., and {Zwitter}, T. (2023).
+\newblock {Gaia Data Release 3. Summary of the content and survey properties}.
+\newblock {\em aap}, 674:A1.
+
+\bibitem[{Ginsburg} et~al., 2019]{astroquery}
+{Ginsburg}, A., {Sip{\H o}cz}, B.~M., {Brasseur}, C.~E., {Cowperthwaite}, P.~S., {Craig}, M.~W., {Deil}, C., {Guillochon}, J., {Guzman}, G., {Liedtke}, S., {Lian Lim}, P., {Lockhart}, K.~E., {Mommert}, M., {Morris}, B.~M., {Norman}, H., {Parikh}, M., {Persson}, M.~V., {Robitaille}, T.~P., {Segovia}, J.-C., {Singer}, L.~P., {Tollerud}, E.~J., {de Val-Borro}, M., {Valtchanov}, I., {Woillez}, J., {The Astroquery collaboration}, and {a subset of the astropy collaboration} (2019).
+\newblock {astroquery: An Astronomical Web-querying Package in Python}.
+\newblock {\em The Astronomical Journal}, 157:98.
+
+\bibitem[Halpern et~al., 2022]{halpern_luminous_2022}
+Halpern, J.~P., Perez, K.~I., and Bogdanov, S. (2022).
 \newblock Luminous {Optical} and {X}-ray {Flaring} of the {Putative} {Redback} {Millisecond} {Pulsar} {1FGL} {J0523}.5\$-\$2529.
-\newblock \emph{The Astrophysical Journal}, 935\penalty0 (2):\penalty0 151, Aug. 2022.
-\newblock ISSN 0004-637X, 1538-4357.
-\newblock \doi{10.3847/1538-4357/ac8161}.
-\newblock URL \url{http://arxiv.org/abs/2207.08198}.
+\newblock {\em The Astrophysical Journal}, 935(2):151.
 \newblock arXiv:2207.08198 [astro-ph].
 
-\bibitem[Heger et~al.(2003)Heger, Fryer, Woosley, Langer, and Hartmann]{heger_how_2003}
-A.~Heger, C.~L. Fryer, S.~E. Woosley, N.~Langer, and D.~H. Hartmann.
+\bibitem[Heger et~al., 2003]{heger_how_2003}
+Heger, A., Fryer, C.~L., Woosley, S.~E., Langer, N., and Hartmann, D.~H. (2003).
 \newblock How {Massive} {Single} {Stars} {End} {Their} {Life}.
-\newblock \emph{The Astrophysical Journal}, 591:\penalty0 288--300, July 2003.
-\newblock ISSN 0004-637X.
-\newblock \doi{10.1086/375341}.
-\newblock URL \url{https://ui.adsabs.harvard.edu/abs/2003ApJ...591..288H}.
+\newblock {\em The Astrophysical Journal}, 591:288--300.
 \newblock ADS Bibcode: 2003ApJ...591..288H.
 
-\bibitem[Hewish et~al.(1968)Hewish, Bell, Pilkington, Scott, and Collins]{hewish_observation_1968}
-A.~Hewish, S.~J. Bell, J.~D.~H. Pilkington, P.~F. Scott, and R.~A. Collins.
+\bibitem[Hewish et~al., 1968]{hewish_observation_1968}
+Hewish, A., Bell, S.~J., Pilkington, J. D.~H., Scott, P.~F., and Collins, R.~A. (1968).
 \newblock Observation of a {Rapidly} {Pulsating} {Radio} {Source}.
-\newblock \emph{Nature}, 217\penalty0 (5130):\penalty0 709--713, Feb. 1968.
-\newblock ISSN 1476-4687.
-\newblock \doi{10.1038/217709a0}.
-\newblock URL \url{https://doi.org/10.1038/217709a0}.
+\newblock {\em Nature}, 217(5130):709--713.
 
-\bibitem[Karpova et~al.(2023)Karpova, Zyuzin, Shibanov, and Gilfanov]{karpova_new_2023}
-A.~V. Karpova, D.~A. Zyuzin, Y.~A. Shibanov, and M.~R. Gilfanov.
-\newblock A new redback pulsar candidate {4FGL} {J2054}.2+6904.
-\newblock \emph{Monthly Notices of the Royal Astronomical Society}, 524\penalty0 (2):\penalty0 3020--3025, July 2023.
-\newblock ISSN 0035-8711, 1365-2966.
-\newblock \doi{10.1093/mnras/stad1992}.
-\newblock URL \url{http://arxiv.org/abs/2306.17593}.
-\newblock arXiv:2306.17593 [astro-ph].
-
-\bibitem[Kaspi et~al.(2001)Kaspi, Roberts, Vasisht, Gotthelf, Pivovaroff, and Kawai]{kaspi_chandra_2001}
-V.~M. Kaspi, M.~E. Roberts, G.~Vasisht, E.~V. Gotthelf, M.~Pivovaroff, and N.~Kawai.
-\newblock Chandra {X}-{Ray} {Observations} of {G11}.2-0.3: {Implications} for {Pulsar} {Ages}.
-\newblock \emph{The Astrophysical Journal}, 560:\penalty0 371--377, Oct. 2001.
-\newblock ISSN 0004-637X.
-\newblock \doi{10.1086/322515}.
-\newblock URL \url{https://ui.adsabs.harvard.edu/abs/2001ApJ...560..371K}.
-\newblock ADS Bibcode: 2001ApJ...560..371K.
-
-\bibitem[Lattimer and Prakash(2001)]{lattimer_neutron_2001}
-J.~M. Lattimer and M.~Prakash.
-\newblock Neutron {Star} {Structure} and the {Equation} of {State}.
-\newblock \emph{The Astrophysical Journal}, 550\penalty0 (1):\penalty0 426, Mar. 2001.
-\newblock ISSN 0004-637X.
-\newblock \doi{10.1086/319702}.
-\newblock URL \url{https://dx.doi.org/10.1086/319702}.
-
-\bibitem[{Lorimer} and {Kramer}(2004)]{pulsar_handbook}
-D.~R. {Lorimer} and M.~{Kramer}.
-\newblock \emph{{Handbook of Pulsar Astronomy}}, volume~4.
-\newblock Cambridge University Press, 2004.
-
-\bibitem[Michel(1982)]{michel_theory_1982}
-F.~C. Michel.
-\newblock Theory of pulsar magnetospheres.
-\newblock \emph{Reviews of Modern Physics}, 54\penalty0 (1):\penalty0 1--66, Jan. 1982.
-\newblock \doi{10.1103/RevModPhys.54.1}.
-\newblock URL \url{https://link.aps.org/doi/10.1103/RevModPhys.54.1}.
-\newblock Publisher: American Physical Society.
-
-\bibitem[Oppenheimer and Volkoff(1939)]{oppenheimer_massive_1939}
-J.~R. Oppenheimer and G.~M. Volkoff.
-\newblock On {Massive} {Neutron} {Cores}.
-\newblock \emph{Physical Review}, 55\penalty0 (4):\penalty0 374--381, Feb. 1939.
-\newblock \doi{10.1103/PhysRev.55.374}.
-\newblock URL \url{https://link.aps.org/doi/10.1103/PhysRev.55.374}.
-\newblock Publisher: American Physical Society.
-
-\bibitem[Ransom(2001)]{ransom_new_2001}
-S.~M. Ransom.
-\newblock \emph{New search techniques for binary pulsars}.
-\newblock PhD thesis, Jan. 2001.
-\newblock URL \url{https://ui.adsabs.harvard.edu/abs/2001PhDT.......123R}.
-\newblock Publication Title: Ph.D. Thesis ADS Bibcode: 2001PhDT.......123R.
-
-\bibitem[Ray et~al.(2012)Ray, Abdo, Parent, Bhattacharya, Bhattacharyya, Camilo, Cognard, Theureau, Ferrara, Harding, Thompson, Freire, Guillemot, Gupta, Roy, Hessels, Johnston, Keith, Shannon, Kerr, Michelson, Romani, Kramer, McLaughlin, Ransom, Roberts, Parkinson, Ziegler, Smith, Stappers, Weltevrede, and Wood]{ray_radio_2012}
-P.~S. Ray, A.~A. Abdo, D.~Parent, D.~Bhattacharya, B.~Bhattacharyya, F.~Camilo, I.~Cognard, G.~Theureau, E.~C. Ferrara, A.~K. Harding, D.~J. Thompson, P.~C.~C. Freire, L.~Guillemot, Y.~Gupta, J.~Roy, J.~W.~T. Hessels, S.~Johnston, M.~Keith, R.~Shannon, M.~Kerr, P.~F. Michelson, R.~W. Romani, M.~Kramer, M.~A. McLaughlin, S.~M. Ransom, M.~S.~E. Roberts, P.~M.~S. Parkinson, M.~Ziegler, D.~A. Smith, B.~W. Stappers, P.~Weltevrede, and K.~S. Wood.
-\newblock Radio {Searches} of {Fermi} {LAT} {Sources} and {Blind} {Search} {Pulsars}: {The} {Fermi} {Pulsar} {Search} {Consortium}, May 2012.
-\newblock URL \url{http://arxiv.org/abs/1205.3089}.
-\newblock arXiv:1205.3089 [astro-ph].
-
-\bibitem[Romani et~al.(2022)Romani, Kandel, Filippenko, Brink, and Zheng]{Romani_2022}
-R.~W. Romani, D.~Kandel, A.~V. Filippenko, T.~G. Brink, and W.~Zheng.
-\newblock Psr j0952-0607: The fastest and heaviest known galactic neutron star.
-\newblock \emph{The Astrophysical Journal Letters}, 934\penalty0 (2):\penalty0 L17, jul 2022.
-\newblock \doi{10.3847/2041-8213/ac8007}.
-\newblock URL \url{https://dx.doi.org/10.3847/2041-8213/ac8007}.
-
-\bibitem[Strader et~al.(2014)Strader, Chomiuk, Sonbas, Sokolovsky, Sand, Moskvitin, and Cheung]{strader_1fgl_2014}
-J.~Strader, L.~Chomiuk, E.~Sonbas, K.~Sokolovsky, D.~J. Sand, A.~S. Moskvitin, and C.~C. Cheung.
-\newblock {1FGL} {J0523}.5-2529: {A} {New} {Probable} {Gamma}-ray {Pulsar} {Binary}.
-\newblock \emph{The Astrophysical Journal}, 788\penalty0 (2):\penalty0 L27, June 2014.
-\newblock ISSN 2041-8205, 2041-8213.
-\newblock \doi{10.1088/2041-8205/788/2/L27}.
-\newblock URL \url{http://arxiv.org/abs/1405.5533}.
-\newblock arXiv:1405.5533 [astro-ph].
-
-\bibitem[Takata et~al.(2014)Takata, Li, Leung, Kong, Tam, Hui, Wu, Xing, Cao, Tang, Wang, and Cheng]{takata_multi-wavelength_2014}
-J.~Takata, K.~L. Li, G.~C.~K. Leung, A.~K.~H. Kong, P.~H.~T. Tam, C.~Y. Hui, E.~M.~H. Wu, Y.~Xing, Y.~Cao, S.~Tang, Z.~Wang, and K.~S. Cheng.
-\newblock Multi-wavelength emissions from the millisecond pulsar binary psr j1023+0038 during an accretion active state.
-\newblock \emph{The Astrophysical Journal}, 785\penalty0 (2):\penalty0 131, Apr. 2014.
-\newblock ISSN 0004-637X.
-\newblock \doi{10.1088/0004-637X/785/2/131}.
-\newblock URL \url{https://dx.doi.org/10.1088/0004-637X/785/2/131}.
+\bibitem[Johnson et~al., 2023]{johnson_simultaneous_2023}
+Johnson, O.~A., Gajjar, V., Keane, E.~F., McKenna, D.~J., Giese, C., McKeon, B., Carozzi, T.~D., Alcaria, C., Brennan, A., Brzycki, B., Croft, S., Drew, J., Elkins, R., Gallagher, P.~T., Kelly, R., Lebofsky, M., MacMahon, D. H.~E., McCauley, J., Pater, I.~d., Raeside, S.~R., Siemion, A. P.~V., and Worden, S.~P. (2023).
+\newblock A {Simultaneous} {Dual}-site {Technosignature} {Search} {Using} {International} {LOFAR} {Stations}.
+\newblock {\em The Astronomical Journal}, 166(5):193.
 \newblock Publisher: The American Astronomical Society.
 
-\bibitem[Taylor and Manchester(1977)]{taylor_recent_1977}
-J.~H. Taylor and R.~N. Manchester.
+\bibitem[Karpova et~al., 2023]{karpova_new_2023}
+Karpova, A.~V., Zyuzin, D.~A., Shibanov, Y.~A., and Gilfanov, M.~R. (2023).
+\newblock A new redback pulsar candidate {4FGL} {J2054}.2+6904.
+\newblock {\em Monthly Notices of the Royal Astronomical Society}, 524(2):3020--3025.
+\newblock arXiv:2306.17593 [astro-ph].
+
+\bibitem[Kaspi et~al., 2001]{kaspi_chandra_2001}
+Kaspi, V.~M., Roberts, M.~E., Vasisht, G., Gotthelf, E.~V., Pivovaroff, M., and Kawai, N. (2001).
+\newblock Chandra {X}-{Ray} {Observations} of {G11}.2-0.3: {Implications} for {Pulsar} {Ages}.
+\newblock {\em The Astrophysical Journal}, 560:371--377.
+\newblock ADS Bibcode: 2001ApJ...560..371K.
+
+\bibitem[Kasting et~al., 1993]{Kasting1993}
+Kasting, J.~F., Whitmire, D.~P., and Reynolds, R.~T. (1993).
+\newblock {Habitable Zones around Main Sequence Stars}.
+\newblock {\em Icarus}, 101(1):108--128.
+
+\bibitem[Kavanagh and Vedantham, 2023]{kavanagh_hunting_2023}
+Kavanagh, R.~D. and Vedantham, H.~K. (2023).
+\newblock Hunting for exoplanets via magnetic star–planet interactions: geometrical considerations for radio emission.
+\newblock {\em Monthly Notices of the Royal Astronomical Society}, 524(4):6267--6284.
+
+\bibitem[Lattimer and Prakash, 2001]{lattimer_neutron_2001}
+Lattimer, J.~M. and Prakash, M. (2001).
+\newblock Neutron {Star} {Structure} and the {Equation} of {State}.
+\newblock {\em The Astrophysical Journal}, 550(1):426.
+
+\bibitem[{Lebofsky} et~al., 2019]{2019_Lebofsky}
+{Lebofsky}, M., {Croft}, S., {Siemion}, A. P.~V., {Price}, D.~C., {Enriquez}, J.~E., {Isaacson}, H., {MacMahon}, D. H.~E., {Anderson}, D., {Brzycki}, B., {Cobb}, J., {Czech}, D., {DeBoer}, D., {DeMarines}, J., {Drew}, J., {Foster}, G., {Gajjar}, V., {Gizani}, N., {Hellbourg}, G., {Korpela}, E.~J., {Lacki}, B., {Sheikh}, S., {Werthimer}, D., {Worden}, P., {Yu}, A., and {Zhang}, Y.~G. (2019).
+\newblock {The Breakthrough Listen Search for Intelligent Life: Public Data, Formats, Reduction, and Archiving}.
+\newblock {\em PASP}, 131(1006):124505.
+
+\bibitem[{Li} et~al., 2022]{LiNarrowBand}
+{Li}, J.-K., {Zhao}, H.-C., {Tao}, Z.-Z., {Zhang}, T.-J., and {Xiao-Hui}, S. (2022).
+\newblock {Drift Rates of Narrowband Signals in Long-term SETI Observations for Exoplanets}.
+\newblock {\em The Astrophysical Journal}, 938(1):1.
+
+\bibitem[{Lorimer} and {Kramer}, 2004]{pulsar_handbook}
+{Lorimer}, D.~R. and {Kramer}, M. (2004).
+\newblock {\em {Handbook of Pulsar Astronomy}}, volume~4.
+\newblock Cambridge University Press.
+
+\bibitem[{McKenna} et~al., 2023]{David_JOSS}
+{McKenna}, D.~J., {Keane}, E.~F., {Gallagher}, P.~T., and {McAuley}, J. (2023).
+\newblock {udpPacketManager: An International LOFAR Station Data (Pre-)Processor}.
+\newblock {\em The Journal of Open Source Software}.
+
+\bibitem[Michel, 1982]{michel_theory_1982}
+Michel, F.~C. (1982).
+\newblock Theory of pulsar magnetospheres.
+\newblock {\em Reviews of Modern Physics}, 54(1):1--66.
+\newblock Publisher: American Physical Society.
+
+\bibitem[Murphy et~al., 2021]{murphy_lofar_2021}
+Murphy, P.~C., Carley, E.~P., Ryan, A.~M., Zucca, P., and Gallagher, P.~T. (2021).
+\newblock {LOFAR} observations of radio burst source sizes and scattering in the solar corona.
+\newblock {\em Astronomy and Astrophysics}, 645:A11.
+\newblock ADS Bibcode: 2021A\&A...645A..11M.
+
+\bibitem[Ng et~al., 2022]{ng_search_2022}
+Ng, C., Rizk, L., Mannion, C., and Keane, E.~F. (2022).
+\newblock Search for {Extraterrestrial} {Intelligence} with the {ngVLA}.
+\newblock {\em The Astronomical Journal}, 164:205.
+\newblock ADS Bibcode: 2022AJ....164..205N.
+
+\bibitem[Oppenheimer and Volkoff, 1939]{oppenheimer_massive_1939}
+Oppenheimer, J.~R. and Volkoff, G.~M. (1939).
+\newblock On {Massive} {Neutron} {Cores}.
+\newblock {\em Physical Review}, 55(4):374--381.
+\newblock Publisher: American Physical Society.
+
+\bibitem[Ransom, 2001]{ransom_new_2001}
+Ransom, S.~M. (2001).
+\newblock {\em New search techniques for binary pulsars}.
+\newblock PhD thesis.
+\newblock Publication Title: Ph.D. Thesis ADS Bibcode: 2001PhDT.......123R.
+
+\bibitem[Ray et~al., 2012]{ray_radio_2012}
+Ray, P.~S., Abdo, A.~A., Parent, D., Bhattacharya, D., Bhattacharyya, B., Camilo, F., Cognard, I., Theureau, G., Ferrara, E.~C., Harding, A.~K., Thompson, D.~J., Freire, P. C.~C., Guillemot, L., Gupta, Y., Roy, J., Hessels, J. W.~T., Johnston, S., Keith, M., Shannon, R., Kerr, M., Michelson, P.~F., Romani, R.~W., Kramer, M., McLaughlin, M.~A., Ransom, S.~M., Roberts, M. S.~E., Parkinson, P. M.~S., Ziegler, M., Smith, D.~A., Stappers, B.~W., Weltevrede, P., and Wood, K.~S. (2012).
+\newblock Radio {Searches} of {Fermi} {LAT} {Sources} and {Blind} {Search} {Pulsars}: {The} {Fermi} {Pulsar} {Search} {Consortium}.
+\newblock arXiv:1205.3089 [astro-ph].
+
+\bibitem[{Ricker} et~al., 2015]{TESS2015}
+{Ricker}, G.~R., {Winn}, J.~N., {Vanderspek}, R., {Latham}, D.~W., {Bakos}, G.~{\'A}., {Bean}, J.~L., {Berta-Thompson}, Z.~K., {Brown}, T.~M., {Buchhave}, L., {Butler}, N.~R., {Butler}, R.~P., {Chaplin}, W.~J., {Charbonneau}, D., {Christensen-Dalsgaard}, J., {Clampin}, M., {Deming}, D., {Doty}, J., {De Lee}, N., {Dressing}, C., {Dunham}, E.~W., {Endl}, M., {Fressin}, F., {Ge}, J., {Henning}, T., {Holman}, M.~J., {Howard}, A.~W., {Ida}, S., {Jenkins}, J.~M., {Jernigan}, G., {Johnson}, J.~A., {Kaltenegger}, L., {Kawai}, N., {Kjeldsen}, H., {Laughlin}, G., {Levine}, A.~M., {Lin}, D., {Lissauer}, J.~J., {MacQueen}, P., {Marcy}, G., {McCullough}, P.~R., {Morton}, T.~D., {Narita}, N., {Paegert}, M., {Palle}, E., {Pepe}, F., {Pepper}, J., {Quirrenbach}, A., {Rinehart}, S.~A., {Sasselov}, D., {Sato}, B., {Seager}, S., {Sozzetti}, A., {Stassun}, K.~G., {Sullivan}, P., {Szentgyorgyi}, A., {Torres}, G., {Udry}, S., and {Villasenor}, J. (2015).
+\newblock {Transiting Exoplanet Survey Satellite (TESS)}.
+\newblock {\em Journal of Astronomical Telescopes, Instruments, and Systems}, 1:014003.
+
+\bibitem[Romani et~al., 2022]{Romani_2022}
+Romani, R.~W., Kandel, D., Filippenko, A.~V., Brink, T.~G., and Zheng, W. (2022).
+\newblock Psr j0952-0607: The fastest and heaviest known galactic neutron star.
+\newblock {\em The Astrophysical Journal Letters}, 934(2):L17.
+
+\bibitem[Sheikh, 2020]{sheikh_nine_2020}
+Sheikh, S.~Z. (2020).
+\newblock Nine axes of merit for technosignature searches.
+\newblock {\em International Journal of Astrobiology}, 19(3):237--243.
+
+\bibitem[Sheikh et~al., 2019]{Sheikh_2019}
+Sheikh, S.~Z., Wright, J.~T., Siemion, A., and Enriquez, J.~E. (2019).
+\newblock Choosing a maximum drift rate in a seti search: Astrophysical considerations.
+\newblock {\em The Astrophysical Journal}, 884(1):14.
+
+\bibitem[{Siemion} et~al., 2013]{Siemion_KEPLER_ApJ}
+{Siemion}, A.~P.~V., {Demorest}, P., {Korpela}, E., {Maddalena}, R.~J., {Werthimer}, D., {Cobb}, J., {Howard}, A.~W., {Langston}, G., {Lebofsky}, M., {Marcy}, G.~W., and {Tarter}, J. (2013).
+\newblock {A 1.1-1.9 GHz SETI Survey of the Kepler Field. I. A Search for Narrow-band Emission from Select Targets}.
+\newblock {\em The Astrophysical Journal}, 767:94.
+
+\bibitem[Strader et~al., 2014]{strader_1fgl_2014}
+Strader, J., Chomiuk, L., Sonbas, E., Sokolovsky, K., Sand, D.~J., Moskvitin, A.~S., and Cheung, C.~C. (2014).
+\newblock {1FGL} {J0523}.5-2529: {A} {New} {Probable} {Gamma}-ray {Pulsar} {Binary}.
+\newblock {\em The Astrophysical Journal}, 788(2):L27.
+\newblock arXiv:1405.5533 [astro-ph].
+
+\bibitem[Takata et~al., 2014]{takata_multi-wavelength_2014}
+Takata, J., Li, K.~L., Leung, G. C.~K., Kong, A. K.~H., Tam, P. H.~T., Hui, C.~Y., Wu, E. M.~H., Xing, Y., Cao, Y., Tang, S., Wang, Z., and Cheng, K.~S. (2014).
+\newblock Multi-wavelength emissions from the millisecond pulsar binary psr j1023+0038 during an accretion active state.
+\newblock {\em The Astrophysical Journal}, 785(2):131.
+\newblock Publisher: The American Astronomical Society.
+
+\bibitem[Tarter, 1996]{Tarter:1996jf}
+Tarter, J.~C. (1996).
+\newblock {Project Phoenix: the Australian deployment}.
+\newblock In Kingsley, S.~A. and Lemarchand, G.~A., editors, {\em Photonics West '96}, pages 24--34. SPIE.
+
+\bibitem[Taylor and Manchester, 1977]{taylor_recent_1977}
+Taylor, J.~H. and Manchester, R.~N. (1977).
 \newblock Recent observations of pulsars.
-\newblock \emph{Annual Review of Astronomy and Astrophysics}, 15:\penalty0 19--44, Jan. 1977.
-\newblock ISSN 0066-4146.
-\newblock \doi{10.1146/annurev.aa.15.090177.000315}.
-\newblock URL \url{https://ui.adsabs.harvard.edu/abs/1977ARA&A..15...19T}.
+\newblock {\em Annual Review of Astronomy and Astrophysics}, 15:19--44.
 \newblock ADS Bibcode: 1977ARA\&A..15...19T.
+
+\bibitem[van Haarlem et~al., 2013]{van_haarlem_lofar_2013}
+van Haarlem, M.~P., Wise, M.~W., Gunst, A.~W., Heald, G., McKean, J.~P., Hessels, J. W.~T., de~Bruyn, A.~G., Nijboer, R., Swinbank, J., Fallows, R., Brentjens, M., Nelles, A., Beck, R., Falcke, H., Fender, R., Hörandel, J., Koopmans, L. V.~E., Mann, G., Miley, G., Röttgering, H., Stappers, B.~W., Wijers, R. a. M.~J., Zaroubi, S., van~den Akker, M., Alexov, A., Anderson, J., Anderson, K., van Ardenne, A., Arts, M., Asgekar, A., Avruch, I.~M., Batejat, F., Bähren, L., Bell, M.~E., Bell, M.~R., van Bemmel, I., Bennema, P., Bentum, M.~J., Bernardi, G., Best, P., Bîrzan, L., Bonafede, A., Boonstra, A.-J., Braun, R., Bregman, J., Breitling, F., van~de Brink, R.~H., Broderick, J., Broekema, P.~C., Brouw, W.~N., Brüggen, M., Butcher, H.~R., van Cappellen, W., Ciardi, B., Coenen, T., Conway, J., Coolen, A., Corstanje, A., Damstra, S., Davies, O., Deller, A.~T., Dettmar, R.-J., van Diepen, G., Dijkstra, K., Donker, P., Doorduin, A., Dromer, J., Drost, M., van Duin, A., Eislöffel, J., van Enst, J., Ferrari, C., Frieswijk, W., Gankema, H., Garrett, M.~A., de~Gasperin, F., Gerbers, M., de~Geus, E., Grießmeier, J.-M., Grit, T., Gruppen, P., Hamaker, J.~P., Hassall, T., Hoeft, M., Holties, H.~A., Horneffer, A., van~der Horst, A., van Houwelingen, A., Huijgen, A., Iacobelli, M., Intema, H., Jackson, N., Jelic, V., de~Jong, A., Juette, E., Kant, D., Karastergiou, A., Koers, A., Kollen, H., Kondratiev, V.~I., Kooistra, E., Koopman, Y., Koster, A., Kuniyoshi, M., Kramer, M., Kuper, G., Lambropoulos, P., Law, C., van Leeuwen, J., Lemaitre, J., Loose, M., Maat, P., Macario, G., Markoff, S., Masters, J., McFadden, R.~A., McKay-Bukowski, D., Meijering, H., Meulman, H., Mevius, M., Middelberg, E., Millenaar, R., Miller-Jones, J. C.~A., Mohan, R.~N., Mol, J.~D., Morawietz, J., Morganti, R., Mulcahy, D.~D., Mulder, E., Munk, H., Nieuwenhuis, L., van Nieuwpoort, R., Noordam, J.~E., Norden, M., Noutsos, A., Offringa, A.~R., Olofsson, H., Omar, A., Orrú, E., Overeem, R., Paas, H., Pandey-Pommier, M., Pandey, V.~N., Pizzo, R., Polatidis, A., Rafferty, D., Rawlings, S., Reich, W., de~Reijer, J.-P., Reitsma, J., Renting, G.~A., Riemers, P., Rol, E., Romein, J.~W., Roosjen, J., Ruiter, M., Scaife, A., van~der Schaaf, K., Scheers, B., Schellart, P., Schoenmakers, A., Schoonderbeek, G., Serylak, M., Shulevski, A., Sluman, J., Smirnov, O., Sobey, C., Spreeuw, H., Steinmetz, M., Sterks, C. G.~M., Stiepel, H.-J., Stuurwold, K., Tagger, M., Tang, Y., Tasse, C., Thomas, I., Thoudam, S., Toribio, M.~C., van~der Tol, B., Usov, O., van Veelen, M., van~der Veen, A.-J., ter Veen, S., Verbiest, J. P.~W., Vermeulen, R., Vermaas, N., Vocks, C., Vogt, C., de~Vos, M., van~der Wal, E., van Weeren, R., Weggemans, H., Weltevrede, P., White, S., Wijnholds, S.~J., Wilhelmsson, T., Wucknitz, O., Yatawatta, S., Zarka, P., Zensus, A., and van Zwieten, J. (2013).
+\newblock {LOFAR}: {The} {LOw}-{Frequency} {ARray}.
+\newblock {\em Astronomy \&amp; Astrophysics, Volume 556, id.A2, {\textless}NUMPAGES{\textgreater}53{\textless}/NUMPAGES{\textgreater} pp.}, 556:A2.
+
+\bibitem[Vedantham et~al., 2020]{vedantham_coherent_2020}
+Vedantham, H.~K., Callingham, J.~R., Shimwell, T.~W., Tasse, C., Pope, B. J.~S., Bedell, M., Snellen, I., Best, P., Hardcastle, M.~J., Haverkorn, M., Mechev, A., O'Sullivan, S.~P., Röttgering, H. J.~A., and White, G.~J. (2020).
+\newblock Coherent radio emission from a quiescent red dwarf indicative of star-planet interaction.
+\newblock {\em Nature Astronomy}, 4:577--583.
+\newblock ADS Bibcode: 2020NatAs...4..577V.
+
+\bibitem[Villadsen and Hallinan, 2019]{villadsen_ultra-wideband_2019}
+Villadsen, J. and Hallinan, G. (2019).
+\newblock Ultra-wideband {Detection} of 22 {Coherent} {Radio} {Bursts} on {M} {Dwarfs}.
+\newblock {\em The Astrophysical Journal}, 871(2):214.
+\newblock Publisher: The American Astronomical Society.
+
+\bibitem[{Wlodarczyk-Sroka} et~al., 2020]{Bart-Wlodarczyk-Sroka}
+{Wlodarczyk-Sroka}, B.~S., {Garrett}, M.~A., and {Siemion}, A.~P.~V. (2020).
+\newblock {Extending the Breakthrough Listen nearby star survey to other stellar objects in the field}.
+\newblock {\em MNRAS}, 498(4):5720--5729.
+
+\bibitem[Zarka, 1998]{zarka_auroral_1998}
+Zarka, P. (1998).
+\newblock Auroral radio emissions at the outer planets: {Observations} and theories.
+\newblock {\em Journal of Geophysical Research: Planets}, 103(E9):20159--20194.
+\newblock \_eprint: https://onlinelibrary.wiley.com/doi/pdf/10.1029/98JE01323.
+
+\bibitem[{Zhelezniakov} and {Zlotnik}, 1975]{EMI}
+{Zhelezniakov}, V.~V. and {Zlotnik}, E.~I. (1975).
+\newblock {Cyclotron Wave Instability in the Corona and Origin of Solar Radio Emission with Fine Structure. I: Bernstein Modes and Plasma Waves in a Hybrid Band}.
+\newblock 43(2):431--451.
 
 \end{thebibliography}

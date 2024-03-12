@@ -5,48 +5,53 @@ The style file: apalike.bst
 Database file #1: frb.bib
 Database file #2: pulsar.bib
 Database file #3: seti.bib
+Warning--entry type for "LOFAR2" isn't style-file defined
+--line 361 of file seti.bib
 Database file #4: radio-planets.bib
+Warning--empty journal in papitto_transitional_2022
 Warning--empty school in ransom_new_2001
+Warning--empty publisher in 1983bhwd.book.....S
+Warning--empty publisher in Sagan1966
 Warning--empty journal in EMI
-You've used 42 entries,
+You've used 62 entries,
             1935 wiz_defined-function locations,
-            755 strings with 29425 characters,
-and the built_in function-call counts, 45475 in all, are:
-= -- 3475
-> -- 5387
-< -- 16
-+ -- 2112
-- -- 2106
-* -- 5202
-:= -- 8560
-add.period$ -- 144
-call.type$ -- 42
-change.case$ -- 1259
-chr.to.int$ -- 42
-cite$ -- 44
-duplicate$ -- 591
-empty$ -- 1121
-format.name$ -- 2162
-if$ -- 7831
+            870 strings with 35270 characters,
+and the built_in function-call counts, 56841 in all, are:
+= -- 4457
+> -- 6325
+< -- 24
++ -- 2472
+- -- 2458
+* -- 6364
+:= -- 10650
+add.period$ -- 211
+call.type$ -- 62
+change.case$ -- 1533
+chr.to.int$ -- 62
+cite$ -- 67
+duplicate$ -- 862
+empty$ -- 1630
+format.name$ -- 2546
+if$ -- 9882
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 42
-newline$ -- 229
-num.names$ -- 128
-pop$ -- 1168
+missing$ -- 62
+newline$ -- 336
+num.names$ -- 188
+pop$ -- 1401
 preamble$ -- 1
-purify$ -- 1262
+purify$ -- 1538
 quote$ -- 0
-skip$ -- 440
+skip$ -- 643
 stack$ -- 0
-substring$ -- 1097
-swap$ -- 48
+substring$ -- 1586
+swap$ -- 65
 text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 248
-warning$ -- 2
-while$ -- 137
+type$ -- 364
+warning$ -- 5
+while$ -- 199
 width$ -- 0
-write$ -- 576
-(There were 2 warnings)
+write$ -- 845
+(There were 6 warnings)

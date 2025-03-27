@@ -1,4 +1,4 @@
-\documentclass[a4paper, oneside]{book}
+ \documentclass[a4paper]{book}
 
 % --- Packages --- 
 % Fonts & Formatting 
@@ -8,20 +8,53 @@
 \usepackage{fancyhdr}
 \usepackage{enumerate}
 \usepackage[parfill]{parskip} % empty line instead of an indent for new paragraphs
+% Math Stuff 
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{siunitx}
+\sisetup{
+  detect-all,
+  separate-uncertainty = true,
+  table-align-text-post = false
+}
+
 \usepackage{xcolor}
+\definecolor{tcd-blue}{HTML}{0569b9}
+\definecolor{tcd-lightblue}{HTML}{448fcb}
+\usepackage[colorlinks=true,citecolor=tcd-blue,linkcolor=tcd-lightblue]{hyperref}
+
 % Bib Stuff 
-\usepackage[round,sort,comma,numbers]{natbib}
-\usepackage{hyperref}
+\numberwithin{equation}{section}
+\usepackage{cleveref}
+\usepackage[round]{natbib}
+\bibliographystyle{apalike}
+
+% --- Drawing --- 
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, arrows}
+
+\tikzstyle{startstop} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm,text centered, draw=black, fill=red!30]
+\tikzstyle{io} = [trapezium, trapezium left angle=70, trapezium right angle=110, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=blue!30]
+\tikzstyle{process} = [rectangle, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=orange!30]
+\tikzstyle{decision} = [diamond, aspect=2, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=green!30]
+\tikzstyle{arrow} = [thick,->,>=stealth]
 
 % --- Page Setup --- 
 \usepackage[a4paper,top=2.56cm,bottom=2.56cm,left=2.56cm,right=2.56cm, head = 16pt]{geometry}
 \pagestyle{fancy}
 \usepackage{titlesec} % - Chapter Headings 
 \usepackage{epigraph}
+\usepackage{booktabs}
 \setlength\epigraphwidth{.8\textwidth}
 \setlength\epigraphrule{1pt}
 
-% \usepackage{cleveref}
+% --- Commands --- 
+\newcommand{\surveytargets}{1,631,198 }
+\newcommand{\gaiatargets}{1,631,154 }
+\newcommand{\tesstargets}{44 }
+\newcommand{\distance}{1270 }
+\newcommand{\EIRPvalue}{$10^{14}\,(d/100\;\mathrm{pc})^2\;\text{W/Hz} \;$}
+
 
 % --- Chapter Title Setup --- 
 \newcommand{\hsp}{\hspace{20pt}}
@@ -60,7 +93,17 @@ This is some text to be centered vertically.
 \vfill
 \hspace{0pt}
 
-% --- Abstract --- 
+% --- Dedication --- 
+% \newpage
+% \vspace{10cm}
+% \begin{center}
+%     \Huge 
+%     \textit{For my parents, who sacrificed so much, so I could pursue my dreams.}
+% \end{center}
+
+% --- Acknowledgements ---
+
+
 \newpage
 \chapter*{Abstract}
 Fortunately there are still many open questions about this wild and wondrous cosmos that we find ourselves in.
@@ -71,8 +114,13 @@ Fortunately there are still many open questions about this wild and wondrous cos
 \listoftables
 \input{misc/nomenclature.tex}
 
+% Arabic numbering starts here
+
 \chapter{Introduction}
-\epigraph{\small\itshape “For a moment, nothing happened. Then, after a second or so, nothing continued to happen.” "\raggedleft\par--- \textup{ Douglas Adams, The Hitchhiker's Guide to the Galaxy}}
+\pagenumbering{arabic}
+
+
+\epigraph{\small\itshape “the Universe, she's whispering so softly I can hear all. The croaking insects, all the taxicabs, all the bum's spent change All the boys playing ball in the alleyways” \raggedleft\par--- \textup{ Gregory Alan Isakov, \textit{The Universe}}}
 
 Pulsars are a type of neutron star, which is the dense, collapsed core of a massive star that has exploded as a supernova. Pulsars are named for the way they emit bursts of electromagnetic radiation, or light, which can be observed from Earth as pulses. These bursts are created as the neutron star rotates, and a beam of electromagnetic radiation is produced from its magnetic poles. As the beam passes by Earth, it appears as a pulse of light.
 
@@ -81,5 +129,15 @@ Pulsars are some of the most extreme objects in the universe, with densities so 
 So, to sum it up in slang, pulsars are like cosmic lighthouses that spin super fast and are super dense, shooting out beams of light that we can see as pulses. Cool, right?
 
 \section{Background}
+
+\input{SETI/SETI_chapter.tex}
+
+% Bibliography
+\bibliography{SETI/seti}
+
+% --- Appendices ---
+\newpage
+\appendix
+\input{SETI/seti_appendix.tex}
 
 \end{document}

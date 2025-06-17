@@ -1,0 +1,61 @@
+\begin{thebibliography}{}
+
+\bibitem[ASTRON, 2023]{LOFAR2}
+ASTRON (2023).
+\newblock Lofar2.0 white paper - v2023.1.
+
+\bibitem[{Gajjar} et~al., 2022]{2022VishalPulsed}
+{Gajjar}, V., {LeDuc}, D., {Chen}, J., {Siemion}, A. P.~V., {Sheikh}, S.~Z., {Brzycki}, B., {Croft}, S., {Czech}, D., {DeBoer}, D., {DeMarines}, J., {Drew}, J., {Isaacson}, H., {Lacki}, B.~C., {Lebofsky}, M., {MacMahon}, D. H.~E., {Ng}, C., {de Pater}, I., {Perez}, K.~I., {Price}, D.~C., {Suresh}, A., {Webb}, C., and {Worden}, S.~P. (2022).
+\newblock {Searching for Broadband Pulsed Beacons from 1883 Stars Using Neural Networks}.
+\newblock {\em ApJ}, 932(2):81.
+
+\bibitem[{Gehrels}, 1986]{1986_Poission_tables}
+{Gehrels}, N. (1986).
+\newblock {Confidence Limits for Small Numbers of Events in Astrophysical Data}.
+\newblock {\em ApJ}, 303:336.
+
+\bibitem[{Ginsburg} et~al., 2019]{astroquery}
+{Ginsburg}, A., {Sip{\H o}cz}, B.~M., {Brasseur}, C.~E., {Cowperthwaite}, P.~S., {Craig}, M.~W., {Deil}, C., {Guillochon}, J., {Guzman}, G., {Liedtke}, S., {Lian Lim}, P., {Lockhart}, K.~E., {Mommert}, M., {Morris}, B.~M., {Norman}, H., {Parikh}, M., {Persson}, M.~V., {Robitaille}, T.~P., {Segovia}, J.-C., {Singer}, L.~P., {Tollerud}, E.~J., {de Val-Borro}, M., {Valtchanov}, I., {Woillez}, J., {The Astroquery collaboration}, and {a subset of the astropy collaboration} (2019).
+\newblock {astroquery: An Astronomical Web-querying Package in Python}.
+\newblock {\em The Astronomical Journal}, 157:98.
+
+\bibitem[{Lebofsky} et~al., 2019]{2019_Lebofsky}
+{Lebofsky}, M., {Croft}, S., {Siemion}, A. P.~V., {Price}, D.~C., {Enriquez}, J.~E., {Isaacson}, H., {MacMahon}, D. H.~E., {Anderson}, D., {Brzycki}, B., {Cobb}, J., {Czech}, D., {DeBoer}, D., {DeMarines}, J., {Drew}, J., {Foster}, G., {Gajjar}, V., {Gizani}, N., {Hellbourg}, G., {Korpela}, E.~J., {Lacki}, B., {Sheikh}, S., {Werthimer}, D., {Worden}, P., {Yu}, A., and {Zhang}, Y.~G. (2019).
+\newblock {The Breakthrough Listen Search for Intelligent Life: Public Data, Formats, Reduction, and Archiving}.
+\newblock {\em PASP}, 131(1006):124505.
+
+\bibitem[{Li} et~al., 2022]{LiNarrowBand}
+{Li}, J.-K., {Zhao}, H.-C., {Tao}, Z.-Z., {Zhang}, T.-J., and {Xiao-Hui}, S. (2022).
+\newblock {Drift Rates of Narrowband Signals in Long-term SETI Observations for Exoplanets}.
+\newblock {\em The Astrophysical Journal}, 938(1):1.
+
+\bibitem[{McKenna} et~al., 2023]{David_JOSS}
+{McKenna}, D.~J., {Keane}, E.~F., {Gallagher}, P.~T., and {McAuley}, J. (2023).
+\newblock {udpPacketManager: An International LOFAR Station Data (Pre-)Processor}.
+\newblock {\em The Journal of Open Source Software}.
+
+\bibitem[Sheikh et~al., 2019]{Sheikh_2019}
+Sheikh, S.~Z., Wright, J.~T., Siemion, A., and Enriquez, J.~E. (2019).
+\newblock Choosing a maximum drift rate in a seti search: Astrophysical considerations.
+\newblock {\em The Astrophysical Journal}, 884(1):14.
+
+\bibitem[{Shklovskii} and {Sagan}, 1966]{Sagan1966}
+{Shklovskii}, I.~S. and {Sagan}, C. (1966).
+\newblock {\em {Intelligent life in the universe}}.
+
+\bibitem[{Siemion} et~al., 2013]{Siemion_KEPLER_ApJ}
+{Siemion}, A.~P.~V., {Demorest}, P., {Korpela}, E., {Maddalena}, R.~J., {Werthimer}, D., {Cobb}, J., {Howard}, A.~W., {Langston}, G., {Lebofsky}, M., {Marcy}, G.~W., and {Tarter}, J. (2013).
+\newblock {A 1.1-1.9 GHz SETI Survey of the Kepler Field. I. A Search for Narrow-band Emission from Select Targets}.
+\newblock {\em The Astrophysical Journal}, 767:94.
+
+\bibitem[Tarter, 1996]{Tarter:1996jf}
+Tarter, J.~C. (1996).
+\newblock {Project Phoenix: the Australian deployment}.
+\newblock In Kingsley, S.~A. and Lemarchand, G.~A., editors, {\em Photonics West '96}, pages 24--34. SPIE.
+
+\bibitem[{Wlodarczyk-Sroka} et~al., 2020]{Bart-Wlodarczyk-Sroka}
+{Wlodarczyk-Sroka}, B.~S., {Garrett}, M.~A., and {Siemion}, A.~P.~V. (2020).
+\newblock {Extending the Breakthrough Listen nearby star survey to other stellar objects in the field}.
+\newblock {\em MNRAS}, 498(4):5720--5729.
+
+\end{thebibliography}

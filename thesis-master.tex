@@ -62,16 +62,27 @@
 \titleformat{\chapter}[hang]{\Huge\bfseries}{\thechapter\hsp\textcolor{tcdblue}{|}\hsp}{0pt}{\Huge\bfseries}
 
 % --- Command Text Commands --- 
-\newcommand{\thesistitle}{Meaningful Transient Science!}
-\newcommand{\school}{\href{https://chemistry.tcd.ie/}{Astrophysics Research Group}}
+\newcommand{\thesistitle}{Exploring the Radio Sky for Natural and Artificial Transient Sources}
+\newcommand{\school}{\href{https://www.tcd.ie/physics/research/themes/astrophysics/}{Astrophysics Research Group}}
 \newcommand{\supervisor}{Assoc. Prof. Evan F. Keane}
 
 \begin{document}
 \input{title/title.tex}
 \pagenumbering{roman}
+\newpage % white page between title and dedication. 
 
+% --- Dedication --- 
+\newpage
+\thispagestyle{empty}
+\vspace*{\fill}
+\begin{center}
+ \Large \textit{For my parents, who sacrificed so much,\\
+  so I could chase the stars.}
+\end{center}
+\vspace*{\fill}
 
 % --- Declearation --- 
+\newpage
 \hspace{0pt}
 \vfill
 \section*{Declaration}
@@ -93,13 +104,6 @@ This is some text to be centered vertically.
 \vfill
 \hspace{0pt}
 
-% --- Dedication --- 
-% \newpage
-% \vspace{10cm}
-% \begin{center}
-%     \Huge 
-%     \textit{For my parents, who sacrificed so much, so I could pursue my dreams.}
-% \end{center}
 
 % --- Acknowledgements ---
 
@@ -109,7 +113,19 @@ This is some text to be centered vertically.
 Fortunately there are still many open questions about this wild and wondrous cosmos that we find ourselves in.
 
 % --- Important Pages --- 
-\tableofcontents
+\newpage 
+\thispagestyle{empty}
+\vspace*{\fill}
+\begin{center}
+  \includegraphics[width=0.99\textwidth]{misc/contents.png}
+\end{center}
+\vspace*{\fill}
+
+\begingroup
+  \renewcommand{\contentsname}{} % Remove title (optional)
+  \renewcommand{\addcontentsline}[3]{} % Prevent adding 'Table of Contents' to TOC
+  \tableofcontents
+\endgroup
 \listoffigures
 \listoftables
 \input{misc/nomenclature.tex}
@@ -122,11 +138,6 @@ Fortunately there are still many open questions about this wild and wondrous cos
 
 \epigraph{\small\itshape “the Universe, she's whispering so softly I can hear all. The croaking insects, all the taxicabs, all the bum's spent change All the boys playing ball in the alleyways” \raggedleft\par--- \textup{ Gregory Alan Isakov, \textit{The Universe}}}
 
-Pulsars are a type of neutron star, which is the dense, collapsed core of a massive star that has exploded as a supernova. Pulsars are named for the way they emit bursts of electromagnetic radiation, or light, which can be observed from Earth as pulses. These bursts are created as the neutron star rotates, and a beam of electromagnetic radiation is produced from its magnetic poles. As the beam passes by Earth, it appears as a pulse of light.
-
-Pulsars are some of the most extreme objects in the universe, with densities so high that a sugar cube's worth of material from a pulsar would weigh as much as all the humans on Earth combined. They are also incredibly fast-spinning, with some pulsars completing a full rotation in just a few milliseconds.
-
-So, to sum it up in slang, pulsars are like cosmic lighthouses that spin super fast and are super dense, shooting out beams of light that we can see as pulses. Cool, right?
 
 \section{Background}
 
@@ -138,6 +149,7 @@ So, to sum it up in slang, pulsars are like cosmic lighthouses that spin super f
 % --- Appendices ---
 \newpage
 \appendix
+\input{appendices/useful-formula.tex}
 \input{SETI/seti_appendix.tex}
 
 \end{document}

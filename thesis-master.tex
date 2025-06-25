@@ -1,4 +1,4 @@
- \documentclass[a4paper]{book}
+\documentclass[a4paper]{book}
 
 % --- Packages --- 
 % Fonts & Formatting 
@@ -23,16 +23,17 @@
 \definecolor{tcd-lightblue}{HTML}{448fcb}
 \usepackage[colorlinks=true,citecolor=tcd-blue,linkcolor=tcd-lightblue]{hyperref}
 
-% Bib Stuff 
+% --- Bib Stuff ---
 \numberwithin{equation}{section}
 \usepackage{cleveref}
-\usepackage[round]{natbib}
-\bibliographystyle{apalike}
+
+\usepackage[style=authoryear,natbib=true,minbibnames=3,maxbibnames=5,uniquename=false,uniquelist=false]{biblatex}
+\DeclareLanguageMapping{english}{english-apa}
+\addbibresource{SETI/seti.bib}
 
 % --- Drawing --- 
 \usepackage{tikz}
 \usetikzlibrary{shapes.geometric, arrows}
-
 \tikzstyle{startstop} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm,text centered, draw=black, fill=red!30]
 \tikzstyle{io} = [trapezium, trapezium left angle=70, trapezium right angle=110, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=blue!30]
 \tikzstyle{process} = [rectangle, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=orange!30]
@@ -144,7 +145,7 @@ Fortunately there are still many open questions about this wild and wondrous cos
 \input{SETI/SETI_chapter.tex}
 
 % Bibliography
-\bibliography{SETI/seti}
+\printbibliography
 
 % --- Appendices ---
 \newpage

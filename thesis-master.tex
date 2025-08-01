@@ -7,6 +7,7 @@
 \usepackage[pdftex]{graphicx}
 \usepackage{fancyhdr}
 \usepackage{enumerate}
+\usepackage[normalem]{ulem}
 \usepackage[parfill]{parskip} % empty line instead of an indent for new paragraphs
 % Math Stuff 
 \usepackage{amsmath}
@@ -26,14 +27,13 @@
 % --- Bib Stuff ---
 \numberwithin{equation}{section}
 \usepackage{cleveref}
-
-\usepackage[style=authoryear,natbib=true,minbibnames=3,maxbibnames=5,uniquename=false,uniquelist=false]{biblatex}
-\DeclareLanguageMapping{english}{english-apa}
-\addbibresource{SETI/seti.bib}
+\usepackage[round]{natbib}
+\bibliographystyle{apalike}
 
 % --- Drawing --- 
 \usepackage{tikz}
 \usetikzlibrary{shapes.geometric, arrows}
+
 \tikzstyle{startstop} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm,text centered, draw=black, fill=red!30]
 \tikzstyle{io} = [trapezium, trapezium left angle=70, trapezium right angle=110, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=blue!30]
 \tikzstyle{process} = [rectangle, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=orange!30]
@@ -105,13 +105,14 @@ This is some text to be centered vertically.
 \vfill
 \hspace{0pt}
 
-
-% --- Acknowledgements ---
-
-
 \newpage
 \chapter*{Abstract}
 Fortunately there are still many open questions about this wild and wondrous cosmos that we find ourselves in.
+
+% --- Acknowledgements ---
+\chapter*{Acknowledgements}
+
+It takes a \sout{village} observatory to raise a PhD student, it would be remiss of me not to acknowledge that dozens of people have helped me in my journey in completing this body of work, whether it be in a personal or in a professional capacity, so this is a non-exhaustive list of acknowledgements. People to thank Evan, Joe, Vishal, David, Sai, Wael, Dave Db, Dave MC, Harry, Lety, BL folks, Goddard folks, WVU folks. 
 
 % --- Important Pages --- 
 \newpage 
@@ -131,21 +132,11 @@ Fortunately there are still many open questions about this wild and wondrous cos
 \listoftables
 \input{misc/nomenclature.tex}
 
-% Arabic numbering starts here
-
-\chapter{Introduction}
-\pagenumbering{arabic}
-
-
-\epigraph{\small\itshape “the Universe, she's whispering so softly I can hear all. The croaking insects, all the taxicabs, all the bum's spent change All the boys playing ball in the alleyways” \raggedleft\par--- \textup{ Gregory Alan Isakov, \textit{The Universe}}}
-
-
-\section{Background}
-
+\input{chapter1_intro/introduction_chapter.tex}
 \input{SETI/SETI_chapter.tex}
 
 % Bibliography
-\printbibliography
+\bibliography{SETI/seti}
 
 % --- Appendices ---
 \newpage

@@ -1,5 +1,4 @@
 \documentclass[a4paper]{book}
-
 % --- Packages --- 
 % Fonts & Formatting 
 \usepackage[T1]{fontenc} 
@@ -9,6 +8,7 @@
 \usepackage{enumerate}
 \usepackage[normalem]{ulem}
 \usepackage[parfill]{parskip} % empty line instead of an indent for new paragraphs
+\usepackage[onehalfspacing]{setspace}
 % Math Stuff 
 \usepackage{amsmath}
 \usepackage{amssymb}
@@ -77,7 +77,7 @@
 \thispagestyle{empty}
 \vspace*{\fill}
 \begin{center}
- \Large \textit{For my parents, who sacrificed so much,\\
+ \Large \textit{For my parents, who supported me so much,\\
   so I could chase the stars.}
 \end{center}
 \vspace*{\fill}
@@ -87,15 +87,16 @@
 \hspace{0pt}
 \vfill
 \section*{Declaration}
-I hereby declare that this thesis is entirely my own work and that it has not been submitted as an exercise for a degree at this or any other university.
-
-I have read and I understand the plagiarism provisions in the General Regulations of the University Calendar for the current year, found at \url{http://www.tcd.ie/calendar}.
-
-I have also completed the Online Tutorial on avoiding plagiarism `Ready Steady Write', located at \url{http://tcd-ie.libguides.com/plagiarism/ready-steady-write}.
-
-I agree to deposit this thesis in the University’s open access institu-
-tional repository or allow the library to do so on my behalf, subject
-to Irish Copyright Legislation and Trinity College Library conditions
+I declare that this thesis has not been submitted as an exercise for a degree at this or any other
+university and it is entirely my own work. I confirm that the work has been completed in full
+compliance with relevant university policies, including the Academic Integrity policy, the
+Trinity Policy on Good Research Practice, and the guidance on AI and GenAI in Teaching,
+Learning, Assessment and Research.
+I agree to deposit this thesis in the University’s open access institutional repository or allow
+the Library to do so on my behalf, subject to Irish Copyright Legislation and Trinity College
+Library conditions of use and acknowledgement.
+I consent / do not consent to the examiner retaining a copy of the thesis beyond the examining
+period, should they so wish (EU GDPR May 2018).
 of use and acknowledgement.
 \vspace{1cm}
 
@@ -110,9 +111,22 @@ This is some text to be centered vertically.
 Fortunately there are still many open questions about this wild and wondrous cosmos that we find ourselves in.
 
 % --- Acknowledgements ---
-\chapter*{Acknowledgements}
+\newpage 
+\section*{Acknowledgements}
 
-It takes a \sout{village} observatory to raise a PhD student, it would be remiss of me not to acknowledge that dozens of people have helped me in my journey in completing this body of work, whether it be in a personal or in a professional capacity, so this is a non-exhaustive list of acknowledgements. People to thank Evan, Joe, Vishal, David, Sai, Wael, Dave Db, Dave MC, Harry, Lety, BL folks, Goddard folks, WVU folks. 
+It takes an \sout{village} observatory to raise a PhD student, it would be remiss of me not to acknowledge that dozens of people have helped me in my journey in completing this body of work, whether it be in a personal or in a professional capacity, so this is a non-exhaustive list of acknowledgements. People to thank Evan, Joe, Aaron G, Vishal, David, Sai, Wael, Dave Db, Dave MC, Harry, Lety, BL folks, Goddard folks, WVU folks, Office folks. I would like to extend a personal expression of gratitude to Andrew S and PW  .\\ 
+Lawrence, Tt, Aaron, 
+
+To Eve, Noel and Bart, I've never forgotten about you. I've tried to carry at least a fraction of your love for the sciences with me throughout this endeavour. Ar dheis Dé go raibh a n-anamacha.
+
+Laura
+
+\newpage 
+\section*{Funding and Resource Acknowledgements}
+
+This PhD was jointly supported by Breakthrough Listen managed by the Breakthrough Prize Foundation and Trinity College Dublin, School of Physics. This work extensively used the Irish LOFAR station, funded by the Irish LOFAR  Consortium. The consortium consists of Trinity College Dublin, Armagh Observatory and  Planetarium, University College Dublin, Dublin City University, University College Cork,  University of Galway, Dublin Institute for Advance Studies and Technological University of  the Shannon Athlone. It receives generous funding from Science Foundation Ireland and the  Department of Further and Higher Education, Research, Innovation and Science.  The REALTA compute cluster was funded by Science Foundation Ireland. This work also used LOFAR-SE 
+
+
 
 % --- Important Pages --- 
 \newpage 
@@ -133,7 +147,20 @@ It takes a \sout{village} observatory to raise a PhD student, it would be remiss
 \input{misc/nomenclature.tex}
 
 \input{chapter1_intro/introduction_chapter.tex}
+
+\chapter{Redback Pulsar Searching}
+\chapter{Crab Nebula and Solar Wind}
 \input{SETI/SETI_chapter.tex}
+\chapter{LOFTS}
+\newpage
+\chapter{Transient Science from the Lunar Farside}
+\newpage
+\chapter{I-LOFAR Operations}
+\epigraph{\small\itshape “We the willing, led by the unknowing, are doing the impossible for the ungrateful. We have done so much with so little, for so long, we are now qualified to do anything, with nothing.” \raggedleft\par--- \textup{Mother Teresa}}
+
+\chapter{Conclusions \& Future Work}
+
+\newpage
 
 % Bibliography
 \bibliography{SETI/seti}

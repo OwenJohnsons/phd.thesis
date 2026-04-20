@@ -4,6 +4,8 @@
 \usepackage[T1]{fontenc} 
 \usepackage[utf8]{inputenc}
 \usepackage[pdftex]{graphicx}
+\usepackage{subfigure}
+\usepackage{subcaption}
 \usepackage{fancyhdr}
 \usepackage{enumerate}
 \usepackage[normalem]{ulem}
@@ -12,6 +14,7 @@
 % Math Stuff 
 \usepackage{amsmath}
 \usepackage{amssymb}
+\usepackage{upgreek}
 \usepackage{siunitx}
 \sisetup{
   detect-all,
@@ -25,10 +28,14 @@
 \usepackage[colorlinks=true,citecolor=tcd-blue,linkcolor=tcd-lightblue]{hyperref}
 
 % --- Bib Stuff ---
+\input{misc/aas_journal_commands}
 \numberwithin{equation}{section}
 \usepackage{cleveref}
 \usepackage[round]{natbib}
-\bibliographystyle{apalike}
+\bibliographystyle{tcdthesis.bst}
+
+% --- Tablestuff --- 
+\usepackage{multirow}
 
 % --- Drawing --- 
 \usepackage{tikz}
@@ -49,13 +56,27 @@
 \setlength\epigraphwidth{.8\textwidth}
 \setlength\epigraphrule{1pt}
 
-% --- Commands --- 
+% --- Radio Astronomy Commands --- 
 \newcommand{\surveytargets}{1,631,198 }
 \newcommand{\gaiatargets}{1,631,154 }
 \newcommand{\tesstargets}{44 }
 \newcommand{\distance}{1270 }
 \newcommand{\EIRPvalue}{$10^{14}\,(d/100\;\mathrm{pc})^2\;\text{W/Hz} \;$}
-
+\newcommand{\logGmu}{\log_{10} G\mu}
+\newcommand{\Mc}{\mathcal{M}}
+\newcommand{\ndot}{{\dot n}_{\rm 0}}
+\newcommand{\alphaM}{\alpha_{\rm \Mc}}
+\newcommand{\Mstar}{\Mc_{\rm \star}}
+\newcommand{\betaz}{\beta_{\rm z}}
+\newcommand{\zo}{z_{\rm 0}}
+\newcommand{\nesw}{N_{e,SW}}
+\newcommand{\nref}{{\color{red} REFERENCE}}
+\newcommand{\Tsys}{T_{\text{sys}}}
+\newcommand{\Tsky}{T_{\text{sky}}}
+\newcommand{\TLNA}{T_{\text{LNA}}}
+\newcommand{\Tspill}{T_{\text{spill}}}
+\newcommand{\Trec}{T_{\text{rec}}}
+\newcommand{\dm}{$\text{pc~cm}^{-3}$}
 
 % --- Chapter Title Setup --- 
 \newcommand{\hsp}{\hspace{20pt}}
@@ -146,14 +167,14 @@ This PhD was jointly supported by Breakthrough Listen managed by the Breakthroug
 \listoftables
 \input{misc/nomenclature.tex}
 
-\input{chapter1_intro/introduction_chapter.tex}
+\input{chapter1/chapter1_intro}
+\input{chapter2/chapter2_radio}
+\input{chapter3/chapter3_redback}
+\input{chapter4/chapter4_crab}
+\input{chapter5/chapter5_SETI}
+\input{chapter6/chapter6_LOFTS}
+\input{chapter7/chapter7_lunar}
 
-\chapter{Redback Pulsar Searching}
-\chapter{Crab Nebula and Solar Wind}
-\input{SETI/SETI_chapter.tex}
-\chapter{LOFTS}
-\newpage
-\chapter{Transient Science from the Lunar Farside}
 \newpage
 \chapter{I-LOFAR Operations}
 \epigraph{\small\itshape “We the willing, led by the unknowing, are doing the impossible for the ungrateful. We have done so much with so little, for so long, we are now qualified to do anything, with nothing.” \raggedleft\par--- \textup{Mother Teresa}}
@@ -163,12 +184,12 @@ This PhD was jointly supported by Breakthrough Listen managed by the Breakthroug
 \newpage
 
 % Bibliography
-\bibliography{SETI/seti}
+\bibliography{bibfiles/chapter3_redback,bibfiles/chapter5_seti}
 
 % --- Appendices ---
 \newpage
 \appendix
 \input{appendices/useful-formula.tex}
-\input{SETI/seti_appendix.tex}
+\input{chapter5/seti_appendix.tex}
 
 \end{document}

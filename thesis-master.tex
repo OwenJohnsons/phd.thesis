@@ -4,8 +4,9 @@
 \usepackage[T1]{fontenc} 
 \usepackage[utf8]{inputenc}
 \usepackage[pdftex]{graphicx}
-\usepackage{subfigure}
-\usepackage{subcaption}
+\usepackage{caption}
+% \usepackage{subfigure} % Apparently no longer in use. 
+% \usepackage{subcaption}
 \usepackage{fancyhdr}
 \usepackage{enumerate}
 \usepackage[normalem]{ulem}
@@ -22,6 +23,15 @@
   table-align-text-post = false
 }
 
+% --- Header --- 
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{} % clear everything
+\renewcommand{\chaptermark}[1]{\markboth{\thechapter\ #1}{}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
+\fancyhead[LE]{\leftmark}
+\fancyhead[RO]{\rightmark}  
+
 \usepackage{xcolor}
 \definecolor{tcd-blue}{HTML}{0569b9}
 \definecolor{tcd-lightblue}{HTML}{448fcb}
@@ -32,6 +42,7 @@
 \numberwithin{equation}{section}
 \usepackage{cleveref}
 \usepackage[round]{natbib}
+\usepackage{url}
 \bibliographystyle{tcdthesis.bst}
 
 % --- Tablestuff --- 
@@ -56,6 +67,13 @@
 \setlength\epigraphwidth{.8\textwidth}
 \setlength\epigraphrule{1pt}
 
+% --- Table of Content --- 
+% \usepackage{tocloft}
+% \renewcommand{\cftsecfont}{\color{blue}}
+% \renewcommand{\cftsubsecfont}{\color{red}}
+% \renewcommand{\cftsubsubsecfont}{\color{green}}
+
+
 % --- Radio Astronomy Commands --- 
 \newcommand{\surveytargets}{1,631,198 }
 \newcommand{\gaiatargets}{1,631,154 }
@@ -77,6 +95,7 @@
 \newcommand{\Tspill}{T_{\text{spill}}}
 \newcommand{\Trec}{T_{\text{rec}}}
 \newcommand{\dm}{$\text{pc~cm}^{-3}$}
+\newcommand{\smass}{\, \text{M}_\odot}
 
 % --- Chapter Title Setup --- 
 \newcommand{\hsp}{\hspace{20pt}}
@@ -91,7 +110,11 @@
 \begin{document}
 \input{title/title.tex}
 \pagenumbering{roman}
+
 \newpage % white page between title and dedication. 
+\thispagestyle{empty}
+\mbox{}
+\newpage
 
 % --- Dedication --- 
 \newpage
@@ -105,6 +128,7 @@
 
 % --- Declearation --- 
 \newpage
+\thispagestyle{empty}
 \hspace{0pt}
 \vfill
 \section*{Declaration}
@@ -128,21 +152,41 @@ This is some text to be centered vertically.
 \hspace{0pt}
 
 \newpage
+\thispagestyle{empty}
 \chapter*{Abstract}
 Fortunately there are still many open questions about this wild and wondrous cosmos that we find ourselves in.
 
 % --- Acknowledgements ---
 \newpage 
+\thispagestyle{empty}
 \section*{Acknowledgements}
 
-It takes an \sout{village} observatory to raise a PhD student, it would be remiss of me not to acknowledge that dozens of people have helped me in my journey in completing this body of work, whether it be in a personal or in a professional capacity, so this is a non-exhaustive list of acknowledgements. People to thank Evan, Joe, Aaron G, Vishal, David, Sai, Wael, Dave Db, Dave MC, Harry, Lety, BL folks, Goddard folks, WVU folks, Office folks. I would like to extend a personal expression of gratitude to Andrew S and PW  .\\ 
-Lawrence, Tt, Aaron, 
+It takes a \sout{village} observatory to raise a PhD student; it would be remiss of me not to acknowledge that dozens of people have helped me in my journey in completing this body of work, whether it be in a personal or in a professional capacity, so this is a non-exhaustive list of acknowledgements.
+
+Firstly, I want to thank my supervisor, Evan. Four years ago, when he asked me to do this project, I was quite unsure. I can safely say that any doubts I had about doing a PhD were quickly quieted. The last four years have been the best of my life, largely thanks to a supervisor who nurtured my crazy ideas and let me fly around the globe pursuing them.  It’s been one of my great privileges to learn from Evan, and hopefully we’ll get up to some crazy stuff in the future. Slán go fóill fear fiáin. 
+
+I want to thank Joe McCauley for many reasons. Joe made my thesis project possible, from the long drives to Birr, to the many hours spent fixing and discussing servers and many interesting things in between. Without Joe, the I-LOFAR station would have fallen into the abyss long ago, I am sure. 
+
+I want to thank my co-supervisor, Vishal, with whom I work closely in trying to answer the hardest question I could think of: Is there intelligent life in the universe? I have great memories of our meetings in Campbell, all the way to Hat Creek. Vishal’s thoughts and guidance on SETI were indispensable in completing this PhD. 
+
+I have benefited greatly from discussions with Aaron Golden throughout my PhD. I want to highlight the significant time and thought Aaron put into conversations about science and careers alike, even though at times it took a couple of dictionaries to parse what he was saying. I will remember the trials and tribulations we faced on our journey to India for the rest of my life. 
+
+I want to specifically highlight the help David McKenna has given me over the past few years. Despite David submitting his PhD and starting a new, intensive job, he always took time to help me with silly questions as I tried to find my feet in the wacky world of pulsars and radio astronomy. David’s knowledge of the field is incomprehensible, and for that I am very grateful. 
+
+To my PhD brother, Sai and uncle Harry, thank you for teaching me how to interface with telescopes and 
+
+David, Sai, Wael, Dave Db, Dave MC, Harry, Lety, BL folks, Robert, Victoria, Eric folks, WVU folks, Office folks. I would like to extend a personal expression of gratitude to Andrew S and PW  .\\ 
+Lawrence, Tt, Aaron, Megan, Ellen, Sam M, Ethan, Jonas, 
 
 To Eve, Noel and Bart, I've never forgotten about you. I've tried to carry at least a fraction of your love for the sciences with me throughout this endeavour. Ar dheis Dé go raibh a n-anamacha.
 
+The auld folks
+
 Laura
 
+
 \newpage 
+\thispagestyle{empty}
 \section*{Funding and Resource Acknowledgements}
 
 This PhD was jointly supported by Breakthrough Listen managed by the Breakthrough Prize Foundation and Trinity College Dublin, School of Physics. This work extensively used the Irish LOFAR station, funded by the Irish LOFAR  Consortium. The consortium consists of Trinity College Dublin, Armagh Observatory and  Planetarium, University College Dublin, Dublin City University, University College Cork,  University of Galway, Dublin Institute for Advance Studies and Technological University of  the Shannon Athlone. It receives generous funding from Science Foundation Ireland and the  Department of Further and Higher Education, Research, Innovation and Science.  The REALTA compute cluster was funded by Science Foundation Ireland. This work also used LOFAR-SE 
@@ -158,6 +202,8 @@ This PhD was jointly supported by Breakthrough Listen managed by the Breakthroug
 \end{center}
 \vspace*{\fill}
 
+{
+\hypersetup{linkcolor=black}
 \begingroup
   \renewcommand{\contentsname}{} % Remove title (optional)
   \renewcommand{\addcontentsline}[3]{} % Prevent adding 'Table of Contents' to TOC
@@ -165,6 +211,7 @@ This PhD was jointly supported by Breakthrough Listen managed by the Breakthroug
 \endgroup
 \listoffigures
 \listoftables
+}
 \input{misc/nomenclature.tex}
 
 \input{chapter1/chapter1_intro}
@@ -184,7 +231,7 @@ This PhD was jointly supported by Breakthrough Listen managed by the Breakthroug
 \newpage
 
 % Bibliography
-\bibliography{bibfiles/chapter3_redback,bibfiles/chapter5_seti}
+\bibliography{bibfiles/chapter1_intro,bibfiles/chapter3_redback,bibfiles/chapter5_seti}
 
 % --- Appendices ---
 \newpage

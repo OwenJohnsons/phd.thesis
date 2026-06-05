@@ -1,11 +1,119 @@
-\chapter{Introduction to Radio Transients}
+\chapter{Introduction to Radio Transients} \label{chap:introduction}
 \pagenumbering{arabic}
 
 
 \epigraph{\small\itshape “the Universe, she's whispering so softly I can hear, all the croaking insects, all the taxicabs, all the bum's spent change all the boys playing ball in the alleyways” \raggedleft\par--- \textup{ Gregory Alan Isakov, \textit{The Universe}}}
 
-Transients include a large amount of objects across the entire electromagnetic spectrum, it is generally used an umbrella term to include any astronomical objects that is time-dependent on times scales from nanoseconds to years. This thesis focuses on transients that emit radio waves $(\lambda \approx \text{mm}-\text{km})$. \\ 
-Radio waves can be emitted from an astrophysical object by either thermal or non-thermal emission. Any particle above 0~K vibrates when charged particles in atoms undergo acceleration they release electromagnetic radiation. As a consequence of this any particle above 0~K emits thermal radiation through two mechanisms blackbody or bremsstrahlung emission.  
+Throughout history humanity has watched the stars and observed transient phenomena. From prehistoric observers sat around campfires catching glimpses of comets and interpreting them as omens, to Chinese astronomers noting the Crab supernovae in 1054. The night sky has always captivated questions from how the Universe works to humanities place in it. Modern day astronomy at its core is the same, the awe still remains, but the tools have got sharper. With the advent of modern instrumentation the study of transients has expanded from the longest wavelength's to the highest energies.  As a result over the last century new classes of transients have emerged with their own sets of open questions. 
+
+Transients include a large amount of objects that emit across the entire electromagnetic spectrum, it is generally used an umbrella term to include any astronomical objects that is time-dependent on times scales from nanoseconds to years. This thesis focuses on transients that emit radio waves $(\lambda \approx \text{mm}-\text{km})$.  
+Radio waves can be emitted from an astrophysical object by either thermal or non-thermal emission. Any particle above 0~K vibrates when charged particles in atoms undergo acceleration they release electromagnetic radiation. As a consequence of this any particle above 0~K emits thermal radiation through two mechanisms blackbody or bremsstrahlung emission. Alternatively non-thermal emission arises from particles that have non-thermal motion also known as a non-Maxwellian energy distribution. These particles experience external forces that cause motion such as acceleration due to the presence of a magnetic field which commonly produce synchrotron radiation as relativistic electrons spiral around magnetic field lines. 
+
+These emission mechanisms are observed across a wide range of astrophysical phenomena, from objects within Earth’s local neighbourhood such as solar flares, aurorae, and lightning in the outer planets, to some of the most distant and energetic known events including fast radio bursts and gamma-ray bursts. Radio transients span broad ranges of timescales, luminosity, and physical origin. In addition to observed sources, many theoretical radio transients have also been proposed but remain undetected, including primordial black holes, cosmic strings, and, more speculatively, technosignatures from extraterrestrial civilizations.
+
+This chapter aims to non-exhaustively discuss the background and present motivation for studying natural and artificial transients. 
+
+\section{Non-thermal Emission}
+
+Electromagnetic emission can arise in plasmas from both bound atomic systems and unbound particles that are accelerated by external fields. Bound particles have quantized energies and the transition to lower energy states generates photons. However, unbound particles have a continuum of possible energies such that acceleration of these unbound particles can produce a continuum of photon energies. 
+
+For a free (unbound), non-thermal and non-relativistic electron of charge, $e$ and mass $m_e$ that moves in a uniform magnetic field, $\mathbf{B} = \hat z B$. The only Lorentz force present is, $\mathbf{F} = -e(\mathbf{v} \times \textbf{B})$. If this electron is then placed in a circular orbit with a given speed, $v$ and a given radius $r$ the centipedal force causes an acceleration such that, 
+
+\begin{equation}
+    \frac{m_ev^2}{r} =evB
+\end{equation}
+
+Examining the angular frequency caused by the force balance, $\omega = v/r$. Substituting the following expression is obtained.
+
+\begin{equation}
+    \omega_L = \frac{eB}{m_ec} = 2.8~\frac{\text{B}}{\text{G}}~ \text{MHz}
+    \label{eq: Larmor Freq}
+\end{equation}
+
+\Cref{eq: Larmor Freq} is known as the Larmor frequency, It's significant for setting the fundamental time and frequency scale for how charged particles can gyrate in a magnetic field. However, in an astrophysical context relativistic effects need to be accounted for where $\gamma>1$. With the same setup as before but now with a relativistic electron in a magnetic field, the Lorenz force in this case now takes the form of, 
+
+\begin{equation}
+    \frac{d p_\perp}{dt} = e \textbf{v}_\perp B
+\end{equation}
+
+Where $p_\perp$ is the transverse component of moment, $\textbf{p}_\perp = \gamma m_e \textbf{v}_\perp$. So relativistically the gyro-frequency of a particle is given by the following substitution, $\omega = \textbf{v}_\perp / r$ which results in, 
+
+\begin{equation}
+    \omega = \frac{eB}{\gamma m_ec}
+    \label{eq:RealtivisticGyroFreq}
+\end{equation}
+
+\begin{figure}[t]
+    \centering
+    \begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+%uncomment if require: \path (0,441); %set diagram left start at 0, and has height of 44
+
+%Shape: Spring [id:dp35001234639324486] 
+\draw   (326.33,156.84) .. controls (337.71,179.51) and (340.59,207.91) .. (318.21,223.02) .. controls (273.46,253.23) and (217.16,169.83) .. (240.36,154.16) .. controls (263.57,138.5) and (319.87,221.9) .. (275.11,252.11) .. controls (230.36,282.32) and (174.06,198.92) .. (197.26,183.26) .. controls (220.47,167.59) and (276.77,250.99) .. (232.01,281.21) .. controls (187.26,311.42) and (130.96,228.01) .. (154.17,212.35) .. controls (177.37,196.68) and (233.67,280.09) .. (188.91,310.3) .. controls (183.19,314.16) and (177.28,316.17) .. (171.37,316.69) ;
+%Shape: Circle [id:dp033919684441355846] 
+\draw  [fill={rgb, 255:red, 74; green, 144; blue, 226 }  ,fill opacity=1 ] (317,153.5) .. controls (317,149.36) and (320.36,146) .. (324.5,146) .. controls (328.64,146) and (332,149.36) .. (332,153.5) .. controls (332,157.64) and (328.64,161) .. (324.5,161) .. controls (320.36,161) and (317,157.64) .. (317,153.5) -- cycle ;
+%Straight Lines [id:da8239992919484788] 
+\draw [color={rgb, 255:red, 208; green, 2; blue, 27 }  ,draw opacity=1 ]   (108,279) -- (128.62,264.46) -- (296.37,146.15) ;
+\draw [shift={(298,145)}, rotate = 144.81] [fill={rgb, 255:red, 208; green, 2; blue, 27 }  ,fill opacity=1 ][line width=0.08]  [draw opacity=0] (12,-3) -- (0,0) -- (12,3) -- cycle    ;
+%Straight Lines [id:da8706605995386824] 
+\draw [color={rgb, 255:red, 208; green, 2; blue, 27 }  ,draw opacity=1 ]   (119,293) -- (139.62,278.46) -- (307.37,160.15) ;
+\draw [shift={(309,159)}, rotate = 144.81] [fill={rgb, 255:red, 208; green, 2; blue, 27 }  ,fill opacity=1 ][line width=0.08]  [draw opacity=0] (12,-3) -- (0,0) -- (12,3) -- cycle    ;
+%Straight Lines [id:da6748288379378818] 
+\draw [color={rgb, 255:red, 208; green, 2; blue, 27 }  ,draw opacity=1 ]   (130,308) -- (150.62,293.46) -- (318.37,175.15) ;
+\draw [shift={(320,174)}, rotate = 144.81] [fill={rgb, 255:red, 208; green, 2; blue, 27 }  ,fill opacity=1 ][line width=0.08]  [draw opacity=0] (12,-3) -- (0,0) -- (12,3) -- cycle    ;
+%Straight Lines [id:da6673811504605812] 
+\draw [color={rgb, 255:red, 65; green, 117; blue, 5 }  ,draw opacity=1 ]   (319.5,148) -- (309.9,136.32) ;
+\draw [shift={(308,134)}, rotate = 50.6] [fill={rgb, 255:red, 65; green, 117; blue, 5 }  ,fill opacity=1 ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
+%Straight Lines [id:da10409690559320883] 
+\draw [color={rgb, 255:red, 144; green, 19; blue, 254 }  ,draw opacity=1 ]   (330.5,148) -- (340.66,139.87) ;
+\draw [shift={(343,138)}, rotate = 141.34] [fill={rgb, 255:red, 144; green, 19; blue, 254 }  ,fill opacity=1 ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
+%Straight Lines [id:da9875636651936046] 
+\draw    (262,214) -- (379.89,332.87) ;
+\draw [shift={(382,335)}, rotate = 225.24] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (10.72,-5.15) -- (0,0) -- (10.72,5.15) -- (7.12,0) -- cycle    ;
+%Curve Lines [id:da060929441107962834] 
+\draw [fill={rgb, 255:red, 74; green, 144; blue, 226 }  ,fill opacity=0.57 ]   (266,218) .. controls (298,300) and (327,348) .. (361,313) ;
+%Curve Lines [id:da15485160304368528] 
+\draw [fill={rgb, 255:red, 74; green, 144; blue, 226 }  ,fill opacity=0.56 ]   (266,218) .. controls (320,240) and (393,271) .. (361,313) ;
+%Curve Lines [id:da9741350174449808] 
+\draw [color={rgb, 255:red, 208; green, 2; blue, 27 }  ,draw opacity=1 ]   (316.34,310.58) .. controls (350.36,316.21) and (357.69,306.65) .. (361.64,277.74) ;
+\draw [shift={(362,275)}, rotate = 97.13] [fill={rgb, 255:red, 208; green, 2; blue, 27 }  ,fill opacity=1 ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
+\draw [shift={(313,310)}, rotate = 10.44] [fill={rgb, 255:red, 208; green, 2; blue, 27 }  ,fill opacity=1 ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
+
+% Text Node
+\draw (345,141.4) node [anchor=north west][inner sep=0.75pt]  [color={rgb, 255:red, 144; green, 19; blue, 254 }  ,opacity=1 ]  {$\mathbf{v}$};
+% Text Node
+\draw (296,114.4) node [anchor=north west][inner sep=0.75pt]  [color={rgb, 255:red, 65; green, 117; blue, 5 }  ,opacity=1 ]  {$\mathbf{p}$};
+% Text Node
+\draw (370,257.4) node [anchor=north west][inner sep=0.75pt]    {$\textcolor[rgb]{0.82,0.01,0.11}{1/\gamma \ \text{rad}}$};
+% Text Node
+\draw (102,291.4) node [anchor=north west][inner sep=0.75pt]  [color={rgb, 255:red, 208; green, 2; blue, 27 }  ,opacity=1 ]  {$\mathbf{B}$};
+% Text Node
+\draw (390,329) node [anchor=north west][inner sep=0.75pt]   [align=left] {to observor};
+
+
+\end{tikzpicture}
+    \caption{Example of a relativistic electron in a magnetic field producing synchrotron radiation.}
+    \label{fig:SyncotronicEmissionDiagram}
+\end{figure}
+\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt    
+
+
+\Cref{eq:RealtivisticGyroFreq} sets the basic orbital timescale for synchrotron-emitting electrons. As the electron becomes relativistic $(\gamma>1)$ the electromagnetic waves are concentrated in a narrow cone of half-angle $\sim1/\gamma$ about the instantaneous velocity vector, $\textbf{v}$, towards the observer which is shown in \cref{fig:SyncotronicEmissionDiagram}.
+Or in simpler terms in the electron's rest frame it will just gyrate in a circle at a frequency, $\omega_L$ and be a smooth sinusoid at that frequency. Whereas in the observer's frame, once the electron is relativistic it will be `squashed' due to aberration on a very narrow radiation cone of width, $\sim1/\gamma$ as stated above. The consequence of this is there will only be a single pulse per orbit as a very small fraction of the orbit is pointing towards the observer. For each of these short pulses there will be a spike in electric field as a function of time, with a pulse duration of $\Delta t \sim 1/\gamma^3 \cdot P_{e,\text{orb}}$. The spectrum of radiation of the short pulses is the Fourier transform of the pulse once time and aberration are taken into account. When a short pulse is Fourier transformed it will have power at many frequencies, forming a broad spectrum. So the characteristic frequency of the spectrum is $w_c \sim 1/\Delta t \sim \gamma^3 \omega_L$. This broad spectrum peaks near $\omega_c$, when this is integrated over a power-law distribution of electrons it produces a power-law synchrotron continuum which is observed in many radio transients. 
+Pulsar, fast radio bursts, flare stars and long period transients are all examples of non-thermal radio sources. All of which emit coherent radio waves except flare stars which is discussed later in this chapter.
+
+\subsection{The Transient Phase Space}
+
+The transient phase space (shown in \cref{fig:phase_space:chap1}) was first coined by \cite{cordes_dynamic_2004} and is commonly used as a way to illustrate key characteristics of transient radio emission across known radio transients. The plot represents the observed frequency and emission duration (width) along with the spectral luminosity of the object. It also delineates the radio transient populations that exhibit coherent and incoherent emission. Here the lines represent minimum brightness temperature. This representation is an optimal way to quantify the science case for given telescope specifications. One thing that is important to note with this representation is that each point represents the centre of a distribution of emission, in reality there will be an array of luminosity and widths for repeating sources. 
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.9\linewidth]{chapter1/figures/phase_space.pdf}
+    \caption{Transient Phase Space adapted from \citet[p. 24,][]{keane_thesis} showing a $\nu \text{W}$ vs. $L_\nu$. Where $\nu \text{W}$ represents the product of observed frequency and pulse width and $L_\nu$ shows the spectral luminosity.}
+    \label{fig:phase_space:chap1}
+\end{figure}
+
+This thesis focuses on transient searching, with a more specific focus on pulsars and technosignatures, however a large portion of this work is based in the finding transients at low frequencies. The rest of this chapter will discuss the theoretical background and literature for an array of radio transients, with the detail of each reflective of the novel work that is present. 
 
 \input{chapter1/section1}
 
@@ -20,3 +128,5 @@ Radio waves can be emitted from an astrophysical object by either thermal or non
 % \subsection{Gamma Ray Bursts} % Maybe chuck in the misc chapter. 
 
 \section{The Search for Intelligent Life in the Universe}
+
+Arguably one of the most captivating and difficult problem in astronomy is on the prospect of life elsewhere in the Universe. It's a problem where the known population is statistical insignificant given that Earth is the only known example. However, in the last 50 years evidence has steadily mounted that the conditions for life in the universe are relativity common. Since exoplanets were first directly detected in 1992 there is (at the time of writing) over 6,300 confirmed exoplanets of all varieties \citep{NEA12}. However, postulating the   

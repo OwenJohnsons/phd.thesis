@@ -8,6 +8,7 @@
 % \usepackage{subfigure} % Apparently no longer in use. 
 % \usepackage{subcaption}
 \usepackage{fancyhdr}
+\usepackage{eso-pic}
 \usepackage{enumerate}
 \usepackage[normalem]{ulem}
 \usepackage[parfill]{parskip} % empty line instead of an indent for new paragraphs
@@ -22,6 +23,7 @@
   separate-uncertainty = true,
   table-align-text-post = false
 }
+\numberwithin{equation}{chapter}
 
 % --- Header --- 
 \usepackage{fancyhdr}
@@ -39,10 +41,11 @@
 
 % --- Bib Stuff ---
 \input{misc/aas_journal_commands}
-\numberwithin{equation}{section}
 \usepackage{cleveref}
 \usepackage[round]{natbib}
 \usepackage{url}
+\usepackage{acro}
+\input{misc/acronyms}
 \bibliographystyle{tcdthesis.bst}
 
 % --- Tablestuff --- 
@@ -97,6 +100,7 @@
 \newcommand{\dm}{$\text{pc~cm}^{-3}$}
 \newcommand{\smass}{\, \text{M}_\odot}
 
+
 % --- Chapter Title Setup --- 
 \newcommand{\hsp}{\hspace{20pt}}
 \definecolor{tcdblue}{cmyk}{0.94, 0.38, 0, 0.27}
@@ -104,17 +108,25 @@
 
 % --- Command Text Commands --- 
 \newcommand{\thesistitle}{Exploring the Radio Sky for Natural and Artificial Transient Sources}
-\newcommand{\school}{\href{https://www.tcd.ie/physics/research/themes/astrophysics/}{Astrophysics Research Group}}
+\newcommand{\school}{\href{https://www.tcd.ie/physics/research/themes/astrophysics/}{Radio Transients Research Group}}
 \newcommand{\supervisor}{Assoc. Prof. Evan F. Keane}
 
 \begin{document}
-\input{title/title.tex}
+% \input{title/title.tex}
+
+\begin{titlepage}
+\AddToShipoutPictureBG*{
+    \includegraphics[width=\paperwidth,height=\paperheight]{title/drawing.png}
+}
+\mbox{} % empty content
+\end{titlepage}
+
 \pagenumbering{roman}
 
-\newpage % white page between title and dedication. 
+% \newpage % white page between title and dedication. 
 \thispagestyle{empty}
 \mbox{}
-\newpage
+% \newpage
 
 % --- Dedication --- 
 \newpage
@@ -140,14 +152,13 @@ Learning, Assessment and Research.
 I agree to deposit this thesis in the University’s open access institutional repository or allow
 the Library to do so on my behalf, subject to Irish Copyright Legislation and Trinity College
 Library conditions of use and acknowledgement.
-I consent / do not consent to the examiner retaining a copy of the thesis beyond the examining
+I consent to the examiner retaining a copy of the thesis beyond the examining
 period, should they so wish (EU GDPR May 2018).
 of use and acknowledgement.
 \vspace{1cm}
 
 Signed:~\rule{5cm}{0.3pt}\hfill Date:~\rule{5cm}{0.3pt}
 
-This is some text to be centered vertically.
 \vfill
 \hspace{0pt}
 
@@ -159,38 +170,7 @@ Fortunately there are still many open questions about this wild and wondrous cos
 % --- Acknowledgements ---
 \newpage 
 \thispagestyle{empty}
-\section*{Acknowledgements}
-
-It takes a \sout{village} observatory to raise a PhD student; it would be remiss of me not to acknowledge that dozens of people have helped me in my journey in completing this body of work, whether it be in a personal or in a professional capacity, so this is a non-exhaustive list of acknowledgements.
-
-Firstly, I want to thank my supervisor, Evan. Four years ago, when he asked me to do this project, I was quite unsure. I can safely say that any doubts I had about doing a PhD were quickly quieted. The last four years have been the best of my life, largely thanks to a supervisor who nurtured my crazy ideas and let me fly around the globe pursuing them.  It’s been one of my great privileges to learn from Evan, and hopefully we’ll get up to some crazy stuff in the future. Slán go fóill fear fiáin. 
-
-I want to thank Joe McCauley for many reasons. Joe made my thesis project possible, from the long drives to Birr, to the many hours spent fixing and discussing servers and many interesting things in between. Without Joe, the I-LOFAR station would have fallen into the abyss long ago, I am sure. 
-
-I want to thank my co-supervisor, Vishal, with whom I work closely in trying to answer the hardest question I could think of: Is there intelligent life in the universe? I have great memories of our meetings in Campbell, all the way to Hat Creek. Vishal’s thoughts and guidance on SETI were indispensable in completing this PhD. 
-
-I have benefited greatly from discussions with Aaron Golden throughout my PhD. I want to highlight the significant time and thought Aaron put into conversations about science and careers alike, even though at times it took a couple of dictionaries to parse what he was saying. I will remember the trials and tribulations we faced on our journey to India for the rest of my life. 
-
-I want to specifically highlight the help David McKenna has given me over the past few years. Despite David submitting his PhD and starting a new, intensive job, he always took time to help me with silly questions as I tried to find my feet in the wacky world of pulsars and radio astronomy. David’s knowledge of the field is incomprehensible, and for that I am very grateful. 
-
-To my PhD brother, Sai and uncle Harry, thank you for teaching me how to interface with telescopes and 
-
-David, Sai, Wael, Dave Db, Dave MC, Harry, Lety, BL folks, Robert, Victoria, Eric folks, WVU folks, Office folks. I would like to extend a personal expression of gratitude to Andrew S and PW  .\\ 
-Lawrence, Tt, Aaron, Megan, Ellen, Sam M, Ethan, Jonas, 
-
-To Eve, Noel and Bart, I've never forgotten about you. I've tried to carry at least a fraction of your love for the sciences with me throughout this endeavour. Ar dheis Dé go raibh a n-anamacha.
-
-The auld folks
-
-Laura
-
-
-\newpage 
-\thispagestyle{empty}
-\section*{Funding and Resource Acknowledgements}
-
-This PhD was jointly supported by Breakthrough Listen managed by the Breakthrough Prize Foundation and Trinity College Dublin, School of Physics. This work extensively used the Irish LOFAR station, funded by the Irish LOFAR  Consortium. The consortium consists of Trinity College Dublin, Armagh Observatory and  Planetarium, University College Dublin, Dublin City University, University College Cork,  University of Galway, Dublin Institute for Advance Studies and Technological University of  the Shannon Athlone. It receives generous funding from Science Foundation Ireland and the  Department of Further and Higher Education, Research, Innovation and Science.  The REALTA compute cluster was funded by Science Foundation Ireland. This work also used LOFAR-SE 
-
+\input{misc/acknowledgements}
 
 
 % --- Important Pages --- 
@@ -212,7 +192,8 @@ This PhD was jointly supported by Breakthrough Listen managed by the Breakthroug
 \listoffigures
 \listoftables
 }
-\input{misc/nomenclature.tex}
+% \input{misc/nomenclature.tex}
+\printacronyms[display=all]
 
 \input{chapter1/chapter1_intro}
 \input{chapter2/chapter2_radio}
@@ -231,7 +212,7 @@ This PhD was jointly supported by Breakthrough Listen managed by the Breakthroug
 \newpage
 
 % Bibliography
-\bibliography{bibfiles/chapter1_intro,bibfiles/chapter3_redback,bibfiles/chapter5_seti}
+\bibliography{bibfiles/chapter1_intro,bibfiles/chapter3_redback,bibfiles/chapter5_seti,bibfiles/zotero}
 
 % --- Appendices ---
 \newpage

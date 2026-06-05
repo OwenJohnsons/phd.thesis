@@ -1,1 +1,42 @@
-\chapter{Radio Astronomy}
+\chapter{Tools of Radio Astronomy}
+
+Radio astronomy found its beginning at Bell labs, Karl Janksy announced in 1933 the discovery radio emission coming from the Milky Way when observing the atmosphere at 20~MHz \citep{jansky_radio_1933}. This was soon improved upon by Grote Reber, who built a radio telescope in his backyard and made deliberate observations of many radio bright objects, publishing them in astronomical journals. Radio transmitters and receivers made great strides during the war years due to the development of radar equipment for military purposes. In the following years many who had developed these technologies, turned to study the `noise' that was picked up from extraterrestrial sources, forming the foundation of modern radio astronomy. 
+
+The radio window from the Earth's surface extends roughly from 30~MHz $(\lambda\sim10~\mathrm{m})$ up to about 1300~GHz $(\lambda\sim0.3~\mathrm{mm})$ as shown in \cref{fig:chpt2radiowindow}. The lower limit of this window arises from adsorption of radio waves by free electrons in the ionosphere. While radio waves can technically be observed down to 4.5~MHz if the frequency of the radio waves is below that of the plasma frequency, $\nu_p$ the adsorption becomes significantly more prominent such that
+
+\begin{equation}
+    \frac{\nu_P}{\mathrm{kHz}} = 8.97 \sqrt{\dfrac{N_e}{\mathrm{cm^{-3}}}}, 
+\end{equation}
+
+Where $N_e$ is the electron density of the plasma. There is also other contributions that effect this, such as solar activity which make this limit variable. This means that to study kHz frequencies or an unrefracted view of $\lesssim 30~\mathrm{MHz}$ the radio sky must be observed from space. The upper radio limit isn't observed at any single wavelength, but considerations become important at mm wavelengths as resonant absorption comes into effect from the lowest rotation band of molecules in the troposphere \citep{WilsonToolsofRadioastron}. This is mainly attributed to water vapour $\mathrm{H}_2\mathrm{O}$ and $\mathrm{O_2}$, adsorption also occurs at higher frequencies, but here the atmosphere is opaque to radio waves. Around 300~GHz is considered to the upper limit in a radio context where atmospheric absorption at sea level becomes very strong, with additional losses from clouds and rain. The work in this thesis is carried out from $0.1-4000~\mathrm{MHz}$. 
+
+This chapter discusses some fundamentals of radio telescopes and the processes that go into generating science useable products used to explore the objects discussed in \cref{chap:introduction}.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.98\linewidth]{chapter2/figures/atmospheric_reflection_render.pdf}
+    \caption{Atmospheric attenuation as a function of wavelength and frequency. Values are taken to reflect when the incoming radiation has been attenuated by a factor of 1/2. Figure adapted from \cite{WilsonToolsofRadioastron}}
+    \label{fig:chpt2radiowindow}
+\end{figure}
+
+\section{From Photon to Filterbank}
+
+Radio telescopes can often be seen as conceptually complex but share much common ground with contemporary optical telescopes. An antenna is often thought of as a `single pixel' in a charged couple device (CCD) with an array of antennas forming an array of pixels that can be used to observe the sky. There are also parallels to be drawn between the mirrors in optical telescope and the parabolic dishes seen on radio telescopes which will later be discussed. 
+
+Firstly let's begin with an electromagnetic wave propagated from space and how to measure it with an antenna. The wave is propagating in the $z$ direction which is also monochromatic. This has an oscillating electric field given as, 
+
+\begin{equation}
+    \textbf{E}(z,t) = \hat{x} E_0 \cos (kz -\omega t)
+\end{equation}
+
+and the magnetic field is given as,
+
+\begin{equation}
+    \textbf{B}(z,t)=\hat{y} \frac{E_0}{c} \cos(kz-\omega t ). 
+\end{equation}
+
+Here $k = 2 \pi /\lambda$ and $\omega = 2\pi f$. As the electric field produces a time varying current it induces a voltage across an antenna. Which for a short dipole antenna aligned with the electric field, the induced open circuit voltage is approximately,
+
+\begin{equation}
+    V_{\mathrm{OC}} (t) = \int^{l/2}_{-l/2} \mathbf{E} \cdot dl \approx E_0 l \cos(\omega t).
+\end{equation}

@@ -23,20 +23,25 @@ This chapter discusses some fundamentals of radio telescopes and the processes t
 
 Radio telescopes can often be seen as conceptually complex but share much common ground with contemporary optical telescopes. An antenna is often thought of as a `single pixel' in a charged couple device (CCD) with an array of antennas forming an array of pixels that can be used to observe the sky. There are also parallels to be drawn between the mirrors in optical telescope and the parabolic dishes seen on radio telescopes which will later be discussed. 
 
-Firstly let's begin with an electromagnetic wave propagated from space and how to measure it with an antenna. The wave is propagating in the $z$ direction which is also monochromatic. This has an oscillating electric field given as, 
+For any electromagnetic wave coming from an astronomical source the wave is considered to be in the far-field, and the wavefronts are therefore locally planar across the extent of a radio telescope. Radio telescopes sample the electric field associated with these incoming plane waves. The general time-dependent electric field vector may be expressed as,
 
 \begin{equation}
-    \textbf{E}(z,t) = \hat{x} E_0 \cos (kz -\omega t)
+    \textbf{E} (t,r) = (\hat a E_a + \hat b E_b) \ \exp(2 \pi i (ft-kr))
+    \label{eq:wave_equation}
 \end{equation}
 
-and the magnetic field is given as,
+%TODO: talk about r_1, r_2, phase difference for interferometry down the line. Add references to the books used to come up with these derivations 
+
+where $\hat a$ and $\hat b$ are orthogonal polarisation basis vectors, $z$ is the orthogonal axis which the wave progates forward with time, $t$. $E_a$ and $E_b$ are the corresponding complex amplitudes, $f$ is wave frequency, $k$ is the wavenumber, $2 \pi \lambda$. 
+In short, in \cref{eq:wave_equation} the first term dictates the wave polarisation and the second term dictates the wave propagation. If a radio telescope samples the plane wave at a given instant, the polarisation can be described by a Jones vector, 
 
 \begin{equation}
-    \textbf{B}(z,t)=\hat{y} \frac{E_0}{c} \cos(kz-\omega t ). 
+    \textbf{j} = \begin{pmatrix}
+E_a \\
+E_b
+\end{pmatrix} = \begin{pmatrix} E_0 \cos \beta \\
+-E_0 \sin \beta
+\end{pmatrix} 
 \end{equation}
 
-Here $k = 2 \pi /\lambda$ and $\omega = 2\pi f$. As the electric field produces a time varying current it induces a voltage across an antenna. Which for a short dipole antenna aligned with the electric field, the induced open circuit voltage is approximately,
-
-\begin{equation}
-    V_{\mathrm{OC}} (t) = \int^{l/2}_{-l/2} \mathbf{E} \cdot dl \approx E_0 l \cos(\omega t).
-\end{equation}
+Here, $\beta$ describes the shape and `handness' of the ellipse that is traced out by the wave vector.

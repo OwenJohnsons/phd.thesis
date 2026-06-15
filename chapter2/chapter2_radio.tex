@@ -93,4 +93,194 @@ U \equiv  & I \sin 2\psi \ \cos 2\beta = 2 E_x E_y \cos 2 \phi,\\
 V \equiv & I \sin 2\beta = 2 E_x E_y \sin \phi.
 \end{align}
 
-Radio telescopes only measure $x$ and $y$ in the electric field plane $(E_x,E_y)$. $\psi$ is the rotation of the wave in respect to the plane of the ellipse \citep[][p. 261]{pulsar_handbook}.
+Radio telescopes in reality only measure $x$ and $y$ in the electric field plane $(E_x,E_y)$. $\psi$ is the rotation of the wave in respect to the plane of the ellipse \citep[p. 262,][]{pulsar_handbook}. 
+
+\subsection{Observational Hardware}
+
+In the previous section the framework for measuring an electromagnetic radio wave with a radio telescope was introduced. Here a relatively simple signal path (shown in \cref{fig:chap2RadioBlockDiagrm}) for a radio telescope is introduced, before later introducing interferometry and scaling this to large arrays.
+The first part of the signal path is often referred to as the `antenna', this could be anything from a simple dipole, to a large reflector dish with a complex feed system. Incoming radio waves induce an oscillating electric current in the antenna or feed. The induced voltage is measured by the receiver and forms the primary observable in radio astronomy. However, there are numerous steps in-between. \\
+
+Next the signal is passed to the frontend. The polarizer depends on the setup of the telescope, in some cases there will just be an $x$ and $y$ antenna pair, for a feed there is physically only the one feed, but a polariser like an orthomode transducer (OMT) is used. An OMT acts as a waveguide component that can separate the signal into $E_x$ and $E_y$. Following this both polarisations have the same receiver chains, denoted in \cref{fig:chap2RadioBlockDiagrm} by the dashed arrows. The signal is then amplified using a low noise amplifier (LNA) and put through a bandpass filter which isolates the desired part of the radio band, isolating out-of-band interference. Multiple filters can be used to filter bright sources such as the FM radio band or other sources of radio frequency interference (RFI). \\
+
+A local oscillator generates a stable then mixes the signal with the original input changing the frequency of the signal, this is done to make the signal easier to process. For example, if processing a 1400~MHz sample the setup would need ADC's to match the frequency which is expensive from a processing point of view, so the signal is usually mixed to lower frequencies. The Intermediate Frequency Amplifier (IF Amp) is then used to further amplify the signal, providing additional gain to the downconverted signal to match the dynamic range inputted into the analog to digital converter (ADC). It's easier to do additional amplification here as the noise mitigation isn't as necessary \citep{warnick_generalized_2024}. The signal is then converted from an analog signal to digital time series. \\ 
+It's important to note that the system just described is not a generalised signal path for a radio telescope, this is a setup that would be similar to those found in a single dish system. There are many bespoke systems specific to different observing requirements. For example with the rise in RFI across the radio spectrum there is now the implementation of real-time RFI excision as part of the signal path. 
+
+\begin{figure}[h]
+    
+\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+
+\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+%uncomment if require: \path (0,300); %set diagram left start at 0, and has height of 300
+
+%Shape: Wave [id:dp010383932565277032] 
+\draw  [color={rgb, 255:red, 74; green, 144; blue, 226 }  ,draw opacity=1 ] (34.71,55.79) .. controls (30.55,57.34) and (26.58,58.83) .. (26.55,60.64) .. controls (26.51,62.45) and (30.42,64.08) .. (34.53,65.79) .. controls (38.63,67.49) and (42.54,69.12) .. (42.51,70.93) .. controls (42.48,72.74) and (38.51,74.23) .. (34.35,75.79) .. controls (30.18,77.34) and (26.22,78.83) .. (26.18,80.64) .. controls (26.15,82.45) and (30.06,84.08) .. (34.16,85.78) .. controls (38.27,87.49) and (42.18,89.12) .. (42.14,90.93) .. controls (42.11,92.74) and (38.15,94.23) .. (33.98,95.78) .. controls (29.82,97.34) and (25.85,98.83) .. (25.82,100.64) .. controls (25.79,102.44) and (29.7,104.08) .. (33.8,105.78) .. controls (37.91,107.49) and (41.81,109.12) .. (41.78,110.93) .. controls (41.75,112.74) and (37.78,114.22) .. (33.62,115.78) .. controls (29.46,117.33) and (25.49,118.82) .. (25.46,120.63) .. controls (25.43,122.44) and (29.33,124.07) .. (33.44,125.78) .. controls (37.54,127.48) and (41.45,129.11) .. (41.42,130.92) .. controls (41.39,132.73) and (37.42,134.22) .. (33.26,135.78) .. controls (29.09,137.33) and (25.13,138.82) .. (25.1,140.63) .. controls (25.06,142.44) and (28.97,144.07) .. (33.08,145.77) .. controls (37.18,147.48) and (41.09,149.11) .. (41.06,150.92) .. controls (41.04,152.01) and (39.58,152.99) .. (37.51,153.94) ;
+%Curve Lines [id:da0007160618331780721] 
+\draw    (20,140) .. controls (50,170) and (90,171) .. (120,140) ;
+%Shape: Diagonal Stripe [id:dp2766712443242937] 
+\draw   (73,124.5) -- (78.25,129.75) -- (57.25,129.75) -- (62.5,124.5) -- cycle ;
+%Straight Lines [id:da46393200295338544] 
+\draw    (78.25,129.75) -- (102,154) ;
+%Straight Lines [id:da6410391232433484] 
+\draw    (57.25,129.75) -- (36,153) ;
+%Shape: Wave [id:dp5574496580778607] 
+\draw  [color={rgb, 255:red, 74; green, 144; blue, 226 }  ,draw opacity=1 ] (38.22,153.24) .. controls (40.84,154.55) and (43.34,155.8) .. (44.92,154.91) .. controls (46.49,154.02) and (46.7,151.23) .. (46.92,148.31) .. controls (47.14,145.38) and (47.35,142.6) .. (48.93,141.7) .. controls (50.5,140.81) and (53,142.06) .. (55.62,143.38) .. controls (58.24,144.69) and (60.74,145.94) .. (62.32,145.05) .. controls (63.89,144.16) and (64.11,141.37) .. (64.32,138.45) .. controls (64.54,135.53) and (64.76,132.74) .. (66.33,131.85) .. controls (67.03,131.45) and (67.9,131.48) .. (68.89,131.74) ;
+%Straight Lines [id:da6724979543402668] 
+\draw    (67.75,129.75) -- (68,136) ;
+%Straight Lines [id:da7584567692402384] 
+\draw    (69.5,164) -- (69.5,207) ;
+\draw [shift={(69.5,210)}, rotate = 270] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
+%Flowchart: Process [id:dp46579620601603056] 
+\draw   (35,210) -- (104.5,210) -- (104.5,241) -- (35,241) -- cycle ;
+%Straight Lines [id:da6311110196561236] 
+\draw    (104.5,226) -- (171.5,226) ;
+%Straight Lines [id:da6728395279319984] 
+\draw    (171.5,200) -- (171.5,226) ;
+%Straight Lines [id:da9560265051785412] 
+\draw    (171.5,226) -- (171.5,252) ;
+%Straight Lines [id:da6203720617652068] 
+\draw    (171.5,252) -- (220,252) ;
+\draw [shift={(223,252)}, rotate = 180] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
+%Straight Lines [id:da3342218816132313] 
+\draw    (171.5,200) -- (220,200) ;
+\draw [shift={(223,200)}, rotate = 180] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
+%Rounded Rect [id:dp43351833348550617] 
+\draw   (224,191.4) .. controls (224,188.42) and (226.42,186) .. (229.4,186) -- (260.6,186) .. controls (263.58,186) and (266,188.42) .. (266,191.4) -- (266,207.6) .. controls (266,210.58) and (263.58,213) .. (260.6,213) -- (229.4,213) .. controls (226.42,213) and (224,210.58) .. (224,207.6) -- cycle ;
+%Rounded Rect [id:dp9454884990788047] 
+\draw   (223,243.4) .. controls (223,240.42) and (225.42,238) .. (228.4,238) -- (259.6,238) .. controls (262.58,238) and (265,240.42) .. (265,243.4) -- (265,259.6) .. controls (265,262.58) and (262.58,265) .. (259.6,265) -- (228.4,265) .. controls (225.42,265) and (223,262.58) .. (223,259.6) -- cycle ;
+%Curve Lines [id:da9655489898790274] 
+\draw  [dash pattern={on 3.75pt off 3pt on 7.5pt off 1.5pt}]  (266,199.52) .. controls (333.97,200.5) and (306.85,225.74) .. (355.71,225.54) ;
+\draw [shift={(358,225.52)}, rotate = 178.9] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
+%Curve Lines [id:da14036512840459092] 
+\draw  [dash pattern={on 3.75pt off 3pt on 7.5pt off 1.5pt}]  (265,252.52) .. controls (332.97,253.5) and (306.82,227.32) .. (355.71,225.58) ;
+\draw [shift={(358,225.52)}, rotate = 178.9] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
+%Flowchart: Process [id:dp037071691655715] 
+\draw   (358,207) -- (414,207) -- (414,244.52) -- (358,244.52) -- cycle ;
+%Flowchart: Process [id:dp8104201323875884] 
+\draw   (358,146) -- (414,146) -- (414,183.52) -- (358,183.52) -- cycle ;
+%Straight Lines [id:da415157993583113] 
+\draw  [dash pattern={on 3.75pt off 3pt on 7.5pt off 1.5pt}]  (385.25,207) -- (385.25,186.43) ;
+\draw [shift={(385.25,183.43)}, rotate = 90] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
+%Shape: Circle [id:dp7786957981127907] 
+\draw  [color={rgb, 255:red, 189; green, 16; blue, 224 }  ,draw opacity=1 ] (453,104.43) .. controls (453,95.6) and (460.16,88.43) .. (469,88.43) .. controls (477.84,88.43) and (485,95.6) .. (485,104.43) .. controls (485,113.27) and (477.84,120.43) .. (469,120.43) .. controls (460.16,120.43) and (453,113.27) .. (453,104.43) -- cycle ;
+%Straight Lines [id:da10340748427249657] 
+\draw  [dash pattern={on 3.75pt off 3pt on 7.5pt off 1.5pt}]  (406,104) -- (450,104.41) ;
+\draw [shift={(453,104.43)}, rotate = 180.53] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
+%Flowchart: Process [id:dp9637167828288944] 
+\draw   (367,85) -- (406,85) -- (406,122.52) -- (367,122.52) -- cycle ;
+%Straight Lines [id:da5960904125424031] 
+\draw  [dash pattern={on 3.75pt off 3pt on 7.5pt off 1.5pt}]  (386.25,146) -- (386.25,125.43) ;
+\draw [shift={(386.25,122.43)}, rotate = 90] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
+%Straight Lines [id:da5923106874380906] 
+\draw  [dash pattern={on 3.75pt off 3pt on 7.5pt off 1.5pt}]  (469,120.43) -- (469,165) ;
+\draw [shift={(469,168)}, rotate = 270] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
+%Flowchart: Process [id:dp2300144430422284] 
+\draw   (536,169) -- (605.5,169) -- (605.5,206) -- (536,206) -- cycle ;
+%Flowchart: Process [id:dp39393508524398557] 
+\draw   (435,169) -- (504.5,169) -- (504.5,206) -- (435,206) -- cycle ;
+%Straight Lines [id:da47005420519787167] 
+\draw    (505,189) -- (532,189.9) ;
+\draw [shift={(535,190)}, rotate = 181.91] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
+%Shape: Rectangle [id:dp04050177193660687] 
+\draw  [color={rgb, 255:red, 208; green, 2; blue, 27 }  ,draw opacity=1 ] (13,29) -- (148,29) -- (148,183) -- (13,183) -- cycle ;
+%Straight Lines [id:da8290807978913235] 
+\draw [color={rgb, 255:red, 65; green, 117; blue, 5 }  ,draw opacity=1 ]   (13,191) -- (159,191) ;
+%Straight Lines [id:da31284929081936896] 
+\draw [color={rgb, 255:red, 65; green, 117; blue, 5 }  ,draw opacity=1 ]   (159,191) -- (159,169) ;
+%Straight Lines [id:da25286753204091506] 
+\draw [color={rgb, 255:red, 65; green, 117; blue, 5 }  ,draw opacity=1 ]   (159,169) -- (352,170) ;
+%Straight Lines [id:da16787657322328542] 
+\draw [color={rgb, 255:red, 65; green, 117; blue, 5 }  ,draw opacity=1 ]   (352,61) -- (352,170) ;
+%Straight Lines [id:da5660282815857097] 
+\draw [color={rgb, 255:red, 65; green, 117; blue, 5 }  ,draw opacity=1 ]   (421,61) -- (352,61) ;
+%Straight Lines [id:da27110880903785173] 
+\draw [color={rgb, 255:red, 65; green, 117; blue, 5 }  ,draw opacity=1 ]   (421,61) -- (422,282.2) ;
+%Straight Lines [id:da8880921635636511] 
+\draw [color={rgb, 255:red, 65; green, 117; blue, 5 }  ,draw opacity=1 ]   (422,282.2) -- (13,282.2) ;
+%Straight Lines [id:da7472712439476157] 
+\draw [color={rgb, 255:red, 65; green, 117; blue, 5 }  ,draw opacity=1 ]   (13,191) -- (13,282.2) ;
+%Shape: Rectangle [id:dp6800985131033462] 
+\draw  [color={rgb, 255:red, 0; green, 14; blue, 255 }  ,draw opacity=1 ] (428,151.97) -- (615,151.97) -- (615,219.97) -- (428,219.97) -- cycle ;
+
+% Text Node
+\draw (30,39) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize] [align=left] {EM Wave };
+% Text Node
+\draw (74,106) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize] [align=left] {Feed horn};
+% Text Node
+\draw (104,157) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize] [align=left] {Dish};
+% Text Node
+\draw (42,218) node [anchor=north west][inner sep=0.75pt]   [align=left] {Polarizer};
+% Text Node
+\draw (179,183) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize] [align=left] {x-pol};
+% Text Node
+\draw (180,255) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize] [align=left] {y-pol};
+% Text Node
+\draw (229.4,193) node [anchor=north west][inner sep=0.75pt]   [align=left] {LNA};
+% Text Node
+\draw (228.4,245) node [anchor=north west][inner sep=0.75pt]   [align=left] {LNA};
+% Text Node
+\draw (360,211) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize] [align=left] {\begin{minipage}[lt]{38.99pt}\setlength\topsep{0pt}
+Bandpass
+\begin{center}
+Filter
+\end{center}
+
+\end{minipage}};
+% Text Node
+\draw (369,149) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize] [align=left] {\begin{minipage}[lt]{22.67pt}\setlength\topsep{0pt}
+\begin{center}
+LO\\Mixer
+\end{center}
+
+\end{minipage}};
+% Text Node
+\draw (455,99) node [anchor=north west][inner sep=0.75pt]   [align=left] {{\footnotesize ADC}};
+% Text Node
+\draw (372,89) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize] [align=left] {\begin{minipage}[lt]{20.4pt}\setlength\topsep{0pt}
+\begin{center}
+IF\\AMP
+\end{center}
+
+\end{minipage}};
+% Text Node
+\draw (537,173) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize] [align=left] {\begin{minipage}[lt]{48.05pt}\setlength\topsep{0pt}
+\begin{center}
+Channelized\\Filterbank
+\end{center}
+
+\end{minipage}};
+% Text Node
+\draw (440,173) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize] [align=left] {\begin{minipage}[lt]{40.8pt}\setlength\topsep{0pt}
+\begin{center}
+Polyphase\\Filterbank
+\end{center}
+
+\end{minipage}};
+% Text Node
+\draw (90,9) node [anchor=north west][inner sep=0.75pt]  [color={rgb, 255:red, 208; green, 2; blue, 27 }  ,opacity=1 ] [align=left] {Antenna};
+% Text Node
+\draw (223,149) node [anchor=north west][inner sep=0.75pt]  [color={rgb, 255:red, 65; green, 117; blue, 5 }  ,opacity=1 ] [align=left] {Frontend};
+% Text Node
+\draw (507,225) node [anchor=north west][inner sep=0.75pt]  [color={rgb, 255:red, 14; green, 0; blue, 255 }  ,opacity=1 ] [align=left] {Digital Backend};
+% Text Node
+\draw (489,74) node [anchor=north west][inner sep=0.75pt]  [color={rgb, 255:red, 189; green, 16; blue, 224 }  ,opacity=1 ] [align=left] {Digitizer};
+
+\end{tikzpicture}
+
+    \caption{Block diagram of a single dish radio telescope signal path from photon to science usable filterbank. Note that the dashed lines represent separate pathways for x and y polarisation. The colour block groupings also correspond to common terminology used when discussing telescope hardware.}
+    \label{fig:chap2RadioBlockDiagrm}
+\end{figure}
+
+
+\subsection{Signal Processing}
+
+Following the digitization of the signal the next step is to carry out signal processing to turn the data into a science useable product. This requires the the conversion of the voltage time series to be converted into `channelized'. This is carried out by conducting a discrete Fourier-transform (DFT). This is commonly done in radio astronomy by using a Polyphase Filterbanking (PFB). PFB's has become the technical standard in radio astronomy due to its spectral performance and computational efficiency. In essence the PFB is a fancier Fourier Transform. \\ 
+
+Following the digitization the discrete\footnote{Here square brackets delineate discrete time signals, and round brackets are continuous. } sampled voltage stream $x[n]$
+
+\section{Interferometry}
+
+\section{Radiometer Equation}
+
+\section{Observing Sites}
+
+\section{Software}

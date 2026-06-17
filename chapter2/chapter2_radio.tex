@@ -102,7 +102,7 @@ The first part of the signal path is often referred to as the `antenna', this co
 
 Next the signal is passed to the frontend. The polarizer depends on the setup of the telescope, in some cases there will just be an $x$ and $y$ antenna pair, for a feed there is physically only the one feed, but a polariser like an orthomode transducer (OMT) is used. An OMT acts as a waveguide component that can separate the signal into $E_x$ and $E_y$. Following this both polarisations have the same receiver chains, denoted in \cref{fig:chap2RadioBlockDiagrm} by the dashed arrows. The signal is then amplified using a low noise amplifier (LNA) and put through a bandpass filter which isolates the desired part of the radio band, isolating out-of-band interference. Multiple filters can be used to filter bright sources such as the FM radio band or other sources of radio frequency interference (RFI). \\
 
-A local oscillator generates a stable then mixes the signal with the original input changing the frequency of the signal, this is done to make the signal easier to process. For example, if processing a 1400~MHz sample the setup would need ADC's to match the frequency which is expensive from a processing point of view, so the signal is usually mixed to lower frequencies. The Intermediate Frequency Amplifier (IF Amp) is then used to further amplify the signal, providing additional gain to the downconverted signal to match the dynamic range inputted into the analog to digital converter (ADC). It's easier to do additional amplification here as the noise mitigation isn't as necessary \citep{warnick_generalized_2024}. The signal is then converted from an analog signal to digital time series. \\ 
+A local oscillator generates a stable then mixes the signal with the original input changing the frequency of the signal, this is done to make the signal easier to process. For example, if processing a 1400~MHz sample the setup would need analog to digital converter (ADC)'s to match the frequency which is expensive from a processing point of view, so the signal is usually mixed to lower frequencies. The Intermediate Frequency Amplifier (IF Amp) is then used to further amplify the signal, providing additional gain to the downconverted signal to match the dynamic range inputted into the ADC. It's easier to do additional amplification here as the noise mitigation isn't as necessary \citep{warnick_generalized_2024}. The signal is then converted from an analog signal to digital time series. \\ 
 It's important to note that the system just described is not a generalised signal path for a radio telescope, this is a setup that would be similar to those found in a single dish system. There are many bespoke systems specific to different observing requirements. For example with the rise in RFI across the radio spectrum there is now the implementation of real-time RFI excision as part of the signal path. 
 
 \begin{figure}[h]
@@ -273,13 +273,71 @@ Polyphase\\Filterbank
 
 \subsection{Signal Processing}
 
-Following the digitization of the signal the next step is to carry out signal processing to turn the data into a science useable product. This requires the the conversion of the voltage time series to be converted into `channelized'. This is carried out by conducting a discrete Fourier-transform (DFT). This is commonly done in radio astronomy by using a Polyphase Filterbanking (PFB). PFB's has become the technical standard in radio astronomy due to its spectral performance and computational efficiency. In essence the PFB is a fancier Fourier Transform. \\ 
+The next step in the signal path is to carry out signal processing. This is the final step before turning the data into a science useable product. This requires the conversion of the voltage time series from an analog signal to a digital one. The digital signal is then `channelized' into frequency bins for each time sample. This is carried out by conducting a discrete Fourier-transform (DFT). This is commonly done in radio astronomy by using a Polyphase Filterbanking (PFB). PFB's has become the technical standard in radio astronomy due to its spectral performance and computational efficiency. For a comprehensive review of signal processing and polyphase filterbanking in the context of radio astronomy please see \citet[chap. 4,][]{WilsonToolsofRadioastron} and \cite{price_spectrometers_2018}
 
-Following the digitization the discrete\footnote{Here square brackets delineate discrete time signals, and round brackets are continuous. } sampled voltage stream $x[n]$
+\subsubsection{Digitization}
+
+Digitization, or digital sampling is the process in converting an analog signal into a digital signal. This is done with an ADC, which samples the incoming voltage at regular intervals. The two main factors of an ADC that are important to a radio astronomer is the sampling rate and the bit rate. \\ 
+To conserve all the information from the voltages the Nyquist crieterion must be met. This states that sample rate of the ADC must meet twice the bandwidth, failure to meet this will result in aliasing of the signal. \\ 
+In addition to the sample rate the ADC also needs to quantize the amplitude of the incoming signal. Which each amplitude measured by a number of bits, such that the measured amplitude levels are $N_{\text{levels}} = 2^{n_\text{bits}}$. An important point to consider is that the difference between the true analogue voltage and the nearest digital level introduces quantisation noise. Increasing the number of bits reduces this noise and increases the dynamic range of the digitised signal, with a theoretical limit of $\text{DR} \simeq 6.02 \ n_{\text{nbits}}$. In the context of a radio telescope, the received signals are typically noise dominated and approximately Gaussian distributed. Consequently, relatively low bit depths can be used without a substantial loss in sensitivity. For example, 2-bit quantisation retains approximately 88\% of the sensitivity of an ideal unquantised system, while 4-bit quantisation retains approximately 99\%. The digitised voltage stream from the ADC forms the input to the rest of the digital signal-processing pipelin. 
+
+
+\subsubsection{Polyphase Filterbanks}
+
+Following the digitization the discrete\footnote{Here square brackets delineate discrete time signals, and round brackets are continuous. } sampled voltage stream $x[n]$ is channelized into a set of frequency bins, the most basic form of this is the Discrete Fourier Transform (DFT), 
+
+\begin{equation}
+    X[k] = \sum_{N-1}^{n=0} x[n] \cdot e^{-2 \pi i n \frac{k}{N}}.
+\end{equation}
+
+Here $N$ is the transform length and $k$ denotes the frequency channel. The power spectrum is given by $|X[k]|^2$. However, because the DFT is evaluated over a given window, each frequency bin will exhibit a sinc-shaped frequency response, which leads to spectral leakage between the channels. The PFB technique combines a polyphase filter structure with a fast Fourier transform (FFT), where the filtering stage improves the frequency response of the FFT channels and reduces spectral leakage between neighbouring frequency bins. The input voltage sequence $x[n]$ is first decomposed into $P$ separate phases, known as polyphase branches which can be expressed as,
+
+\begin{equation}
+    x_p[n]= x[nP+p]
+\end{equation}
+
+Where $p$ is the given branch, and each branch contains the $P$th sample of the original sequence. These branches are filtered using, 
+
+\begin{equation}
+    y_p [n] = \sum_{M - 1}^{m = 0} h_p [m] x_p [n-m]
+\end{equation}
+
+here $h_p[m]$ represents the filter coefficients applied to the $p$th branch and $M$ is the number of filter taps. This filtering stage weights the input samples to improve the frequency response of each channel and suppress sidelobes that would otherwise contribute to spectral leakage. The filtered branches are then combined through an FFT,
+
+\begin{equation}
+    Y[k,n] = \sum_{P - 1}^{p = 0} y_p [n] \cdot e^{-2 \pi i p \frac{k}{P}}. 
+\end{equation}
+
+where $k$ denotes the output frequncy channel. The FFT separates the signal into $P$ narrow frequency channels, each corresponding to a different portion of the observing bandwidth. The resulting PFB output provides a channelised representation of the signal with improved channel isolation and reduced spectral leakage compared to a standard FFT. The power spectrum is obtained from the squared magnitude of the channelised voltages, similar to the DFT given as $|Y[k]|^2$. 
+
+Unlike a standard FFT, which performs an FFT on a single block of $P$ samples, the PFB combines information from $M$ consecutive FFT frames before the transform is applied. This additional filtering suppresses the sidelobes of the FFT channel response, reducing spectral leakage and improving channel isolation. 
+
+So for example if one considers a telescope that observes from $110-190$ MHz. If a PFB is applied with $P = 2^{12}$, the voltage stream will be channelised 4096 channels applied. Each channel corresponding to $\sim 0.02$ MHz, with the power of each channel equal to $|Y[k]|^2$, which produces a spectrum for a single time sample, $t_0$. The complex voltages $Y[k,n]$ therefore represent the signal power as a function of frequency channel $k$ and time sample $n$. Arranging these measurements in time order forms time-frequency array where each time sample and channel has an associated power. Data that is generated and saved in this format is known as a filterbank.
+
+%TODO: possibly a good place to put a section on dedispersion 
 
 \section{Interferometry}
 
+After discussing the setup of a photon to filterbank for a single dish telescope the idea can be scaled up. So far the resolution of the radio telescope on the sky has been neglected. In reality, the aperture of the telescope imposes a diffraction limit on the angular separation. The diffraction pattern of a circular aperture and defines the angular resolution limit of an optical telescope according to the Rayleigh criterion. Using the small angle approximation $(\theta \ll 1 ~ \text{rad})$ the full width half max (FWHM) of a radio telescope can be approximated to, 
+
+\begin{equation}
+    \boxed{
+    \theta \sim \alpha \frac{\lambda}{D}. 
+    }
+\end{equation}
+
+Where $\lambda$ is the wavelength of the electromagnetic wave and $D$ is the diameter of the telescope's dish and $\theta$ is the 
+
 \section{Radiometer Equation}
+
+\subsection{LOFAR}
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=\linewidth]{chapter2/figures/Blank_map_of_Europe_cropped_LOFAR_colours.pdf}
+    \caption{A map of LOFAR array including the Dutch core and remote stations along with the international stations. The stations in Italy and Bulgaria are currently under construction at the time of writing.}
+    \label{fig:chap2lofarmap}
+\end{figure}
 
 \section{Observing Sites}
 

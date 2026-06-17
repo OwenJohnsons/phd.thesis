@@ -19,7 +19,7 @@ This chapter discusses some fundamentals of radio telescopes and the processes t
     \label{fig:chpt2radiowindow}
 \end{figure}
 
-\section{From Photon to Filterbank}
+\section{From Photon to Filterbank} \label{sec:chap2photon2fil}
 
 Radio telescopes can often be seen as conceptually complex but share much common ground with contemporary optical telescopes. An antenna is often thought of as a `single pixel' in a charged couple device (CCD) with an array of antennas forming an array of pixels that can be used to observe the sky. There are also parallels to be drawn between the mirrors in optical telescope and the parabolic dishes seen on radio telescopes which will later be discussed. This section aims to provide enough theoretical context to understand how an incident photon on a radio telescope gets turned into science useable data products such as filterbanks. 
 
@@ -318,7 +318,7 @@ So for example if one considers a telescope that observes from $110-190$ MHz. If
 
 \section{Interferometry}
 
-After discussing the setup of a photon to filterbank for a single dish telescope the idea can be scaled up. So far the resolution of the radio telescope on the sky has been neglected. In reality, the aperture of the telescope imposes a diffraction limit on the angular separation. The diffraction pattern of a circular aperture and defines the angular resolution limit of an optical telescope according to the Rayleigh criterion. Using the small angle approximation $(\theta \ll 1 ~ \text{rad})$ the full width half max (FWHM) of a radio telescope can be approximated to, 
+After discussing the setup of a photon to filterbank for a single dish telescope the idea can be scaled up to interferometric arrays. So far the resolution of the radio telescope on the sky has been neglected.In reality, diffraction from the finite aperture produces a beam pattern on the sky that limits the smallest angular scales that can be resolved.  Using the small angle approximation $(\theta \ll 1 ~ \text{rad})$ the full width half max (FWHM) of a radio telescope the characteristic angular width of the beam $(\theta)$ scales as,
 
 \begin{equation}
     \boxed{
@@ -326,11 +326,244 @@ After discussing the setup of a photon to filterbank for a single dish telescope
     }
 \end{equation}
 
-Where $\lambda$ is the wavelength of the electromagnetic wave and $D$ is the diameter of the telescope's dish and $\theta$ is the 
+Where $\lambda$ is the wavelength of the electromagnetic wave and $D$ is the diameter of the telescope's dish. The field of view (FoV) of the telescope is $\theta/2$. Such that the FoV is, 
+
+\begin{equation}
+    \text{FoV} = \pi \left( \frac{\theta}{2} \right)^2 = \pi \left( \frac{\alpha D}{2 \lambda} \right). 
+\end{equation}
+
+These relations are challenges across all wavelengths, but this becomes even more evident at lower frequencies. For example the \textit{Hubble Space Telescope} has an angular resolution of 0.06 arc seconds at 600 nm, with a 2.4 m mirror. To match this resolution at 150 MHz ($\sim 2$ m) it would require a dish that is 8,400 km, which would cover over 10\% of the Earth's surface if it was a feasible engineering project. The largest steerable object on Earth is the 100m Green Bank Telescope in West Virginia, this achieves 7.4 arcminutes at 1.4 GHz (21 cm), for reference the full Moon is about 30 arcminutes. The largest single dish telescope is the Five-hundred-meter Aperture Spherical Telescope (FAST) located in Guizhou, southwestern China. FAST achieves 2.5 arcminutes at 1.4 GHz, however, it is a fixed dish, requiring the feed to move to point the telescope limiting the use of the full surface depending on where the feed points. GBT and FAST are at the limits of modern engineering, building larger single dishes would be too expensive and difficult to make structurally stable. This limitation doesn't help the astronomer who wants to view the sky at higher resolutions and lower frequencies. 
+
+\begin{figure}     
+\centering
+\tikzset{every picture/.style={line width=0.75pt}}
+
+\begin{tikzpicture}[x=0.75pt, y=0.75pt, yscale=-1.1, xscale=1]
+% Uncomment if required:
+% \path (0,543);
+
+% Straight Lines
+\draw [color={rgb,255:red,155; green,155; blue,155}, draw opacity=1]
+    (103,280.42) -- (187.94,367.47);
+
+% Curve Lines
+\draw (14.94,367.47) .. controls (22.19,409.27) and (54.31,433.13) .. (96.69,425.07);
+
+% Shape: Diagonal Stripe
+\draw (67.2,385.33) -- (68.47,392.64) -- (51.3,380.55) -- (58.61,379.28) -- cycle;
+
+% Straight Lines
+\draw (68.47,392.64) -- (73.91,426.15);
+\draw (51.3,380.55) -- (20.53,387.31);
+\draw (59.88,386.59) -- (56.48,391.85);
+
+% Curve Lines
+\draw (187.94,367.47) .. controls (195.19,409.27) and (227.31,433.13) .. (269.69,425.07);
+
+% Shape: Diagonal Stripe
+\draw (240.2,385.33) -- (241.47,392.64) -- (224.3,380.55) -- (231.61,379.28) -- cycle;
+
+% Straight Lines
+\draw (241.47,392.64) -- (246.91,426.15);
+\draw (224.3,380.55) -- (193.53,387.31);
+\draw (232.88,386.59) -- (229.48,391.85);
+
+\draw (45,416.82) -- (45,480.03);
+
+% Rounded Rect
+\draw (166,473.2)
+    .. controls (166,470.88) and (167.88,469) .. (170.2,469)
+    -- (184.8,469)
+    .. controls (187.12,469) and (189,470.88) .. (189,473.2)
+    -- (189,485.8)
+    .. controls (189,488.12) and (187.12,490) .. (184.8,490)
+    -- (170.2,490)
+    .. controls (167.88,490) and (166,488.12) .. (166,485.8)
+    -- cycle;
+
+\draw (222,419) -- (222,480);
+
+% Flowchart: Summing Junction
+\draw (119,512)
+    .. controls (119,506.48) and (123.48,502) .. (129,502)
+    .. controls (134.52,502) and (139,506.48) .. (139,512)
+    .. controls (139,517.52) and (134.52,522) .. (129,522)
+    .. controls (123.48,522) and (119,517.52) .. (119,512)
+    -- cycle;
+\draw (121.93,504.93) -- (136.07,519.07);
+\draw (136.07,504.93) -- (121.93,519.07);
+
+\draw (189,480) -- (222,480);
+\draw (45,480.03) -- (166,480.03);
+\draw (129,480) -- (129,502);
+
+\draw (129,522) -- (129,532.95);
+\draw [shift={(129,535.95)}, rotate=270]
+    [fill={rgb,255:red,0; green,0; blue,0}]
+    [line width=0.08]
+    [draw opacity=0]
+    (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle;
+
+% Dashed Lines
+\draw [dash pattern={on 4.5pt off 4.5pt}]
+    (14.94,367.47) -- (251,135.45);
+
+\draw [dash pattern={on 4.5pt off 4.5pt}]
+    (187.94,367.47) -- (337,218.41);
+
+% Shape: Parabola
+\draw (247.25,137.02)
+    .. controls (273.67,167.07) and (302.76,194.28) .. (334.5,218.64);
+
+% Grey arrow/angle lines
+\draw [color={rgb,255:red,155; green,155; blue,155}, draw opacity=1]
+    (96.53,287.31) -- (102.52,293.3);
+
+\draw [color={rgb,255:red,155; green,155; blue,155}, draw opacity=1]
+    (109,286.4) -- (102.52,293.3);
+
+% Baseline double arrow
+\draw (7,360.4) -- (95,273.4);
+
+\draw [shift={(95,273.4)}, rotate=135.33]
+    [color={rgb,255:red,0; green,0; blue,0}]
+    [line width=0.75]
+    (0,5.59) -- (0,-5.59)
+    (10.93,-4.9)
+    .. controls (6.95,-2.3) and (3.31,-0.67) .. (0,0)
+    .. controls (3.31,0.67) and (6.95,2.3) .. (10.93,4.9);
+
+\draw [shift={(7,360.4)}, rotate=315.33]
+    [color={rgb,255:red,0; green,0; blue,0}]
+    [line width=0.75]
+    (0,5.59) -- (0,-5.59)
+    (10.93,-3.29)
+    .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0)
+    .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29);
+
+% Grey vertical and angle arc
+\draw [color={rgb,255:red,155; green,155; blue,155}, draw opacity=1]
+    (187.94,318.78) -- (187.94,367.47);
+
+\draw [color={rgb,255:red,155; green,155; blue,155}, draw opacity=1]
+    (209,346.17) .. controls (205.44,336.55) and (198.55,332.12) .. (188.33,332.88);
+
+% Star
+\draw [fill={rgb,255:red,0; green,0; blue,0}, fill opacity=1]
+    (334.5,120) -- (337.29,125.36) -- (343.54,126.22)
+    -- (339.02,130.39) -- (340.08,136.28)
+    -- (334.5,133.5) -- (328.92,136.28)
+    -- (329.98,130.39) -- (325.46,126.22)
+    -- (331.71,125.36) -- cycle;
+
+% Blue baseline
+\draw [color={rgb,255:red,74; green,144; blue,226}, draw opacity=1]
+    (14.94,367.47) -- (187.94,367.47);
+
+% Text Nodes
+\draw (168.79,470.64) node[
+    anchor=north west,
+    inner sep=0.75pt,
+    xshift=1pt,
+    yshift=-1.8pt
+] {$\delta t$};
+
+\draw (29.75,307.41) node[
+    anchor=north west,
+    inner sep=0.75pt,
+    rotate=44.39
+] {$\delta l$};
+
+\draw (190.33,339.28) node[
+    anchor=north west,
+    inner sep=0.75pt,
+    font=\small,
+    color={rgb,255:red,155; green,155; blue,155},
+    opacity=1
+] {$\theta$};
+
+\draw (146.59,213.1) node[
+    anchor=north west,
+    inner sep=0.75pt,
+    font=\small,
+    rotate=44.72,
+    align=left
+] {Radio Wave};
+
+\draw (228.43,302.77) node[
+    anchor=north west,
+    inner sep=0.75pt,
+    font=\small,
+    rotate=45.95,
+    align=left
+] {Radio Wave};
+
+\draw (275.55,155.07) node[
+    anchor=north west,
+    inner sep=0.75pt,
+    font=\tiny,
+    rotate=-46,
+    align=center
+] {Far Field};
+
+\draw (95,348.4) node[
+    anchor=north west,
+    inner sep=0.75pt
+] {$\textcolor[rgb]{0.29,0.56,0.89}{B}$};
+
+\end{tikzpicture}
+\caption{A two dish (element) interferometry setup. Here the $\times$ represents the correlator}
+\label{fig:chap2interferometryexample}
+\end{figure}
+
+The way around this is through use of interferometry. Radio interferometry works on the basis of using the interference patterns of superimposed waves to extract information. In practice this uses many elements (antennas) that are spatially separated to synthesize larger aperture. First notabley used in radio astronomy by \cite{Bolton_Nature_1948} where an antenna was placed at a cliff face and used the reflections of the radio waves of the sea to create an interference pattern to observe Cygnus. With the development of both the field and modern computing, arrays of telescopes with 1,000's of elements are commonplace with next generation facilities like the Square Kilometer Array (SKA) where this number exceed 100,000. 
+
+Starting off with the most example, a two element interferometer which is shown in \Cref{fig:chap2interferometryexample}. The two elements are positioned at $\textbf{r}_1$ and $\textbf{r}_2$ giving a baseline between them as, $\textbf{B} = \textbf{r}_2 - \textbf{r}_1$. Any far field radio waves  propagating towards the elements are given the unit vector, $\hat p$. The difference in path length between the two elements is expressed as the dot product, 
+
+\begin{equation}
+    \delta l = \textbf{B} \cdot \hat p = \textbf{B} \sin \theta.
+\end{equation}
+
+The geometric time delay between the two elements is the difference the delay in sampling the wave at two different spatial locations and is expressed as,
+
+\begin{equation}
+    \delta t = \frac{\delta l}{c}. 
+\end{equation}
+
+As discussed in \cref{sec:chap2photon2fil} the plane wave equation was introduced and defined, see \cref{eq:wave_equation}. If you evaluate this field at the two different elements positioned,$\mathbf{r}_1$ and $\mathbf{r}_2$. The received electric fields are then, 
+
+
+\begin{align}
+\mathbf{E}_1(t) &= \mathbf{E}(t,\mathbf{r}_1)
+= \mathbf{E}_0 \exp\!\left[2\pi i\left(ft-\mathbf{k}\cdot\mathbf{r}_1\right)\right], \\
+\mathbf{E}_2(t) &= \mathbf{E}(t,\mathbf{r}_2)
+= \mathbf{E}_0 \exp\!\left[2\pi i\left(ft-\mathbf{k}\cdot\mathbf{r}_2\right)\right].
+\end{align}
+
+However as established these two measurements of the plane wave will be offset by different path lengths, so each waves will have a different phase, $\Delta \phi = \mathbf{k}\cdot(\mathbf{r}_2 - \mathbf{r}_1)$. Given that $|\textbf{k}| = 2 \pi / \lambda$. The phase difference can then be expressed as, 
+
+\begin{equation}
+    \Delta \phi = \frac{2 \pi}{\lambda} \delta l = 2 \pi f \delta t. 
+\end{equation}
+
+Phase differences cannot\footnote{This is not entirely true, phase can be measured, but astronomical radio signals are stochastic, noise-like processes, making only the relative phase recovered through cross-correlation physically meaningful.} The instantaneous phase of the electric field is not directly observable. Instead, the relative phase information is recovered statistically by cross-correlating the voltage streams measured at each antenna. By applying a relative delay and averaging over time, the degree of similarity between the two signals can be determined, 
+
+\begin{equation}
+    R_{12} = \langle  V_1 (t) V^*_2 (t - \tau) \rangle. 
+\end{equation}
+
+$R_{12}$ is the cross-correlation between antennas 1 and 2. $V_1$ is relative complex voltage stream of antenna 1 at $t$ and $V^*_2 (t - \tau)$ is the complex conjugate of antenna 2's voltage stream at a shifted time, $\tau$. The cross-correlation reaches a maximum when the applied delay matches the geometric delay such that $\tau = \tau_g$. This result is the measured quantity used for interferometric observations referred to as a visibility and can be generally expressed for an antenna pair, $i$ and $j$ as, 
+
+\begin{equation}
+    \boxed{ R_{ij} = \langle  V_i (t) V^*_j (t - \tau) \rangle}.
+\end{equation}
+
 
 \section{Radiometer Equation}
 
-\subsection{LOFAR}
+
+
+\section{LOFAR}
 
 \begin{figure}[t]
     \centering
@@ -339,6 +572,8 @@ Where $\lambda$ is the wavelength of the electromagnetic wave and $D$ is the dia
     \label{fig:chap2lofarmap}
 \end{figure}
 
-\section{Observing Sites}
+\subsection{The Irish LOFAR Station}
+
+\section{Other Observing Sites}
 
 \section{Software}

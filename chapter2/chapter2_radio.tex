@@ -272,6 +272,7 @@ Polyphase\\Filterbank
 
 
 \subsection{Signal Processing}
+\label{sec:chap2signalprocessing}
 
 The next step in the signal path is to carry out signal processing. This is the final step before turning the data into a science useable product. This requires the conversion of the voltage time series from an analog signal to a digital one. The digital signal is then `channelized' into frequency bins for each time sample. This is carried out by conducting a discrete Fourier-transform (DFT). This is commonly done in radio astronomy by using a Polyphase Filterbanking (PFB). PFB's has become the technical standard in radio astronomy due to its spectral performance and computational efficiency. For a comprehensive review of signal processing and polyphase filterbanking in the context of radio astronomy please see \citet[chap. 4,][]{WilsonToolsofRadioastron} and \cite{price_spectrometers_2018}
 
@@ -518,6 +519,8 @@ These relations are challenges across all wavelengths, but this becomes even mor
 
 The way around this is through use of interferometry. Radio interferometry works on the basis of using the interference patterns of superimposed waves to extract information. In practice this uses many elements (antennas) that are spatially separated to synthesize larger aperture. First notabley used in radio astronomy by \cite{Bolton_Nature_1948} where an antenna was placed at a cliff face and used the reflections of the radio waves of the sea to create an interference pattern to observe Cygnus. With the development of both the field and modern computing, arrays of telescopes with 1,000's of elements are commonplace with next generation facilities like the Square Kilometer Array (SKA) where this number exceed 100,000. 
 
+\subsection{Two Element Interferometer}
+
 Starting off with the most example, a two element interferometer which is shown in \Cref{fig:chap2interferometryexample}. The two elements are positioned at $\textbf{r}_1$ and $\textbf{r}_2$ giving a baseline between them as, $\textbf{B} = \textbf{r}_2 - \textbf{r}_1$. Any far field radio waves  propagating towards the elements are given the unit vector, $\hat p$. The difference in path length between the two elements is expressed as the dot product, 
 
 \begin{equation}
@@ -555,15 +558,127 @@ Phase differences cannot\footnote{This is not entirely true, phase can be measur
 $R_{12}$ is the cross-correlation between antennas 1 and 2. $V_1$ is relative complex voltage stream of antenna 1 at $t$ and $V^*_2 (t - \tau)$ is the complex conjugate of antenna 2's voltage stream at a shifted time, $\tau$. The cross-correlation reaches a maximum when the applied delay matches the geometric delay such that $\tau = \tau_g$. This result is the measured quantity used for interferometric observations referred to as a visibility and can be generally expressed for an antenna pair, $i$ and $j$ as, 
 
 \begin{equation}
-    \boxed{ R_{ij} = \langle  V_i (t) V^*_j (t - \tau) \rangle}.
+    \boxed{V_{ij} = R_{ij} = \langle  V_i (t) V^*_j (t - \tau) \rangle}.
+\end{equation}
+
+The measured value from each antenna pair depends on both the baseline and orientation with respect to the observed source. For dealing with more than two pairs of antennas its useful to introduce a co-ordinate system, fixed to the source direction such that, 
+
+\begin{equation}
+    (u, v, w) = \frac{\textbf{B}_{ij}}{\lambda}. 
+\end{equation}
+
+Where $u$ and $v$ make up a plane that is orthogonal to the source, $\lambda$ is the wavelength of emission, with $w$ points directly towards the phase centre (line of sight), the phase centre is simply the direction on the sky for which the interferometer is defined to have zero geometric delay. This is known as the $uv$-plane and each baseline samples a point in this plane. \\ 
+
+Now the Cittert-Zernike theorem is introduced. In its simplest form, it states that the complex visibility measured by a baseline is a Fourier component of the sky brightness $(I)$, 
+
+\begin{equation}
+    V_{ij} = V (u_{ij}, v_{ij}) = \int \int I (l,m) \exp\left[ -2 \pi i (u_{ij}l + v_{ij}m) \right] ~ dl~dm.
+    \label{eq:chap2CittertZernike}
+\end{equation}
+
+Where $I$ is the sky brightness in the image domain, $l$ and $m$ are cosine directions to the point on the sky. Now its been established how to measure voltages and correlate them between pairs of antennas and transform them into the image domain. By measuring visibilities for many combinations of antennas, a 2-D sampled plane in the Fourier space is formed, the inverse transform of this plane reconstructs an image of sky brightness. This forms the basis of what is seen in \cref{fig:chap2MeerKatGCimage}. 
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=\linewidth]{chapter2/figures/MeerKAT_Galactic_Centre_1284MHz-StokesI_Cropped.png}
+    \caption{Adapted image from \cite{heywood_128_2022} a subsection of mosaic of the Galactic plane using the MeerKAT telescope which has 64 antennas spread over up to 8 km baselines.}
+    \label{fig:chap2MeerKatGCimage}
+\end{figure}
+
+\subsection{Aperture Synthesis}
+
+As discussed in the previous section, each baseline can sample a part of the $uv$-plane at a given time giving a unique visibility measurement. Returning to the analogy of each element acting as a `pixel', if add unique baselines the $uv$ plane can be `filled out'. Increasing the number of pixels in a digital image, increasing the number of sampled points in the $uv$-plane improves the fidelity with which the sky brightness distribution can be reconstructed.
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=\linewidth]{chapter2/figures/uv_plane_example.pdf}
+    \caption{Example of a 52 antenna layout (black dots) in the shape of a Triskelion (blue dots). With increasing $uv$-plane coverage shown, the bottom row corresponds to the reconstructed image produced. The original image of  galaxy cluster Abell 2255 is shown on the bottom left taken from \cite{botteon_magnetic_2022}.}
+    \label{fig:chap2uvplaneexample}
+\end{figure}
+
+To better fill out the $uv$-plane the Earth's rotation is used to cover more of the plane, this is shown in \cref{fig:chap2uvplaneexample}, as the Earth rotates the baselines fill in more of the $uv$-plane. In this example a Triskelion pattern is used, with 52 antennas, which can have 1326 unique baselines. Antenna patterns are chosen depending on the target, required baseline length and how much of the $uv$-plane a specific target will sweep out. As illustrated in \cref{fig:chap2uvplaneexample} the longer the Earth is allowed to rotate the more the $uv$-plane is filled. \\ 
+
+The coverage of the $uv$-plane determines the effective point spread function of the interferometer, more specifically the distribution of the visibilities. This is commonly referred to as a synthesized beam, it can be similarly thought of as a diffraction pattern of a single element telescope. The beam itself describes the response on interferometer to a point source. The angular resolution of the synthesised beam is approximately, 
+
+\begin{equation}
+\theta_{\rm syn} \approx \frac{\lambda}{B_{\text{max}}}.
+\end{equation}
+
+Where $B_M$ is the maximum projected baseline of the array. In reality the $uv$-plane is never fully sampled, the Cittert-Zernike relation (eq. \ref{eq:chap2CittertZernike}) assumes you know the visibility function everywhere but visibilities are only measured at a finite number of locations corresponding to actual baselines.  Since the Fourier transform of an incomplete sampling pattern is not a delta function, the response of the interferometer to a point source contains additional structure surrounding the main lobe caused by Fourier ringing. These features are known as sidelobes, due to their presence the images obtained from the Fourier space are known as dirty images, corresponding to the true sky brightness distribution convolved with the synthesized `dirty beam'. There are many methods to make this dirty beam a more accurate estimate of true sky brightness, for examples see \citet[pp. 202-220,]{WilsonToolsofRadioastron}. 
+
+\subsection{Aperture Arrays \& Beamforming}
+
+The work in this thesis is mostly based on the use of dynamic spectra as described in \cref{sec:chap2signalprocessing}. While aperture synthesis is mainly used for reconstructing images, the same techniques can be used to increase the sensitivity of a telescope looking at a single point. Rather than Fourier transforming the measured visibilities to form an image, the signals received by each element may be delayed and combined coherently or incoherently, this process is known as beamforming. \\ 
+
+Coherent beamforming combines the voltages from each antenna and retains both the phase and amplitude information. Whereas, incoherent beamforming sums together only the amplitudes of the voltages. Coherent beamforming is usually the ideal scenario as sensitivity scales with the number of antennas, $n$. Preserving the relative phase information between antennas allows the array to act as a single aperture, where diameter is set by the physical extent of the array. The beam that is formed on the sky is narrower in this case as the array is acting as a single aperture, with the implementation of geometric delays allow the telescope to be `steered'.  
+Incoherent beamforming combines the detected powers from each element, preserving a much larger field of view at the expense of sensitivity, which in this case scales as $\sqrt{n}$. The choice between both is ultimately depending on the science case, incoherent beamforming trades sensitivity for field of view and vica versa. For example an all sky or RFI monitoring would incoherent beamforming to monitor as much of the sky instantaneously whereas a targeted pulsar observation would use coherent beamforming to maximize sensitivity. 
+
+Following beamforming, the resulting voltage stream as discussed in \cref{sec:chap2signalprocessing}. Dynamic spectra produced from beamforming form the primary data product used throughout this thesis and are the basis for studying pulsars, fast radio bursts, and other transient radio phenomena.
+
+\section{Radiometer Equation}
+
+The final core concept discussed is the radiometer equation. The radiometer equation at its core is an application of the Central Limit Theorem, it describes the uncertainty in measuring a noise temperature $(\sigma_T)$, with the uncertainty decreasing as function of the number of samples measured, 
+
+\begin{equation}
+    \sigma_T = \frac{T_{\text{sys}}}{\sqrt{n_p t_{\text{obs}} \Delta f}}. 
+\end{equation}
+
+The flux density $S$ (in Jy) received by a radio telescope is related to the measured system temperature by the telescope gain, $G$. As $S = T/G$ where $G$ is expressed a function effective area, $G = A_{\text{eff}}/{2k}$. Thus the radiometer equation can be re-written in terms of flux density. 
+
+\begin{equation}
+    \sigma_S = \frac{\sigma_T}{G} = \frac{T_{\text{sys}}}{G \sqrt{n_p t_{\text{obs}} \Delta f}}
+\end{equation}
+
+This represents the rms uncertainty in flux density due to system noise. Setting that a source should be detectable to a given S/N value. $ S_{\min} = \text{S/N}_{\min} \cdot \sigma_S$ and substituting $\sigma_S$ gives, 
+
+\begin{equation}
+    S_{\min} = \frac{\text{S/N}_{\min} \cdot T_{\text{sys}}}{G \sqrt{n_p t_{\text{obs}} \Delta f}}
 \end{equation}
 
 
-\section{Radiometer Equation}
+Now the duty cycle of a box function from a pulsar needs to be accounted for which is given by,
+
+\begin{equation}
+    \delta = \frac{W}{P}
+\end{equation}
+
+
+Because the pulse is only present for a fraction \( \delta \) of the time, the effective signal-to-noise ratio is reduced. The correction factor is:
+
+\begin{equation}
+    \sqrt{\frac{\delta}{1 - \delta}} = \sqrt{\frac{W}{P - W}}
+\end{equation}
+
+which modifies the equation:
+
+\begin{equation}
+    S_{\min} = \beta \frac{\text{S/N}_{\min} T_{\text{sys}}}{G \sqrt{n_p t_{\text{obs}} \Delta f}} \sqrt{\frac{W}{P - W}}
+\end{equation}
+
+here \( \beta \) is added as a digitization loss factor (typically \( \beta \approx 1.16 \) for 3-level sampling according to \cite{pulsar_handbook}).
+
+Since system temperature, gain, and bandwidth vary across frequency, we generalize this equation by summing over all frequency bins in a the wideband receiver and adding the frequency dependency where necessary:
+
+\begin{equation}
+    G(f) = 
+    \frac{A_{\text{eff}}(f)}{2k} = \frac{\eta (f) \cdot A_{phys}}{2k}
+\end{equation}
+
+\begin{equation}
+\boxed{
+S_{\min} (f, l, b) = \frac{1}{B_{\text{total}}} \sum_{f} \left(  \frac{\left[ T_{\text{sys}}(l,b) + T_{\text{int} }(f) \right] \cdot 2 k}{A_{\text {eff} }(f)} \cdot \beta  \quad  \cdot \frac{\text{S/N}_{\text{min}}}{\sqrt{n_p t_{\text{obs}} B_{\text{channel}}}} \sqrt{\frac{W}{P - W}} \right) \Delta f}
+\end{equation}
+
 
 
 
 \section{LOFAR}
+
+A significant amount of the work is carried out in this thesis using part of the LOw Frequency ARay \citep[LOFAR;][]{van_haarlem_lofar_2013}.  LOFAR is an aperture array interferometer with antennas all across Europe shown in \cref{fig:chap2lofarmap}, when the array is operating at full capacity it can rival Hubble's subarcsecond resolution. At the time of writing, there is currently no telescope in the world that can rival LOFAR at its operating frequencies. 
+
+LOFAR is made up of 52 stations across Europe, with two more currently under construction in Italy and Bulgaria with further construction planned for the future. Each `station' is comprised of two sets of antennas, the Low Band Antennas (LBAs) which operate from 10-90~MHz and the High Band Antennas (HBAs), which operate at 110-190~MHz.  
+
+The center of LOFAR is based near Exloo in the Netherlands on what is known as the `superterp'. The superterp consists of 6 `core' stations with a max baseline of 240~m, in close proximity to the superterp there is further 24 stations with a max baseline of 3.5~km. There are also 16 remote Dutch stations placed up to 90~km away in the northeastern region of the Netherlands. To complete the arrat there 12 international stations based around Europe with the longest current baseline being Birr to Łazy at $\sim 1890~\textrm{km}$, this baseline with be extended to $\sim 2660~\textrm{km}$ with the addition of the Bulgarian station in Rozhen. 
 
 \begin{figure}[t]
     \centering
@@ -572,8 +687,193 @@ $R_{12}$ is the cross-correlation between antennas 1 and 2. $V_1$ is relative co
     \label{fig:chap2lofarmap}
 \end{figure}
 
+The LBAs (see \cref{fig:chap2lofarantennas}) are two inverted dipoles that are 1.38~m in length, each has a rebar ground plane that acts as a reflector for incoming radio waves. The reflected radio waves are then sampled by the pair of antennas which is connected to an LNA in a moulded head on top of a pvc pipe. Each polarisation ($x$ and $y$ voltages) are ouputted through seperate coxial cable, with power supplied to the antenna through the $y$ coaxial cable.  The core stations have 48 LBAs, whereas the international station has 96. 
+
+The HBAs (see \cref{fig:chap2lofarantennas}) cover the higher end of LOFARs spectral response. The HBAs can nominally operate from 110-250~MHz, but due to the large amount of RFI this is limited to 190~MHz. The HBAs are made up of sets of bowtie antennas each set of four forming a cross shape. In each `tile' there are 16 sets of bowties in a $4 \times 4$ grid, each of the bowtie elements are connected to a front end (FE) board which outputs to a $x$ and $y$ coaxial cables. The tiles are placed on a wire mesh ground plane. The core stations are made up of 48 tiles and the international stations have 96. 
+
+
+\begin{figure}[h]
+    
+\centering
+\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+
+\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+%uncomment if require: \path (0,300); %set diagram left start at 0, and has height of 300
+
+%Shape: Polygon [id:ds9667603912202642] 
+\draw  [line width=1.5]  (235.78,175.8) -- (301.78,239.8) -- (106.78,259.8) -- (40.78,196.8) -- (197.22,179.95) -- cycle ;
+%Shape: Can [id:dp8038673451096322] 
+\draw  [fill={rgb, 255:red, 155; green, 155; blue, 155 }  ,fill opacity=1 ] (174.78,40.27) -- (174.78,216.53) .. controls (174.78,217.34) and (172.59,218) .. (169.89,218) .. controls (167.19,218) and (165,217.34) .. (165,216.53) -- (165,40.27) .. controls (165,39.46) and (167.19,38.8) .. (169.89,38.8) .. controls (172.59,38.8) and (174.78,39.46) .. (174.78,40.27) .. controls (174.78,41.08) and (172.59,41.74) .. (169.89,41.74) .. controls (167.19,41.74) and (165,41.08) .. (165,40.27) ;
+%Shape: Ellipse [id:dp9154033269398801] 
+\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (156.5,38.8) .. controls (156.5,37) and (162.5,35.53) .. (169.89,35.53) .. controls (177.29,35.53) and (183.28,37) .. (183.28,38.8) .. controls (183.28,40.6) and (177.29,42.07) .. (169.89,42.07) .. controls (162.5,42.07) and (156.5,40.6) .. (156.5,38.8) -- cycle ;
+%Straight Lines [id:da2691224723503536] 
+\draw [line width=2.25]    (165,40.27) -- (120.78,240.78) ;
+%Straight Lines [id:da4089120800805459] 
+\draw [line width=2.25]    (183.28,38.8) -- (269.78,230.78) ;
+%Straight Lines [id:da5172356109584078] 
+\draw [line width=2.25]    (183.28,38.8) -- (231.78,186.78) ;
+%Straight Lines [id:da08730288943744469] 
+\draw [line width=2.25]    (156.5,38.8) -- (68.78,204.78) ;
+%Shape: Path Data [id:dp5824079532066541] 
+\draw  [fill={rgb, 255:red, 155; green, 155; blue, 155 }  ,fill opacity=1 ][line width=1.5]  (400.24,129.4) -- (398.78,28.67) -- (467.4,57.87) -- (400.24,129.4) -- cycle (455.72,60.79) -- (406.08,41.81) -- (406.08,110.42) -- (455.72,60.79) -- cycle ;
+%Shape: Rectangle [id:dp32176134863589656] 
+\draw   (431.62,179.19) -- (527.25,179.2) -- (527.23,266.78) -- (431.6,266.77) -- cycle ;
+%Straight Lines [id:da2715064010101591] 
+\draw    (503.78,181.78) -- (523,201) ;
+%Straight Lines [id:da07723870951930412] 
+\draw    (523.23,181.55) -- (503.71,201.07) ;
+
+%Straight Lines [id:da33630427417339603] 
+\draw    (480.78,181.78) -- (500,201) ;
+%Straight Lines [id:da3063165912499477] 
+\draw    (500.23,181.55) -- (480.71,201.07) ;
+
+%Straight Lines [id:da03596563184778989] 
+\draw    (457.78,181.78) -- (477,201) ;
+%Straight Lines [id:da5439311820205701] 
+\draw    (477.23,181.55) -- (457.71,201.07) ;
+
+%Straight Lines [id:da16350760933270791] 
+\draw    (434.78,181.78) -- (454,201) ;
+%Straight Lines [id:da682404797681058] 
+\draw    (454.23,181.55) -- (434.71,201.07) ;
+
+%Straight Lines [id:da447481654959916] 
+\draw    (503.78,202.78) -- (523,222) ;
+%Straight Lines [id:da41352831245813915] 
+\draw    (523.23,202.55) -- (503.71,222.07) ;
+
+%Straight Lines [id:da2651489889092036] 
+\draw    (480.78,202.78) -- (500,222) ;
+%Straight Lines [id:da49815012687128446] 
+\draw    (500.23,202.55) -- (480.71,222.07) ;
+
+%Straight Lines [id:da9169153430517435] 
+\draw    (457.78,202.78) -- (477,222) ;
+%Straight Lines [id:da6460960141484438] 
+\draw    (477.23,202.55) -- (457.71,222.07) ;
+
+%Straight Lines [id:da15400950077426367] 
+\draw    (434.78,202.78) -- (454,222) ;
+%Straight Lines [id:da33327081289079485] 
+\draw    (454.23,202.55) -- (434.71,222.07) ;
+
+%Straight Lines [id:da5442256591963639] 
+\draw    (504.78,223.78) -- (524,243) ;
+%Straight Lines [id:da8795428537952784] 
+\draw    (524.23,223.55) -- (504.71,243.07) ;
+
+%Straight Lines [id:da3246733405412726] 
+\draw    (481.78,223.78) -- (501,243) ;
+%Straight Lines [id:da5582001659541391] 
+\draw    (501.23,223.55) -- (481.71,243.07) ;
+
+%Straight Lines [id:da4214450779649995] 
+\draw    (458.78,223.78) -- (478,243) ;
+%Straight Lines [id:da8365444525710143] 
+\draw    (478.23,223.55) -- (458.71,243.07) ;
+
+%Straight Lines [id:da6025938357274921] 
+\draw    (435.78,223.78) -- (455,243) ;
+%Straight Lines [id:da9674114922781517] 
+\draw    (455.23,223.55) -- (435.71,243.07) ;
+
+%Straight Lines [id:da7020445219656745] 
+\draw    (504.78,244.78) -- (524,264) ;
+%Straight Lines [id:da833604997891108] 
+\draw    (524.23,244.55) -- (504.71,264.07) ;
+
+%Straight Lines [id:da5719128543412642] 
+\draw    (481.78,244.78) -- (501,264) ;
+%Straight Lines [id:da23358206389940694] 
+\draw    (501.23,244.55) -- (481.71,264.07) ;
+
+%Straight Lines [id:da05979281741299336] 
+\draw    (458.78,244.78) -- (478,264) ;
+%Straight Lines [id:da8465841369773778] 
+\draw    (478.23,244.55) -- (458.71,264.07) ;
+
+%Straight Lines [id:da8686366853411628] 
+\draw    (435.78,244.78) -- (455,264) ;
+%Straight Lines [id:da2359409747372615] 
+\draw    (455.23,244.55) -- (435.71,264.07) ;
+
+
+%Curve Lines [id:da38837711997740765] 
+\draw    (544.71,133.78) .. controls (559.61,150.1) and (544.54,167.34) .. (525.62,179.99) ;
+\draw [shift={(523.23,181.55)}, rotate = 327.45] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
+%Curve Lines [id:da7849217419392104] 
+\draw    (400.24,129.4) .. controls (439.44,100) and (483.44,154.52) .. (502.57,198.4) ;
+\draw [shift={(503.71,201.07)}, rotate = 247.35] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
+%Shape: Parallelogram [id:dp9800759553910804] 
+\draw  [fill={rgb, 255:red, 43; green, 211; blue, 33 }  ,fill opacity=1 ] (464.44,47) -- (480,47) -- (479.8,122.78) -- (464.23,122.78) -- cycle ;
+%Shape: Path Data [id:dp34697025305225004] 
+\draw  [fill={rgb, 255:red, 155; green, 155; blue, 155 }  ,fill opacity=1 ][line width=1.5]  (474.7,58.1) -- (546.23,27.21) -- (544.71,133.78) -- (474.7,58.1) -- cycle (538.62,113.7) -- (538.62,41.11) -- (486.87,61.19) -- (538.62,113.7) -- cycle ;
+
+% Text Node
+\draw (176,16) node [anchor=north west][inner sep=0.75pt]   [align=left] {LNA};
+% Text Node
+\draw (508,272) node [anchor=north west][inner sep=0.75pt]   [align=left] {Tile};
+% Text Node
+\draw (195,256) node [anchor=north west][inner sep=0.75pt]   [align=left] {Ground Plane};
+% Text Node
+\draw (438,23) node [anchor=north west][inner sep=0.75pt]   [align=left] {FE};
+
+
+\end{tikzpicture}
+   \caption{\textit{Left:} Low Band Antennas shown with a ground plane with two dipoles in a $45^\circ$ V shape. \textit{Right:} Illustration of 2 of the 4 bowtie antennas that make up the HBAs placed inside a tile. }
+    \label{fig:chap2lofarantennas}
+\end{figure}
+
+Each of the antennas in the field all fed into a heavily sheilded cabinet or container. Here the reciever units (RCUs) and Remote Signal Processing compute boards (RSPs) are also stored. 
+
+The RCUs are directly connected to the coaxial cable coming from the field. The RCUs select the antenna input\footnote{At the time of writing the LOFAR 2 upgrade aims to rectify this such that both can be used simultaneously.} (either HBA or LBA). The selected signal then undergoes amplification and appropriate filters are applied to the signal, it is then digitized with a 12-bit ADC at either 200~MHz or 160~MHz. 
+The digitized samples are then passed to the RSP boards, these boards before all the digital signal processing at the station. This includes "first in first out" (FIFO) buffering, which holds all the packets in arrival order in a buffer to ensure that there is no signal delay added by the RCUs, following this a polyphase-filter subbanding is used and beamlets are formed, which is discussed in further depth in the next section. The data from the RSP boards is then passed to the Central Processing Unity (CEP) which outputs the processed beamlet or packet-stream 
+
+
+
+
+\subsection{Beamforming with a LOFAR station}
+
+There are numerous ways to observe with LOFAR as an array and also with individual stations. As discussed the main data products of interest is dynamic spectra from the HBAs which is attained by beamforming. 
+
 \subsection{The Irish LOFAR Station}
+
+The Irish LOFAR (I-LOFAR) station is based at the Rosse Observatory in Birr Castle, Co. Offaly about 140~km south west of Dublin. It was built by a group of students in the Summer of 2017, with first light in July of that year. Officially joining the LOFAR array as the most western station and longest baseline pair. 
+
+LOFAR as an array operated in two different modes, an international and local mode. The international mode uses all 52 stations to form one coherent telescope. Observing time on the entire array is allocated through a peer reviewed cycle process similar to most other international facilities. However, for up to 3 days a week the stations are returned to the host institutions for what is known as `local mode'. In this mode the international stations can act independently and carry out observations on targets at the discretion of each station's consortium. Each international stations are powerful telescopes in their own right. 
+
+The biggest shortcoming of local mode observations is the lack in resolution when imaging due to the small baselines of 10's of meters. As a result the main science products from local mode come from dynamic spectra mainly pertaining to transient searches, pulsar timing, solar system emission and the sun.  
+
+In the case of I-LOFAR there are two backends deployed on the telescope the Real-Time Acquisition Cluster (REALTA\footnote{Réalta is the Gaeilge for star.}) and the Breakthrough Listen cluster. The REALTA cluster is the primary observing backend for I-LOFAR, this is the primary storage and compute nodes for most observations.  
+
+The cluster itself is broken up into 5 servers each adorned with the name of the university that funded them. UCC1--4 are the work horses of the cluster each equipped with Nvidia Tesla V100 16GB Graphics Processing Units (GPUs), two Intel Xeon Gold 6130's Computer Processing Units (CPUs) and 256 GB of Random Access Memory (RAM). Each of the UCC's is setup in either a RAID 0 or RAID 5 configuration depending on the need for redundancy or write speeds. UCC1 is designated as the recording machine, which directly ingests CEP data streams from the telescope itself and processes them into science useable products. The other three UCC's are used for data analysis with specific radio astronomy software suites. The final machine on REALTA, NUIG1 is Just a Bunch of Discs (JBOD), it acts as a longer term archive for raw and processed data with 130~TB storage capacity. 
+
+The Breakthrough Listen backend is just one compute node and used specifically for SETI and any ancillary science that comes from the data collected. This is equipped with a Nvidia RTX 2080Ti 11~GB and twp Intel Xeon Silver 4110's. This server can also direct ingest CEP data streams for processing as well to create SETI specfic data products (discussed further in \cref{sec:SETIchapter}).
+
+For an in-depth review of the development of I-LOFAR's backend see \citet[chap. 3,][]{David_thesis_2023} and \cite{RealTa_paper}. 
+
+% \begin{figure}[t]
+%     \centering
+%     \includegraphics[width=\linewidth]{chapter2/figures/parkes.jpg}
+%     \caption{The the 64m Murriyang telescope at Parkes radio observatory in New South Wales Australia, image credited to CSIRO/A. Cherney}
+% \end{figure}
 
 \section{Other Observing Sites}
 
-\section{Software}
+The following sections briefly discuss instrumentation used at other observing sites that appear in this thesis 
+\subsection{Green Bank Telescope}
+
+The Robert C. Byrd Green Bank Telescope (GBT) is the largest steerable object in the world and the second largest moveable object in the world behind the Chernobyl new safe confinement structure over reactor 4. First light took place in 2000, since GBT has been operating as one of the world's leading single dish telescopes. It is based in Green Bank, West Virginia in the United States. 
+
+\subsection{Murriyang at Parkes}
+
+Murriyang is the name given to the iconic 64~m Parkes telescope by the Wiradjuri Elders, the name represents the `Skyworld'. The telescope is located in New South Wales Australia and was originally completed in 1961 since then Murriyang has made major contributions to both the field of radio astronomy and spaceflight. For example, in 2019 Murriyang celebrated the 50th anniversary of broadcasting humankind's first steps on the Moon. 
+
+\subsection{NenuFAR}
+
+The New Extension in Nançay Upgrading LOFAR (NenuFAR) is located at the Naçay radio observatory in France. Located on the same site as the French LOFAR station. 
+
+
+\subsection{VLF}
+\subsection{GReX}

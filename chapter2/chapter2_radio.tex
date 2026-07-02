@@ -615,60 +615,183 @@ Incoherent beamforming combines the detected powers from each element, preservin
 
 Following beamforming, the resulting voltage stream as discussed in \cref{sec:chap2signalprocessing}. Dynamic spectra produced from beamforming form the primary data product used throughout this thesis and are the basis for studying pulsars, fast radio bursts, and other transient radio phenomena.
 
+\section{Brightness and Flux Density}
+
+One key concept has been neglected up to this point and that is on the question of measuring the radiative properties of an astronomical source. Astronomy is done by measuring the strength of radiation as a function of where it is on the sky (imaging) or frequency (spectroscopy). There are other measurables that are of use such as time and polarisation, that are also important but these supplementary. There are four common ways of describing the radiation properties of an astrophysical source, luminosity, flux density, intensity and temperature. The nomenclature is somewhat cumbersome, luminosity is what the full power that the source emits, flux density is what observer receives, intensity is how that received radiation is distributed on the sky, and brightness temperature is a temperature-like way to express intensity. Intensity and temperature depend on the source's size. Whereas, flux density is the only quantity that depends on distance. The following derivation loosely follows \citet{scott}
+
+\begin{figure}[h]
+    \centering
+
+
+
+
+\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+
+\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+%uncomment if require: \path (0,300); %set diagram left start at 0, and has height of 300
+
+%Shape: Polygon [id:ds39314275593047887] 
+\draw   (211,212) -- (260,256) -- (153,257) -- (105,213) -- cycle ;
+%Straight Lines [id:da960580008148341] 
+\draw    (80.57,67.55) -- (183,234) ;
+\draw [shift={(79,65)}, rotate = 58.39] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
+%Straight Lines [id:da46715396338820436] 
+\draw    (183,234) -- (183,145) ;
+\draw [shift={(183,142)}, rotate = 90] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
+%Shape: Parabola [id:dp0451606974505383] 
+\draw   (182.39,180.71) .. controls (171.33,177.14) and (162.12,179.85) .. (154.76,188.83) ;
+%Shape: Polygon Curved [id:ds07216039902816751] 
+\draw   (39,29.97) .. controls (59,19.97) and (99,-4.03) .. (121,39) .. controls (143,82.03) and (101,69) .. (121,99) .. controls (141,129) and (21,130.97) .. (31,99) .. controls (41,67.03) and (19,39.97) .. (39,29.97) -- cycle ;
+%Straight Lines [id:da08911106996232021] 
+\draw    (69,264) -- (183,234) ;
+%Straight Lines [id:da9350360103996606] 
+\draw  [dash pattern={on 0.84pt off 2.51pt}]  (83,74) -- (83,211) ;
+%Straight Lines [id:da011592457999142769] 
+\draw  [dash pattern={on 0.84pt off 2.51pt}]  (83,211) -- (183,234) ;
+%Shape: Parabola [id:dp8639153407562795] 
+\draw   (98.21,213.36) .. controls (89.6,228.72) and (91.2,242.93) .. (103,256) ;
+
+% Text Node
+\draw (164,184.4) node [anchor=north west][inner sep=0.75pt]    {$\theta $};
+% Text Node
+\draw (265,241.4) node [anchor=north west][inner sep=0.75pt]    {$dA$};
+% Text Node
+\draw (178,122.4) node [anchor=north west][inner sep=0.75pt]    {$\hat{n}$};
+% Text Node
+\draw (65,42.4) node [anchor=north west][inner sep=0.75pt]    {$d\Omega $};
+% Text Node
+\draw (104,223.4) node [anchor=north west][inner sep=0.75pt]    {$\phi $};
+
+
+\end{tikzpicture}
+
+\caption{}
+\label{fig:chap2desolidangle}
+
+\end{figure}
+
+Specific intensity (or brightness) is denoted by $I_\nu$, it describes the radiation per unit area per solid angle per unit frequency. More intuitively if energy, $dE$ from within the solid angle $d\Omega$ passes through the projected area (i.e. antenna surface), where the projection is $\cos \theta ~ dA$ in a time $dt$ within a narrow frequency range $d\nu$, the differential power received can be expressed as, 
+
+\begin{equation}
+    dP = \frac{dE}{dt} = I_\nu (\cos \theta ~ d A ~ d \Omega ~ d \nu). 
+\end{equation}
+
+Solving for spectral intensity, $I_\nu$ gives, 
+
+\begin{equation}
+    I_\nu = \frac{dP}{(\cos \theta d A) ~ d\nu ~ d\Omega}.
+    \label{eq:spectral_intensity}
+\end{equation}
+
+\Cref{eq:spectral_intensity} is an important result as if the directional contribution over all directions subtended by the source is summed, the total spectral flux density, $S_\nu$,
+
+\begin{equation}
+    S_\nu = \int_{\text{source}} I_\nu (\theta, \phi) \cos \theta ~ d\Omega. 
+\end{equation}
+
+If the source as an angular size $\theta \ll 1 ~\text{rad}$, then small angle approximation can be used, $\cos \theta = 1$. This gives the compact source form of flux density, 
+
+\begin{equation}
+    \boxed{
+    S_\nu = \int_{\text{source}} I_\nu (\theta, \phi) ~ d\Omega. 
+    }
+    \label{eq:chap2fluxcompact}
+\end{equation}
+
+For a source where \cref{eq:chap2fluxcompact} is applicable the well known inverse-square distance dependence can be introduced as the source is observed at a greater distance the source takes up a smaller patch of the sky so its angular size shrinks and therefore its solid angle decreases, $\Omega \propto d^{-2}$. It is important to note that flux density should be measured only if spectral brightness cannot (i.e. the source is unresolved). 
+
+\Cref{eq:chap2fluxcompact} also allows for the definition of spectral luminosity, $L_\nu$. $L_\nu$ is defined as the total power per unit bandwidth radiated by a source at a given frequency, $\nu$. If the source is assumed to be isotropic and a sphere, the flux density is that same power as spectral luminosity but radiated out as the surface of a sphere with radius, $d$. Such that, ›
+
+\begin{equation} \boxed{ 
+    L_\nu = 4 \pi d^2 S_\nu 
+}
+\label{eq:chap2spectralluminosity}
+\end{equation}
+
+Having related the observed flux density to the intensity (source brightness), the last formalism that needs to be introduced is for brightness temperature. Brightness temperature, $T_b$, is defined so that the specific intensity can be written in the Rayleigh-Jeans form, 
+
+\begin{equation}
+    I_\nu = \frac{2k T_b \nu^2}{c^2}
+    \label{eq:chap2RayleighJeans}
+\end{equation}
+
+Solving for $T_b$, 
+
+\begin{equation}
+    \boxed{ 
+    T_b (\nu) = \frac{I_\nu c^2}{2 k \nu^2}.
+    }
+\end{equation}
+
+The observed flux density can be expressed as an equivalent source temperature by combining \cref{eq:chap2RayleighJeans} with the effective collecting area of a telescope, $A_{\text{eff}}$, such that, 
+
+\begin{align}
+A_{\text{eff}} &= \frac{2k_B T_{\text{source}}}{S_\nu}, \\
+\therefore\quad
+T_{\text{source}} &= \frac{A_{\text{eff}} S_\nu}{2k_B }.
+\end{align}
+
+The equations introduced here now have established a link between the intrinsic radiation properties of a source and the flux that is possible to measure by an observer. 
+
 \section{Radiometer Equation}
 
-The final core concept discussed is the radiometer equation. The radiometer equation at its core is an application of the Central Limit Theorem, it describes the uncertainty in measuring a noise temperature $(\sigma_T)$, with the uncertainty decreasing as function of the number of samples measured, 
+The final core concept discussed is the radiometer equation, it's derivation in this section is a specialized extension of the derivation shown in \citet[§A1.4][]{pulsar_handbook}. The radiometer equation measures the flux received by a radio telescope. At its core it is just an application of the Central Limit Theorem\footnote{The central limit theorem states that the distribution of the sample mean approaches a normal distribution as the sample size grows, regardless of the original population's shape.}, as it describes the uncertainty in measuring a noise temperature $(\sigma_T)$, with the uncertainty decreasing as function of the number of the samples measured, 
 
 \begin{equation}
     \sigma_T = \frac{T_{\text{sys}}}{\sqrt{n_p t_{\text{obs}} \Delta f}}. 
 \end{equation}
 
-The flux density $S$ (in Jy) received by a radio telescope is related to the measured system temperature by the telescope gain, $G$. As $S = T/G$ where $G$ is expressed a function effective area, $G = A_{\text{eff}}/{2k}$. Thus the radiometer equation can be re-written in terms of flux density. 
+Here $n_p$ is the number of polarisations, $t_{\text{obs}}$ is the observation time, $\Delta f$ is the bandwidth of a single measurement and  $T_{\text{sys}}$ is the system temperature which is the sum individual noise contributions. Flux density, $S$ (in Jy) received by a radio telescope is related to the measured system temperature by the telescope gain, $G$. As $S = T/G$ where $G$ is expressed a function effective area, $G = A_{\text{eff}}/{2k}$. Thus, the radiometer equation can be re-written in terms of flux density,
 
 \begin{equation}
-    \sigma_S = \frac{\sigma_T}{G} = \frac{T_{\text{sys}}}{G \sqrt{n_p t_{\text{obs}} \Delta f}}
+    \sigma_S = \frac{\sigma_T}{G} = \frac{T_{\text{sys}}}{G \sqrt{n_p t_{\text{obs}} \Delta f}}.
 \end{equation}
 
-This represents the rms uncertainty in flux density due to system noise. Setting that a source should be detectable to a given S/N value. $ S_{\min} = \text{S/N}_{\min} \cdot \sigma_S$ and substituting $\sigma_S$ gives, 
+This represents the root mean squared (RMS) uncertainty in flux density due to system noise. Setting that a source should be detectable to a given S/N value. $ S_{\min} = \text{S/N}_{\min} \cdot \sigma_S$ and substituting $\sigma_S$ gives, 
 
 \begin{equation}
     S_{\min} = \frac{\text{S/N}_{\min} \cdot T_{\text{sys}}}{G \sqrt{n_p t_{\text{obs}} \Delta f}}
+    \label{eq:chap2radiometerintro}
 \end{equation}
 
 
-Now the duty cycle of a box function from a pulsar needs to be accounted for which is given by,
+In the case of periodic emission such as a pulsar a factor representing duty cycle is introduced,
 
 \begin{equation}
-    \delta = \frac{W}{P}
+    \delta = \frac{W}{P}.
 \end{equation}
 
 
-Because the pulse is only present for a fraction \( \delta \) of the time, the effective signal-to-noise ratio is reduced. The correction factor is:
+Because the pulse is only present for a fraction \( \delta \) of the time, the effective S/N is reduced. Which is expressed as, 
 
 \begin{equation}
-    \sqrt{\frac{\delta}{1 - \delta}} = \sqrt{\frac{W}{P - W}}
+    \sqrt{\frac{\delta}{1 - \delta}} = \sqrt{\frac{W}{P - W}}.
 \end{equation}
 
-which modifies the equation:
+This factor is simply added to \cref{eq:chap2radiometerintro}, 
 
 \begin{equation}
-    S_{\min} = \beta \frac{\text{S/N}_{\min} T_{\text{sys}}}{G \sqrt{n_p t_{\text{obs}} \Delta f}} \sqrt{\frac{W}{P - W}}
+    S_{\min} = \beta \frac{\text{S/N}_{\min} T_{\text{sys}}}{G \sqrt{n_p t_{\text{obs}} \Delta f}} \sqrt{\frac{W}{P - W}}. 
 \end{equation}
 
-here \( \beta \) is added as a digitization loss factor (typically \( \beta \approx 1.16 \) for 3-level sampling according to \cite{pulsar_handbook}).
+A factor of \( \beta \) has also been added as a digitization loss factor. Typically, \( \beta \approx 1.16 \) for 3-level sampling according to \cite{pulsar_handbook}, but this value is system dependent.  
 
-Since system temperature, gain, and bandwidth vary across frequency, we generalize this equation by summing over all frequency bins in a the wideband receiver and adding the frequency dependency where necessary:
+It is also important to note that for single pulses, such as an FRB or otherwise, the duty cycle factor is simply swapped out for a $\tau_{\text{burst}}$, which represents in the burst duration. 
+
+
+Since system temperature, gain, and bandwidth vary across frequency, the above equations can be generalized by summing over all frequency bins and adding the frequency dependency where necessary. First starting with gain, 
 
 \begin{equation}
     G(f) = 
-    \frac{A_{\text{eff}}(f)}{2k} = \frac{\eta (f) \cdot A_{phys}}{2k}
+    \frac{A_{\text{eff}}(f)}{2k} = \frac{\eta (f) \cdot A_{phys}}{2k}.
 \end{equation}
+
+Here a frequency dependence is introduced for collecting area, as for any antenna of a given size receives a smaller angular region of the sky as frequency increases. 
 
 \begin{equation}
 \boxed{
 S_{\min} (f, l, b) = \frac{1}{B_{\text{total}}} \sum_{f} \left(  \frac{\left[ T_{\text{sys}}(l,b) + T_{\text{int} }(f) \right] \cdot 2 k}{A_{\text {eff} }(f)} \cdot \beta  \quad  \cdot \frac{\text{S/N}_{\text{min}}}{\sqrt{n_p t_{\text{obs}} B_{\text{channel}}}} \sqrt{\frac{W}{P - W}} \right) \Delta f}
 \end{equation}
-
 
 
 
@@ -828,14 +951,44 @@ The HBAs (see \cref{fig:chap2lofarantennas}) cover the higher end of LOFARs spec
 Each of the antennas in the field all fed into a heavily sheilded cabinet or container. Here the reciever units (RCUs) and Remote Signal Processing compute boards (RSPs) are also stored. 
 
 The RCUs are directly connected to the coaxial cable coming from the field. The RCUs select the antenna input\footnote{At the time of writing the LOFAR 2 upgrade aims to rectify this such that both can be used simultaneously.} (either HBA or LBA). The selected signal then undergoes amplification and appropriate filters are applied to the signal, it is then digitized with a 12-bit ADC at either 200~MHz or 160~MHz. 
-The digitized samples are then passed to the RSP boards, these boards before all the digital signal processing at the station. This includes "first in first out" (FIFO) buffering, which holds all the packets in arrival order in a buffer to ensure that there is no signal delay added by the RCUs, following this a polyphase-filter subbanding is used and beamlets are formed, which is discussed in further depth in the next section. The data from the RSP boards is then passed to the Central Processing Unity (CEP) which outputs the processed beamlet or packet-stream 
-
-
-
+The digitized samples are then passed to the RSP boards, these boards before all the digital signal processing at the station. This includes "first in first out" (FIFO) buffering, which holds all the packets in arrival order in a buffer to ensure that there is no signal delay added by the RCUs, following this a polyphase-filter subbanding is used and beamlets are formed, which is discussed in further depth in the next section. The data from the RSP boards is then passed to the Central Processing Unity (CEP) which outputs the packet-stream of voltages. All of this is controlled by the Local Control Unit which is a Linux pc that monitors the station hardware and controls where the beams are `steered'. The LCU is also responsible for receiving time references from the stations GPS for ensuring phase coherence across the whole array.  
 
 \subsection{Beamforming with a LOFAR station}
 
-There are numerous ways to observe with LOFAR as an array and also with individual stations. As discussed the main data products of interest is dynamic spectra from the HBAs which is attained by beamforming. 
+There are numerous ways to observe with LOFAR as an array and also with individual stations. As discussed the main data products of interest is dynamic spectra from the HBAs which is attained by beamforming. As mentioned above the ADC can work at a 200~MHz or 160~MHz clock rate, this corresponds to a base sampling time of 5~ns and $6.2~\upmu \text{s}$. A polyphase filterbank is applied the data above channelized into sub-bands. Due Nyquist-Shannon sampling theorem ($B < f_s/2$), 200~MHz sampling gives a useable bandwidth as 100~MHz. A 1024-point FFT  then divides that sampled bandwidth into 1024 spectral bins (subbands), 512 real and 512 imaginary bins (Hermitian symmetric space). Dividing the subbands across the useable bandwidth gives 195.3~kHz to each subband. Following channelization, the station beamformer selects the desired subbands and coherently sums the antenna signals in the direction of interest. The resulting beamformed subbands are called beamlets, and in 8-bit mode LOFAR can form up to 488 beamlets. Although the polyphase filter produces 512 subbands, the station beamformer's ring architecture and output allocation mean that only 488 beamlets are available. 
+
+One unique thing about aperture arrays is that each beamlet can be individually pointed, this means that up to 488 beams can be formed on the sky with the bandwidth of one subband or one single coherent beam can be placed on the sky using the full bandwidth as shown in \cref{fig:chap2lofarbeams}. Recalling that the S/N scaled with the number of channels by a factor of $\sqrt{n}$, the stations are primarily used with all beamlets on the same patch of sky. 
+
+\begin{figure}
+    \centering
+    \tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+
+\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+%uncomment if require: \path (0,300); %set diagram left start at 0, and has height of 300
+
+%Image [id:dp9132826262522692] 
+\draw (151.25,148.75) node  {\includegraphics[width=219.38pt,height=219.38pt]{chapter2/figures/HBA-488-Beams.png}};
+%Image [id:dp8787503637330343] 
+\draw (468.25,152.75) node  {\includegraphics[width=219.38pt,height=219.38pt]{chapter2/figures/HBA-single-beam.png}};
+
+% Text Node
+\draw (209.07,130.63) node [anchor=north west][inner sep=0.75pt]  [rotate=-60.85]  {$\cdots $};
+% Text Node
+\draw (223,204.4) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$\text{beam}_{\ }{}_{488}$};
+% Text Node
+\draw (111,26.4) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$\text{beam}_{\ }{}_{1}$};
+% Text Node
+\draw (165,37.4) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$\text{beam}_{\ }{}_{2}$};
+% Text Node
+\draw (216,58.4) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$\text{beam}_{\ }{}_{3}$};
+
+
+\end{tikzpicture}
+\caption{\textit{Left:} Illustration of 488 beamlets pointed at various sky positions. \textit{Right:} Example of summed beamlets forming one beam across entire bandwidth. }
+\label{fig:chap2lofarbeams}
+\end{figure}
+
+
 
 \subsection{The Irish LOFAR Station}
 
@@ -845,7 +998,7 @@ LOFAR as an array operated in two different modes, an international and local mo
 
 The biggest shortcoming of local mode observations is the lack in resolution when imaging due to the small baselines of 10's of meters. As a result the main science products from local mode come from dynamic spectra mainly pertaining to transient searches, pulsar timing, solar system emission and the sun.  
 
-In the case of I-LOFAR there are two backends deployed on the telescope the Real-Time Acquisition Cluster (REALTA\footnote{Réalta is the Gaeilge for star.}) and the Breakthrough Listen cluster. The REALTA cluster is the primary observing backend for I-LOFAR, this is the primary storage and compute nodes for most observations.  
+In the case of I-LOFAR there are two backends deployed on the telescope the Real-Time Acquisition Cluster (REALTA\footnote{Réalta is Irish Gaeilge for star.}) and the Breakthrough Listen cluster. The REALTA cluster is the primary observing backend for I-LOFAR, this is the primary storage and compute nodes for most observations.  
 
 The cluster itself is broken up into 5 servers each adorned with the name of the university that funded them. UCC1--4 are the work horses of the cluster each equipped with Nvidia Tesla V100 16GB Graphics Processing Units (GPUs), two Intel Xeon Gold 6130's Computer Processing Units (CPUs) and 256 GB of Random Access Memory (RAM). Each of the UCC's is setup in either a RAID 0 or RAID 5 configuration depending on the need for redundancy or write speeds. UCC1 is designated as the recording machine, which directly ingests CEP data streams from the telescope itself and processes them into science useable products. The other three UCC's are used for data analysis with specific radio astronomy software suites. The final machine on REALTA, NUIG1 is Just a Bunch of Discs (JBOD), it acts as a longer term archive for raw and processed data with 130~TB storage capacity. 
 
@@ -853,27 +1006,122 @@ The Breakthrough Listen backend is just one compute node and used specifically f
 
 For an in-depth review of the development of I-LOFAR's backend see \citet[chap. 3,][]{David_thesis_2023} and \cite{RealTa_paper}. 
 
-% \begin{figure}[t]
-%     \centering
-%     \includegraphics[width=\linewidth]{chapter2/figures/parkes.jpg}
-%     \caption{The the 64m Murriyang telescope at Parkes radio observatory in New South Wales Australia, image credited to CSIRO/A. Cherney}
-% \end{figure}
+\subsection{Upgrading to LOFAR 2.0}
+
+In September of 2024 LOFAR paused observing with the whole array to start the rollout of a new upgrade. Dubbed LOFAR 2.0 the upgrade main goals are to increase the observing capability of each station and improve the central processing for the array as a whole.
+
+The most significant upgrade is the replacement of all the RCUs to enable simultaneous recording of both the HBA and LBA antennas, allowing for full 30--240~MHz of observing, this also extends to keeping voltages from both antennas in the ring buffer. The increased computing capacity allows for better methods of calibration at the lower end of the band improving the sensitivity of the LBAs by a factor of 5 in some fields. The existing timing distribution is being replaced by a central clock signal distributed over a White Rabbit optical fiber network which will improve ionospheric calibration. 
+
+The array's central processing unit COBALT, is also getting refreshed with new GPUs and CPUs providing an order of magnitude increase in the available computing resources. The new hardware and software changes allow more parallel observing modes, including simultaneous imaging and beam-formed data products from different subsets of stations. Additionally a large effort is being made to make many quality of life implementations to station control and monitoring. 
+
+For a full discussion on the technical details and the effects on both the science cases and usability of the LOFAR upgrade see \cite{LOFAR2}. 
+
+At the time of writing core stations have been upgraded to LOFAR 2.0 and the upgrade is being rolled out to the international stations with the Swedish station currently the first to have deployed the upgrade. The current expected completion of the LOFAR 2.0 upgrade is Q4 2027. While the upgrade has been carried out the international stations have been operating in local mode 24/7, which has allowed for prolonged observation campaigns on various science projects. For example this work took advantage of this fact and used both the Swedish and Irish station for a prolonged survey which is discussed in \cref{chap:LOFTS}. 
+
 
 \section{Other Observing Sites}
 
-The following sections briefly discuss instrumentation used at other observing sites that appear in this thesis 
-\subsection{Green Bank Telescope}
-
-The Robert C. Byrd Green Bank Telescope (GBT) is the largest steerable object in the world and the second largest moveable object in the world behind the Chernobyl new safe confinement structure over reactor 4. First light took place in 2000, since GBT has been operating as one of the world's leading single dish telescopes. It is based in Green Bank, West Virginia in the United States. 
+The following sections briefly highlight instrumentation used at other observing sites that appear in this thesis 
 
 \subsection{Murriyang at Parkes}
 
-Murriyang is the name given to the iconic 64~m Parkes telescope by the Wiradjuri Elders, the name represents the `Skyworld'. The telescope is located in New South Wales Australia and was originally completed in 1961 since then Murriyang has made major contributions to both the field of radio astronomy and spaceflight. For example, in 2019 Murriyang celebrated the 50th anniversary of broadcasting humankind's first steps on the Moon. 
+Murriyang is the name given to the iconic 64~m Parkes telescope by the Wiradjuri Elders, the name represents the `Skyworld'. The telescope is located in New South Wales Australia and was originally completed in 1961 since then Murriyang has made major contributions to both the field of radio astronomy and spaceflight. For example, in 2019 Murriyang celebrated the 50th anniversary of broadcasting humankind's first steps on the Moon. Parkes is a prime-focus parabolic reflector. At the time of writing there are currently 4 receivers available for observation on request which can be placed manually at prime focus.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\linewidth]{chapter2/figures/parkes.png}
+    \caption{The the 64m Murriyang telescope at Parkes radio observatory in New South Wales, Australia, image credited to CSIRO/A. Cherney}
+\end{figure}
+
+\begin{table}
+\centering
+\caption{Current receiver suite for the Parkes (Murriyang) 64-m radio telescope. In \cref{chap:redback}, data from the UWL is used.}
+\label{tab:parkes_receivers}
+\begin{tabular}{llll}
+\hline
+\textbf{Name} &
+\textbf{Frequency Range} &
+\textbf{$T_{\rm rec}$ (K)} &
+\textbf{$T_{\rm sys}$ (K)} \\
+\hline
+
+UWL      & 0.704--4.032 GHz & 7--15 & 20--35 \\
+CryoPAF  & 0.70--1.95 GHz   & $<20$ & $\sim 20$ \\
+13 mm    & 16--26 GHz       & --- & --- \\
+MARS      & $\sim$20--30 GHz & --- & --- \\
+\hline
+\end{tabular}
+\end{table}
+
+\subsection{Green Bank Telescope}
+
+The Robert C. Byrd Green Bank Telescope (GBT) is the largest steerable object in the world and the second largest moveable object in the world behind the Chernobyl new safe confinement structure over reactor 4. First light took place in 2000, since GBT has been operating as one of the world's leading single dish telescopes. It is based in Green Bank, West Virginia in the United States. 
+There are numerous feeds installed on GBT. The telescope features a Gregorian design, which is equipped with rotating turret with 8 reciever bays. There is also three recievers at prime focus. The details of the instruments at the time of writing are shown in \cref{tab:GBTreceivers}. 
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\linewidth]{chapter2/figures/GBT.jpg}
+    \caption{The 100~m Green Bank Telescope telescope at the Green Bank Observatory in West Virgina. Image credited to the NRAO.}
+\end{figure}
+
+\begin{table*}[h]
+\centering
+\caption{Current receiver suite for the GBT. In \cref{chap:redback}, data from L, S and Prime Focus 1 is used.}
+\label{tab:GBTreceivers}
+\begin{tabular}{llll}
+\hline
+\textbf{Name} &
+\textbf{Frequency Range} &
+\textbf{$T_{\rm rec}$ (K)} &
+\textbf{$T_{\rm sys}$ (K)} \\
+\hline
+
+\multicolumn{4}{c}{\textbf{Prime Focus Receivers}} \\
+\hline
+
+Prime Focus 1 & 290--395 MHz & 12 & 46 \\
+              & 385--520 MHz & 22 & 43 \\
+              & 510--690 MHz & 12 & 22 \\
+              & 680--920 MHz & 21 & 29 \\
+Prime Focus 2 & 910--1230 MHz & 10 & --- \\
+UWBR          & 700--4200 MHz & --- & --- \\
+
+\hline
+\multicolumn{4}{c}{\textbf{Gregorian Receivers}} \\
+\hline
+
+
+L         & 1.15--1.73 GHz & 6 & 20 \\
+S         & 1.73--2.60 GHz & 8--12 & 22 \\
+C         & 3.95--7.8 GHz  & 5 & 18 \\
+X         & 7.8--12.0 GHz  & 20 & 30 \\
+Ku        & 12.0--15.4 GHz & 14 & 30 \\
+KFPA      & 18.0--27.5 GHz & 15--25 & 30--45 \\
+Ka        & 26.0--31.0 GHz & 20 & 35 \\
+           & 30.5--37.0 GHz & 20 & 30 \\
+           & 36.0--39.5 GHz & 20 & 45 \\
+Q         & 39.2--50.5 GHz & 40--70 & 67--134 \\
+W         & 67--74 GHz     & 50 & 160 \\
+           & 73--80 GHz     & 50 & 120 \\
+           & 79--86 GHz     & 50 & 100 \\
+           & 85--92 GHz     & 60 & 110 \\
+Argus     & 74--116 GHz    & 40--80 & 110 \\
+MUSTANG-2 & 75--105 GHz    & --- & --- \\
+
+\hline
+\end{tabular}
+\end{table*}
 
 \subsection{NenuFAR}
 
-The New Extension in Nançay Upgrading LOFAR (NenuFAR) is located at the Naçay radio observatory in France. Located on the same site as the French LOFAR station. 
+The New Extension in Nançay Upgrading LOFAR (NenuFAR) is located at the Naçay radio observatory in France. Located next to the French LOFAR station. NenuFAR operates at the same frequencies as the LBAs but uses a different design for its antennas and amplifiers (see. \cref{fig:chap2nenufar}). The  antennas were intially manufactured for the Long Wavelength Array (LWA) in Owen's Valley, with the novel amplifiers designed in Naçay.  The station shares much of the same electronics and systems as a standard LOFAR stations, so the description outlined above can also be applied here. The combination of both the antennas and the amplifiers translated to a flatter response curve than that of the LBAs. At present there are X out of a planned 96 array core constructed. Similarly, to LOFAR's core there are also remote stations called mini arrays (MAs) surrounding NenuFAR. Each MA consists of 19 antennas and is placed up to 3~km from the NenuFAR core. The telescope can also be used in tandem with the LOFAR array to add NenuFAR's sensitivity along with the other stations.  
 
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.6\linewidth]{chapter2/figures/NenuFAR.png}
+    \caption{Collection NenuFAR antennas based at the Naçay Radio Observatory in France. Image credited to the CNRS/NRO.}
+    \label{fig:chap2nenufar}
+\end{figure}
 
-\subsection{VLF}
-\subsection{GReX}
+% \subsection{VLF}
+% \subsection{GReX}

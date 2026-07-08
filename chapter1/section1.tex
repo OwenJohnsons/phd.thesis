@@ -1,3 +1,19 @@
+% writing planning 
+% Prelude to Pulsars (history context, discovery) 
+% The population, intro to P, Pdot and the number of known pulsars 
+% Types of Neutron Stars, XDINS, RRATS, binaries and so on 
+% Neutron Star Birthrate, CCSNe discussion, Birthrate problem (breif) 
+% Neutron Star Structure, layered composition, (breif) 
+% Properties of Pulsars, discussion of EOS and canoncial pulsar model setup 
+% Neutron Star Mass and Radius 
+% Spin Evolution, birth spin, spin down etc .
+% Braking Index 
+% Magnetosphere 
+% Radio Emission, emission mechanics, beam geometry, acceleration gaps
+% Dispersion Measure 
+% summary of observables, quick recap or table of methods that can measure pulsar charactertics, i.e. period, magnetic field strength 
+% Pulsars as tools, why study pulsars outside of them being intresting objects, IPTA, Probes of Gravity, Accretion Physics (breif) 
+
 \section{Neutron Stars and Pulsars}
 
 This sections aim is to give both historical and scientific context to neutron stars and by extension pulsars. 
@@ -24,11 +40,11 @@ Charged particles accelerate along the magnetic field lines in the magnetosphere
 
 \subsection{The Population of Pulsars}
 
-At the time of writing, there are currently more than 3380 known pulsars. Since their discovery by Jocelyn Bell Burnell \citep{hewish_observation_1968}, the population has grown immensely, but there remain many open questions about pulsar evolution and the subclasses that lie within the population as a whole. Similarly to how exoplanet populations are shown using the mass-radius diagram and stellar populations are shown using the Hertzsprung-Russell diagram, pulsar populations are shown using what is known as the $P-\dot P$ diagram.
+At the time of writing, there are currently more than 3380 known pulsars. Since their discovery by Jocelyn Bell Burnell \citep{hewish_observation_1968}, the population has grown immensely along with astronomers and theorists knowledge of pulsars. However, there remain many open questions about pulsars, their evolution and the subclasses that lie within the population as a whole. Some of these questions are things like: \textit{How do pulsar emission mechanics work? What is their structure and density? What is the structure of the magnetic fields?} Before giving a theoretical summary of pulsars its worth discussing the population as a whole.  Similarly to how exoplanet populations are shown using the mass-radius diagram and stellar populations are shown using the Hertzsprung-Russell diagram, pulsar populations are shown using what is known as the $P-\dot P$ diagram.
 
-$P$ represents the pulsar's rotational period and $\dot P$ its derivative. These are key ways that pulsars are classified and studied in the context of their evolution. An example of a $P-\dot P$ diagram is shown in \cref{fig:p-pdot}. Different values on the plot indicate roughly the pulsar's age and magnetic field strength. \Cref{fig:p-pdot} shows the vastly different values between pulsars in the millisecond range and pulsars in the second range.
+$P$ represents the pulsar's rotational period and $\dot P$ its derivative. These are key ways that pulsars are classified and studied in the context of their evolution and class. An example of a $P-\dot P$ diagram is shown in \cref{fig:p-pdot}. Different values on the plot indicate roughly the pulsar's age and magnetic field strength. \Cref{fig:p-pdot} shows clearly the two primary groups of pulsars in the millisecond range and pulsars in the second range.
 
-Theoretically, it has been shown that pulsars can be related to a ``death" line in the $P-\dot P$ diagram. This is the line where pulsars are no longer able to emit radio waves due to the pulsar's magnetic field no longer being strong enough to accelerate particles along the magnetic field lines. However, it has been shown that pulsars do exist below this line. The area below this line is commonly referred to as the ``graveyard".
+Theoretically, it has been shown that pulsars can be related to a ``death" line in the $P-\dot P$ diagram. This is the line where pulsars are no longer able to emit radio waves due to the pulsar's magnetic field no longer being strong enough to accelerate particles along the magnetic field lines. However, it has been shown that pulsars do exist below this line. The area below this line is commonly referred to as the ``graveyard". 
 
 \begin{figure}
     \centering
@@ -37,26 +53,44 @@ Theoretically, it has been shown that pulsars can be related to a ``death" line 
     \label{fig:p-pdot}
 \end{figure}
 
+\subsubsection{Types of Neutron Stars}
+
+The current established\footnote{There are some proposed subclasses of NSs in the field such as long period transients, but this is yet to be well established and agreed upon.} classes of NSs are as follows Radio Pulsars (PSRs), Millisecond Pulsars (MSPs), Rotating RAdio Transients (RRATs),  X-Ray Binaries, X-ray Dim Isolated Neutron Stars (XDINS). 
+
+
+\subsubsection{Neutron Star Birthrates}
+
+As mentioned Neutron Stars (NSs) form from core-collapsed supernovae (CCSNe), at present there are no confirmed extragalactic pulsars (see discussion in \cref{sec:FRBsTheory}) so the birthrate of Galactic NSs is on the same order of the occurrence of Galactic CCSNe events. The current estimates place the rate of CCSNe's at 1-3 per century, so the amount of NSs should not exceed this value, as will later be discussed there are many subclasses of NSs and each is treated with their own birth-rate property, when these individual rates are summed they exceed the CCSN rate at an estimated 6-11 per century leading to a "birthrate problem" and "too many neutron stars" \citep{keane_birthrates_2008}. This implies that most subclasses of NS are at various points in an evolutionary stage of a single object. 
+
+The current best estimates for NSs are completed using pulsar population simulations in tandem legacy survey data. This is all done in an attempt to estimate the intrinsic pulsar population in the Galaxy \citep[e.g.,][]{faucher-giguere_birth_2006, bates_psrpoppy_2014,keane_square_2025,pardo-araujo_radio_2025}. Population synthesis can be achieved in numerous ways, but it generally starts generating "nominal" distribution priors from previous pulsar surveys such as Galactic spatial distribution, luminosity function, spectral index and period distribution. The simulation then tries to reproduce the observed population, once the generation of the synthetic population matches the original observed distributions the resulting population can be used as an estimate of the Galactic population of radio emitting pulsars. There are caveats with these types of simulations, they are done on known key properties of pulsars with an attempt to address observation biases along with neutron star models that are independent of observables. Another method is to use machine learning to use what is called a pulsar evolutionary framework which makes use of machine learning to infer a range of pulsar parameters and simulate their evolution until the population matches observational distributions, one such study is \citep{pardo-araujo_radio_2025} which estimates the Galactic NS birthrate to be 2, which is within agreement of the estimated supernova occurrence rate in the Galaxy. The further uses of pulsar simulations are discussed in greater depth along with their implications in \cref{chap:lunar}. 
+
+\subsubsection{Neutron Star Structure}
+
 \subsection{The Properties of Pulsars}
 
-The following section gives a brief non-exhaustive overview of some of the key properties of pulsars. 
+One of the primary questions for astronomers who study stars as objects is figuring out the equation of state (EOS) to some reasonable degree. This usually entails the development of mathematical framework to describe pressure, volume, temperature and internal energy, then verify and modify the framework based on observational findings. Pulsars are complex objects and in many aspects are poorly understood. For example, it is unknown if one EOS can describe all pulsars with various transitionary components or are their multiple EOS that describe the entire class. The following section gives a brief non-exhaustive overview of some of the key properties of pulsars as they are thought of canonically. It is important to keep in mind that this is a baseline framework and should not be considered a complete physical theory. 
+
+The canonical `toy' pulsar model is shown in \cref{fig:pulsartoymodel}. This model refers to a rotating, magnetised neutron star with a dipole magnetic field. 
+
+This section uses \cite{pulsar_handbook} as a primary reference throughout with more up-to-date discussions where applicable.  
+
 
 \subsubsection{Neutron Star Radius \& Mass}
 
-Understanding the mass of pulsars is important for understanding their evolution and equation of state. \cite{oppenheimer_massive_1939} derived a canonical mass limit of neutron stars to be 1.4 $\mathrm{M_{\odot}}$, but experimentally, this has been shown to be higher, with the largest mass of a pulsar observed to be $\sim 2.35 \mathrm{M_{\odot}}$ \citep{Romani_2022}. The mass-radius relationship of a pulsar is defined by an equation of state and a maximum mass limit. Redshifts and gravitational effects observed in pulsars exhibit the observed temperature and flux to be smaller than the actual value. The observed radius $R_\text{obs}$ can be described as follows \citep[p. 56][]{pulsar_handbook}:
+Understanding the mass and radius of pulsars is crucial for understanding their evolution and equation of state. \cite{oppenheimer_massive_1939} derived a canonical mass limit of neutron stars to be 1.4 $\mathrm{M_{\odot}}$, but experimentally, this has been shown to be higher, with the largest mass of a pulsar observed to be $\sim 2.35 \mathrm{M_{\odot}}$ \citep{Romani_2022}. The mass-radius relationship of a pulsar is defined by an equation of state and a maximum mass limit. Redshifts and gravitational effects observed in pulsars exhibit the observed temperature and flux to be smaller than the actual value. The observed radius $R_\text{obs}$ can be described as follows \citep[p. 56][]{pulsar_handbook}:
 
 \begin{equation}
     R_\text{obs} = \frac{R}{\sqrt{1 - \frac{2GM}{Rc^2}}} = \frac{R}{ \sqrt{1 - \dfrac{R_s}{R}}}
 \end{equation}
 
 where $R$ is the pulsar's radius and $M$ is the gravitational mass, $G$ is the gravitational constant, $c$ is the speed of light and $R_s$ is the Schwarzschild radius. \
-The lower limit of the neutron star radius is described by \cite[p. 58][]{pulsar_handbook}: 
+The lower limit of the neutron star radius is described by \cite[p. 58,][]{pulsar_handbook}: 
 
 \begin{equation}
     R_\text{min} \simeq 1.5 \ R_s = \frac{3GM}{c^2} = 6.2 \ \text{km.} \left( \frac{M}{1.4 \smass} \right)
 \end{equation}
 
-Opposite to this the upper limit of the radius is obtained by requiring that there is stability against breaking up due to centrifugal forces. This gives \cref{eq:radius-max} following as described in \cite[p.~58]{pulsar_handbook}. 
+Opposite to this the upper limit of the radius is obtained by requiring that there is stability against breaking up due to centrifugal forces. This gives \cref{eq:radius-max} following as described in \cite[p.~58,]{pulsar_handbook}. 
 
 \begin{equation}
     R_\text{max} \simeq \left(\frac{GMP^2}{4 \pi^2}\right)^{1/3} = 16.8 \ \text{km} \left( \frac{M}{1.4 \smass} \right)^{1/3} \left( \frac{P}{\text{ms}} \right)^{2/3}
@@ -66,7 +100,7 @@ Opposite to this the upper limit of the radius is obtained by requiring that the
 Most pulsars are theoretically thought to have radii in the range of 10–15 km \citep{lattimer_neutron_2001}, giving them the unique position of `almost' black holes. 
 
 \subsubsection{Spin Evolution}
-One of the unique characteristics of pulsars is the spinning that they exhibit. Understanding the spin evolution gives insight into many parameters of the pulsars, most notably the stage of their evolution. Pulsars begin their life in the upper end of the $P-\dot P$ diagram and slowly move down and to the right as they age due to a loss in rotational energy, commonly referred to as spin-down luminosity. The spin-down ($\dot E$) is described as follows \citep[p.~59]{pulsar_handbook}:
+One of the unique characteristics of pulsars is the stable spinning that they exhibit. Understanding the spin evolution gives insight into many parameters of the pulsars, most notably the stage of their evolution. Pulsars begin their life in the upper end of the $P-\dot P$ diagram and slowly move down and to the right as they age due to a loss in rotational energy, commonly referred to as spin-down luminosity. The spin-down ($\dot E$) is described as follows \citep[p.~59]{pulsar_handbook}:
 
 \begin{equation}
 \dot E = - \frac{dE_{\text{rot}}}{dt} = 4\pi^2 I \dot P P^{-3}
@@ -75,7 +109,147 @@ One of the unique characteristics of pulsars is the spinning that they exhibit. 
 
 Where $I$ is the moment of inertia. It is important to note that the energy loss that is converted into radio emission is almost negligible in comparison to the total energy loss from spin down. 
 
-% \subsubsection{Radio Emission Beam}
+
+
+\begin{figure}
+    \centering
+    
+% Gradient Info
+  
+\tikzset {_b7urw0nmt/.code = {\pgfsetadditionalshadetransform{ \pgftransformshift{\pgfpoint{89.1 bp } { -128.7 bp }  }  \pgftransformscale{1.32 }  }}}
+\pgfdeclareradialshading{_13slwbilv}{\pgfpoint{-72bp}{104bp}}{rgb(0bp)=(1,1,1);
+rgb(0bp)=(1,1,1);
+rgb(13.303571428571429bp)=(0.29,0.56,0.89);
+rgb(25bp)=(0.29,0.56,0.89);
+rgb(400bp)=(0.29,0.56,0.89)}
+\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+
+\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+%uncomment if require: \path (0,493); %set diagram left start at 0, and has height of 493
+
+%Straight Lines [id:da38363088317383476] 
+\draw [color={rgb, 255:red, 144; green, 19; blue, 254 }  ,draw opacity=1 ]   (250.5,229.7) -- (256.04,220.03) ;
+%Shape: Ellipse [id:dp9914440333304434] 
+\draw   (179.87,271.26) .. controls (164.59,262.03) and (162.89,236.85) .. (176.08,215.02) .. controls (189.26,193.19) and (212.34,182.97) .. (227.62,192.2) .. controls (242.91,201.43) and (244.6,226.61) .. (231.42,248.44) .. controls (218.23,270.27) and (195.16,280.49) .. (179.87,271.26) -- cycle ;
+%Shape: Ellipse [id:dp6157437923876483] 
+\draw   (158.9,287.33) .. controls (136.61,273.87) and (135.33,235.15) .. (156.05,200.85) .. controls (176.76,166.55) and (211.63,149.66) .. (233.92,163.12) .. controls (256.21,176.59) and (257.49,215.31) .. (236.78,249.61) .. controls (216.06,283.91) and (181.2,300.8) .. (158.9,287.33) -- cycle ;
+%Curve Lines [id:da9899638353513213] 
+\draw    (190.43,69.43) .. controls (225.93,90.93) and (273.79,162.5) .. (247.29,227) ;
+%Curve Lines [id:da06933799692472975] 
+\draw    (247.29,227) .. controls (272.14,184.29) and (267.43,92.64) .. (242.43,47.14) ;
+%Curve Lines [id:da5277380645681925] 
+\draw    (95.79,289.5) .. controls (128.71,303.43) and (192.14,308.29) .. (223.79,268) ;
+%Curve Lines [id:da20126645424680556] 
+\draw    (89.29,332) .. controls (134.79,336) and (193.29,303) .. (224.79,267) ;
+
+%Shape: Ellipse [id:dp6487454711329579] 
+\draw   (297.75,227.74) .. controls (312.88,237.22) and (314.17,262.42) .. (300.63,284.04) .. controls (287.09,305.65) and (263.85,315.49) .. (248.72,306.02) .. controls (233.59,296.54) and (232.3,271.33) .. (245.84,249.72) .. controls (259.38,228.1) and (282.62,218.26) .. (297.75,227.74) -- cycle ;
+%Shape: Ellipse [id:dp36152413663317895] 
+\draw   (318.98,212.01) .. controls (341.05,225.83) and (341.7,264.57) .. (320.43,298.53) .. controls (299.16,332.49) and (264.02,348.81) .. (241.95,334.99) .. controls (219.88,321.16) and (219.23,282.43) .. (240.5,248.47) .. controls (261.77,214.51) and (296.9,198.19) .. (318.98,212.01) -- cycle ;
+%Curve Lines [id:da02736810536598] 
+\draw    (283.92,429.37) .. controls (248.77,407.3) and (202.08,334.96) .. (229.62,270.9) ;
+%Curve Lines [id:da2985695210822137] 
+\draw    (229.62,270.9) .. controls (204.08,313.21) and (207.3,404.91) .. (231.56,450.81) ;
+%Curve Lines [id:da08898663491277148] 
+\draw    (382.12,210.87) .. controls (349.42,196.41) and (286.08,190.52) .. (253.79,230.29) ;
+%Curve Lines [id:da4426868615559254] 
+\draw    (389.31,168.48) .. controls (343.88,163.74) and (284.85,195.79) .. (252.77,231.27) ;
+
+%Shape: Ellipse [id:dp7587651696319248] 
+\draw   (194.59,262.25) .. controls (183.17,255.36) and (181.33,237.51) .. (190.46,222.38) .. controls (199.6,207.26) and (216.25,200.59) .. (227.67,207.48) .. controls (239.08,214.38) and (240.93,232.22) .. (231.79,247.35) .. controls (222.66,262.47) and (206,269.14) .. (194.59,262.25) -- cycle ;
+%Shape: Ellipse [id:dp5043940848797597] 
+\draw   (250.87,292.54) .. controls (239.46,285.64) and (237.61,267.79) .. (246.75,252.67) .. controls (255.88,237.55) and (272.54,230.87) .. (283.95,237.77) .. controls (295.37,244.66) and (297.21,262.51) .. (288.08,277.63) .. controls (278.95,292.76) and (262.29,299.43) .. (250.87,292.54) -- cycle ;
+%Shape: Ellipse [id:dp49566916871123834] 
+\draw   (138.5,84.25) .. controls (138.5,78.04) and (182.86,73) .. (237.58,73) .. controls (292.31,73) and (336.67,78.04) .. (336.67,84.25) .. controls (336.67,90.46) and (292.31,95.5) .. (237.58,95.5) .. controls (182.86,95.5) and (138.5,90.46) .. (138.5,84.25) -- cycle ;
+%Shape: Ellipse [id:dp14366228582765184] 
+\draw   (139.5,418.25) .. controls (139.5,412.04) and (183.86,407) .. (238.58,407) .. controls (293.31,407) and (337.67,412.04) .. (337.67,418.25) .. controls (337.67,424.46) and (293.31,429.5) .. (238.58,429.5) .. controls (183.86,429.5) and (139.5,424.46) .. (139.5,418.25) -- cycle ;
+%Straight Lines [id:da6981263900911397] 
+\draw [color={rgb, 255:red, 74; green, 144; blue, 226 }  ,draw opacity=1 ] [dash pattern={on 0.84pt off 2.51pt}]  (138.5,84.25) -- (138.85,201.5) -- (139.5,418.25) ;
+%Straight Lines [id:da9922580610483133] 
+\draw [color={rgb, 255:red, 74; green, 144; blue, 226 }  ,draw opacity=1 ] [dash pattern={on 0.84pt off 2.51pt}]  (336.67,84.25) -- (337.02,197.17) -- (337.37,315.99) -- (337.67,418.33) ;
+%Straight Lines [id:da43467933793885793] 
+\draw [color={rgb, 255:red, 245; green, 166; blue, 35 }  ,draw opacity=1 ][line width=1.5]    (237,124.38) -- (237,449.5) ;
+%Shape: Circle [id:dp7743787683864246] 
+\path  [shading=_13slwbilv,_b7urw0nmt] (214,248.5) .. controls (214,235.8) and (224.3,225.5) .. (237,225.5) .. controls (249.7,225.5) and (260,235.8) .. (260,248.5) .. controls (260,261.2) and (249.7,271.5) .. (237,271.5) .. controls (224.3,271.5) and (214,261.2) .. (214,248.5) -- cycle ; % for fading 
+ \draw   (214,248.5) .. controls (214,235.8) and (224.3,225.5) .. (237,225.5) .. controls (249.7,225.5) and (260,235.8) .. (260,248.5) .. controls (260,261.2) and (249.7,271.5) .. (237,271.5) .. controls (224.3,271.5) and (214,261.2) .. (214,248.5) -- cycle ; % for border 
+
+%Shape: Ellipse [id:dp6678939514396899] 
+\draw  [color={rgb, 255:red, 245; green, 166; blue, 35 }  ,draw opacity=1 ][line width=1.5]  (193,116.5) .. controls (193,112.63) and (212.36,109.5) .. (236.25,109.5) .. controls (260.14,109.5) and (279.5,112.63) .. (279.5,116.5) .. controls (279.5,120.37) and (260.14,123.5) .. (236.25,123.5) .. controls (212.36,123.5) and (193,120.37) .. (193,116.5) -- cycle ;
+%Shape: Triangle [id:dp7008864424559508] 
+\draw  [draw opacity=0][fill={rgb, 255:red, 245; green, 166; blue, 35 }  ,fill opacity=1 ] (257.54,122.87) -- (245.82,126.87) -- (245.74,119.13) -- cycle ;
+%Straight Lines [id:da07152047771162817] 
+\draw [color={rgb, 255:red, 128; green, 128; blue, 128 }  ,draw opacity=1 ]   (287.95,106.33) -- (251.95,215.63) ;
+%Shape: Ellipse [id:dp9464190443525655] 
+\draw  [color={rgb, 255:red, 128; green, 128; blue, 128 }  ,draw opacity=1 ][fill={rgb, 255:red, 155; green, 155; blue, 155 }  ,fill opacity=1 ] (287.95,106.33) .. controls (290.13,102.08) and (302.49,105.14) .. (315.57,113.17) .. controls (328.64,121.19) and (337.47,131.15) .. (335.29,135.4) .. controls (333.12,139.65) and (320.75,136.59) .. (307.68,128.56) .. controls (294.6,120.54) and (285.77,110.58) .. (287.95,106.33) -- cycle ;
+%Straight Lines [id:da5245367154596348] 
+\draw [color={rgb, 255:red, 128; green, 128; blue, 128 }  ,draw opacity=1 ]   (335.29,135.4) -- (261.61,221.56) ;
+%Shape: Ellipse [id:dp15187987326909236] 
+\draw  [color={rgb, 255:red, 128; green, 128; blue, 128 }  ,draw opacity=1 ][fill={rgb, 255:red, 155; green, 155; blue, 155 }  ,fill opacity=1 ] (251.95,215.63) .. controls (252.36,214.83) and (254.85,215.52) .. (257.51,217.15) .. controls (260.18,218.79) and (262.01,220.76) .. (261.61,221.56) .. controls (261.2,222.35) and (258.71,221.67) .. (256.04,220.03) .. controls (253.38,218.39) and (251.54,216.42) .. (251.95,215.63) -- cycle ;
+%Straight Lines [id:da1085717433066441] 
+\draw [color={rgb, 255:red, 144; green, 19; blue, 254 }  ,draw opacity=1 ]   (307.68,128.56) -- (256.78,218.59) ;
+%Straight Lines [id:da7505602953880446] 
+\draw [color={rgb, 255:red, 144; green, 19; blue, 254 }  ,draw opacity=1 ]   (311.34,122.54) -- (336.67,84.25) ;
+%Straight Lines [id:da06097220770212097] 
+\draw [color={rgb, 255:red, 144; green, 19; blue, 254 }  ,draw opacity=1 ]   (226.1,269.3) -- (219.83,279.03) ;
+%Straight Lines [id:da24912520344437916] 
+\draw [color={rgb, 255:red, 128; green, 128; blue, 128 }  ,draw opacity=1 ]   (188.81,384.81) -- (224.04,283.05) ;
+%Shape: Ellipse [id:dp7232283242836001] 
+\draw  [color={rgb, 255:red, 128; green, 128; blue, 128 }  ,draw opacity=1 ][fill={rgb, 255:red, 155; green, 155; blue, 155 }  ,fill opacity=1 ] (188.81,384.81) .. controls (186.65,388.77) and (174.07,386.1) .. (160.72,378.83) .. controls (147.36,371.56) and (138.28,362.44) .. (140.44,358.48) .. controls (142.6,354.51) and (155.18,357.19) .. (168.54,364.46) .. controls (181.9,371.73) and (190.97,380.84) .. (188.81,384.81) -- cycle ;
+%Straight Lines [id:da7716815214310155] 
+\draw [color={rgb, 255:red, 128; green, 128; blue, 128 }  ,draw opacity=1 ]   (140.44,358.48) -- (214.17,277.68) ;
+%Shape: Ellipse [id:dp4427912989615249] 
+\draw  [color={rgb, 255:red, 128; green, 128; blue, 128 }  ,draw opacity=1 ][fill={rgb, 255:red, 155; green, 155; blue, 155 }  ,fill opacity=1 ] (224.04,283.05) .. controls (223.63,283.79) and (221.1,283.19) .. (218.37,281.71) .. controls (215.65,280.23) and (213.77,278.42) .. (214.17,277.68) .. controls (214.58,276.94) and (217.11,277.54) .. (219.83,279.03) .. controls (222.56,280.51) and (224.44,282.31) .. (224.04,283.05) -- cycle ;
+%Straight Lines [id:da8295176742230209] 
+\draw [color={rgb, 255:red, 144; green, 19; blue, 254 }  ,draw opacity=1 ]   (168.54,364.46) -- (219.1,280.37) ;
+%Straight Lines [id:da9978428955273112] 
+\draw [color={rgb, 255:red, 144; green, 19; blue, 254 }  ,draw opacity=1 ]   (164.89,370.08) -- (130.88,430.38) ;
+%Straight Lines [id:da7471567917677897] 
+\draw [color={rgb, 255:red, 245; green, 166; blue, 35 }  ,draw opacity=1 ][line width=1.5]    (236.91,122.6) -- (236.91,58.47) ;
+%Curve Lines [id:da4594664597511673] 
+\draw    (397,208.67) .. controls (388.22,208.02) and (373.11,188.04) .. (339,188.43) ;
+\draw [shift={(336.33,188.5)}, rotate = 357.61] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
+%Curve Lines [id:da6880411637591326] 
+\draw    (364,245.33) .. controls (355.22,244.68) and (311.91,212.66) .. (277.31,218.94) ;
+\draw [shift={(274.67,219.5)}, rotate = 346.35] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
+
+% Text Node
+\draw (90.38,428.5) node [anchor=north west][inner sep=0.75pt]  [font=\small,color={rgb, 255:red, 144; green, 19; blue, 254 }  ,opacity=1 ] [align=left] {{\footnotesize Magnetic Axis}};
+% Text Node
+\draw (73.54,308.06) node [anchor=north west][inner sep=0.75pt]  [font=\small] [align=left] {{\tiny Open Field Lines}};
+% Text Node
+\draw (168.33,46.67) node [anchor=north west][inner sep=0.75pt]  [font=\small,color={rgb, 255:red, 245; green, 166; blue, 35 }  ,opacity=1 ] [align=left] {{\scriptsize Rotation Axis}};
+% Text Node
+\draw (57.67,89) node [anchor=north west][inner sep=0.75pt]  [font=\small,color={rgb, 255:red, 74; green, 144; blue, 226 }  ,opacity=1 ] [align=left] {{\footnotesize Light Cylinder}};
+% Text Node
+\draw (389.33,191.5) node [anchor=north west][inner sep=0.75pt]   [align=left] {\begin{minipage}[lt]{77.29pt}\setlength\topsep{0pt}
+\begin{center}
+{\scriptsize Outer Acceleration Gap}
+\end{center}
+
+\end{minipage}};
+% Text Node
+\draw (431,202.5) node [anchor=north west][inner sep=0.75pt]   [align=left] {\begin{minipage}[lt]{8.67pt}\setlength\topsep{0pt}
+\begin{center}
+\end{center}
+
+\end{minipage}};
+% Text Node
+\draw (357,233.17) node [anchor=north west][inner sep=0.75pt]   [align=left] {\begin{minipage}[lt]{75.71pt}\setlength\topsep{0pt}
+\begin{center}
+{\scriptsize Inner Acceleration Gap}
+\end{center}
+
+\end{minipage}};
+
+
+\end{tikzpicture}
+
+
+    \caption{Canonical pulsar toy model, figure recreated from \citep{pulsar_handbook}.}
+    \label{fig:pulsartoymodel}
+\end{figure}
+
+
 
 % Pulse width
 
@@ -117,7 +291,14 @@ Here $P_0$ is the initial period of the pulsar. Commonly an assumption is made t
     \tau_c \cong 15.8~\text{Myr} \left( \frac{P}{s} \right) \left( \frac{\dot P}{10^{-15}} \right)^{-1}
 \end{equation}
 
-The above estimation for a pulsars age is known to be inconsistent with theory to varying degrees. In cases where Supernovae has been observed and has produced a pulsar the age is known to a much higher degree of accuracy. The Crab pulsar is one such example with an observed Supernova event in 1054 AD by Chinese astronomers \citep{kaspi_chandra_2001}. %Supernoave remnants are also used to estimate the age of pulsars. 
+The above estimation for a pulsars age is known to be inconsistent with theory to varying degrees. In cases where Supernovae has been observed and has produced a pulsar the age is known to a much higher degree of accuracy. The Crab pulsar is one such example with an observed Supernova event in 1054 AD by Chinese astronomers \citep{kaspi_chandra_2001}. %Supernoave remnants are also used to estimate the age of pulsars.
+
+
+\subsubsection{Radio Emission}
+
+The mechanisms for which pulsars emit radio waves are still quite enigmatic. In the last 50 years there have been many proposed models that are both accepted and critiqued, with no overwhelming consensus on which is the most plausible. Full deliberation on the topic is out of the scope of this work (see \cite{melrose_pulsar_2021} for a review).
+
+As previously mentioned the magnetic flux during a CCSNe must be conserved and this is done through the dynamo effect and `frozen in' magnetic field lines in the neutron stars highly conductive plasma. 
 
 \subsubsection{Dispersion Measure} \label{sec:DispersionMeasure}
 
@@ -141,3 +322,17 @@ If is assumed to be $f_p \ll f$, $\mu$ can be approximated.
 \end{equation}
 
 Where $\mathcal{D}$ is the dispersion constant and $\text{DM}$ is the dispersion measure. Each are commonly expressed as follows, $\mathcal{D}= 4.15 \times 10^3 ~\text{MHz}^2 ~\text{pc}^{-1} ~ \text{cm}^3 ~\text{s}$ and $\text{DM} = \int^d_0 n_e ~dl ~\text{cm}^{-3} ~\text{pc}$. This definition was adapted from \citet[p.~86]{pulsar_handbook} and \cite{taylor_recent_1977}.
+
+\subsection{Summary of Pulsar Observables}
+
+Establishing a canonical pulsar model is one thing, but it is important to keep in mind that a lot of the values obtained for pulsars are completely model dependant and often used to quantify a comparison between pulsars, as discussed above. This section aims to summarise how directly certain attributes can directly or in-directly measured and in doing so will full illustrate the caveats in studying pulsars. 
+
+\subsection{Why study Pulsars?}
+
+Before concluding the discussion on pulsars it's important to highlight some motivations for studying pulsars outside the open questions about the objects themselves. 
+
+\subsubsection{Low Frequency Gravitational Wave Detection}
+
+\subsubsection{Gravitational Physics}
+
+\subsubsection{Accretion Physics}

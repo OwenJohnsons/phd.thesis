@@ -51,6 +51,8 @@
 
 % --- Tablestuff --- 
 \usepackage{multirow}
+\usepackage{diagbox}
+\usepackage{adjustbox}
 
 % --- Drawing --- 
 \usepackage{tikz}
@@ -67,7 +69,9 @@
 \pagestyle{fancy}
 \usepackage{titlesec} % - Chapter Headings 
 \usepackage{epigraph}
+\usepackage{longtable}
 \usepackage{booktabs}
+\usepackage{pdflscape}
 \setlength\epigraphwidth{.8\textwidth}
 \setlength\epigraphrule{1pt}
 
@@ -98,8 +102,16 @@
 \newcommand{\TLNA}{T_{\text{LNA}}}
 \newcommand{\Tspill}{T_{\text{spill}}}
 \newcommand{\Trec}{T_{\text{rec}}}
-\newcommand{\dm}{$\text{pc~cm}^{-3}$}
+\newcommand{\dm}{$\text{pc~cm}^{-3}~$}
+\newcommand{\dmn}{$\text{pc~cm}^{-3}$}
 \newcommand{\smass}{\, \text{M}_\odot}
+% Crab Paper Values 
+\newcommand{\tobs}{347.9}
+\newcommand{\epochs}{154}
+\newcommand{\GPn}{550,445}
+\newcommand{\GPhundred}{4,592}
+\newcommand{\cands}{1,048,138}
+\newcommand{\avgburstrate}{3390}
 
 
 % --- Chapter Title Setup --- 
@@ -216,22 +228,23 @@ Fortunately there are still many open questions about this wild and wondrous cos
 \input{chapter5/chapter5_SETI}
 \input{chapter6/chapter6_LOFTS}
 \input{chapter7/chapter7_lunar}
-
-\newpage
-\chapter{I-LOFAR Operations}
-\epigraph{\small\itshape “We the willing, led by the unknowing, are doing the impossible for the ungrateful. We have done so much with so little, for so long, we are now qualified to do anything, with nothing.” \raggedleft\par--- \textup{Mother Teresa}}
+\input{chapter8/chapter8_otherwork}
 
 \chapter{Conclusions \& Future Work}
 
 \newpage
 
 % Bibliography
-\bibliography{bibfiles/chapter1_intro,bibfiles/chapter3_redback,bibfiles/chapter5_seti,bibfiles/zotero}
+\bibliography{bibfiles/chapter1_intro,bibfiles/chapter3_redback,bibfiles/chapter5_seti,bibfiles/zotero,bibfiles/chapter4_crab,bibfiles/chapter6_lofts,bibfiles/chapter8_mars}
 
 % --- Appendices ---
 \newpage
 \appendix
-\input{appendices/useful-formula.tex}
+% \input{appendices/useful-formula.tex}
+\input{chapter3/acceleration_appendix}
+\input{chapter3/redback_appendix}
+\input{chapter4/crab_appendix}
 \input{chapter5/seti_appendix.tex}
+\input{chapter6/dedispersion_appendix}
 
 \end{document}

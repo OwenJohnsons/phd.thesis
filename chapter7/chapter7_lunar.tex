@@ -1,1 +1,196 @@
 \chapter{Radio Astronomy from the Lunar Farside} \label{chap:lunar}
+
+\section{Introduction}
+
+Radio transients have served as one of the primary drivers in research progress across radio astronomy. Key research areas include tests of general relativity, gravitational wave detection, compact object evolution and high energy particle physics to name a few, all of which rely on Earth based radio astronomy observations. While current generation facilities and next generation studies will continue to provide a myriad of discoveries in time domain astrophysics, there are some areas of study that require completely quiet radio environments and the absence of the ionosphere. \\ 
+The present lunar far-side environment at this time in history is in a unique place to avail of an environment free of radio frequency interference and isn't obstructed by the ionosphere. This opens up the opportunity to study these objects and unique frequencies below $30~\rm MHz$ and in the FM band $76 -108~\rm MHz$, which present an array of science cases. This memo aims to briefly highlight some of the key transient science cases and also analyse feasibility of the current proposed hardware specifications of the Lunar Farside Technosignautre and Transients Telescope (LFT3) which aims to launch before 2030. 
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=0.9\linewidth]{chapter7/figs/phase_space.png}
+    \caption{Transient Parameter Space figure adapted from \cite{pietka}. This plot illustrates the sensitivity regions of a LFT3 observational setup across different pulse widths (1~ms, 10~ms, 10~s and 100~s) up to 10~kpc on a $\nu \text{W}$ vs. $L_\nu$ phase diagram. Where $\nu \text{W}$ represents the product of observed frequency and pulse width and $L_\nu$ shows the spectral luminosity. The blue, green and red hashed regions correspond to a pulse width and show the detectable signal levels above a threshold of $5\sigma$ for the LFT3 bandwidth.}
+    \label{fig:placeholder}
+\end{figure}
+
+\section{Science Cases}
+
+The lunar farside offers a unique platform for studying and potentially detecting transient phenomenon. Unprecedented radio frequency interference isolation, unhindered opportunity to monitor during 14-day lunar nights, wide-field multibeam capability, and coverage of frequency bands inaccessible or severely inhibited from Earth. Five primary transient categories drive the science case: pulsars spanning millisecond to ultra-long periods, the enigmatic long-period transients that challenge conventional compact object models, Fast Radio Bursts (FRBs) requiring multiband spectroscopy to decode their emission physics, low-dispersion measure transients that probe the local neighbourhood, and solar system emission. This memo examines three science cases, searching for unknown transients, low-DM transients and Fast Radio Bursts. Individual memos on the aforementioned sources that are mentioned but not covered are available on \url{lft3.space}.
+
+\subsection{Blind Survey for Unknown Transients}
+
+The low-frequency radio sky, particularly 1--100~MHz, is one of astronomy's least probed ranges of the electromagnetic spectrum. Historically, this frequency range has been underexplored due to systematic and observational challenges. Primarily, the ionosphere reflects radio waves below $\sim 10~ \rm MHz$ and highly distorts radio waves up to $\sim 30~\rm MHz$. It is only in exceptional cases where the radio emission is very bright that it can be detected around the 30~MHz threshold \cite{zakharenko_detection_2013, zawdie_calculating_2017}. The global use of the FM band for radio stations also makes it infeasible to observe from Earth, eliminating a unique bandwidth that could otherwise be searched and used in wideband studies of transients. 
+Far side lunar observatories such as LFT3 present the first opportunities to map the sky and discover a potential unknown class of low-frequency transients. \\ 
+
+Historically, there have been surveys that have attempted to do a blind search for transients at very low frequencies. One recent survey of note was the LOFAR Multi-frequency Snapshot Sky Survey which looked near the North Celestial Pole for 35 hours at 60~MHz covering 175~deg$^2$, which found one astrophysical candidate \cite{stewart_lofar_2016}. This single detection implies the presence of a potentially new class of transients that is difficult to observe for a multitude of reasons from ground observatories. \\
+The Long Wavelength Demonstrator Array's all-sky survey at 73.8~MHz detected zero transients above a threshold of 500~Jy \cite{lazio_surveying_2010}. Similar surveys with the Murchison Widefield Array at 154~MHz also yielded similar null detections to a level of 5.5~Jy \cite{bell_survey_2014}. Yet sporadic detection of $\sim$kJy level events have been detected by the Long Wavelength Array's all-sky monitor \cite{obenberger_limits_2014} demonstrates that there is a population of bright transients that do exist, they just on rarer timescales to that of the cadence of sub 100~MHz frequency surveys. The success of projects like the {LOFAR} {Tied}-{Array} {All}-{Sky} {Survey} ({LOTAAS}) which discovered 100's of transients from 110--190~MHz further indicating the presence of transients at low frequencies. \\
+
+Due to the large amount of scattering that is present at lower frequencies, as shown in, \cref{fig:DDplan} finding fast transients becomes increasingly difficult. In recent years, the discovery of long period transients has opened up a new parameter space to explore. The 2022 discovery of GLEAM-X J0704-37 \cite{hurley-walker_radio_2022} and subsequent similar objects \cite{bloot_strongly_2025, men_highly_2025, wang_detection_2025} all detected within LFT3 observational bandwidth indicates with varying fluxes (see \cref{fig:sens_grids}) indicate that there will be a visible population from the lunar-far-side along with their exceptionally long burst durations, smearing at low frequencies and loss in signal-to-noise from DM mismatch will be a lot less significant (see \cref{fig:DDplan} and \cref{fig:DM-Trial}). \\ 
+
+These sources challenge conventional pulsar physics: standard models predict that neutron stars cease radio emission once rotational energy loss drops below thresholds for magnetospheric pair production, typically at spin periods exceeding 10–20 seconds. Yet, periods of LPTs are that of minutes to hours, occupying a parameter space that is forbidden by canonical pulsar models \cite{pulsar_handbook}. At present, there are many proposed models to include these objects within current theoretical framework. One proposed idea is that these objects are isolated magnetars with magnetic fields in excess of $10^{14}~\rm G$ \cite{men_highly_2025}. Alternatively, magnetic white dwarf binary systems could natural produce periods on this timescale to match their orbital periods, with radio emission powered by accretion streams rather than rotation. The discovery that several long-period transients possess red dwarf companions and exhibit spectral energy distributions peaking at optical wavelengths strengthens the white dwarf interpretation for at least a subset of the population \cite{de_ruiter_sporadic_2025, pelisoli_constraints_2025}. \\ 
+
+
+Another interesting population for LFT3 to observe are Galactic magnetars. At the time of writing there are around 30 of these objects confirmed with 6 of them exhibiting radio emission. The 20\% emitting fraction more than likely reflects observation bias in oppose to some intrinsic properties of magnetars, where most are discovered through higher energy X-ray and $\gamma$-ray emission. There is a proposed subset of `old' magnetars that are in excess of $10^{15}$ years old, where X-ray luminosity has greatly diminished below detection threshold but still may be good candidates for radio emission. \\ 
+
+In April 2020 there was a detection of an FRB-like burst from a Galactic magnetar, SGR 1935+2154. This burst had a fluence of 2.5~MJy~ms at 1.4~GHz, making it extraordinarily bright for a Galactic source and of energies typical of FRBs if the source was placed at an extragalactic distance. Subsequent radio observations of magnetar XTE J1810-197 revealed lower-energy radio bursts spanning five to six orders of magnitude below FRB 20200428D, suggesting a continuum of magnetar burst energies, with only the brightest examples detectable at extragalactic distances. Any detection of one of these objects from the lunar farside would be of significant scientific value. \\ 
+
+A blind survey from the lunar farside uniquely addresses this population, with the possibility for continuous 14 day observations at various integrations and cadences. Previous surveys would miss most of these sources, as they would need at least 10 hours of regular observations. LFT3 has the potential to take snapshot observations, as the lunar night's uninterrupted monitoring eliminates this selection bias entirely. 
+
+A common figure of merit of transient surveys is the speed to which they can be conducted, which is also important to consider in the context of lunar based missions that have significantly smaller operational lifespans than ground based observatories. Survey speed scales with as follows, $(A_e/T_{\rm sys})^2 \cdot \rm FoV$, where $A_e$ is the effective area and $T_{\rm sys}$ is the system temperature of the instrument. The resulting value is proportional to the rate which an instrument can cover independent sky positions to a fixed flux density (i.e. more sky to that depth per unit observing time). The use of the Phased Array Feed (PAF) on LFT3, which operates from 300 -- 3000~MHz with 10 beams that have a field of view of $4-60^\circ$ . This equates to survey speed values of $3.67 \times 10^{-1}$ to $2.02 \ \rm (m^2/K)^2 \ deg^2$ for LFT3's PAF, each of the instruments and their survey speed are illustrated in \cref{fig:sensitivity_plot}
+
+
+\subsection{Searching for low-DM Transients}
+
+One of the most potentially fruitful transient science goals of LFT3 could come from searching for low-DM transients. As the lunar farside will have one of the most pristine radio frequency interference (RFI) free environments (see Ashe et al. 2026) searching for low-DM transients is feasible. In the context of LFT3 `low-dm' events are considered to be $\lesssim10~\text{pc cm}^{-3}$. low dispersion measures correspond to very modest dispersive delays across that band and to path lengths of at most a few hundred parsecs through the InterStellar Medium (ISM).In other words, LFT3 will be able to probe the local neighbourhood \footnote{517~pc when looking at Galactic Centre \cite{cordes_ne2001i_2003}} for transients. Specifically nearby magnetars and neutron stars, possible white-dwarf binaries, and any FRB-like bursts within the solar neighbourhood. \\ 
+
+Observing low-DM's from the ground has been difficult to impossible depending on the observing frequency. One of the primary reasons for this is due to the presence of RFI making low-DM, high fluence bursts easier to confuse with RFI. In most survey cases, candidates at low-DM's are treated as interference by default. Couple this with the
+LFT3's unprecedented radio environment eliminates this constraint. No longer forced vetoing low-DM candidates a priori, and can instead design the search specifically around this parameter space. \\ 
+
+
+There are several outstanding questions already in the field that discovery of low DM transients at LFT3's highest frequencies could help answer. Counting FRB200428 and any similar detections the prevalence magnetars and how often they produce bright radio bursts could be constrained, using population models to infer a per-magnetar burst rate.  FRB~200428 has already demonstrated that at least some FRB-like bursts come from magnetars in the Milky Way at $\sim$GHz frequencies along with sources like XTE J1810-197 as previously mentioned.  Any nearby FRB-like bursts with $\mathrm{DM}  \lesssim 10~\text{pc cm}^{-3}$ would provide uniquely bright, local benchmarks for testing FRB emission models and for tying together the Galactic and extragalactic FRB populations. A low-DM sample that lacks obvious magnetar counterparts would directly probe alternative Galactic progenitors, such as old, radio-loud magnetars that are X-ray quiet, RRAT-like neutron stars, or compact white-dwarf systems.\\
+
+Operationally, LFT3 can implement a low-DM search on most science data products as outlined in Prabu et al. 2025 across its entire bandwidth. However, observing frequency will place a constraint on the range of pulse-widths that will be detectable especially at the lower part of the band where smearing is dominant, this is discussed in detail in \cref{sec:transientSpecs}. Any low-DM candidates that are present in LFT3's data will be analysed and treated as a separate class in the search pipeline and analysis. Coincidence across multiple beams of the phased array, and characteristic pulse morphologies can be used to confirm a sources' nature from RFI or instrumental effects.\\
+
+Over the nominal mission lifetime, even a few low-DM detections would have disproportionate impact. One or more FRB~200428-like bursts from Galactic magnetars would directly calibrate the Galactic FRB-like event rate and test whether such events are rare curiosities or a generic phase of magnetar evolution. A sample of very local low-DM bursts, or a stringent upper limit on their rate, would either reveal or tightly constrain the population of radio-loud but high-energy–quiet magnetars and other nearby compact objects. In all cases, the low-DM search naturally complements LFT3's broader wideband science programme. Nearby, high signal-to-noise events provide the local benchmarks against which the properties of the much larger cosmological FRB population can be interpreted.
+
+\subsection{Observations of FRBs}
+
+Taking the present population of extragalactic FRBs known from the CHIME catalog \cite{collaboration_first_2021} the science case for LFT3 is limited. The main constraint for FRB science from the lunar far-side lies more with the pulse broadening effects seen at extragalactic distances. Here scattering  along the line of sight to LFT3 from an FRB will dwarf the emission duration and cause too much smearing to be detectable \citep{bhat_clean-based_2003}. This effect limits observations of FRBs based on observing frequency and burst duration. This scattering, coupled with the typically steep sensitivity requirements imposed by the resulting pulse broadening, implies that no currently known extragalactic FRB in the CHIME population would be detectable.\\ 
+
+Nevertheless, this parameter space remains as a reasonable science goal. An extragalactic detection of an FRB in the LFT3 band would imply an intrinsically bright burst with interesting scattering properties that if seen across a large fraction of the observing band would provide valuable science. Conversely, continued non-detections would place meaningful limits on the low-frequency transparency of FRB emission and help distinguish between intrinsic spectral turnover and propagation-induced suppression.\\
+
+While the present known extragalactic population is inaccessible as mentioned there is an analogous population of FRBs from Galactic magnetars remain viable targets, like FRB 20200428. there have been several initiatives to try and detect this population such as STARE\cite{bochenek_stare2_2020}, which did detect 20200428 and more recently GReX \citep{shila_grex_2025}. LFT3 would be a more sensitive version of these instruments coupled with a better observing environment. 
+
+% \subsection{Survey Merits}
+
+
+\section{LFT3's Transient Capabilities} \label{sec:transientSpecs}
+
+The aim of this section is to place some limits on the observing capabilities of LFT3 given the current proposed mission specs, starting with sensitivity independent restrictions such as sky temperature and dispersion, then discussing the missions transient prospects through the radiometer equation. Finally, \cref{sec:pop_syn} will make some estimates on the detectability of overall populations of transients.  
+
+\subsection{De-dispersion}
+
+Dispersion Measure (DM) measures the total column density of free electrons encountered by radio waves on the way to the observer, expressed as $\text{DM} =\int n_e \ dl$. DM causes a time delay in the arrival of the radio wave based on its frequency, which can be expressed as $\Delta t = \text{DM}/(\mathcal{D}\nu^2)$. Where $\mathcal{D \simeq}~2.41\times10^{-4}~\text{MHz}^{-2}$ known as the dispersion constant and $\nu$ is the observing frequency \cite{kulkarni_dispersion_2020}. \\
+
+For fast transients (FRBs, LPTs, RRATs and Pulsars) the data must be de-dispersed to account for pulse broadening that occurs due to propagation through the ISM caused by DM. Without these corrections, pulses would be smeared, resulting in a loss of signal-to-noise and in most cases a non-detection of a detectable pulse. The contributing effects up to a DM of 50 \dm are shown in \cref{fig:DDplan}. In this figure, the inherent factors from de-dispersion and the scattering contributions are shown as a function of DM. Contributions from intra-channel smearing and scattering are also functions of frequency as well as DM. Here, the most severe values of smearing are taken, which is the lowest frequency channel. Incoherent de-dispersion corrects dispersion after channelisation and thus leaves residual intra-channel smearing, whereas coherent de-dispersion removes dispersion in the voltage domain and can in principle recover the intrinsic pulse shape. However, coherent de-dispersion can only be done for transients of a known DM as coherent de-dispersion across an entire band is computationally infeasible. For a more in-depth discussion, appendix A in Johnson et al. (2026). \\
+
+\begin{figure}[b]
+    \centering
+    \includegraphics[width=0.98\linewidth]{chapter7/figs/snrDMcurves.pdf}
+    \caption{Relative signal-to-noise ratio as a function of trial dispersion measure offset $(\Delta \rm DM)$ for HF, VHF, and UHF observations, showing the pulse width criterion, $w_0$ for each band along with standard pulse widths for comparison. }
+    \label{fig:DM-Trial}
+\end{figure}
+
+When blind searching for new transients, it is also important to consider the DM value that is being de-dispersed relative to the true DM of the source. \Cref{fig:DM-Trial} shows the relative S/N drop off as a function of $\Delta \rm DM$ relative to the true DM for each of the LFT3 instruments. Observing frequency and pulse width dominate the contributions to the relative loss in S/N making it more computationally intensive to do blind searching at lower frequencies due to the smaller $\Delta \rm DM $ trial sizes needed. The higher amount of trial values  \\
+
+In the case of longer transients like LPTs, there is a pulsed width criterion where the pulse-width is sufficient that de-dispersion isn't necessary, which decreases as a function of frequency. The pulse width values, denoted $w_0$ are 7692.65, 91.63 and 1.38 seconds for the HF, UHF and VHF respectively. This means that the lower in frequency the observations are made with LFT3, the longer the pulse width will need to be to account for smearing and incorrect DM trial. This makes blind searching for `fast' transients at conventional DMs infeasible at the lowest frequencies of LFT3 band. 
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{c|cc|cc|cc}
+\hline
+ & \multicolumn{2}{c|}{HF} 
+ & \multicolumn{2}{c|}{VHF} 
+ & \multicolumn{2}{c}{UHF} \\
+DM 
+ & $\mathrm{DM}_{\mathrm{incoh}}$ [ms] 
+ & $\mathrm{DM}_{\mathrm{coh}}$ [ms]
+ & $\mathrm{DM}_{\mathrm{incoh}}$ [ms] 
+ & $\mathrm{DM}_{\mathrm{coh}}$ [ms]
+ & $\mathrm{DM}_{\mathrm{incoh}}$ [ms] 
+ & $\mathrm{DM}_{\mathrm{coh}}$ [ms] \\
+\hline \hline 
+10 & $2.307\times10^{7}$ & $1.817\times10^{5}$ & 189.9 & 0.9662 & 1.831 & 0.007697 \\
+20 & $4.614\times10^{7}$ & $1.930\times10^{5}$ & 379.7 & 0.9677 & 3.227 & 0.007700 \\
+30 & $6.909\times10^{7}$ & $2.274\times10^{5}$ & 568.6 & 0.9724 & 4.702 & 0.007709 \\
+40 & $9.216\times10^{7}$ & $3.090\times10^{5}$ & 758.5 & 0.9836 & 6.209 & 0.007731 \\
+50 & $1.152\times10^{8}$ & $4.747\times10^{5}$ & 948.3 & 1.0061 & 7.727 & 0.007777 \\
+\hline
+\end{tabular}
+\caption{Incoherent and coherent DM smearing times for HF, VHF, and UHF bands. The value shown in the middle of the band.}
+\end{table}
+
+
+
+\subsection{Sensitivity}
+
+The detectability of low‑frequency radio sources depends jointly on the structure of the Galactic radio background and the intrinsic performance of the receiving system. At the frequencies relevant to LFT3, both the sky temperature and the instrumental response vary strongly with frequency and sky position, so it is essential to model the frequency–dependent sky brightness and the corresponding instrument sensitivity in a consistent framework before interpreting survey yields.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.9\linewidth]{chapter7/figs/band_senstivity.pdf}
+    \caption{A three panel plot showing the entire LFT3 band in MHz plotted against $A_e/T_{\mathrm{sys}}$, SEFD and survey merit for each respective instrument.}
+    \label{fig:sensitivity_plot}
+\end{figure}
+
+\subsubsection{Sky Temperature}
+For frequencies that are greater than an order of 10~MHz, the centre of the Galactic plane is brighter than nearer the poles \cite{manning_galactic_2001}. This occurs because synchrotron emission from relativistic electrons in the Galactic magnetic field dominates at these frequencies, concentrating brightness along the denser plane and toward the centre. As the observing frequency decreases toward a few megahertz, free-free absorption by the warm ionized medium increasingly suppresses emission along longer sight lines through the disk. \\ 
+
+This variation disappears around 5~MHz, becoming more equivocal, then at ultra low frequencies around a MHz the opposite is true, the poles are brighter to oppose to the centre of the plane. Here, the competing effects of synchrotron emission and absorption produce a nearly isotropic sky, with minimal contrast between plane and poles. The transition reflects the optical depth through the Galactic disk approaching unity. \\
+
+Then at ultra low frequencies around a MHz the opposite is true, the poles are brighter to oppose to the centre of the plane. At these wavelengths, free-free optical depth becomes so high that the inner plane is heavily absorbed, inverting the high-frequency pattern and making high-latitude regions appear brighter. This reversal is key for interpreting low-frequency radio observations. \\ 
+
+Modern legacy surveys of the sky temperature have been limited on Earth as previously mentioned. LFT3 would provide one of the first modern opportunities to obtain all-sky measurements at 30~MHz and below. By mapping the frequency at which the Galactic plane transitions from emission-dominated to absorption-dominated, LFT3 could place direct constraints on the distribution of thermal electrons, the free-free optical depth of the warm ionized medium, and the large-scale structure of the Galactic magnetic field.
+% Legacy surveys .... LFT3 could take measurments .... referencee etc 
+
+\subsubsection{Instrument Sensitivity}
+
+Instrument sensitivity sets the fundamental limit on the faintest sources that can be detected in each LFT3 band, and therefore directly constrains the observable transient population and survey volume. In practice, this sensitivity is governed by the ratio of effective collecting area to total system temperature, which varies strongly with observing frequency, sky position, and hardware configuration. The best way to quantify these effects is using radiometer equation and estimated values for $A_e/T_{\rm sys}$ which is plotted along with System Equivalent Flux Density (SEFD) in \cref{fig:sensitivity_plot}. The minimum detectable flux density per channel, $(S_{\rm min, chan}$, in Jy) is calculated using, \cref{eq:radiometer_equation} which is an adapted form of the radiometer equation (?). 
+
+
+\begin{equation}
+\begin{split}
+S_{\min,\rm{chan}}(f, l, b) = \frac{\left[ T_{\text{sky}}(l,b) + T_{\text{int}}(f) \right] \cdot 2 k_B}{A_{\text{eff}}(f)} \cdot \beta  \times \frac{\text{S/N}_{\min}}{\sqrt{n_p\, t_{\text{obs}}\, B_{\text{channel}}}} \cdot \tau_{\rm width}
+ \label{eq:radiometer_equation}
+\end{split}
+\end{equation}
+
+
+Here, $f$ is the observing frequency, $T_{\text{sky}}(l, b)$ is the sky temperature at Galactic coordinates $(l, b)$, and $T_{\text{int}}(f)$ is the internal system temperature. $A_{\text{eff}}(f)$ is the effective collecting area of the telescope, $k_B$ is the Boltzmann constant, and $\beta$ is a factor accounting for system losses such as digitisation. $n_p$ is the number of summed polarisations, and $B_{\text{channel}}$ is the width of an individual frequency channel. When dealing with a periodic source, $\tau_{\rm width}$ can be replaced $\sqrt{{W}/({P - W})}$ where $P$ is the period and $W$ is the effective-observed pulse width.% Each individual channel $S_{\text{min}}$ is calculated with a boolean mask applied to account for RFI contamination, which is taken to be averages found in the band. 
+The collective $S_\text{min,chan}$ for each observation is calculated using quadrature method as shown below:  
+
+\begin{equation}
+    S_{\min}(f, l, b) = \left[ \sum_f \frac{1}{S_{\min}(f, l, b)^2} \right]^{-1/2}
+    \label{eq:quadrature}
+\end{equation}
+
+Using the outlined method, minimum flux measurements can be attained for each of the proposed\footnote{Instrument specifications used are those as detailed in the LFT3 White Paper} observing instruments on LFT3. \Cref{fig:sens_grids} shows $S_{\rm min, total}$ as a function of pulse width. The detectable flux decreases for narrower pulses and higher instrumental sensitivity, consistent with radiometer equation scaling.
+
+\begin{table}
+\centering
+\label{tab:smin_freqs}
+\begin{tabular}{lccccccc}
+\hline
+Band & $\nu_{\rm bot}$ (MHz) & $\nu_{\rm top}$ (MHz) & $\nu_{\rm res}$ (MHz) & Bandwidth (MHz) & Beam size & $T_{\mathrm{sys,ctr}}$ (K) & $S_{\min,\,10~\text{ms}}$ (kJy) \\
+\hline
+HF      & 0.1    & 50   & 0.5 & 50   & $45^\circ$--$90^\circ$ & 0.00 & 121.558 \\
+VHF  & 60   & 250  & 0.5 & 190   & $80^\circ$             & 0.00 & 10.879 \\
+UHF  & 300  & 2700  & 0.5 & 2400  & $4^\circ$--$60^\circ$  & 0.00 & 0.406 \\
+\hline
+\end{tabular}
+\caption{Summary of instrument band properties and corresponding minimum detectable flux densities. 
+For each band, the lower and upper frequency limits ($\nu_{\rm bot}$ and $\nu_{\rm top}$), channel frequency resolution ($\nu_{\rm res}$), total processed bandwidth, approximate beam size across the band, and the average $A_e/T_{\rm sys}$ across the band. 
+The final column gives the minimum detectable flux density $S_{\min}$ for a 10\,ms pulse, assuming the adopted signal-to-noise threshold and radiometer equation scaling.}
+\end{table}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.9\linewidth]{chapter7/figs/LFT3_smin_grids.pdf}
+    \caption{Minimum detectable flux density $S_{\min}$ as a function of pulse width and effective sensitivity $A_\mathrm{e}/T_\mathrm{sys}$ for HF, VHF and UHF (left to right). The colour scale shows $S_{\min}$ in Jy on a logarithmic scale. Dashed contours indicate fixed fractions of the maximum $S_{\min}$ within each panel. For each instrument, the effective sensitivity axis is constructed by scaling the median band-averaged $A_\mathrm{e}/T_\mathrm{sys}$ while preserving the intrinsic frequency dependence across the observing band. 
+}
+    \label{fig:sens_grids}
+\end{figure}
+
+
+
+\section{Population Synthesis} \label{sec:pop_syn}
+
+Taking the sensitivity limits for the LFT3 proposed bands, it's possible to try to infer the percentage of underlying transient population that LFT3 could detect using psrpoppy (?). Nominal priors for Galactic spatial distribution, luminosity function, spectral index and beam geometry are used. The intrinsic period distribution was replaced with a flat distribution, with periods spanning 1–540 minutes. A population of pulsars is generated from this, and then the radiometer equation tailored to LFT3’s observational setup is used to estimate the proportion of the population that is detectable. Based on the simulated population, LFT3 will be able to detect X\% of the population in the plane and X\% of the population out of the plane. Extrapolated to a full-sky Galactic population, this corresponds to a potential upper limit of $\sim 400$ detectable transients, assuming 100\% on-time and ideal detectability within the relevant age range. \\ 
+
+Lunar observations can then be used to place the first quantitative limits on sky density in this frequency space. Observations can be used to constrain the differential surface density $(dn/d\Omega)$. This is done by generating a sky map of effective exposure and sensitivity across multiple pulse widths and DMs. 
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.5\linewidth]{chapter7/figs/popsim.png}
+    \caption{Placeholder}
+    \label{fig:popsim}
+\end{figure}

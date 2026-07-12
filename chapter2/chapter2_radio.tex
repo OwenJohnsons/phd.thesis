@@ -1,4 +1,7 @@
-\chapter{Tools of Radio Astronomy}
+\chapter{Tools of Radio Astronomy} \label{chap:radioastro}
+
+\epigraph{\small\itshape “You are the vast thing that you see far, far off with great telescopes.” \raggedleft\par--- \textup{Alan Watts}}
+
 
 Radio astronomy found its beginning at Bell labs when Karl Janksy announced in 1933 the discovery of radio emission coming from the Milky Way when observing the atmosphere at 20~MHz \citep{jansky_radio_1933}. This was soon expanded upon by Grote Reber, who built a radio telescope in his backyard and made deliberate observations of many radio bright objects, publishing them in astronomical journals \citep{reberPapers1923}. Radio transmitters and receivers made great strides during the war years due to the development of radar equipment for military purposes. In the following years many who had developed these technologies, turned to study the `noise' that was picked up from extraterrestrial sources, forming the foundation of modern radio astronomy. 
 
@@ -7,8 +10,8 @@ The radio window from the Earth's surface extends roughly from 30~MHz $(\lambda\
 \begin{equation}
 \frac{\nu_{\mathrm P}}{\mathrm{kHz}}
 =
-8.97\,
-\sqrt{\dfrac{N_{\mathrm e}}{\mathrm{cm}^{-3}}}
+8.97
+\sqrt{\dfrac{N_{\mathrm e}}{\mathrm{cm}^{-3}}}\;.
 \end{equation}
 
 Where $N_{\mathrm{e}}$ is the electron density of the plasma. There are also other contributions that effect this, such as solar activity which make this limit variable. This means that to study kHz frequencies or for an unrefracted view of $\lesssim 30~\mathrm{MHz}$ the radio sky must be observed from space. The upper radio limit isn't observed at any single wavelength, but considerations become important at mm wavelengths as resonant absorption comes into effect from the lowest rotation band of molecules in the troposphere \citep{WilsonToolsofRadioastron}. This is mainly attributed to water vapour $\mathrm{H}_2\mathrm{O}$ and $\mathrm{O_2}$, adsorption also occurs at higher frequencies, but here the atmosphere is opaque to radio waves. Around 300~GHz is considered to be the upper limit in a radio context where atmospheric absorption at sea level becomes very strong, with additional losses from clouds and rain, these effects are so prevalent that mm observatories are constructed at high altitudes. The work in this thesis is carried out from $0.1-4032~\mathrm{MHz}$. 
@@ -794,6 +797,7 @@ Here a frequency dependence is introduced for collecting area, as for any antenn
 \begin{equation}
 \boxed{
 S_{\min} (f, l, b) = \frac{1}{B_{\text{total}}} \sum_{f} \left(  \frac{\left[ T_{\text{sys}}(l,b) + T_{\text{int} }(f) \right] \cdot 2 k}{A_{\text {eff} }(f)} \cdot \beta  \quad  \cdot \frac{\text{S/N}_{\text{min}}}{\sqrt{n_p t_{\text{obs}} B_{\text{channel}}}} \sqrt{\frac{W}{P - W}} \right) \Delta f}
+\label{eq:radiometer_equation}
 \end{equation}
 
 
@@ -997,7 +1001,7 @@ One unique thing about aperture arrays is that each beamlet can be individually 
 
 The Irish LOFAR (I-LOFAR) station is based at the Rosse Observatory in Birr Castle, Co. Offaly about 140~km south west of Dublin. It was built by a group of students in the Summer of 2017, with first light in July of that year. Officially joining the LOFAR array as the most western station and longest baseline pair. 
 
-LOFAR as an array operated in two different modes, an international and local mode. The international mode uses all 52 stations to form one coherent telescope. Observing time on the entire array is allocated through a peer reviewed cycle process similar to most other international facilities. However, for up to 3 days a week the stations are returned to the host institutions for what is known as `local mode'. In this mode the international stations can act independently and carry out observations on targets at the discretion of each station's consortium. Each international stations are powerful telescopes in their own right. 
+LOFAR as an array operated in two different modes, an international and local mode. The international mode uses all 52 stations to form one coherent telescope. Observing time on the entire array is allocated through a peer-reviewed cycle process similar to most other international facilities. However, for up to 3 days a week the stations are returned to the host institutions for what is known as `local mode'. In this mode the international stations can act independently and carry out observations on targets at the discretion of each station's consortium. Each international stations are powerful telescopes in their own right. 
 
 The biggest shortcoming of local mode observations is the lack in resolution when imaging due to the small baselines of 10's of meters. As a result the main science products from local mode come from dynamic spectra mainly pertaining to transient searches, pulsar timing, solar system emission and the sun.  
 
@@ -1028,7 +1032,7 @@ The following sections briefly highlight instrumentation used at other observing
 
 \subsection{Murriyang at Parkes}
 
-Murriyang is the name given to the iconic 64~m Parkes telescope by the Wiradjuri Elders, the name represents the `Skyworld'. The telescope is located in New South Wales Australia and was originally completed in 1961 since then Murriyang has made major contributions to both the field of radio astronomy and spaceflight. For example, in 2019 Murriyang celebrated the 50th anniversary of broadcasting humankind's first steps on the Moon. Parkes is a prime-focus parabolic reflector. At the time of writing there are currently 4 receivers available for observation on request which can be placed manually at prime focus.
+Murriyang is the name given to the iconic 64-m Parkes telescope by the Wiradjuri Elders, the name represents the `Skyworld'. The telescope is located in New South Wales Australia and was originally completed in 1961 and since then Murriyang has made major contributions to both the field of radio astronomy and spaceflight. For example, in 2019 Murriyang celebrated the 50th anniversary of broadcasting humankind's first steps on the Moon. Parkes is a prime-focus parabolic reflector. At the time of writing there are currently 4 receivers available for observation on request which can be placed manually at prime focus.
 
 \begin{figure}[h]
     \centering
@@ -1036,7 +1040,7 @@ Murriyang is the name given to the iconic 64~m Parkes telescope by the Wiradjuri
     \caption{The the 64m Murriyang telescope at Parkes radio observatory in New South Wales, Australia, image credited to CSIRO/A. Cherney}
 \end{figure}
 
-\begin{table}
+\begin{table}[h]
 \centering
 \caption{Current receiver suite for the Parkes (Murriyang) 64-m radio telescope. In \cref{chap:redback}, data from the UWL is used.}
 \label{tab:parkes_receivers}
@@ -1059,7 +1063,7 @@ MARS      & $\sim$20--30 GHz & --- & --- \\
 \subsection{Green Bank Telescope}
 
 The Robert C. Byrd Green Bank Telescope (GBT) is the largest steerable object in the world and the second largest moveable object in the world behind the Chernobyl new safe confinement structure over reactor 4. First light took place in 2000, since GBT has been operating as one of the world's leading single dish telescopes. It is based in Green Bank, West Virginia in the United States. 
-There are numerous feeds installed on GBT. The telescope features a Gregorian design, which is equipped with rotating turret with 8 reciever bays. There is also three recievers at prime focus. The details of the instruments at the time of writing are shown in \cref{tab:GBTreceivers}. 
+There are numerous feeds installed on GBT. The telescope features a Gregorian design, which is equipped with rotating turret with 8 reciever bays. There are also three recievers at prime focus. The details of the instruments at the time of writing are shown in \cref{tab:GBTreceivers}. 
 
 \begin{figure}[h]
     \centering
@@ -1117,7 +1121,7 @@ MUSTANG-2 & 75--105 GHz    & --- & --- \\
 
 \subsection{NenuFAR}
 
-The New Extension in Nançay Upgrading LOFAR (NenuFAR) is located at the Naçay radio observatory in France. Located next to the French LOFAR station. NenuFAR operates at the same frequencies as the LBAs but uses a different design for its antennas and amplifiers (see. \cref{fig:chap2nenufar}). The  antennas were intially manufactured for the Long Wavelength Array (LWA) in Owen's Valley, with the novel amplifiers designed in Naçay.  The station shares much of the same electronics and systems as a standard LOFAR stations, so the description outlined above can also be applied here. The combination of both the antennas and the amplifiers translated to a flatter response curve than that of the LBAs. At present there are X out of a planned 96 array core constructed. Similarly, to LOFAR's core there are also remote stations called mini arrays (MAs) surrounding NenuFAR. Each MA consists of 19 antennas and is placed up to 3~km from the NenuFAR core. The telescope can also be used in tandem with the LOFAR array to add NenuFAR's sensitivity along with the other stations.  
+The New Extension in Nançay Upgrading LOFAR (NenuFAR) is located at the Naçay radio observatory in France. Located next to the French LOFAR station. NenuFAR operates at the same frequencies as the LBAs but uses a different design for its antennas and amplifiers (see. \cref{fig:chap2nenufar}). The  antennas were intially manufactured for the Long Wavelength Array (LWA) in Owen's Valley, with the novel amplifiers designed in Nançay.  The station shares much of the same electronics and systems as a standard LOFAR stations, so the description outlined above can also be applied here. The combination of both the antennas and the amplifiers translated to a flatter response curve than that of the LBAs. At present there are X out of a planned 96 array core constructed. Similarly, to LOFAR's core there are also remote stations called mini arrays (MAs) surrounding NenuFAR. Each MA consists of 19 antennas and is placed up to 3~km from the NenuFAR core. The telescope can also be used in tandem with the LOFAR array to add NenuFAR's sensitivity along with the other stations.  
 
 \begin{figure}[h]
     \centering

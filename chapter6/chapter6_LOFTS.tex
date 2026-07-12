@@ -95,13 +95,14 @@ Observations are executed using iLiSA, which records received UDP packets of bea
 
 Radio frequency interference (RFI) plagues all modern radio astronomy data. To best clean the data for use in this survey, first averaged spectra were taken every 10\% ($\sim 8~\rm mins$) of the observation and compared to an ideal HBA band-pass. Local and global statistical features are identified and using iterative isolation forest method to identify anomalous frequency channels \nref. These channels are then masked permanently. In preparation for acceleration searches, the data is further cleaned using \textsc{rfifind} \citep{ransom_new_2001} where any temporal or frequency anomalies that are above $6\sigma$ for more than 60\% of each 10-second chunk are marked as RFI. The masked used for this process for both the international stations can be viewed here. 
 
-\begin{figure*}
+\begin{landscape}
+\begin{figure}[p]
     \centering
     \includegraphics[width=0.85\linewidth]{chapter6/figures/RFI-mask.png}
     \caption{The RFI mask applied non-technosignauture searches, top IE613, bottom SE607. Blue is the average spectrum in $\sim8$ minute chunks from all full-band LOFTS observations. The black is the `ideal' response from an international station which is used for cross-correlation.}
     \label{fig:RFI-mask}
-\end{figure*}
-
+\end{figure}
+\end{landscape}
 
 \subsection{De-dispersion} \label{sec:DDisperse}
 
@@ -122,7 +123,7 @@ Using the Breakthrough Listen Interesting Signal Search (\textsc{BLISS})\footnot
 
 \subsubsection{Periodic Technosignatures}
 
-{\color{blue}
+
 \subsubsection{Deep Learning-Based Coincidence Matching} \label{sec:ml_rfi}
 
 In addition to the standard Doppler-drift searches described in \S 3.1.1, we employ a deep learning framework to automate dual-site coincidence matching using Siamese Networks \citep[e.g.][]{Bromley1993, Koch2015}. Unlike traditional pipelines that rely on precise geometric alignment or strict feature engineering, this approach utilizes a Siamese U-Net architecture to learn a generalized metric of signal similarity. 
@@ -130,7 +131,7 @@ In addition to the standard Doppler-drift searches described in \S 3.1.1, we emp
 The model ingests time-synchronized filterbank crops from both the Irish and Swedish stations. Using a U-Net backbone, the architecture preserves the high-fidelity time-frequency structure of the signal during feature extraction. These features are projected into a shared 512-dimensional latent space. By training on a contrastive loss function, the network learns to minimize the Euclidean distance between matched astrophysical signals while maximizing the distance for local RFI. 
 
 This method moves beyond simple pixel-wise cross-correlation; it learns to identify signals as ``matching'' even when they exhibit minor morphological differences due to scintillation or local noise conditions. Preliminary validation, performed using synthetic narrowband and pulsed signals injected into real LOFAR observational backgrounds, demonstrates a distinct bimodal separation in the latent space for signals with Signal-to-Noise Ratios (SNR) ranging from 1.5 to 10, offering a robust framework for automated RFI rejection in future survey passes.
-}
+
 
 %------------------------
 
@@ -153,7 +154,7 @@ When considering the minimum detectable flux density that an international stati
 \begin{equation}
 \begin{split}
 S_{\min,\rm{chan}}(f, l, b) &= \frac{\left[ T_{\text{sky}}(l,b) + T_{\text{int}}(f) \right] \cdot 2 k_B}{A_{\text{eff}}(f)} \cdot \beta \\ & \times \frac{\text{S/N}_{\min}}{\sqrt{n_p\, t_{\text{obs}}\, B_{\text{channel}}}} \cdot \sqrt{\frac{W}{P - W}}
- \label{eq:radiometer_equation}
+ % \label{eq:radiometer_equation}
 \end{split}
 \end{equation}
 
@@ -174,3 +175,5 @@ Results go here ...
     \caption{Comparison of our study (highlighted in red) to prior surveys. The plot presents the transmitter rate vs. EIRP, with the gray line indicating the transmitter rate as a function of EIRP. A solid vertical grey line illustrates the energy surplus of a Kardashev Type-I civilisation. Additionally, a dotted–dashed gray line depicts the EIRP of the Arecibo planetary radar. The gray thick line shows the slope of the transmitter rate as a function of their EIRP power. Distance used for EIRP  calculation is $d = x \pm y \ \rm ly$}.
     \label{fig:EIRP-comparison}
 \end{figure*}
+
+\input{chapter6/chapter6_nenufar}

@@ -16,7 +16,7 @@
 
 \section{Neutron Stars and Pulsars}
 
-This sections aim is to give both historical and scientific context to neutron stars and by extension pulsars. 
+In 1932 \citeauthor{chadwick_existence_1932} discovered neutrons and within two years \cite{baade_cosmic_nodate} had postulated the existence of neutron stars. However, it would be over 30 years before observational evidence would manifest in 1967 when the first pulsar was discovered by Jocelyn Bell Burnell \citep{hewish_observation_1968}. This sections aim is to give scientific context to neutron stars and by extension pulsars. 
 
 \subsection{A Prelude to Pulsars}
 
@@ -33,7 +33,7 @@ Charged particles accelerate along the magnetic field lines in the magnetosphere
 \begin{figure}[t]
     \centering
     \includegraphics[width=0.8\linewidth]{chapter1/figures/ns-dublin.png}
-    \caption{A canonical pulsar of $1.4 \smass$ positioned above House 1, Trinity College Dublin. Courtesy of Daniel Wysocki and HanGyeol Suh}
+    \caption[Canonical pulsar above Dublin]{A canonical pulsar of $1.4 \smass$ positioned above House 1, Trinity College Dublin. Courtesy of Daniel Wysocki and HanGyeol Suh}
     \label{fig:ns-over-dublin}
 \end{figure}
 
@@ -49,7 +49,7 @@ Theoretically, it has been shown that pulsars can be related to a ``death" line 
 \begin{figure}
     \centering
     \includegraphics[width=0.8\textwidth]{chapter1/figures/PPdot-diagram.pdf}
-    \caption{The $P-\dot P$ diagram showing the population of pulsars. The millisecond pulsar subclasses are colour coded. The red region represents the death line, where pulsars are theoretically no longer able to emit radio waves.}
+    \caption[$P-\dot P$ diagram showing the population of pulsars.]{The $P-\dot P$ diagram showing the population of pulsars. The millisecond pulsar subclasses are colour coded. The red region represents the death line, where pulsars are theoretically no longer able to emit radio waves.}
     \label{fig:p-pdot}
 \end{figure}
 
@@ -66,9 +66,15 @@ The current best estimates for NSs are completed using pulsar population simulat
 
 \subsubsection{Neutron Star Structure}
 
-The theory for interior structure of NSs are currently derived from mathematical models. While constraints on the structure and size of NSs can be inferred from observations. This includes asteroseismology through pulsar glitches \citep{antonopoulou_pulsar_2022}, study of NSs with X-ray observations such as \textit{NICER} and NSs mergers observed with gravitational wave observatories like LIGO and VIRGO \citep{hebeler_equation_2013}. 
+The theory for interior structure of NSs are currently derived from complex mathematical models. While constraints on the structure and size of NSs can be inferred from observations. This includes asteroseismology through pulsar glitches \citep{antonopoulou_pulsar_2022}, study of NSs with X-ray observations such as \textit{NICER} and NSs mergers observed with gravitational wave observatories like LIGO and VIRGO \citep{hebeler_equation_2013}. Accordingly, the stellar interior is usually obtained by solving the Tolman–Oppenheimer–Volkoff (TOV) equations for hydrostatic equilibrium \citep{oppenheimer_massive_1939}. Using common relativistic units $(G=c=1)$ and assuming that NSs are spherically symmetric \citep{the_ligo_scientific_collaboration_and_the_virgo_collaboration_gw170817_2018}, the TOV equation can be written as \citep[pp. 124 - 126,][]{1983bhwd.book.....S}, 
 
-A cross-section of a NS is illustrated in \cref{fig:NSsInterior}. The following summary of the interior is broadly accepted as a  reasonable starting point, but is by no means the reflects the nuance of the topic for in depth discussion see \cite{burgio_neutron_2021}. 
+\begin{align}
+    \frac{dm}{dr} & = 4 \pi r^2 \rho(r) \\ 
+    \frac{dP}{dr} & = - \frac{(\rho + P) (m + 4 \pi r^3P)}{r(r-2m)}. 
+    \label{eq:TOVDPdr}
+\end{align}
+
+These equations determine the pressure and enclosed mass profiles of the star once an equation of state is specified. With this in mind the cross-section of a NS is illustrated in \cref{fig:NSsInterior}. The following summary of the interior is broadly accepted as a  reasonable starting point, but is by no means reflects the nuance of the topic, for an in depth discussion see \cite{burgio_neutron_2021}. 
 
 
 \begin{figure}
@@ -118,39 +124,39 @@ A cross-section of a NS is illustrated in \cref{fig:NSsInterior}. The following 
 % Text Node
 \draw (293.5,333.9) node [anchor=north west][inner sep=0.75pt]    {$?$};
 % Text Node
-\draw (62,75.4) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$4.3\ \times 10^{8} \ \text{kg} \ \text{cm}^{-3}$};
+\draw (72,75.4) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$ \rho \lesssim  10^{6} \ \text{g} \ \text{cm}^{-3}$};
 % Text Node
-\draw (99.5,134.4) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$2\ \times 10^{7} \ \text{kg} \ \text{cm}^{-3}$};
+\draw (59.5,134.4) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$10^6 \lesssim \rho \lesssim 4\ \times 10^{11} \ \text{g} \ \text{cm}^{-3}$};
 % Text Node
-\draw (129.5,265.4) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$1.28\ \times 10^{12} \ \text{kg} \ \text{cm}^{-3}$};
+\draw (129.5,265.4) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$\rho \gtrsim 2 \times 10^{14}\ \text{g} \ \text{cm}^{-3}$};
 
 
 \end{tikzpicture}
-    \caption[Neutron Star interior cross-section]{Neutron Star interior cross-section orginal figure design from \cite[p. 251,][]{1983bhwd.book.....S} with updated values from \cite{burgio_neutron_2021}.}
+    \caption[Neutron Star interior cross-section]{Neutron Star interior cross-section adapted from \cite[p. 251,][]{1983bhwd.book.....S} with updated values from \cite{burgio_neutron_2021}.}
     \label{fig:NSsInterior}
 \end{figure}
 
 \begin{enumerate}
-    \item The surface/atmosphere  $(\rho \lesssim 10^6 \ \text{g cm}^{-3})$ region is the thinnest and outermost layer of a NS where the temperature, magnetic field have a large effect on the property matter in this layer along with any radiation. 
+    \item The surface/atmosphere  $(\rho \lesssim 10^6 \ \text{g cm}^{-3})$ region is the thinnest and outermost layer of a NS where the temperature and magnetic field have a large effect on the outer layers and emergent radiation. 
     
-    \item Outer crust $(10^6 \lesssim \rho \lesssim 4 \times 10^{11} \ \text{g cm}^{-3})$ is thought to be made up of a solid Coulomb lattice of neutron-rich nuclei with relativistic electron gas that provides the main pressure support and maintains charge neutrality \cite{koliogiannis_outer-crust_2026}. As density increases the electrons are forced into higher a higher Fermi energy\footnote{Energy difference between highest and lowest energies in a single particle state.}, so the electron captures make the nuclei more neutron-rich while the ions remain localized within the lattice \citep{burgio_neutron_2021}. 
+    \item Outer crust $(10^6 \lesssim \rho \lesssim 4 \times 10^{11} \ \text{g cm}^{-3})$ is thought to be made up of a solid Coulomb lattice of neutron-rich nuclei with relativistic electron gas that provides the main pressure support and ensures charge neutrality \cite{koliogiannis_outer-crust_2026}. As density increases the electrons are forced into higher a higher Fermi energy\footnote{Energy difference between highest and lowest energies in a single particle state.}, so the electron captures make the nuclei more neutron-rich while the ions remain localized within the lattice \citep{burgio_neutron_2021}. 
 
-    \item Inner crust $(4 \times 10^{11} \lesssim \rho \lesssim 2 \times 10^{14} \ \text{g cm}^{-3})$ is where neutron-rich nuclei are thought to exist with a free neutron and electron gas. Due to the large population of free neutrons exist beneath the neutron drip density\footnote{Density which neutrons `drip' out of nuclei and become unbound, $\rho_{\text{drip}} \sim 4 \times 10^{11}~\text{g cm}^{-3}$.} and the temperature expected in these regions the neutrons form Cooper pairs\footnote{Cooper pair is a weakly bound pair of fermions that behaves as a single quantum entity at low temperature, enabling superfluidity or superconductivity.} which is a common pathway to creating a superfluid of neutrons.   
+    \item Inner crust $(4 \times 10^{11} \lesssim \rho \lesssim 2 \times 10^{14} \ \text{g cm}^{-3})$ is where neutron-rich nuclei are thought to exist with a free neutron and electron gas. Due to the large population of free neutrons exist beneath the neutron drip density\footnote{Density which neutrons `drip' out of nuclei and become unbound, $\rho_{\text{drip}} \sim 4 \times 10^{11}~\text{g cm}^{-3}$.} and the temperature expected in these regions free neutrons are expected to form Cooper pairs\footnote{Cooper pair is a weakly bound pair of fermions that behaves as a single quantum entity at low temperature, enabling superfluidity or superconductivity.} which is a common pathway to creating a superfluid of neutrons.   
 
-    \item Outer core $(\rho \gtrsim 2 \times 10^{14} \ \text{g cm}^{-3}$, up to several times nuclear density) 
+    \item Outer core $(\rho \gtrsim 2 \times 10^{14} \ \text{g cm}^{-3}$, up to several times nuclear density) is a homogenous nucleonic region consisting of mainly neutrons, electrons and muons in beta equilibrium (beta decay and inverse beta decay are equal).  At densities in the outer core it is more energy efficient for matter to be uniform driving the composition to beta equilibrium. 
 
-    \item Inner core, there is no certain 
+    \item Inner core, there is no certainty on what the composition of matter towards the centre of a NS. It is thought at the highest densities in the universe there could be additional types or phases of particles. However, this remains entirely model dependent and speculative. As the densities are so high the system may lower its energy by converting some the nucleons into new degrees of freedom such as pions, hyperons or some other quark matter. In the case of some deconfined quark matter it would only include up, down and strange as the other quarks are too massive. 
 
     
 \end{enumerate}
 
 \subsection{The Properties of Pulsars}
 
-One of the primary questions for astronomers who study stars as objects is figuring out the equation of state (EOS) to some reasonable degree. This usually entails the development of mathematical framework to describe pressure, volume, temperature and internal energy, then verify and modify the framework based on observational findings. Pulsars are complex objects and in many aspects are poorly understood. For example, it is unknown if one EOS can describe all pulsars with various transitionary components or are their multiple EOS that describe the entire class. The following section gives a brief non-exhaustive overview of some of the key properties of pulsars as they are thought of canonically. It is important to keep in mind that this is a baseline framework and should not be considered a complete physical theory. 
+As alluded to in the previous section one of the primary questions for astronomers who study stars as objects is understanding their equation of state (EOS) to some reasonable degree. This usually entails the development of mathematical framework that describes pressure, volume, temperature and internal energy then verify and modify the framework based on observational findings. Pulsars are complex objects and in many aspects are poorly understood. For example, it is unknown if one EOS can describe all pulsars with various transitionary components or if there are multiple EOS that describe the entire class. The following section gives a brief non-exhaustive overview of some of the key properties of pulsars as they are thought of canonically. It is important to keep in mind that this is a baseline framework and should not be considered a complete physical theory. 
 
 The canonical `toy' pulsar model is shown in \cref{fig:pulsartoymodel}. This model refers to a rotating, magnetised neutron star with a dipole magnetic field. 
 
-This section uses \cite{pulsar_handbook} and \cite{1983bhwd.book.....S}4 as a primary reference throughout with more up-to-date discussions where applicable.  
+This section uses \cite{pulsar_handbook}, \cite{EssenRadio16} and \cite{1983bhwd.book.....S} as a primary references throughout with more up-to-date discussions where applicable.  
 
 
 \subsubsection{Neutron Star Radius \& Mass}
@@ -177,15 +183,16 @@ Opposite to this the upper limit of the radius is obtained by requiring that the
 
 Most pulsars are theoretically thought to have radii in the range of 10–15 km \citep{lattimer_neutron_2001}, giving them the unique position of `almost' black holes. 
 
-\subsubsection{Spin Evolution}
-One of the unique characteristics of pulsars is the stable spinning that they exhibit. Understanding the spin evolution gives insight into many parameters of the pulsars, most notably the stage of their evolution. Pulsars begin their life in the upper end of the $P-\dot P$ diagram and slowly move down and to the right as they age due to a loss in rotational energy, commonly referred to as spin-down luminosity. The spin-down ($\dot E$) is described as follows \citep[p.~59]{pulsar_handbook}:
+\subsubsection{Spin Evolution and Energy Loss}
+The most well known characteristics of pulsars is the stable spinning that they exhibit. The `lighthouse' radio emission is also the most prominent observable metric, in some cases the second derivative of the period, $\ddot P$ is well known. 
+By understanding the spin evolution of pulsars direct insights into their parameters can be made. Most notably the stage of their evolution. Pulsars begin their evolution with periods around $~0.5~\mathrm{s}$ in the upper left region of the $P-\dot P$ diagram (i.e. the Crab pulsar in \cref{fig:p-pdot}). As a pulsar age they exhibit a loss in rotational energy loss as the pulsar slows down its period decreases and $\dot P$ increases. On the $P-\dot P$ diagram this translates to the pulsar moving diagonally right and towards the boundary of the pulsar graveyard. This loss in rotational energy\footnote{Rotational energy: $E=1/2 I \omega^2$ }, commonly referred to as spin-down luminosity, ($\dot E$), which is described as follows \citep[p.~59]{pulsar_handbook}, 
 
 \begin{equation}
-\dot E = - \frac{dE_{\text{rot}}}{dt} = 4\pi^2 I \dot P P^{-3}
+\dot E = - \frac{dE_{\text{rot}}}{dt} = -I \omega \dot \omega= 4\pi^2 I \dot P P^{-3}. 
 \label{eq:spin-down-energy}
 \end{equation}
 
-Where $I$ is the moment of inertia. It is important to note that the energy loss that is converted into radio emission is almost negligible in comparison to the total energy loss from spin down. 
+Where $\omega$ is the rotational angular frequency, $2\pi/P$, and $I$ is the moment of inertia. It is important to note that the energy loss that is converted into radio emission is almost negligible in comparison to the total energy loss from spin down. The majority of energy loss is converted into high energy radiation and the pulsar wind. \Cref{eq:dipole_Ediff} describes the loss in energy due to a magnetic dipole braking and \cref{eq:spin-down-energy} describes the rotational energy loss. Continuing with the assumption that $\dot E_{\text{dipole}} \approx -\dot E$. The magnitude, $|m|$, of a magnetic dipole in a sphere can be expressed in magnetic field strenght, $B$ and radius, $r$, as follows $|m|=Br^3$.
 
 
 
@@ -337,40 +344,130 @@ rgb(400bp)=(0.29,0.56,0.89)}
 
 \subsubsection{Braking Index}
 
-Pulsars have strong magnetic dipoles. According to classical mechanics, a rotating magnetic dipole that exhibits a moment, $|m|$, emits an electromagnetic wave at the pulsar's rotation frequency \citep[p.~60]{pulsar_handbook}. The dipole's radiation power is characterized by:
+The rate in which pulsars spin down has been steadily recorded for decades. To quantify how the spin down torque depends on a pulsar's period a dimensionless measurement known as `braking index' was introduced. First Larmor's equation to describe the total power radiated by a nonrelativistic particle is introduced in the following form, 
 
 \begin{equation}
-    \dot E_{\text{dipole}} = \frac{2}{3c^3} |m|^2 \omega^4 \sin^2 \alpha
+    \mathcal{P} = \frac{2q^2\dot v^2}{3c^3}
+    \label{eq:LarmourFormula}
 \end{equation}
 
-Where $\alpha$ is the angle between the magnetic axis and the rotation axis. Equating the above equation to the loss of rotational energy described in \cref{eq:spin-down-energy} gives the following for the expected evolution of the period:
+Here $q$ is the charge, $\dot v$ is proper acceleration. Given that the magnetic dipole is at some angle, $\alpha$, where $\alpha >0$ relative to the rotation axis of the pulsar. The magnitude of acceleration perpendicular to the direction of motion is, $a_\perp = \ddot r \sin \alpha$. 
+%The component of the rotating vector perpendicular to the rotation axis is obtained by projection, so $r_\perp = r\sin\alpha$, and since the magnetic dipole moment follows the same geometry, $m_\perp = m\sin\alpha$.
+Since only the component of the magnetic dipole perpendicular to the rotation axis contributes to radiation, $m_\perp = m\sin\alpha$, so the radiated power can be written as, 
 
 \begin{equation}
-    \dot \Omega = - \frac{2}{3Ic^3} |m|^2 \Omega^3 \sin^2 \alpha
+    \mathcal{P_{\mathrm{radiation}}} = \frac{2 (\ddot m_\perp)^2}{3c^3}.
 \end{equation}
 
-This is more commonly written as a power law, 
+
+
+% Pulsars have strong magnetic dipoles. In classical mechanics, a rotating magnetic dipole that is tilted compared to the rotation axis (\cref{fig:pulsartoymodel}) will exhibit a moment, $|m|$. This rotating magnetic dipole emits an electromagnetic wave at the pulsar's rotation frequency \citep[p.~60]{pulsar_handbook}. The dipole's radiation power is characterized by:
+
+For rigid rotation, $\ddot m_\perp \sim \omega^2 m_\perp$, so the dipole radiation power can be expressed as, 
 
 \begin{equation}
-    \dot \nu = -K \nu^n 
+    \dot E_{\text{dipole}} = \frac{2}{3c^3} |m|^2 \omega^4 \sin^2 \alpha. 
+    \label{eq:dipole_Ediff}
+\end{equation}
+
+Where $\alpha$ is the angle between the magnetic axis and the rotation axis. Equating the above equation to the loss of rotational energy described in \cref{eq:spin-down-energy} gives the following for the expected evolution of the period,
+
+\begin{equation}
+    \dot \omega = - \underbrace{\frac{2}{3Ic^3} |m|^2\sin^2 \alpha}_{K_\omega}  \omega^3 
+    \label{eq:angular_velocity_der}
+\end{equation}
+
+Angular velocity can also be written as $\omega = 2\pi/P$, then $\dot \omega =  -2 \pi \dot P/P^2$. \Cref{eq:angular_velocity_der} is also more commonly written as a power law, 
+
+\begin{equation}
+    \dot \omega = -K_\omega  \omega^n 
     \label{eq:spin-down-power-law}
 \end{equation}
 
-\Cref{eq:spin-down-power-law} in terms of the period is $\dot P = K P^{2-n}$. Since this is a first-order differential equation, the solution can be integrated and given a constant, $K$, which provides an expression of age:
+Where $n=3$ for a pure magnetic dipole. \Cref{eq:spin-down-power-law} in terms of the period is,
 
 \begin{equation}
-    T = \frac{P}{(n-1)\dot P} \left\{ 1 - \left( \frac{P_0}{P} \right)^{n - 1} \right\} 
+    \dot P = K_\omega  2 \pi^{n-1}P^{2-n}=K_P  P^{2-n}
+    \label{eq:period_ode}
+\end{equation}
+
+Since \cref{eq:period_ode} is a first-order differential equation. The solution can be integrated for the from the pulsars birth to the present if it is assumed that $K_p$ and $n$ remain the same over a pulsars lifetime,
+
+\begin{align}
+    P^{n-2}~dP &= K~dt \\
+    \int^P_{P_0} P'^{n-2} ~dP'&=K \int_0^T dt \\    
+\end{align}
+
+Where $P_0$ is the initial birth period at time, $t$, and $P$ is the present period at time, $T$. The resultant integral when solved for $T$, 
+
+\begin{equation}
+    T = \frac{P^{n-1} - P^{n-1}_0}{(n-1)K}
+\end{equation}
+
+Substituting $K=\dot P P^{n-2}$ and rearranging and simplifying gives the following, 
+
+
+\begin{equation}
+    T = \frac{P}{(n-1)\dot P} \left\{ 1 - \left( \frac{P_0}{P} \right)^{n - 1} \right\} .
     \label{eq:age-full}
 \end{equation}
 
-Here $P_0$ is the initial period of the pulsar. Commonly an assumption is made that the current period is much greater than the initial period $(P_0 \ll P)$. If it is also assumed that the pulsar is spinning down to due dipole magnetic radiation ($n=3$), \cref{eq:age-full} can be simplified into a characteristic age. 
+Commonly an assumption is made that the current period is much greater than the initial birth period $(P_0 \ll P)$. If it is also assumed that the pulsar is spinning down to due dipole magnetic radiation ($n=3$), \cref{eq:age-full} can be simplified into a characteristic age, 
 
 \begin{equation}
-    \tau_c \cong 15.8~\text{Myr} \left( \frac{P}{s} \right) \left( \frac{\dot P}{10^{-15}} \right)^{-1}
+    \tau_c \cong \frac{P}{2 \dot P}
+\end{equation}
+%cong 15.8~\text{Myr} \left( \frac{P}{s} \right) \left( \frac{\dot P}{10^{-15}} \right)^{-1}. 
+
+The characteristic age estimation for a pulsars age is known to be inconsistent with both theory and observation. For example in the cases where a CCSNe has been observed and has produced a pulsar such as the Crab pulsar which is one such example with an observed Supernova event in 1054 AD by Chinese astronomers \citep{kaspi_chandra_2001}. Using $P$ and $\dot P$ values\footnote{Values taken from Jodrell Bank ephemeris for May 2026 \citep{lyne_23_1993}} for the Crab and assuming dipole braking gives an age estimated age of $\sim 1279$ years compared to the known value of 972 years. This relationship should be used with caution in the case of estimating the age of binary systems, for example the characteristic age of J1713+0747 is 8.5~Gyr because of other mechanisms such as accretion are at play, violating the $P_0 \ll P$ assumption. 
+
+Another important result can be gottend from \cref{eq:age-full}. Rearranging the equation for $P_0$ gives an expression for the birthrate period of a pulsar, 
+
+\begin{equation}
+    P_0 = P\left[ 1 - \frac{(n-1) \dot P T}{P} \right]^\frac{1}{n-1}
 \end{equation}
 
-The above estimation for a pulsars age is known to be inconsistent with theory to varying degrees. In cases where Supernovae has been observed and has produced a pulsar the age is known to a much higher degree of accuracy. The Crab pulsar is one such example with an observed Supernova event in 1054 AD by Chinese astronomers \citep{kaspi_chandra_2001}. %Supernoave remnants are also used to estimate the age of pulsars.
+If magnetic dipole braking is assumed $(n=3)$ the expression becomes, 
 
+\begin{equation}
+    P_0 = P \sqrt{1 - \frac{2 \dot P T}{P}}.
+\end{equation}
+
+Once again taking the Crab as an example, the intial birth period is $\sim 16.6~\text{ms}$, less than half the measured value measured in May 2026 of $\sim 33.85$ ms.
+%Supernoave remnants are also used to estimate the age of pulsars.
+
+\subsubsection{Magnetic Field Strength and Magnetosphere}
+
+It has been mentioned several times up to this point that pulsars are heavily magnetised, but there has been no mention of how this is estimated. A lower limit can be placed on the magnetic field strength using equations that have already been discussed.  \Cref{eq:dipole_Ediff} describes the loss in energy due to a magnetic dipole braking and \cref{eq:spin-down-energy} describes the rotational energy loss. Continuing with the assumption that $\dot E_{\text{dipole}} \approx -\dot E$. The magnitude, $|m|$, of a magnetic dipole in a sphere can be put into terms of magnetic field strength, $B$, and radius, $r$, using the following relation $|m| = Br^3$ \citep{griffiths2017electrodynamics}. 
+
+\begin{align}
+    \dot E_{\text{dipole}} & = -\dot E \\ 
+    \frac{2}{3c^3} |m|^2 \omega^4 \sin^2 \alpha & = \frac{4\pi^2 I \dot P}{P^3} \\
+\end{align}
+
+Once again relating everything in terms of $\omega = P/2\pi$, subsiting $|m|$ and solving for $B$, yields: 
+
+\begin{align}
+    \frac{2}{3c^3} (Br^3  \sin^2 \alpha) \left( \frac{2 \pi}{P} \right)^4 & = \frac{4\pi^2 I \dot P}{P^3} \\
+    B = \sqrt{\frac{3c^3 I P\dot P}{8 \pi^2 r^6 \sin^2 \alpha}}
+    \label{eq:magneticfieldstrength}
+\end{align}
+
+Using the values for the canonical pulsar $(\alpha =90, ~r=10~\text{km}, ~I=10^{45}~\text{g cm}^2)$ the characteristic magnetic field can be expressed as, 
+
+\begin{equation}
+    B = 3.2\times 10^{19} \sqrt{P \dot P} ~~~~~\mathrm{[G]}
+\end{equation}
+
+Again taking the Crab as an example this results in a magnetic field strength of $\sim3.8\times10^{12}$. Converting this to magnetic energy density gives $\sim 5.8 \times 10^{23}~\text{erg cm}^{-3}$. To put this in perspective MRI machines operate at $5-30\times 10^3$ G or when considering the immense energy density. In 2025 Ireland generated\footnote{Ember (2026), Energy Institute - Statistical Review of World Energy (2025)} 30.95~TWh of electricity which is $\sim 1 \times 10^{17}$ J. This is comparable to the magnetic energy stored in only $2 ~\text{cm}^{-3}$ at the surface of the Crab. 
+
+The immense magnetic energy on the Crab's surface is released through its surrounding magnetosphere. The magnetosphere dictates both the particle winds and electromagnetic radiation. As the magnetic field lines are `frozen in' the field rotates with the star itself. A rotating magnetic field induces an electric field according to, 
+
+\begin{equation}
+    \mathbf{E} = -\frac{(\mathbf{{\boldsymbol{\omega}} \times r}) \times \mathbf{B}}{c}
+\end{equation}
+
+in a corotating frame the electric field will pull particles from the surface of the NS. These particles fill the surrounding region creating a plasma-filled magnetospherer. 
 
 \subsubsection{Radio Emission}
 
@@ -400,6 +497,15 @@ If is assumed to be $f_p \ll f$, $\mu$ can be approximated.
 \end{equation}
 
 Where $\mathcal{D}$ is the dispersion constant and $\text{DM}$ is the dispersion measure. Each are commonly expressed as follows, $\mathcal{D}= 4.15 \times 10^3 ~\text{MHz}^2 ~\text{pc}^{-1} ~ \text{cm}^3 ~\text{s}$ and $\text{DM} = \int^d_0 n_e ~dl ~\text{cm}^{-3} ~\text{pc}$. This definition was adapted from \citet[p.~86]{pulsar_handbook} and \cite{taylor_recent_1977}.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.9\linewidth]{chapter1/figures/dispersion_example.png}
+    \caption{Example of pulse dispersion throuhg the ISM.}
+    \label{fig:dispersion_example}
+\end{figure}
+
+\subsubsection{Electron Density Models}
 
 \subsection{Summary of Pulsar Observables}
 

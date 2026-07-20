@@ -21,13 +21,13 @@ The purpose of this chapter is to discuss some of the fundamentals of radio tele
 \begin{figure}
     \centering
     \includegraphics[width=0.98\linewidth]{chapter2/figures/atmospheric_reflection_render.pdf}
-    \caption{Atmospheric attenuation as a function of wavelength and frequency. Values are taken to reflect when the incoming radiation has been attenuated by a factor of 1/2. Figure adapted from \cite{WilsonToolsofRadioastron}}
+    \caption[Atmospheric attenuation as a function of wavelength and frequency.]{Atmospheric attenuation as a function of wavelength and frequency. Values are taken to reflect when the incoming radiation has been attenuated by a factor of 1/2. Figure adapted from \cite{WilsonToolsofRadioastron}}
     \label{fig:chpt2radiowindow}
 \end{figure}
 
 \section{From Photon to Filterbank} \label{sec:chap2photon2fil}
 
-Radio telescopes can often be seen as conceptually complex but share much common ground with contemporary optical telescopes. An antenna is often thought of as a `single pixel' in a charged couple device (CCD) with an array of antennas forming an array of pixels that can be used to observe the sky. There are also parallels to be drawn between the mirrors in optical telescope and the parabolic dishes seen on `single dish' radio telescopes which will later be discussed. This section aims to provide enough theoretical context to understand how an incident photon on a radio telescope gets turned into science useable data products such as filterbanks. Filterbanks are simply data cubes that store spectrographs over time or `dynamic spectra'. 
+Radio telescopes can often be seen as conceptually complex but share much common ground with contemporary optical telescopes. An antenna is often thought of as a `single pixel' in a charged couple device (CCD) with an array of antennas forming an array of pixels that can be used to observe the sky. There are also parallels to be drawn between the mirrors in optical telescopes and the parabolic dishes seen on `single dish' radio telescopes which will later be discussed. This section aims to provide enough theoretical context to understand how an incident photon on a radio telescope gets turned into science useable data products such as filterbanks. Filterbanks are simply data cubes that store spectrographs over time or `dynamic spectra'. 
 
 For any electromagnetic wave coming from an astronomical source the wave is considered to be in the far-field, and the wavefronts are therefore locally planar across the extent of a radio telescope. Radio telescopes sample the electric field associated with these incoming plane waves. The first mathematical formalism to introduce is the general time-dependent electric field vector can be expressed as,
 
@@ -272,7 +272,7 @@ Polyphase\\Filterbank
 
 \end{tikzpicture}
 
-    \caption{Block diagram of a single dish radio telescope signal path from photon to science usable filterbank. Note that the dashed lines represent separate pathways for x and y polarisation. The colour block groupings also correspond to common terminology used when discussing telescope hardware.}
+    \caption[Block diagram of a single dish radio telescope signal path.]{Block diagram of a single dish radio telescope signal path from photon to science usable filterbank. Note that the dashed lines represent separate pathways for x and y polarisation. The colour block groupings also correspond to common terminology used when discussing telescope hardware.}
     \label{fig:chap2RadioBlockDiagrm}
 \end{figure}
 
@@ -286,7 +286,7 @@ The next step in the signal path is to carry out signal processing. This is the 
 
 Digitization, or digital sampling is the process in converting an analog signal into a digital signal. This is done with an ADC, which samples the incoming voltage at regular intervals. The two main factors of an ADC that are important to a radio astronomer are the sampling rate and the bit rate. \\ 
 To conserve all the information from the voltages the Nyquist crieterion must be met. This states that sample rate of the ADC must meet twice the bandwidth, failure to meet this will result in aliasing of the signal. \\ 
-In addition to the sample rate the ADC also needs to quantize the amplitude of the incoming signal. Which each amplitude measured by a number of bits, such that the measured amplitude levels are $N_{\text{levels}} = 2^{n_\text{bits}}$. An important point to consider is that the difference between the true analogue voltage and the nearest digital level introduces quantisation noise. Increasing the number of bits reduces this noise and increases the dynamic range of the digitised signal, with a theoretical limit of $\text{DR} \simeq 6.02 \ n_{\text{nbits}}$. In the context of a radio telescope, the received signals are typically noise dominated and approximately Gaussian distributed. Consequently, relatively low bit depths can be used without a substantial loss in sensitivity. For example, 2-bit quantisation retains approximately 88\% of the sensitivity of an ideal unquantised system, while 4-bit quantisation retains approximately 99\%. The digitised voltage stream from the ADC forms the input to the rest of the digital signal-processing pipelin. 
+In addition to the sample rate the ADC also needs to quantize the amplitude of the incoming signal. Which each amplitude measured by a number of bits, such that the measured amplitude levels are $N_{\text{levels}} = 2^{n_\text{bits}}$. An important point to consider is that the difference between the true analogue voltage and the nearest digital level introduces quantisation noise. Increasing the number of bits reduces this noise and increases the dynamic range of the digitised signal, with a theoretical limit of $\text{DR} \simeq 6.02 \ n_{\text{nbits}}$. In the context of a radio telescope, the received signals are typically noise dominated and approximately Gaussian distributed. Consequently, relatively low bit depths can be used without a substantial loss in sensitivity. For example, 2-bit quantisation retains approximately 88\% of the sensitivity of an ideal unquantised system, while 4-bit quantisation retains approximately 99\%. The digitised voltage stream from the ADC forms the input to the rest of the digital signal-processing pipeline. 
 
 
 \subsubsection{Polyphase Filterbanks}
@@ -325,7 +325,7 @@ So for example if one considers a telescope that observes from $110-190$ MHz. If
 
 \section{Interferometry}
 
-After discussing the setup of a photon to filterbank for a single dish telescope the idea can be scaled up to interferometric arrays. So far the resolution of the radio telescope on the sky has been neglected.In reality, diffraction from the finite aperture produces a beam pattern on the sky that limits the smallest angular scales that can be resolved.  Using the small angle approximation $(\theta \ll 1 ~ \text{rad})$ the full width half max (FWHM) of a radio telescope the characteristic angular width of the beam $(\theta)$ scales as,
+After discussing the setup of a photon to filterbank for a single dish telescope the idea can be scaled up to interferometric arrays. So far the resolution of the radio telescope on the sky has been neglected. In reality, diffraction from the finite aperture produces a beam pattern on the sky that limits the smallest angular scales that can be resolved.  Using the small angle approximation $(\theta \ll 1 ~ \text{rad})$ the full width half max (FWHM) of a radio telescope the characteristic angular width of the beam $(\theta)$ scales as,
 
 \begin{equation}
     \boxed{
@@ -519,7 +519,7 @@ These relations are challenges across all wavelengths, but this becomes even mor
 ] {$\textcolor[rgb]{0.29,0.56,0.89}{B}$};
 
 \end{tikzpicture}
-\caption{A two dish (element) interferometry setup. Here the $\times$ represents the correlator}
+\caption[A two dish (element) interferometry setup.]{A two dish (element) interferometry setup. Here the $\times$ represents the correlator}
 \label{fig:chap2interferometryexample}
 \end{figure}
 
@@ -587,7 +587,7 @@ Where $I$ is the sky brightness in the image domain, $l$ and $m$ are cosine dire
 \begin{figure}[t]
     \centering
     \includegraphics[width=\linewidth]{chapter2/figures/MeerKAT_Galactic_Centre_1284MHz-StokesI_Cropped.png}
-    \caption{Adapted image from \cite{heywood_128_2022} a subsection of mosaic of the Galactic plane using the MeerKAT telescope which has 64 antennas spread over up to 8 km baselines.}
+    \caption[A subsection of the mosaic of the Galactic plane using the MeerKAT telescope]{Adapted image from \cite{heywood_128_2022} a subsection of mosaic of the Galactic plane using the MeerKAT telescope which has 64 antennas spread over up to 8 km baselines.}
     \label{fig:chap2MeerKatGCimage}
 \end{figure}
 
@@ -598,7 +598,7 @@ As discussed in the previous section, each baseline can sample a part of the $uv
 \begin{figure}[t]
     \centering
     \includegraphics[width=\linewidth]{chapter2/figures/uv_plane_example.pdf}
-    \caption{Example of a 52 antenna layout (black dots) in the shape of a Triskelion (blue dots). With increasing $uv$-plane coverage shown, the bottom row corresponds to the reconstructed image produced. The original image of  galaxy cluster Abell 2255 is shown on the bottom left taken from \cite{botteon_magnetic_2022}.}
+    \caption[Triskelion antenna pattern and $uv$-plane coverage]{Example of a 52 antenna layout (black dots) in the shape of a Triskelion (blue dots). With increasing $uv$-plane coverage shown, the bottom row corresponds to the reconstructed image produced. The original image of  galaxy cluster Abell 2255 is shown on the bottom left taken from \cite{botteon_magnetic_2022}.}
     \label{fig:chap2uvplaneexample}
 \end{figure}
 
@@ -610,7 +610,7 @@ The coverage of the $uv$-plane determines the effective point spread function of
 \theta_{\rm syn} \approx \frac{\lambda}{B_{\text{max}}}.
 \end{equation}
 
-Where $B_M$ is the maximum projected baseline of the array. In reality the $uv$-plane is never fully sampled, the Cittert-Zernike relation (eq. \ref{eq:chap2CittertZernike}) assumes you know the visibility function everywhere but visibilities are only measured at a finite number of locations corresponding to actual baselines.  Since the Fourier transform of an incomplete sampling pattern is not a delta function, the response of the interferometer to a point source contains additional structure surrounding the main lobe caused by Fourier ringing. These features are known as sidelobes, due to their presence the images obtained from the Fourier space are known as dirty images, corresponding to the true sky brightness distribution convolved with the synthesized `dirty beam'. There are many methods to make this dirty beam a more accurate estimate of true sky brightness, for examples see \citet[pp. 202-220,]{WilsonToolsofRadioastron}. 
+Where $B_M$ is the maximum projected baseline of the array. In reality the $uv$-plane is never fully sampled, the Cittert-Zernike relation (eq. \ref{eq:chap2CittertZernike}) assumes you know the visibility function everywhere, but visibilities are only measured at a finite number of locations corresponding to actual baselines.  Since the Fourier transform of an incomplete sampling pattern is not a delta function, the response of the interferometer to a point source contains additional structure surrounding the main lobe caused by Fourier ringing. These features are known as sidelobes, due to their presence the images obtained from the Fourier space are known as dirty images, corresponding to the true sky brightness distribution convolved with the synthesized `dirty beam'. There are many methods to make this dirty beam a more accurate estimate of true sky brightness, for examples see \citet[pp. 202-220,]{WilsonToolsofRadioastron}. 
 
 \subsection{Aperture Arrays \& Beamforming}
 
@@ -813,7 +813,7 @@ The center of LOFAR is based near Exloo in the Netherlands on what is known as t
 \begin{figure}[t]
     \centering
     \includegraphics[width=\linewidth]{chapter2/figures/Blank_map_of_Europe_cropped_LOFAR_colours.pdf}
-    \caption{A map of LOFAR array including the Dutch core and remote stations along with the international stations. The stations in Italy and Bulgaria are currently under construction at the time of writing.}
+    \caption[A map of the Low Frequency Array]{A map of LOFAR array including the Dutch core and remote stations along with the international stations. The stations in Italy and Bulgaria are currently under construction at the time of writing.}
     \label{fig:chap2lofarmap}
 \end{figure}
 
@@ -955,7 +955,7 @@ The HBAs (see \cref{fig:chap2lofarantennas}) cover the higher end of LOFARs spec
     \label{fig:chap2lofarantennas}
 \end{figure}
 
-Each of the antennas in the field all fed into a heavily sheilded cabinet or container. Here the reciever units (RCUs) and Remote Signal Processing compute boards (RSPs) are also stored. 
+Each of the antennas in the field all fed into a heavily shielded cabinet or container. Here the receiver units (RCUs) and Remote Signal Processing compute boards (RSPs) are also stored. 
 
 The RCUs are directly connected to the coaxial cable coming from the field. The RCUs select the antenna input\footnote{At the time of writing the LOFAR 2 upgrade aims to rectify this such that both can be used simultaneously.} (either HBA or LBA). The selected signal then undergoes amplification and appropriate filters are applied to the signal, it is then digitized with a 12-bit ADC at either 200~MHz or 160~MHz. 
 The digitized samples are then passed to the RSP boards, these boards before all the digital signal processing at the station. This includes "first in first out" (FIFO) buffering, which holds all the packets in arrival order in a buffer to ensure that there is no signal delay added by the RCUs, following this polyphase-filter subbanding is used and beamlets are formed, which is discussed in further depth in the next section. The data from the RSP boards is then passed to the Central Processing Unity (CEP) which outputs the packet-stream of voltages. All of this is controlled by the Local Control Unit which is a Linux pc that monitors the station hardware and controls where the beams are `steered'. The LCU is also responsible for receiving time references from the stations GPS for ensuring phase coherence across the whole array.  

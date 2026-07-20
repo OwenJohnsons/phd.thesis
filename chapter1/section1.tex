@@ -16,7 +16,7 @@
 
 \section{Neutron Stars and Pulsars}
 
-In 1932 \citeauthor{chadwick_existence_1932} discovered neutrons and within two years \cite{baade_cosmic_nodate} had postulated the existence of neutron stars. However, it would be over 30 years before observational evidence would manifest in 1967 when the first pulsar was discovered by Jocelyn Bell Burnell \citep{hewish_observation_1968}. This sections aim is to give scientific context to neutron stars and by extension pulsars. 
+In 1932 \citeauthor{chadwick_existence_1932} discovered neutrons and within two years \cite{baade_cosmic_nodate} had postulated the existence of neutron stars. However, it would be over 30 years before observational evidence would manifest in 1967 when the first pulsar was discovered by Jocelyn Bell Burnell \citep{hewish_observation_1968}. This section's aim is to give scientific context to neutron stars and by extension pulsars. 
 
 \subsection{A Prelude to Pulsars}
 
@@ -24,7 +24,7 @@ When stars with a mass of at least $8 \smass$ reach the end of their evolutionar
 
 Neutron stars are supported against further collapse by the presence of neutron degeneracy pressure which arises from the Pauli exclusion principle. Strong nuclear forces between the neutrons also provides additional support against gravitational collapse. With these three opposing forces a stable equilibrium is formed \citep{1983bhwd.book.....S}. \
 
-In turn, this makes neutron stars exceptionally dense, they are the densest known objects in the universe that emit light. With the average density of a neutron star is $10^{17} \text{kg/m}^3$ \citep{baym_neutron_1971} and their radii are comparable to the size of cities, with radii of 10--20 km as illustrated in \cref{fig:ns-over-dublin}. \
+In turn, this makes neutron stars exceptionally dense, they are the densest known objects in the Universe that emit light. With the average density of a neutron star is $10^{17} \text{kg/m}^3$ \citep{baym_neutron_1971} and their radii are comparable to the size of cities, with radii of 10--20 km as illustrated in \cref{fig:ns-over-dublin}. \
 
 During collapse the conservation of magnetic flux plays a crucial role in the large strength magnetic fields that are observed in neutron stars along with contributions from the dynamo effect and frozen-in magnetic fields. The strength of a pulsar's magnetic field is on the order of $10^{12}$ - $10^{15}$ G \citep{michel_theory_1982}. \
 
@@ -60,13 +60,15 @@ The current established\footnote{There are some proposed subclasses of NSs in th
 
 \subsubsection{Neutron Star Birthrates}
 
-As mentioned Neutron Stars (NSs) form from core-collapsed supernovae (CCSNe), at present there are no confirmed extragalactic pulsars (see discussion in \cref{sec:FRBsTheory}) so the birthrate of Galactic NSs is on the same order of the occurrence of Galactic CCSNe events. The current estimates place the rate of CCSNe's at 1-3 per century, so the amount of NSs should not exceed this value, as will later be discussed there are many subclasses of NSs and each is treated with their own birth-rate property, when these individual rates are summed they exceed the CCSN rate at an estimated 6-11 per century leading to a "birthrate problem" and "too many neutron stars" \citep{keane_birthrates_2008}. This implies that most subclasses of NS are at various points in an evolutionary stage of a single object. 
+As mentioned Neutron Stars (NSs) form from core-collapsed supernovae (CCSNe), at present there are no confirmed extragalactic pulsars (see discussion in \cref{sec:FRBsTheory}) so the birthrate of Galactic NSs is on the same order of the occurrence of Galactic CCSNe events. The current estimates place the rate of CCSNe's at 1-3 per century, so the amount of NSs should not exceed this value, as will later be discussed there are many subclasses of NSs and each is treated with their own birth-rate property, when these individual rates are summed they exceed the CCSN rate at an estimated 6-11 per century leading to a ``birthrate problem'' and ``too many neutron stars'' \citep{keane_birthrates_2008}. This implies that most subclasses of NS are at various points in an evolutionary stage of a single object. 
 
-The current best estimates for NSs are completed using pulsar population simulations in tandem legacy survey data. This is all done in an attempt to estimate the intrinsic pulsar population in the Galaxy \citep[e.g.,][]{faucher-giguere_birth_2006, bates_psrpoppy_2014,keane_square_2025,pardo-araujo_radio_2025}. Population synthesis can be achieved in numerous ways, but it generally starts generating "nominal" distribution priors from previous pulsar surveys such as Galactic spatial distribution, luminosity function, spectral index and period distribution. The simulation then tries to reproduce the observed population, once the generation of the synthetic population matches the original observed distributions the resulting population can be used as an estimate of the Galactic population of radio emitting pulsars. There are caveats with these types of simulations, they are done on known key properties of pulsars with an attempt to address observation biases along with neutron star models that are independent of observables. Another method is to use machine learning to use what is called a pulsar evolutionary framework which makes use of machine learning to infer a range of pulsar parameters and simulate their evolution until the population matches observational distributions, one such study is \citep{pardo-araujo_radio_2025} which estimates the Galactic NS birthrate to be 2, which is within agreement of the estimated supernova occurrence rate in the Galaxy. The further uses of pulsar simulations are discussed in greater depth along with their implications in \cref{chap:lunar}. 
+The current best estimates for NSs are completed using pulsar population simulations in tandem with legacy survey data. This is done in an attempt to estimate the intrinsic pulsar population in the Galaxy \citep[e.g.,][]{faucher-giguere_birth_2006, bates_psrpoppy_2014,keane_square_2025,pardo-araujo_radio_2025}. Population synthesis can be achieved in numerous ways, but it generally starts generating ``nominal'' distribution priors from previous pulsar surveys such as Galactic spatial distribution, luminosity function, spectral index and period distribution. The simulation then tries to reproduce the observed population, once the generation of the synthetic population matches the original observed distributions the resulting population can be used as an estimate of the Galactic population of radio emitting pulsars. There are caveats with these types of simulations, they are done on known key properties of pulsars with an attempt to address observation biases along with neutron star models that are independent of observables. Another method is to 
+%use machine learning to 
+use what is called a pulsar evolutionary framework which makes use of machine learning to infer a range of pulsar parameters and simulate their evolution until the population matches observational distributions, one such study is \citet{pardo-araujo_radio_2025} which estimates the Galactic NS birthrate to be 2, which is within agreement of the estimated supernova occurrence rate in the Galaxy. The further uses of pulsar simulations are discussed in greater depth along with their implications in \cref{chap:lunar}. 
 
 \subsubsection{Neutron Star Structure}
 
-The theory for interior structure of NSs are currently derived from complex mathematical models. While constraints on the structure and size of NSs can be inferred from observations. This includes asteroseismology through pulsar glitches \citep{antonopoulou_pulsar_2022}, study of NSs with X-ray observations such as \textit{NICER} and NSs mergers observed with gravitational wave observatories like LIGO and VIRGO \citep{hebeler_equation_2013}. Accordingly, the stellar interior is usually obtained by solving the Tolman–Oppenheimer–Volkoff (TOV) equations for hydrostatic equilibrium \citep{oppenheimer_massive_1939}. Using common relativistic units $(G=c=1)$ and assuming that NSs are spherically symmetric \citep{the_ligo_scientific_collaboration_and_the_virgo_collaboration_gw170817_2018}, the TOV equation can be written as \citep[pp. 124 - 126,][]{1983bhwd.book.....S}, 
+The theory for interior structure of NSs is currently derived from complex mathematical models. While constraints on the structure and size of NSs can be inferred from observations. This includes asteroseismology through pulsar glitches \citep{antonopoulou_pulsar_2022}, study of NSs with X-ray observations such as with \textit{NICER} and NSs mergers observed with gravitational wave observatories like LIGO and VIRGO \citep{hebeler_equation_2013}. Accordingly, the stellar interior is usually obtained by solving the Tolman–Oppenheimer–Volkoff (TOV) equations for hydrostatic equilibrium \citep{oppenheimer_massive_1939}. Using common relativistic units $(G=c=1)$ and assuming that NSs are spherically symmetric \citep{the_ligo_scientific_collaboration_and_the_virgo_collaboration_gw170817_2018}, the TOV equation can be written as \citep[pp. 124 - 126,][]{1983bhwd.book.....S}, 
 
 \begin{align}
     \frac{dm}{dr} & = 4 \pi r^2 \rho(r) \\ 
@@ -74,7 +76,7 @@ The theory for interior structure of NSs are currently derived from complex math
     \label{eq:TOVDPdr}
 \end{align}
 
-These equations determine the pressure and enclosed mass profiles of the star once an equation of state is specified. With this in mind the cross-section of a NS is illustrated in \cref{fig:NSsInterior}. The following summary of the interior is broadly accepted as a  reasonable starting point, but is by no means reflects the nuance of the topic, for an in depth discussion see \cite{burgio_neutron_2021}. 
+These equations determine the pressure and enclosed mass profiles of the star once an equation of state is specified. With this in mind the cross-section of a NS is illustrated in \cref{fig:NSsInterior}. The following summary of the interior is broadly accepted as a  reasonable starting point, but by no means reflects the nuance of the topic, for an in-depth discussion see \cite{burgio_neutron_2021}. 
 
 
 \begin{figure}
@@ -145,18 +147,18 @@ These equations determine the pressure and enclosed mass profiles of the star on
 
     \item Outer core $(\rho \gtrsim 2 \times 10^{14} \ \text{g cm}^{-3}$, up to several times nuclear density) is a homogenous nucleonic region consisting of mainly neutrons, electrons and muons in beta equilibrium (beta decay and inverse beta decay are equal).  At densities in the outer core it is more energy efficient for matter to be uniform driving the composition to beta equilibrium. 
 
-    \item Inner core, there is no certainty on what the composition of matter towards the centre of a NS. It is thought at the highest densities in the universe there could be additional types or phases of particles. However, this remains entirely model dependent and speculative. As the densities are so high the system may lower its energy by converting some the nucleons into new degrees of freedom such as pions, hyperons or some other quark matter. In the case of some deconfined quark matter it would only include up, down and strange as the other quarks are too massive. 
+    \item Inner core, there is no certainty on what the composition of matter towards the centre of a NS is. It is thought at the highest densities in the Universe there could be additional types or phases of particles. However, this remains entirely model-dependent and speculative. As the densities are so high the system may lower its energy by converting some of the nucleons into new degrees of freedom such as pions, hyperons or some other quark matter. In the case of some deconfined quark matter it would only include up, down and strange as the other quarks are too massive. 
 
     
 \end{enumerate}
 
-\subsection{The Properties of Pulsars}
+\subsection{The Properties of Pulsars} \label{sec:properties_of_pulsars}
 
-As alluded to in the previous section one of the primary questions for astronomers who study stars as objects is understanding their equation of state (EOS) to some reasonable degree. This usually entails the development of mathematical framework that describes pressure, volume, temperature and internal energy then verify and modify the framework based on observational findings. Pulsars are complex objects and in many aspects are poorly understood. For example, it is unknown if one EOS can describe all pulsars with various transitionary components or if there are multiple EOS that describe the entire class. The following section gives a brief non-exhaustive overview of some of the key properties of pulsars as they are thought of canonically. It is important to keep in mind that this is a baseline framework and should not be considered a complete physical theory. 
+As alluded to in the previous section one of the primary questions for astronomers who study stars as objects is understanding their equation of state (EOS) to some reasonable degree. This usually entails the development of a mathematical framework that describes pressure, volume, temperature and internal energy, and then verifying and modifying the framework based on observational findings. Pulsars are complex objects and in many aspects are poorly understood. For example, it is unknown if one EOS can describe all pulsars with various transitionary components or if there are multiple EOS that describe the entire class. The following section gives a brief non-exhaustive overview of some of the key properties of pulsars as they are thought of canonically. It is important to keep in mind that this is a baseline framework and should not be considered a complete physical theory. 
 
 The canonical `toy' pulsar model is shown in \cref{fig:pulsartoymodel}. This model refers to a rotating, magnetised neutron star with a dipole magnetic field. 
 
-This section uses \cite{pulsar_handbook}, \cite{EssenRadio16} and \cite{1983bhwd.book.....S} as a primary references throughout with more up-to-date discussions where applicable.  
+This section uses \cite{pulsar_handbook}, \cite{EssenRadio16} and \cite{1983bhwd.book.....S} as primary references throughout with more up-to-date discussions where applicable.  
 
 
 \subsubsection{Neutron Star Radius \& Mass}
@@ -185,7 +187,7 @@ Most pulsars are theoretically thought to have radii in the range of 10–15 km 
 
 \subsubsection{Spin Evolution and Energy Loss}
 The most well known characteristics of pulsars is the stable spinning that they exhibit. The `lighthouse' radio emission is also the most prominent observable metric, in some cases the second derivative of the period, $\ddot P$ is well known. 
-By understanding the spin evolution of pulsars direct insights into their parameters can be made. Most notably the stage of their evolution. Pulsars begin their evolution with periods around $~0.5~\mathrm{s}$ in the upper left region of the $P-\dot P$ diagram (i.e. the Crab pulsar in \cref{fig:p-pdot}). As a pulsar age they exhibit a loss in rotational energy loss as the pulsar slows down its period decreases and $\dot P$ increases. On the $P-\dot P$ diagram this translates to the pulsar moving diagonally right and towards the boundary of the pulsar graveyard. This loss in rotational energy\footnote{Rotational energy: $E=1/2 I \omega^2$ }, commonly referred to as spin-down luminosity, ($\dot E$), which is described as follows \citep[p.~59]{pulsar_handbook}, 
+By understanding the spin evolution of pulsars direct insights into their parameters can be made. Most notably the stage of their evolution. Pulsars begin their evolution with periods around $~0.5~\mathrm{s}$ in the upper left region of the $P-\dot P$ diagram (i.e. the Crab pulsar in \cref{fig:p-pdot}). As pulsars age they exhibit a loss in rotational energy and as the pulsar slows down its period decreases and $\dot P$ increases. On the $P-\dot P$ diagram this translates to the pulsar moving diagonally right and towards the boundary of the pulsar graveyard. This loss in rotational energy\footnote{Rotational energy: $E=(1/2) I \omega^2$ }, commonly referred to as spin-down luminosity, ($\dot E$), which is described as follows \citep[p.~59]{pulsar_handbook}, 
 
 \begin{equation}
 \dot E = - \frac{dE_{\text{rot}}}{dt} = -I \omega \dot \omega= 4\pi^2 I \dot P P^{-3}. 
@@ -419,9 +421,9 @@ Commonly an assumption is made that the current period is much greater than the 
 \end{equation}
 %cong 15.8~\text{Myr} \left( \frac{P}{s} \right) \left( \frac{\dot P}{10^{-15}} \right)^{-1}. 
 
-The characteristic age estimation for a pulsars age is known to be inconsistent with both theory and observation. For example in the cases where a CCSNe has been observed and has produced a pulsar such as the Crab pulsar which is one such example with an observed Supernova event in 1054 AD by Chinese astronomers \citep{kaspi_chandra_2001}. Using $P$ and $\dot P$ values\footnote{Values taken from Jodrell Bank ephemeris for May 2026 \citep{lyne_23_1993}} for the Crab and assuming dipole braking gives an age estimated age of $\sim 1279$ years compared to the known value of 972 years. This relationship should be used with caution in the case of estimating the age of binary systems, for example the characteristic age of J1713+0747 is 8.5~Gyr because of other mechanisms such as accretion are at play, violating the $P_0 \ll P$ assumption. 
+The characteristic age estimation for a pulsars age is known to be inconsistent with both theory and observation. For example in the cases where a CCSNe has been observed and has produced a pulsar such as the Crab pulsar which is one such example with an observed Supernova event in 1054 AD by Chinese astronomers \citep{kaspi_chandra_2001}. Using $P$ and $\dot P$ values\footnote{Values taken from Jodrell Bank ephemeris for May 2026 \citep{lyne_23_1993}} for the Crab and assuming dipole braking gives an age estimated age of $\sim 1279$ years compared to the known value of 972 years. This relationship should be used with caution in the case of estimating the age of binary systems, for example the characteristic age of J1713+0747 is 8.5~Gyr because other mechanisms such as accretion are at play, violating the $P_0 \ll P$ assumption. 
 
-Another important result can be gottend from \cref{eq:age-full}. Rearranging the equation for $P_0$ gives an expression for the birthrate period of a pulsar, 
+Another important result can be obtained from \cref{eq:age-full}. Rearranging the equation for $P_0$ gives an expression for the birthrate period of a pulsar, 
 
 \begin{equation}
     P_0 = P\left[ 1 - \frac{(n-1) \dot P T}{P} \right]^\frac{1}{n-1}
@@ -433,7 +435,7 @@ If magnetic dipole braking is assumed $(n=3)$ the expression becomes,
     P_0 = P \sqrt{1 - \frac{2 \dot P T}{P}}.
 \end{equation}
 
-Once again taking the Crab as an example, the intial birth period is $\sim 16.6~\text{ms}$, less than half the measured value measured in May 2026 of $\sim 33.85$ ms.
+Once again taking the Crab as an example, the initial birth period is $\sim 16.6~\text{ms}$, less than half the measured value measured in May 2026 of $\sim 33.85$ ms.
 %Supernoave remnants are also used to estimate the age of pulsars.
 
 \subsubsection{Magnetic Field Strength and Magnetosphere}
@@ -442,7 +444,7 @@ It has been mentioned several times up to this point that pulsars are heavily ma
 
 \begin{align}
     \dot E_{\text{dipole}} & = -\dot E \\ 
-    \frac{2}{3c^3} |m|^2 \omega^4 \sin^2 \alpha & = \frac{4\pi^2 I \dot P}{P^3} \\
+    \frac{2}{3c^3} |m|^2 \omega^4 \sin^2 \alpha & = \frac{4\pi^2 I \dot P}{P^3} 
 \end{align}
 
 Once again relating everything in terms of $\omega = P/2\pi$, subsiting $|m|$ and solving for $B$, yields: 
@@ -461,23 +463,436 @@ Using the values for the canonical pulsar $(\alpha =90, ~r=10~\text{km}, ~I=10^{
 
 Again taking the Crab as an example this results in a magnetic field strength of $\sim3.8\times10^{12}$. Converting this to magnetic energy density gives $\sim 5.8 \times 10^{23}~\text{erg cm}^{-3}$. To put this in perspective MRI machines operate at $5-30\times 10^3$ G or when considering the immense energy density. In 2025 Ireland generated\footnote{Ember (2026), Energy Institute - Statistical Review of World Energy (2025)} 30.95~TWh of electricity which is $\sim 1 \times 10^{17}$ J. This is comparable to the magnetic energy stored in only $2 ~\text{cm}^{-3}$ at the surface of the Crab. 
 
-The immense magnetic energy on the Crab's surface is released through its surrounding magnetosphere. The magnetosphere dictates both the particle winds and electromagnetic radiation. As the magnetic field lines are `frozen in' the field rotates with the star itself. A rotating magnetic field induces an electric field according to, 
+The immense magnetic energy on the Crab's surface is released through its surrounding magnetosphere. The magnetosphere dictates both the particle winds and electromagnetic radiation. As the magnetic field lines are `frozen in' the field rotates with the star itself and is approximately\footnote{add references discussing this} dipolar. 
+As the NS star rotates its highly conducting surface cannot sustain an electric field in its own rest frame because free charges redistribute until the electric field vanishes. Consequently, an observer in the inertial frame measures the corotating electric field,
+
+
+% A rotating magnetic field induces an electric field according to, 
 
 \begin{equation}
-    \mathbf{E} = -\frac{(\mathbf{{\boldsymbol{\omega}} \times r}) \times \mathbf{B}}{c}
+    \mathbf{E} = -\frac{(\mathbf{{\boldsymbol{\omega}} \times r}) \times \mathbf{B}}{c}=0
+    \label{eq:ideal_conductor_IF}
 \end{equation}
 
-in a corotating frame the electric field will pull particles from the surface of the NS. These particles fill the surrounding region creating a plasma-filled magnetospherer. 
+% in a corotating frame the electric field will pull particles from the surface of the NS. 
 
-\subsubsection{Radio Emission}
+% This electric field extends into the surrounding region, if it is a vacuum (i.e. no surrounding plasma). 
+Adopting a spherical polar coordinate system $(r, \theta, \phi)$ with the origin at the centre of the NS and the $z-$axis alinged with the rotaion axis, $\boldsymbol{\omega} = \omega ~ \hat z$, and position vector, $\boldsymbol{r} = r ~ \hat r$
+If an aligned rotator (dipole axis and rotation axis are parallel) is assumed the magnetic dipole at the surface, $R$, of the NS can be expressed radial component can be expressed as, 
 
-The mechanisms for which pulsars emit radio waves are still quite enigmatic. In the last 50 years there have been many proposed models that are both accepted and critiqued, with no overwhelming consensus on which is the most plausible. Full deliberation on the topic is out of the scope of this work (see \cite{melrose_pulsar_2021} for a review).
+\begin{equation}
+    B_r (R, \theta) = B_S \cos \theta
+\end{equation}
 
-As previously mentioned the magnetic flux during a CCSNe must be conserved and this is done through the dynamo effect and `frozen in' magnetic field lines in the neutron stars highly conductive plasma. 
+and polar component can be expressed as, 
+
+\begin{equation}
+    B_\theta (R, \theta) = B_S/2 \sin \theta
+\end{equation}
+
+where $B_S$ is the magnetic field strength at the magnetic pole.
+
+\begin{equation}
+    \boldsymbol{\omega} \times \textbf{r} = \omega R \sin \theta ~ \hat \phi. 
+\end{equation}
+
+Then, using $\hat{\boldsymbol{\phi}} \times \hat{\mathbf{r}} = \hat{\boldsymbol{\theta}}$ and $\hat{\boldsymbol{\phi}} \times \hat{\boldsymbol{\theta}} = -\hat{\mathbf{r}}$, the tangential electric field at the surface (parallel to the surface of the NS) can be expressed as, 
+
+\begin{equation}
+    E_\theta (R, \theta) = - \frac{\boldsymbol{\omega}R \sin \theta}{c} B_r = - \frac{\boldsymbol{\omega}R B_s}{c} \sin \theta \cos \theta 
+\end{equation}
+
+Because the exterior vacuum field is electro static, $\mathbf{E} = - \nabla \boldsymbol{\phi}$, the following spherical-coordinate relation can be used, 
+
+\begin{equation}
+    E_\theta = -\frac{1}{r} \frac{\partial{\Phi}}{\partial\theta}.
+\end{equation}
+
+So when $r=R$ and rearranging to isolate the angle dependant differential part of the surface potential, 
+
+\begin{equation}
+     \frac{\partial{\Phi} (R,\theta)}{\partial\theta} = \frac{\omega B_s R^2}{c} \sin \theta \cos \theta.
+\end{equation}
+
+Integrating the above equation with respect to $\theta$, 
+
+\begin{equation}
+     \Phi (R, \theta) =  \frac{\omega B_s R^2}{3c} \underbrace{\frac{1}{2}(3 \cos^2 \theta -1)}_{P_2}. 
+     \label{eq:phiangledepfield}
+\end{equation}
+
+If it assumed there are no charges, $\rho$, outside the NS, the Poisson's equation reduces, $\nabla^2 \Phi = -4\pi \rho = 0$ which is Laplace's equation. The electrostatic potential must satisfy Laplace's equation. In spherical coordinates, the axisymmetric solutions are proportional to the second order Legendre polynomial, $P_2$, defined in \cref{eq:phiangledepfield}.
+
+\begin{equation}
+    \Phi(r, \theta) = \frac{A_2}{2r^3}  \left(3 \cos^2 \theta-1 \right),
+\end{equation}
+
+Where $A_2$ is determined by the mating solution to the surface potineital. Then matching $r=R$ gives, 
+
+\begin{equation}
+    A_2 = - \frac{\omega B_s R^5}{3c}
+\end{equation}
+
+Thus, 
+
+\begin{equation}
+    \Phi (r, \theta) = - \frac{\omega B_s R^5}{6cr^3} (3 \cos^2 \theta -1) 
+\end{equation}
+
+The magnitude of the electric field parallel to the magnetic field, $\mathbf{B}$, which can be expressed as,
+
+\begin{align} 
+    E_\parallel =\mathbf{E} \cdot \textbf{B} = & E_r B_r + E_\theta B_\theta \\ 
+    = & - \frac{\omega B_s^2 R}{2c} (3 \cos^2 \theta -1) \cos \theta -  \frac{\omega B_s^2 R}{2c} \sin^2 \theta \cos \theta \\ 
+    = & - \frac{\omega B_s^2 R}{2c} \cos \theta [3 \cos^2 \theta -1 + \sin^2 \theta] \\
+    = & - \frac{\omega B_s^2 R}{c}                                                           \cos^3 \theta. 
+\end{align}
+
+As shown by \cref{eq:ideal_conductor_IF} the electric field within the NS is 0. However, the non-zero values for $\mathbf{E} \cdot \textbf{B}$ implies that a true vaccum magnetosphere cannot be maintained. Instead, the surrounding region fills with plasma as particles are pulled from the surface with a force $ F = q E_\parallel$. The particles don't remain uniformly distributed they are redistributed under the influence of the electric field until the electric field generated by the plasma opposes the original one. This raises the question of how much plasma is required within the magnetosphere, so the electric field parallel to the magnetic field is cancelled or `screened'. Applying Gauss's law the required charged denisty can be expressed as, 
+
+\begin{equation}
+    \rho_{GJ}(r, \theta) = \frac{\nabla \mathbf{E}}{4 \pi} = -\frac{\boldsymbol{\omega} \cdot \mathbf{B}}{2 \pi c} = - \frac{\omega B_s R^3}{4 \pi c r^3  }(3 \cos^2{\theta} -1)
+    \label{eq:GJchargedensity}
+\end{equation}
+
+
+The above is known as the  Goldreich and Julian density which is described in \cite{goldreich_pulsar_1969}. The previous workings in the section are all variations from this model which is considered a classic work in pulsar magnetospheres. An illustration of the magnetosphere described my this model can be seen in  \cref{fig:goldreich_magnetosphere}. 
+
+\begin{figure}
+
+\centering
+% Gradient Info
+
+
+% Gradient Info
+  
+\tikzset {_1b9ueu2if/.code = {\pgfsetadditionalshadetransform{ \pgftransformshift{\pgfpoint{0 bp } { 0 bp }  }  \pgftransformrotate{0 }  \pgftransformscale{2 }  }}}
+\pgfdeclarehorizontalshading{_3w6kquc8c}{150bp}{rgb(0bp)=(0.65,0.81,0.87);
+rgb(37.5bp)=(0.65,0.81,0.87);
+rgb(62.5bp)=(0.14,0.33,0.54);
+rgb(100bp)=(0.14,0.33,0.54)}
+
+% Gradient Info
+  
+\tikzset {_i9g14o45l/.code = {\pgfsetadditionalshadetransform{ \pgftransformshift{\pgfpoint{0 bp } { 0 bp }  }  \pgftransformrotate{0 }  \pgftransformscale{2 }  }}}
+\pgfdeclarehorizontalshading{_7roc1lqwq}{150bp}{rgb(0bp)=(0.65,0.81,0.87);
+rgb(37.5bp)=(0.65,0.81,0.87);
+rgb(62.5bp)=(0.14,0.33,0.54);
+rgb(100bp)=(0.14,0.33,0.54)}
+
+% Gradient Info
+  
+\tikzset {_g5dtp1zrt/.code = {\pgfsetadditionalshadetransform{ \pgftransformshift{\pgfpoint{89.1 bp } { -128.7 bp }  }  \pgftransformscale{1.32 }  }}}
+\pgfdeclareradialshading{_pqcrkvvem}{\pgfpoint{-72bp}{104bp}}{rgb(0bp)=(1,1,1);
+rgb(0bp)=(1,1,1);
+rgb(25bp)=(0.96,0.65,0.14);
+rgb(400bp)=(0.96,0.65,0.14)}
+
+% Gradient Info
+  
+\tikzset {_l7njkmhte/.code = {\pgfsetadditionalshadetransform{ \pgftransformshift{\pgfpoint{89.1 bp } { -128.7 bp }  }  \pgftransformscale{1.32 }  }}}
+\pgfdeclareradialshading{_pn6zblz3v}{\pgfpoint{-72bp}{104bp}}{rgb(0bp)=(1,1,1);
+rgb(0bp)=(1,1,1);
+rgb(25bp)=(0.96,0.65,0.14);
+rgb(400bp)=(0.96,0.65,0.14)}
+
+% Gradient Info
+  
+\tikzset {_ln8rjqkss/.code = {\pgfsetadditionalshadetransform{ \pgftransformshift{\pgfpoint{89.1 bp } { -128.7 bp }  }  \pgftransformscale{1.32 }  }}}
+\pgfdeclareradialshading{_vcfvm606k}{\pgfpoint{-72bp}{104bp}}{rgb(0bp)=(1,1,1);
+rgb(0bp)=(1,1,1);
+rgb(25bp)=(0.96,0.65,0.14);
+rgb(400bp)=(0.96,0.65,0.14)}
+\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+
+\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+%uncomment if require: \path (0,682); %set diagram left start at 0, and has height of 682
+
+%Curve Lines [id:da527308860284001] 
+\draw [color={rgb, 255:red, 128; green, 128; blue, 128 }  ,draw opacity=1 ]   (84.82,352.27) .. controls (104.98,305.77) and (166.75,177.75) .. (313.75,65.75) ;
+\draw [shift={(186.09,188.39)}, rotate = 129.21] [fill={rgb, 255:red, 128; green, 128; blue, 128 }  ,fill opacity=1 ][line width=0.08]  [draw opacity=0] (12,-3) -- (0,0) -- (12,3) -- cycle    ;
+%Straight Lines [id:da9447343665637994] 
+\draw    (145.25,210.25) -- (98.27,335.75) ;
+%Straight Lines [id:da31932117543366767] 
+\draw    (14.15,209.95) -- (80.28,335.75) ;
+%Shape: Pie [id:dp3399316185361487] 
+\path  [shading=_3w6kquc8c,_1b9ueu2if] (76.72,351.68) .. controls (76.72,351.68) and (76.72,351.68) .. (76.72,351.68) .. controls (100.62,351.85) and (119.85,371.79) .. (119.67,396.19) -- (76.39,395.87) -- cycle ; % for fading 
+ \draw   (76.72,351.68) .. controls (76.72,351.68) and (76.72,351.68) .. (76.72,351.68) .. controls (100.62,351.85) and (119.85,371.79) .. (119.67,396.19) -- (76.39,395.87) -- cycle ; % for border 
+
+%Straight Lines [id:da5146329068671139] 
+\draw    (76.72,299.5) -- (76.72,351.68) ;
+\draw [shift={(76.72,296.5)}, rotate = 90] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
+%Shape: Ellipse [id:dp4535610735090887] 
+\draw  [color={rgb, 255:red, 74; green, 144; blue, 226 }  ,draw opacity=1 ][line width=0.75]  (61.36,317.84) .. controls (61.36,316.67) and (68.02,315.73) .. (76.23,315.73) .. controls (84.44,315.73) and (91.09,316.67) .. (91.09,317.84) .. controls (91.09,319) and (84.44,319.94) .. (76.23,319.94) .. controls (68.02,319.94) and (61.36,319) .. (61.36,317.84) -- cycle ;
+%Shape: Triangle [id:dp8383494521161571] 
+\draw  [draw opacity=0][fill={rgb, 255:red, 74; green, 144; blue, 226 }  ,fill opacity=1 ] (82.21,319.85) -- (73.88,322.05) -- (73.83,317.8) -- cycle ;
+%Curve Lines [id:da3406769552634432] 
+\draw [color={rgb, 255:red, 128; green, 128; blue, 128 }  ,draw opacity=1 ]   (104.27,361.18) .. controls (144.27,331.18) and (216,329.17) .. (231,396.83) ;
+\draw [shift={(186.5,344.65)}, rotate = 194.95] [fill={rgb, 255:red, 128; green, 128; blue, 128 }  ,fill opacity=1 ][line width=0.08]  [draw opacity=0] (12,-3) -- (0,0) -- (12,3) -- cycle    ;
+%Curve Lines [id:da8403131205748323] 
+\draw [color={rgb, 255:red, 128; green, 128; blue, 128 }  ,draw opacity=1 ]   (100.82,359) .. controls (222.82,267.33) and (305.67,328.5) .. (320.67,396.17) ;
+\draw [shift={(232.95,313.71)}, rotate = 186.4] [fill={rgb, 255:red, 128; green, 128; blue, 128 }  ,fill opacity=1 ][line width=0.08]  [draw opacity=0] (12,-3) -- (0,0) -- (12,3) -- cycle    ;
+%Straight Lines [id:da08285087184216633] 
+\draw [color={rgb, 255:red, 0; green, 0; blue, 0 }  ,draw opacity=1 ] [dash pattern={on 4.5pt off 4.5pt}]  (325.33,64.17) -- (320.67,396.17) ;
+%Curve Lines [id:da8042429826305977] 
+\draw [color={rgb, 255:red, 128; green, 128; blue, 128 }  ,draw opacity=1 ]   (98.27,357.55) .. controls (136.87,328.54) and (148.5,297.75) .. (236,282.75) .. controls (323.5,267.75) and (375.5,343.75) .. (520,291.75) ;
+\draw [shift={(166.9,303.91)}, rotate = 151.6] [fill={rgb, 255:red, 128; green, 128; blue, 128 }  ,fill opacity=1 ][line width=0.08]  [draw opacity=0] (12,-3) -- (0,0) -- (12,3) -- cycle    ;
+\draw [shift={(385.55,307.17)}, rotate = 189.72] [fill={rgb, 255:red, 128; green, 128; blue, 128 }  ,fill opacity=1 ][line width=0.08]  [draw opacity=0] (12,-3) -- (0,0) -- (12,3) -- cycle    ;
+%Curve Lines [id:da06564863069342941] 
+\draw [color={rgb, 255:red, 128; green, 128; blue, 128 }  ,draw opacity=1 ]   (95.18,356.09) .. controls (121.85,325.59) and (166.5,269.25) .. (254,254.25) .. controls (341.5,239.25) and (409,254.75) .. (521,165.25) ;
+\draw [shift={(171.45,285.57)}, rotate = 147.13] [fill={rgb, 255:red, 128; green, 128; blue, 128 }  ,fill opacity=1 ][line width=0.08]  [draw opacity=0] (12,-3) -- (0,0) -- (12,3) -- cycle    ;
+\draw [shift={(402.53,231.33)}, rotate = 163.4] [fill={rgb, 255:red, 128; green, 128; blue, 128 }  ,fill opacity=1 ][line width=0.08]  [draw opacity=0] (12,-3) -- (0,0) -- (12,3) -- cycle    ;
+%Curve Lines [id:da6102339283645248] 
+\draw [color={rgb, 255:red, 128; green, 128; blue, 128 }  ,draw opacity=1 ]   (90.82,354.27) .. controls (110.98,307.77) and (195,233.75) .. (255,198.75) .. controls (315,163.75) and (391.5,136.75) .. (481,64.75) ;
+\draw [shift={(169.34,261.95)}, rotate = 138.35] [fill={rgb, 255:red, 128; green, 128; blue, 128 }  ,fill opacity=1 ][line width=0.08]  [draw opacity=0] (12,-3) -- (0,0) -- (12,3) -- cycle    ;
+\draw [shift={(378.89,133.61)}, rotate = 150.77] [fill={rgb, 255:red, 128; green, 128; blue, 128 }  ,fill opacity=1 ][line width=0.08]  [draw opacity=0] (12,-3) -- (0,0) -- (12,3) -- cycle    ;
+%Straight Lines [id:da06267972680218514] 
+\draw    (119.67,396.19) -- (320.67,396.19) ;
+%Straight Lines [id:da6232877878530818] 
+\draw [color={rgb, 255:red, 74; green, 144; blue, 226 }  ,draw opacity=1 ] [dash pattern={on 4.5pt off 4.5pt}]  (113.33,371.67) -- (321.33,243.83) ;
+%Shape: Brace [id:dp7900034318546236] 
+\draw   (122,401) .. controls (122.01,405.67) and (124.34,408) .. (129.01,407.99) -- (211.26,407.89) .. controls (217.93,407.88) and (221.26,410.21) .. (221.27,414.88) .. controls (221.26,410.21) and (224.59,407.88) .. (231.26,407.87)(228.26,407.87) -- (313.51,407.77) .. controls (318.18,407.76) and (320.51,405.43) .. (320.5,400.76) ;
+%Straight Lines [id:da21914308424127527] 
+\draw [color={rgb, 255:red, 0; green, 0; blue, 0 }  ,draw opacity=1 ][fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] [dash pattern={on 4.5pt off 4.5pt}]  (76.39,395.87) -- (98.27,357.55) ;
+%Shape: Rectangle [id:dp9611988013458141] 
+\draw  [color={rgb, 255:red, 0; green, 0; blue, 0 }  ,draw opacity=1 ] (80.28,335.75) -- (98.27,335.75) -- (98.27,357.55) -- (80.28,357.55) -- cycle ;
+%Curve Lines [id:da9873286933315998] 
+\draw [shading=_7roc1lqwq,_i9g14o45l]   (14.15,209.95) .. controls (60.65,191.95) and (119.15,198.89) .. (145.65,209.89) ;
+%Shape: Parabola [id:dp6060293974527067] 
+\draw   (47.8,200.59) .. controls (49.93,165.69) and (38.81,135.69) .. (14.45,110.62) ;
+%Shape: Parabola [id:dp15553805623584627] 
+\draw   (64.02,198.83) .. controls (62.57,151.35) and (45.78,110.12) .. (13.64,75.14) ;
+%Shape: Parabola [id:dp1854717705936193] 
+\draw   (82.59,198.26) .. controls (75.19,140.99) and (54.12,89.27) .. (19.41,43.12) ;
+%Shape: Parabola [id:dp8163395768935757] 
+\draw   (98.31,199.38) .. controls (93.83,143.38) and (77.7,90.97) .. (49.91,42.14) ;
+%Shape: Circle [id:dp2894151276392928] 
+\path  [shading=_pqcrkvvem,_g5dtp1zrt] (81.78,132.08) .. controls (81.78,129.04) and (84.24,126.58) .. (87.28,126.58) .. controls (90.31,126.58) and (92.78,129.04) .. (92.78,132.08) .. controls (92.78,135.11) and (90.31,137.58) .. (87.28,137.58) .. controls (84.24,137.58) and (81.78,135.11) .. (81.78,132.08) -- cycle ; % for fading 
+ \draw   (81.78,132.08) .. controls (81.78,129.04) and (84.24,126.58) .. (87.28,126.58) .. controls (90.31,126.58) and (92.78,129.04) .. (92.78,132.08) .. controls (92.78,135.11) and (90.31,137.58) .. (87.28,137.58) .. controls (84.24,137.58) and (81.78,135.11) .. (81.78,132.08) -- cycle ; % for border 
+
+%Straight Lines [id:da9239987022339967] 
+\draw    (77.52,66.77) -- (78.81,74.67) .. controls (80.72,76.04) and (80.99,77.69) .. (79.61,79.6) .. controls (78.24,81.51) and (78.51,83.16) .. (80.42,84.54) .. controls (82.33,85.91) and (82.6,87.56) .. (81.22,89.47) .. controls (79.85,91.38) and (80.12,93.03) .. (82.03,94.41) .. controls (83.94,95.78) and (84.21,97.43) .. (82.83,99.34) .. controls (81.46,101.25) and (81.73,102.9) .. (83.64,104.28) .. controls (85.55,105.65) and (85.82,107.3) .. (84.44,109.21) .. controls (83.07,111.12) and (83.34,112.77) .. (85.25,114.15) .. controls (87.16,115.52) and (87.43,117.17) .. (86.05,119.08) .. controls (84.68,120.99) and (84.95,122.64) .. (86.86,124.02) -- (87.28,126.58) -- (87.28,126.58) ;
+\draw [shift={(77.2,64.8)}, rotate = 80.74] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-4.9) .. controls (6.95,-2.3) and (3.31,-0.67) .. (0,0) .. controls (3.31,0.67) and (6.95,2.3) .. (10.93,4.9)   ;
+%Shape: Circle [id:dp5189898511094906] 
+\path  [shading=_pn6zblz3v,_l7njkmhte] (48.41,99.85) .. controls (48.41,96.81) and (50.87,94.35) .. (53.91,94.35) .. controls (56.95,94.35) and (59.41,96.81) .. (59.41,99.85) .. controls (59.41,102.89) and (56.95,105.35) .. (53.91,105.35) .. controls (50.87,105.35) and (48.41,102.89) .. (48.41,99.85) -- cycle ; % for fading 
+ \draw   (48.41,99.85) .. controls (48.41,96.81) and (50.87,94.35) .. (53.91,94.35) .. controls (56.95,94.35) and (59.41,96.81) .. (59.41,99.85) .. controls (59.41,102.89) and (56.95,105.35) .. (53.91,105.35) .. controls (50.87,105.35) and (48.41,102.89) .. (48.41,99.85) -- cycle ; % for border 
+
+%Shape: Circle [id:dp5818499445196929] 
+\path  [shading=_vcfvm606k,_ln8rjqkss] (89.74,170.52) .. controls (89.74,167.48) and (92.2,165.02) .. (95.24,165.02) .. controls (98.28,165.02) and (100.74,167.48) .. (100.74,170.52) .. controls (100.74,173.56) and (98.28,176.02) .. (95.24,176.02) .. controls (92.2,176.02) and (89.74,173.56) .. (89.74,170.52) -- cycle ; % for fading 
+ \draw   (89.74,170.52) .. controls (89.74,167.48) and (92.2,165.02) .. (95.24,165.02) .. controls (98.28,165.02) and (100.74,167.48) .. (100.74,170.52) .. controls (100.74,173.56) and (98.28,176.02) .. (95.24,176.02) .. controls (92.2,176.02) and (89.74,173.56) .. (89.74,170.52) -- cycle ; % for border 
+
+%Straight Lines [id:da6897895686421203] 
+\draw    (91.01,153.91) -- (86.33,147.42) .. controls (84,147.04) and (83.03,145.69) .. (83.41,143.36) .. controls (83.79,141.03) and (82.82,139.68) .. (80.49,139.3) .. controls (78.16,138.92) and (77.19,137.57) .. (77.57,135.24) .. controls (77.95,132.91) and (76.98,131.56) .. (74.65,131.19) .. controls (72.32,130.81) and (71.35,129.46) .. (71.73,127.13) .. controls (72.11,124.8) and (71.14,123.45) .. (68.81,123.07) .. controls (66.48,122.69) and (65.51,121.34) .. (65.88,119.01) .. controls (66.26,116.68) and (65.29,115.33) .. (62.96,114.96) .. controls (60.63,114.58) and (59.66,113.23) .. (60.04,110.9) .. controls (60.42,108.57) and (59.45,107.22) .. (57.12,106.84) -- (56.18,105.53) -- (56.18,105.53) ;
+\draw [shift={(92.18,155.53)}, rotate = 234.25] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-4.9) .. controls (6.95,-2.3) and (3.31,-0.67) .. (0,0) .. controls (3.31,0.67) and (6.95,2.3) .. (10.93,4.9)   ;
+%Curve Lines [id:da7715620093856852] 
+\draw [color={rgb, 255:red, 245; green, 166; blue, 35 }  ,draw opacity=1 ]   (85.53,126.49) .. controls (79.06,107.63) and (82.55,115.64) .. (73.3,90.21) ;
+\draw [shift={(72.4,87.76)}, rotate = 69.93] [fill={rgb, 255:red, 245; green, 166; blue, 35 }  ,fill opacity=1 ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
+%Curve Lines [id:da294370964679616] 
+\draw [color={rgb, 255:red, 245; green, 166; blue, 35 }  ,draw opacity=1 ]   (95.78,176.41) .. controls (96.72,183.51) and (97.17,185.67) .. (97.56,191.52) ;
+\draw [shift={(97.73,194.42)}, rotate = 266.91] [fill={rgb, 255:red, 245; green, 166; blue, 35 }  ,fill opacity=1 ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
+%Shape: Rectangle [id:dp5263499320853144] 
+\draw   (13.9,42.7) -- (145.65,42.7) -- (145.65,209.89) -- (13.9,209.89) -- cycle ;
+
+% Text Node
+\draw (140.5,365.4) node [anchor=north west][inner sep=0.75pt]    {$+$};
+% Text Node
+\draw (210.5,324.9) node [anchor=north west][inner sep=0.75pt]    {$+$};
+% Text Node
+\draw (266,292.4) node [anchor=north west][inner sep=0.75pt]    {$+$};
+% Text Node
+\draw (303.5,261.4) node [anchor=north west][inner sep=0.75pt]    {$+$};
+% Text Node
+\draw (372.5,244.9) node [anchor=north west][inner sep=0.75pt]    {$+$};
+% Text Node
+\draw (124.5,342.4) node [anchor=north west][inner sep=0.75pt]    {$-$};
+% Text Node
+\draw (160,320.9) node [anchor=north west][inner sep=0.75pt]    {$-$};
+% Text Node
+\draw (205.5,289.9) node [anchor=north west][inner sep=0.75pt]    {$-$};
+% Text Node
+\draw (261.5,254.9) node [anchor=north west][inner sep=0.75pt]    {$-$};
+% Text Node
+\draw (366.5,212.4) node [anchor=north west][inner sep=0.75pt]    {$-$};
+% Text Node
+\draw (184,420.5) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize] [align=left] {Closed field lines };
+% Text Node
+\draw (294,51.5) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize] [align=left] {Light Cylinder};
+% Text Node
+\draw (80,360.9) node [anchor=north west][inner sep=0.75pt]  [font=\tiny]  {$\theta _{p}$};
+% Text Node
+\draw (67.73,48.2) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$\gamma \ \rightarrow e^{-} +e^{+}$};
+% Text Node
+\draw (275.2,231.4) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize,color={rgb, 255:red, 74; green, 144; blue, 226 }  ,opacity=1 ] [align=left] {Null Line};
+% Text Node
+\draw (22.4,110.6) node [anchor=north west][inner sep=0.75pt]  [font=\tiny] [align=left] {Gap};
+
+
+\end{tikzpicture}
+
+
+    \caption[\cite{goldreich_pulsar_1969} magnetosphere model]{\cite{goldreich_pulsar_1969} magnetosphere model. Inset shows a zoomed in look at the polar cap where pair-production and casscades occurs.}
+    \label{fig:goldreich_magnetosphere}
+\end{figure}
+
+
+The exterior plasma in the magnetosphere also experiences the same $\mathbf{E} \times \mathbf{B}$ field as the interior of the NS, which causes the magnetosphere to co-rotate with the NS.  As every charged particle experiences a Lorentz force moves in the magnetosphere  until there is no net force along $(E_\parallel \approx 0)$ the remaining force is a drift caused by $\mathbf{E} \times \mathbf{B}$ such that a drift velocity can be expressed as, 
+
+\begin{equation}
+    \mathbf{v}_{d} = \boldsymbol{\omega} \times \mathbf{r}
+\end{equation}
+
+Which when $\mathbf{E} \times \mathbf{B} = 0$, $v_d$ is equal to the corotation velocity, $v_{cor}$. As the distance from the rotation axis increases at some point this $v_{cor} = c$, this defineds what is known as the `light cylinder' which is expressed as, 
+
+\begin{equation}
+    R_{\text{LC}} = \frac{c}{\omega}
+\end{equation}
+
+Beyond the light cylinder the magnetic field lines can no longer co-rotate as a closed loop and the magnetic field lines open. 
+
+The open field region is known as the polar cap and are centred on the magnetic pole and extend to the last open field line, $\theta_p$ (see \cref{fig:goldreich_magnetosphere}). The polar cap has a radius, $R_p \simeq R \sin \theta_p$. Directly the stellar surface is the polar gap (inner acceleration gap), this is a region where plasma density is too low to screen the electric fields. Consequently, these particles experience, $F=qE_\parallel$ and accelerated to relativistic speeds. There are also general gap regions where this occurs. In addition to the polar gap, located immediately above the polar cap, particle acceleration may also occur in the outer acceleration gap near the null line e and extending towards the light cylinder.
+
+
+\Cref{fig:goldreich_magnetosphere} also shows a null line (dashed blue line), this is a region where the charge density (\cref{eq:GJchargedensity}) changes signs. This occurs when the magnetic field becomes perpendicular to the axis of rotation.
+
+Finally, in the polar cap region there is a pair creation cascade, in this region (shown inset in \cref{fig:goldreich_magnetosphere}) accelerated particles emit $\gamma$-ray photons by either curvature radiation or by inverse Compton scattering at lower energies. Due to the strong magnetic field present magnetic-positron pair creation can occur if the energy exceeds twice the rest mass of an electron \citep{Eber1966}. The generation of particles creates more photons and thus more particles leading to an avalanche (see \cref{fig:feynman_pairproductioncascade}) producing secondary and potentially tertiary plasmas \citep{sturrock_model_1971}. These resulting plasmas with cascaded electron-positron pairs are widely believed to be the source of the non-thermal coherent radio emission (see \cref{sec:nonthermal}). For a deeper discussion on the modern model changes and to why this problem remains unsolved see \cite{melrose_pulsar_2016}.
+
+\begin{figure}
+    \centering
+
+\begin{tikzpicture}
+\begin{feynman}
+% Made with Mathcha 
+% -------------------------------------------------
+% Vertices
+% -------------------------------------------------
+
+% Initial photon
+\vertex (g0) at (-4,0) {\(\gamma\)};
+\vertex[dot] (v0) at (-1,0) {};
+
+% Primary electron and positron branches
+\vertex[dot] (vu1) at (2,1.8) {};
+\vertex[dot] (vl1) at (2,-1.8) {};
+
+% Secondary conversion vertices
+\vertex[dot] (vu2) at (5.5,2.1) {};
+\vertex[dot] (vl2) at (5.5,-2.1) {};
+
+% Final upper pair
+\vertex (uem) at (8,3.3) {\(e^{-}\)};
+\vertex (uep) at (8,1.1) {\(\gamma\)};
+
+% Final lower pair
+\vertex (lem) at (8,-1.1) {\(\gamma\)};
+\vertex (lep) at (8,-3.3) {\(e^{+}\)};
+
+% Emitted photons
+\vertex (gu) at (3.7,4.0) {\(\gamma\)};
+\vertex (gl) at (3.7,-4.0) {\(\gamma\)};
+
+% -------------------------------------------------
+% Diagram
+% -------------------------------------------------
+
+\diagram*{
+
+    % Initial gamma-ray conversion
+    (g0) -- [photon] (v0),
+
+    % Primary electron-positron pair
+    (v0) -- [
+        fermion,
+        edge label=\(e^{-}\)
+    ] (vu1),
+
+    (v0) -- [
+        anti fermion,
+        edge label'=\(e^{+}\)
+    ] (vl1),
+
+    % Upper electron continues and emits a photon
+    (vu1) -- [fermion] (vu2),
+    (vu1) -- [photon] (gu),
+
+    % Lower positron continues and emits a photon
+    (vl2) -- [anti fermion] (vl1),
+    (vl1) -- [photon] (gl),
+
+    % Upper secondary pair
+    (vu2) -- [fermion] (uem),
+    (uep) -- [photon] (vu2),
+
+    % Lower secondary pair
+    (vl2) -- [photon] (lem),
+    (lep) -- [fermion] (vl2),
+};
+
+% -------------------------------------------------
+% Labels
+% -------------------------------------------------
+
+% \node[below=7pt of v0]
+%     {\(\gamma \rightarrow e^{-}e^{+}\)};
+
+% \node[below=7pt of vu2]
+%     {\(\gamma \rightarrow e^{-}e^{+}\)};
+
+% \node[above=7pt of vl2]
+%     {\(\gamma \rightarrow e^{-}e^{+}\)};
+
+\end{feynman}
+\end{tikzpicture}
+    \caption{Illustration of rudimentary pair-production cascade. Conversion of high energy photon in the presence of a strong magnetic field converting to }
+    \label{fig:feynman_pairproductioncascade}
+\end{figure}
+
+The \citeauthor{goldreich_pulsar_1969} model outlined here gives a fundamental framework for magnetospheres in NS and as a consequence for how radio emission is possibly generated by a NS and observed on Earth. However, this is not a complete picture of pulsar electrodynamics as there are multiple assumptions made that are idealisations. 
+
+\begin{enumerate}[label=(\roman*)]
+
+\item The model assumes that the magnetic and rotational axes are parallel, whereas observationally there is evidence for oblique rotators (magnetic dipole axis is inclined compared to rotation axis). Oblique rotators produce time 
+dependent magnetospheres \citep{philippov_ab_2015}.
+
+\item There is also the assumption that the magnetosphere is filled with sufficient plasma to screen the parallel field $(E_\parallel\approx 0)$. Modern simulations and models require the presence of local acceleration gaps to account for excess particle acceleration \citep{ruderman_theory_1975,timokhin_polar_2015}
+
+\item An axisymmetric, steady-state corotating magnetosphere is also assumed. Research in magnetohydrodynamics has shown that there are complex current systems, dynamic magnetic reconnection on the surface and changes in the flows of plasma, with these effects being more pronounced around the light cylinder \citep{spitkovsky_time-dependent_2006, philippov_ab_2015}. 
+
+\item The model assumes that the neutron star magnetic field is a centred dipole. However, observations and theoretical models suggest that many pulsars possess significant higher-order multipolar components, particularly near the stellar surface, which modify the magnetic field geometry, the size and shape of the polar cap, and the location and efficiency of particle acceleration \citep{bilous_nicer_2019}.
+
+\end{enumerate}
+
+% \subsubsection{Radio Emission}
+
+% The mechanisms for which pulsars emit radio waves are still quite enigmatic. In the last 50 years there have been many proposed models that are both accepted and critiqued, with no overwhelming consensus on which is the most plausible. Full deliberation on the topic is out of the scope of this work (see \cite{melrose_pulsar_2021} for a review).
+
+% As previously mentioned the magnetic flux during a CCSNe must be conserved and this is done through the dynamo effect and `frozen in' magnetic field lines in the neutron stars highly conductive plasma.
+
+
+\subsubsection{Pulsar's Radio Beams}
+
+As discussed the mechanics for which pulsars emit radio waves are still quite enigmatic. It is generally accepted that the radio emission is beamed along the open magnetic field lines that can be approximated to a hollow cone centred on the magnetic axis, this simplification has proven reasonable for describing observations and making predictions in pulsar observations. As the NS rotates this cone sweeps across the sky and a pulse is detected whenever the observers line of sight intersects the beam, the observed pulses are then averaged and this forms what is known as a `pulse profile' and can be thought of as the pulsar's fingerprint. Much can be derived from the pulse profile itself, there are many pulsars that when observed exhibit interesting pulse profiles as shown in \cref{fig:various_pulse_profiles}.  
+
+At present there are two models that are commonly used to infer details about the pulsars' emission beam. The first  is known as the cone-and-cone model first presented by \cite{rankin_toward_1983}. This model stays true to its name as shown in \cref{fig:beam_emission} as it is just a cone(s) in a cone.  Radio emission as long as it crosses are line of site occurs anywhere along the cone, the lower in frequency that is observed, the further up the cone (away from the NS surface) the emissions from. For example if just one cone and one interior cone is taken as example, if the line of sight goes straight through the middle of both cones pulse profile will show four peaks. If it just grazes the edge of a single cone it will show one peak.   
+
+While the cone-in-cone is a relatively simple model that works for many observed pulsars it points to a much more complicated underlying beam geometries as shown by \cref{fig:various_pulse_profiles}. Pulse profiles in a lot of cases are quite `patchy' and frequency dependant. Due to this \cite{lyne_shape_1988} devised a patchy beam model which is also shown in \cref{fig:beam_emission}. This model proposed of discrete, irregular emitting region distributed across the open field line regions (i.e. J1834-04 in \cref{fig:various_pulse_profiles}). In general most pulse profile observed can be explained with patchy emission occurring inside a conal beam structure. 
+
+\begin{figure}
+    \centering
+\includegraphics[width=0.9\linewidth]{chapter1/figures/radio_beams.pdf}
+    \caption[Illustration of the cone in cone  and patchy beam model]{Illustration of the cone in cone \citep[left,][]{rankin_toward_1983} and patchy beam model \citep[right,][]{lyne_shape_1988} directly adapted from \cite[p. 73,][]{pulsar_handbook}}. 
+    \label{fig:beam_emission}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.9\linewidth]{chapter1/figures/pulse_profiles.pdf}
+    \caption[An assortment of pulse profiles that exhibit varied morphologies]{An assortment of pulse profiles that exhibit varied morphologies. From top to bottom showing a single pulse, double pulse, triple pulse, pulse and interpulse and  `patchy pulse'. Each of these pulses profiles were observed at L-band ($f_{ctr} \sim 1400~\text{MHz}$). The data was provided by the European Pulsar Network (EPN) Pulse Profile Database }
+    \label{fig:various_pulse_profiles}
+\end{figure}
 
 \subsubsection{Dispersion Measure} \label{sec:DispersionMeasure}
 
-The \ac{ism} is a complex mixture of gas, dust and magnetic fields that fills the space between stars in a galaxy. Given that the ISM is a cold and ionised plasma any electromagnetic radiation will undergo a frequency-dependant index of refraction as they propagate. The following equation describes the refractive index of the ISM neglecting Galactic magnetic field \citep[p.~85]{pulsar_handbook},
+Now that pulsars have been established along with how they emitted radio waves and the manifestation of how they appear in telescopes it's time to move on. The next thing to discuss is the \ac{ism}. The ISM is a complex mixture of gas, dust and magnetic fields that fills the space between stars in a galaxy. The ISM itself is a fascinating medium to study and often uses radio transients like pulsars to probe its content. Since the ionised component of the ISM forms a cold plasma, radio waves experience a frequency-dependent refractive index as they propagate through it along the line of sight to the observer (similar to optical light going through a prism). The following equation describes the refractive index of the ISM neglecting Galactic magnetic field \citep[p.~85]{pulsar_handbook},
 
 \begin{equation}
     \mu = \sqrt{1 - \left( \frac{f_p}{f} \right)^2}
@@ -490,33 +905,270 @@ Where $f_p$ is the plasma frequency, $8.5 ~\text{kHz} \left(n_e/\text{cm}^{-3} \
     t = \left( \int^d_0 \frac{dl}{v_g} \right) - \frac{d}{c}
 \end{equation}
 
-If is assumed to be $f_p \ll f$, $\mu$ can be approximated.
+Since radio observing frequencies greatly exceed the plasma frequency of the ISM $(f_p \ll f)$, the refractive index may be expanded using a first-order Taylor approximation,
 
 \begin{equation}
-    t = \frac{1}{c} \int^d_0 \left(1 + \frac{f_p^2}{2f^2} \right) dl - \frac{d}{c}  = \frac{e^2}{2 \pi m_e c} \dfrac{\int^d_0 n_e ~dl}{f^2} \equiv \mathcal{D} \cdot \dfrac{\text{DM}}{f^2}
+    t = \frac{1}{c} \int^d_0 \left(1 + \frac{f_p^2}{2f^2} \right) dl - \frac{d}{c}  = \frac{e^2}{2 \pi m_e c} \dfrac{\int^d_0 n_e ~dl}{f^2} \equiv \mathcal{D} \cdot \dfrac{\text{DM}}{f^2}. 
 \end{equation}
 
-Where $\mathcal{D}$ is the dispersion constant and $\text{DM}$ is the dispersion measure. Each are commonly expressed as follows, $\mathcal{D}= 4.15 \times 10^3 ~\text{MHz}^2 ~\text{pc}^{-1} ~ \text{cm}^3 ~\text{s}$ and $\text{DM} = \int^d_0 n_e ~dl ~\text{cm}^{-3} ~\text{pc}$. This definition was adapted from \citet[p.~86]{pulsar_handbook} and \cite{taylor_recent_1977}.
+Where $\mathcal{D}$ is the dispersion constant and $\text{DM}$ is the dispersion measure. Each are commonly expressed as follows, $\mathcal{D}= 4.15 \times 10^3 ~\text{MHz}^2 ~\text{pc}^{-1} ~ \text{cm}^3 ~\text{s}$ and 
+
+\begin{equation}
+\boxed{
+\text{DM} = \int^d_0 n_e ~dl ~\text{cm}^{-3} ~\text{pc}.
+}
+\end{equation}
+
+The dispersion measure  therefore represents the integrated column density of electrons along the line of sight to the source. This means that the higher the DM value the more electrons along the line of sight, either meaning the source is far away or there is a larger density of electrons (i.e. Galactic centre). As DM is frequency dependant it must the time delay from the extra path length must be accounted for. If this delay is not accounted for any received signal will be smeared and in most cases indistinguishable from noise as shown in \cref{fig:dispersion_example}. This is corrected for by adding a time delay to each frequency using the following relation, 
+
+\begin{equation}
+    \Delta t (f_{\text{low}}, f_{\text{high}}, \text{DM}) = \mathcal{D}~\text{DM} \left(\frac{1}{f^2_{\text{low}}} - \frac{1}{f^2_{\text{high}}} \right)
+\end{equation}
+
+Along with dispersion, waves that are linearly polariszed propagating through the ISM experience a magnetised force from the ions present in the medium, thios is known as Faraday rotation. This causes the plane of linear polarisation to rotate as a function of wavelength. The magnitude of this effect is quantified by rotation measure (RM), which is proportional to the integrated product of the free electron density and the line-of-sight magnetic field,
+
+\begin{equation}
+    \text{RM} = \frac{e^3}{2 \pi m^2_{\rm e} c^4} \int^d_0 n_{
+\rm e} B_\parallel ~ dl. 
+\end{equation}
+
+ % This definition was adapted from \citet[p.~86]{pulsar_handbook} and \cite{taylor_recent_1977}.
 
 \begin{figure}
     \centering
     \includegraphics[width=0.9\linewidth]{chapter1/figures/dispersion_example.png}
-    \caption{Example of pulse dispersion throuhg the ISM.}
+    \caption{Example of pulse dispersion through the ISM.}
     \label{fig:dispersion_example}
 \end{figure}
 
+
+
 \subsubsection{Electron Density Models}
+
+Because the electron content along any given line-of-sight can vary due different electron structures in the ISM it can be difficult to determine the actual distance to pulsars as many are too dim to determine to use methods such as optical parallax. Some pulsars do have distance measurements using Very Long Baseline Interferometry (VLBI) for parallax measurements or long term pulsar timing (see below) to determine small annual modulations which can be used to work out a timing parallax. However, because DM is relatively easy to measure, needing only multi-frequency observations there is a motivative to try to model the electron content in the ISM to an accurate degree to infer distances.  There have been many works model the distribution of electrons throughout the Galaxy. These models are built up from carefully curated collections of  pulsars, masers and Active Galactic Nuclei (AGN) which have accurate values for distance, scattering and dispersion \citep[see §3,][]{ocker_ne2025_2026}. 
+
+\begin{figure}
+    \centering
+    \begin{minipage}{0.49\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{chapter1/figures/plot_galaxy_ne2025_with_pulsars.pdf}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.49\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{chapter1/figures/ne2025_mollview.pdf}
+    \end{minipage}
+    \caption{ \textit{Left:} Shows the top-down view of the Galaxy as modelled by NE2025 \citep{ocker_ne2025_2026} here $Z=0$ . \textit{Right:} A mollview Galactic projection of NE2025. Both plots were made with the \textsc{pygedm} \citep{price_comparison_2021}}
+    \label{Fig:NE2025}
+\end{figure}
+
+The models are physically motivated by the structure of the Galaxy, electron contributions for dispersion for the thick and thin disk, spiral arms, Galactic centre and other local structures that are anomalies such as the 'local bubble' and nearby HII regions. For example in NE2025 \citep{ocker_ne2025_2026} uses clumps (high densities) and voids (low densities) for the local bubble and Gum Nebula to match what is observationally seen. These parameters are iteratively adjusted until the model best produces the DD-distance measurements that are observationally seen.
+
+Additionally, scattering caused by the ISM, pulse broadening (see. \cref{chap:crabpulsar}) can inform on the small-scale flucations in the Ionised-ISM (IISM) allowing for regions to be marked as more turbulent and taken into account. Other methods of constraining the model are surveys of Galactic H$\alpha$, HI and star forming regions as they measure the distribution of ionised gas. As evident in the literature these models improve with time and get further refined as more pulsars get accurate distance measurements and determined DMs. The first widely used model was TC93 \citep{taylor_pulsar_1993} which implemented the use of spiral arms, other notable works that followed were NE2001 \citep{cordes_ne2001i_2003} which added local structures and scattering constraints, YMW16 \citep{yao_new_2017} use global parameterisation (omitting local structures) with a much larger calibration sample and most recently NE2025 \citep{ocker_ne2025_2026} which is a modern refinement of NE2001 which increase the calibration sample, modern Galactic structure conventions and improved scattering observations. 
+
+As will be later discussed in depth in \cref{chap:redback} and \cref{chap:LOFTS} electron density are vital when searching for new pulsars and planning transient surveys. 
+
 
 \subsection{Summary of Pulsar Observables}
 
-Establishing a canonical pulsar model is one thing, but it is important to keep in mind that a lot of the values obtained for pulsars are completely model dependant and often used to quantify a comparison between pulsars, as discussed above. This section aims to summarise how directly certain attributes can directly or in-directly measured and in doing so will full illustrate the caveats in studying pulsars. 
+Establishing a canonical pulsar model is one thing, but it is important to keep in mind that a lot of the values obtained for pulsars are completely model dependant and often used to quantify a comparison between pulsars. \Cref{tab:pulsar_observables}  aims to summarise how directly certain attributes can directly or in-directly measured and in doing so will full illustrate the caveats in studying pulsars. The spin period, spin-down rate, pulse profile, dispersion measure and polarization can be obtained directly from observations. In contrast, quantities such as the characteristic age, surface magnetic field, spin-down luminosity and radio luminosity are derived from these observables under a series of assumptions as discussed in preceding sections. This includes magnetic dipole braking, a canonical neutron-star radius and moment of inertia, and Galactic electron-density models. Some of the equations in \cref{tab:pulsar_observables} are given in SI units and thus differ slightly to how they are derived in \cref{sec:properties_of_pulsars}. There is also the mention of radio luminosity which is discussed fully in \cref{chap:radioastro}.
 
-\subsection{Why study Pulsars?}
+\begin{table}[ht]
 
-Before concluding the discussion on pulsars it's important to highlight some motivations for studying pulsars outside the open questions about the objects themselves. 
+\centering
+
+\begin{tabular}{llll}
+\hline
+\textbf{Quantity} & \textbf{Expression} & \textbf{Method} & \textbf{Type} \\
+\hline
+Spin period, $P$ &
+-- &
+Pulse timing &
+Observed \\
+
+Spin frequency, $\nu$ &
+$\nu = 1/P$ &
+Pulse timing &
+Observed \\
+
+Period derivative, $\dot P$ &
+-- &
+Long-term timing &
+Observed \\
+
+Frequency derivative, $\dot{\nu}$ &
+$\dot{\nu}=-\dot{P}/P^2$ &
+Long-term timing &
+Observed \\
+
+Dispersion measure, DM &
+$\displaystyle \int_0^d n_e\,dl$ &
+Multi-frequency timing &
+Observed \\
+
+Rotation measure, RM &
+$\displaystyle 0.81\int_0^d n_eB_\parallel\,dl$ &
+Polarimetry &
+Observed \\
+
+Flux density, $S_\nu$ &
+-- &
+Flux calibration &
+Observed \\
+
+Pulse width &
+$W_{10},\,W_{50}$ &
+Pulse profile &
+Observed \\
+
+Polarisation &
+Linear/circular fraction &
+Polarimetry &
+Observed \\
+
+Proper motion &
+$\mu$ &
+Timing / VLBI &
+Observed \\
+
+Parallax &
+$\pi$ &
+Timing / VLBI &
+Observed \\
+
+\hline
+
+Distance &
+$d\simeq1/\pi$ or DM model &
+Parallax / DM &
+Derived \\
+
+Radio luminosity &
+$L_\nu=S_\nu d^2$ &
+Flux + distance &
+Derived \\
+
+Characteristic age &
+$\tau_c=\dfrac{P}{2\dot P}$ &
+$P,\dot P$ &
+Derived \\
+
+Surface magnetic field &
+$B_S=3.2\times10^{19}\sqrt{P\dot P}$ G &
+$P,\dot P$ &
+Derived \\
+
+Spin-down luminosity &
+$\dot E=\dfrac{4\pi^2I\dot P}{P^3}$ &
+$P,\dot P$ &
+Derived \\
+
+Light-cylinder radius &
+$R_{\rm LC}=\dfrac{cP}{2\pi}$ &
+$P$ &
+Derived \\
+
+Light-cylinder magnetic field &
+$B_{\rm LC}=B_S\left(\dfrac{R}{R_{\rm LC}}\right)^3$ &
+$P,\dot P$ &
+Derived \\
+
+Braking index &
+$n=\dfrac{\nu\ddot{\nu}}{\dot{\nu}^2}$ &
+Long-term timing &
+Derived \\
+
+Initial spin period &
+See Eq.~(\ref{eq:age-full}) &
+Braking model &
+Derived \\
+
+\hline
+\end{tabular}
+\caption{Summary of directly observable pulsar properties and commonly derived quantities.}
+\label{tab:pulsar_observables}
+
+\end{table}
+
+\subsection{Pulsars, what are they good for?}
+
+Before concluding the discussion on pulsars it's important to highlight some motivations for studying pulsars outside the open questions about the objects themselves and how they are powerful tools in many respects. 
 
 \subsubsection{Low Frequency Gravitational Wave Detection}
 
+One of the current primary drivers of pulsar astronomy is the detection of low frequency gravitational waves. General relativity predicts that any accelerating mass will generate ripples in spacetime travelling at the speed of light known as gravitational waves. Compact object binary systems such as pairs of SuperMassive Black Holes (SMBH) are among the strongest sources of these waves. As the binary loses orbital energy through gravitational-wave emission, the two objects spiral inwards, causing the amplitude and frequency of the emitted gravitational waves to increase until they eventually coalesce. Gravitational waves emit at different frequencies dictated by the dynamics of the binary, $f_{GW},=2f_b$ making them a new way to study the universe outside the electromagnetic spectrum. The Laser Interferometer Gravitational-Wave Observatory (LIGO) in 2015 detected the gravitational waves and thus first non-electromagnetic information on the Universe \citep{the_ligo_scientific_collaboration_and_the_virgo_collaboration_gw170817_2018}. The gravitational wave spectrum is measured in frequency where the period of the gravitational waves (GWs) stretch from ms to the age of the universe, with various methods to detect GWs in different frequency regimes as shown in \cref{fig:gw_ceiling}. 
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=0.95\linewidth]{chapter1/figures/gw_ceiling.pdf}
+    \caption[Gravitational waves spectrum as a function of critical energy density]{Figure adapted from \cite{mingarelli_energetic_2026} showing the gravitational wave (GWs) spectrum as a function of Critical energy density stored in GWs. Overlayed are numerous gravitational wave observatories that are currently operating (i.e. LIGO, PTAs), under construction (i.e. LISA) or planned (Cosmic Explorer; CE). For full delibiration please see text in \cite{mingarelli_energetic_2026}.}
+    \label{fig:gw_ceiling}
+\end{figure}
+
+LIGO as an interferometer can detect stellar-mass BHs and NSs mergers, it is limited to lower frequency gravitational waves due to its baseline of $\sim 3,000$ km. Since pulsars have been proved to be reliable clocks (broadly equivocal to atomic clocks) it's been long thought that they could be a probe for low frequency GW regime $(10^{-9}-10^{-7} ~ \mathrm{Hz})$ \citep{sazhin_opportunities_1978, detweiler_pulsar_1979}.  In 1983 \citeauthor{hellings_upper_1983} proposed a pulsar timing array (PTA) which would use millisecond pulsars timed over years to decades as galactic to scale interferometer. This would in such a way that as passing gravitational waves stretch spacetime in one direction it would simultaneously compress it in the perpendicular direction changing the arrival times of the pulses at various point on the sky, this variation in time is are known as timing residuals. In pulsar timing data this manifests that pulsars that are close together on the sky have highly correlated timing residuals. Angles where pulsars are between in the intermediate area between $0-90^\circ$ are weaker correlations, where at $90^\circ$ the correlation becomes negative. Whereas when the angles approach $180^\circ$ they become weakly correlated again. This angular dependence is described by the \citeauthor{hellings_upper_1983} curve,
+
+\begin{equation}
+    \Gamma (\theta) = \frac{1}{2} + \frac{3}{2} \left( \frac{1-\cos \theta}{2}\right) \ln \left( \frac{1 - \cos \theta}{2}\right) - \frac{1}{4} (1 - \cos \theta). 
+    \label{eq:hellings_downs_curve}
+\end{equation}
+
+Where $\Gamma (\theta)$ is known as the Hellings-Downs correlation which is shown in \cref{fig:HD_curve}. It predicts that there is a stochastic gravitational-wave background at low GW frequencies caused by SMBH Binaries (SMBHB). For the past four decades development on PTAs has been steadily underway. As time has gone on groups of PTAs have been making increasingly precise observations around the world such as the European Pulsar Timing Array \citep[EPTA;][]{antoniadis_second_2023}, the Parkes Pulsar Timing Array \citep[PPTA;][]{zic_parkes_2023}, African Pulsar Timing Array (APT), Chinese Pulsar Timing Array \citep[CPTA;][]{chen_chinese_2025}, Indian Pulsar Timing Array \citep[InPTA;][]{rana_indian_2025} and the North American Nanohertz Observatory for Gravitational waves \citep[NANOGrav;][]{agazie_nanograv_2023}. In 2023 many of these collaborations released independent evidence for a common spectrum process with correlations consistent with the Hellings-Downs curve (NANOGrav data release is shown in \cref{fig:HD_curve}). Bayesian analysis of these correlations was $\sim 3\sigma$ showing strong evidence that the Universe has a stochastic gravitational wave background. All of these arrays are in a consortium that makes up the International Pulsar Timing Array \citep[IPTA;][]{perera_international_2019} that aims to combine the independent results from each PTA. \Cref{fig:gw_ceiling} shows the fraction of the Universe's critical energy density contained in GWs, denoted, $\Omega_{GW} (f)$ against GW frequency ($\Omega_{GW} (f)$ describes how much energy is carried by a GW stochastic background at each frequency). \Cref{fig:gw_ceiling} is a good example of the combined power of PTAs showing how much of the stochastic background is probed by an individual PTA such as NANOGrav and the upcoming data release 3 by the IPTA. The ultimate goal for PTAs over the next decade is to reach $5\sigma$ threshold on the Hellings-Downs curve and detect the stochastic background. 
+
+
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.9\linewidth]{chapter1/figures/HD_curve.pdf}
+    \caption{Hellings-Downs curve plotted in black with the NANOGrav 15-year data release overlaid in blue \citep{agazie_nanograv_2023}.}
+    \label{fig:HD_curve}
+\end{figure}
+
 \subsubsection{Gravitational Physics}
 
-\subsubsection{Accretion Physics}
+As pulsars are the denest objects in the universe that still emit light, they've proven to be extraordinary tests of theories of gravity. Due to the stable nature of pulsars rotation when they appear in binary systems orbital motion can be measured to exceptional accuracy allowing for first indirect evidence of gravitational-wave emission which \citeauthor{1975ApJ...195L..51H} won the Nobel Prize in 1993 after measuring the orbital decay from a pulsar-NS binary.  In addition to this, the first confirmed evidence for an exoplanet was detected around a pulsar \citeauthor{wolszczan_planetary_1992} in 1992. Beyond this pulsars in binary systems have been rigours laboratories for testing gravity in the strong field regime. 
+
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\linewidth]{chapter1/figures/hulsetaylor.pdf}
+    \caption[Cumulative shift in the time of periastron passage for the binary pulsar]{Cumulative shift in the time of periastron passage for the binary pulsar PSR B1913+16 as a function of time \citep{1975ApJ...195L..51H}.}
+    \label{fig:hulsetaylor}
+\end{figure}
+
+\Cref{fig:hulsetaylor} shows the cumulative shift in time of the periastron (point where two bodies are closest) as a function of year. The decrease in periastron passage shows that the binaries getting closer together over the years. This is significant as general relatively predicts (black line in \cref{fig:hulsetaylor}) that a binary system will lose orbital energy through gravitational wave emission. The agreement between the measured values and that general relativity proved to be one of the most significant tests of Einstein's theory. 
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.9\linewidth]{chapter1/figures/MM-diagram.png}
+    \caption[Mass--mass diagram for the Double Pulsar PSR J0737$-$3039A/B]{Mass--mass diagram for the Double Pulsar PSR J0737$-$3039A/B. Each curve represents the masses inferred from an independently measured post-Keplerian parameter. The intersection of all constraints at a single point demonstrates the consistency of general relativity and provides one of the most precise strong-field tests of gravity. Adapted from \cite{kramer_double_2008}}
+    \label{fig:MMDiagram}
+\end{figure}
+
+Another great tool for testing gravity came about with the discovery of the double-pulsar binary system \citep{burgay_increased_2003,lyne_double-pulsar_2004}. \Cref{fig:MMDiagram} is arguably the best plot to show when it comes to showcasing how pulsars can be used to study theories of gravity. This plot shows the two NS masses for different inferred post-Keplerian parameters (relativistic editions to Kepler's orbital motion equations). The parameters include the orbital decay due to gravitational wave radiation, gravitational redshift and mass ratio values obtained from the semi-major axis. Each of these independently observed parameters should be consistent with a single mass-ratio. Each of these post-Keplerian function places a constraint on the system mass. When these parameters plotted on a mass-mass diagram they intersect at some point, shown as the red region in \cref{fig:MMDiagram}). This point of intersection is where the system mass is satisfied for all parameters by the proposed theory of gravity. Any alternative theory or modification must produce parameter curves that also pass through this region to satisfy the parameters derived from observation and be considered a valid theory of gravity. Consequently, the double-pulsar provides one of the most stringent labratories for developing competeting theories of gravity. 
+
+For a more in-depth look at the double pulsar please see review by \cite{kramer2021}. For more general discussion on pulsars as probes of gravity see \cite{kramer_pulsars_2016}. 
+
+\subsubsection{Redback Pulsars as Probes of Accretion Physics}
+
+While pulsars are also used for many more things that listed above and in this section, due to the content in \cref{chap:redback} briefly outlining how pulsars can be probes of accretion mechanics.  In particular `Redback' pulsars, these are millisecond pulsars that are noted for their low mass non-degenerative companion (not NS or White Dwarfs). Redback pulsars get their name from the Redback spider as the companion star is ablated or `eaten' by the pulsar, akin to a fly in a spider web. Redback pulsars are deemed part of the spider pulsar family, they also have a `less lethal' cousin in the Black Widow pulsar. They are distinguished based on the mass of their companion star. Black widows falling into the range of $0.01-0.05~\smass$ and Redbacks companions are $0.2~\smass$. 
+
+Redbacks are especially interesting as they undergo transitional states, these states have their own distinct emission mechanics and properties and the system can transition between them on timescales of years to months depending on their rate of mass transfer. The three states are as follows: 
+
+\begin{enumerate}
+    \item Rotation Powered State (RPS) which is characterised by the rotational energy of the pulsar dominating the spectrum, radio, X-ray and $\gamma-$ray emission from the Pulsar. This is the initial stage when a pulsar `captures' a companion but little to no mass transfer has commenced. 
+    
+    \item Accretion State (AS) is dominated by the accretion process where radio emission is difficult to observe as the radio beams are beaming eclipsed by the ablating matter. This is thought to be induced as the companion star evolves and expands a mass transfer can kick-start causing high mass transfer.  
+    
+    \item Sub-luminous Disc State (SLDS) is an intermediate state where signatures of both states can be observed. This is thought to arise from a decreasing accretion rate and a return towards the rotation-powered emission. One possible reason for this could be that the outer layers of the companion star become completed ablated with the reduce mass leading to reduced accretion. 
+\end{enumerate}
+
+The enigmatic thing about Redbacks is that they transition between the above states. Whereas the classical binary system goes through $\text{RPS} \longrightarrow \text{SLDS} \longrightarrow \text{AS}$. There are several theories on why this might happen, but there is no definitive consensus at the time of writing. 
+
+\cite{benvenuto_understanding_2014} proposed irradiation feedback and mass-transfer regulation, which postulates the X-ray and $\gamma$-ray irradiation from the pulsar heats the facing side of the companion which drives an expanded atmosphere, enhanced winds and overfilling of the Roche lobe which increases the mass transfer rate. Conversely, the pulsar wind further ablation of the outer layers might overpressurize the inner disc region of the accretion disk which stunts mass transfer and the system returns to an RPS state. This mechanism can repeate causing a feedback loop that is observationally seen. 
+
+Another model of interest is proposed by \cite{jia_evolution_2015} discusses the thermal-viscious instability in the accretion disc. This model proposes that at certain mass-transfer rates and disc radii, the disc becomes unstable and cycles between a hot, ionized, high-viscosity state (high accretion) and a cool, neutral, low-viscosity state (low accreation) the latter of which observationally appearing as an RPS or SLDS state. In this case small fluctuations in the mass transfer rate can push the disk back and forth across the stability boundary. Hence, this triggers large changes in the mass transfer rates and changes between emission states. 
+
+Both of these models propose mechanism that explain the transition states seen in systems like J1023+0038 and J1227−4853 \citep{phosrisom_optical_2026} which have been noted to change on year timescales. There are also notable models that instability in the magnetosphere and the accretion disc causing this suggested by \cite{vurgun_energy_2025}. Different systems like J1023+0038 and J1227−4853 transition on different timescales and in different state orders so at present in the known population there is no `one size fits all' solution to explain these transitions. 
+
+It is these open-ended questions on mass-transfer that make Redbacks a good subclass for probing emission mechanics in accreting systems.  They emit across the entire electromagnetic spectrum across all stages a slew of underlying physics at play and allowing for the unique testing of models like the ones outlined above. 
+

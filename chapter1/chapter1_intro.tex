@@ -4,16 +4,16 @@
 
 \epigraph{\small\itshape “the Universe, she's whispering so softly I can hear, all the croaking insects, all the taxicabs, all the bum's spent change all the boys playing ball in the alleyways” \raggedleft\par--- \textup{ Gregory Alan Isakov, \textit{The Universe}}}
 
-Throughout history humanity has watched the stars and observed transient phenomena. From prehistoric observers sat around campfires catching glimpses of comets and interpreting them as omens, to Chinese astronomers noting the Crab supernovae in 1054. The night sky has always captivated questions from how the Universe works to humanities place in it. Modern day astronomy at its core is the same, the awe still remains, but the tools have got sharper. With the advent of modern instrumentation the study of transients has expanded from the longest wavelength's to the highest energies.  As a result over the last century new classes of transients have emerged with their own sets of open questions. 
+Throughout history humanity has watched the stars and observed transient phenomena. From prehistoric observers sat around campfires catching glimpses of comets and interpreting them as omens, to Chinese astronomers noting the Crab supernovae in 1054. The night sky has always captivated questions from how the Universe works to humanity's place in it. Modern day astronomy at its core is the same, the awe still remains, but the tools have got sharper. With the advent of modern instrumentation the study of transients has expanded from the longest wavelength's to the highest energies.  As a result over the last century new classes of transients have emerged with their own sets of open questions. 
 
-Transients include a large amount of objects that emit across the entire electromagnetic spectrum, it is generally used an umbrella term to include any astronomical objects that is time-dependent on timescales from nanoseconds to years. This thesis focuses on transients that emit radio waves $(\lambda \approx \text{mm}-\text{km})$.  
-Radio waves can be emitted from an astrophysical object by either thermal or non-thermal emission. Any particle above 0~K vibrates when charged particles in atoms undergo acceleration they release electromagnetic radiation. As a consequence of this any particle above 0~K emits thermal radiation through two mechanisms blackbody or bremsstrahlung emission. Alternatively non-thermal emission arises from particles that have non-thermal motion also known as a non-Maxwellian energy distribution. These particles experience external forces that cause motion such as acceleration due to the presence of a magnetic field which commonly produce synchrotron radiation as relativistic electrons spiral around magnetic field lines. 
+Transients include a large amount of objects that emit across the entire electromagnetic spectrum, it is generally used as an umbrella term to include any astronomical objects that is time-dependent on timescales from nanoseconds to years. This thesis focuses on transients that emit radio waves $(\lambda \approx \text{mm}-\text{km})$.  
+Radio waves can be emitted from an astrophysical object by either thermal or non-thermal emission. Any particle above 0~K vibrates when charged particles in atoms undergo acceleration they release electromagnetic radiation. As a consequence of this any particle above 0~K emits thermal radiation through two mechanisms blackbody or bremsstrahlung emission. Alternatively non-thermal emission arises from particles that have non-thermal motion also known as a non-Maxwellian energy distribution. These particles experience external forces that cause motion such as acceleration due to the presence of a magnetic field which commonly produces synchrotron radiation as relativistic electrons spiral around magnetic field lines. 
 
 These emission mechanisms are observed across a wide range of astrophysical phenomena, from objects within Earth’s local neighbourhood such as solar flares, aurorae, and lightning in the outer planets, to some of the most distant and energetic known events including fast radio bursts and gamma-ray bursts. Radio transients span broad ranges of timescales, luminosity, and physical origin. In addition to observed sources, many theoretical radio transients have also been proposed but remain undetected, including primordial black holes, cosmic strings, and, more speculatively, technosignatures from extraterrestrial civilizations.
 
 This chapter aims to non-exhaustively discuss the background and present motivation for studying a set of natural and artificial transients. 
 
-\section{Non-thermal Emission}
+\section{Non-thermal Emission} \label{sec:nonthermal}
 
 Electromagnetic emission can arise in plasmas from both bound atomic systems and unbound particles that are accelerated by external fields. Bound particles have quantized energies and the transition to lower energy states generates photons. However, unbound particles have a continuum of possible energies such that acceleration of these unbound particles can produce a continuum of photon energies. 
 
@@ -119,17 +119,30 @@ This thesis focuses on transient searching, with a more specific focus on pulsar
 
 \section{Other Radio Transients and where to find them}
 
+It's time to park discussion on pulsars and transition into brief discussion on some of the other transients that are mentioned in later chapters. As those chapters have their own introduction and discussion on the topic this serves as a supplementary introduction as these objects are mentioned throughout 
+
+
 \subsection{Fast Radio Bursts} \label{sec:FRBsTheory}
 
 \subsection{Long Period Transients}
 
 \subsection{Radio Flare Stars}
 
+It has been well documented that our own star, the Sun, and planets in the solar system have radio emission associated with originating from auroras and stellar flares \citep{murphy_lofar_2021, zarka_auroral_1998}. With the advancement of modern radio telescopes, the prospect for capturing radio emission from others and even the prospect of detecting an exoplanet magnetosphere has become achievable \citep{vedantham_coherent_2020}. \
+
+Observing stars especially at low frequency $(\leq 300 \ \text{MHz})$\footnote{$\lambda \sim 1 \ \text{m}$} act as probes into stellar and planetary plasma environments. Coronal Mass Ejections (CMEs) have a low-frequency burst component in which information about the kinematics of plasma can be deduced \citep{villadsen_ultra-wideband_2019}. Incident solar wind is also the primary driving force of auroral emission on magnetized planets. The goal of this project is to explore the viability of detecting radio emission from M and Brown dwarfs using I-LOFAR observations and archive data to put constraints on the prevalence of radio emission from these objects and explore the viability observing radio emission from exoplanets. \
+
+Radio emission from stars is typically produced through CMEs, observed phenomenologically in the Sun as type II and III solar bursts. The radio emission from these events is thought to be produced through the electron-cyclotron maser instability \citep[ECMI;][]{EMI}. The ECMI is a plasma instability that occurs in the presence of a magnetic field and a population of energetic electrons. The instability is thought to be the primary driver of radio emission observed in type II bursts and stars as a whole. With type III bursts being thought to be the result of electron beams that are accelerated in the corona. \
+
+Emission from planets has also been observed in the form of auroral emission. The most notable example of this is the Jovian system. The Jovian system is known to have auroral emission that is driven by the interaction of the solar wind with the magnetosphere of the planet. Coherent radio emission from the aurora is thought to be produced through the cyclotron maser instability \citep[ECM;][]{zarka_auroral_1998} which injects a high-velocity electron population into the magnetosphere. The maximum frequency of the ECM is directly proportional to the magnetic field strength of the object at its emitting point \citep{kavanagh_hunting_2023, joe_nature_review}.
+
+Much time has been spent observing Ultracool Dwarfs ($\text{M7} <$) as they provide a good analogue to the Jovian systems. This allows for direct comparison between the two.  This provides valuable insights into the formation, atmospheric processes, and potential habitability of gas giants like Jupiter. Moreover, such comparative studies contribute significantly to our understanding of planetary evolution and diversity beyond our immediate neighbourhood. Recent detection of radiation belts around a UCD further supports the analogy to Jupiter, as radiation belts are a key characteristic of Jupiter's magnetosphere \citep{joe_nature_review}. \ UCDs, being intermediate in mass between stars and planets, serve as a bridge to understanding exoplanet detection. The discovery of bursting radio emission from a brown dwarf and subsequent detections in UCDs indicate departures from established stellar coronal/flaring relationships. \ Radio bursts from UCDs can exhibit periodic timing \citep{hallinan_rotational_2006} along with strong circular polarization and high brightness temperatures, suggesting the involvement of the ECM process in generating radio emission. Despite a significant amount of gigahertz-frequency radio searches, detection rates for UCD radio emissions remain stubbornly low at around 10\% overall \citep{lynch_radio_2016}.
+
 % \subsection{Gamma Ray Bursts} % Maybe chuck in the misc chapter. 
 
 \section{The Search for Intelligent Life in the Universe}
 
-Arguably one of the most captivating and difficult problems in astronomy is on the question of life elsewhere in the Universe. It's a problem where the known population is statistical insignificant given that Earth is the only known example. However, in the last 50 years evidence has steadily mounted that the conditions for life in the universe are relativity common. Since exoplanets were first directly detected in 1992 there is (at the time of writing) over 6,300 confirmed exoplanets of all varieties \citep{NEA12}. It is also a popular opinion that most of the stars within the Galaxy and by extent the Universe have orbiting planets. % Even if a minute amount of planets give rise to life there should be 
+Arguably one of the most captivating and difficult problems in astronomy is on the question of life elsewhere in the Universe. It's a problem where the known population is statistically insignificant given that Earth is the only known example. However, in the last 50 years evidence has steadily mounted that the conditions for life in the Universe are relativity common. Since exoplanets were first directly detected in 1992 there is (at the time of writing) over 6,300 confirmed exoplanets of all varieties \citep{NEA12}. It is also a popular opinion that most of the stars within the Galaxy and by extent the Universe have orbiting planets. % Even if a minute amount of planets give rise to life there should be 
 
 However, postulating the conditions in which life evolves and lives long enough and becomes advanced enough for interstellar communications is highly difficult and highly speculative. The search for extraterrestrial intelligence (SETI) has likely been around for 100's of years. But early formal discussions arose in the 19th and 20th centuries, specifically around Mars. Nikola Tesla thought about communication with Martians using a wireless electrical system, Giovanni Schiaparelli argued the case for canals on Mars. 
 
@@ -143,13 +156,114 @@ The birth of modern SETI is generally attributed with \cite{CocconiMorrison1959}
 \end{equation}
 
 
- In this expression $N$ is the number of communicative civilizations in the Milky Way galaxy, $R_{*}$ is the rate of star formation per year in the galaxy, $f_{p}$ is the fraction of stars that have planets around them, $n_{e}$ is the average number of planets that can potentially support life per star that has planets, $f_{l}$ is the fraction of potentially life-supporting planets that actually develop life, $f_{i}$ is the fraction of planets with life that go on to develop intelligent life and $f_{c}$ is the fraction of civilizations that develop a technology that releases detectable signs of their existence into space. \Cref{eq:Drake_equation} is meant more as a thought experiment, rather than an explicit and empirical value as most the values in the equations have debatable definitions and constraints, especially the last 3 factors. Asking members of the radio transient group, based purely on intuition given somewhat known limits for the first two terms yield answers from 0 to 761. The 0 answer includes Earth, alluding that many consider the definition of intelligence to be something outside the current conventional definition\footnote{\url{https://dictionary.apa.org/intelligence}}. Frank Drake's number plate read NEQLSL, which estimated that the number of civilizations in the Galaxy was determined by their ability to have prolonged lifetimes. 
+ In this expression $N$ is the number of communicative civilizations in the Milky Way Galaxy, $R_{*}$ is the rate of star formation per year in the Galaxy, $f_{p}$ is the fraction of stars that have planets around them, $n_{e}$ is the average number of planets that can potentially support life per star that has planets, $f_{l}$ is the fraction of potentially life-supporting planets that actually develop life, $f_{i}$ is the fraction of planets with life that go on to develop intelligent life and $f_{c}$ is the fraction of civilizations that develop a technology that releases detectable signs of their existence into space. \Cref{eq:Drake_equation} is meant more as a thought experiment, rather than an explicit and empirical value as most the values in the equations have debatable definitions and constraints, especially the last 3 factors. Asking members of the radio transient group, based purely on intuition given somewhat known limits for the first two terms yield answers from 0 to 761. The 0 answer includes Earth, alluding that many consider the definition of intelligence to be something outside the current conventional definition\footnote{\url{https://dictionary.apa.org/intelligence}}. Frank Drake's number plate read NEQLSL, which estimated that the number of civilizations in the Galaxy was determined by their ability to have prolonged lifetimes. As an exercise for the reader its recommended before reading further to try and calculate their own number using just their intuition as the result might surprise your own notion of life in the Galaxy. 
 
- Since the inception of the Drake equation and Project Ozma there has been an increasing effort throughout the decades to conduct SETI\footnote{For a comprehensive history see X}. 
+ Since the inception of the Drake equation and Project Ozma there has been an increasing effort throughout the decades to conduct SETI\footnote{For a comprehensive history see \cite{Charbonneau2024}}. In the following sections potential signatures for intelligent life, philosophy of carrying out a SETI survey and surveys to-date will be discussed. 
 
-\subsection{Artificial Radio Transients}
+\subsection{What are Technosignatures?}
+
+Two common terms when discussing the search for life in the Universe are biosignatures and technosignatures. The term biosignature has been around in various forms since the 1960's \citep{lederberg_signs_1965,lovelock_physical_1965}, with first being officially used by the NASA Exobiology Program office in ``An Exobiological Strategy for Mars Exploration'' in 1995. A biosignature refers to a biological process where all non-living biological and chemical (abiotic) effects that could cause the process are not possible. Examples of biosignatures are gases that are formed in metabolic processes that could be detected in exoplanet atmospheres, or more locally  microfossils, isotopic signatures, and organic lipids that may be found in hydrothermal vents on Enceladus. 
+
+On the other hand there are technosignatures. ``Tecnhnosignature'' was first coined by Jill Tarter in the early 2000s and is loosely defined as a sign of technology that is not a biosignature \citep{wright_recommendations_2018}. Over the years there has been a lot of discussion on a formal definition of what a technosignature is, especially when it comes to deciding what can be considered ``technology''. Deliberation on this topic is complex and requires much care. For the purposes of this work the following definition proposed by \cite{Sheikh2021} is used when discussing technosignatures. This particular definition was created with the aim to provide interdisciplinary wording that could be broadly used. 
+
+\begin{displayquote}
+``A technosignature is a physical feature whose presence or abundance is
+a result of the presence of a being that has engaged in goal-directed,
+intentional manufacture. Here, manufacture is the process of using a
+tool (something itself manufactured, or gathered from the environment)
+to manipulate a material in order to create a new form, demonstrating
+its makers’ formal or informal physical knowledge.''
+\end{displayquote}
+
+For more detailed consideration on this topic please see §1.2 of \cite{Sheikh2021}. 
+
+There are many different items that fit this description especially in a terrestrial context as we are surrounded by technosignatures in our everyday life but here the concern is only with technosignatures that originate from beyond Earth. Sticking with the example of the most popular astronomy biosignature, the search for evidence of metabolic processes in exoplanets atmospheres a cognate technosignature would be those caused by atmospheric pollution. Taking Earth as the example atmospheric pollution is  caused by the creation $\text{NO}_2$ in industrial manufacturing, which meets the above definition for a technosignature. If "Earth was trying to detect Earth", modern day telescopes such as \textit{JWST} could detect $\text{NO}_2$ up to 5.9~ly away \citep{sheikh_earth_2025}. This isn't particularly optimal when trying to search the entire Galaxy for technosignatures. The first and most obvious technosignature to search for is artificial radio emission as it implies the existence of a radio transmitter \citep{CocconiMorrison1959} and is the most abudant form of long distance communication on Earth. So much so that these technosignatures are detected everyday on Earth by radio telescope, in the form of radio frequency interference (RFI), uplinks and down links to satellites among many other things to the dismay of the radio astronomer. as will be later shown throughout this thesis. However, a sliver lining is that human made technosignatures can such as satellites like \textit{Voyager 2} can be used as a means to test SETI software and detection pipelines. 
+
+As with most aspects of searching for technosignatures all knowledge hypothesising what a signal might look like follows the assumption that other civilisations will discover the laws of physics and develop technologies like radio transmitters for their own use, similarly to humanity. These signals are compelling for three primary reasons, the first being the relative abundance on Earth, the second being that its more energy efficient to transmit a signal with a smaller fractional bandwidth, i.e. $\Delta f \sim 1~\text{Hz}$ and the second is that they are easy to distinguish from natural signals which appear broadband due to natures random processes $(\Delta f \geq 10^{-3}-10^{-2})$, which in turn makes narrowband radio emission distinctly anthropomorphic. 
+
+Apart from conventional narrowband transmissions there are many other speculative proposed technosignatures. But before outlining some of the interesting examples in the literture it is a reasonable point to introduce the Kardashev scale. The Kardashev scale is often quoted in technosignature literature as a means of benchmarking survey sensitivity and contextualising proposed technological complexity of the technosignature being searched for. Initially developed by \cite{Karadashev_1964} and extended by \cite{Sagan1973CosmicConnection} it outlines three primary types of energy consuming civilisations. 
+
+\begin{enumerate}
+    \item Type I ($10^{16}-10^{17}$ W) civilisations can use all the energy on their home planet. For example, the power of all the incident radiation on the planets surface from the host star. 
+
+    \item Type II ($\sim10^{26}$ W) civilisations can use all the energy outputted by their local star. See below discussion on Dyson Spheres and Swarms. 
+    
+    \item Type III ($>10^{26}$ W) civilisations can use energy that's on a galactic scale. 
+    
+\end{enumerate}
+
+The scale itself can be calculated using the following, 
+
+\begin{equation}
+    K = \frac{\log_{10} (P) -6}{10}
+    \label{eq:KardashevScale}
+\end{equation}
+
+Where $P$ is power usage in Watts. The \cite{EI2026StatisticalReview} gave the total global energy supply in 2025 as 500 EJ which on average is 19 TW. Using this in \cref{eq:KardashevScale} gives a value of $K = 0.728$ for Earth. The estimated increase to 2035 of global power used is $8-15\%$, a crude estimate using $P(t) = P_0 (1+r)^t$ where $r$ represents a 2\% increase in energy per. Assuming that energy demands remain on track\footnote{This is a very unlikely case.} year humanity would reach a K value equal to 1 in around the mid-24th century (2340s). \cite{Sagan1973CosmicConnection} also proposed an alphabetical scale to attempt to quantify a civilisations social development by the amount of bits of available information starting at $10^6$ for A and ending with $10^{31}$ bits for Z.  In 1973 Sagan placed humanity at 0.7 H, in 2025 Earth is 0.728 S. Sagan himself believed that humanity would make first contact with another civilsation somewhere in the range 1.5 J and 1.8 K.
+
+An example of why one might use the Karadshev scale is due the required power consumption. As civilisations develop and require more energy the use of megastructures harnessing a stars energy may be used as a possible solution. A Dyson sphere is one such megastructure which would enclose a star to capture a large fraction of its radiant energy \cite{dyson_search_1960}. Its been pointed out that these would be incredibly difficult to construct with current and envisioned technologies \citep{smith_review_2022,wright_dyson_2020}. An alternative and more viable enginnering alternative is a Dyson swarm which has the same concept but made up of many satellite elements (geostationary constellations) instead of one continuous megastructure \citep{smith_review_2022}. Observationally megastructures may manifest as anomalies in transiting light-curves, anomalous stellar variability or luminosity changes that could be interpreted as controlled energy extraction or stellar engineering, and directed optical, infrared, or X-ray laser pulses that would appear as extremely bright \citep{dyson_search_1960, wright_dyson_2020,suazo_project_2024}. There are a number of instruments and works dedicated to search for these types of technosignatures. For example PANOSETI in a panoramic visible and near-infrared instrument that covers 1,000 square degrees of the sky simultaneously searching for pulsed laser emission. Some other studies have used the vast amounts of light curves Transiting Exoplanet Satellite (\textit{TESS}) as acquired to search for anomalous megastructure light curves and the advent of new large scale observatories such as LSST are covering vast amount of sky at an unprecedented cadence ushering in a new means to do search for technosignatues for an array of technosignatures including megastructures. There are many theories for technosignatures that have been neglected in this discussion but for a comprehensive review of all formal literature pertaining to the subject of types of technosignature see \cite{vidal_search_2026}. 
+
+For the purposes of this thesis variations of radio technosignatures are of focus. 
+
+%In the next section narrowband technosignature detection will be outlined a \cref{chap:LOFTS} these variations will be outlined.
+
+\subsection{How to detect radio technosignatures}
+
+In this section the means in-which technosignatures are detected will be described. For now, the process by which a radio telescope produces science-usable data is not considered, as it is discussed in detail in \cref{chap:radioastro}. For the purposes of this explanation, radio astronomy data is stored in filterbanks, which are three-dimensional data cubes containing radio spectra as a function of time, known as dynamic spectra.
+
+As mentioned above one of the motivations for searching for narrowband signals is that they are narrow as they originate from engineered oscillators. This means that frequency resolution of a few Hz is required to search for narrowband signals, for example the data used in this thesis uses data that is $\sim 3~\text{Hz}$ in resolution. 
+
+A consequence of searching for such narrow signals is that the relative motion between an observer and the transmitter itself will be, 
+
+\begin{equation}
+    f(t) = f_0 +\dot f t. 
+\end{equation}
+
+where $f$ is received or emitted frequency, $\dot f$ is the drift rate, 
+
+\begin{equation}
+    \dot f = \frac{a_\tau}{c} f. 
+\end{equation}
+
+Where $a_\tau$ is the relative acceleration along the line of sight (\si{\metre\per\square\second}). Ordinarly a doppler shift is expressed in terms of velocity, $\Delta f/f = v_r/c$ but as relative velocity changes with time acceleration is used. 
+
+For an extraterrestrial transmitter there are several contributions to $a_\tau$. For the observers on Earth, the planet's rotation causes a Doppler drift over the course of a few hours of about 0.03 \si{\metre\per\square\second}. The Earth also travels around the Sun orbital velocity changes constantly, which contributes around 0.006\si{\metre\per\square\second}. These same contributions come into play for the transmitted signal, where the rotation of their planet and orbital velocity needs to be given some consideration. This contribution is attributed to the standard central acceleration formula. However, a more general expression for this includes instantaneous projected acceleration which also is dependent on the orbital phase of the system. 
+
+% \begin{equation}
+%     a_{orb} = \frac{GM_{\text{M}_\odot}}{r^2} \sin i. 
+% \end{equation}
+
+
+
+
+\begin{equation}
+    a_{orb} = \frac{GM_{\text{M}_\odot}}{r^2} \sin i \cos (\Omega t + \phi). 
+    \label{eq:doppler_drift_los_orb}
+\end{equation}
+
+Where $r$ is the orbital radius and $i$ in the inclination of the orbital plane with respect to the observer. $\Omega$ is the orbital angular frequency and $\phi$ is orbital phase. The $\cos (\Omega t + \phi)$ ensures that the only component included at a given instant is along the line of sight. Consequently, the measured drift varies throughout the orbit where it's at its max with dealing with systems that are edge on and at a minimum when the system is face on. 
+
+\Cref{eq:doppler_drift_los_orb} indicates that the drift rate will inflate for close in planets with fast rotational periods, binaries with fast orbital period or transmitters around compact objects such as black holes and neutron stars. Also because $\dot f \propto f$ drifting becomes more evident with increased observational frequency. \cite{2019ApJSofiaMaxDriftRate} details the nine terms that contribute to acceleration of a narrowband signal and also calculates the fractional drift-rates $(\dot f/f)$ for an array of planetary systems and compact objects.  Where Earth's contribution is 0.11 nHz and Neutron Star is $6.2 \times 10^{12}$ nHz \citep[see table 2,][]{2019ApJSofiaMaxDriftRate}. \cite{li_developing_2023} extends this work by modelling the drift rate values for $\sim 300$ exoplanets and find that $99\%$ of signals fall within $\pm53~\text{nHz}$, this work also recommends that $\pm0.44~\text{nHz}$ would be reasonable enough to include $99\%$ of Kepler\footnote{F, G, K, and M type stars} like stars when doing a narrowband search on targets without a confirmed exoplanet. 
+
+The reason for highlighting these values is due to the computational resources it takes to de-drift radio astronomy data. To recover a narrowband signal dynamic spectra must be searched over many trail drift-rates correcting each frequency of each time sample. De-drifting (or de-Doppler) correction aligns the drifting single to a single frequency channel, which maximises the signal-to-noise (analogous to DM correction discussed in \cref{sec:DispersionMeasure}. 
+
+To implement this one could independently shift and sum the spectra for every single drift rate. For a search that covers $N_f$, frequency channels and $N_t$ time samples for $N_d$ which scales as $N_f \cdot N_t \cdot N_d$
+
+
+\subsection{Surveys to Date}
+
+At the time of writing SETI experiments have been ongoing for more than 60 years. After Frank Drake's intial study in Greenbank. Subsequent programs such as SERENDIP and Project Phoenix expanded to sky surveys and targeted searches of hundreds of nearby stars, while the Kepler‑field Green Bank surveys 
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.9\linewidth]{chapter6/figures/SETI-Frequency-Parameter-Space.pdf}
+    \caption{An overview of major technosignature surveys across the radio regime.}
+    \label{fig:chap1SETIfreq}
+\end{figure}
 
 \subsection{Breakthrough Listen}
+
+Over the past decade there has been a larger amount of technosignature research being outputted. This is in large part due to the Breakthrough Listen (BL) programme. BL is \$100 million dollar initiative. 
 
 \section{Outline of this Thesis}
 
@@ -159,7 +273,7 @@ This thesis is organised as follows.
   \item \Cref{chap:radioastro} gives an introduction to radio astronomy instrumentation and tools that are relevant to the rest of the work carried out in this thesis. 
   \item \Cref{chap:redback} describes the work carried out on the search for Redback pulsar J0523 along with a discussion on the software and methods used for finding radio emission from pulsars. 
   \item \Cref{chap:crabpulsar} outlines the work completed on analysing over half a decade of low frequency data from the Crab pulsar. 
-  \item \Cref{sec:SETIchapter} presents the results from the first and largest low frequency survey for technosignatures at the time of writing. 
+  \item \Cref{sec:SETIchapter} presents the results from the largest low frequency survey for technosignatures at the time of writing. 
   \item \Cref{chap:LOFTS}
   \item \Cref{chap:lunar}
 \end{itemize}

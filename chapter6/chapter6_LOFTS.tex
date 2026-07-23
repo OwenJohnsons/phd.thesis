@@ -1,80 +1,105 @@
 \chapter{A LOw Frequency pulsar, FRB, and Technosignature Survey} \label{chap:LOFTS}
 
+\epigraph{\small\itshape “Ever tried. Ever failed. No matter. Try Again. Fail again. Fail better.” \raggedleft\par--- \textup{Samuel Beckett}}
+
+This chapter describes the planning and execution of the LOw Frequency Pulsar, Fast Radio Burst, and Technosignature Survey (LOFTS). The work presented forms part of a broader collaborative programme comprising multiple ongoing studies, in which the author has contributed as either the lead or a co-author. The chapter is based on a manuscript currently in preparation but has been substantially revised and expanded to avoid repetition with the material presented in the previous chapter and to provide additional context where appropriate.
+
+The final section of this chapter presents work carried out over the past several years on the first technosignature search conducted with the NenuFAR radio telescope, including the methodology, analysis, and current progress of the project.
+
+
 \section{Introduction} \label{sec:intro}
 
-The search for technosignatures, evidence of extraterrestrial life, addresses one of the most profound questions in science: Are we alone in the Universe? Concurrently, the recent flourishing of the field of radio transients has significantly advanced our understanding of various areas of physics. Notably, pulsars and fast radio bursts (FRBs) stand out due to their unique potential to uncover new kinds of physics. These astrophysical phenomena provide valuable insights into gravitational waves, cosmology, and plasma physics, among other fields. All of the above provides the basis for conducting a LOw Frequency pulsar and Technosignature Survey (LOFTS), which aims to search for a range of technosignatures and other transients at 110--190 MHz.
+\Cref{sec:SETIchapter} outlined the first dual-site technosignature survey using LOFAR. This study demonstrated the advantages of using geographically telescopes to reject terrestrial interference while setting the most stringent constraints on narrowband technosignatures in the low frequency regime. The next step for continuing this work was to observe for longer, search for more types of artificial and natural transients and implement further improvements that have been established in the literature since the first survey's observations were carried out. 
 
 \subsection{Motivation}
-Historically, technosignature surveys have utilized large single-dish telescopes operating at frequencies above 1 GHz \citep{Siemion_KEPLER_ApJ, Price2020}. Technosignature searches often target narrowband radio emissions, but there is no \textit{a priori} reason to prefer fany specific part of the radio spectrum, necessitating surveys across a broad range from 30 MHz to 100 GHz \citep{Ng2022}.
 
-Low-frequency radio SETI faces challenges due to higher sky temperatures that limit observational sensitivity. But the LOw Frequency ARray (LOFAR,~\citealt{LOFAR_instrument}) offers a strong scientific case for SETI surveys due to its sensitivity and its large field-of-view which enables observations of thousands of stars per epoch~\citep{Loeb2007}. One major issue in radio SETI is managing radio frequency interference (RFI), which traditional single-dish radio telescopes struggle with unless equipped with multi-beam receivers. These telescopes use an `ON' and `OFF' observing technique to distinguish between interference and genuine astrophysical signals.
+The broader motivations for doing technosignature surveys remain the same as previously outlined. Historically, technosignature surveys have utilized large single-dish telescopes operating at frequencies above 1 GHz \citep{Siemion_KEPLER_ApJ, Price2020}. Technosignature searches often target narrowband radio emissions, but there is no \textit{a priori} reason to prefer any specific part of the radio spectrum, necessitating surveys across a broad range from 30 MHz to 100 GHz \citep[\cref{fig:constraints_spectrum},][]{Ng2022}. This also extends to the type of technosigantures that are searched for, as will be later discussed LOFTS extends the technosignature search to two other type of technosignatures that have previously been neglected at this frequency. 
 
-Using two far-separated LOFAR stations provides significant advantages. This approach benefits from differing local RFI environments, allowing for more effective rejection of false-positive signals without needing the `ON' and `OFF' regime. As a result, the entire observation time can be dedicated to directly observing targets. This makes multi-station SETI surveys particularly valuable in the ever worsening RFI-laden environment \citep{johnson_simultaneous_2023}.
+This survey as well plans to continue to follow the golden rule of SETI by also conducting numerous other ancillary science goals. Technosignature survey's can in tandem with technosignatures focus on other transient phenomena, such as pulsars, Fast Radio Bursts (FRBs), long period transients (LPTs) and flare stars. By targeting both technosignatures and other transients, the LOFTS survey aims to maximize its scientific impact, contributing valuable data to multiple areas of astrophysics. 
 
-Moreover, the technosignature survey's can in tandem with technosignatures focus on other transient phenomena, such as pulsars, Fast Radio Bursts (FRBs), long period transients (LPTs) and flare stars. By targeting both technosignatures and other transients, the LOFTS survey aims to maximize its scientific impact, contributing valuable data to multiple areas of astrophysics. 
-
-The present time and impending upgrade to LOFAR2.0\footnote{\href{https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://www.lofar.eu/wp-content/uploads/2023/04/LOFAR2_0_White_Paper_v2023.1.pdf&ved=2ahUKEwjHnrOH3ciHAxU-EkQIHfa6DJUQFnoECBEQAQ&usg=AOvVaw0ze94uccrly_yfSru4PsCZ}{LOFAR2.0 White Paper - v2023.1}} is a strong motivator for this survey. LOFAR typically operates in international mode, utilizing all stations across Europe. As a result, the stations only operate in standalone mode on average two days a week, which allows for smaller-scale projects coordinated by science users. However, the commissioning of LOFAR 2.0 is expected to begin in Q4 2024 at the main core stations in Dwingeloo. During this period, international stations will operate in standalone mode 24/7, providing an abundance of observation time for projects such as LOFTS.
+This survey was also motivated by the circumstances of the upgrade to LOFAR2.0\footnote{\href{https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://www.lofar.eu/wp-content/uploads/2023/04/LOFAR2_0_White_Paper_v2023.1.pdf&ved=2ahUKEwjHnrOH3ciHAxU-EkQIHfa6DJUQFnoECBEQAQ&usg=AOvVaw0ze94uccrly_yfSru4PsCZ}{LOFAR2.0 White Paper - v2023.1}}. As mentioned in \cref{sec:upgradetoLOFAR2}, LOFAR typically operates in international mode, utilizing all stations across Europe. As a result, the stations only operate in standalone mode on average two days a week, which allows for smaller-scale projects coordinated by science users. However, the commissioning of LOFAR 2.0 began in September 2024 at the core stations in Dwingeloo. Since then, international stations have been operating in standalone mode 24/7, providing an abundance of observing time for projects such as LOFTS.
 
 
-\begin{figure}[h]
+\begin{figure}[t]
     \centering
     \includegraphics[width=\columnwidth]{chapter6/figures/SETI-Frequency-Parameter-Space.pdf}
     \caption{The radio frequency parameter space covered by technosignature searches as a function of sky coverage and sensitivity. The color coding represents the ability to detect an Arecibo-like planetary transmitter at various distances. Where $d^* \leq 25$ pc, $d^* \leq 75$ pc and $d^* \leq 250$ pc are shown in blue, green and red respectively. With anything beyond 250 pc being shown in pink. The figure is adapted from \citep{Ng2022}}
-    \label{fig:constraints}
+    \label{fig:constraints_spectrum}
 \end{figure}
 
 \subsection{Technosignatures}
- \cite{johnson_simultaneous_2023} employed international stations, SE607 and IE613 to conduct the first and most comprehensive search for technosignatures at sub 650~MHz. Using LOFAR's wide field of view \citep{LOFAR_instrument}, over 1.6 million stars were observed over the course of 10 hours of observations. This study also showcased how dual-site observations can be used to eliminate all narrowband false positives from the observations. This resulted in the tightest constraints ever produced in the emergence of intelligent civilizations in this frequency regime.
+ \cite{johnson_simultaneous_2023} employed international stations, SE607 and IE613 to conduct the most comprehensive search for technosignatures at sub 650~MHz. Using LOFAR's wide field of view \citep{LOFAR_instrument}, over 1.6 million stars were observed over the course of 10 hours of observations. This study also showcased how dual-site observations can be used to eliminate all narrowband false positives from the observations. This resulted in the tightest constraints ever produced in the emergence of intelligent civilizations in this frequency regime.
 
-% \begin{figure}[h]
-%     \centering
-%     \includegraphics[width=\columnwidth]{figures/narrowband-fraction-2D.png}
-%     \caption{The fraction of stars that produce narrowband emission $( f^n_c)$ against the transmitter power of the total target pool. The hashed red region shows the constraints that \cite{johnson_simultaneous_2023} places on a value of $( f^n_c)$ at 110–190 MHz. The blue hashed region shows a conservative estimation of the constraint extension LOFTS would place between 110-190 MHz.}
-%     \label{fig:constraints}
-% \end{figure}
+The next step for a technosignature survey at low frequencies is to significantly expand the volume of stars observed by covering more of the sky. This is achieved by increasing both the time of each observation and the quantity of observations using both stations. In addition to narrowband signals, two more types of technosignatures will also be surveyed, such as periodic spectral signals \citep{edmondson_utilization_2003, suresh_48_2023} and artificially dispersed transient signals \citep{2022VishalPulsed}. 
 
+The former proposes that rather than transmitting a continuous narrowband signal, an engineered transmitter could intentionally modulate in emission and time, producing a periodic pattern that is easily characterized as artificial (i.e. radar communications). The signal itself consists of a narrowband carried that intensities turns on and off at some given interval. The period itself depends on the transmitter design but taking PSS signals on Earth as example this would be somewhere within the range of milliseconds to seconds. 
 
-The next step for a technosignature survey at low frequencies is to significantly expand the volume of stars observed by covering more of the sky. This is achieved by increasing both the time of each observation and the quantity of observations using these two stations. In addition to narrowband signals, different types of technosignatures will also be surveyed, such as periodic spectral signals (REFs) and artificially dispersed transient signals (REFs) using already developed pipelines deployed at each site. 
-
-\subsection{Transients}
-
-International LOFAR stations are able to detect novel transients in their own right \citep[i.e.][]{MCKENNA} so it makes search the data products for natural radio emission as well, especially as there is a defined parameter space in the LOFAR band. \\
-
-
-In this paper in \S~\ref{sec:obs} we describe the observations undertaken in the survey. The analyses for the various pipelines applied to the dataset are described in \S~\ref{sec:analysis}. \S~\ref{sec:results} presents the initial results from this work. In \S~\ref{discuss} we discuss the implications of our work before concluding in \S~\ref{sec:conclude}
-
-\section{Observations}\label{sec:obs}
-
-\subsection{Observation Strategy}
-
-A total of 12--24 hours a week have been allocated to LOFTS since October 2024. This takes place on Wednesdays from 18:00 for 24 hours. On weeks when solar observations take precedence, LOFTS observations are run for 12 hours during the nights to minimize the amount of RFI. Due to the nature of the narrowband drifting signals that are expected from technosignatures, the use of a drift scan observation approach is untenable. This is due to the long time samples . Thus, each pointing starts 40 minutes before zenith in Ireland and tracks the sky for 80 minutes, then re-start the following pointing at zenith, and so on. This observation time has been chosen to increase the sensitivity to each of the transients of interest and align with the difference in local sidereal time (LST) between the two stations, which is also 80 minutes. Every 8 hours there is also a 12--15 minute observation of B1508+55 or B0329+54 dependent on LST, this is done for verification purposes. The beam sensitivity of a LOFAR station can be approximated with respect to zenith angle with the following formula,
-
-\begin{equation}
-    S(\theta) = S_0 \cdot \cos^2 \theta \cdot e^{-\tau(\theta, f)}
-\end{equation}
-
-Where $S_0$ is zenith sensitivity  when $\theta = 0$. $\tau(\theta)$ represents atmospheric effects, and as LOFAR operates at lower frequencies, this is dominated by ionospheric effects.\\ 
-With near-zenith pointings, $S_0$ is closely emulated, which optimizes sensitivity because the effective area increases as the angular separation from the zenith decreases. For a comprehensive overview of how the HBA sensitivity is characterised, please see Vincetti et al. (in prep). Any emission signatures that match any of the previously mentioned targets will be flagged for further follow-up observation. 
-
-\subsubsection{Observations to Date}
-
-At the time of writing there has been 161 LOFTS observations recorded, this equates to just over 214 hours. However, due to unforeseen observation problems. Data often isn't recorded on both stations, about X\% have complete successful observations, additionally some processing failures resulted in the processing of only 109-140~Mhz of the band. A comprehensive table detailing these observations is presented in X. For each of these observations science usable data has been generated as outline in \cref{tab:frequency_products} and the pointing directions are shown in \cref{fig:aitoff}. 
+Whereas the latter uses FRBs as a starting point. In this context its thought that a signal might be intentionally engineered to mimic that of dispersed signal, like FRBs. The anthropomorphic thing about these signals from nature is that they would exhibit either an inverted DM sweep (transposed frequency), inverted sweep in time (transposed time) or both, shown in \cref{fig:artificalFRBs}. Other civilisations may intentionally mimic a signal due to its unnatural characteristics, there is also the argument to be made that a broad band signal has less chance of being missed in comparison to its narrowband counterparts. There has also been some discussion of what technology such a signal could be a byproduct of, this includes light sail propulsion or some high-powered radio beam but as with all technosignatures this remains speculative \citep{lingam_fast_2017}. 
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.9\linewidth]{chapter6/figures/combined-aitoff.png}
-    \caption{Aitoff projections of LOFTS observations to date. The top shows observations in Galactic co-ordinates and the bottom shows sky co-ordinates.}
-    \label{fig:aitoff}
+    \includegraphics[width=0.95\linewidth]{chapter6/figures/artifical_FRBs.pdf}
+    \caption{Simulated artificial FRBs-like dispersed signals at a DM of 3000~\dm in LOFAR's HBA band. Left to right shows a dispersed signal with transposed time, transposed frequency and transposed time and frequency. This figure is adapted from \cite{2022VishalPulsed}.}
+    \label{fig:artificalFRBs}
 \end{figure}
 
-The first observation runs were giving preference to the Swedish station which is at $57.40^\circ \rm N$, once this plane was sufficiently sampled the midpoint between the Swedish and Irish station was sampled $55.37^\circ \rm N$ was observed and then at the Irish station's latitude of $53.35^\circ \rm N$. This was chosen due to the size of the Full Width Half Max (FWHM) of an international station beam, given to be $2.59^\circ \rm \ degs$ at 150~MHz \cite{LOFAR_instrument}.
+\subsection{Transients}
+
+International LOFAR stations are able to detect novel transients in their own right \citep[i.e.][]{MCKENNA}, making the these stations equally valuable to transients science as technosignatures. As will later be outlined in this chapter an array of data products are generated to match both the frequency and temporal resolutions required to search for a plethora of transients. This includes Pulsars, RRATs, LPTs, FRBs and radio flare stars. 
+
+Searching for these objects is the primary driver in the increased observation times for each pointing in this survey from 15 to 80 minutes. 
+
+% \section{Observations}
+
+\section{Observation Strategy}\label{sec:LOFTSobs}
+
+A total of 12--24 hours a week have been allocated to LOFTS since October 2024. This takes place on Wednesdays from 18:00 for 24 hours. On weeks when solar observations take precedence, LOFTS observations are run for 12 hours during the nights to minimize the amount of RFI. Due to the nature of the narrowband drifting signals that are expected from technosignatures, the use of a drift scan observation approach is untenable. This is due to the longer time samples and that a centred star would remain within the FWHM for only 20~mins at 150~MHz if centred on bore sight. There is approximately a difference of 80~mins in Local Sidereal Time (LST) between the Irish and Swedish stations. To maximise the sensitivity each pointing starts 40 minutes before zenith the midpoint in latitude and longitude and tracks the sky for 80 minutes. The following observation then re-start again at that point, and so on. This means that at some point in the observation the patch of sky being observed is at zenith for both the stations either at the start (Ireland) or end (Sweden) of the observation. When then declination has been sufficiently sampled observations are then moved by $\pm2.59^\circ$ (FWHM at 150~MHz) to cover new regions of the sky (see his observation time has been chosen to increase the sensitivity to each of the transients of interest and align with the difference in local sidereal time (LST) between the two stations, which is also 80 minutes. The HBA beam sensitivity of a LOFAR station can be roughly approximated with respect to zenith angle with the following formula,
+
+\begin{equation}
+    S(\theta) = S_0 \cdot \cos^2 \theta_{ZA}
+    \label{eq:cos2za}
+\end{equation}
+
+Where $S_0$ is zenith sensitivity which optimizes sensitivity because the effective area increases as the angular separation from the zenith decreases. In reality modelling the response of a LOFAR station is quite complex and difficult to accurately determine for a comprehensive overview of how HBA sensitivity is characterised, please see \cite{Vincetti2026}. Every 8 hours there is also a 12--15 minute observation of B1508+55 or B0329+54 dependent on LST, this is done for pipeline verification purposes. If any of the observations are found to have emission of interest manual follow-up will be carried out with both stations. 
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.9\linewidth]{chapter6/figures/SNR_vs_Elevation.pdf}
+    \caption{Observation of PSR B1508+55 across a single 24 hour track with the I-LOFAR HBA. Each data point represents a 15-min folded slice of the pulsar. \Cref{eq:cos2za} is also fitted to the data. Figure adapted from \cite{Vincetti2026}.}
+    \label{fig:B0329_SNR_ZA}
+\end{figure}
+
+
+\subsubsection{Observations to Date}
+
+At the time of writing there has 278 LOFTS observations recorded, this equates to just over 370 hours on each individual. The observations amount to a sky coverage of $5858\deg^2$, A master database detailing these observations and associated metadata is kept along with pipeline progress, this table has been omitted from this thesis as it provides little value to the reader but is available upon request. For each of these observation science usable data has been generated as outline in \cref{tab:lofts_frequency_products} and the pointing directions are shown in \cref{fig:LOFTSaitoff}. 
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.99\linewidth]{chapter6/figures/lofts_pointings.png}
+    \caption{Aitoff projections of LOFTS observations to date. The \textit{left} shows sky coordinates and the \textit{right} shows Galactic co-ordinates where the dotted line represents the extent of the Galactic plane.}
+    \label{fig:LOFTSaitoff}
+\end{figure}
+
+The first observation runs were giving preference to the Swedish station which is at $57.40^\circ \rm N$, once this plane was sufficiently sampled the midpoint between the Swedish and Irish station was sampled $55.37^\circ \rm N$ was observed and then at the Irish station's latitude of $53.35^\circ \rm N$. As mentioned this was chosen due to the size of the FWHM of an international station beam, future observation runs will be carried out to $\text{dec} = 55.37 \pm n\cdot2.59$. At the time of writing the SE607 is the first international stations to undergo the upgrade to LOFAR2.0, so observations are currently halted. 
 
 
 \subsection{Data Collection and Processing}
 
-Observations are executed using iLiSA, which records received UDP packets of beam-formed data and writes them to disk both in Ireland and Sweden. The recorded data are coarse-channelized complex voltages recorded using LOFAR's $200$-MHz clock~\citep{LOFAR_instrument}, with native frequency and time resolutions of $195.3125$~kHz and $5.12\;\upmu$s respectively.
+Observations are executed using iLiSA, which records received UDP packets of beam-formed data and writes them to disk both in Ireland and Sweden similarly to \cref{sec:SETIchapter}. The recorded data are coarse-channelized complex voltages recorded using LOFAR's $200$-MHz clock~\citep{LOFAR_instrument}, with native frequency and time resolutions of $195.3125$~kHz and $5.12\;\upmu$s respectively. Due to the increased observing cadence of LOFTS a fully automated processing pipeline\footnote{\url{https://github.com/OwenJohnsons/LOFTS-Scripts}} was developed to generate the science data products and remove voltages. HBA voltage data is about $3.04$~GB/sec (uncompressed) which rapidly fills up disks and bottlenecks the backend. A high-level overview of the pipeline can be seen \cref{fig:LOFTSpipeline}, the voltages in the pipeline were handled in the same way as outlined in \cref{sec:SETI_obs_descrip}, for this study ancillary science data products were refined and produced to the specifications as shown in \cref{fig:LOFTSpipeline}. Once the data is generated it is sorted by data and placed into `short' term storage for data analysis on the BL backend. Filterbanks aren't deleted off disk, due to the age of the system and lifetime of hard disk drives, as much of the data is transferred to Linear Tape-Open (LTO) tapes. LTO tapes are rated to have an expected lifetime of 25+ years, making them viable long term storage solution.  I-LOFAR's long term archive is called `archie' which is based in Technical University of the Shannon in Athlone which has a direct fibre link to I-LOFAR in Birr.
 
-\begin{table*}[t]
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.95\linewidth]{chapter6/figures/LOFTS-pipeline.final.png}
+    \caption{High level overview of the LOFTS pipeline showing the workflow from observation planning to data analysis. Identical pipelines are executed on both of the LOFAR stations.}
+    \label{fig:LOFTSpipeline}
+\end{figure}
+
+
+Once each filterbank is created a number of scripts run on the newly generated data and makes some diagnostic plots that are posted to the BL slack along with any failed generation logs via an I-LOFAR bot. An example of a narrowband plot is shown in \cref{fig:LOFTSnarrowbandexample}. \Cref{fig:LOFTSnarrowbandexample} is also a good example of a `scalloping' effect that rises from the spectral leakage from the PFB which was discussed in \cref{sec:polyphase_theory}. This effect appears more exaggerated here as the channels are zoomed in on, but the same effect is observed in the other two data products. Following this each data product undergoes different analysis pipelines depending on their science use case which will be outlined below. The benefit of using two identical backends on two identical stations is the technosignature and transient candidates can be cross-referenced as used for coincidence rejection as previously outlined. 
+
+\begin{table}[h]
 \centering
 \begin{tabular}{lccccp{5.5cm}}
 \hline \hline 
@@ -88,49 +113,1385 @@ Observations are executed using iLiSA, which records received UDP packets of bea
 \hline
 \end{tabular}
 \caption{Specifications of different frequency products and their corresponding science cases.}
-\label{tab:frequency_products}
-\end{table*}
+\label{tab:lofts_frequency_products}
+\end{table}
+
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.95\linewidth]{chapter6/figures/LOFTS0267.rawspec.0000.png}
+    \caption{Example of diagnostic waterfall plot of narrowaband data product (0000.fil) for LOFTS0267 sent into BL Slack channel }
+    \label{fig:LOFTSnarrowbandexample}
+\end{figure}
+
+
 
 \subsection{RFI Excision} \label{sec:RFI}
 
-Radio frequency interference (RFI) plagues all modern radio astronomy data. To best clean the data for use in this survey, first averaged spectra were taken every 10\% ($\sim 8~\rm mins$) of the observation and compared to an ideal HBA band-pass. Local and global statistical features are identified and using iterative isolation forest method to identify anomalous frequency channels \nref. These channels are then masked permanently. In preparation for acceleration searches, the data is further cleaned using \textsc{rfifind} \citep{ransom_new_2001} where any temporal or frequency anomalies that are above $6\sigma$ for more than 60\% of each 10-second chunk are marked as RFI. The masked used for this process for both the international stations can be viewed here. 
+Radio frequency interference (RFI) plagues all modern radio astronomy data as outlined throughout this thesis. In the case of searching for new transients its vital to remove as much persistent and periodic RFI as possible, if the noise floor is too high many natural signals from novel targets will be missed. In addition to using tools like \textsc{rfimask} \citep{ransom_new_2001} a some preliminary work was carried out to explore other ways clean the data. One method that was tested was to take an averaged spectrum every 10\% ($\sim 8~\rm mins$) of each observation using the narrowband data product, $f_\text{res} \sim 3 ~\rm Hz$. These spectrums were then downsampled in frequency and compared to their higher time resolution counterparts. These spectra were then compared to an ideal HBA band-pass assuming no RFI (still contains PFB response). Then several statistical properties of every frequency channel were calculated both relative to nearby channels and throughout the entire observation. An Isolation Forest was then used to identify which channel statistics differed significantly from the majority, marking them as anomalous. Initial test where any temporal or frequency anomalies that were above $6\sigma$ for more than 60\% of each 10\% chunk are marked as RFI. Any channels that were present had RFI present for more than 80\% of the total LOFTS observations were permanently masked during observations. An example of a mask generated from a LOFTS observation is shown in \cref{fig:RFI-mask}. Other more complex methods such as convolution neural networks (CNNs) and Generative Adversarial Networks (GANs) were tested but produced diminishing returns for their added complexity, labelling and resulting mask. These masks worked well on the test observations removing most notable RFI by eye, however the next extension of this work would to carry out S/N recovery of pulsar observations using different various RFI methods and combinations. There is also room to experiment with other classical machine learning methods like Density-Based Spatial Clustering of Applications with Noise (DBSCANs) to compare their computational and masking efficiency against the provisional results. 
 
-\begin{landscape}
-\begin{figure}[p]
+% \begin{landscape}
+\begin{figure}[h]
     \centering
     \includegraphics[width=0.85\linewidth]{chapter6/figures/RFI-mask.png}
     \caption{The RFI mask applied non-technosignauture searches, top IE613, bottom SE607. Blue is the average spectrum in $\sim8$ minute chunks from all full-band LOFTS observations. The black is the `ideal' response from an international station which is used for cross-correlation.}
     \label{fig:RFI-mask}
 \end{figure}
-\end{landscape}
+% \end{landscape}
 
 \subsection{De-dispersion} \label{sec:DDisperse}
 
-For the non-artificial fast transients (FRBs, LPTs, RRATs and Pulsars) the data must be de-dispersed to account for pulse broadening that occurs due to propagation through the ISM known as Dispersion Measure (DM). Without these corrections, pulses would be smeared, resulting in a loss of signal-to-noise and potential non-detection of a detectable pulse, except longer transients of X pulse width. The values used for de-dispersing for this survey DM values from 0-600 \dm are processed. The DM ceiling is chosen due to the dominance of scattering at the lower end of the band, which is the majority contribution $(844.21~\rm ms)$ at 600 \dm. For an in-depth de-dispersion plan and means of calculations, please see appendix \ref{appen:low-frequency-dd}.
+For the non-artificial fast transients (FRBs, LPTs, RRATs and Pulsars) the data must be de-dispersed to account for pulse broadening that occurs due to propagation through the ISM known as DM as discussed in \cref{sec:DispersionMeasure}. Without these corrections, pulses would be smeared, resulting in a loss of signal-to-noise and potential non-detection of an otherwise detectable pulse. DM accuracy changes as a function of pulse-width so when using the HBA the relative S/N loss decreases significantly with pulse width, becoming negligible 45.32~seconds as shown in \cref{fig:LOFTS_HBA_graphs}.  Pulse widths of this order are expected from LPTs. The values used for de-dispersing for this survey DM values from 0-600 \dm are processed. The DM ceiling is chosen due to the dominance of scattering at the lower end of the band, which is the majority contribution $(844.21~\rm ms)$ at 600 \dm. For an in-depth de-dispersion plan and means of calculations, please see appendix \ref{appen:low-frequency-dd}.
 
-\section{Analysis}\label{sec:analysis}
+\begin{figure}[h]
+    \centering
+    \begin{minipage}{0.49\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{chapter6/figures/snr_vs_dm_HBA.pdf}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.49\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{chapter6/figures/snr_vs_dm_HBA.pdf}
+    \end{minipage}
+    \caption{Placeholder}
+    \label{fig:LOFTS_HBA_graphs}
+\end{figure}
 
-\subsection{Technosignature Detection}
+
+
+
+\section{Technosignature Detection} \label{sec:LOFTSanalysis}
 
 % This survey searches for three forms of technosignature, narrowband, periodic spectrally modulated signals and dispersed signals. 
-Continuous narrowband signals have been the primary target of existing searches \citep{Siemion_KEPLER_ApJ, Gajjar_2021_BLGC1} due to their absence in nature, and the assumption of viability of interstellar messaging by this means \citep{CocconiMorrison1959, Sagan1966}. In addition to narrowband signals, this survey searches for artificially dispersed broadband bursts \citep{gajjar_searching_2022} and periodically pulsed beacons \citep{suresh_48_2023}.
+Continuous narrowband signals have been the primary target of existing searches \citep{Siemion_KEPLER_ApJ, Gajjar_2021_BLGC1} due to their absence in nature, and the assumption of viability of interstellar messaging by this means \citep{CocconiMorrison1959, Sagan1966}. In addition to narrowband signals, this survey searches for artificially dispersed broadband bursts \citep{2022VishalPulsed} and periodically pulsed beacons \citep{suresh_48_2023}.
 
-\subsubsection{Narrowband Technosignatures}
+\subsection{Narrowband Technosignatures}
 
-Using the Breakthrough Listen Interesting Signal Search (\textsc{BLISS})\footnote{\url{https://github.com/n-west/bliss}} a Doppler-drift search was carried out on barycentred high time resolution data products at both sites. This produces a list of narrowband candidates from drift-rates of $\pm 4~\rm Hz~s^{-1}$. These candidate lists are then compared against each-other for dual-site coincidence rejection to see if there are any narrowband signals within $\pm 4\rm ~Hz$ in frequency and $\pm 0.2~\rm Hz~s^{-1}$. See §3.3 of \cite{johnson_simultaneous_2023} for an in-depth discussion. 
+Since the work was carried out in \cref{sec:SETIchapter} the development of \textsc{TurboSETI} has been succeeded by the Breakthrough Listen Interesting Signal Search (\textsc{BLISS})\footnote{\url{https://github.com/n-west/bliss}}. BLISS improves signal recovery and parameter estimation by using better noise handling, more accurate SNR estimates, and clustering logic that helps merge nearby hits while reducing false positives.
 
-\subsubsection{Artificially Dispersed Technosignatures}
+As before the Doppler-drift search was carried out on barycentred high time resolution data products at both sites. This time the drift-rate search is carried out at $\pm 7.98~\rm Hz~s^{-1}$ based on the recommended values presented in \cite{li_developing_2023}. These candidate lists are then compared against each-other for dual-site coincidence rejection to see if there are any narrowband signals within $\pm 4\rm ~Hz$ in frequency and $\pm 0.2~\rm Hz~s^{-1}$.
 
-\subsubsection{Periodic Technosignatures}
+In addition to the newly developed pipelines for searching for technosignatures there has been some work published by \cite{gajjar_exoipm_2026}. This works presents the case that interstellar and circumstellar plasma causes scattering in narrowband technosignatures making them broaden and thus harder to detect. A framework is also proposed to model to estimate extent that occultation and scintillation effects. This model derives expressions for stellar wind speed, turbulence and radial distance of a transmitter from the star along with observing frequency and line of sight geometry. This model was tested in a million star Monte-Carlo survey to which the results found that for transmitters in Sun-like stars produced nonnegligible broadening at low frequencies $(\sim100~\text{MHz})$ with this effect becoming more severe for M-dwarfs with 60\% of the entire model population 
+
+To address this issue at low frequencies the one the potential solutions is to conduct the narrowband searches with a Lorentzian function, 
+
+\begin{equation}
+    L(x) = \frac{A \gamma}{(x-x_0)^2 +\gamma^2}
+\end{equation}
+
+Where $A$ is the amplitude and $\gamma$ is the FWHM. Presently there is ongoing work (Lowry et al. in prep) that injected broaden functions into LOFTS data and benchmarks the recovery performance of the standard \textsc{BLISS} pipeline and an extension of \textsc{BLISS} that uses a Lorentzian function to retrieve the signal. 
+
+\subsection{Artificially Dispersed Technosignatures}
+
+As mentioned another technosignature that can be searched for are those that are artificially dispersed. This is done using \textsc{SPANDAK}\footnote{Spandak is hindu for pulsator.} \citep{2022VishalPulsed} which is a GPU-accelerated single pulse search pipeline purpose built to find broadband pulsed technosignatures but also functions as an FRB or single pulse dectector as it is a modified version of Heimdall \citep{barsdell_accelerating_2012}. Heimdall is a software the de-disperes radio time series across an array of trial DMs. It then fits a boxcar function to the time series  looking for peaks in the de-dispersed data.  If the peak meets a certain S/N threshold which is set by the user (in this case 7.3) a list of candidates that meet this threshold are produced. These candidates have an associated DM, SNR, width and pulse time. 
+
+This pulse search engine forms the core of SPANDAK. However, SPANDAK adds transformations to the inputted data by transposing the time, frequency and both axes to search for the three artificial dispersed signals outlined in the previous section. SPANDAK also does several consistency checks on each candidate by checking both the DM and SNR, candidates are grouped by proximity in time, dispersion measure, and signal-to-noise ratio with detections that fall within the same cluster are consolidated and reported as a single event. The resulting candidates set is then passed to a convolution neural network classifier. which ranks each of the events by how closely their de-disperesed time-frequency morphology matches a true broadband pulse. An example of SPANDAK being used on the Irish BL backend to detect a single pulse from B2217+47 is shown in \cref{fig:SPANDAK_example}. 
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.95\linewidth]{chapter6/figures/SPANDAK_example.png}
+    \caption[Candidate plot of a pulse detected by the SPANDAK pipeline during an observation of B2217+47]{Candidate plot of a pulse detected by the SPANDAK pipeline during an observation of B2217+47. The top panel shows the averaged timeseries. The second panel shows a dedispered dynamic spectrum (waterfall). The third panel shows a dispersion measure against time spectrum. The plot to right shows the SNR averaged for various trial DMs. The final panel displays the undispersed dynamic spectrum, n}
+    \label{fig:SPANDAK_example}
+\end{figure}
+
+\subsection{Periodic Technosignatures}
+
+The final technosignature searched for as part of the LOFTS survey is the periodically modulated signals. These signals use the Breakthrough Listen Investigation for Periodic Spectral Signals \citep[\textsc{blipps};][]{suresh_48_2023}, which is a CPU Fast Folding Algorithm (FFA). Instead of isolated pulses this \textsc{blipps} operates similarly to the FFA methods used in \cref{chap:redback}.  \textsc{blipss} operates on channelized dynamic spectra and searches each frequency channel for periodic pulse trains over a trial period range, then groups harmonically related candidates and applies on-source/off-source consistency tests to suppress radio-frequency interference. Candidates that survive these cuts are folded and visually inspected, allowing the pipeline to identify periodic technosignatures even when their emission is swept in frequency or buried in intermittent interference.
+
+As the dual-site observational setup doesn't use the on and off source tests a fork\footnote{\url{https://github.com/OwenJohnsons/blipss.lofar}} of \textsc{blipps} was made and adapted to be easily integrated into the processing pipeline. An example of the \textsc{blipps} is shown in \cref{fig:BLIPPS_example}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.9\linewidth]{chapter6/figures/BLIPPS_example.pdf}
+    \caption{Example of a simulated periodically modulated signal. Top panel shows the detection by the Irish station, the bottom panel shows a non-detection from the Swedish station. In this case the detection would be deemed as RFI as it only appears at one site. }
+    \label{fig:BLIPPS_example}
+\end{figure}
+
+\subsection{Using Artificial Intelligence to find Extraterrestrial Intelligence}
+
+As with many areas of science especially those which are data intensive and require pattern recognition the use of machine learning (ML) has become every more prevalent in recent years. For technosignature surveys this is no different. The following section details some of the recent work that has been ongoing to introduce machine learning models into the LOFTS workflow. 
+
+\subsection{Deep Learning-Based Coincidence Matching} \label{sec:ml_rfi}
+
+In addition to the standard Doppler-drift searches as previously described, a deep learning framework is employed to automate dual-site coincidence matching using Siamese Networks \citep[e.g.][]{Bromley1993, Koch2015}. 
+
+\begin{figure}
+    \centering
+    
 
 
-\subsubsection{Deep Learning-Based Coincidence Matching} \label{sec:ml_rfi}
+% Gradient Info
+  
+\tikzset {_z5q5ykoaj/.code = {\pgfsetadditionalshadetransform{ \pgftransformshift{\pgfpoint{0 bp } { 0 bp }  }  \pgftransformrotate{-85 }  \pgftransformscale{2 }  }}}
+\pgfdeclarehorizontalshading{_6b157036x}{150bp}{rgb(0bp)=(0.65,0.81,0.87);
+rgb(37.5bp)=(0.65,0.81,0.87);
+rgb(62.5bp)=(0.14,0.33,0.54);
+rgb(100bp)=(0.14,0.33,0.54)}
 
-In addition to the standard Doppler-drift searches described in \S 3.1.1, we employ a deep learning framework to automate dual-site coincidence matching using Siamese Networks \citep[e.g.][]{Bromley1993, Koch2015}. Unlike traditional pipelines that rely on precise geometric alignment or strict feature engineering, this approach utilizes a Siamese U-Net architecture to learn a generalized metric of signal similarity. 
+% Gradient Info
+  
+\tikzset {_pma5vnusn/.code = {\pgfsetadditionalshadetransform{ \pgftransformshift{\pgfpoint{0 bp } { 0 bp }  }  \pgftransformrotate{-85 }  \pgftransformscale{2 }  }}}
+\pgfdeclarehorizontalshading{_lu7zrbqhi}{150bp}{rgb(0bp)=(0.65,0.81,0.87);
+rgb(37.5bp)=(0.65,0.81,0.87);
+rgb(62.5bp)=(0.14,0.33,0.54);
+rgb(100bp)=(0.14,0.33,0.54)}
 
-The model ingests time-synchronized filterbank crops from both the Irish and Swedish stations. Using a U-Net backbone, the architecture preserves the high-fidelity time-frequency structure of the signal during feature extraction. These features are projected into a shared 512-dimensional latent space. By training on a contrastive loss function, the network learns to minimize the Euclidean distance between matched astrophysical signals while maximizing the distance for local RFI. 
+% Gradient Info
+  
+\tikzset {_9mwcgafkk/.code = {\pgfsetadditionalshadetransform{ \pgftransformshift{\pgfpoint{0 bp } { 0 bp }  }  \pgftransformrotate{-85 }  \pgftransformscale{2 }  }}}
+\pgfdeclarehorizontalshading{_q6nfu5711}{150bp}{rgb(0bp)=(0.65,0.81,0.87);
+rgb(37.5bp)=(0.65,0.81,0.87);
+rgb(62.5bp)=(0.14,0.33,0.54);
+rgb(100bp)=(0.14,0.33,0.54)}
 
-This method moves beyond simple pixel-wise cross-correlation; it learns to identify signals as ``matching'' even when they exhibit minor morphological differences due to scintillation or local noise conditions. Preliminary validation, performed using synthetic narrowband and pulsed signals injected into real LOFAR observational backgrounds, demonstrates a distinct bimodal separation in the latent space for signals with Signal-to-Noise Ratios (SNR) ranging from 1.5 to 10, offering a robust framework for automated RFI rejection in future survey passes.
+% Gradient Info
+  
+\tikzset {_ufzdzukma/.code = {\pgfsetadditionalshadetransform{ \pgftransformshift{\pgfpoint{0 bp } { 0 bp }  }  \pgftransformrotate{-85 }  \pgftransformscale{2 }  }}}
+\pgfdeclarehorizontalshading{_lz4bs2wjp}{150bp}{rgb(0bp)=(0.65,0.81,0.87);
+rgb(37.5bp)=(0.65,0.81,0.87);
+rgb(62.5bp)=(0.14,0.33,0.54);
+rgb(100bp)=(0.14,0.33,0.54)}
+
+% Gradient Info
+  
+\tikzset {_pjefnl756/.code = {\pgfsetadditionalshadetransform{ \pgftransformshift{\pgfpoint{0 bp } { 0 bp }  }  \pgftransformrotate{-85 }  \pgftransformscale{2 }  }}}
+\pgfdeclarehorizontalshading{_n3chnie9o}{150bp}{rgb(0bp)=(0.65,0.81,0.87);
+rgb(37.5bp)=(0.65,0.81,0.87);
+rgb(62.5bp)=(0.14,0.33,0.54);
+rgb(100bp)=(0.14,0.33,0.54)}
+
+% Gradient Info
+  
+\tikzset {_h2xf7jkk1/.code = {\pgfsetadditionalshadetransform{ \pgftransformshift{\pgfpoint{0 bp } { 0 bp }  }  \pgftransformrotate{-85 }  \pgftransformscale{2 }  }}}
+\pgfdeclarehorizontalshading{_bkdwd85sw}{150bp}{rgb(0bp)=(0.65,0.81,0.87);
+rgb(37.5bp)=(0.65,0.81,0.87);
+rgb(62.5bp)=(0.14,0.33,0.54);
+rgb(100bp)=(0.14,0.33,0.54)}
+
+% Gradient Info
+  
+\tikzset {_dqv8pn769/.code = {\pgfsetadditionalshadetransform{ \pgftransformshift{\pgfpoint{0 bp } { 0 bp }  }  \pgftransformrotate{-85 }  \pgftransformscale{2 }  }}}
+\pgfdeclarehorizontalshading{_prcyvzvpy}{150bp}{rgb(0bp)=(1,1,0);
+rgb(37.5bp)=(1,1,0);
+rgb(62.5bp)=(0,0.5,0.5);
+rgb(100bp)=(0,0.5,0.5)}
+
+% Gradient Info
+  
+\tikzset {_3vsog477m/.code = {\pgfsetadditionalshadetransform{ \pgftransformshift{\pgfpoint{0 bp } { 0 bp }  }  \pgftransformrotate{-85 }  \pgftransformscale{2 }  }}}
+\pgfdeclarehorizontalshading{_ahtbyku6h}{150bp}{rgb(0bp)=(1,1,0);
+rgb(37.5bp)=(1,1,0);
+rgb(62.5bp)=(0,0.5,0.5);
+rgb(100bp)=(0,0.5,0.5)}
+
+% Gradient Info
+  
+\tikzset {_nxws9hy01/.code = {\pgfsetadditionalshadetransform{ \pgftransformshift{\pgfpoint{0 bp } { 0 bp }  }  \pgftransformrotate{-85 }  \pgftransformscale{2 }  }}}
+\pgfdeclarehorizontalshading{_y9gv2k2ff}{150bp}{rgb(0bp)=(1,1,0);
+rgb(37.5bp)=(1,1,0);
+rgb(62.5bp)=(0,0.5,0.5);
+rgb(100bp)=(0,0.5,0.5)}
+
+% Gradient Info
+  
+\tikzset {_7rzaiqjse/.code = {\pgfsetadditionalshadetransform{ \pgftransformshift{\pgfpoint{0 bp } { 0 bp }  }  \pgftransformrotate{-85 }  \pgftransformscale{2 }  }}}
+\pgfdeclarehorizontalshading{_5cp01htin}{150bp}{rgb(0bp)=(1,1,0);
+rgb(37.5bp)=(1,1,0);
+rgb(62.5bp)=(0,0.5,0.5);
+rgb(100bp)=(0,0.5,0.5)}
+
+% Gradient Info
+  
+\tikzset {_th7g2uaen/.code = {\pgfsetadditionalshadetransform{ \pgftransformshift{\pgfpoint{0 bp } { 0 bp }  }  \pgftransformrotate{-85 }  \pgftransformscale{2 }  }}}
+\pgfdeclarehorizontalshading{_jj5ay1vjr}{150bp}{rgb(0bp)=(1,1,0);
+rgb(37.5bp)=(1,1,0);
+rgb(62.5bp)=(0,0.5,0.5);
+rgb(100bp)=(0,0.5,0.5)}
+
+% Gradient Info
+  
+\tikzset {_km6nw1tuu/.code = {\pgfsetadditionalshadetransform{ \pgftransformshift{\pgfpoint{0 bp } { 0 bp }  }  \pgftransformrotate{-85 }  \pgftransformscale{2 }  }}}
+\pgfdeclarehorizontalshading{_koyzsq0bg}{150bp}{rgb(0bp)=(1,1,0);
+rgb(37.5bp)=(1,1,0);
+rgb(62.5bp)=(0,0.5,0.5);
+rgb(100bp)=(0,0.5,0.5)}
+
+% Gradient Info
+  
+\tikzset {_2z2j6p0f9/.code = {\pgfsetadditionalshadetransform{ \pgftransformshift{\pgfpoint{0 bp } { 0 bp }  }  \pgftransformrotate{-85 }  \pgftransformscale{2 }  }}}
+\pgfdeclarehorizontalshading{_971m5hnmf}{150bp}{rgb(0bp)=(1,1,0);
+rgb(37.5bp)=(1,1,0);
+rgb(62.5bp)=(0,0.5,0.5);
+rgb(100bp)=(0,0.5,0.5)}
+
+% Gradient Info
+  
+\tikzset {_uo4r2ed8w/.code = {\pgfsetadditionalshadetransform{ \pgftransformshift{\pgfpoint{0 bp } { 0 bp }  }  \pgftransformrotate{-85 }  \pgftransformscale{2 }  }}}
+\pgfdeclarehorizontalshading{_g7u9lr0mn}{150bp}{rgb(0bp)=(1,1,0);
+rgb(37.5bp)=(1,1,0);
+rgb(62.5bp)=(0,0.5,0.5);
+rgb(100bp)=(0,0.5,0.5)}
+
+% Gradient Info
+  
+\tikzset {_1fv6gsxg3/.code = {\pgfsetadditionalshadetransform{ \pgftransformshift{\pgfpoint{0 bp } { 0 bp }  }  \pgftransformrotate{-85 }  \pgftransformscale{2 }  }}}
+\pgfdeclarehorizontalshading{_0tjw9dw5u}{150bp}{rgb(0bp)=(1,1,0);
+rgb(37.5bp)=(1,1,0);
+rgb(62.5bp)=(0,0.5,0.5);
+rgb(100bp)=(0,0.5,0.5)}
+
+% Gradient Info
+  
+\tikzset {_ouutl3c17/.code = {\pgfsetadditionalshadetransform{ \pgftransformshift{\pgfpoint{0 bp } { 0 bp }  }  \pgftransformrotate{-85 }  \pgftransformscale{2 }  }}}
+\pgfdeclarehorizontalshading{_zjzp9sa61}{150bp}{rgb(0bp)=(1,1,0);
+rgb(37.5bp)=(1,1,0);
+rgb(62.5bp)=(0,0.5,0.5);
+rgb(100bp)=(0,0.5,0.5)}
+
+% Gradient Info
+  
+\tikzset {_jywrv3j5n/.code = {\pgfsetadditionalshadetransform{ \pgftransformshift{\pgfpoint{0 bp } { 0 bp }  }  \pgftransformrotate{-85 }  \pgftransformscale{2 }  }}}
+\pgfdeclarehorizontalshading{_xnqvv2ojc}{150bp}{rgb(0bp)=(1,1,0);
+rgb(37.5bp)=(1,1,0);
+rgb(62.5bp)=(0,0.5,0.5);
+rgb(100bp)=(0,0.5,0.5)}
+
+% Gradient Info
+  
+\tikzset {_6y0xmwhta/.code = {\pgfsetadditionalshadetransform{ \pgftransformshift{\pgfpoint{0 bp } { 0 bp }  }  \pgftransformrotate{-85 }  \pgftransformscale{2 }  }}}
+\pgfdeclarehorizontalshading{_1ddlqcs3a}{150bp}{rgb(0bp)=(1,1,0);
+rgb(37.5bp)=(1,1,0);
+rgb(62.5bp)=(0,0.5,0.5);
+rgb(100bp)=(0,0.5,0.5)}
+
+% Gradient Info
+  
+\tikzset {_oh0km1y72/.code = {\pgfsetadditionalshadetransform{ \pgftransformshift{\pgfpoint{0 bp } { 0 bp }  }  \pgftransformrotate{-85 }  \pgftransformscale{2 }  }}}
+\pgfdeclarehorizontalshading{_cvlgblzta}{150bp}{rgb(0bp)=(1,1,0);
+rgb(37.5bp)=(1,1,0);
+rgb(62.5bp)=(0,0.5,0.5);
+rgb(100bp)=(0,0.5,0.5)}
+
+% Gradient Info
+  
+\tikzset {_nsldap5f8/.code = {\pgfsetadditionalshadetransform{ \pgftransformshift{\pgfpoint{0 bp } { 0 bp }  }  \pgftransformrotate{-85 }  \pgftransformscale{2 }  }}}
+\pgfdeclarehorizontalshading{_4zwulew5f}{150bp}{rgb(0bp)=(1,1,0);
+rgb(37.5bp)=(1,1,0);
+rgb(62.5bp)=(0,0.5,0.5);
+rgb(100bp)=(0,0.5,0.5)}
+
+% Gradient Info
+  
+\tikzset {_bhmayu20n/.code = {\pgfsetadditionalshadetransform{ \pgftransformshift{\pgfpoint{0 bp } { 0 bp }  }  \pgftransformrotate{-85 }  \pgftransformscale{2 }  }}}
+\pgfdeclarehorizontalshading{_tudpntrej}{150bp}{rgb(0bp)=(1,1,0);
+rgb(37.5bp)=(1,1,0);
+rgb(62.5bp)=(0,0.5,0.5);
+rgb(100bp)=(0,0.5,0.5)}
+
+% Gradient Info
+  
+\tikzset {_ymfd9zqj5/.code = {\pgfsetadditionalshadetransform{ \pgftransformshift{\pgfpoint{0 bp } { 0 bp }  }  \pgftransformrotate{-85 }  \pgftransformscale{2 }  }}}
+\pgfdeclarehorizontalshading{_c0nfm58mu}{150bp}{rgb(0bp)=(1,1,0);
+rgb(37.5bp)=(1,1,0);
+rgb(62.5bp)=(0,0.5,0.5);
+rgb(100bp)=(0,0.5,0.5)}
+
+% Gradient Info
+  
+\tikzset {_6st9hmwac/.code = {\pgfsetadditionalshadetransform{ \pgftransformshift{\pgfpoint{0 bp } { 0 bp }  }  \pgftransformrotate{-85 }  \pgftransformscale{2 }  }}}
+\pgfdeclarehorizontalshading{_ux23j9kxj}{150bp}{rgb(0bp)=(1,1,0);
+rgb(37.5bp)=(1,1,0);
+rgb(62.5bp)=(0,0.5,0.5);
+rgb(100bp)=(0,0.5,0.5)}
+
+% Gradient Info
+  
+\tikzset {_v3j1mffrd/.code = {\pgfsetadditionalshadetransform{ \pgftransformshift{\pgfpoint{0 bp } { 0 bp }  }  \pgftransformrotate{-85 }  \pgftransformscale{2 }  }}}
+\pgfdeclarehorizontalshading{_9qtmpdhg1}{150bp}{rgb(0bp)=(1,1,0);
+rgb(37.5bp)=(1,1,0);
+rgb(62.5bp)=(0,0.5,0.5);
+rgb(100bp)=(0,0.5,0.5)}
+
+% Gradient Info
+  
+\tikzset {_bhdonrjog/.code = {\pgfsetadditionalshadetransform{ \pgftransformshift{\pgfpoint{0 bp } { 0 bp }  }  \pgftransformrotate{-85 }  \pgftransformscale{2 }  }}}
+\pgfdeclarehorizontalshading{_j055jn91y}{150bp}{rgb(0bp)=(1,1,0);
+rgb(37.5bp)=(1,1,0);
+rgb(62.5bp)=(0,0.5,0.5);
+rgb(100bp)=(0,0.5,0.5)}
+
+% Gradient Info
+  
+\tikzset {_5p80k649l/.code = {\pgfsetadditionalshadetransform{ \pgftransformshift{\pgfpoint{0 bp } { 0 bp }  }  \pgftransformrotate{-85 }  \pgftransformscale{2 }  }}}
+\pgfdeclarehorizontalshading{_40knvu4qk}{150bp}{rgb(0bp)=(1,1,0);
+rgb(37.5bp)=(1,1,0);
+rgb(62.5bp)=(0,0.5,0.5);
+rgb(100bp)=(0,0.5,0.5)}
+
+% Gradient Info
+  
+\tikzset {_ctiq1c4xv/.code = {\pgfsetadditionalshadetransform{ \pgftransformshift{\pgfpoint{0 bp } { 0 bp }  }  \pgftransformrotate{-85 }  \pgftransformscale{2 }  }}}
+\pgfdeclarehorizontalshading{_0wve93yeu}{150bp}{rgb(0bp)=(1,1,0);
+rgb(37.5bp)=(1,1,0);
+rgb(62.5bp)=(0,0.5,0.5);
+rgb(100bp)=(0,0.5,0.5)}
+
+% Gradient Info
+  
+\tikzset {_i2c3jk5r3/.code = {\pgfsetadditionalshadetransform{ \pgftransformshift{\pgfpoint{0 bp } { 0 bp }  }  \pgftransformrotate{-85 }  \pgftransformscale{2 }  }}}
+\pgfdeclarehorizontalshading{_q9x797o7n}{150bp}{rgb(0bp)=(1,1,0);
+rgb(37.5bp)=(1,1,0);
+rgb(62.5bp)=(0,0.5,0.5);
+rgb(100bp)=(0,0.5,0.5)}
+
+% Gradient Info
+  
+\tikzset {_xn20vts5c/.code = {\pgfsetadditionalshadetransform{ \pgftransformshift{\pgfpoint{0 bp } { 0 bp }  }  \pgftransformrotate{-85 }  \pgftransformscale{2 }  }}}
+\pgfdeclarehorizontalshading{_l4ufehglh}{150bp}{rgb(0bp)=(1,1,0);
+rgb(37.5bp)=(1,1,0);
+rgb(62.5bp)=(0,0.5,0.5);
+rgb(100bp)=(0,0.5,0.5)}
+
+% Gradient Info
+  
+\tikzset {_9g4bp4qia/.code = {\pgfsetadditionalshadetransform{ \pgftransformshift{\pgfpoint{0 bp } { 0 bp }  }  \pgftransformrotate{-85 }  \pgftransformscale{2 }  }}}
+\pgfdeclarehorizontalshading{_x3stekkgh}{150bp}{rgb(0bp)=(1,1,0);
+rgb(37.5bp)=(1,1,0);
+rgb(62.5bp)=(0,0.5,0.5);
+rgb(100bp)=(0,0.5,0.5)}
+
+% Gradient Info
+  
+\tikzset {_x8estxtq3/.code = {\pgfsetadditionalshadetransform{ \pgftransformshift{\pgfpoint{0 bp } { 0 bp }  }  \pgftransformrotate{-85 }  \pgftransformscale{2 }  }}}
+\pgfdeclarehorizontalshading{_3bnvgku0d}{150bp}{rgb(0bp)=(1,1,0);
+rgb(37.5bp)=(1,1,0);
+rgb(62.5bp)=(0,0.5,0.5);
+rgb(100bp)=(0,0.5,0.5)}
+
+% Gradient Info
+  
+\tikzset {_5xodl4qmw/.code = {\pgfsetadditionalshadetransform{ \pgftransformshift{\pgfpoint{0 bp } { 0 bp }  }  \pgftransformrotate{-85 }  \pgftransformscale{2 }  }}}
+\pgfdeclarehorizontalshading{_s6bqzo9lb}{150bp}{rgb(0bp)=(1,1,0);
+rgb(37.5bp)=(1,1,0);
+rgb(62.5bp)=(0,0.5,0.5);
+rgb(100bp)=(0,0.5,0.5)}
+
+% Gradient Info
+  
+\tikzset {_vfu104z9x/.code = {\pgfsetadditionalshadetransform{ \pgftransformshift{\pgfpoint{0 bp } { 0 bp }  }  \pgftransformrotate{-85 }  \pgftransformscale{2 }  }}}
+\pgfdeclarehorizontalshading{_hfi0duhjl}{150bp}{rgb(0bp)=(1,1,0);
+rgb(37.5bp)=(1,1,0);
+rgb(62.5bp)=(0,0.5,0.5);
+rgb(100bp)=(0,0.5,0.5)}
+
+% Gradient Info
+  
+\tikzset {_rbb4nm2jh/.code = {\pgfsetadditionalshadetransform{ \pgftransformshift{\pgfpoint{0 bp } { 0 bp }  }  \pgftransformrotate{-85 }  \pgftransformscale{2 }  }}}
+\pgfdeclarehorizontalshading{_ivncxsqlu}{150bp}{rgb(0bp)=(1,1,0);
+rgb(37.5bp)=(1,1,0);
+rgb(62.5bp)=(0,0.5,0.5);
+rgb(100bp)=(0,0.5,0.5)}
+
+% Gradient Info
+  
+\tikzset {_z4og9edkg/.code = {\pgfsetadditionalshadetransform{ \pgftransformshift{\pgfpoint{0 bp } { 0 bp }  }  \pgftransformrotate{-85 }  \pgftransformscale{2 }  }}}
+\pgfdeclarehorizontalshading{_f7z5l5m5e}{150bp}{rgb(0bp)=(1,1,0);
+rgb(37.5bp)=(1,1,0);
+rgb(62.5bp)=(0,0.5,0.5);
+rgb(100bp)=(0,0.5,0.5)}
+
+% Gradient Info
+  
+\tikzset {_twu8sioaw/.code = {\pgfsetadditionalshadetransform{ \pgftransformshift{\pgfpoint{0 bp } { 0 bp }  }  \pgftransformrotate{-85 }  \pgftransformscale{2 }  }}}
+\pgfdeclarehorizontalshading{_c3zhil1mf}{150bp}{rgb(0bp)=(1,1,0);
+rgb(37.5bp)=(1,1,0);
+rgb(62.5bp)=(0,0.5,0.5);
+rgb(100bp)=(0,0.5,0.5)}
+
+% Gradient Info
+  
+\tikzset {_an8lf19al/.code = {\pgfsetadditionalshadetransform{ \pgftransformshift{\pgfpoint{0 bp } { 0 bp }  }  \pgftransformrotate{-85 }  \pgftransformscale{2 }  }}}
+\pgfdeclarehorizontalshading{_c07lbmhvj}{150bp}{rgb(0bp)=(1,1,0);
+rgb(37.5bp)=(1,1,0);
+rgb(62.5bp)=(0,0.5,0.5);
+rgb(100bp)=(0,0.5,0.5)}
+
+% Gradient Info
+  
+\tikzset {_gzqyqy5ss/.code = {\pgfsetadditionalshadetransform{ \pgftransformshift{\pgfpoint{0 bp } { 0 bp }  }  \pgftransformrotate{-85 }  \pgftransformscale{2 }  }}}
+\pgfdeclarehorizontalshading{_vr1tupn5l}{150bp}{rgb(0bp)=(1,1,0);
+rgb(37.5bp)=(1,1,0);
+rgb(62.5bp)=(0,0.5,0.5);
+rgb(100bp)=(0,0.5,0.5)}
+
+% Gradient Info
+  
+\tikzset {_7uvxc5r60/.code = {\pgfsetadditionalshadetransform{ \pgftransformshift{\pgfpoint{0 bp } { 0 bp }  }  \pgftransformrotate{-85 }  \pgftransformscale{2 }  }}}
+\pgfdeclarehorizontalshading{_qjlj0f7ts}{150bp}{rgb(0bp)=(1,1,0);
+rgb(37.5bp)=(1,1,0);
+rgb(62.5bp)=(0,0.5,0.5);
+rgb(100bp)=(0,0.5,0.5)}
+
+% Gradient Info
+  
+\tikzset {_ta6jjt8f4/.code = {\pgfsetadditionalshadetransform{ \pgftransformshift{\pgfpoint{0 bp } { 0 bp }  }  \pgftransformrotate{-85 }  \pgftransformscale{2 }  }}}
+\pgfdeclarehorizontalshading{_0oap0159d}{150bp}{rgb(0bp)=(1,1,0);
+rgb(37.5bp)=(1,1,0);
+rgb(62.5bp)=(0,0.5,0.5);
+rgb(100bp)=(0,0.5,0.5)}
+
+% Gradient Info
+  
+\tikzset {_2atypeaua/.code = {\pgfsetadditionalshadetransform{ \pgftransformshift{\pgfpoint{0 bp } { 0 bp }  }  \pgftransformrotate{-85 }  \pgftransformscale{2 }  }}}
+\pgfdeclarehorizontalshading{_htvifb8yv}{150bp}{rgb(0bp)=(1,1,0);
+rgb(37.5bp)=(1,1,0);
+rgb(62.5bp)=(0,0.5,0.5);
+rgb(100bp)=(0,0.5,0.5)}
+
+% Gradient Info
+  
+\tikzset {_0g1f0km1t/.code = {\pgfsetadditionalshadetransform{ \pgftransformshift{\pgfpoint{0 bp } { 0 bp }  }  \pgftransformrotate{-85 }  \pgftransformscale{2 }  }}}
+\pgfdeclarehorizontalshading{_bjhyku1ms}{150bp}{rgb(0bp)=(1,1,0);
+rgb(37.5bp)=(1,1,0);
+rgb(62.5bp)=(0,0.5,0.5);
+rgb(100bp)=(0,0.5,0.5)}
+
+% Gradient Info
+  
+\tikzset {_p5k8z8zyl/.code = {\pgfsetadditionalshadetransform{ \pgftransformshift{\pgfpoint{0 bp } { 0 bp }  }  \pgftransformrotate{-85 }  \pgftransformscale{2 }  }}}
+\pgfdeclarehorizontalshading{_kis49w114}{150bp}{rgb(0bp)=(1,1,0);
+rgb(37.5bp)=(1,1,0);
+rgb(62.5bp)=(0,0.5,0.5);
+rgb(100bp)=(0,0.5,0.5)}
+
+% Gradient Info
+  
+\tikzset {_cgesxwgru/.code = {\pgfsetadditionalshadetransform{ \pgftransformshift{\pgfpoint{0 bp } { 0 bp }  }  \pgftransformrotate{-85 }  \pgftransformscale{2 }  }}}
+\pgfdeclarehorizontalshading{_mqcws6nly}{150bp}{rgb(0bp)=(1,1,0);
+rgb(37.5bp)=(1,1,0);
+rgb(62.5bp)=(0,0.5,0.5);
+rgb(100bp)=(0,0.5,0.5)}
+
+% Gradient Info
+  
+\tikzset {_u7ooczuy8/.code = {\pgfsetadditionalshadetransform{ \pgftransformshift{\pgfpoint{0 bp } { 0 bp }  }  \pgftransformrotate{-85 }  \pgftransformscale{2 }  }}}
+\pgfdeclarehorizontalshading{_bfpory5ic}{150bp}{rgb(0bp)=(1,1,0);
+rgb(37.5bp)=(1,1,0);
+rgb(62.5bp)=(0,0.5,0.5);
+rgb(100bp)=(0,0.5,0.5)}
+
+% Gradient Info
+  
+\tikzset {_sszykhqc4/.code = {\pgfsetadditionalshadetransform{ \pgftransformshift{\pgfpoint{0 bp } { 0 bp }  }  \pgftransformrotate{-85 }  \pgftransformscale{2 }  }}}
+\pgfdeclarehorizontalshading{_ax9a6112y}{150bp}{rgb(0bp)=(1,1,0);
+rgb(37.5bp)=(1,1,0);
+rgb(62.5bp)=(0,0.5,0.5);
+rgb(100bp)=(0,0.5,0.5)}
+
+% Gradient Info
+  
+\tikzset {_agdc35nx9/.code = {\pgfsetadditionalshadetransform{ \pgftransformshift{\pgfpoint{0 bp } { 0 bp }  }  \pgftransformrotate{-85 }  \pgftransformscale{2 }  }}}
+\pgfdeclarehorizontalshading{_em9vgarvp}{150bp}{rgb(0bp)=(1,1,0);
+rgb(37.5bp)=(1,1,0);
+rgb(62.5bp)=(0,0.5,0.5);
+rgb(100bp)=(0,0.5,0.5)}
+
+% Gradient Info
+  
+\tikzset {_stop73icn/.code = {\pgfsetadditionalshadetransform{ \pgftransformshift{\pgfpoint{0 bp } { 0 bp }  }  \pgftransformrotate{-85 }  \pgftransformscale{2 }  }}}
+\pgfdeclarehorizontalshading{_zxcpmjx3n}{150bp}{rgb(0bp)=(1,1,0);
+rgb(37.5bp)=(1,1,0);
+rgb(62.5bp)=(0,0.5,0.5);
+rgb(100bp)=(0,0.5,0.5)}
+
+% Gradient Info
+  
+\tikzset {_9l0va40xf/.code = {\pgfsetadditionalshadetransform{ \pgftransformshift{\pgfpoint{0 bp } { 0 bp }  }  \pgftransformrotate{0 }  \pgftransformscale{2 }  }}}
+\pgfdeclarehorizontalshading{_qdc6cwagf}{150bp}{rgb(0bp)=(0.8,0.92,0.56);
+rgb(37.5bp)=(0.8,0.92,0.56);
+rgb(62.5bp)=(0.65,0.79,0.34);
+rgb(100bp)=(0.65,0.79,0.34)}
+
+% Gradient Info
+  
+\tikzset {_wkah85y02/.code = {\pgfsetadditionalshadetransform{ \pgftransformshift{\pgfpoint{0 bp } { 0 bp }  }  \pgftransformrotate{0 }  \pgftransformscale{2 }  }}}
+\pgfdeclarehorizontalshading{_9pmpv6iu6}{150bp}{rgb(0bp)=(0.8,0.92,0.56);
+rgb(37.5bp)=(0.8,0.92,0.56);
+rgb(62.5bp)=(0.65,0.79,0.34);
+rgb(100bp)=(0.65,0.79,0.34)}
+
+% Gradient Info
+  
+\tikzset {_5e25wce69/.code = {\pgfsetadditionalshadetransform{ \pgftransformshift{\pgfpoint{0 bp } { 0 bp }  }  \pgftransformrotate{0 }  \pgftransformscale{2 }  }}}
+\pgfdeclarehorizontalshading{_fjn5f1nkq}{150bp}{rgb(0bp)=(0.8,0.92,0.56);
+rgb(37.5bp)=(0.8,0.92,0.56);
+rgb(62.5bp)=(0.65,0.79,0.34);
+rgb(100bp)=(0.65,0.79,0.34)}
+
+% Gradient Info
+  
+\tikzset {_bt6vksus3/.code = {\pgfsetadditionalshadetransform{ \pgftransformshift{\pgfpoint{0 bp } { 0 bp }  }  \pgftransformrotate{0 }  \pgftransformscale{2 }  }}}
+\pgfdeclarehorizontalshading{_511vdr5g4}{150bp}{rgb(0bp)=(0.58,0.58,0.58);
+rgb(37.5bp)=(0.58,0.58,0.58);
+rgb(49bp)=(0.05,0.05,0.05);
+rgb(50bp)=(0,0,0);
+rgb(50.75bp)=(0.04,0.04,0.04);
+rgb(56.5bp)=(0.31,0.31,0.31);
+rgb(59.25bp)=(0.22,0.22,0.22);
+rgb(62.5bp)=(0.11,0.11,0.11);
+rgb(100bp)=(0.11,0.11,0.11)}
+
+% Gradient Info
+  
+\tikzset {_likl6tv7c/.code = {\pgfsetadditionalshadetransform{ \pgftransformshift{\pgfpoint{0 bp } { 0 bp }  }  \pgftransformrotate{0 }  \pgftransformscale{2 }  }}}
+\pgfdeclarehorizontalshading{_iw3lgcri7}{150bp}{rgb(0bp)=(0.58,0.58,0.58);
+rgb(37.5bp)=(0.58,0.58,0.58);
+rgb(49bp)=(0.05,0.05,0.05);
+rgb(50bp)=(0,0,0);
+rgb(50.75bp)=(0.04,0.04,0.04);
+rgb(56.5bp)=(0.31,0.31,0.31);
+rgb(59.25bp)=(0.22,0.22,0.22);
+rgb(62.5bp)=(0.11,0.11,0.11);
+rgb(100bp)=(0.11,0.11,0.11)}
+
+% Gradient Info
+  
+\tikzset {_0hc9cd5fs/.code = {\pgfsetadditionalshadetransform{ \pgftransformshift{\pgfpoint{0 bp } { 0 bp }  }  \pgftransformrotate{0 }  \pgftransformscale{2 }  }}}
+\pgfdeclarehorizontalshading{_pme4mm2qs}{150bp}{rgb(0bp)=(0.58,0.58,0.58);
+rgb(37.5bp)=(0.58,0.58,0.58);
+rgb(49bp)=(0.05,0.05,0.05);
+rgb(50bp)=(0,0,0);
+rgb(50.75bp)=(0.04,0.04,0.04);
+rgb(56.5bp)=(0.31,0.31,0.31);
+rgb(59.25bp)=(0.22,0.22,0.22);
+rgb(62.5bp)=(0.11,0.11,0.11);
+rgb(100bp)=(0.11,0.11,0.11)}
+
+% Gradient Info
+  
+\tikzset {_prprd0f0j/.code = {\pgfsetadditionalshadetransform{ \pgftransformshift{\pgfpoint{0 bp } { 0 bp }  }  \pgftransformrotate{0 }  \pgftransformscale{2 }  }}}
+\pgfdeclarehorizontalshading{_s7i88zuzn}{150bp}{rgb(0bp)=(0.8,0.92,0.56);
+rgb(37.5bp)=(0.8,0.92,0.56);
+rgb(62.5bp)=(0.65,0.79,0.34);
+rgb(100bp)=(0.65,0.79,0.34)}
+
+% Gradient Info
+  
+\tikzset {_kbcxl3vbt/.code = {\pgfsetadditionalshadetransform{ \pgftransformshift{\pgfpoint{0 bp } { 0 bp }  }  \pgftransformrotate{0 }  \pgftransformscale{2 }  }}}
+\pgfdeclarehorizontalshading{_p50vgphts}{150bp}{rgb(0bp)=(0.8,0.92,0.56);
+rgb(37.5bp)=(0.8,0.92,0.56);
+rgb(62.5bp)=(0.65,0.79,0.34);
+rgb(100bp)=(0.65,0.79,0.34)}
+
+% Gradient Info
+  
+\tikzset {_8e7c8fslj/.code = {\pgfsetadditionalshadetransform{ \pgftransformshift{\pgfpoint{0 bp } { 0 bp }  }  \pgftransformrotate{0 }  \pgftransformscale{2 }  }}}
+\pgfdeclarehorizontalshading{_1pc8pa2cv}{150bp}{rgb(0bp)=(0.6,0.85,1);
+rgb(37.5bp)=(0.6,0.85,1);
+rgb(62.5bp)=(0,0.5,0.5);
+rgb(100bp)=(0,0.5,0.5)}
+
+% Gradient Info
+  
+\tikzset {_cxh7gdu6u/.code = {\pgfsetadditionalshadetransform{ \pgftransformshift{\pgfpoint{0 bp } { 0 bp }  }  \pgftransformrotate{0 }  \pgftransformscale{2 }  }}}
+\pgfdeclarehorizontalshading{_54l1zgsig}{150bp}{rgb(0bp)=(0.6,0.85,1);
+rgb(37.5bp)=(0.6,0.85,1);
+rgb(62.5bp)=(0,0.5,0.5);
+rgb(100bp)=(0,0.5,0.5)}
+
+% Gradient Info
+  
+\tikzset {_6gl0rsdmb/.code = {\pgfsetadditionalshadetransform{ \pgftransformshift{\pgfpoint{0 bp } { 0 bp }  }  \pgftransformrotate{0 }  \pgftransformscale{2 }  }}}
+\pgfdeclarehorizontalshading{_p5j9qg1o6}{150bp}{rgb(0bp)=(0.6,0.85,1);
+rgb(37.5bp)=(0.6,0.85,1);
+rgb(62.5bp)=(0,0.5,0.5);
+rgb(100bp)=(0,0.5,0.5)}
+
+% Gradient Info
+  
+\tikzset {_gs7htmwiy/.code = {\pgfsetadditionalshadetransform{ \pgftransformshift{\pgfpoint{0 bp } { 0 bp }  }  \pgftransformrotate{0 }  \pgftransformscale{2 }  }}}
+\pgfdeclarehorizontalshading{_j6wsjg0ad}{150bp}{rgb(0bp)=(0.58,0.58,0.58);
+rgb(37.5bp)=(0.58,0.58,0.58);
+rgb(49bp)=(0.05,0.05,0.05);
+rgb(50bp)=(0,0,0);
+rgb(50.75bp)=(0.04,0.04,0.04);
+rgb(56.5bp)=(0.31,0.31,0.31);
+rgb(59.25bp)=(0.22,0.22,0.22);
+rgb(62.5bp)=(0.11,0.11,0.11);
+rgb(100bp)=(0.11,0.11,0.11)}
+
+% Gradient Info
+  
+\tikzset {_zol8mpep7/.code = {\pgfsetadditionalshadetransform{ \pgftransformshift{\pgfpoint{0 bp } { 0 bp }  }  \pgftransformrotate{0 }  \pgftransformscale{2 }  }}}
+\pgfdeclarehorizontalshading{_cvn388tp7}{150bp}{rgb(0bp)=(0.58,0.58,0.58);
+rgb(37.5bp)=(0.58,0.58,0.58);
+rgb(49bp)=(0.05,0.05,0.05);
+rgb(50bp)=(0,0,0);
+rgb(50.75bp)=(0.04,0.04,0.04);
+rgb(56.5bp)=(0.31,0.31,0.31);
+rgb(59.25bp)=(0.22,0.22,0.22);
+rgb(62.5bp)=(0.11,0.11,0.11);
+rgb(100bp)=(0.11,0.11,0.11)}
+
+% Gradient Info
+  
+\tikzset {_ahq0sst92/.code = {\pgfsetadditionalshadetransform{ \pgftransformshift{\pgfpoint{0 bp } { 0 bp }  }  \pgftransformrotate{0 }  \pgftransformscale{2 }  }}}
+\pgfdeclarehorizontalshading{_48puxonab}{150bp}{rgb(0bp)=(0.58,0.58,0.58);
+rgb(37.5bp)=(0.58,0.58,0.58);
+rgb(49bp)=(0.05,0.05,0.05);
+rgb(50bp)=(0,0,0);
+rgb(50.75bp)=(0.04,0.04,0.04);
+rgb(56.5bp)=(0.31,0.31,0.31);
+rgb(59.25bp)=(0.22,0.22,0.22);
+rgb(62.5bp)=(0.11,0.11,0.11);
+rgb(100bp)=(0.11,0.11,0.11)}
+
+% Gradient Info
+  
+\tikzset {_jn1srup7b/.code = {\pgfsetadditionalshadetransform{ \pgftransformshift{\pgfpoint{0 bp } { 0 bp }  }  \pgftransformrotate{0 }  \pgftransformscale{2 }  }}}
+\pgfdeclarehorizontalshading{_q2f7le0d7}{150bp}{rgb(0bp)=(0.6,0.85,1);
+rgb(37.5bp)=(0.6,0.85,1);
+rgb(62.5bp)=(0,0.5,0.5);
+rgb(100bp)=(0,0.5,0.5)}
+
+% Gradient Info
+  
+\tikzset {_7yuyngql8/.code = {\pgfsetadditionalshadetransform{ \pgftransformshift{\pgfpoint{0 bp } { 0 bp }  }  \pgftransformrotate{0 }  \pgftransformscale{2 }  }}}
+\pgfdeclarehorizontalshading{_2pu690acm}{150bp}{rgb(0bp)=(0.6,0.85,1);
+rgb(37.5bp)=(0.6,0.85,1);
+rgb(62.5bp)=(0,0.5,0.5);
+rgb(100bp)=(0,0.5,0.5)}
+
+% Gradient Info
+  
+\tikzset {_i46v0gpsn/.code = {\pgfsetadditionalshadetransform{ \pgftransformshift{\pgfpoint{0 bp } { 0 bp }  }  \pgftransformrotate{0 }  \pgftransformscale{2 }  }}}
+\pgfdeclarehorizontalshading{_pzkqcqyfm}{150bp}{rgb(0bp)=(0.8,0.92,0.56);
+rgb(37.5bp)=(0.8,0.92,0.56);
+rgb(62.5bp)=(0.65,0.79,0.34);
+rgb(100bp)=(0.65,0.79,0.34)}
+
+% Gradient Info
+  
+\tikzset {_zedi9vors/.code = {\pgfsetadditionalshadetransform{ \pgftransformshift{\pgfpoint{0 bp } { 0 bp }  }  \pgftransformrotate{0 }  \pgftransformscale{2 }  }}}
+\pgfdeclarehorizontalshading{_v60uqryhs}{150bp}{rgb(0bp)=(0.8,0.92,0.56);
+rgb(37.5bp)=(0.8,0.92,0.56);
+rgb(62.5bp)=(0.65,0.79,0.34);
+rgb(100bp)=(0.65,0.79,0.34)}
+
+% Gradient Info
+  
+\tikzset {_0z7g0xqen/.code = {\pgfsetadditionalshadetransform{ \pgftransformshift{\pgfpoint{0 bp } { 0 bp }  }  \pgftransformrotate{0 }  \pgftransformscale{2 }  }}}
+\pgfdeclarehorizontalshading{_fpht25uc7}{150bp}{rgb(0bp)=(0.8,0.92,0.56);
+rgb(37.5bp)=(0.8,0.92,0.56);
+rgb(62.5bp)=(0.65,0.79,0.34);
+rgb(100bp)=(0.65,0.79,0.34)}
+
+% Gradient Info
+  
+\tikzset {_gbqwdyid0/.code = {\pgfsetadditionalshadetransform{ \pgftransformshift{\pgfpoint{0 bp } { 0 bp }  }  \pgftransformrotate{0 }  \pgftransformscale{2 }  }}}
+\pgfdeclarehorizontalshading{_ji3igbj7i}{150bp}{rgb(0bp)=(0.8,0.92,0.56);
+rgb(37.5bp)=(0.8,0.92,0.56);
+rgb(62.5bp)=(0.65,0.79,0.34);
+rgb(100bp)=(0.65,0.79,0.34)}
+
+% Gradient Info
+  
+\tikzset {_khtsdr2lh/.code = {\pgfsetadditionalshadetransform{ \pgftransformshift{\pgfpoint{0 bp } { 0 bp }  }  \pgftransformrotate{0 }  \pgftransformscale{2 }  }}}
+\pgfdeclarehorizontalshading{_6inp5oamb}{150bp}{rgb(0bp)=(0.8,0.92,0.56);
+rgb(37.5bp)=(0.8,0.92,0.56);
+rgb(62.5bp)=(0.65,0.79,0.34);
+rgb(100bp)=(0.65,0.79,0.34)}
+
+% Gradient Info
+  
+\tikzset {_g1rekqib5/.code = {\pgfsetadditionalshadetransform{ \pgftransformshift{\pgfpoint{0 bp } { 0 bp }  }  \pgftransformrotate{0 }  \pgftransformscale{2 }  }}}
+\pgfdeclarehorizontalshading{_pt084hi3s}{150bp}{rgb(0bp)=(0.8,0.92,0.56);
+rgb(37.5bp)=(0.8,0.92,0.56);
+rgb(62.5bp)=(0.65,0.79,0.34);
+rgb(100bp)=(0.65,0.79,0.34)}
+
+% Gradient Info
+  
+\tikzset {_mtvi63ydh/.code = {\pgfsetadditionalshadetransform{ \pgftransformshift{\pgfpoint{0 bp } { 0 bp }  }  \pgftransformrotate{0 }  \pgftransformscale{2 }  }}}
+\pgfdeclarehorizontalshading{_fjjw54hbh}{150bp}{rgb(0bp)=(0.8,0.92,0.56);
+rgb(37.5bp)=(0.8,0.92,0.56);
+rgb(62.5bp)=(0.65,0.79,0.34);
+rgb(100bp)=(0.65,0.79,0.34)}
+
+% Gradient Info
+  
+\tikzset {_kw7dc5fde/.code = {\pgfsetadditionalshadetransform{ \pgftransformshift{\pgfpoint{0 bp } { 0 bp }  }  \pgftransformrotate{0 }  \pgftransformscale{2 }  }}}
+\pgfdeclarehorizontalshading{_i9uoqj5hm}{150bp}{rgb(0bp)=(0.8,0.92,0.56);
+rgb(37.5bp)=(0.8,0.92,0.56);
+rgb(62.5bp)=(0.65,0.79,0.34);
+rgb(100bp)=(0.65,0.79,0.34)}
+
+% Gradient Info
+  
+\tikzset {_lc9zud4rn/.code = {\pgfsetadditionalshadetransform{ \pgftransformshift{\pgfpoint{0 bp } { 0 bp }  }  \pgftransformrotate{0 }  \pgftransformscale{2 }  }}}
+\pgfdeclarehorizontalshading{_1l3271has}{150bp}{rgb(0bp)=(0.8,0.92,0.56);
+rgb(37.5bp)=(0.8,0.92,0.56);
+rgb(62.5bp)=(0.65,0.79,0.34);
+rgb(100bp)=(0.65,0.79,0.34)}
+
+% Gradient Info
+  
+\tikzset {_h240qlfgt/.code = {\pgfsetadditionalshadetransform{ \pgftransformshift{\pgfpoint{0 bp } { 0 bp }  }  \pgftransformrotate{0 }  \pgftransformscale{2 }  }}}
+\pgfdeclarehorizontalshading{_8rwkw0d1t}{150bp}{rgb(0bp)=(0.6,0.85,1);
+rgb(37.5bp)=(0.6,0.85,1);
+rgb(62.5bp)=(0,0.5,0.5);
+rgb(100bp)=(0,0.5,0.5)}
+
+% Gradient Info
+  
+\tikzset {_8mo7fpy48/.code = {\pgfsetadditionalshadetransform{ \pgftransformshift{\pgfpoint{0 bp } { 0 bp }  }  \pgftransformrotate{0 }  \pgftransformscale{2 }  }}}
+\pgfdeclarehorizontalshading{_zhgme2afq}{150bp}{rgb(0bp)=(0.6,0.85,1);
+rgb(37.5bp)=(0.6,0.85,1);
+rgb(62.5bp)=(0,0.5,0.5);
+rgb(100bp)=(0,0.5,0.5)}
+
+% Gradient Info
+  
+\tikzset {_zjfskechl/.code = {\pgfsetadditionalshadetransform{ \pgftransformshift{\pgfpoint{0 bp } { 0 bp }  }  \pgftransformrotate{0 }  \pgftransformscale{2 }  }}}
+\pgfdeclarehorizontalshading{_9sz9m8tig}{150bp}{rgb(0bp)=(0.6,0.85,1);
+rgb(37.5bp)=(0.6,0.85,1);
+rgb(62.5bp)=(0,0.5,0.5);
+rgb(100bp)=(0,0.5,0.5)}
+
+% Gradient Info
+  
+\tikzset {_p3g39yuv5/.code = {\pgfsetadditionalshadetransform{ \pgftransformshift{\pgfpoint{0 bp } { 0 bp }  }  \pgftransformrotate{0 }  \pgftransformscale{2 }  }}}
+\pgfdeclarehorizontalshading{_idd7ms6qr}{150bp}{rgb(0bp)=(0.6,0.85,1);
+rgb(37.5bp)=(0.6,0.85,1);
+rgb(62.5bp)=(0,0.5,0.5);
+rgb(100bp)=(0,0.5,0.5)}
+
+% Gradient Info
+  
+\tikzset {_3v39p5fy3/.code = {\pgfsetadditionalshadetransform{ \pgftransformshift{\pgfpoint{0 bp } { 0 bp }  }  \pgftransformrotate{0 }  \pgftransformscale{2 }  }}}
+\pgfdeclarehorizontalshading{_9rsirtpnq}{150bp}{rgb(0bp)=(0.6,0.85,1);
+rgb(37.5bp)=(0.6,0.85,1);
+rgb(62.5bp)=(0,0.5,0.5);
+rgb(100bp)=(0,0.5,0.5)}
+
+% Gradient Info
+  
+\tikzset {_dzuix8yr6/.code = {\pgfsetadditionalshadetransform{ \pgftransformshift{\pgfpoint{0 bp } { 0 bp }  }  \pgftransformrotate{0 }  \pgftransformscale{2 }  }}}
+\pgfdeclarehorizontalshading{_lovd3yrby}{150bp}{rgb(0bp)=(0.6,0.85,1);
+rgb(37.5bp)=(0.6,0.85,1);
+rgb(62.5bp)=(0,0.5,0.5);
+rgb(100bp)=(0,0.5,0.5)}
+
+% Gradient Info
+  
+\tikzset {_3vdze14al/.code = {\pgfsetadditionalshadetransform{ \pgftransformshift{\pgfpoint{0 bp } { 0 bp }  }  \pgftransformrotate{0 }  \pgftransformscale{2 }  }}}
+\pgfdeclarehorizontalshading{_btubw16w8}{150bp}{rgb(0bp)=(0.6,0.85,1);
+rgb(37.5bp)=(0.6,0.85,1);
+rgb(62.5bp)=(0,0.5,0.5);
+rgb(100bp)=(0,0.5,0.5)}
+
+% Gradient Info
+  
+\tikzset {_rdeedwmaw/.code = {\pgfsetadditionalshadetransform{ \pgftransformshift{\pgfpoint{0 bp } { 0 bp }  }  \pgftransformrotate{0 }  \pgftransformscale{2 }  }}}
+\pgfdeclarehorizontalshading{_de13hfn2q}{150bp}{rgb(0bp)=(0.6,0.85,1);
+rgb(37.5bp)=(0.6,0.85,1);
+rgb(62.5bp)=(0,0.5,0.5);
+rgb(100bp)=(0,0.5,0.5)}
+
+% Gradient Info
+  
+\tikzset {_hq6rwnplx/.code = {\pgfsetadditionalshadetransform{ \pgftransformshift{\pgfpoint{0 bp } { 0 bp }  }  \pgftransformrotate{0 }  \pgftransformscale{2 }  }}}
+\pgfdeclarehorizontalshading{_tdkdjnu00}{150bp}{rgb(0bp)=(0.6,0.85,1);
+rgb(37.5bp)=(0.6,0.85,1);
+rgb(62.5bp)=(0,0.5,0.5);
+rgb(100bp)=(0,0.5,0.5)}
+
+% Gradient Info
+  
+\tikzset {_655szi8se/.code = {\pgfsetadditionalshadetransform{ \pgftransformshift{\pgfpoint{0 bp } { 0 bp }  }  \pgftransformrotate{0 }  \pgftransformscale{2 }  }}}
+\pgfdeclarehorizontalshading{_qj2qelo7i}{150bp}{rgb(0bp)=(0.8,0.92,0.56);
+rgb(37.5bp)=(0.8,0.92,0.56);
+rgb(62.5bp)=(0.65,0.79,0.34);
+rgb(100bp)=(0.65,0.79,0.34)}
+
+% Gradient Info
+  
+\tikzset {_l95p9rr66/.code = {\pgfsetadditionalshadetransform{ \pgftransformshift{\pgfpoint{0 bp } { 0 bp }  }  \pgftransformrotate{0 }  \pgftransformscale{2 }  }}}
+\pgfdeclarehorizontalshading{_45rsotymr}{150bp}{rgb(0bp)=(0.97,0.31,0.2);
+rgb(37.5bp)=(0.97,0.31,0.2);
+rgb(50bp)=(0.95,0.44,0.36);
+rgb(50.25bp)=(0.96,0.16,0.05);
+rgb(55.25bp)=(0.94,0.18,0.09);
+rgb(62.5bp)=(0.91,0.22,0.15);
+rgb(100bp)=(0.91,0.22,0.15)}
+
+% Gradient Info
+  
+\tikzset {_b7lch0oko/.code = {\pgfsetadditionalshadetransform{ \pgftransformshift{\pgfpoint{0 bp } { 0 bp }  }  \pgftransformrotate{0 }  \pgftransformscale{2 }  }}}
+\pgfdeclarehorizontalshading{_kk34cd3nu}{150bp}{rgb(0bp)=(0.8,0.38,0.7);
+rgb(51.964285714285715bp)=(0.8,0.38,0.7);
+rgb(62.5bp)=(0.68,0.07,0.51);
+rgb(62.5bp)=(0.87,0.28,0.67);
+rgb(100bp)=(0.87,0.28,0.67)}
+
+% Gradient Info
+  
+\tikzset {_clalyuldn/.code = {\pgfsetadditionalshadetransform{ \pgftransformshift{\pgfpoint{0 bp } { 0 bp }  }  \pgftransformrotate{0 }  \pgftransformscale{2 }  }}}
+\pgfdeclarehorizontalshading{_r8jxza7eq}{150bp}{rgb(0bp)=(1,0,0);
+rgb(37.5bp)=(1,0,0);
+rgb(37.5bp)=(1,0,0);
+rgb(43.214285714285715bp)=(1,1,0);
+rgb(61.69642857142857bp)=(0.02,0.76,1);
+rgb(100bp)=(0.02,0.76,1)}
+\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+
+\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+%uncomment if require: \path (0,892); %set diagram left start at 0, and has height of 892
+
+%Rounded Rect [id:dp47061377219337097] 
+\draw  [color={rgb, 255:red, 245; green, 166; blue, 35 }  ,draw opacity=1 ][fill={rgb, 255:red, 245; green, 166; blue, 35 }  ,fill opacity=0.26 ] (490.9,115.63) .. controls (490.9,101.47) and (502.38,89.99) .. (516.54,89.99) -- (655.92,89.99) .. controls (670.08,89.99) and (681.56,101.47) .. (681.56,115.63) -- (681.56,192.56) .. controls (681.56,206.72) and (670.08,218.2) .. (655.92,218.2) -- (516.54,218.2) .. controls (502.38,218.2) and (490.9,206.72) .. (490.9,192.56) -- cycle ;
+%Shape: Polygon [id:ds01116359030112779] 
+\path  [shading=_6b157036x,_z5q5ykoaj] (174.81,60.72) -- (187.43,61.75) -- (187.43,215.53) -- (163.33,235.48) -- (150.94,234.96) -- (150.26,85.95) -- cycle ; % for fading 
+ \draw   (174.81,60.72) -- (187.43,61.75) -- (187.43,215.53) -- (163.33,235.48) -- (150.94,234.96) -- (150.26,85.95) -- cycle ; % for border 
+
+%Shape: Polygon [id:ds9390473913907528] 
+\draw  [line width=1.5]  (187.43,61.75) -- (187.43,215.53) -- (163.9,234.62) -- (163.56,85.61) -- cycle ;
+%Straight Lines [id:da9484510585010407] 
+\draw [line width=1.5]    (150.94,234.96) -- (163.33,235.48) ;
+%Straight Lines [id:da5455385954210757] 
+\draw [line width=1.5]    (150.3,85.17) -- (150.87,235.77) ;
+%Straight Lines [id:da39960536048455275] 
+\draw [line width=1.5]    (150.26,85.95) -- (174.81,60.72) ;
+%Straight Lines [id:da41399588242147844] 
+\draw [line width=1.5]    (174.24,61.15) -- (188.22,60.81) ;
+%Straight Lines [id:da7450488284771906] 
+\draw [line width=1.5]    (150.26,85.95) -- (163.56,85.61) ;
+
+%Shape: Polygon [id:ds44791424628979815] 
+\path  [shading=_lu7zrbqhi,_pma5vnusn] (197.73,103) -- (206.96,103.74) -- (206.96,214.24) -- (189.32,228.57) -- (180.25,228.2) -- (179.75,121.13) -- cycle ; % for fading 
+ \draw   (197.73,103) -- (206.96,103.74) -- (206.96,214.24) -- (189.32,228.57) -- (180.25,228.2) -- (179.75,121.13) -- cycle ; % for border 
+
+%Shape: Polygon [id:ds6456905469224495] 
+\draw  [line width=1.5]  (206.96,103.74) -- (206.96,214.24) -- (189.74,227.96) -- (189.49,120.89) -- cycle ;
+%Straight Lines [id:da23313388635520216] 
+\draw [line width=1.5]    (180.25,228.2) -- (189.32,228.57) ;
+%Straight Lines [id:da6680537063250437] 
+\draw [line width=1.5]    (179.78,120.57) -- (180.2,228.78) ;
+%Straight Lines [id:da1492377403113342] 
+\draw [line width=1.5]    (179.75,121.13) -- (197.73,103) ;
+%Straight Lines [id:da8878760564361802] 
+\draw [line width=1.5]    (197.31,103.31) -- (207.54,103.07) ;
+%Straight Lines [id:da07733415154555068] 
+\draw [line width=1.5]    (179.75,121.13) -- (189.49,120.89) ;
+
+%Shape: Polygon [id:ds7199969731237571] 
+\path  [shading=_q6nfu5711,_9mwcgafkk] (218.79,125.85) -- (226.49,126.42) -- (226.49,212.81) -- (211.78,224.01) -- (204.21,223.73) -- (203.79,140.02) -- cycle ; % for fading 
+ \draw   (218.79,125.85) -- (226.49,126.42) -- (226.49,212.81) -- (211.78,224.01) -- (204.21,223.73) -- (203.79,140.02) -- cycle ; % for border 
+
+%Shape: Polygon [id:ds024536834964919207] 
+\draw  [line width=1.5]  (226.49,126.42) -- (226.49,212.81) -- (212.12,223.53) -- (211.91,139.83) -- cycle ;
+%Straight Lines [id:da9374944302772893] 
+\draw [line width=1.5]    (204.21,223.73) -- (211.78,224.01) ;
+%Straight Lines [id:da14553977833773502] 
+\draw [line width=1.5]    (203.82,139.58) -- (204.17,224.18) ;
+%Straight Lines [id:da9201882702268832] 
+\draw [line width=1.5]    (203.79,140.02) -- (218.79,125.85) ;
+%Straight Lines [id:da8012532416988555] 
+\draw [line width=1.5]    (218.44,126.09) -- (226.98,125.9) ;
+%Straight Lines [id:da5697246688852763] 
+\draw [line width=1.5]    (203.79,140.02) -- (211.91,139.83) ;
+
+%Shape: Polygon [id:ds7201117146939288] 
+\path  [shading=_lz4bs2wjp,_ufzdzukma] (238.79,150.74) -- (245.64,151.21) -- (245.64,220.96) -- (232.55,230.01) -- (225.82,229.78) -- (225.44,162.19) -- cycle ; % for fading 
+ \draw   (238.79,150.74) -- (245.64,151.21) -- (245.64,220.96) -- (232.55,230.01) -- (225.82,229.78) -- (225.44,162.19) -- cycle ; % for border 
+
+%Shape: Polygon [id:ds5874489552679367] 
+\draw  [line width=1.5]  (245.64,151.21) -- (245.64,220.96) -- (232.86,229.63) -- (232.67,162.03) -- cycle ;
+%Straight Lines [id:da8172423822788103] 
+\draw [line width=1.5]    (225.82,229.78) -- (232.55,230.01) ;
+%Straight Lines [id:da3489444480156403] 
+\draw [line width=1.5]    (225.47,161.83) -- (225.78,230.15) ;
+%Straight Lines [id:da5376665040864478] 
+\draw [line width=1.5]    (225.44,162.19) -- (238.79,150.74) ;
+%Straight Lines [id:da9999724368132887] 
+\draw [line width=1.5]    (238.48,150.93) -- (246.07,150.78) ;
+%Straight Lines [id:da9306886514050666] 
+\draw [line width=1.5]    (225.44,162.19) -- (232.67,162.03) ;
+
+%Shape: Polygon [id:ds1459295758978053] 
+\path  [shading=_n3chnie9o,_pjefnl756] (257.08,174.27) -- (263.09,174.62) -- (263.09,227.45) -- (251.61,234.31) -- (245.72,234.13) -- (245.39,182.94) -- cycle ; % for fading 
+ \draw   (257.08,174.27) -- (263.09,174.62) -- (263.09,227.45) -- (251.61,234.31) -- (245.72,234.13) -- (245.39,182.94) -- cycle ; % for border 
+
+%Shape: Polygon [id:ds8441171653335976] 
+\draw  [line width=1.5]  (263.09,174.62) -- (263.09,227.45) -- (251.88,234.01) -- (251.72,182.82) -- cycle ;
+%Straight Lines [id:da7369679563328491] 
+\draw [line width=1.5]    (245.72,234.13) -- (251.61,234.31) ;
+%Straight Lines [id:da8811866291314984] 
+\draw [line width=1.5]    (245.41,182.67) -- (245.68,234.41) ;
+%Straight Lines [id:da5524877529182518] 
+\draw [line width=1.5]    (245.39,182.94) -- (257.08,174.27) ;
+%Straight Lines [id:da46148161948890687] 
+\draw [line width=1.5]    (256.81,174.42) -- (263.46,174.3) ;
+%Straight Lines [id:da08835498829140376] 
+\draw [line width=1.5]    (245.39,182.94) -- (251.72,182.82) ;
+
+%Shape: Polygon [id:ds36402481314786284] 
+\path  [shading=_bkdwd85sw,_h2xf7jkk1] (270.76,195.07) -- (275.12,195.31) -- (275.12,231.22) -- (266.79,235.87) -- (262.51,235.75) -- (262.27,200.96) -- cycle ; % for fading 
+ \draw   (270.76,195.07) -- (275.12,195.31) -- (275.12,231.22) -- (266.79,235.87) -- (262.51,235.75) -- (262.27,200.96) -- cycle ; % for border 
+
+%Shape: Polygon [id:ds9239143897263221] 
+\draw  [line width=1.5]  (275.12,195.31) -- (275.12,231.22) -- (266.99,235.68) -- (266.87,200.88) -- cycle ;
+%Straight Lines [id:da09620924859289193] 
+\draw [line width=1.5]    (262.51,235.75) -- (266.79,235.87) ;
+%Straight Lines [id:da7993325243106468] 
+\draw [line width=1.5]    (262.29,200.78) -- (262.48,235.94) ;
+%Straight Lines [id:da9047436035391675] 
+\draw [line width=1.5]    (262.27,200.96) -- (270.76,195.07) ;
+%Straight Lines [id:da8329574566044363] 
+\draw [line width=1.5]    (270.56,195.17) -- (275.4,195.09) ;
+%Straight Lines [id:da3552821409720467] 
+\draw [line width=1.5]    (262.27,200.96) -- (266.87,200.88) ;
+
+%Shape: Polygon [id:ds0014022259224437672] 
+\path  [shading=_prcyvzvpy,_dqv8pn769] (424.24,64.3) -- (436.85,65.33) -- (436.85,219.11) -- (412.76,239.06) -- (400.37,238.54) -- (399.69,89.54) -- cycle ; % for fading 
+ \draw   (424.24,64.3) -- (436.85,65.33) -- (436.85,219.11) -- (412.76,239.06) -- (400.37,238.54) -- (399.69,89.54) -- cycle ; % for border 
+
+%Shape: Polygon [id:ds7258462983837597] 
+\path  [shading=_ahtbyku6h,_3vsog477m] (436.85,65.33) -- (436.85,219.11) -- (413.33,238.2) -- (412.98,89.19) -- cycle ; % for fading 
+ \draw  [line width=1.5]  (436.85,65.33) -- (436.85,219.11) -- (413.33,238.2) -- (412.98,89.19) -- cycle ; % for border 
+
+%Straight Lines [id:da5575843371543178] 
+\draw [shading=_y9gv2k2ff,_nxws9hy01][line width=1.5]    (400.37,238.54) -- (412.76,239.06) ;
+%Straight Lines [id:da6597571759167631] 
+\draw [shading=_5cp01htin,_7rzaiqjse][line width=1.5]    (399.73,88.75) -- (400.3,239.35) ;
+%Straight Lines [id:da6743500957905806] 
+\draw [shading=_jj5ay1vjr,_th7g2uaen][line width=1.5]    (399.69,89.54) -- (424.24,64.3) ;
+%Straight Lines [id:da9767500851688817] 
+\draw [shading=_koyzsq0bg,_km6nw1tuu][line width=1.5]    (423.67,64.73) -- (437.65,64.39) ;
+%Straight Lines [id:da9470605687028278] 
+\draw [shading=_971m5hnmf,_2z2j6p0f9][line width=1.5]    (399.69,89.54) -- (412.98,89.19) ;
+
+%Shape: Polygon [id:ds9032472141608081] 
+\path  [shading=_g7u9lr0mn,_uo4r2ed8w] (312.19,196.94) -- (316.55,197.18) -- (316.55,233.09) -- (308.22,237.75) -- (303.94,237.63) -- (303.7,202.84) -- cycle ; % for fading 
+ \draw   (312.19,196.94) -- (316.55,197.18) -- (316.55,233.09) -- (308.22,237.75) -- (303.94,237.63) -- (303.7,202.84) -- cycle ; % for border 
+
+%Shape: Polygon [id:ds3343171507095595] 
+\path  [shading=_0tjw9dw5u,_1fv6gsxg3] (316.55,197.18) -- (316.55,233.09) -- (308.42,237.55) -- (308.3,202.76) -- cycle ; % for fading 
+ \draw  [line width=1.5]  (316.55,197.18) -- (316.55,233.09) -- (308.42,237.55) -- (308.3,202.76) -- cycle ; % for border 
+
+%Straight Lines [id:da6039006629870464] 
+\draw [shading=_zjzp9sa61,_ouutl3c17][line width=1.5]    (303.94,237.63) -- (308.22,237.75) ;
+%Straight Lines [id:da7519383911858601] 
+\draw [shading=_xnqvv2ojc,_jywrv3j5n][line width=1.5]    (303.71,202.65) -- (303.91,237.82) ;
+%Straight Lines [id:da7314510234731804] 
+\draw [shading=_1ddlqcs3a,_6y0xmwhta][line width=1.5]    (303.7,202.84) -- (312.19,196.94) ;
+%Straight Lines [id:da07479714631616519] 
+\draw [shading=_cvlgblzta,_oh0km1y72][line width=1.5]    (311.99,197.04) -- (316.83,196.96) ;
+%Straight Lines [id:da24354980177904628] 
+\draw [shading=_4zwulew5f,_nsldap5f8][line width=1.5]    (303.7,202.84) -- (308.3,202.76) ;
+
+%Shape: Polygon [id:ds6680179024901198] 
+\path  [shading=_tudpntrej,_bhmayu20n] (327.83,177.85) -- (333.84,178.2) -- (333.84,231.03) -- (322.37,237.89) -- (316.47,237.71) -- (316.15,186.52) -- cycle ; % for fading 
+ \draw   (327.83,177.85) -- (333.84,178.2) -- (333.84,231.03) -- (322.37,237.89) -- (316.47,237.71) -- (316.15,186.52) -- cycle ; % for border 
+
+%Shape: Polygon [id:ds7143685286541978] 
+\path  [shading=_c0nfm58mu,_ymfd9zqj5] (333.84,178.2) -- (333.84,231.03) -- (322.64,237.59) -- (322.48,186.4) -- cycle ; % for fading 
+ \draw  [line width=1.5]  (333.84,178.2) -- (333.84,231.03) -- (322.64,237.59) -- (322.48,186.4) -- cycle ; % for border 
+
+%Straight Lines [id:da2274952133390057] 
+\draw [shading=_ux23j9kxj,_6st9hmwac][line width=1.5]    (316.47,237.71) -- (322.37,237.89) ;
+%Straight Lines [id:da9976321696693418] 
+\draw [shading=_9qtmpdhg1,_v3j1mffrd][line width=1.5]    (316.17,186.25) -- (316.44,237.99) ;
+%Straight Lines [id:da6066660676168358] 
+\draw [shading=_j055jn91y,_bhdonrjog][line width=1.5]    (316.15,186.52) -- (327.83,177.85) ;
+%Straight Lines [id:da41674129176990105] 
+\draw [shading=_40knvu4qk,_5p80k649l][line width=1.5]    (327.56,178) -- (334.22,177.88) ;
+%Straight Lines [id:da6404317267163628] 
+\draw [shading=_0wve93yeu,_ctiq1c4xv][line width=1.5]    (316.15,186.52) -- (322.48,186.4) ;
+
+%Shape: Polygon [id:ds7909495610465813] 
+\path  [shading=_q9x797o7n,_i2c3jk5r3] (346.37,158.07) -- (353.22,158.54) -- (353.22,228.29) -- (340.13,237.34) -- (333.39,237.11) -- (333.02,169.52) -- cycle ; % for fading 
+ \draw   (346.37,158.07) -- (353.22,158.54) -- (353.22,228.29) -- (340.13,237.34) -- (333.39,237.11) -- (333.02,169.52) -- cycle ; % for border 
+
+%Shape: Polygon [id:ds3825936815954608] 
+\path  [shading=_l4ufehglh,_xn20vts5c] (353.22,158.54) -- (353.22,228.29) -- (340.44,236.96) -- (340.25,169.36) -- cycle ; % for fading 
+ \draw  [line width=1.5]  (353.22,158.54) -- (353.22,228.29) -- (340.44,236.96) -- (340.25,169.36) -- cycle ; % for border 
+
+%Straight Lines [id:da026695745309770813] 
+\draw [shading=_x3stekkgh,_9g4bp4qia][line width=1.5]    (333.39,237.11) -- (340.13,237.34) ;
+%Straight Lines [id:da22689938646314667] 
+\draw [shading=_3bnvgku0d,_x8estxtq3][line width=1.5]    (333.05,169.16) -- (333.36,237.48) ;
+%Straight Lines [id:da8654156252923062] 
+\draw [shading=_s6bqzo9lb,_5xodl4qmw][line width=1.5]    (333.02,169.52) -- (346.37,158.07) ;
+%Straight Lines [id:da6427215220954433] 
+\draw [shading=_hfi0duhjl,_vfu104z9x][line width=1.5]    (346.06,158.27) -- (353.65,158.11) ;
+%Straight Lines [id:da3336314851979134] 
+\draw [shading=_ivncxsqlu,_rbb4nm2jh][line width=1.5]    (333.02,169.52) -- (340.25,169.36) ;
+
+%Shape: Polygon [id:ds37146144654287483] 
+\path  [shading=_f7z5l5m5e,_z4og9edkg] (365.92,137.95) -- (373.63,138.53) -- (373.63,224.91) -- (358.91,236.12) -- (351.34,235.83) -- (350.93,152.13) -- cycle ; % for fading 
+ \draw   (365.92,137.95) -- (373.63,138.53) -- (373.63,224.91) -- (358.91,236.12) -- (351.34,235.83) -- (350.93,152.13) -- cycle ; % for border 
+
+%Shape: Polygon [id:ds7804418309509081] 
+\path  [shading=_c3zhil1mf,_twu8sioaw] (373.63,138.53) -- (373.63,224.91) -- (359.26,235.64) -- (359.05,151.94) -- cycle ; % for fading 
+ \draw  [line width=1.5]  (373.63,138.53) -- (373.63,224.91) -- (359.26,235.64) -- (359.05,151.94) -- cycle ; % for border 
+
+%Straight Lines [id:da8949604189049738] 
+\draw [shading=_c07lbmhvj,_an8lf19al][line width=1.5]    (351.34,235.83) -- (358.91,236.12) ;
+%Straight Lines [id:da4758360426600975] 
+\draw [shading=_vr1tupn5l,_gzqyqy5ss][line width=1.5]    (350.95,151.69) -- (351.3,236.29) ;
+%Straight Lines [id:da44161856570344704] 
+\draw [shading=_qjlj0f7ts,_7uvxc5r60][line width=1.5]    (350.93,152.13) -- (365.92,137.95) ;
+%Straight Lines [id:da926539345984574] 
+\draw [shading=_0oap0159d,_ta6jjt8f4][line width=1.5]    (365.57,138.19) -- (374.11,138) ;
+%Straight Lines [id:da45069458312381483] 
+\draw [shading=_htvifb8yv,_2atypeaua][line width=1.5]    (350.93,152.13) -- (359.05,151.94) ;
+
+%Shape: Polygon [id:ds3874025392577395] 
+\path  [shading=_bjhyku1ms,_0g1f0km1t] (392.26,111.02) -- (401.49,111.75) -- (401.49,222.25) -- (383.85,236.58) -- (374.78,236.21) -- (374.28,129.15) -- cycle ; % for fading 
+ \draw   (392.26,111.02) -- (401.49,111.75) -- (401.49,222.25) -- (383.85,236.58) -- (374.78,236.21) -- (374.28,129.15) -- cycle ; % for border 
+
+%Shape: Polygon [id:ds9174041054287151] 
+\path  [shading=_kis49w114,_p5k8z8zyl] (401.49,111.75) -- (401.49,222.25) -- (384.27,235.97) -- (384.02,128.9) -- cycle ; % for fading 
+ \draw  [line width=1.5]  (401.49,111.75) -- (401.49,222.25) -- (384.27,235.97) -- (384.02,128.9) -- cycle ; % for border 
+
+%Straight Lines [id:da5579584171832236] 
+\draw [shading=_mqcws6nly,_cgesxwgru][line width=1.5]    (374.78,236.21) -- (383.85,236.58) ;
+%Straight Lines [id:da08565604945189886] 
+\draw [shading=_bfpory5ic,_u7ooczuy8][line width=1.5]    (374.31,128.59) -- (374.73,236.8) ;
+%Straight Lines [id:da0028800157575110674] 
+\draw [shading=_ax9a6112y,_sszykhqc4][line width=1.5]    (374.28,129.15) -- (392.26,111.02) ;
+%Straight Lines [id:da8814645666312705] 
+\draw [shading=_em9vgarvp,_agdc35nx9][line width=1.5]    (391.84,111.32) -- (402.07,111.08) ;
+%Straight Lines [id:da0690940253432133] 
+\draw [shading=_zxcpmjx3n,_stop73icn][line width=1.5]    (374.28,129.15) -- (384.02,128.9) ;
+
+%Shape: Brace [id:dp005027420817131811] 
+\draw   (149.41,246.39) .. controls (149.4,251.06) and (151.73,253.39) .. (156.4,253.4) -- (201.71,253.46) .. controls (208.38,253.47) and (211.71,255.8) .. (211.7,260.47) .. controls (211.71,255.8) and (215.04,253.48) .. (221.71,253.49)(218.71,253.48) -- (267.02,253.55) .. controls (271.69,253.56) and (274.02,251.23) .. (274.03,246.56) ;
+%Shape: Brace [id:dp8038225023692078] 
+\draw   (306.6,249.8) .. controls (306.59,254.47) and (308.92,256.8) .. (313.59,256.81) -- (358.9,256.87) .. controls (365.57,256.88) and (368.9,259.21) .. (368.89,263.88) .. controls (368.9,259.21) and (372.23,256.89) .. (378.9,256.9)(375.9,256.89) -- (424.22,256.96) .. controls (428.89,256.97) and (431.22,254.64) .. (431.23,249.97) ;
+%Image [id:dp3943110332274222] 
+\draw (60.59,152.18) node  {\includegraphics[width=55.81pt,height=55.02pt]{chapter6/figures/blue_waterfall.png}};
+%Shape: Axis 2D [id:dp8812812724375343] 
+\draw  (14.86,188.42) -- (106.56,188.42)(24.03,108.19) -- (24.03,197.33) (99.56,183.42) -- (106.56,188.42) -- (99.56,193.42) (19.03,115.19) -- (24.03,108.19) -- (29.03,115.19)  ;
+%Straight Lines [id:da7486191495119159] 
+\draw [line width=1.5]    (103.4,153.49) -- (141.53,153.71) ;
+\draw [shift={(145.53,153.74)}, rotate = 180.33] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (11.61,-5.58) -- (0,0) -- (11.61,5.58) -- cycle    ;
+%Straight Lines [id:da8624290449081943] 
+\draw [line width=1.5]    (441.94,156.9) -- (469.59,156.9) -- (483.61,156.9) ;
+\draw [shift={(487.61,156.9)}, rotate = 180] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (11.61,-5.58) -- (0,0) -- (11.61,5.58) -- cycle    ;
+%Rounded Rect [id:dp27905520625393054] 
+\draw   (406.34,388.2) .. controls (406.34,385.58) and (408.47,383.46) .. (411.08,383.46) -- (425.3,383.46) .. controls (427.92,383.46) and (430.04,385.58) .. (430.04,388.2) -- (430.04,508.12) .. controls (430.04,510.74) and (427.92,512.86) .. (425.3,512.86) -- (411.08,512.86) .. controls (408.47,512.86) and (406.34,510.74) .. (406.34,508.12) -- cycle ;
+%Shape: Circle [id:dp9280936538794891] 
+\path  [shading=_qdc6cwagf,_9l0va40xf] (413.85,393.95) .. controls (413.85,391.45) and (415.87,389.43) .. (418.36,389.43) .. controls (420.86,389.43) and (422.88,391.45) .. (422.88,393.95) .. controls (422.88,396.44) and (420.86,398.46) .. (418.36,398.46) .. controls (415.87,398.46) and (413.85,396.44) .. (413.85,393.95) -- cycle ; % for fading 
+ \draw  [color={rgb, 255:red, 0; green, 0; blue, 0 }  ,draw opacity=1 ] (413.85,393.95) .. controls (413.85,391.45) and (415.87,389.43) .. (418.36,389.43) .. controls (420.86,389.43) and (422.88,391.45) .. (422.88,393.95) .. controls (422.88,396.44) and (420.86,398.46) .. (418.36,398.46) .. controls (415.87,398.46) and (413.85,396.44) .. (413.85,393.95) -- cycle ; % for border 
+
+%Shape: Ellipse [id:dp9378990757598292] 
+\path  [shading=_9pmpv6iu6,_wkah85y02] (413.85,410.65) .. controls (413.85,408.16) and (415.87,406.14) .. (418.36,406.14) .. controls (420.86,406.14) and (422.88,408.16) .. (422.88,410.65) .. controls (422.88,413.15) and (420.86,415.17) .. (418.36,415.17) .. controls (415.87,415.17) and (413.85,413.15) .. (413.85,410.65) -- cycle ; % for fading 
+ \draw  [color={rgb, 255:red, 0; green, 0; blue, 0 }  ,draw opacity=1 ] (413.85,410.65) .. controls (413.85,408.16) and (415.87,406.14) .. (418.36,406.14) .. controls (420.86,406.14) and (422.88,408.16) .. (422.88,410.65) .. controls (422.88,413.15) and (420.86,415.17) .. (418.36,415.17) .. controls (415.87,415.17) and (413.85,413.15) .. (413.85,410.65) -- cycle ; % for border 
+
+%Shape: Circle [id:dp8680308619927222] 
+\path  [shading=_fjn5f1nkq,_5e25wce69] (413.85,427.87) .. controls (413.85,425.38) and (415.87,423.36) .. (418.36,423.36) .. controls (420.86,423.36) and (422.88,425.38) .. (422.88,427.87) .. controls (422.88,430.37) and (420.86,432.39) .. (418.36,432.39) .. controls (415.87,432.39) and (413.85,430.37) .. (413.85,427.87) -- cycle ; % for fading 
+ \draw  [color={rgb, 255:red, 0; green, 0; blue, 0 }  ,draw opacity=1 ] (413.85,427.87) .. controls (413.85,425.38) and (415.87,423.36) .. (418.36,423.36) .. controls (420.86,423.36) and (422.88,425.38) .. (422.88,427.87) .. controls (422.88,430.37) and (420.86,432.39) .. (418.36,432.39) .. controls (415.87,432.39) and (413.85,430.37) .. (413.85,427.87) -- cycle ; % for border 
+
+%Shape: Ellipse [id:dp18406495050389693] 
+\path  [shading=_511vdr5g4,_bt6vksus3] (417.25,445.95) .. controls (417.25,445.24) and (417.83,444.67) .. (418.53,444.67) .. controls (419.24,444.67) and (419.81,445.24) .. (419.81,445.95) .. controls (419.81,446.65) and (419.24,447.23) .. (418.53,447.23) .. controls (417.83,447.23) and (417.25,446.65) .. (417.25,445.95) -- cycle ; % for fading 
+ \draw  [color={rgb, 255:red, 0; green, 0; blue, 0 }  ,draw opacity=1 ] (417.25,445.95) .. controls (417.25,445.24) and (417.83,444.67) .. (418.53,444.67) .. controls (419.24,444.67) and (419.81,445.24) .. (419.81,445.95) .. controls (419.81,446.65) and (419.24,447.23) .. (418.53,447.23) .. controls (417.83,447.23) and (417.25,446.65) .. (417.25,445.95) -- cycle ; % for border 
+
+%Shape: Ellipse [id:dp5898960761625605] 
+\path  [shading=_iw3lgcri7,_likl6tv7c] (417.25,457.03) .. controls (417.25,456.32) and (417.83,455.75) .. (418.53,455.75) .. controls (419.24,455.75) and (419.81,456.32) .. (419.81,457.03) .. controls (419.81,457.73) and (419.24,458.31) .. (418.53,458.31) .. controls (417.83,458.31) and (417.25,457.73) .. (417.25,457.03) -- cycle ; % for fading 
+ \draw  [color={rgb, 255:red, 0; green, 0; blue, 0 }  ,draw opacity=1 ] (417.25,457.03) .. controls (417.25,456.32) and (417.83,455.75) .. (418.53,455.75) .. controls (419.24,455.75) and (419.81,456.32) .. (419.81,457.03) .. controls (419.81,457.73) and (419.24,458.31) .. (418.53,458.31) .. controls (417.83,458.31) and (417.25,457.73) .. (417.25,457.03) -- cycle ; % for border 
+
+%Shape: Ellipse [id:dp018270652832051648] 
+\path  [shading=_pme4mm2qs,_0hc9cd5fs] (417.25,468.11) .. controls (417.25,467.4) and (417.83,466.83) .. (418.53,466.83) .. controls (419.24,466.83) and (419.81,467.4) .. (419.81,468.11) .. controls (419.81,468.82) and (419.24,469.39) .. (418.53,469.39) .. controls (417.83,469.39) and (417.25,468.82) .. (417.25,468.11) -- cycle ; % for fading 
+ \draw  [color={rgb, 255:red, 0; green, 0; blue, 0 }  ,draw opacity=1 ] (417.25,468.11) .. controls (417.25,467.4) and (417.83,466.83) .. (418.53,466.83) .. controls (419.24,466.83) and (419.81,467.4) .. (419.81,468.11) .. controls (419.81,468.82) and (419.24,469.39) .. (418.53,469.39) .. controls (417.83,469.39) and (417.25,468.82) .. (417.25,468.11) -- cycle ; % for border 
+
+%Shape: Ellipse [id:dp8196974163413646] 
+\path  [shading=_s7i88zuzn,_prprd0f0j] (414.19,483.62) .. controls (414.19,481.13) and (416.21,479.11) .. (418.7,479.11) .. controls (421.2,479.11) and (423.22,481.13) .. (423.22,483.62) .. controls (423.22,486.12) and (421.2,488.14) .. (418.7,488.14) .. controls (416.21,488.14) and (414.19,486.12) .. (414.19,483.62) -- cycle ; % for fading 
+ \draw  [color={rgb, 255:red, 0; green, 0; blue, 0 }  ,draw opacity=1 ] (414.19,483.62) .. controls (414.19,481.13) and (416.21,479.11) .. (418.7,479.11) .. controls (421.2,479.11) and (423.22,481.13) .. (423.22,483.62) .. controls (423.22,486.12) and (421.2,488.14) .. (418.7,488.14) .. controls (416.21,488.14) and (414.19,486.12) .. (414.19,483.62) -- cycle ; % for border 
+
+%Shape: Ellipse [id:dp07206975472456001] 
+\path  [shading=_p50vgphts,_kbcxl3vbt] (414.19,500.84) .. controls (414.19,498.35) and (416.21,496.33) .. (418.7,496.33) .. controls (421.2,496.33) and (423.22,498.35) .. (423.22,500.84) .. controls (423.22,503.34) and (421.2,505.36) .. (418.7,505.36) .. controls (416.21,505.36) and (414.19,503.34) .. (414.19,500.84) -- cycle ; % for fading 
+ \draw  [color={rgb, 255:red, 0; green, 0; blue, 0 }  ,draw opacity=1 ] (414.19,500.84) .. controls (414.19,498.35) and (416.21,496.33) .. (418.7,496.33) .. controls (421.2,496.33) and (423.22,498.35) .. (423.22,500.84) .. controls (423.22,503.34) and (421.2,505.36) .. (418.7,505.36) .. controls (416.21,505.36) and (414.19,503.34) .. (414.19,500.84) -- cycle ; % for border 
+
+%Rounded Rect [id:dp5507951344511044] 
+\draw   (280.29,389.05) .. controls (280.29,386.44) and (282.42,384.31) .. (285.03,384.31) -- (299.25,384.31) .. controls (301.87,384.31) and (303.99,386.44) .. (303.99,389.05) -- (303.99,508.98) .. controls (303.99,511.59) and (301.87,513.72) .. (299.25,513.72) -- (285.03,513.72) .. controls (282.42,513.72) and (280.29,511.59) .. (280.29,508.98) -- cycle ;
+%Shape: Ellipse [id:dp25461103267721563] 
+\path  [shading=_1pc8pa2cv,_8e7c8fslj] (287.8,394.8) .. controls (287.8,392.3) and (289.82,390.28) .. (292.31,390.28) .. controls (294.81,390.28) and (296.83,392.3) .. (296.83,394.8) .. controls (296.83,397.29) and (294.81,399.32) .. (292.31,399.32) .. controls (289.82,399.32) and (287.8,397.29) .. (287.8,394.8) -- cycle ; % for fading 
+ \draw  [color={rgb, 255:red, 0; green, 0; blue, 0 }  ,draw opacity=1 ] (287.8,394.8) .. controls (287.8,392.3) and (289.82,390.28) .. (292.31,390.28) .. controls (294.81,390.28) and (296.83,392.3) .. (296.83,394.8) .. controls (296.83,397.29) and (294.81,399.32) .. (292.31,399.32) .. controls (289.82,399.32) and (287.8,397.29) .. (287.8,394.8) -- cycle ; % for border 
+
+%Shape: Ellipse [id:dp1701960058756511] 
+\path  [shading=_54l1zgsig,_cxh7gdu6u] (287.8,411.51) .. controls (287.8,409.01) and (289.82,406.99) .. (292.31,406.99) .. controls (294.81,406.99) and (296.83,409.01) .. (296.83,411.51) .. controls (296.83,414) and (294.81,416.03) .. (292.31,416.03) .. controls (289.82,416.03) and (287.8,414) .. (287.8,411.51) -- cycle ; % for fading 
+ \draw  [color={rgb, 255:red, 0; green, 0; blue, 0 }  ,draw opacity=1 ] (287.8,411.51) .. controls (287.8,409.01) and (289.82,406.99) .. (292.31,406.99) .. controls (294.81,406.99) and (296.83,409.01) .. (296.83,411.51) .. controls (296.83,414) and (294.81,416.03) .. (292.31,416.03) .. controls (289.82,416.03) and (287.8,414) .. (287.8,411.51) -- cycle ; % for border 
+
+%Shape: Ellipse [id:dp8590484969455183] 
+\path  [shading=_p5j9qg1o6,_6gl0rsdmb] (287.8,428.73) .. controls (287.8,426.23) and (289.82,424.21) .. (292.31,424.21) .. controls (294.81,424.21) and (296.83,426.23) .. (296.83,428.73) .. controls (296.83,431.22) and (294.81,433.24) .. (292.31,433.24) .. controls (289.82,433.24) and (287.8,431.22) .. (287.8,428.73) -- cycle ; % for fading 
+ \draw  [color={rgb, 255:red, 0; green, 0; blue, 0 }  ,draw opacity=1 ] (287.8,428.73) .. controls (287.8,426.23) and (289.82,424.21) .. (292.31,424.21) .. controls (294.81,424.21) and (296.83,426.23) .. (296.83,428.73) .. controls (296.83,431.22) and (294.81,433.24) .. (292.31,433.24) .. controls (289.82,433.24) and (287.8,431.22) .. (287.8,428.73) -- cycle ; % for border 
+
+%Shape: Ellipse [id:dp3251786597145483] 
+\path  [shading=_j6wsjg0ad,_gs7htmwiy] (291.21,446.8) .. controls (291.21,446.09) and (291.78,445.52) .. (292.48,445.52) .. controls (293.19,445.52) and (293.76,446.09) .. (293.76,446.8) .. controls (293.76,447.51) and (293.19,448.08) .. (292.48,448.08) .. controls (291.78,448.08) and (291.21,447.51) .. (291.21,446.8) -- cycle ; % for fading 
+ \draw  [color={rgb, 255:red, 0; green, 0; blue, 0 }  ,draw opacity=1 ] (291.21,446.8) .. controls (291.21,446.09) and (291.78,445.52) .. (292.48,445.52) .. controls (293.19,445.52) and (293.76,446.09) .. (293.76,446.8) .. controls (293.76,447.51) and (293.19,448.08) .. (292.48,448.08) .. controls (291.78,448.08) and (291.21,447.51) .. (291.21,446.8) -- cycle ; % for border 
+
+%Shape: Ellipse [id:dp31631229373414094] 
+\path  [shading=_cvn388tp7,_zol8mpep7] (291.21,457.88) .. controls (291.21,457.17) and (291.78,456.6) .. (292.48,456.6) .. controls (293.19,456.6) and (293.76,457.17) .. (293.76,457.88) .. controls (293.76,458.59) and (293.19,459.16) .. (292.48,459.16) .. controls (291.78,459.16) and (291.21,458.59) .. (291.21,457.88) -- cycle ; % for fading 
+ \draw  [color={rgb, 255:red, 0; green, 0; blue, 0 }  ,draw opacity=1 ] (291.21,457.88) .. controls (291.21,457.17) and (291.78,456.6) .. (292.48,456.6) .. controls (293.19,456.6) and (293.76,457.17) .. (293.76,457.88) .. controls (293.76,458.59) and (293.19,459.16) .. (292.48,459.16) .. controls (291.78,459.16) and (291.21,458.59) .. (291.21,457.88) -- cycle ; % for border 
+
+%Shape: Ellipse [id:dp32132688870597736] 
+\path  [shading=_48puxonab,_ahq0sst92] (291.21,468.96) .. controls (291.21,468.26) and (291.78,467.68) .. (292.48,467.68) .. controls (293.19,467.68) and (293.76,468.26) .. (293.76,468.96) .. controls (293.76,469.67) and (293.19,470.24) .. (292.48,470.24) .. controls (291.78,470.24) and (291.21,469.67) .. (291.21,468.96) -- cycle ; % for fading 
+ \draw  [color={rgb, 255:red, 0; green, 0; blue, 0 }  ,draw opacity=1 ] (291.21,468.96) .. controls (291.21,468.26) and (291.78,467.68) .. (292.48,467.68) .. controls (293.19,467.68) and (293.76,468.26) .. (293.76,468.96) .. controls (293.76,469.67) and (293.19,470.24) .. (292.48,470.24) .. controls (291.78,470.24) and (291.21,469.67) .. (291.21,468.96) -- cycle ; % for border 
+
+%Shape: Ellipse [id:dp8002899305501789] 
+\path  [shading=_q2f7le0d7,_jn1srup7b] (288.14,484.48) .. controls (288.14,481.98) and (290.16,479.96) .. (292.65,479.96) .. controls (295.15,479.96) and (297.17,481.98) .. (297.17,484.48) .. controls (297.17,486.97) and (295.15,489) .. (292.65,489) .. controls (290.16,489) and (288.14,486.97) .. (288.14,484.48) -- cycle ; % for fading 
+ \draw  [color={rgb, 255:red, 0; green, 0; blue, 0 }  ,draw opacity=1 ] (288.14,484.48) .. controls (288.14,481.98) and (290.16,479.96) .. (292.65,479.96) .. controls (295.15,479.96) and (297.17,481.98) .. (297.17,484.48) .. controls (297.17,486.97) and (295.15,489) .. (292.65,489) .. controls (290.16,489) and (288.14,486.97) .. (288.14,484.48) -- cycle ; % for border 
+
+%Shape: Ellipse [id:dp7164029173223505] 
+\path  [shading=_2pu690acm,_7yuyngql8] (288.14,501.7) .. controls (288.14,499.2) and (290.16,497.18) .. (292.65,497.18) .. controls (295.15,497.18) and (297.17,499.2) .. (297.17,501.7) .. controls (297.17,504.19) and (295.15,506.21) .. (292.65,506.21) .. controls (290.16,506.21) and (288.14,504.19) .. (288.14,501.7) -- cycle ; % for fading 
+ \draw  [color={rgb, 255:red, 0; green, 0; blue, 0 }  ,draw opacity=1 ] (288.14,501.7) .. controls (288.14,499.2) and (290.16,497.18) .. (292.65,497.18) .. controls (295.15,497.18) and (297.17,499.2) .. (297.17,501.7) .. controls (297.17,504.19) and (295.15,506.21) .. (292.65,506.21) .. controls (290.16,506.21) and (288.14,504.19) .. (288.14,501.7) -- cycle ; % for border 
+
+%Rounded Rect [id:dp9392520108127347] 
+\draw   (285.35,574.58) .. controls (285.35,566.48) and (291.92,559.92) .. (300.01,559.92) -- (413.73,559.92) .. controls (421.83,559.92) and (428.39,566.48) .. (428.39,574.58) -- (428.39,618.57) .. controls (428.39,626.67) and (421.83,633.23) .. (413.73,633.23) -- (300.01,633.23) .. controls (291.92,633.23) and (285.35,626.67) .. (285.35,618.57) -- cycle ;
+%Shape: Circle [id:dp8863059540648706] 
+\path  [shading=_pzkqcqyfm,_i46v0gpsn] (304.62,595.38) .. controls (304.62,594.44) and (305.38,593.68) .. (306.32,593.68) .. controls (307.26,593.68) and (308.03,594.44) .. (308.03,595.38) .. controls (308.03,596.32) and (307.26,597.09) .. (306.32,597.09) .. controls (305.38,597.09) and (304.62,596.32) .. (304.62,595.38) -- cycle ; % for fading 
+ \draw  [color={rgb, 255:red, 0; green, 0; blue, 0 }  ,draw opacity=1 ] (304.62,595.38) .. controls (304.62,594.44) and (305.38,593.68) .. (306.32,593.68) .. controls (307.26,593.68) and (308.03,594.44) .. (308.03,595.38) .. controls (308.03,596.32) and (307.26,597.09) .. (306.32,597.09) .. controls (305.38,597.09) and (304.62,596.32) .. (304.62,595.38) -- cycle ; % for border 
+
+%Shape: Ellipse [id:dp6201660634366116] 
+\path  [shading=_v60uqryhs,_zedi9vors] (313.14,590.61) .. controls (313.14,589.67) and (313.91,588.9) .. (314.85,588.9) .. controls (315.79,588.9) and (316.55,589.67) .. (316.55,590.61) .. controls (316.55,591.55) and (315.79,592.31) .. (314.85,592.31) .. controls (313.91,592.31) and (313.14,591.55) .. (313.14,590.61) -- cycle ; % for fading 
+ \draw  [color={rgb, 255:red, 0; green, 0; blue, 0 }  ,draw opacity=1 ] (313.14,590.61) .. controls (313.14,589.67) and (313.91,588.9) .. (314.85,588.9) .. controls (315.79,588.9) and (316.55,589.67) .. (316.55,590.61) .. controls (316.55,591.55) and (315.79,592.31) .. (314.85,592.31) .. controls (313.91,592.31) and (313.14,591.55) .. (313.14,590.61) -- cycle ; % for border 
+
+%Shape: Ellipse [id:dp36611130317834695] 
+\path  [shading=_fpht25uc7,_0z7g0xqen] (300.87,610.38) .. controls (300.87,609.44) and (301.63,608.68) .. (302.57,608.68) .. controls (303.51,608.68) and (304.28,609.44) .. (304.28,610.38) .. controls (304.28,611.33) and (303.51,612.09) .. (302.57,612.09) .. controls (301.63,612.09) and (300.87,611.33) .. (300.87,610.38) -- cycle ; % for fading 
+ \draw  [color={rgb, 255:red, 0; green, 0; blue, 0 }  ,draw opacity=1 ] (300.87,610.38) .. controls (300.87,609.44) and (301.63,608.68) .. (302.57,608.68) .. controls (303.51,608.68) and (304.28,609.44) .. (304.28,610.38) .. controls (304.28,611.33) and (303.51,612.09) .. (302.57,612.09) .. controls (301.63,612.09) and (300.87,611.33) .. (300.87,610.38) -- cycle ; % for border 
+
+%Shape: Ellipse [id:dp05601014215385658] 
+\path  [shading=_ji3igbj7i,_gbqwdyid0] (293.02,604.93) .. controls (293.02,603.99) and (293.79,603.22) .. (294.73,603.22) .. controls (295.67,603.22) and (296.43,603.99) .. (296.43,604.93) .. controls (296.43,605.87) and (295.67,606.63) .. (294.73,606.63) .. controls (293.79,606.63) and (293.02,605.87) .. (293.02,604.93) -- cycle ; % for fading 
+ \draw  [color={rgb, 255:red, 0; green, 0; blue, 0 }  ,draw opacity=1 ] (293.02,604.93) .. controls (293.02,603.99) and (293.79,603.22) .. (294.73,603.22) .. controls (295.67,603.22) and (296.43,603.99) .. (296.43,604.93) .. controls (296.43,605.87) and (295.67,606.63) .. (294.73,606.63) .. controls (293.79,606.63) and (293.02,605.87) .. (293.02,604.93) -- cycle ; % for border 
+
+%Shape: Ellipse [id:dp28660742692973784] 
+\path  [shading=_6inp5oamb,_khtsdr2lh] (310.75,602.54) .. controls (310.75,601.6) and (311.52,600.84) .. (312.46,600.84) .. controls (313.4,600.84) and (314.16,601.6) .. (314.16,602.54) .. controls (314.16,603.48) and (313.4,604.25) .. (312.46,604.25) .. controls (311.52,604.25) and (310.75,603.48) .. (310.75,602.54) -- cycle ; % for fading 
+ \draw  [color={rgb, 255:red, 0; green, 0; blue, 0 }  ,draw opacity=1 ] (310.75,602.54) .. controls (310.75,601.6) and (311.52,600.84) .. (312.46,600.84) .. controls (313.4,600.84) and (314.16,601.6) .. (314.16,602.54) .. controls (314.16,603.48) and (313.4,604.25) .. (312.46,604.25) .. controls (311.52,604.25) and (310.75,603.48) .. (310.75,602.54) -- cycle ; % for border 
+
+%Shape: Circle [id:dp8749239919046425] 
+\path  [shading=_pt084hi3s,_g1rekqib5] (312.8,616.86) .. controls (312.8,615.92) and (313.56,615.16) .. (314.51,615.16) .. controls (315.45,615.16) and (316.21,615.92) .. (316.21,616.86) .. controls (316.21,617.81) and (315.45,618.57) .. (314.51,618.57) .. controls (313.56,618.57) and (312.8,617.81) .. (312.8,616.86) -- cycle ; % for fading 
+ \draw  [color={rgb, 255:red, 0; green, 0; blue, 0 }  ,draw opacity=1 ] (312.8,616.86) .. controls (312.8,615.92) and (313.56,615.16) .. (314.51,615.16) .. controls (315.45,615.16) and (316.21,615.92) .. (316.21,616.86) .. controls (316.21,617.81) and (315.45,618.57) .. (314.51,618.57) .. controls (313.56,618.57) and (312.8,617.81) .. (312.8,616.86) -- cycle ; % for border 
+
+%Shape: Ellipse [id:dp9339755581352718] 
+\path  [shading=_fjjw54hbh,_mtvi63ydh] (321.67,602.54) .. controls (321.67,601.6) and (322.43,600.84) .. (323.37,600.84) .. controls (324.31,600.84) and (325.08,601.6) .. (325.08,602.54) .. controls (325.08,603.48) and (324.31,604.25) .. (323.37,604.25) .. controls (322.43,604.25) and (321.67,603.48) .. (321.67,602.54) -- cycle ; % for fading 
+ \draw  [color={rgb, 255:red, 0; green, 0; blue, 0 }  ,draw opacity=1 ] (321.67,602.54) .. controls (321.67,601.6) and (322.43,600.84) .. (323.37,600.84) .. controls (324.31,600.84) and (325.08,601.6) .. (325.08,602.54) .. controls (325.08,603.48) and (324.31,604.25) .. (323.37,604.25) .. controls (322.43,604.25) and (321.67,603.48) .. (321.67,602.54) -- cycle ; % for border 
+
+%Shape: Ellipse [id:dp9616046020042517] 
+\path  [shading=_i9uoqj5hm,_kw7dc5fde] (295.07,584.47) .. controls (295.07,583.53) and (295.83,582.77) .. (296.77,582.77) .. controls (297.72,582.77) and (298.48,583.53) .. (298.48,584.47) .. controls (298.48,585.41) and (297.72,586.18) .. (296.77,586.18) .. controls (295.83,586.18) and (295.07,585.41) .. (295.07,584.47) -- cycle ; % for fading 
+ \draw  [color={rgb, 255:red, 0; green, 0; blue, 0 }  ,draw opacity=1 ] (295.07,584.47) .. controls (295.07,583.53) and (295.83,582.77) .. (296.77,582.77) .. controls (297.72,582.77) and (298.48,583.53) .. (298.48,584.47) .. controls (298.48,585.41) and (297.72,586.18) .. (296.77,586.18) .. controls (295.83,586.18) and (295.07,585.41) .. (295.07,584.47) -- cycle ; % for border 
+
+%Shape: Ellipse [id:dp16719771589274057] 
+\path  [shading=_1l3271has,_lc9zud4rn] (305.3,577.31) .. controls (305.3,576.37) and (306.06,575.6) .. (307,575.6) .. controls (307.95,575.6) and (308.71,576.37) .. (308.71,577.31) .. controls (308.71,578.25) and (307.95,579.01) .. (307,579.01) .. controls (306.06,579.01) and (305.3,578.25) .. (305.3,577.31) -- cycle ; % for fading 
+ \draw  [color={rgb, 255:red, 0; green, 0; blue, 0 }  ,draw opacity=1 ] (305.3,577.31) .. controls (305.3,576.37) and (306.06,575.6) .. (307,575.6) .. controls (307.95,575.6) and (308.71,576.37) .. (308.71,577.31) .. controls (308.71,578.25) and (307.95,579.01) .. (307,579.01) .. controls (306.06,579.01) and (305.3,578.25) .. (305.3,577.31) -- cycle ; % for border 
+
+%Shape: Ellipse [id:dp18683921016800964] 
+\path  [shading=_8rwkw0d1t,_h240qlfgt] (403.84,599.13) .. controls (403.84,600.07) and (403.08,600.84) .. (402.14,600.84) .. controls (401.2,600.84) and (400.43,600.07) .. (400.43,599.13) .. controls (400.43,598.19) and (401.2,597.43) .. (402.14,597.43) .. controls (403.08,597.43) and (403.84,598.19) .. (403.84,599.13) -- cycle ; % for fading 
+ \draw  [color={rgb, 255:red, 0; green, 0; blue, 0 }  ,draw opacity=1 ] (403.84,599.13) .. controls (403.84,600.07) and (403.08,600.84) .. (402.14,600.84) .. controls (401.2,600.84) and (400.43,600.07) .. (400.43,599.13) .. controls (400.43,598.19) and (401.2,597.43) .. (402.14,597.43) .. controls (403.08,597.43) and (403.84,598.19) .. (403.84,599.13) -- cycle ; % for border 
+
+%Shape: Ellipse [id:dp5793676259700881] 
+\path  [shading=_zhgme2afq,_8mo7fpy48] (395.32,603.91) .. controls (395.32,604.85) and (394.56,605.61) .. (393.61,605.61) .. controls (392.67,605.61) and (391.91,604.85) .. (391.91,603.91) .. controls (391.91,602.96) and (392.67,602.2) .. (393.61,602.2) .. controls (394.56,602.2) and (395.32,602.96) .. (395.32,603.91) -- cycle ; % for fading 
+ \draw  [color={rgb, 255:red, 0; green, 0; blue, 0 }  ,draw opacity=1 ] (395.32,603.91) .. controls (395.32,604.85) and (394.56,605.61) .. (393.61,605.61) .. controls (392.67,605.61) and (391.91,604.85) .. (391.91,603.91) .. controls (391.91,602.96) and (392.67,602.2) .. (393.61,602.2) .. controls (394.56,602.2) and (395.32,602.96) .. (395.32,603.91) -- cycle ; % for border 
+
+%Shape: Circle [id:dp538367817699909] 
+\path  [shading=_9sz9m8tig,_zjfskechl] (407.59,584.13) .. controls (407.59,585.07) and (406.83,585.83) .. (405.89,585.83) .. controls (404.95,585.83) and (404.18,585.07) .. (404.18,584.13) .. controls (404.18,583.19) and (404.95,582.42) .. (405.89,582.42) .. controls (406.83,582.42) and (407.59,583.19) .. (407.59,584.13) -- cycle ; % for fading 
+ \draw  [color={rgb, 255:red, 0; green, 0; blue, 0 }  ,draw opacity=1 ] (407.59,584.13) .. controls (407.59,585.07) and (406.83,585.83) .. (405.89,585.83) .. controls (404.95,585.83) and (404.18,585.07) .. (404.18,584.13) .. controls (404.18,583.19) and (404.95,582.42) .. (405.89,582.42) .. controls (406.83,582.42) and (407.59,583.19) .. (407.59,584.13) -- cycle ; % for border 
+
+%Shape: Ellipse [id:dp12212874193143575] 
+\path  [shading=_idd7ms6qr,_p3g39yuv5] (415.44,589.58) .. controls (415.44,590.53) and (414.67,591.29) .. (413.73,591.29) .. controls (412.79,591.29) and (412.03,590.53) .. (412.03,589.58) .. controls (412.03,588.64) and (412.79,587.88) .. (413.73,587.88) .. controls (414.67,587.88) and (415.44,588.64) .. (415.44,589.58) -- cycle ; % for fading 
+ \draw  [color={rgb, 255:red, 0; green, 0; blue, 0 }  ,draw opacity=1 ] (415.44,589.58) .. controls (415.44,590.53) and (414.67,591.29) .. (413.73,591.29) .. controls (412.79,591.29) and (412.03,590.53) .. (412.03,589.58) .. controls (412.03,588.64) and (412.79,587.88) .. (413.73,587.88) .. controls (414.67,587.88) and (415.44,588.64) .. (415.44,589.58) -- cycle ; % for border 
+
+%Shape: Ellipse [id:dp17115311053492221] 
+\path  [shading=_9rsirtpnq,_3v39p5fy3] (397.71,591.97) .. controls (397.71,592.91) and (396.94,593.68) .. (396,593.68) .. controls (395.06,593.68) and (394.3,592.91) .. (394.3,591.97) .. controls (394.3,591.03) and (395.06,590.27) .. (396,590.27) .. controls (396.94,590.27) and (397.71,591.03) .. (397.71,591.97) -- cycle ; % for fading 
+ \draw  [color={rgb, 255:red, 0; green, 0; blue, 0 }  ,draw opacity=1 ] (397.71,591.97) .. controls (397.71,592.91) and (396.94,593.68) .. (396,593.68) .. controls (395.06,593.68) and (394.3,592.91) .. (394.3,591.97) .. controls (394.3,591.03) and (395.06,590.27) .. (396,590.27) .. controls (396.94,590.27) and (397.71,591.03) .. (397.71,591.97) -- cycle ; % for border 
+
+%Shape: Ellipse [id:dp19432827953622878] 
+\path  [shading=_lovd3yrby,_dzuix8yr6] (395.66,577.65) .. controls (395.66,578.59) and (394.9,579.36) .. (393.95,579.36) .. controls (393.01,579.36) and (392.25,578.59) .. (392.25,577.65) .. controls (392.25,576.71) and (393.01,575.95) .. (393.95,575.95) .. controls (394.9,575.95) and (395.66,576.71) .. (395.66,577.65) -- cycle ; % for fading 
+ \draw  [color={rgb, 255:red, 0; green, 0; blue, 0 }  ,draw opacity=1 ] (395.66,577.65) .. controls (395.66,578.59) and (394.9,579.36) .. (393.95,579.36) .. controls (393.01,579.36) and (392.25,578.59) .. (392.25,577.65) .. controls (392.25,576.71) and (393.01,575.95) .. (393.95,575.95) .. controls (394.9,575.95) and (395.66,576.71) .. (395.66,577.65) -- cycle ; % for border 
+
+%Shape: Ellipse [id:dp4383311858155031] 
+\path  [shading=_btubw16w8,_3vdze14al] (386.79,591.97) .. controls (386.79,592.91) and (386.03,593.68) .. (385.09,593.68) .. controls (384.15,593.68) and (383.38,592.91) .. (383.38,591.97) .. controls (383.38,591.03) and (384.15,590.27) .. (385.09,590.27) .. controls (386.03,590.27) and (386.79,591.03) .. (386.79,591.97) -- cycle ; % for fading 
+ \draw  [color={rgb, 255:red, 0; green, 0; blue, 0 }  ,draw opacity=1 ] (386.79,591.97) .. controls (386.79,592.91) and (386.03,593.68) .. (385.09,593.68) .. controls (384.15,593.68) and (383.38,592.91) .. (383.38,591.97) .. controls (383.38,591.03) and (384.15,590.27) .. (385.09,590.27) .. controls (386.03,590.27) and (386.79,591.03) .. (386.79,591.97) -- cycle ; % for border 
+
+%Shape: Ellipse [id:dp49355186052569167] 
+\path  [shading=_de13hfn2q,_rdeedwmaw] (413.39,610.04) .. controls (413.39,610.99) and (412.63,611.75) .. (411.69,611.75) .. controls (410.74,611.75) and (409.98,610.99) .. (409.98,610.04) .. controls (409.98,609.1) and (410.74,608.34) .. (411.69,608.34) .. controls (412.63,608.34) and (413.39,609.1) .. (413.39,610.04) -- cycle ; % for fading 
+ \draw  [color={rgb, 255:red, 0; green, 0; blue, 0 }  ,draw opacity=1 ] (413.39,610.04) .. controls (413.39,610.99) and (412.63,611.75) .. (411.69,611.75) .. controls (410.74,611.75) and (409.98,610.99) .. (409.98,610.04) .. controls (409.98,609.1) and (410.74,608.34) .. (411.69,608.34) .. controls (412.63,608.34) and (413.39,609.1) .. (413.39,610.04) -- cycle ; % for border 
+
+%Shape: Ellipse [id:dp5944246754588514] 
+\path  [shading=_tdkdjnu00,_hq6rwnplx] (403.16,617.2) .. controls (403.16,618.15) and (402.4,618.91) .. (401.46,618.91) .. controls (400.51,618.91) and (399.75,618.15) .. (399.75,617.2) .. controls (399.75,616.26) and (400.51,615.5) .. (401.46,615.5) .. controls (402.4,615.5) and (403.16,616.26) .. (403.16,617.2) -- cycle ; % for fading 
+ \draw  [color={rgb, 255:red, 0; green, 0; blue, 0 }  ,draw opacity=1 ] (403.16,617.2) .. controls (403.16,618.15) and (402.4,618.91) .. (401.46,618.91) .. controls (400.51,618.91) and (399.75,618.15) .. (399.75,617.2) .. controls (399.75,616.26) and (400.51,615.5) .. (401.46,615.5) .. controls (402.4,615.5) and (403.16,616.26) .. (403.16,617.2) -- cycle ; % for border 
+
+%Straight Lines [id:da494004355187285] 
+\draw    (331.83,599.83) -- (380.73,600.14) ;
+\draw [shift={(383.72,600.16)}, rotate = 180.36] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (10.72,-5.15) -- (0,0) -- (10.72,5.15) -- (7.12,0) -- cycle    ;
+\draw [shift={(328.83,599.81)}, rotate = 0.36] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (10.72,-5.15) -- (0,0) -- (10.72,5.15) -- (7.12,0) -- cycle    ;
+%Straight Lines [id:da502431080138883] 
+\draw    (355.48,632.89) -- (355.59,670.69) ;
+\draw [shift={(355.59,673.69)}, rotate = 269.84] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (10.72,-5.15) -- (0,0) -- (10.72,5.15) -- (7.12,0) -- cycle    ;
+%Rounded Rect [id:dp020325532681454428] 
+\draw   (305.53,693.93) .. controls (305.53,682.72) and (314.61,673.64) .. (325.81,673.64) -- (386.68,673.64) .. controls (397.89,673.64) and (406.97,682.72) .. (406.97,693.93) -- (406.97,789.91) .. controls (406.97,801.12) and (397.89,810.2) .. (386.68,810.2) -- (325.81,810.2) .. controls (314.61,810.2) and (305.53,801.12) .. (305.53,789.91) -- cycle ;
+%Straight Lines [id:da7921443581863444] 
+\draw    (315.53,751.21) -- (396.8,751.21) ;
+%Shape: Circle [id:dp8888625451492289] 
+\path  [shading=_qj2qelo7i,_655szi8se] (311.01,751.21) .. controls (311.01,748.71) and (313.03,746.69) .. (315.53,746.69) .. controls (318.02,746.69) and (320.05,748.71) .. (320.05,751.21) .. controls (320.05,753.71) and (318.02,755.73) .. (315.53,755.73) .. controls (313.03,755.73) and (311.01,753.71) .. (311.01,751.21) -- cycle ; % for fading 
+ \draw  [color={rgb, 255:red, 0; green, 0; blue, 0 }  ,draw opacity=1 ] (311.01,751.21) .. controls (311.01,748.71) and (313.03,746.69) .. (315.53,746.69) .. controls (318.02,746.69) and (320.05,748.71) .. (320.05,751.21) .. controls (320.05,753.71) and (318.02,755.73) .. (315.53,755.73) .. controls (313.03,755.73) and (311.01,753.71) .. (311.01,751.21) -- cycle ; % for border 
+
+%Shape: Circle [id:dp509934167500101] 
+\path  [shading=_45rsotymr,_l95p9rr66] (392.28,751.21) .. controls (392.28,748.71) and (394.3,746.69) .. (396.8,746.69) .. controls (399.29,746.69) and (401.31,748.71) .. (401.31,751.21) .. controls (401.31,753.71) and (399.29,755.73) .. (396.8,755.73) .. controls (394.3,755.73) and (392.28,753.71) .. (392.28,751.21) -- cycle ; % for fading 
+ \draw  [color={rgb, 255:red, 0; green, 0; blue, 0 }  ,draw opacity=1 ] (392.28,751.21) .. controls (392.28,748.71) and (394.3,746.69) .. (396.8,746.69) .. controls (399.29,746.69) and (401.31,748.71) .. (401.31,751.21) .. controls (401.31,753.71) and (399.29,755.73) .. (396.8,755.73) .. controls (394.3,755.73) and (392.28,753.71) .. (392.28,751.21) -- cycle ; % for border 
+
+%Straight Lines [id:da4074365108200919] 
+\draw    (341.1,746.15) -- (341.1,757.52) ;
+%Curve Lines [id:da5264412502204907] 
+\draw  [dash pattern={on 0.84pt off 2.51pt}]  (188.79,60.38) .. controls (266.54,26.94) and (382.71,45.37) .. (421.93,63.21) ;
+\draw [shift={(424.24,64.3)}, rotate = 206.28] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
+%Curve Lines [id:da9830128096012513] 
+\draw  [dash pattern={on 0.84pt off 2.51pt}]  (226.98,125.9) .. controls (295.5,99.82) and (320.23,112.11) .. (363.91,136.82) ;
+\draw [shift={(365.92,137.95)}, rotate = 209.53] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
+%Curve Lines [id:da2825050939906726] 
+\draw  [dash pattern={on 0.84pt off 2.51pt}]  (263.46,174.3) .. controls (285.07,165.06) and (298.55,161.58) .. (325.31,176.42) ;
+\draw [shift={(327.83,177.85)}, rotate = 210.08] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
+%Shape: Cube [id:dp0402614874430256] 
+\path  [shading=_kk34cd3nu,_b7lch0oko] (278.92,219.08) -- (285.49,212.52) -- (300.8,212.52) -- (300.8,229.48) -- (294.24,236.04) -- (278.92,236.04) -- cycle ; % for fading 
+ \draw   (278.92,219.08) -- (285.49,212.52) -- (300.8,212.52) -- (300.8,229.48) -- (294.24,236.04) -- (278.92,236.04) -- cycle ; % for border 
+ \draw   (300.8,212.52) -- (294.24,219.08) -- (278.92,219.08) ; \draw   (294.24,219.08) -- (294.24,236.04) ;
+%Rounded Rect [id:dp8784811289137505] 
+\draw  [color={rgb, 255:red, 126; green, 211; blue, 33 }  ,draw opacity=1 ] (5,78.46) .. controls (5,49.21) and (28.72,25.49) .. (57.98,25.49) -- (634.27,25.49) .. controls (663.53,25.49) and (687.25,49.21) .. (687.25,78.46) -- (687.25,237.4) .. controls (687.25,266.65) and (663.53,290.37) .. (634.27,290.37) -- (57.98,290.37) .. controls (28.72,290.37) and (5,266.65) .. (5,237.4) -- cycle ;
+%Image [id:dp6016409770773937] 
+\draw (579.84,154.95) node  {\includegraphics[width=139.8pt,height=67.09pt]{chapter6/figures/MSE_filterbanks.png}};
+%Shape: Rectangle [id:dp830333304597145] 
+\path  [shading=_r8jxza7eq,_clalyuldn] (598.88,189.16) -- (665.08,189.16) -- (665.08,197.74) -- (598.88,197.74) -- cycle ; % for fading 
+ \draw   (598.88,189.16) -- (665.08,189.16) -- (665.08,197.74) -- (598.88,197.74) -- cycle ; % for border 
+
+%Rounded Rect [id:dp016128644865031072] 
+\draw  [color={rgb, 255:red, 126; green, 211; blue, 33 }  ,draw opacity=1 ][fill={rgb, 255:red, 184; green, 233; blue, 134 }  ,fill opacity=1 ] (101.28,386.41) .. controls (101.28,379.04) and (107.25,373.06) .. (114.62,373.06) -- (185.4,373.06) .. controls (192.77,373.06) and (198.74,379.04) .. (198.74,386.41) -- (198.74,426.44) .. controls (198.74,433.81) and (192.77,439.78) .. (185.4,439.78) -- (114.62,439.78) .. controls (107.25,439.78) and (101.28,433.81) .. (101.28,426.44) -- cycle ;
+%Straight Lines [id:da23616049587408117] 
+\draw    (199.59,406.46) -- (270.87,406.46)(199.59,409.46) -- (270.87,409.46) ;
+\draw [shift={(278.87,407.96)}, rotate = 180] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+%Curve Lines [id:da39808732635624544] 
+\draw    (419.24,512.86) .. controls (469.32,552.25) and (500.73,595.44) .. (432.15,597.49) ;
+\draw [shift={(430.04,597.54)}, rotate = 359.01] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
+%Curve Lines [id:da19258095177350454] 
+\draw    (291.38,514) .. controls (246.37,536.51) and (200.8,595.21) .. (282.61,594.73) ;
+\draw [shift={(285.12,594.7)}, rotate = 178.85] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (8.93,-4.29) -- (0,0) -- (8.93,4.29) -- cycle    ;
+%Straight Lines [id:da48289375080892083] 
+\draw [line width=1.5]    (529.69,155.34) -- (542.47,155.12) ;
+%Straight Lines [id:da7732798650598147] 
+\draw [line width=1.5]    (578.56,154.09) -- (593.31,154.09) ;
+\draw [shift={(597.31,154.09)}, rotate = 180] [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.08]  [draw opacity=0] (11.61,-5.58) -- (0,0) -- (11.61,5.58) -- cycle    ;
+%Curve Lines [id:da8744034383406343] 
+\draw [line width=0.75]    (287.48,237.5) .. controls (298.98,311.22) and (314.28,340.31) .. (337.86,369.37) .. controls (346.38,379.86) and (355.96,390.35) .. (366.82,402.93) .. controls (378.15,416.06) and (390.88,431.45) .. (401.81,446.74)(284.52,237.96) .. controls (296.15,312.51) and (311.69,341.88) .. (335.53,371.26) .. controls (344.06,381.77) and (353.67,392.29) .. (364.55,404.89) .. controls (375.83,417.96) and (388.5,433.28) .. (399.38,448.51) ;
+\draw [shift={(405,453.73)}, rotate = 234.52] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+
+% Text Node
+\draw (187.88,257.58) node [anchor=north west][inner sep=0.75pt]   [align=left] {\begin{minipage}[lt]{33.09pt}\setlength\topsep{0pt}
+\begin{center}
+{\footnotesize Encoder}
+\end{center}
+
+\end{minipage}};
+% Text Node
+\draw (173.66,274.56) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize] [align=left] {(Downsampling)};
+% Text Node
+\draw (345.07,260.99) node [anchor=north west][inner sep=0.75pt]   [align=left] {\begin{minipage}[lt]{33.55pt}\setlength\topsep{0pt}
+\begin{center}
+{\footnotesize Decoder}
+\end{center}
+
+\end{minipage}};
+% Text Node
+\draw (338.7,276.26) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize] [align=left] {(Upsampling)};
+% Text Node
+\draw (35.26,185.49) node [anchor=north west][inner sep=0.75pt]   [align=left] {{\scriptsize Frequency}};
+% Text Node
+\draw (6.18,163.25) node [anchor=north west][inner sep=0.75pt]  [rotate=-270.03] [align=left] {{\scriptsize Time}};
+% Text Node
+\draw (436.61,441.77) node [anchor=north west][inner sep=0.75pt]   [align=left] {{\scriptsize Embedding}};
+% Text Node
+\draw (446.54,459.61) node [anchor=north west][inner sep=0.75pt]  [font=\tiny]  {$N_{d} =512$};
+% Text Node
+\draw (435.78,435.56) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize] [align=left] {Irish Station};
+% Text Node
+\draw (214.63,441.14) node [anchor=north west][inner sep=0.75pt]   [align=left] {{\scriptsize Embedding}};
+% Text Node
+\draw (224.56,458.99) node [anchor=north west][inner sep=0.75pt]  [font=\tiny]  {$N_{d} =512$};
+% Text Node
+\draw (204.14,435.62) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize] [align=left] {Swedish Station};
+% Text Node
+\draw (350.62,582.33) node [anchor=north west][inner sep=0.75pt]    {$d$};
+% Text Node
+\draw (278.61,545) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize] [align=left] {512-D Latent Space, $\displaystyle ||z_{a} -z_{b} ||_{2}$};
+% Text Node
+\draw (331.87,682.54) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize] [align=left] {Matching};
+% Text Node
+\draw (307.28,693.11) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize] [align=left] {Astronomical Signal?};
+% Text Node
+\draw (314.53,714.3) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$d\ < \tau \rightarrow \text{}$};
+% Text Node
+\draw (314.19,780.22) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$d\ \geq \tau \rightarrow \text{}$};
+% Text Node
+\draw (365.18,715.68) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize,color={rgb, 255:red, 65; green, 117; blue, 5 }  ,opacity=1 ] [align=left] {Match};
+% Text Node
+\draw (356.16,775.63) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize,color={rgb, 255:red, 208; green, 2; blue, 27 }  ,opacity=1 ] [align=left] {No Match};
+% Text Node
+\draw (365.89,787.05) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize,color={rgb, 255:red, 208; green, 2; blue, 27 }  ,opacity=1 ] [align=left] {(RFI)};
+% Text Node
+\draw (31.83,7.18) node [anchor=north west][inner sep=0.75pt]  [color={rgb, 255:red, 126; green, 211; blue, 33 }  ,opacity=1 ] [align=left] {Reconstruction Training on Irish Station };
+% Text Node
+\draw (522.1,94.57) node [anchor=north west][inner sep=0.75pt]  [font=\small,color={rgb, 255:red, 255; green, 160; blue, 0 }  ,opacity=1 ] [align=left] {Weighted MSE Loss};
+% Text Node
+\draw (590.88,202.57) node [anchor=north west][inner sep=0.75pt]  [font=\tiny] [align=left] {Low};
+% Text Node
+\draw (655.59,202.85) node [anchor=north west][inner sep=0.75pt]  [font=\tiny] [align=left] {High};
+% Text Node
+\draw (605.84,181.25) node [anchor=north west][inner sep=0.75pt]  [font=\tiny] [align=left] {Weighted MSE};
+% Text Node
+\draw (98.57,376.89) node [anchor=north west][inner sep=0.75pt]  [color={rgb, 255:red, 65; green, 117; blue, 5 }  ,opacity=1 ] [align=left] {\begin{minipage}[lt]{73.62pt}\setlength\topsep{0pt}
+Reconstruction 
+\begin{center}
+Training \\(Sweden)
+\end{center}
+
+\end{minipage}};
+
+
+\end{tikzpicture}
+
+
+    \caption{Overview of the U-net architecture}
+    \label{fig:Unet_arch}
+\end{figure}
+
+
+Unlike traditional pipelines that rely on precise geometric alignment or strict feature engineering, this approach utilizes a Siamese U-Net architecture to learn a generalized metric of signal similarity. A Siamese network is a neural network that is designed to determine whether two inputs represent the same underlying object or event, in this case it's a narrowband signal. It does this by passing each input through two identical networks that produce feature representations in a shared latent space, where similar inputs are placed close together and dissimilar inputs are placed farther apart. In the context of this work, the network compares dynamic spectra from the Irish and Swedish LOFAR stations to determine whether candidate signals are consistent with a common astrophysical origin or are likely to be local RFI. If they are common they will be closer in the latent space and further away if uncommon. 
+
+A common analogy often used is that Siamese nets are good at telling if two different fingerprints are from the same hand but not who that hand belongs to, so it can identify if the signal originates from the same place, but not its origin. 
+
+The model ingests filterbank slices with the same starting time sample from both stations. A U-Net backbone (see. \cref{fig:Unet_arch}) is then used. A U-net encoder consists of two parts an encoder and decoder. The encoder progressively downsamples the given input while learning about various features (i.e. narrow lines from a narrowband signal) with each progressive layer the complexity of the features learned increases. The decoder then upsamples these learned features back to their original resolution. This is done with the aid of skip connections which are feature maps that describe the input at that particular downsampled resolution. 
+The benefit of using the U-net architecture is that it preserves the high resolution time and frequency structure of the signal during feature extraction.
+
+These representative features are then compressed into a numerical representation and stored in vectors of a fixed-length (in this case 512), this process is known as embedding. The embedded vectors are put into a shared 512-dimensional latent space. A contrastive loss function is used to train the network by evaluating how similar or dissimilar pairs of input signals should be. During training, pairs of observations known to originate from the same astrophysical signal are encouraged to produce similar embeddings, while unrelated signals, such as local RFI, are encouraged to produce distinct embeddings. This process organises the latent space such that genuine coincident signals lie close together in the latent space, whereas unrelated signals are separated. The margin (distance) threshold is expressed as $\tau$ and matches are filtered as, 
+
+\begin{equation}
+    \begin{cases}
+d < \tau, & \text{if the pair is a match},\\[6pt]
+d \geq \tau, & \text{if the pair is not a match (RFI)}.
+\end{cases}
+\end{equation}
+
+This method learns to recognise matching signals even when they differ slightly in morphology because of scintillation or changes in local noise between the station, oppose to the alternative sample by sample cross correlation. Preliminary testing with synthetic narrowband and pulsed signals injected into real LOFAR observations shows that the network can reliably distinguish genuine coincident signals from unrelated RFI for S/N ratios between 1.5 and 10 which makes it a very promising tool for the future as shown in \cref{fig:unetHistogram.pdf}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.9\linewidth]{chapter6/figures/unetHistogram.pdf}
+    \caption{Distribution of Euclidean distances between latent-space embeddings for matched astrophysical signals and mismatched local RFI. The Siamese U-Net learns to separate the two classes in the latent space, with matched signals clustering at low distances and mismatched signals at larger distances. The red dashed line indicates the contrastive-loss margin.}
+    \label{fig:unetHistogram.pdf}
+\end{figure}
+
+% This method moves beyond simple pixel-wise cross-correlation; the network learns to identify signals as ``matching'' even when they exhibit minor morphological differences due to scintillation or local noise conditions. Preliminary validation, performed using synthetic narrowband and pulsed signals injected into real LOFAR observational backgrounds, demonstrates a distinct bimodal separation in the latent space for signals with Signal-to-Noise Ratios (SNR) ranging from 1.5 to 10, offering a robust framework for automated RFI rejection in future survey passes.
+
 
 
 %------------------------
@@ -138,42 +1499,97 @@ This method moves beyond simple pixel-wise cross-correlation; it learns to ident
 
 \subsection{Dispersed Signal Detection}
 
-\subsection{Pulsar Detection}
+% \subsection{Pulsar Detection}
 
-This survey also searched for pulsars through acceleration searching and single burst searches. The data is de-dispersion and RFI-excised as described in §\ref{sec:RFI} and §\ref{sec:DDisperse}. Then data is then analysed for single burst emission using \textsc{transientX} \citep{men_transientx_2024} and \textsc{singburst.py} \citep{ransom_presto_2011}. Here, the minimum threshold considered is those that are above the noise floor, which is 6.4 for an 80-minute observation with the high time resolution filterbank. Candidate lists between both stations in the case of simultaneous observations are then compared for matched candidates. 
+This survey also searched for pulsars through acceleration searching and single burst searches see \cref{chap:redback}. The data is de-dispersion and RFI-excised as described in §\ref{sec:RFI} and §\ref{sec:DDisperse}. Then data is then analysed for single burst emission using \textsc{transientX} \citep{men_transientx_2024} and \textsc{singburst.py} \citep{ransom_presto_2011}. Here, the minimum threshold considered is those that are above the noise floor, which is 7.4 for an 80-minute observation with the high time resolution filterbank. Candidate lists between both stations in the case of simultaneous observations are then compared for matched candidates. Blind periodicity searches are also carried out as well going from twice the time resolution of the data (1.31~ms) to meet the Nyquist criterion. Periods are also searched up to 20~minutes. Its also worth noting that the computation increases with the size of period with smaller periods being significantly more computationally intensive and reducing in required resources as the period increases such that, 
 
-\subsubsection{Known Pulsar Retrieval}
+\begin{equation}
+    \frac{dN_{\text{trial}}}{dP} \propto \frac{T_{\text{obs}}}{P^2}
+\end{equation}
+
+where $dN_{\rm trial}$ is the number of independent trial periods within the interval $dP$, $P$ is the trial period, and $T_{\rm obs}$ is the total observation duration. For more in depth discussion about the performance of FFT and FFA pulsar searching algorithms please see \cite{cameron_investigation_2017}.
+
+In addition to this preliminary work has been ongoing to test the limits of what pulsars can be found in the HBA data. \textsc{simpulse}\footnote{\url{https://github.com/OwenJohnsons/simpulse}} has been developed based off of \cite{qiu_systematic_2023} to inject both single and periodic pulses into filterbank data to test both search algorithms and the limits of how feint, fast or broad a radio transient can be to be detectable with LOFAR. This methodology also has other benefits that could be used in other studies, such as extending the work in \cref{chap:crabpulsar} by further modelling and improving both scattering and DM retrievals. 
 
 \subsection{Stellar Flare Detection}
+Another transient of interest is stellar flare stars which have been known to produce emission in LOFAR's HBA band \citep[i.e.][]{CR_Draconis_LOFAR}. As discussed in \cref{sec:RadioFlareStars} radio flare stars interesting objects in their own right with many open questions. As part of the observation campaign two systems were monitored for potential flares along with each of the LOFTS pointings. 
 
+To search for these systems a separate pipeline was built to be integrated with LOFTS initial pipeline called \textsc{stellarwaves}\footnote{\url{https://github.com/OwenJohnsons/stellar-waves}}, this pipeline gives users the means to clean, downsample and plot data across various polarisations and timescales through a simple python command line interface. Initial efforts to introduce match filtering were implemented but soon completely omitted as flare stars exhibit varied morphology and due to both the broadband nature of the emission and the timescale of the bursts manually observing plots is time efficient. 
+
+To first obtain a baseline of how well a single international station could detect a flare star over 12 hours of data was taken of CR Draconis. CR Draconis is a known radio loud flare star binary, that's exhibits strong magnetic activity and low frequency ECM emission \citep{CR_Draconis_LOFAR}. The system has previously detected at ~168-176~MHz with the LOFAR core and has been noted as having a peak flux of up to 200~MJy with an estimated flare rate of 2.3 with 90\% of those flares detected in radio to $3\sigma$. However, no flaring emission was detected to reasonable certainty. 
+
+Similarly, 6 hours of observations of TVLM 513-46, which is an ultracool dwarf near a stellar brown dwarf 10.7~pc away \citep{hallinan_rotational_2006}. Also noted for the ECM emission and strong magnetic fields, it is often considered a benchmark for studying stellar magnetospheres. At the time of writing there has been no reported low frequency emission of TVLM 513-46 \citep{jaeger_325_2011}. As with CR Draconis there was no notable emission detected above the noise floor in each of the observation runs with both stations. 
 
 \subsection{Sensitivity Benchmarking}
 
-When considering the minimum detectable flux density that an international station can produce, an adapted form of the radiometer equation is used from \cite{pulsar_handbook}. The minimum flux density $(S_{\rm min,chan}, \rm in \ Jy)$ is given as: 
+Flux density is calculated in the same way which has been described throughout this thesis, but opting for the use of the radiometer equation that is described in \cref{chap:crabpulsar} due to its inclusion of the Mueller matrix. Just as a reminder to the reader the radiometer and quadrature summation can be expressed as, 
 
 \begin{equation}
-\begin{split}
-S_{\min,\rm{chan}}(f, l, b) &= \frac{\left[ T_{\text{sky}}(l,b) + T_{\text{int}}(f) \right] \cdot 2 k_B}{A_{\text{eff}}(f)} \cdot \beta \\ & \times \frac{\text{S/N}_{\min}}{\sqrt{n_p\, t_{\text{obs}}\, B_{\text{channel}}}} \cdot \sqrt{\frac{W}{P - W}}
- % \label{eq:radiometer_equation}
-\end{split}
+\boxed{
+S(f, l, b) = \left[ \sum_f \left(\frac{\left[ T_{\text{sky}}(l,b) + T_{\text{int}}(f) \right] \cdot 2 k_B}{A_{\text{eff}}(f) \cdot m_{\text{II}} (f, l,b)} \cdot \beta \times \frac{\text{S/N}_{\min} }{\sqrt{n_p\, \tau_{\text{burst}}\, B_{\text{channel}}}} \right)^{-1}\right]^{-1/2}}
 \end{equation}
 
-Here, $f$ is the observing frequency, $T_{\text{sky}}(l, b)$ is the sky temperature at Galactic coordinates $(l, b)$, and $T_{\text{int}}(f)$ is the internal system temperature. $A_{\text{eff}}(f)$ is the effective collecting area of the telescope, $k_B$ is the Boltzmann constant, and $\beta$ is a factor accounting for system losses such as digitisation. $n_p$ is the number of summed polarisations, and $B_{\text{channel}}$ is the width of an individual frequency channel. $P$ is the pulsar period and $W$ is the effective-observed pulse width. Each individual channel $S_{\text{min}}$ is calculated with a boolean mask applied to account for RFI contamination, which is taken to be averages found in the band. The collective $S_\text{min,chan}$ for each observation is calculated using quadrature method as shown below:  
+Using the above expression contours for pulsewidth across the HBA for a single international station can be generated (shown in \cref{LOFTS_HBA_graphs}) demonstrating the level of fluxes that the survey is sensitive to. 
 
-\begin{equation}
-    S_{\min}(f, l, b) = \left[ \sum_f \frac{1}{S_{\min}(f, l, b)^2} \right]^{-1/2}
-    \label{eq:quadrature}
-\end{equation}
+\section{Results}\label{sec:results}
 
-\section{RESULTS}\label{sec:results}
-Results go here ...
+At the time of writing approximately 30\% of the data has been searched for technosignatures and about 15\% has been searched for transients.No confirmed technosignatures or previously unknown astrophysical transients have been identified within the analysed observations. The effectiveness of the pipeline as outlined in \cref{sec:SETIchapter} still remains robust as no interesting in removing RFI candidates. 
+
+\begin{table}[h]
+\centering
+
+\begin{tabular}{l|c|c}
+\toprule
+\textbf{Parameter} & \textbf{Analysed} & \textbf{Total} \\
+\midrule
+Targets $G$ magnitude             & 3,151,689       & $\cdots$ \\
+Mean distance (pc)                              & 1281.202        & $\cdots$ \\
+Maximum distance (pc)                           & 27191.936       & $\cdots$ \\
+Maximum distance (ly)                           & 88688.131       & $\cdots$ \\
+Minimum distance (ly)                           & 4178.718        & $\cdots$ \\
+Mean distance $+1\sigma$ (ly)                   & 6973.780        & $\cdots$ \\
+Maximum $G$ magnitude                           & 21.028          & $\cdots$ \\
+Minimum $G$ magnitude                           & 1.943           & $\cdots$ \\
+Mean $G$ magnitude                              & 18.102          & $\cdots$ \\
+\midrule
+O-type                                     & 0.003\%         & $\cdots$ \\
+B-type                                     & 0.375\%         & $\cdots$ \\
+A-type                                     & 5.133\%         & $\cdots$ \\
+F-type                                     & 9.975\%         & $\cdots$ \\
+G-type                                     & 27.424\%        & $\cdots$ \\
+K-type                                     & 55.321\%        & $\cdots$ \\
+M-type                                     & 1.768\%         & $\cdots$ \\
+\bottomrule
+\end{tabular}
+\caption{Summary statistics for the \textit{Gaia} present in the LOFTS pointings}
+\label{tab:LOFTS_stats}
+\end{table}
+
+% Mean Distance: 1281.202 pc
+% Max Distance: 27191.936 pc
+% Max Distance: 88688.131 ly
+% Min Distance: 4178.718 ly
+% Mean Distance + 1 std: 6973.779529879999 ly
+% Number of Gaia targets that have non-zero Teff values: 3151689
+% Max Magnitude: 21.028477
+% Min Magnitude: 1.9425238
+% Mean Magnitude: 18.102028154143312
+% Number of Gaia targets that have non-zero Gmag values: 3151689
+% Sum of percentages: 1.0
+% Percentage of O type stars: 0.003%
+% Percentage of B type stars: 0.375%
+% Percentage of A type stars: 5.133%
+% Percentage of F type stars: 9.975%
+% Percentage of G type stars: 27.424%
+% Percentage of K type stars: 55.321%
+% Percentage of M type stars: 1.768%
 
 
-\begin{figure*}
-    \centering
-    \includegraphics[width=0.9\linewidth]{chapter6/figures/technosignature/SETI-EIRP-limits-Comp.pdf}
-    \caption{Comparison of our study (highlighted in red) to prior surveys. The plot presents the transmitter rate vs. EIRP, with the gray line indicating the transmitter rate as a function of EIRP. A solid vertical grey line illustrates the energy surplus of a Kardashev Type-I civilisation. Additionally, a dotted–dashed gray line depicts the EIRP of the Arecibo planetary radar. The gray thick line shows the slope of the transmitter rate as a function of their EIRP power. Distance used for EIRP  calculation is $d = x \pm y \ \rm ly$}.
-    \label{fig:EIRP-comparison}
-\end{figure*}
+% \begin{figure*}
+%     \centering
+%     \includegraphics[width=0.9\linewidth]{chapter6/figures/technosignature/SETI-EIRP-limits-Comp.pdf}
+%     \caption{Comparison of our study (highlighted in red) to prior surveys. The plot presents the transmitter rate vs. EIRP, with the gray line indicating the transmitter rate as a function of EIRP. A solid vertical grey line illustrates the energy surplus of a Kardashev Type-I civilisation. Additionally, a dotted–dashed gray line depicts the EIRP of the Arecibo planetary radar. The gray thick line shows the slope of the transmitter rate as a function of their EIRP power. Distance used for EIRP  calculation is $d = x \pm y \ \rm ly$}.
+%     \label{fig:EIRP-comparison}
+% \end{figure*}
 
 \input{chapter6/chapter6_nenufar}

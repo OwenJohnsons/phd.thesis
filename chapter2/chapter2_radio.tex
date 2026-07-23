@@ -289,7 +289,7 @@ To conserve all the information from the voltages the Nyquist crieterion must be
 In addition to the sample rate the ADC also needs to quantize the amplitude of the incoming signal. Which each amplitude measured by a number of bits, such that the measured amplitude levels are $N_{\text{levels}} = 2^{n_\text{bits}}$. An important point to consider is that the difference between the true analogue voltage and the nearest digital level introduces quantisation noise. Increasing the number of bits reduces this noise and increases the dynamic range of the digitised signal, with a theoretical limit of $\text{DR} \simeq 6.02 \ n_{\text{nbits}}$. In the context of a radio telescope, the received signals are typically noise dominated and approximately Gaussian distributed. Consequently, relatively low bit depths can be used without a substantial loss in sensitivity. For example, 2-bit quantisation retains approximately 88\% of the sensitivity of an ideal unquantised system, while 4-bit quantisation retains approximately 99\%. The digitised voltage stream from the ADC forms the input to the rest of the digital signal-processing pipeline. 
 
 
-\subsubsection{Polyphase Filterbanks}
+\subsubsection{Polyphase Filterbanks} \label{sec:polyphase_theory}
 
 Following the digitization the discrete\footnote{Here square brackets delineate discrete time signals, and round brackets are continuous. } sampled voltage stream $x[n]$ is channelized into a set of frequency bins, the most basic form of this is the Discrete Fourier Transform (DFT), 
 
@@ -1013,7 +1013,7 @@ The Breakthrough Listen backend is just one compute node and used specifically f
 
 For an in-depth review of the development of I-LOFAR's backend see \citet[chap. 3,][]{David_thesis_2023} and \cite{RealTa_paper}. 
 
-\subsection{Upgrading to LOFAR 2.0}
+\subsection{Upgrading to LOFAR 2.0} \label{sec:upgradetoLOFAR2}
 
 In September of 2024 LOFAR paused observing with the whole array to start the rollout of a new upgrade. Dubbed LOFAR 2.0 the upgrade main goals are to increase the observing capability of each station and improve the central processing for the array as a whole.
 

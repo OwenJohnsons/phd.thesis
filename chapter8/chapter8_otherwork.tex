@@ -7,8 +7,33 @@ This chapter presents additional work undertaken by the author across a range of
 
 \section{I-LOFAR Operations}
 
-A significant portion of the work over the last four years went to the maintenance of the I-LOFAR station in Birr, Co. Offaly. 
+A significant portion of the research effort over the last four years was dedicated to maintenance and operation of the I-LOFAR station in Birr, Co. Offaly. This included replacing antennas, backend maintenance, software development and acting as a Chief Observer (CO). The work presented in this section doesn't fully reflect the invested time and effort as it wouldn't be beneficial to the reader to learn about various hard-drive replacements, observing scheduling, fixing boot drives and so on. So here some highlights of these efforts are mentioned. 
 
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.9\linewidth]{chapter8/figs/I-LOFAR_drone.JPG}
+    \caption{Aerial view  of I-LOFAR.}
+    \label{fig:I-LOFAR_drone}
+\end{figure}
+
+As mentioned in both \cref{sec:LOFARchap2} and \cref{chap:LOFTS} I-LOFAR has been in local mode full-time for a significant portion of the last 4 years and part-time before that. Observing on I-LOFAR is co-ordinated within the consortium at with the directors' discretion. The vast majority observations on the I-LOFAR station are of the Sun, followed by observations contributing to pulsar timing (discussed below), transient searching and technosignature surveys, as discussed. These observations are scheduled and performed by the CO which is a weekly rota made up of primarily of PhD students and Postdoctoral researchers in the consortium. The CO ensures that station is performing optimally. This is done by that voltage packets are being recorded on disk from the LCU to the REALTA backend (\cref{sec:LOFARchap2}), checking spectra for irregularities, then ensuring that there is enough disk space to carry out the observing run successful. Once the run is complete the CO then either checks that the voltages have automatically started generating filterbanks or manual started based on the science use case. For a detail on the development of I-LOFAR recording capabilities and software in general see chapter 3 of \cite{mckennathesis2023}. 
+
+In addition to CO duties a tool was developed to assist in informing on the observation and their feasibility for both current and prospective observers. The visibility tool\footnote{\url{https://github.com/OwenJohnsons/pulsar-scripts/blob/main/Useful-Scripts/altaz-single-target.py}} provides a malleable CLI python script. The input can be as simple as providing a target name and references simbad and the ATNF catalogue to find source co-ordinates or manually providing them. Other parameters such as observation length and sensitivity estimation can also be called. In the case where the sensitivity estimation is referenced the radiometer equation (eq. \ref{eq:radiometer_equation}) is used. The user is prompted whether to calculate sensitivity using a burst or period mode for a given observation time. This outputs the plot shown in  \cref{fig:altaz2panel}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.9\linewidth]{chapter8/figs/altaz_double_panel.png}
+    \caption[Example of the I-LOFAR observation planner.]{The left  two panels shows altitude and azimuth of the specified target (black), the Sun (yellow) and Moon (grey). The blue line indicates the peak elevation of the target during the queried window and the dotted green lines show the times before and after the peak that the target passes $30^\circ$ which is the limit of recommended observation at Birr. The middle panel shows an azimuthal projection with the tracks of the target and note-worthy objects for the specified duration. The right panel shows frequency as function of sensitivity for the object interest.}
+    \label{fig:altaz2panel}
+\end{figure}
+
+During the course of this PhD, the age of the existing REALTA backend became increasingly apparent. The system, which has been in operation for since 2017, relies on ageing storage hardware, with hard drives beginning to fail more frequently and posing a growing risk to data integrity and operational reliability. To mitigate these issues, a suite of automation scripts was developed to streamline voltage processing, remove duplicate files, and automate data movement between recording and compute nodes. These tools significantly reduced manual intervention while optimising the use of the available storage resources. In parallel, the ARCHIE long-term archive is being established at the Technological University of the Shannon (TUS), providing an LTO-10 tape-based storage solution for the long-term preservation of I-LOFAR data.
+
+Alongside these developments, commissioning of a new backend to replace REALTA has been underway over the last year. This new system will take over as the primary backend for the near decade old REALTA. The new system will see substantial upgrades in both storage and compute capacity along with additional server racks to allow for easy scalability over time. The author has been heavily involved in the design, deployment, and early commissioning of this backend, contributing to its hardware architecture, software integration, and initial validation.
+
+I-LOFAR will hopefully continue to produce world-class results (some of which is outlined below) for many years to come.
+
+\newpage
 \input{chapter8/chapter8_grex}
 \input{chapter8/chapter8_GRB}
 \input{chapter8/chapter8_mtp}

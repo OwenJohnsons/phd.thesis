@@ -1,5 +1,5 @@
 \newpage
-\chapter{Other Work}
+\chapter{Other Work} \label{chap:otherwork}
 \epigraph{\small\itshape “We the willing, led by the unknowing, are doing the impossible for the ungrateful. We have done so much with so little, for so long, we are now qualified to do anything, with nothing.” \raggedleft\par--- \textup{Mother Teresa}}
 
 This chapter presents additional work undertaken by the author across a range of topics, including contributions to co-authored and ongoing projects, as well as smaller studies that were not of sufficient scope to warrant a standalone publication or dedicated chapter. 
@@ -35,6 +35,125 @@ I-LOFAR will hopefully continue to produce world-class results (some of which is
 
 \newpage
 \input{chapter8/chapter8_grex}
+
+\newpage 
 \input{chapter8/chapter8_GRB}
+
+\newpage
 \input{chapter8/chapter8_mtp}
+
+\newpage
+\section{Long-term timing results of ecliptic pulsars observed with I-LOFAR}
+
+The benefits of pulsar timing have been highlighted throughout various parts of this thesis as an optimal way to determine the DM of a pulsar and in the case of binary systems determine many of the orbital parameters. It has also been highlighted the significance that pulsar timing has on the efforts to better understand gravitational waves as highlighted in \cref{sec:pulsaruses}. 
+
+To that end \cite{susarla_long-term_2025} presents a comprehensive dataset of times of arrivals (TOAs), timing solutions and DM values using I-LOFAR for 7 pulsars that are near the ecliptic $(<20^{\circ})$. The data presented in this work in the culmination 3 years of regular observations. With the main motivations to determine the DM to a high precision (as shown in \cref{chap:crabpulsar}) and add timing solutions to the IPTA dataset. 
+
+The pulsars were chosen as they were exceptionally stable and used to study the effects that the solar wind had on the precision of pulsar timing as shown in \cite{susarla_exploring_2024}. They key properties of the pulsars can be seen in \cref{tab:ecliptic_pulsars}. 
+
+\begin{table}[h]
+\centering
+\begin{tabular}{lccccccc}
+\toprule
+\textbf{Pulsar} &
+\textbf{Time Span} &
+\textbf{$t_{\rm span}$} &
+\textbf{Integration} &
+\textbf{Period} &
+\textbf{Ecl. Lat.} &
+\textbf{DM} &
+\textbf{Median} \\
+&
+\textbf{(MJD)} &
+\textbf{(yr)} &
+\textbf{Time (min)} &
+\textbf{(ms)} &
+\textbf{($^\circ$)} &
+\textbf{(pc cm$^{-3}$)} &
+\textbf{S/N} \\
+\midrule
+J0034$-$0534 & 59892--60431 & 2.0 & 50 & 1.8    & $-8.53$ & 13.7650 & 72.2  \\
+J0826+2637   & 59695--60411 & 2.5 & 15 & 530.6  & 7.24    & 19.5041 & 522.5 \\
+J1022+1001   & 59803--60542 & 2.0 & 50 & 16.5   & $-0.06$ & 10.2532 & 40.6  \\
+J1136+1551   & 59695--60430 & 2.5 & 15 & 1187.9 & 12.17   & 4.8482  & 917.7 \\
+J1300+1240   & 59695--60431 & 2.5 & 60 & 6.2    & 17.63   & 10.1588 & 39.5  \\
+J1645$-$0317 & 59696--60431 & 2.5 & 20 & 387.6  & 18.89   & 35.7416 & 612.0 \\
+J2145$-$0750 & 59696--60530 & 3.0 & 45 & 16.1   & 5.31    & 9.0027  & 119.8 \\
+\bottomrule
+\end{tabular}
+\caption{Properties of the observed ecliptic pulsars presented in \cite{susarla_long-term_2025}.}
+\label{tab:ecliptic_pulsars}
+\end{table}
+
+Each of the pulsars DM was measured to a precision of $10^{-5}$\dm, each pulsar exhibited clear variations in their DM due to contributions from the solar wind which can contributed to DM on the order of $10^{-4}$\dm. This paper presents as a prime example of how low-frequency pulsar timing is important complimentary work to its high-frequency counterpart. 
+
+This study also provided some insight into the emission mechanics of the observed sample. Five of the pulsars followed the conventional pulse evolution as a function of frequency exhibiting pulse broadening as lower frequencies were observed. 
+
+However, J0826+2637 is characterised by its weak and sporadic emission. The pulse exhibits a state where radio emission ceases for one or more rotations and then `turns on' again, When it is emitting it is noted as being in a bright `B' mode and then `Q' for a quiet mode. This phenomemon is known as pulsar nulling and observed across many pulsars \citep{keane_radio_2013}, an example of nulling from J0826 is shown in \cref{fig:0826_nulling}. The reason for nulling is thought to be variation in the pulsars magnetosphere going to and from different stable states. These transitions may come about when pair production, current flow or plasma density that causes radio emission change geometry or cease emission all together before reverting to an active state \citep{jaroenjittichai_geometry_2025
+}. 
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\linewidth]{chapter8/figs/0826_nulling.png}
+    \caption[Observation of PSR J0826+2637]{Observation of PSR J0826+2637 on April 18, 2023. Left column: emission as a function of time in 10-second sub-integrations. The transition in emission modes is evident. Middle column: pulse profile during the B mode (top) and Q mode (bottom). Right column: ‘Joy-Division’ plot, displaying rotation period numbers 650 to 800. The transition from the Q mode to the B mode is marked by a sudden increase in pulse brightness. \citep{susarla_long-term_2025}}
+    \label{fig:0826_nulling}
+\end{figure}
+
+Another interesting attribute was observed in J1645-0317 which exhibited evidence DM chromaticity. This means that the pulsars timing behaviour is different at each frequency instead of being consistent across the entire band. This is an effect that has also been reported in other pulsars \citep[i.e.][]{donner_first_2019}. These variations arise from turbulence in the ISM through the presence of microstructure which changes the frequency dependant path length (prism within a prism analogy). To further study the DM chromaticity of this object further observations can be carried out with high fractional bandwidth $(\Delta f/f)$. 
+
+The work presented in \cite{susarla_long-term_2025} outlines the role that even smaller low frequency stations can play in the understanding of pulsar timing and by consequence the detection of the low frequency gravitational wave background. 
+
+\newpage
+\section{RRAT-like behaviour of PSR B0656+14 observed with I-LOFAR}
+
+As was highlighted in \cref{chap:crabpulsar} there is a wealth of information that can be attained by just studying single pulses from pulsars whether it be to probe emission mechanics or the space in between the source and the observer. In work outlined in \cite{susarla_rrat-like_2025} showcases another such case. B0656+14 is known for its sporadic and intense pulses as discussed extensively throughout this thesis I-LOFAR is a great tool for probing DM. 
+
+B0656+14 was observed 21.5 hours over 21 epochs in 2021 and 2022. Along with one 5 hour continuous observation in March 2025. Both of which were with I-LOFAR's HBAs. 
+
+In the 21 epochs only 103 pulses (shown in fig \ref{fig:B0656_jd}) were found demonstrating that B0656 is a highly variable, RRAT like emitter at low frequency. It was found that the emission was memory-less, with the detected pulse times showing random Poisson-like times between bursts (waiting times) oppose to regular or quasi-period burst patters seen in other sources (i.e. \nref). 
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\linewidth]{chapter8/figs/jdplot.png}
+    \caption{`Joy division' style plot of all the single pulses from B0656+14 during observations taken in 2021-22 \citep{susarla_rrat-like_2025}.}
+    \label{fig:B0656_jd}
+\end{figure}
+
+It was also noted that the amplitudes varied between epoch to epoch showing evidence of a hybrid pulse-energy distribution being represented by a combination of both a log-normal and power-law as shown in \cref{fig:B0656_flux_dist}. Practically this shows that a number of very bright pulses dominate the observed signal where most rotations contribute little or nothing detectable. 
+
+
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.9\linewidth]{chapter8/figs/fddallfit.png}
+    \caption[B0656+14 flux distribution]{Noise-incorporated flux density distribution of all 103 pulses. The black line shows the normalised histogram of the flux densities. Several models were fitted to the distribution, including a log-normal distribution (red dashed line), a power-law distribution (green dashed line), and a combined log-normal + power-law model (blue dashed line). The best-fitting model consists of a combination of 51\% log-normal and 49\% power-law components \citep{susarla_rrat-like_2025}.}
+    \label{fig:B0656_flux_dist}
+\end{figure}
+
+
+The 5 hour 2025 observation was used to estimate the DM through timing (which is described in \cref{chap:crabpulsar}) this yielded a measured dm of $14.053 \pm 0.005 \dmmath$. It was found while folding that the stable profile would only be contained after 47,500 rotations indicating an instability that isn't adequate for timing. 
+
+The results from \cite{susarla_rrat-like_2025} demonstrates highly variable, memory-less emission at low frequencies, with characteristics that resemble the ones seen in some RRATs. This is only further solidified by the unusually large amount of rotation needed to attain a stable profile. It also does not exhibit any pulses bright enough to determine an accurate enough DM for the use in solar wind studies despite being relatively close to the ecliptic. To further untangle the mystery of this source further observations with LOFAR and even next generation instruments like SKA-Low are needed. 
+
+\newpage
+\section{Characterising the response of an International LOFAR Station}
+
+It is already been mentioned a few times that LOFAR's HBA beam is difficult to fully model and characterising the response of the station is a cumbersome task. The worked carried out in \cite{Vincetti2026} uses prolonged tracks of 11 bright pulsars at various declinations to quantify the response of LOFAR's HBA beam as a function of elevation as shown in \cref{fig:PulsarTracksBeam}. 
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.6\linewidth]{chapter8/figs/plot_tracks_newticks_plasma.png}
+    \caption[Synoptic plot of 11 pulsar observations tracking their path as they cross the I-LOFAR sky]{Synoptic plot of pulsar observations tracking their path as they cross the I-LOFAR sky. The colour-coded S/N is normalized
+to the maximum S/N for each pulsar. Grey shadowed lines highlight the target path. PSR B0329+54 is shown with squared markers
+in order to differentiate it from PSR B1508+55, because of the overlapping of the relative tracks, at the resolution shown. Note: each
+pointing lasts 1 hour; here the points are located at the first instant of each observation. Asymmetry in the S/N between the rising
+and setting sides of the pulsar trajectories is visible by eye in this plot. ‘Stn N’ labels the North direction in the reference frame of
+the dipole \citep{Vincetti2026}.}
+    \label{fig:PulsarTracksBeam}
+\end{figure}
+
+% \newpage
+% \subsection{A Square Kilometre Array Pulsar Census}
+
+\newpage
 \input{chapter8/chapter8_mars}

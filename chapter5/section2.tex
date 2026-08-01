@@ -4,7 +4,7 @@ This study encompasses a total of $44$ targeted pointings, where each pointing c
 \begin{figure}[h!]
     \centering
     \includegraphics[width = 0.5\textwidth]{chapter5/figures/TESS_progress/Aitoff_Projection_PSD.png}
-    \caption{An Aitoff projection of the sky in Galactic coordinates depicts the distribution of survey pointings, with the Galactic disk shaded in grey. \textit{Gaia} sources are omitted from the plot due to their extremely high source density. Grey dots represent \textit{TESS} Targets of Interest (ToIs). Those targets observed during our survey are marked with red dots at boresight with green showing the half-power beam width ($2.59^\circ$).
+    \caption[Aitoff projection of observed TESS targets]{An Aitoff projection of the sky in Galactic coordinates depicts the distribution of survey pointings, with the Galactic disk shaded in grey. \textit{Gaia} sources are omitted from the plot due to their extremely high source density. Grey dots represent \textit{TESS} Targets of Interest (ToIs). Those targets observed during our survey are marked with red dots at boresight with green showing the half-power beam width ($2.59^\circ$).
   }
   \label{fig:TESS_TOIs}
 \end{figure}
@@ -25,7 +25,7 @@ The beam of a LOFAR station has an expansive coverage enabling observation of a 
 \begin{figure}
     \centering
     \includegraphics[width = 0.9\textwidth]{chapter5/figures/EIRP_plots/frame.png}
-    \caption{This figure illustrates one of the boresight pointings directed at a \textit{TESS} object (highlighted in green), with the LOFAR beam's Full-Width Half-Maximum (FWHM) shown in pink. The background image is from the Sloan Digital Sky Survey \citep[SDSS;]{SDSSDR13}.}
+    \caption[Illustration of the FoV of LOFAR's HBA beam]{This figure illustrates one of the boresight pointings directed at a \textit{TESS} object (highlighted in green), with the LOFAR beam's Full-Width Half-Maximum (FWHM) shown in pink. The background image is from the Sloan Digital Sky Survey \citep[SDSS;][]{SDSSDR13}.}
     \label{fig:inbeam_trgts_SDSS}
 \end{figure}
 
@@ -48,14 +48,14 @@ A total of $\gaiatargets$ stars from this list, making it one of the largest sam
 \begin{figure}
     \centering
     \includegraphics[width = 7cm]{chapter5/figures/HR-diagram/HRD.pdf}
-    \caption{A Hertzsprung-Russell diagram of the \surveytargets \textit{Gaia} targets searched for technosignatures in this survey with a mean distance of \distance pc. The relative distribution with respect to spectral type is: O $<0.01\%$, B---$0.4\%$, A---6.94\%, F---11.01\%, G---31.56\%, K---47.84\%, M---2.12\%. This is as opposed to the general \textit{Gaia} catalogue which is: O, B $<0.0001\%$, A---1.5\%, F---18.9\%, G---44.4\%, K---34.5\%, M---0.6\%.}
+    \caption[HR Diagram of observed \textit{Gaia} sources.]{A Hertzsprung-Russell diagram of the \surveytargets \textit{Gaia} targets searched for technosignatures in this survey with a mean distance of \distance pc. The relative distribution with respect to spectral type is: O $<0.01\%$, B---$0.4\%$, A---6.94\%, F---11.01\%, G---31.56\%, K---47.84\%, M---2.12\%. This is as opposed to the general \textit{Gaia} catalogue which is: O, B $<0.0001\%$, A---1.5\%, F---18.9\%, G---44.4\%, K---34.5\%, M---0.6\%.}
     \label{fig:HR-Diagram}
 \end{figure}
 
 \begin{figure}
     \centering
-    \includegraphics[width = 0.45\textwidth]{chapter5/figures/EIRP_plots/off-beam-sensitivity-plots.pdf}
-    \caption{The LOFAR HBA beam's sensitivity at 150~MHz changes in relation to the off-axis bore-sight angle ($\theta$). Furthermore, a plot of the number of filtered \textit{Gaia} targets within the beam pointing as a function of $\theta$ is presented. The \textcolor{red}{$\times$} represents the value for the Full Width Half Max of the beam.}
+    \includegraphics[width = 0.8\textwidth]{chapter5/figures/EIRP_plots/off-beam-sensitivity-plots.pdf}
+    \caption[HBA off beam sensitivity approximation]{The LOFAR HBA beam's sensitivity at 150~MHz changes in relation to the off-axis bore-sight angle ($\theta$). Furthermore, a plot of the number of filtered \textit{Gaia} targets within the beam pointing as a function of $\theta$ is presented. The \textcolor{red}{$\times$} represents the value for the Full Width Half Max of the beam.}
     \label{fig:off_beam_sens}
 \end{figure}
 
@@ -65,7 +65,7 @@ A total of $\gaiatargets$ stars from this list, making it one of the largest sam
 \begin{figure*}
     \centering
     \includegraphics[width = 0.9\textwidth]{chapter5/figures/iLiSA_Block_Diagramv2.png}
-    \caption{\texttt{iLiSA} block diagram, showing how an operator-defined schedule is ingested and is executed in a timely fashion. Data then begins to flow and ends up being ingested by processing pipelines together with associated metadata.} %\textbf{Vishal to look over.}}
+    \caption[\textsc{iLiSA} block diagram.]{\texttt{iLiSA} block diagram, showing how an operator-defined schedule is ingested and is executed in a timely fashion. Data then begins to flow and ends up being ingested by processing pipelines together with associated metadata.} %\textbf{Vishal to look over.}}
     \label{fig:iLiSA}
 \end{figure*}
 
@@ -113,7 +113,7 @@ Maximum Drift Rate Search & $\pm4 \ \text{Hz s}^{-1}$ \\
 $\text{S}/\text{N}_{\text{min}}$ threshold & 10 \\
 \hline
 \end{tabular}
-\caption{Specifications for the data input to our processing pipeline after pre-processing and preparing the raw data with \texttt{udpPacketManager}~\citep{David_JOSS}.}
+\caption[Survey data specifications]{Specifications for the data input to our processing pipeline after pre-processing and preparing the raw data with \texttt{udpPacketManager}~\citep{David_JOSS}.}
 \label{tab:data_details}
 \end{table}
 
@@ -122,6 +122,6 @@ $\text{S}/\text{N}_{\text{min}}$ threshold & 10 \\
     \includegraphics[width = 0.32\textwidth]{chapter5/figures/narrowband/hits_comparative_histogram.pdf}
     \includegraphics[width = 0.32\textwidth]{chapter5/figures/narrowband/DR_comparative_histogram.pdf}
     \includegraphics[width = 0.32\textwidth]{chapter5/figures/narrowband/SN_comparative_histogram.pdf}
-    \caption{Comparison of drifting signals or `hits' detected at both stations seen across the HBA frequency band. Each bin within the data set represents a 1 MHz frequency range and is accompanied by a corresponding percentage indicating its proportion to the overall data set.}
+    \caption[Narrowband candidates histograms]{Comparison of drifting signals or `hits' detected at both stations seen across the HBA frequency band. Each bin within the data set represents a 1 MHz frequency range and is accompanied by a corresponding percentage indicating its proportion to the overall data set.}
     \label{fig:histogram_hits_comparison}
 \end{figure}

@@ -110,12 +110,12 @@ As was highlighted in \cref{chap:crabpulsar} there is a wealth of information th
 
 B0656+14 was observed 21.5 hours over 21 epochs in 2021 and 2022. Along with one 5 hour continuous observation in March 2025. Both of which were with I-LOFAR's HBAs. 
 
-In the 21 epochs only 103 pulses (shown in fig \ref{fig:B0656_jd}) were found demonstrating that B0656 is a highly variable, RRAT like emitter at low frequency. It was found that the emission was memory-less, with the detected pulse times showing random Poisson-like times between bursts (waiting times) oppose to regular or quasi-period burst patters seen in other sources (i.e. \nref). 
+In the 21 epochs only 103 pulses (shown in fig \ref{fig:B0656_jd}) were found demonstrating that B0656 is a highly variable, RRAT like emitter at low frequency. It was found that the emission was memory-less, with the detected pulse times showing random Poisson-like times between bursts (waiting times) oppose to regular or quasi-period burst patters seen in other sources \citep[i.e.][]{2018ApJ...868L..33L}. 
 
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.8\linewidth]{chapter8/figs/jdplot.png}
-    \caption{`Joy division' style plot of all the single pulses from B0656+14 during observations taken in 2021-22 \citep{susarla_rrat-like_2025}.}
+    \caption[B0656+14 Joy Division plot]{`Joy division' style plot of all the single pulses from B0656+14 during observations taken in 2021-22 \citep{susarla_rrat-like_2025}.}
     \label{fig:B0656_jd}
 \end{figure}
 
@@ -151,6 +151,10 @@ and setting sides of the pulsar trajectories is visible by eye in this plot. ‘
 the dipole \citep{Vincetti2026}.}
     \label{fig:PulsarTracksBeam}
 \end{figure}
+
+The chosen pulsars are ideal sources for this study as their pulse profiles are stable allows for measured S/N ratio to be attributed primarily to the telescope rather than the source itself. Each pulsar was tracked for several hours (\cref{fig:PulsarTracksBeam}) as it traversed the sky, allowing the sensitivity of the station to be mapped as a function of both elevation and azimuth. Following coherent dedispersion, RFI excision and pulse folding, the S/N ratio of each observation was measured and compared with theoretical predictions from the \textsc{DreamBeam}\footnote{\url{https://github.com/2baOrNot2ba/dreamBeam}} software package \citep{creaner_beammodeltester_2019}. \textsc{DreamBeam} implements the Radio Interferometer Measurement Equation (RIME) formalism \citep{price_generalized_2015} to model the LOFAR station beam, calculating the Jones and Mueller matrices that describe the direction, frequency and polarisation-dependent response of the antenna array \citep{hamaker_understanding_1996}. By comparing the measured and predicted responses, the study quantified the station beam performance and identified discrepancies between the modelled and observed behaviour. The analysis confirmed the expected reduction in sensitivity towards lower elevations but also revealed a previously unmodelled azimuthal asymmetry, with sources consistently detected more sensitively while rising than while setting. This effect, observed across multiple international LOFAR stations, highlights limitations in current beam models and has important implications for telescope calibration and observation scheduling, as well as for future aperture-array facilities such as LOFAR 2.0 and SKA-Low.
+
+
 
 % \newpage
 % \subsection{A Square Kilometre Array Pulsar Census}

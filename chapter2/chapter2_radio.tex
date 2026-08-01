@@ -27,9 +27,9 @@ The purpose of this chapter is to discuss some of the fundamentals of radio tele
 
 \section{From Photon to Filterbank} \label{sec:chap2photon2fil}
 
-Radio telescopes can often be seen as conceptually complex but share much common ground with contemporary optical telescopes. An antenna is often thought of as a `single pixel' in a charged couple device (CCD) with an array of antennas forming an array of pixels that can be used to observe the sky. There are also parallels to be drawn between the mirrors in optical telescopes and the parabolic dishes seen on `single dish' radio telescopes which will later be discussed. This section aims to provide enough theoretical context to understand how an incident photon on a radio telescope gets turned into science useable data products such as filterbanks. Filterbanks are simply data cubes that store spectrographs over time or `dynamic spectra'. 
+Radio telescopes can often be seen as conceptually complex but share much common ground with contemporary optical telescopes. An antenna is often thought of as a `single pixel'\footnote{This is true, but single elements can also have many beams (pixels) at the same time in certain systems.} in a charged couple device (CCD) with an array of antennas forming an array of pixels that can be used to observe the sky. There are also parallels to be drawn between the mirrors in optical telescopes and the parabolic dishes seen on `single dish' radio telescopes which will later be discussed. This section aims to provide enough theoretical context to understand how an incident photon on a radio telescope gets turned into science useable data products such as filterbanks. Filterbanks are simply data cubes that store spectrographs over time or `dynamic spectra'. 
 
-For any electromagnetic wave coming from an astronomical source the wave is considered to be in the far-field, and the wavefronts are therefore locally planar across the extent of a radio telescope. Radio telescopes sample the electric field associated with these incoming plane waves. The first mathematical formalism to introduce is the general time-dependent electric field vector can be expressed as,
+For any electromagnetic wave coming from an astronomical source the wave is in the far-field, and the wavefronts are therefore locally planar across the extent of a radio telescope. Radio telescopes sample the electric field associated with these incoming plane waves. The first mathematical formalism to introduce is the general time-dependent electric field vector can be expressed as,
 
 \begin{equation}
     \textbf{E} (t,r) = (\hat a E_a + \hat b E_b) \ \exp(2 \pi i (ft-kr))
@@ -38,7 +38,7 @@ For any electromagnetic wave coming from an astronomical source the wave is cons
 
 %TODO: talk about r_1, r_2, phase difference for interferometry down the line. Add references to the books used to come up with these derivations 
 
-where $\hat a$ and $\hat b$ are orthogonal polarisation basis vectors, $z$ is the orthogonal axis which the wave progates forward with time, $t$. $E_a$ and $E_b$ are the corresponding complex amplitudes, $f$ is wave frequency, $k$ is the wavenumber, $2 \pi \lambda$. 
+where $\hat a$ and $\hat b$ are orthogonal polarisation basis vectors, $r$ is the orthogonal axis which the wave propagates forward with time, $t$. $E_a$ and $E_b$ are the corresponding complex amplitudes, $f$ is wave frequency, $k$ is the wavenumber, $2 \pi \lambda$. 
 In short, in \cref{eq:wave_equation} the first term dictates the wave polarisation and the second term dictates the wave propagation. If a radio telescope samples the plane wave at a given instant, the polarisation term\footnote{Independent of the propagation term and associated phase.} can be described by a Jones vector, 
 
 \begin{equation}
@@ -57,7 +57,7 @@ In short, in \cref{eq:wave_equation} the first term dictates the wave polarisati
     \label{eq:chap2jonesvector}
 \end{equation}
 
-Here, $\beta$ describes the shape and `handness' of the ellipse that is traced out by the wave vector, shown in \cref{fig:chpt2planewavepol}, which is what the radio telescope `sees' when it samples the wave depending on the value of $\beta$. When $\beta$ is $90^\circ$ or $0^\circ$ the wave has a linear polarisation, $\beta = \pm 45$ gives a fully circularised, with $+$ denoted has `right handed' and $-$ as `left handed'. Any other values of $\beta$ will produce elliptical traces. Varying $\psi$ rotates the polarization ellipse without changing its shape.
+Here, $\beta$ describes the shape and `handedness' of the ellipse that is traced out by the wave vector, shown in \cref{fig:chpt2planewavepol}, which is what the radio telescope `sees' when it samples the wave depending on the value of $\beta$. When $\beta$ is $90^\circ$ or $0^\circ$ the wave has a linear polarisation, $\beta = \pm 45$ gives a fully circularised, with $+$ denoted has `right handed' and $-$ as `left handed'. Any other values of $\beta$ will produce elliptical traces. Varying $\psi$ rotates the polarization ellipse without changing its shape.
 
 \begin{figure}
     \centering
@@ -90,7 +90,16 @@ U - iV & I - Q
 \label{eq:chap2cohermatrix}
 \end{equation}
 
-The elements can of the coherency matrix can expressed in terms of the four Stokes parameters \citep{stokes_xxx_1852}. The Stokes parameters provide an observable relation to describe polarised light which are extensively used in radio astronomy usually in the following form. 
+The elements can of the coherency matrix can be expressed in terms of the four Stokes parameters \citep{stokes_xxx_1852}. 
+
+ $E_x$ and $E_y$ are the Cartesian components of the electric field vector of a transverse electromagnetic wave, 
+
+\begin{equation}
+    E_x(r,t) = E_{0x}\cos(kr - \omega t + \delta_x), \qquad
+E_y(r,t) = E_{0y}\cos(kr - \omega t + \delta_y).
+\end{equation}
+
+The Stokes parameters provide an observable relation to describe polarised light which are extensively used in radio astronomy usually in the following form. 
 
 \begin{align}
 I \equiv  & E^2 = E^2_x + E^2_y,\\ 
@@ -99,17 +108,17 @@ U \equiv  & I \sin 2\psi \ \cos 2\beta = 2 E_x E_y \cos 2 \phi,\\
 V \equiv & I \sin 2\beta = 2 E_x E_y \sin \phi.
 \end{align}
 
-Radio telescopes in reality only measure $x$ and $y$ in the electric field plane $(E_x,E_y)$. $\psi$ is the rotation of the wave in respect to the plane of the ellipse \citep[p. 262,][]{pulsar_handbook}. 
+Radio telescopes in reality most only measure $x$ and $y$ in the electric field plane $(E_x,E_y)$ unless they have circular feeds. Where $\psi$ is the rotation of the wave in respect to the plane of the ellipse \citep[p. 262,][]{pulsar_handbook}. 
 
 \subsection{Observational Hardware}
 
 In the previous section the framework for measuring an electromagnetic radio wave with a radio telescope was introduced. Here a relatively simple signal path (shown in \cref{fig:chap2RadioBlockDiagrm}) for a radio telescope is introduced, before later introducing interferometry and scaling this to large arrays.
 The first part of the signal path is often referred to as the `antenna', this could be anything from a simple dipole, to a large reflector dish with a complex feed system. Incoming radio waves induce an oscillating electric current in the antenna or feed. The induced voltage is measured by the receiver and forms the primary observable in radio astronomy. However, there are numerous steps in-between. \\
 
-Next the signal is passed to the frontend. The polarizer depends on the setup of the telescope, in some cases there will just be an $x$ and $y$ antenna pair, for a feed there is physically only the one feed, but a polariser like an orthomode transducer (OMT) is used. An OMT acts as a waveguide component that can separate the signal into $E_x$ and $E_y$. Following this both polarisations have the same receiver chains, denoted in \cref{fig:chap2RadioBlockDiagrm} by the dashed arrows. The signal is then amplified using a low noise amplifier (LNA) and put through a bandpass filter which isolates the desired part of the radio band, isolating out-of-band interference. Multiple filters can be used to filter bright sources such as the FM radio band or other sources of radio frequency interference (RFI). \\
+Next the signal is passed to the frontend. The polarizer depends on the setup of the telescope, in some cases there will just be an $x$ and $y$ antenna pair, there is only one physical feed, but an orthomode transducer (OMT) is employed to split the signal into two orthogonal polarization channels. An OMT acts as a waveguide component that can separate the signal into $E_x$ and $E_y$. Following this both polarisations have the same receiver chains, denoted in \cref{fig:chap2RadioBlockDiagrm} by the dashed arrows. The signal is then amplified using a low noise amplifier (LNA) and put through a bandpass filter which isolates the desired part of the radio band, isolating out-of-band interference. Multiple filters can be used to filter bright sources such as the FM radio band or other sources of radio frequency interference (RFI). \\
 
-A local oscillator generates a stable then mixes the signal with the original input changing the frequency of the signal, this is done to make the signal easier to process. For example, if processing a 1400-MHz sample the setup would need analog to digital converter (ADC)'s to match the frequency which is expensive from a processing point of view, so the signal is usually mixed to lower frequencies. The Intermediate Frequency Amplifier (IF Amp) is then used to further amplify the signal, providing additional gain to the downconverted signal to match the dynamic range inputted into the ADC. It's easier to do additional amplification here as the noise mitigation isn't as necessary \citep{warnick_generalized_2024}. The signal is then converted from an analog signal to digital time series. \\ 
-It's important to note that the system just described is not a generalised signal path for a radio telescope, this is a setup that would be similar to those found in a single dish system. There are many bespoke systems specific to different observing requirements. For example with the rise in RFI across the radio spectrum there is now the implementation of real-time RFI excision as part of the signal path. 
+A local oscillator generates a stable wave then mixes the signal with the original input changing the frequency of the signal, this is done to make the signal easier to process. For example, if processing a 1400-MHz sample the setup would need analog to digital converter (ADC)'s to match the frequency which is expensive from a processing point of view, so the signal is usually mixed to lower frequencies. The Intermediate Frequency Amplifier (IF Amp) is then used to further amplify the signal, providing additional gain to the downconverted signal to match the dynamic range inputted into the ADC. Additional amplification at IF is easier to implement because the system’s overall noise performance is already set by the front-end low-noise amplifier, so the IF stage does not need to meet the same ultra-low-noise requirements \citep{warnick_generalized_2024}. The signal is then converted from an analog signal to digital time series. \\ 
+It's important to note that the system just described is not a generalised signal path for a radio telescope, this is a setup that would be similar to those found in a single dish system. There are many bespoke systems specific to different observing requirements. For example with the rise in RFI across the radio spectrum there is now the implementation of real-time RFI excision as part of the signal path \citep{buch_real-time_2025}. 
 
 \begin{figure}[h]
     
@@ -280,13 +289,13 @@ Polyphase\\Filterbank
 \subsection{Signal Processing}
 \label{sec:chap2signalprocessing}
 
-The next step in the signal path is to carry out signal processing. This is the final step before turning the data into a science useable product. This requires the conversion of the voltage time series from an analog signal to a digital one. The digital signal is then `channelized' into frequency bins for each time sample. This is carried out by conducting a discrete Fourier-transform (DFT). This is commonly done in radio astronomy by using a Polyphase Filterbanking (PFB). PFB's has become the technical standard in radio astronomy due to its spectral performance and computational efficiency. For a comprehensive review of signal processing and polyphase filterbanking in the context of radio astronomy please see \citet[chap. 4,][]{WilsonToolsofRadioastron} and \cite{price_spectrometers_2018}
+The next step in the signal path is to carry out signal processing. This is the final step before turning the data into a science useable product. This requires the conversion of the voltage time series from an analog signal to a digital one. The digital signal is then `channelized' into frequency bins for each time sample. This is carried out by conducting a discrete Fourier-transform (DFT). This is commonly done in radio astronomy by using a Polyphase Filterbanking (PFB) see below. PFB's has become the technical standard in radio astronomy due to its spectral performance and computational efficiency. For a comprehensive review of signal processing and polyphase filterbanking in the context of radio astronomy please see \citet[chap. 4,][]{WilsonToolsofRadioastron} and \cite{price_spectrometers_2018}
 
 \subsubsection{Digitization}
 
 Digitization, or digital sampling is the process in converting an analog signal into a digital signal. This is done with an ADC, which samples the incoming voltage at regular intervals. The two main factors of an ADC that are important to a radio astronomer are the sampling rate and the bit rate. \\ 
-To conserve all the information from the voltages the Nyquist crieterion must be met. This states that sample rate of the ADC must meet twice the bandwidth, failure to meet this will result in aliasing of the signal. \\ 
-In addition to the sample rate the ADC also needs to quantize the amplitude of the incoming signal. Which each amplitude measured by a number of bits, such that the measured amplitude levels are $N_{\text{levels}} = 2^{n_\text{bits}}$. An important point to consider is that the difference between the true analogue voltage and the nearest digital level introduces quantisation noise. Increasing the number of bits reduces this noise and increases the dynamic range of the digitised signal, with a theoretical limit of $\text{DR} \simeq 6.02 \ n_{\text{nbits}}$. In the context of a radio telescope, the received signals are typically noise dominated and approximately Gaussian distributed. Consequently, relatively low bit depths can be used without a substantial loss in sensitivity. For example, 2-bit quantisation retains approximately 88\% of the sensitivity of an ideal unquantised system, while 4-bit quantisation retains approximately 99\%. The digitised voltage stream from the ADC forms the input to the rest of the digital signal-processing pipeline. 
+To conserve all the information from the voltages the Nyquist crieterion must be met. This states that the sampling rate of the ADC must be at least twice the signal bandwidth. Failure to satisfy this condition results in aliasing of the sampled signal. \\ 
+In addition to the sample rate the ADC also needs to quantize the amplitude of the incoming signal. Each amplitude is measured by a number of bits, such that the measured amplitude levels are $N_{\text{levels}} = 2^{n_\text{bits}}$. An important point to consider is that the difference between the true analogue voltage and the nearest digital level introduces quantisation noise. Increasing the number of bits reduces this noise and increases the dynamic range of the digitised signal. In the context of a radio telescope, the received signals are typically noise dominated and approximately Gaussian distributed. Consequently, relatively low bit depths can be used without a substantial loss in sensitivity. For example, 2-bit quantisation retains approximately 88\% of the sensitivity of an ideal unquantised system, while 4-bit quantisation retains approximately 99\% \citep{thompson_convenient_2007}. The digitised voltage stream from the ADC forms the input to the rest of the digital signal-processing pipeline. 
 
 
 \subsubsection{Polyphase Filterbanks} \label{sec:polyphase_theory}
@@ -297,7 +306,7 @@ Following the digitization the discrete\footnote{Here square brackets delineate 
     X[k] = \sum_{N-1}^{n=0} x[n] \cdot e^{-2 \pi i n \frac{k}{N}}.
 \end{equation}
 
-Here $N$ is the transform length and $k$ denotes the frequency channel. The power spectrum is given by $|X[k]|^2$. However, because the DFT is evaluated over a given window, each frequency bin will exhibit a sinc-shaped frequency response, which leads to spectral leakage between the channels. The PFB technique combines a polyphase filter structure with a fast Fourier transform (FFT), where the filtering stage improves the frequency response of the FFT channels and reduces spectral leakage between neighbouring frequency bins. The input voltage sequence $x[n]$ is first decomposed into $P$ separate phases, known as polyphase branches which can be expressed as,
+Here $N$ is the transform length and $k$ denotes the frequency channel. The power spectrum is given by $|X[k]|^2$. However, because the DFT is evaluated over a given window, each frequency bin will exhibit a sinc-shaped frequency response, which leads to spectral leakage between the channels. The PFB technique combines a polyphase finite impulse response (FIR) filter with a FFT. The filtering stage shapes the frequency response of each FFT channel, significantly reducing spectral leakage and improving channel isolation. The input voltage sequence $x[n]$ is first decomposed into $P$ separate phases, known as polyphase branches which can be expressed as,
 
 \begin{equation}
     x_p[n]= x[nP+p]
@@ -315,11 +324,11 @@ here $h_p[m]$ represents the filter coefficients applied to the $p$th branch and
     Y[k,n] = \sum_{P - 1}^{p = 0} y_p [n] \cdot e^{-2 \pi i p \frac{k}{P}}. 
 \end{equation}
 
-where $k$ denotes the output frequncy channel. The FFT separates the signal into $P$ narrow frequency channels, each corresponding to a different portion of the observing bandwidth. The resulting PFB output provides a channelised representation of the signal with improved channel isolation and reduced spectral leakage compared to a standard FFT. The power spectrum is obtained from the squared magnitude of the channelised voltages, similar to the DFT given as $|Y[k]|^2$. 
+where $k$ denotes the output frequency channel. The FFT separates the signal into $P$ narrow frequency channels, each corresponding to a different portion of the observing bandwidth. The resulting PFB output provides a channelised representation of the signal with improved channel isolation and reduced spectral leakage compared to a standard FFT. The power spectrum is obtained from the squared magnitude of the channelised voltages, similar to the DFT given as $|Y[k]|^2$. 
 
 Unlike a standard FFT, which performs an FFT on a single block of $P$ samples, the PFB combines information from $M$ consecutive FFT frames before the transform is applied. This additional filtering suppresses the sidelobes of the FFT channel response, reducing spectral leakage and improving channel isolation. 
 
-So for example if one considers a telescope that observes from $110-190$ MHz. If a PFB is applied with $P = 2^{12}$, the voltage stream will be channelised 4096 channels applied. Each channel corresponding to $\sim 0.02$ MHz, with the power of each channel equal to $|Y[k]|^2$, which produces a spectrum for a single time sample, $t_0$. The complex voltages $Y[k,n]$ therefore represent the signal power as a function of frequency channel $k$ and time sample $n$. Arranging these measurements in time order forms time-frequency array where each time sample and channel has an associated power. Data that is generated and saved in this format is known as a filterbank.
+So for example if one considers a telescope that observes from $110-190$ MHz. If a PFB is applied with $P = 2^{12}$, the voltage stream will be channelised 4096 channels applied. Each channel corresponding to $\sim 0.02$ MHz, with the power of each channel equal to $|Y[k]|^2$, which produces a spectrum for a single time sample, $t_0$. The complex voltages therefore represent the signal power as a function of frequency channel $k$ and time sample $n$. Arranging these measurements in time order forms time-frequency array where each time sample and channel has an associated power. Data that is generated and saved in this format is known as a filterbank.
 
 %TODO: possibly a good place to put a section on dedispersion 
 
@@ -333,10 +342,11 @@ After discussing the setup of a photon to filterbank for a single dish telescope
     }
 \end{equation}
 
-Where $\lambda$ is the wavelength of the electromagnetic wave and $D$ is the diameter of the telescope's dish. The field of view (FoV) of the telescope is $\theta/2$. Such that the FoV is, 
+Where $\lambda$ is the wavelength of the electromagnetic wave and $D$ is the diameter of the telescope's dish and $\alpha$ is a dimensionless constant that depends on the aperture illumination and the beamwidth definition. The field of view (FoV) of the telescope is $\pi~(\theta/2)^2$. Such that the FoV is, 
 
 \begin{equation}
-    \text{FoV} = \pi \left( \frac{\theta}{2} \right)^2 = \pi \left( \frac{\alpha D}{2 \lambda} \right). 
+    \text{FoV} = \pi \left( \frac{\theta}{2} \right)^2 = \frac{\pi}{4}
+    \left(\alpha\frac{\lambda}{D}\right)^2.
 \end{equation}
 
 These relations are challenges across all wavelengths, but this becomes even more evident at lower frequencies. For example the \textit{Hubble Space Telescope} has an angular resolution of 0.06 arc seconds at 600 nm, with a 2.4 m mirror. To match this resolution at 150 MHz ($\sim 2$ m) it would require a dish that is 8,400 km, which would cover over 10\% of the Earth's surface if it was a feasible engineering project. The largest steerable object on Earth is the 100m Green Bank Telescope in West Virginia, this achieves 7.4 arcminutes at 1.4 GHz (21 cm), for reference the full Moon is about 30 arcminutes. The largest single dish telescope is the Five-hundred-meter Aperture Spherical Telescope (FAST) located in Guizhou, southwestern China. FAST achieves 2.5 arcminutes at 1.4 GHz, however, it is a fixed dish, requiring the feed to move to point the telescope limiting the use of the full surface depending on where the feed points. GBT and FAST are at the limits of modern engineering, building larger single dishes would be too expensive and difficult to make structurally stable. This limitation doesn't help the astronomer who wants to view the sky at higher resolutions and lower frequencies. 
@@ -533,13 +543,13 @@ Starting off with the most basic example, a two-element interferometer which is 
     \delta l = \textbf{B} \cdot \hat p = \textbf{B} \sin \theta.
 \end{equation}
 
-The geometric time delay between the two elements is the difference the delay in sampling the wave at two different spatial locations and is expressed as,
+The geometric time delay between the two elements is the delay in sampling the wave at two different spatial locations and is expressed as,
 
 \begin{equation}
     \delta t = \frac{\delta l}{c}. 
 \end{equation}
 
-As discussed in \cref{sec:chap2photon2fil} the plane wave equation was introduced and defined, see \cref{eq:wave_equation}. If you evaluate this field at the two different elements positioned,$\mathbf{r}_1$ and $\mathbf{r}_2$. The received electric fields are then, 
+As discussed in \cref{sec:chap2photon2fil} the plane wave equation was introduced and defined, see \cref{eq:wave_equation}. If you evaluate this field at the two different elements positioned,$\mathbf{r}_1$ and $\mathbf{r}_2$, the received electric fields are then, 
 
 
 \begin{align}
@@ -671,7 +681,7 @@ One key concept has been neglected up to this point and that is on the question 
 
 \end{tikzpicture}
 
-\caption{}
+\caption[Geometry relating differential area and solid angle]{Geometry illustrating the relationship between a differential area element, $dA$, and the differential solid angle, $d\Omega$.}
 \label{fig:chap2desolidangle}
 
 \end{figure}
@@ -780,9 +790,9 @@ This factor is simply added to \cref{eq:chap2radiometerintro},
     S_{\min} = \beta \frac{\text{S/N}_{\min} T_{\text{sys}}}{G \sqrt{n_p t_{\text{obs}} \Delta f}} \sqrt{\frac{W}{P - W}}. 
 \end{equation}
 
-A factor of \( \beta \) has also been added as a digitization loss factor. Typically, \( \beta \approx 1.16 \) for 3-level sampling according to \cite{pulsar_handbook}, but this value is system dependent.  
+A factor of \( \beta \) has also been added as a digitization loss factor. Typically, \( \beta \approx 1.16 \) for 3-level sampling according to \cite{kouwenhoven_effect_2001}, but this value is system dependent.  
 
-It is also important to note that for single pulses, such as an FRB or otherwise, the duty cycle factor is simply swapped out for a $\tau_{\text{burst}}$, which represents in the burst duration. 
+It is also important to note that for single pulses, such as an FRB or otherwise, the duty cycle factor is simply removed and $t_{\rm{obs}}$ is swapped out for a $\tau_{\text{burst}}$, which represents in the burst duration. 
 
 
 Since system temperature, gain, and bandwidth vary across frequency, the above equations can be generalized by summing over all frequency bins and adding the frequency dependency where necessary. First starting with gain, 
@@ -792,11 +802,11 @@ Since system temperature, gain, and bandwidth vary across frequency, the above e
     \frac{A_{\text{eff}}(f)}{2k} = \frac{\eta (f) \cdot A_{phys}}{2k}.
 \end{equation}
 
-Here a frequency dependence is introduced for collecting area, as for any antenna of a given size receives a smaller angular region of the sky as frequency increases. 
+Here, a frequency dependence is introduced through the antenna response. For a dish of fixed diameter, the beam narrows with increasing frequency, reducing the angular region of the sky that is illuminated. At sufficiently high frequencies, the effective collecting area is also reduced as the aperture efficiency decreases according to the Ruze criterion due to surface irregularities \citep{ruze_antenna_1966}. As the noise contributions from individual frequency channels are statistically independent, the overall sensitivity is obtained by summing the channel contributions in quadrature, accounting for the frequency dependence of both the system temperature and effective collecting area, 
 
 \begin{equation}
 \boxed{
-S_{\min} (f, l, b) = \frac{1}{B_{\text{total}}} \sum_{f} \left(  \frac{\left[ T_{\text{sys}}(l,b) + T_{\text{int} }(f) \right] \cdot 2 k}{A_{\text {eff} }(f)} \cdot \beta  \quad  \cdot \frac{\text{S/N}_{\text{min}}}{\sqrt{n_p t_{\text{obs}} B_{\text{channel}}}} \sqrt{\frac{W}{P - W}} \right) \Delta f}
+S_{\min} (f, l, b) = \frac{1}{B_{\text{total}}} \sum_{f} \left(  \frac{\left[ T_{\text{sys}}(l,b) + T_{\text{int} }(f) \right] \cdot 2 k}{A_{\text {eff} }(f)} \cdot \beta  \quad  \cdot \frac{\text{S/N}_{\text{min}}}{\sqrt{n_p t_{\text{obs}} B_{\text{channel}}}} \sqrt{\frac{W}{P - W}} \right) \Delta f}.
 \label{eq:radiometer_equation}
 \end{equation}
 
@@ -951,7 +961,7 @@ The HBAs (see \cref{fig:chap2lofarantennas}) cover the higher end of LOFARs spec
 
 
 \end{tikzpicture}
-   \caption{\textit{Left:} Low Band Antennas shown with a ground plane with two dipoles in a $45^\circ$ V shape. \textit{Right:} Illustration of 2 of the 4 bowtie antennas that make up the HBAs placed inside a tile. }
+   \caption[LOFAR Antenna Schematics]{\textit{Left:} Low Band Antennas shown with a ground plane with two dipoles in a $45^\circ$ V shape. \textit{Right:} Illustration of 2 of the 4 bowtie antennas that make up the HBAs placed inside a tile. }
     \label{fig:chap2lofarantennas}
 \end{figure}
 
@@ -962,9 +972,9 @@ The digitized samples are then passed to the RSP boards, these boards before all
 
 \subsection{Beamforming with a LOFAR station}
 
-There are numerous ways to observe with LOFAR as an array and also with individual stations. As discussed the main data products of interest is dynamic spectra from the HBAs which is attained by beamforming. As mentioned above the ADC can work at a 200~MHz or 160~MHz clock rate, this corresponds to a base sampling time of 5~ns and $6.2~\upmu \text{s}$. A polyphase filterbank is applied to the data above channelizing it into sub-bands. Due to the Nyquist-Shannon sampling theorem ($B < f_s/2$), 200-MHz sampling gives a useable bandwidth of 100~MHz. A 1024-point FFT then divides that sampled bandwidth into 1024 spectral bins (subbands), 512 real and 512 imaginary bins (Hermitian symmetric space). Dividing the subbands across the useable bandwidth gives 195.3~kHz to each subband. Following channelization, the station beamformer selects the desired subbands and coherently sums the antenna signals in the direction of interest. The resulting beamformed subbands are called beamlets, and in 8-bit mode LOFAR can form up to 488 beamlets. Although the polyphase filter produces 512 subbands, the station beamformer's ring architecture and output allocation mean that only 488 beamlets are available. 
+There are numerous ways to observe with LOFAR as an array and also with individual stations. As discussed the main data products of interest is dynamic spectra from the HBAs which is attained by beamforming. As mentioned above the ADC can work at a 200~MHz or 160~MHz clock rate, this corresponds to a base sampling time of 5~ns and $6.2~\upmu \text{s}$. A polyphase filterbank is applied to the data above channelizing it into sub-bands. Due to the Nyquist-Shannon sampling theorem ($B < f_s/2$), 200-MHz sampling gives a useable bandwidth of 100~MHz. A 1024-point FFT is applied to 1024 real-valued samples, producing 1024 complex Fourier coefficients. For real-valued input data, these coefficients are Hermitian symmetric, so only the 512 positive-frequency coefficients correspond to independent spectral channels. Dividing the subbands across the useable bandwidth gives 195.3~kHz to each subband. Following channelization, the station beamformer selects the desired subbands and coherently sums the antenna signals in the direction of interest. The resulting beamformed subbands are called beamlets, and in 8-bit mode LOFAR can form up to 488 beamlets. Although the polyphase filter produces 512 subbands, the station beamformer's ring architecture and output allocation mean that only 488 beamlets are available. 
 
-One unique thing about aperture arrays is that each beamlet can be individually pointed, this means that up to 488 beams can be formed on the sky with the bandwidth of one subband or one single coherent beam can be placed on the sky using the full bandwidth as shown in \cref{fig:chap2lofarbeams}. Recalling that the S/N scaled with the number of channels by a factor of $\sqrt{n}$, the stations are primarily used with all beamlets on the same patch of sky. 
+One unique thing about aperture arrays is that each beamlet can be individually pointed, this means that up to 488 beams can be formed on the sky with the bandwidth of one subband or one single coherent beam can be placed on the sky using the full bandwidth as shown in \cref{fig:chap2lofarbeams}, this can be any combination the observer desires as long as it amounts to 488 beams. Recalling that the S/N scaled with the number of channels by a factor of $\sqrt{n}$, the stations are primarily used with all beamlets on the same patch of sky  \citep{karastergiou_limits_2015}. 
 
 \begin{figure}
     \centering
@@ -991,7 +1001,7 @@ One unique thing about aperture arrays is that each beamlet can be individually 
 
 
 \end{tikzpicture}
-\caption{\textit{Left:} Illustration of 488 beamlets pointed at various sky positions. \textit{Right:} Example of summed beamlets forming one beam across entire bandwidth. }
+\caption[Example of LOFAR beamlets]{\textit{Left:} Illustration of 488 beamlets pointed at various sky positions. \textit{Right:} Example of summed beamlets forming one beam across entire bandwidth. }
 \label{fig:chap2lofarbeams}
 \end{figure}
 
@@ -1037,7 +1047,7 @@ Murriyang is the name given to the iconic 64-m Parkes telescope by the Wiradjuri
 \begin{figure}[h]
     \centering
     \includegraphics[width=\linewidth]{chapter2/figures/parkes.png}
-    \caption{The the 64m Murriyang telescope at Parkes radio observatory in New South Wales, Australia, image credited to CSIRO/A. Cherney}
+    \caption[The the 64m Murriyang telescope at Parkes ]{The the 64m Murriyang telescope at Parkes radio observatory in New South Wales, Australia, image credited to CSIRO/A. Cherney}
 \end{figure}
 
 \begin{table}[h]
@@ -1068,7 +1078,7 @@ There are numerous feeds installed on GBT. The telescope features a Gregorian de
 \begin{figure}[h]
     \centering
     \includegraphics[width=\linewidth]{chapter2/figures/GBT.jpg}
-    \caption{The 100~m Green Bank Telescope telescope at the Green Bank Observatory in West Virgina. Image credited to the NRAO.}
+    \caption[The 100~m Green Bank Telescope telescope at the Green Bank Observatory]{The 100~m Green Bank Telescope telescope at the Green Bank Observatory in West Virgina. Image credited to the NRAO.}
 \end{figure}
 
 \begin{table*}[h]
@@ -1121,14 +1131,11 @@ MUSTANG-2 & 75--105 GHz    & --- & --- \\
 
 \subsection{NenuFAR}
 
-The New Extension in Nançay Upgrading LOFAR (NenuFAR) is located at the Naçay radio observatory in France. Located next to the French LOFAR station. NenuFAR operates at the same frequencies as the LBAs but uses a different design for its antennas and amplifiers (see. \cref{fig:chap2nenufar}). The  antennas were intially manufactured for the Long Wavelength Array (LWA) in Owen's Valley, with the novel amplifiers designed in Nançay.  The station shares much of the same electronics and systems as a standard LOFAR stations, so the description outlined above can also be applied here. The combination of both the antennas and the amplifiers translated to a flatter response curve than that of the LBAs. At present there are X out of a planned 96 array core constructed. Similarly, to LOFAR's core there are also remote stations called mini arrays (MAs) surrounding NenuFAR. Each MA consists of 19 antennas and is placed up to 3~km from the NenuFAR core. The telescope can also be used in tandem with the LOFAR array to add NenuFAR's sensitivity along with the other stations.  
+The New Extension in Nançay Upgrading LOFAR (NenuFAR) is located at the Naçay radio observatory in France. Located next to the French LOFAR station. NenuFAR operates at the same frequencies as the LBAs but uses a different design for its antennas and amplifiers (see. \cref{fig:chap2nenufar}). The  antennas were intially manufactured for the Long Wavelength Array (LWA) in Owen's Valley, with the novel amplifiers designed in Nançay.  The station shares much of the same electronics and systems as a standard LOFAR stations, so the description outlined above can also be applied here. The combination of both the antennas and the amplifiers translated to a flatter response curve than that of the LBAs. At present there are 80 out of a planned 96 array core constructed. Similarly, to LOFAR's core there are also remote stations called mini arrays (MAs) surrounding NenuFAR. Each MA consists of 19 antennas and is placed up to 3~km from the NenuFAR core. The telescope can also be used in tandem with the LOFAR array to add NenuFAR's sensitivity along with the other stations.  
 
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.6\linewidth]{chapter2/figures/NenuFAR.png}
-    \caption{Collection NenuFAR antennas based at the Naçay Radio Observatory in France. Image credited to the CNRS/NRO.}
+    \caption[Image of NenuFAR antennas]{Collection NenuFAR antennas based at the Naçay Radio Observatory in France. Image credited to the CNRS/NRO.}
     \label{fig:chap2nenufar}
 \end{figure}
-
-% \subsection{VLF}
-% \subsection{GReX}

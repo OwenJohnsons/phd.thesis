@@ -33,7 +33,7 @@ Mass spectrometry is a form of analysis used to identify and quantify the chemic
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.8\linewidth]{chapter8/figs/Diagram/MS .png}
-    \caption{Simplified overview of time-of-flight quadrupole mass spectrometer. Ions are accelerated through a source slit and deflected by a series of electric fields before reaching the ion detector, allowing for mass analysis based on their time of flight. Resonant ions, matching the frequency of the applied field, experience enhanced deflection and can be selectively detected.}
+    \caption[Time-of-flight mass spectrometer]{Simplified overview of time-of-flight quadrupole mass spectrometer. Ions are accelerated through a source slit and deflected by a series of electric fields before reaching the ion detector, allowing for mass analysis based on their time of flight. Resonant ions, matching the frequency of the applied field, experience enhanced deflection and can be selectively detected.}
     \label{fig:MS}
 \end{figure}
 
@@ -52,7 +52,7 @@ As previously mentioned, this challenge utilizes SAM instrument suite data. Belo
  \begin{figure}
      \centering
      \includegraphics[width=0.9\linewidth]{chapter8/figs/Diagram/SAM-cross-section.png}
-     \caption{Overview of the SAM instrument. Adapted from \citep{mahaffy2012sample}}
+     \caption[Overview of the SAM instrument.]{Overview of the SAM instrument. Adapted from \citep{mahaffy2012sample}}
  \end{figure}
 
 
@@ -65,7 +65,7 @@ The Evolved Gas Analysis Mass Spectrometry (EGAMS) on SAM is designed to analyse
 \begin{figure}[p]
     \centering
     \includegraphics[width=0.99\linewidth]{chapter8/figs/25048_1725.png}
-    \caption{Example of EGAMS data from SAM. The left panel shows atomic mass unit (AMU) against the normalized abundance. The right panel shows the pyrolysis (oven) temperature against run time. The hashed red line represents the time and temperature sample currently being shown. Labels assigned by scientists along with metadata associated with the specific sample are also shown.}
+    \caption[Example of EGAMS data from SAM.]{Example of EGAMS data from SAM. The left panel shows atomic mass unit (AMU) against the normalized abundance. The right panel shows the pyrolysis (oven) temperature against run time. The hashed red line represents the time and temperature sample currently being shown. Labels assigned by scientists along with metadata associated with the specific sample are also shown.}
     \label{fig:EGAMS-example}
 \end{figure}
 
@@ -95,7 +95,7 @@ The instrument suite in SAM is based on other commercial MS instruments used at 
 \begin{figure}[p]
     \centering
     \includegraphics[width=0.99\linewidth]{chapter8/figs/commercial.png}
-    \caption{Example of a sample run on a commercial mass spectrometer. The abundance across each sample run is normalized. The spectrum at a particular time is shown on the left for a given sample run as temperature increases with time following the distribution shown on the right. The dashed red line represents the time and temperature sample currently being shown}
+    \caption[Example of a sample run on a commercial mass spectrometer]{Example of a sample run on a commercial mass spectrometer. The abundance across each sample run is normalized. The spectrum at a particular time is shown on the left for a given sample run as temperature increases with time following the distribution shown on the right. The dashed red line represents the time and temperature sample currently being shown}
     \label{fig:commerical-data}
 \end{figure}
 \end{landscape}
@@ -233,7 +233,7 @@ As outlined in section 5, data augmentation became necessary before developing M
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.9\linewidth]{chapter8/figs/train_test_split.png}
-    \caption{\textit{Left} Distribution of labels as a function of total percentage. \textit{Right} Distribution of test and training split of the data. }
+    \caption[Test and training data split]{\textit{Left} Distribution of labels as a function of total percentage. \textit{Right} Distribution of test and training split of the data. }
     \label{fig:train_test_split}
 \end{figure}
 
@@ -293,7 +293,7 @@ We test our implementation using the available PyTorch Image Models (through mod
 \begin{figure}
     \centering
     \includegraphics[width=\linewidth]{chapter8/figs/Image-cnn.png}
-    \caption{Schematic of the image-based CNN network that takes input spectral data to classify the constituent chemical signatures. The input images are first passed through the pre-trained layers in the network and then through the modified last layer for classification. The input image represents the normalized abundance with mass over charge and time through the sample run.}
+    \caption[Schematic of the image-based CNN network used on Mars data]{Schematic of the image-based CNN network that takes input spectral data to classify the constituent chemical signatures. The input images are first passed through the pre-trained layers in the network and then through the modified last layer for classification. The input image represents the normalized abundance with mass over charge and time through the sample run.}
     \label{fig:2dd-cnn}
 \end{figure}
 
@@ -330,12 +330,12 @@ The image-based CNN network can classify most of the chemical signatures with ap
 
 Based on the results from these models, future directions to improve the models performance are discussed in \cref{subsec:way-forward}. In addition to the models presented above, several other models were explored that are summarized in \cref{subsec:unsucessful_models}. 
 
-\subsection{Immediate Way Forward}\label{subsec:way-forward}
+% \subsection{Immediate Way Forward}\label{subsec:way-forward}
 
-The varying results for identifying a chemical compounds in the classical ML classifiers (see \ref{subsec:semi-supervised}), point to the different capabilities of each of the two models. Therefore, exploring other ensemble methods like Gradient Boosting could provide further improvements. Ultimately, the choice between models may depend on the application context, where different trade-offs between precision and recall are necessary, such as favoring models with higher recall for cases where false negatives are particularly costly.\\ The preferred step forward would be testing more classifiers and combining the advantages of each classifier in an ensemble configuration maximising individual label accuracy.\\ From our preliminary analysis with bootstrapping and averaging of the models' results, no improvement over the 2D-CNN network was found, and therefore a more careful implementation of an ensemble model is needed.\\
-The next step to enhance the robustness of our ML models involves applying the clustering algorithm (as discussed in Section \ref{subsec:semi-supervised}) to all Mars samples. This will help  identify intermediate spectra labels and potentially uncover any missing labels. By incorporating the labeled spectra obtained from the clustering process into our ML models, it can be assessed whether this additional information improves their performance. \\
+% The varying results for identifying a chemical compounds in the classical ML classifiers (see \ref{subsec:semi-supervised}), point to the different capabilities of each of the two models. Therefore, exploring other ensemble methods like Gradient Boosting could provide further improvements. Ultimately, the choice between models may depend on the application context, where different trade-offs between precision and recall are necessary, such as favoring models with higher recall for cases where false negatives are particularly costly.\\ The preferred step forward would be testing more classifiers and combining the advantages of each classifier in an ensemble configuration maximising individual label accuracy.\\ From our preliminary analysis with bootstrapping and averaging of the models' results, no improvement over the 2D-CNN network was found, and therefore a more careful implementation of an ensemble model is needed.\\
+% The next step to enhance the robustness of our ML models involves applying the clustering algorithm (as discussed in Section \ref{subsec:semi-supervised}) to all Mars samples. This will help  identify intermediate spectra labels and potentially uncover any missing labels. By incorporating the labeled spectra obtained from the clustering process into our ML models, it can be assessed whether this additional information improves their performance. \\
 
-The performance of our models can also be tested on a different MS dataset. Similar to EGA, data from Gas Chromatography Mass Spectrometer (GCMS) from SAM and commercial instruments is publicly hosted by NASA's MSL PDS archive. The GCMS data, which involves longer sample runs and a different set of chemical signatures compared to EGA, is considered a valuable dataset. The same data pre-processing and augmentation techniques used for the EGA dataset will be applied to the GCMS data, and the performance of our models with this new dataset will be evaluated. 
+% The performance of our models can also be tested on a different MS dataset. Similar to EGA, data from Gas Chromatography Mass Spectrometer (GCMS) from SAM and commercial instruments is publicly hosted by NASA's MSL PDS archive. The GCMS data, which involves longer sample runs and a different set of chemical signatures compared to EGA, is considered a valuable dataset. The same data pre-processing and augmentation techniques used for the EGA dataset will be applied to the GCMS data, and the performance of our models with this new dataset will be evaluated. 
 
 
 \subsection{Unsuccessful Models} \label{subsec:unsucessful_models}

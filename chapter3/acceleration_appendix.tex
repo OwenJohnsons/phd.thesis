@@ -1,4 +1,4 @@
-\chapter{Acceleration Searching}
+\chapter{Acceleration Searching} \label{appen:zparams}
 
 Searching for binary pulsars requires a slightly different approach as the motion of the system causes the observed pulse frequency to smear across the Fourier bins \citep{ng_high_2015}, in turn this reduces the sensitivity of the search. A solution to this is to split up the search into smaller time intervals and assume that the radial velocity is a constant on this timescale. This can be shown to be a good approximation for $P_b/10$. \\ 
 The spin frequency, $f_{\text{spin}}$ and the time of pulse emission, $t_{\text{pulse}}$ the pulsar's phase can be expressed as, $\phi_p = f_{\text{spin}}t_{\text{pulse}}$. Moreover, the pulse time can be expressed as the time of arrival from the pulsar, $d(t_0)$, 
@@ -47,4 +47,4 @@ Searching is carried out using \texttt{accelsearch} which searches the FFT time 
     z \simeq \dot f T^2_{\text{obs}}
 \end{equation}
 
-Where $T_{\text{obs}}$ is the length of the observation. The search is carried out over a range of accelerations which can be based on \cref{eq:constant_accel} if the physical quantities are known. A list of the known orbital parameters for the two candidates is given in \cref{tab:orbital-parameters} along with resultant z values.
+Where $T_{\text{obs}}$ is the length of the observation. The search is carried out over a range of accelerations which can be based on \cref{eq:constant_accel} if the physical quantities are known. This is the means with informed the $z$-parameters used throughout \cref{chap:redback}

@@ -1,10 +1,10 @@
-\section{Constraining the Prevalence of High Energy GRBs using VLF measurements of the Ionosphere}
+\section{Constraining the Prevalence of High Energy GRBs}
 
 Similarly to GReX some preliminary work was carried out to use constrain the prevalence of Gamma Ray Bursts (GRBs) using a global Very Low Frequency (VLF) network to which there is a station in Birr. VLF monitoring is carried out using a global network of continuously operating transmitters and receivers. Each transmitter emits stable radio waves  (table \ref{tab:VLFstations}) from 15-30~kHz ranging from powers of kW to MW. These signals propagate throughout the ionosphere and VLF stations continuously record the amplitude and wave phase. As the waves are stable any variation can be attributed to the ionosphere and thus used as a tool to monitor fluctuations. By monitoring these signals continuously across many receiver paths high time resolution measurements of ionospheric disturbances produced by solar flares, lightning, energetic particle precipitation, and GRBs have been observed. 
 
 GRBs are the most energetic explosions in the Universe (other than the Big Bang). They can last on timescales of a few milliseconds to hours and release in a few seconds more energy than the Sun will in its entire lifetime. They were first discovered in 1967 \citep{1973_Klebs} by the \textit{Vela} military satellites.  There are two classes of progenitors that cause GRBs, collapsars which are associated with long GRBs and mergers which are associated with short GRBs \citep{1993_kouvel}.  Collapsars arise from the core-collapse of a massive star $(>8~\text{M}_\odot)$ and have known associations with broadlined Ic supernovae \citep{1998_galama, cotter_machine_2025}. Whereas, mergers manifest themselves in the form of merging compact binaries.
 
-The brighest GRB ever observed occurred in October 2022 and was subsequently dubbed the Brightest of All Time (BOAT). GRB 2022109A (herein BOAT) was first detected by \textit{Fermi} and \textit{Swift} with an energy of $10^{54}~\rm erg$ with a redshift of $z=0.151$ and was confirmed across the entire electromagnetic spectrum \citep{Williams_2023, 2023_shrin}.
+The brightest GRB ever observed occurred in October 2022 and was subsequently dubbed the Brightest of All Time (BOAT). GRB 2022109A (herein BOAT) was first detected by \textit{Fermi} and \textit{Swift} with an energy of $10^{54}~\rm erg$ with a redshift of $z=0.151$ and was confirmed across the entire electromagnetic spectrum \citep{Williams_2023, 2023_shrin}.
 
 \begin{table}[h]
 \centering
@@ -58,22 +58,32 @@ This disturbance prompted the exploration of the 4.63 years of VLF data collecte
  
 For each of the GRBs the data was plotted $\pm30$ minutes to see if any other prominent ionospheric disturbances could be seen in addition to the BOAT as shown in \cref{fig:BOATVLF}. Each of the bursts were looked through by eye, but there was no clear ionospheric disturbances shown from the population of GRBs that were observed during VLF data recording. 
 
-% \newpage
+
 Similar to the GReX calculations from the previous sections constraints can be placed on the occurrence rate of high energy GRBs through VLF measurements. Taking the observing time as 4.63 years, the `on-time' as the fraction of observed GRBs\footnote{This assumes that \textit{Fermi}, ICECUBE and other similar observatories observe 100\% of GRBs.} to those detected (0.35) and the assumption that at some fluence GRBs will always disturb the ionosphere. This gives a 1.621 sky yrs. Using \cref{eq:k1_p} again, as its also one event the postier Gamma distribution is $\Gamma(2,\tau_1)$ where $\tau_1$ is the rate parameter which is equal to 1.621. The posterior peaks at an event rate of $0.62~\text{sky}^{-1}~\text{yr}^{-1}$ while the posterior mean is $1.23~\text{sky}^{-1}~\text{yr}^{-1}$. The corresponding 68\% and 95\% credible intervals are $0.44-2.03~\text{sky}^{-1}~\text{yr}^{-1}$ and $0.15-3.44~\text{sky}^{-1}~\text{yr}^{-1}$ respectively. As there is only one event detected, the posterior is quite broad. As VLF antennas are cheap to build and already have global infrastructure. One of the next steps forward in this programme would be to build a network of VLF receivers distributed across Ireland would provide multiple independent propagation paths through the ionosphere, enabling the spatial localisation of disturbances and with increased on sky time would further constrain ionospheric response to GRBs. 
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.9\linewidth]{chapter8/plots/GRB_ionosphere_poisson_posterior.pdf}
+    \includegraphics[width=0.85\linewidth]{chapter8/plots/GRB_ionosphere_poisson_posterior.pdf}
     \caption{Posterior distribution of GRB event rate $\lambda$ with shaded 95\% credible interval.}
     \label{fig:GRBposterior}
 \end{figure}
 
+% \newpage
+
+\newpage
+
+
 
 \begin{figure}
     \centering
-    \includegraphics[width=\linewidth]{chapter8/plots/1GRB221009A.png}
+    \includegraphics[width=0.9\linewidth]{chapter8/plots/1GRB221009A.png}
     \caption{Example output from scraper scripts showing VLF data $\pm30$ minutes of a noted GRB emission. }
     \label{fig:BOATVLF}
 \end{figure}
 
+\clearpage
+% \thispagestyle{empty}
+% \null
+% \clearpage
 
+% \newpage

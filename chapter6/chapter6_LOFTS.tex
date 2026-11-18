@@ -2,22 +2,22 @@
 
 \epigraph{\small\itshape “Ever tried. Ever failed. No matter. Try Again. Fail again. Fail better.” \raggedleft\par--- \textup{Samuel Beckett}}
 
-This chapter describes the planning and execution of the LOw Frequency Pulsar, Fast Radio Burst, and Technosignature Survey (LOFTS). The work presented forms part of a broader collaborative programme comprising multiple ongoing studies, in which the author has contributed as either the lead or a co-author. The chapter is based on a manuscript currently in preparation but has been substantially revised and expanded to avoid repetition with the material presented in the previous chapter and to provide additional context where appropriate.
+This chapter describes the planning and execution of the LOw Frequency Pulsar, Fast Radio Burst, and Technosignature Survey (LOFTS). The work presented forms part of a broader collaborative programme comprising multiple ongoing studies, in which the author has contributed as the lead author. The chapter is based on a manuscript currently in preparation but has been substantially revised and expanded to avoid repetition with the material presented in the previous chapter and to provide additional context where appropriate. LOFTS has been used repeatedly as a project to introduce and train students in low-frequency technosignature science through the Breakthrough Listen research experiences for undergraduates programme, which the author and Aaron Golden co-supervise. The students who have contributed to the LOFTS project over the past two years, in alphabetical order, are Syzmon Kozak, Naoise Lowry, Zainab Rehman and Oto Ulrich. 
 
-The final section of this chapter presents work carried out over the past several years on the first technosignature search conducted with the NenuFAR radio telescope and current progress of the project.
+The final section of this chapter presents work carried out over the past several years on the first technosignature search conducted with the NenuFAR radio telescope, as well as the project's current progress.
 
 
 \section{Introduction} \label{sec:intro}
 
-\Cref{sec:SETIchapter} outlined the first dual-site technosignature survey using LOFAR. This study demonstrated the advantages of using geographically distant telescopes to reject terrestrial interference while also setting the most stringent constraints on narrowband technosignatures in the low frequency regime $(<200~\text{MHz})$. The next step for continuing this work was to observe for longer, search for more types of transients both natural and artifical along with implementing further improvements that have been established in the literature since the first survey's observations were carried out. 
+\Cref{sec:SETIchapter} outlined the first dual-site technosignature survey using LOFAR. This study demonstrated the advantages of using geographically distant telescopes to reject terrestrial interference while also setting the most stringent constraints on narrowband technosignatures in the low-frequency regime $(<200~\text{MHz})$. The next step for continuing this work was to observe for longer, search for more types of transients both natural and artifical along with implementing further improvements that have been established in the literature since the first survey's observations were carried out. 
 
 \subsection{Motivation}
 
-The broader motivations for doing technosignature surveys remain the same as previously outlined. Historically, technosignature surveys have utilized large single-dish telescopes operating at frequencies above 1 GHz \citep{Siemion_KEPLER_ApJ, Price2020}. Technosignature searches often target narrowband radio emissions, but there is no \textit{a priori} reason to prefer any specific part of the radio spectrum, necessitating surveys across a broad range from 30 MHz to 100 GHz \citep[\cref{fig:chap1SETIfreq},][]{Ng2022}. This also extends to the type of technosigantures that are searched for, as will be later discussed, LOFTS extends the technosignature search to two other type of technosignatures that have previously been neglected at this frequency. 
+The broader motivations for doing technosignature surveys remain the same as previously outlined. Historically, technosignature surveys have utilised large single-dish telescopes operating at frequencies above 1 GHz \citep{Siemion_KEPLER_ApJ,danny-parkes}. Technosignature searches often target narrowband radio emissions, but there is no \textit{a priori} reason to prefer any specific part of the radio spectrum, necessitating surveys across a broad range from 30 MHz to 100 GHz \citep[\cref{fig:chap1SETIfreq},][]{ng_search_2022}. This also extends to the type of technosigantures that are searched for, as will be later discussed, LOFTS extends the technosignature search to two other type of technosignatures that have previously been neglected at this frequency. 
 
-This survey was designed with also with ancillary science in mind. Technosignature survey's can in tandem with technosignatures focus on other transient phenomena, such as pulsars, Fast Radio Bursts (FRBs), long period transients (LPTs) and flare stars. By targeting both technosignatures and other transients, the LOFTS survey aims to maximize its scientific impact, contributing valuable data to multiple areas of astrophysics. 
+This survey was also designed with ancillary science in mind. Technosignature survey's can in tandem with technosignatures focus on other transient phenomena, such as pulsars, Fast Radio Bursts (FRBs), long period transients (LPTs) and flare stars. By targeting both technosignatures and other transients, the LOFTS survey aims to maximise its scientific impact, contributing valuable data to multiple areas of astrophysics. 
 
-This survey was also motivated by the circumstances of the upgrade to LOFAR2.0\footnote{\href{https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://www.lofar.eu/wp-content/uploads/2023/04/LOFAR2_0_White_Paper_v2023.1.pdf&ved=2ahUKEwjHnrOH3ciHAxU-EkQIHfa6DJUQFnoECBEQAQ&usg=AOvVaw0ze94uccrly_yfSru4PsCZ}{LOFAR2.0 White Paper - v2023.1}}. As mentioned in \cref{sec:upgradetoLOFAR2}, LOFAR typically operates in international mode, utilizing all stations across Europe. As a result, the stations only operate in standalone mode on average two days a week, which allows for smaller-scale projects coordinated by science users. However, the commissioning of LOFAR 2.0 began in September 2024 at the core stations in Dwingeloo. Since then, international stations have been operating in standalone mode 24/7, providing an abundance of observing time for projects such as LOFTS.
+This survey was also motivated by the circumstances of the upgrade to LOFAR2.0\footnote{\href{https://www.google.com/url?sa=t&source=web&rct=j&opi=89978449&url=https://www.lofar.eu/wp-content/uploads/2023/04/LOFAR2_0_White_Paper_v2023.1.pdf&ved=2ahUKEwjHnrOH3ciHAxU-EkQIHfa6DJUQFnoECBEQAQ&usg=AOvVaw0ze94uccrly_yfSru4PsCZ}{LOFAR2.0 White Paper - v2023.1}}. As mentioned in \cref{sec:upgradetoLOFAR2}, LOFAR typically operates in international mode, utilizing all stations across Europe. As a result, the stations only operate in standalone mode on average two days a week, which allows for smaller-scale projects coordinated by science users. However, the commissioning of LOFAR 2.0 began in September 2024 at the core stations in Exloo. Since then, international stations have been operating in standalone mode 24/7, providing an abundance of observing time for projects such as LOFTS.
 
 
 % \begin{figure}[t]
@@ -28,15 +28,15 @@ This survey was also motivated by the circumstances of the upgrade to LOFAR2.0\f
 % \end{figure}
 
 \subsection{Technosignatures}
- \cite{johnson_simultaneous_2023} employed international stations, SE607 and IE613 to conduct the most comprehensive search for technosignatures at sub 650~MHz. Using LOFAR's wide field of view \citep{LOFAR_instrument}, over 1.6 million stars were observed over the course of 10 hours of observations. This study also showcased how dual-site observations can be used to eliminate all narrowband false positives from the observations. This resulted in the tightest constraints ever produced in the emergence of intelligent civilizations in this frequency regime.
+ \cite{johnson_simultaneous_2023} employed international stations, SE607 and IE613 to conduct the most comprehensive search for technosignatures at sub 650~MHz. Using LOFAR's wide field of view \citep{van_haarlem_lofar_2013}, over 1.6 million stars were observed over the course of 11 hours of observations. This study also showcased how dual-site observations can be used to eliminate all narrowband false positives from the observations. This resulted in the tightest constraints ever produced in the emergence of intelligent civilizations in this frequency regime.
 
 The next step for a technosignature survey at low frequencies is to significantly expand the volume of stars observed by covering more of the sky. This is achieved by increasing both the time of each observation and the quantity of observations using both stations. In addition to narrowband signals, two more types of technosignatures will also be surveyed, such as periodic spectral signals \citep{edmondson_utilization_2003, suresh_48_2023} and artificially dispersed transient signals \citep{2022VishalPulsed}. 
 
 The former proposes that rather than transmitting a continuous narrowband signal, an engineered transmitter could intentionally modulate in emission and time, producing a periodic pattern that is easily characterized as artificial (i.e. radar communications). The signal itself consists of a narrowband carried that intensities turns on and off at some given interval. The period itself depends on the transmitter design but taking PSS signals on Earth as example this would be somewhere within the range of milliseconds to seconds. 
 
-Whereas the latter uses FRBs as a starting point. In this context its thought that a signal might be intentionally engineered to mimic that of dispersed signal, like FRBs. The anthropomorphic thing about these signals from nature is that they would exhibit either an inverted DM sweep (transposed frequency), inverted sweep in time (transposed time) or both, shown in \cref{fig:artificalFRBs}. Other civilisations may intentionally mimic a signal due to its unnatural characteristics, there is also the argument to be made that a broad band signal has less chance of being missed in comparison to its narrowband counterparts. There has also been some discussion of what technology such a signal could be a byproduct of, this includes light sail propulsion or some high-powered radio beam but as with all technosignatures this remains speculative \citep{lingam_fast_2017}. 
+Whereas the latter uses FRBs as a starting point. In this context, its thought that a signal might be intentionally engineered to mimic that of dispersed signal, like FRBs. The anthropomorphic thing about these signals from nature is that they would exhibit either an inverted DM sweep (transposed frequency), inverted sweep in time (transposed time) or both, shown in \cref{fig:artificalFRBs}. Other civilisations may intentionally mimic a signal due to its unnatural characteristics, there is also the argument to be made that a broad band signal has less chance of being missed in comparison to its narrowband counterparts. There has also been some discussion of what technology such a signal could be a byproduct of, this includes light sail propulsion or some high-powered radio beam but as with all technosignatures this remains speculative \citep{lingam_fast_2017}. 
 
-\begin{figure}[h]
+\begin{figure}[htbp]
     \centering
     \includegraphics[width=0.95\linewidth]{chapter6/figures/artifical_FRBs.pdf}
     \caption[Simulated dispersed FRB-like signals]{Simulated artificial FRBs-like dispersed signals at a DM of 3000~\dm in LOFAR's HBA band. Left to right shows a dispersed signal with transposed time, transposed frequency and transposed time and frequency. This figure is adapted from \cite{2022VishalPulsed}.}
@@ -45,7 +45,7 @@ Whereas the latter uses FRBs as a starting point. In this context its thought th
 
 \subsection{Transients}
 
-International LOFAR stations are able to detect novel transients in their own right \citep[i.e.][]{MCKENNA}, making the these stations equally valuable to transients science as technosignatures. As will later be outlined in this chapter an array of data products are generated to match both the frequency and temporal resolutions required to search for a plethora of transients. This includes Pulsars, RRATs, LPTs, FRBs and radio flare stars. 
+International LOFAR stations can detect novel transients in their own right \citep[i.e.][]{mckenna_census_2024}, making the these stations equally valuable to transients science as technosignatures. As will later be outlined in this chapter an array of data products are generated to match both the frequency and temporal resolutions required to search for a plethora of transients. This includes Pulsars, RRATs, LPTs, FRBs and radio flare stars. 
 
 Searching for these objects is the primary driver in the increased observation times for each pointing in this survey from 15 to 80 minutes. 
 
@@ -53,7 +53,7 @@ Searching for these objects is the primary driver in the increased observation t
 
 \section{Observation Strategy}\label{sec:LOFTSobs}
 
-A total of 12--24 hours a week have been allocated to LOFTS since October 2024. This takes place on Wednesdays from 18:00 for 24 hours. On weeks when solar observations take precedence, LOFTS observations are run for 12 hours during the nights to minimize the amount of RFI. Due to the nature of the narrowband drifting signals that are expected from technosignatures, the use of a drift scan observation approach is untenable. This is due to the longer time samples and that a centred star would remain within the FWHM for only 20~mins at 150~MHz if centred on bore sight. There is approximately a difference of 80~mins in Local Sidereal Time (LST) between the Irish and Swedish stations. To maximise the sensitivity each pointing starts 40 minutes before zenith the midpoint in latitude and longitude and tracks the sky for 80 minutes. The following observation then re-starts again at that point, and so on. This means that at some point in the observation the patch of sky being observed is at zenith for both the stations either at the start (Ireland) or end (Sweden) of the observation. When then declination has been sufficiently sampled observations are then moved by $\pm2.59^\circ$ (FWHM at 150~MHz) to cover new regions of the sky (see his observation time has been chosen to increase the sensitivity to each of the transients of interest and align with the difference in local sidereal time (LST) between the two stations, which is also 80 minutes. The HBA beam sensitivity of a LOFAR station can be roughly approximated with respect to zenith angle with the following formula,
+A total of 12--24 hours a week have been allocated to LOFTS since October 2024. This takes place on Wednesdays from 18:00 for 24 hours. On weeks when solar observations take precedence, LOFTS observations are run for 12 hours during the nights to minimize the amount of RFI. Due to the nature of the narrowband drifting signals that are expected from technosignatures, the use of a drift scan observation approach is untenable. This is due to the longer time samples and that a centred star would remain within the FWHM for only 20~mins at 150~MHz if centred on bore sight. There is approximately a difference of 80~mins in Local Sidereal Time (LST) between the Irish and Swedish stations. To maximise the sensitivity each pointing starts 40 minutes before zenith the midpoint in latitude and longitude and tracks the sky for 80 minutes. The following observation then re-starts again at that point, and so on. This means that at some point in the observation the patch of sky being observed is at zenith for both the stations either at the start (Ireland) or end (Sweden) of the observation. When the declination has been sufficiently sampled observations are then moved by $\pm2.59^\circ$ (FWHM at 150~MHz) to cover new regions of the sky. This observation time has been chosen to increase the sensitivity to each of the transients of interest and align with the difference in local sidereal time (LST) between the two stations, which is also 80 minutes. The HBA beam sensitivity of a LOFAR station can be roughly approximated with respect to zenith angle with the following formula,
 
 \begin{equation}
     S(\theta) = S_0 \cdot \cos^2 \theta_{ZA}
@@ -62,7 +62,7 @@ A total of 12--24 hours a week have been allocated to LOFTS since October 2024. 
 
 Where $S_0$ is zenith sensitivity which optimizes sensitivity because the effective area increases as the angular separation from the zenith decreases. In reality modelling the response of a LOFAR station is quite complex and difficult to accurately determine for a comprehensive overview of how HBA sensitivity is characterised, please see \cite{Vincetti2026}. Every 8 hours there is also a 12--15 minute observation of B1508+55 or B0329+54 dependent on LST, this is done for pipeline verification purposes. If any of the observations are found to have emission of interest manual follow-up will be carried out with both stations. 
 
-\begin{figure}[h]
+\begin{figure}[htbp]
     \centering
     \includegraphics[width=0.9\linewidth]{chapter6/figures/SNR_vs_Elevation.pdf}
     \caption[24-hour pulsar transit of B1508 with I-LOFAR]{Observation of PSR B1508+55 across a single 24 hour track with the I-LOFAR HBA. Each data point represents a 15-min folded slice of the pulsar. \Cref{eq:cos2za} is also fitted to the data. Figure adapted from \cite{Vincetti2026}.}
@@ -74,7 +74,7 @@ Where $S_0$ is zenith sensitivity which optimizes sensitivity because the effect
 
 At the time of writing there has 278 LOFTS observations recorded, this equates to just over 370 hours on each individual. The observations amount to a sky coverage of $5858\deg^2$, A master database detailing these observations and associated metadata is kept along with pipeline progress, this table has been omitted from this thesis as it provides little value to the reader but is available upon request. For each of these observation science usable data has been generated as outline in \cref{tab:lofts_frequency_products} and the pointing directions are shown in \cref{fig:LOFTSaitoff}. 
 
-\begin{figure}[h]
+\begin{figure}[htbp]
     \centering
     \includegraphics[width=0.99\linewidth]{chapter6/figures/lofts_pointings.png}
     \caption[LOFTS sky coverage]{Aitoff projections of LOFTS observations to date. The \textit{left} shows sky coordinates and the \textit{right} shows Galactic co-ordinates where the dotted line represents the extent of the Galactic plane.}
@@ -86,10 +86,10 @@ The first observation runs were giving preference to the Swedish station which i
 
 \subsection{Data Collection and Processing}
 
-Observations are executed using iLiSA, which records received UDP packets of beam-formed data and writes them to disk both in Ireland and Sweden similarly to \cref{sec:SETIchapter}. The recorded data are coarse-channelized complex voltages recorded using LOFAR's $200$-MHz clock~\citep{LOFAR_instrument}, with native frequency and time resolutions of $195.3125$~kHz and $5.12\;\upmu$s respectively. Due to the increased observing cadence of LOFTS a fully automated processing pipeline\footnote{\url{https://github.com/OwenJohnsons/LOFTS-Scripts}} was developed to generate the science data products and remove voltages. HBA voltage data is about $3.04$~GB/sec (uncompressed) which rapidly fills up disks and bottlenecks the backend. A high-level overview of the pipeline can be seen \cref{fig:LOFTSpipeline}, the voltages in the pipeline were handled in the same way as outlined in \cref{sec:SETI_obs_descrip}, for this study ancillary science data products were refined and produced to the specifications as shown in \cref{fig:LOFTSpipeline}. Once the data is generated it is sorted by date and placed into `short' term storage for data analysis on the BL backend. Filterbanks aren't deleted off disk, but due to the age of the system and lifetime of hard disk drives, as much of the data is transferred to Linear Tape-Open (LTO) tapes to retain redundancy. LTO tapes are rated to have an expected lifetime of 25+ years, making them viable long term storage solution.  I-LOFAR's long term archive is called `archie' which is based in Technical University of the Shannon in Athlone which has a direct fibre link to I-LOFAR in Birr.
+Observations are executed using iLiSA, which records received UDP packets of beam-formed data and writes them to disk both in Ireland and Sweden similarly to \cref{sec:SETIchapter}. The recorded data are coarse-channelized complex voltages recorded using LOFAR's $200$-MHz clock~\citep{van_haarlem_lofar_2013}, with native frequency and time resolutions of $195.3125$~kHz and $5.12\;\upmu$s respectively. Due to the increased observing cadence of LOFTS a fully automated processing pipeline\footnote{\url{https://github.com/OwenJohnsons/LOFTS-Scripts}} was developed to generate the science data products8 faf and remove voltages. HBA voltage data is about $3.04$~Gb/sec (uncompressed), which rapidly fills up disks and bottlenecks the backend. A high-level overview of the pipeline can be seen \cref{fig:LOFTSpipeline}, the voltages in the pipeline were handled in the same way as outlined in \cref{sec:SETI_obs_descrip}, for this study ancillary science data products were refined and produced to the specifications as shown in \cref{fig:LOFTSpipeline}. Once the data is generated it is sorted by date and placed into `short' term storage for data analysis on the BL backend. Filterbanks aren't deleted off disk, but due to the age of the system and lifetime of hard disk drives, as much of the data is transferred to Linear Tape-Open (LTO) tapes to retain redundancy. LTO tapes are rated to have an expected lifetime of 25+ years, making them viable long term storage solution.  I-LOFAR's long term archive is called `archie' which is based in Technical University of the Shannon in Athlone which has a direct fibre link to I-LOFAR in Birr.
 
 
-\begin{figure}[h]
+\begin{figure}[htbp]
     \centering
     \includegraphics[width=0.95\linewidth]{chapter6/figures/LOFTS-pipeline.final.png}
     \caption[LOFTS pipeline overview]{High level overview of the LOFTS pipeline showing the workflow from observation planning to data analysis. Identical pipelines are executed on both of the LOFAR stations.}
@@ -99,7 +99,7 @@ Observations are executed using iLiSA, which records received UDP packets of bea
 
 Once each filterbank is created a number of scripts run on the newly generated data and makes some diagnostic plots that are posted to the BL slack along with any failed generation logs via an I-LOFAR bot. An example of a narrowband plot is shown in \cref{fig:LOFTSnarrowbandexample}. \Cref{fig:LOFTSnarrowbandexample} is also a good example of a `scalloping' effect that rises from the spectral leakage from the PFB which was discussed in \cref{sec:polyphase_theory}. This effect appears more exaggerated here as the channels are zoomed in on, but the same effect is observed in the all the data products. Following this each data product undergoes different analysis pipelines depending on their science use case which will be outlined below. The benefit of using two identical backends on two identical stations is the technosignature and transient candidates can be cross-referenced as used for coincidence rejection as previously outlined. 
 
-\begin{table}[h]
+\begin{table}[htbp]
 \centering
 \begin{tabular}{lccccp{5.5cm}}
 \hline \hline 
@@ -117,7 +117,7 @@ Once each filterbank is created a number of scripts run on the newly generated d
 \end{table}
 
 
-\begin{figure}[h]
+\begin{figure}[htbp]
     \centering
     \includegraphics[width=0.95\linewidth]{chapter6/figures/LOFTS0267.rawspec.0000.png}
     \caption[Narrowband waterfall diagnostic from automated pipeline]{Example of diagnostic waterfall plot of narrowaband data product (0000.fil) for LOFTS0267 sent into BL Slack channel }
@@ -126,24 +126,13 @@ Once each filterbank is created a number of scripts run on the newly generated d
 
 
 
-\subsection{RFI Excision} \label{sec:RFI}
 
-Radio frequency interference (RFI) plagues all modern radio astronomy data as outlined throughout this thesis. In the case of searching for new transients its vital to remove as much persistent and periodic RFI as possible, if the noise floor is too high many natural signals from novel targets will be missed. In addition to using tools like \textsc{rfimask} \citep{ransom_new_2001} some preliminary work was carried out to explore other ways clean the data. One method that was tested was to take an averaged spectrum every 10\% ($\sim 8~\rm mins$) of each observation using the narrowband data product, $f_\text{res} \sim 3 ~\rm Hz$.  These spectra were then compared to an ideal (no RFI) HBA band-pass. Then several statistical properties of every frequency channel were calculated both relative to nearby channels and throughout the entire observation. An Isolation Forest was then used to identify which channel statistics differed significantly from the majority, marking them as anomalous. Initial test where any temporal or frequency anomalies that were above $6\sigma$ for more than 60\% of each 10\% chunk are marked as RFI. Any channels that were present had RFI present for more than 80\% of the total LOFTS observations were permanently masked during observations. An example of a mask generated from a LOFTS observation is shown in \cref{fig:RFI-mask}. Other more complex methods such as convolution neural networks (CNNs) and Generative Adversarial Networks (GANs) were tested but produced diminishing returns for their added complexity, labelling and resulting mask. These masks worked well on the test observations removing most notable RFI when examined by eye. The next extension of this work would to carry out S/N recovery of pulsar observations using different various RFI methods and combinations. There is also room to experiment with other classical machine learning methods like Density-Based Spatial Clustering of Applications with Noise (DBSCANs) to compare their computational and masking efficiency against the provisional results. 
-
-% \begin{landscape}
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=0.85\linewidth]{chapter6/figures/RFI-mask.png}
-    \caption[Example LOFTS RFI Mask]{The RFI mask applied non-technosignauture searches, top IE613, bottom SE607. Blue is the average spectrum in $\sim8$ minute chunks from all full-band LOFTS observations. The black is the `ideal' response from an international station which is used for cross-correlation.}
-    \label{fig:RFI-mask}
-\end{figure}
-% \end{landscape}
 
 \subsection{De-dispersion} \label{sec:DDisperse}
 
 For the non-artificial fast transients (FRBs, LPTs, RRATs and Pulsars) the data must be de-dispersed to account for pulse broadening that occurs due to propagation through the ISM known as DM as discussed in \cref{sec:DispersionMeasure}. Without these corrections, pulses would be smeared, resulting in a loss of signal-to-noise and potential non-detection of an otherwise detectable pulse. DM accuracy changes as a function of pulse-width so when using the HBA the relative S/N loss decreases significantly with pulse width, becoming negligible 45.32~seconds as shown in \cref{fig:LOFTS_HBA_graphs}.  Pulse widths of this order are expected from LPTs. The values used for de-dispersing for this survey DM values from 0-600 \dm are processed. The DM ceiling is chosen due to the dominance of scattering at the lower end of the band, which is the majority contribution $(844.21~\rm ms)$ at 600 \dm. For an in-depth de-dispersion plan and means of calculations, please see appendix \ref{appen:low-frequency-dd}.
 
-\begin{figure}[h]
+\begin{figure}[htbp]
     \centering
         \centering
         \includegraphics[width=0.8\linewidth]{chapter6/figures/snr_vs_dm_HBA.pdf}
@@ -175,7 +164,7 @@ To address this issue at low frequencies the one the potential solutions is to c
 
 Where $A$ is the amplitude, $x_0$ is the central frequency, and $\gamma$ is the half-width at half-maximum (HWHM), with $\mathrm{FWHM}=2\gamma$. Presently there is ongoing work that injected broaden functions into LOFTS data and benchmarks the recovery performance of the standard \textsc{BLISS} pipeline and an extension of \textsc{BLISS} that uses a Lorentzian function to retrieve the signal. 
 
-\begin{figure}[h]
+\begin{figure}[htbp]
     \centering
     \includegraphics[width=0.8\linewidth]{chapter6/figures/fig3_standard_detectability.png}
     \caption[BLISS detection sensitivity]{The 50\% detection threshold of the standard \textsc{BLISS} search as a function of injected signal width and Doppler drift rate. Wider signals require progressively larger injected SNRs to achieve the same detection probability, demonstrating the sensitivity loss caused by spectral broadening. Credit Naoise Lowry}
@@ -186,14 +175,14 @@ This loss in sensitivity motivates the use of a width-aware matched filter \cref
 
 \subsection{Artificially Dispersed Technosignatures}
 
-As mentioned another technosignature that can be searched for are those that are artificially dispersed. This is done using \textsc{SPANDAK}\footnote{Spandak is hindu for pulsator.} \citep{2022VishalPulsed} which is a GPU-accelerated single pulse search pipeline purpose built to find broadband pulsed technosignatures but also functions as an FRB or single pulse dectector as it is a modified version of Heimdall \citep{barsdell_accelerating_2012}. Heimdall is a software the de-disperes radio time series across an array of trial DMs. It then fits a boxcar function to the time series  looking for peaks in the de-dispersed data.  If the peak meets a certain S/N threshold which is set by the user (in this case 7.3) a list of candidates that meet this threshold are produced. These candidates have an associated DM, SNR, width and pulse time. 
+As mentioned another technosignature that can be searched for are those that are artificially dispersed. This is done using \textsc{SPANDAK}\footnote{Spandak is Hindi for pulsator.} \citep{2022VishalPulsed} which is a GPU-accelerated single pulse search pipeline purpose-built to find broadband pulsed technosignatures but also functions as an FRB or single pulse detector as it is a modified version of Heimdall \citep{barsdell_accelerating_2012}. Heimdall is a software that de-disperses radio time series across an array of trial DMs. It then fits a boxcar function to the time series, looking for peaks in the de-dispersed data.  If the peak meets a certain S/N threshold which is set by the user (in this case 7.3) a list of candidates that meet this threshold are produced. These candidates have an associated DM, SNR, width and pulse time. 
 
-This pulse search engine forms the core of SPANDAK. However, SPANDAK adds transformations to the inputted data by transposing the time, frequency and both axes to search for the three artificial dispersed signals outlined in the previous section. SPANDAK also does several consistency checks on each candidate by checking both the DM and SNR, candidates are grouped by proximity in time, dispersion measure, and signal-to-noise ratio with detections that fall within the same cluster are consolidated and reported as a single event. The resulting candidates set is then passed to a convolution neural network classifier. which ranks each of the events by how closely their de-disperesed time-frequency morphology matches a true broadband pulse. An example of SPANDAK being used on the Irish BL backend to detect a single pulse from B2217+47 is shown in \cref{fig:SPANDAK_example}. 
+This pulse search engine forms the core of SPANDAK. However, SPANDAK adds transformations to the inputted data by transposing the time, frequency and both axes to search for the three artificial dispersed signals outlined in the previous section. SPANDAK also does several consistency checks on each candidate by checking both the DM and SNR, candidates are grouped by proximity in time, dispersion measure, and signal-to-noise ratio with detections that fall within the same cluster are consolidated and reported as a single event. The resulting candidate set is then passed to a convolutional neural network classifier, which ranks each event by how closely its de-dispersed time-frequency morphology matches a true broadband pulse. An example of SPANDAK being used on the Irish BL backend to detect a single pulse from B2217+47 is shown in \cref{fig:SPANDAK_example}. 
 
 \begin{figure}
     \centering
     \includegraphics[width=0.95\linewidth]{chapter6/figures/SPANDAK_example.png}
-    \caption[Candidate plot of a pulse detected by the SPANDAK pipeline during an observation of B2217+47]{Candidate plot of a pulse detected by the SPANDAK pipeline during an observation of B2217+47. The top panel shows the averaged timeseries. The second panel shows a dedispered dynamic spectrum (waterfall). The third panel shows a dispersion measure against time spectrum. The plot to right shows the SNR averaged for various trial DMs. The final panel displays the undispersed dynamic spectrum, n}
+    \caption[Candidate plot of a pulse detected by the SPANDAK pipeline during an observation of B2217+47]{Candidate plot of a pulse detected by the SPANDAK pipeline during an observation of B2217+47. The top panel shows the averaged timeseries. The second panel shows a dedispered dynamic spectrum (waterfall). The third panel shows a dispersion measure against time spectrum. The plot to right shows the SNR averaged for various trial DMs. The final panel displays the undispersed dynamic spectrum where the pulse was found along with an overlay of the fitted DM curve.}
     \label{fig:SPANDAK_example}
 \end{figure}
 
@@ -210,9 +199,9 @@ As the dual-site observational setup doesn't use the on and off source tests a f
     \label{fig:BLIPPS_example}
 \end{figure}
 
-\subsection{Using Artificial Intelligence to find Extraterrestrial Intelligence}
+\section{Using Artificial Intelligence to find Extraterrestrial Intelligence}
 
-As with many areas of science especially those which are data intensive and require pattern recognition the use of machine learning (ML) has become every more prevalent in recent years. For technosignature surveys this is no different. The following section details some of the recent work that has been ongoing to introduce machine learning models into the LOFTS workflow. 
+As with many areas of science, especially those which are data intensive and require pattern recognition the use of machine learning (ML) has become every more prevalent in recent years. For technosignature surveys this is no different. The following section details some of the recent work that has been ongoing to introduce machine learning models into the LOFTS workflow. 
 
 \subsection{Deep Learning-Based Coincidence Matching} \label{sec:ml_rfi}
 
@@ -1462,7 +1451,7 @@ Training \\(Sweden)
 \end{tikzpicture}
 
 
-    \caption{Overview of the U-net architecture used in the LOFTS pipeline}
+    \caption{Overview of the U-Net architecture used in the LOFTS pipeline}
     \label{fig:Unet_arch}
 \end{figure}
 
@@ -1483,7 +1472,7 @@ d \geq \tau, & \text{if the pair is not a match (RFI)}.
 \end{cases}
 \end{equation}
 
-This method learns to recognise matching signals even when they differ slightly in morphology because of scintillation or changes in local noise between the station, oppose to the alternative sample by sample cross correlation. Preliminary testing with synthetic narrowband and pulsed signals injected into real LOFAR observations shows that the network can reliably distinguish genuine coincident signals from unrelated RFI for S/N ratios between 1.5 and 10 which makes it a very promising tool for the future as shown in \cref{fig:unetHistogram.pdf}
+This method learns to recognise matching signals even when they differ slightly in morphology because of scintillation or changes in local noise between the station, oppose to the alternative sample by sample cross correlation. Preliminary testing with synthetic narrowband and pulsed signals injected into real LOFAR observations shows that the network can reliably distinguish genuine coincident signals from unrelated RFI for S/N ratios between 1.5 and 10, which makes it a very promising tool for the future, as shown in \cref{fig:unetHistogram.pdf}
 
 \begin{figure}
     \centering
@@ -1494,33 +1483,51 @@ This method learns to recognise matching signals even when they differ slightly 
 
 % This method moves beyond simple pixel-wise cross-correlation; the network learns to identify signals as ``matching'' even when they exhibit minor morphological differences due to scintillation or local noise conditions. Preliminary validation, performed using synthetic narrowband and pulsed signals injected into real LOFAR observational backgrounds, demonstrates a distinct bimodal separation in the latent space for signals with Signal-to-Noise Ratios (SNR) ranging from 1.5 to 10, offering a robust framework for automated RFI rejection in future survey passes.
 
+\subsection{RFI Excision} \label{sec:RFI}
 
+% Radio frequency interference (RFI) plagues all modern radio astronomy data as outlined throughout this thesis. In the case of searching for new transients it's vital to remove as much persistent and periodic RFI as possible, if the noise floor is too high many natural signals from novel targets will be missed. In addition to using tools like \textsc{rfimask} \citep{ransom_new_2001} some preliminary work was carried out to explore other ways clean the data. One method that was tested was to take an averaged spectrum every 10\% ($\sim 8~\rm mins$) of each observation using the narrowband data product, $f_\text{res} \sim 3 ~\rm Hz$.  These spectra were then compared to an ideal (no RFI) HBA band-pass. Then several statistical properties of every frequency channel were calculated both relative to nearby channels and throughout the entire observation. An Isolation Forest was then used to identify which channel statistics differed significantly from the majority, marking them as anomalous. Initial test where any temporal or frequency anomalies that were above $6\sigma$ for more than 60\% of each 10\% chunk are marked as RFI. Any channels that were present had RFI present for more than 80\% of the total LOFTS observations were permanently masked during observations. An example of a mask generated from a LOFTS observation is shown in \cref{fig:RFI-mask}. 
+
+% Other more complex methods such as convolution neural networks (CNNs) and Generative Adversarial Networks (GANs) were tested but produced diminishing returns for their added complexity, labelling and resulting mask. These masks worked well on the test observations removing most notable RFI when examined by eye. The next extension of this work would to carry out S/N recovery of pulsar observations using different various RFI methods and combinations. There is also room to experiment with other classical machine learning methods like Density-Based Spatial Clustering of Applications with Noise (DBSCANs) to compare their computational and masking efficiency against the provisional results. 
+
+
+Radio frequency interference (RFI) plagues all modern radio astronomy data, as outlined throughout this thesis. When searching for new transients, it is vital to remove as much persistent and periodic RFI as possible, if the noise floor is too high, many natural signals from novel targets will be missed. In addition to using tools like \textsc{rfimask} \citep{ransom_new_2001}, some preliminary work was carried out to explore other ways to clean the data. One method that was tested was to take an averaged spectrum every 10\% ($\sim 8~\rm mins$) of each observation using the narrowband data product, $f_\text{res} \sim 3~\rm Hz$. These spectra were then compared to an ideal (RFI-free) HBA band-pass, and several statistical properties of every frequency channel were calculated, both relative to nearby channels and throughout the entire observation. An Isolation Forest was then used to identify which channel statistics differed significantly from the majority, marking them as anomalous. In an initial test, any temporal or frequency anomalies that were above $6\sigma$ for more than 60\% of each 10\% chunk were marked as RFI. Any channels that had RFI present for more than 80\% of the total LOFTS observations were permanently masked during observations. An example of a mask generated from a LOFTS observation is shown in \cref{fig:RFI-mask}. These masks worked well on the test observations, removing most notable RFI. A limitation of the approach is that the Isolation Forest flags a fixed fraction of channels set by its contamination parameter ($\sim 14\%$ for the configuration used here) regardless of how much RFI is actually present, so the resulting masks were inspected and adjusted by hand.
+
+Two supervised alternatives were also tested, a convolutional neural network (CNN) and a conditional Generative Adversarial Network (GAN). The CNN was in the form of a one-dimensional U-Net operating along the frequency axis. The GAN used the same U-Net to generate the mask while a discriminator judged spectrum-mask pairs. As no well labelled RFI masks yet exist for LOFTS, both were trained on simulated observations built from the ideal bandpass with gain variations, noise, and injected persistent narrowband, intermittent narrowband, and broadband RFI. All methods were then tested and benchmarked using simulations where the contaminated channels are predetermined and in the case of the supervised models, used for training. The Isolation Forest achieved an F1 score (the harmonic mean of precision and recall) of 0.75, compared to 0.996 for both networks. For RFI that was 4–10 times the channel noise, it recovered 41\% of the contaminated channels against 97\% for the networks. In simulations containing RFI morphologies absent from the training set, with higher noise and fewer spectra, the scores fell to 0.67 and 0.91, respectively. The CNN and GAN were indistinguishable in every test, so the adversarial training added complexity with no added benefit. A simple $5\sigma$ threshold on the same channel statistics reached an F1 score of 0.94 on the first test, indicating that much of the improvement comes from flagging relative to the noise level rather than flagging a fixed fraction of the band. The results at present are provisional these methods will be developed to determine the extent of application to real observations. As the networks were trained and tested on simulated data and have not yet been validated on real LOFTS observations this would be the first immediate extension of the work which would aim to validate the networks against the masks generated from real observations with other well-tested algorithms. This would be done in practice by conducting an S/N recovery of injected folded and single pulse signals in real LOFTS observations using \textsc{simpulse}\footnote{\url{https://github.com/OwenJohnsons/simpulse}}. Then using the various RFI methods described here along with other well-tested algorithms a benchmark indicating viability could be completed. There is also room to extend this to other models both supervised and unsupervised one prime example is Density-Based Spatial Clustering of Applications with Noise (DBSCAN) which effectiveness pertaining to SETI has been shown by \citet{zhao_improved_2026}.
+
+% \begin{landscape}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.85\linewidth]{chapter6/figures/RFI-mask.png}
+    \caption[Example LOFTS RFI Mask]{The RFI mask applied non-technosignauture searches, top IE613, bottom SE607. Blue is the average spectrum in $\sim8$ minute chunks from all full-band LOFTS observations. The black is the `ideal' response from an international station which is used for cross-correlation.}
+    \label{fig:RFI-mask}
+\end{figure}
+% \end{landscape}
 
 %------------------------
 
 
-\subsection{Dispersed Signal Detection}
+\section{Dispersed Signal Detection}
 
 % \subsection{Pulsar Detection}
 
-This survey also searched for pulsars through acceleration searching and single burst searches see \cref{chap:redback}. The data is de-dispersion and RFI-excised as described in §\ref{sec:RFI} and §\ref{sec:DDisperse}. Then data is then analysed for single burst emission using \textsc{transientX} \citep{men_transientx_2024} and \textsc{singburst.py} \citep{ransom_presto_2011}. Here, the minimum threshold considered is those that are above the noise floor, which is 7.4 for an 80-minute observation with the high time resolution filterbank. Candidate lists between both stations in the case of simultaneous observations are then compared for matched candidates. Blind periodicity searches are also carried out as well going from twice the time resolution of the data (1.31~ms) to meet the Nyquist criterion. Periods are also searched up to 20~minutes. Its also worth noting that the computation increases with the size of period with smaller periods being significantly more computationally intensive and reducing in required resources as the period increases such that, 
+This survey also searched for pulsars through acceleration searching and single burst searches; see \cref{chap:redback}. The data are de-dispersed and RFI-excised as described in §\ref{sec:RFI} and §\ref{sec:DDisperse}. The data is then analysed for single burst emission using \textsc{transientX} \citep{men_transientx_2024} and \textsc{singburst.py} \citep{presto}. Here, the minimum threshold considered is that which is above the noise floor, which is 7.4 for an 80-minute observation with the high time resolution filterbank. Candidate lists between both stations in the case of simultaneous observations are then compared for matched candidates. Blind periodicity searches are also carried out, going from twice the time resolution of the data (1.31~ms) to meet the Nyquist criterion. Periods are also searched up to 20~minutes. It's also worth noting that the computation increases with the size of the period, with smaller periods being significantly more computationally intensive and requiring fewer resources as the period increases such that, 
 
 \begin{equation}
     \frac{dN_{\text{trial}}}{dP} \propto \frac{T_{\text{obs}}}{P^2}
 \end{equation}
 
-where $dN_{\rm trial}$ is the number of independent trial periods within the interval $dP$, $P$ is the trial period, and $T_{\rm obs}$ is the total observation duration. For more in depth discussion about the performance of FFT and FFA pulsar searching algorithms please see \cite{cameron_investigation_2017}.
+where $dN_{\rm trial}$ is the number of independent trial periods within the interval $dP$, $P$ is the trial period, and $T_{\rm obs}$ is the total observation duration. For more in-depth discussion about the performance of FFT and FFA pulsar searching algorithms, please see \cite{cameron_investigation_2017}.
 
-In addition to this preliminary work has been ongoing to test the limits of what pulsars can be found in the HBA data. \textsc{simpulse}\footnote{\url{https://github.com/OwenJohnsons/simpulse}} has been developed based off of \cite{qiu_systematic_2023} to inject both single and periodic pulses into filterbank data to test both search algorithms and the limits of how feint, fast or broad a radio transient can be to be detectable with LOFAR. This methodology also has other benefits that could be used in other studies, such as extending the work in \cref{chap:crabpulsar} by further modelling and improving both scattering and DM retrievals. Another posible use is to inject mulitple pulsars into a single beam and design a pipeline to isolate the signal of each pulsars, a pipeline like this could lend itself to pulsar searches in globular clusters where there is already multiple bright known pulsars in the FoV disrupting further pulsar searches. 
+In addition to this, preliminary work has been ongoing to test the limits of what pulsars can be found in the HBA data. \textsc{simpulse}\footnote{\url{https://github.com/OwenJohnsons/simpulse}} has been developed based on \cite{qiu_systematic_2023} to inject both single and periodic pulses into filterbank data to test both search algorithms and the limits of how faint, fast or broad a radio transient can be to be detectable with LOFAR. This methodology also has other benefits that could be used in other studies, such as extending the work in \cref{chap:crabpulsar} by further modelling and improving both scattering and DM retrievals. Another possible use is to inject multiple pulsars into a single beam and design a pipeline to isolate the signal of each pulsar; a pipeline like this could lend itself to pulsar searches in globular clusters where there are already multiple bright known pulsars in the FoV disrupting further pulsar searches. 
 
-\subsection{Stellar Flare Detection}
-Another transient of interest is stellar flare stars which have been known to produce emission in LOFAR's HBA band \citep[i.e.][]{CR_Draconis_LOFAR}. As discussed in \cref{sec:RadioFlareStars} radio flare stars interesting objects in their own right with many open questions. As part of the observation campaign two systems were monitored for potential flares along with each of the LOFTS pointings. 
+\section{Stellar Flare Detection}
+Another transient of interest is stellar flare stars, which have been known to produce emission in LOFAR's HBA band \citep[i.e.][]{CR_Draconis_LOFAR}. As discussed in \cref{sec:RadioFlareStars}, radio flare stars are interesting objects in their own right, with many open questions. As part of the observation campaign, two systems were monitored for potential flares along with each of the LOFTS pointings. 
 
-To search for these systems a separate pipeline was built to be integrated with LOFTS initial pipeline called \textsc{stellarwaves}\footnote{\url{https://github.com/OwenJohnsons/stellar-waves}}, this pipeline gives users the means to clean, downsample and plot data across various polarisations and timescales through a simple python command line interface. Initial efforts to introduce match filtering were implemented but soon completely omitted as flare stars exhibit varied morphology and due to both the broadband nature of the emission and the timescale of the bursts manually observing plots is time efficient. 
+To search for these systems a separate pipeline was built to be integrated with LOFTS initial pipeline called \textsc{stellarwaves}\footnote{\url{https://github.com/OwenJohnsons/stellar-waves}}, this pipeline gives users the means to clean, downsample and plot data across various polarisations and timescales through a simple python command line interface. Initial efforts to introduce matched filtering were implemented but soon completely omitted, as flare stars exhibit varied morphology and, due to both the broadband nature of the emission and the timescale of the bursts, manually observing plots is time-efficient. 
 
-To first obtain a baseline of how well a single international station could detect a flare star over 12 hours of data was taken of CR Draconis. CR Draconis is a known radio loud flare star binary, that's exhibits strong magnetic activity and low frequency ECM emission \citep{CR_Draconis_LOFAR}. The system has previously detected at ~168-176~MHz with the LOFAR core and has been noted as having a peak flux of up to 200~MJy with an estimated flare rate of 2.3 with 90\% of those flares detected in radio to $3\sigma$. However, no flaring emission was detected to reasonable certainty. 
+To first obtain a baseline of how well a single international station could detect a flare star, over 12 hours of data were taken of CR Draconis. CR Draconis is a known radio-loud flare star binary that exhibits strong magnetic activity and low-frequency ECM emission \citep{CR_Draconis_LOFAR}. The system has previously been detected at ~168-176~MHz with the LOFAR core and has been noted as having a peak flux of up to 200~mJy with an estimated flare rate of 2.3, with 90\% of those flares detected in radio to $3\sigma$. However, no flaring emission was detected to reasonable certainty. 
 
-Similarly, 6 hours of observations of TVLM 513-46, which is an ultracool dwarf near a stellar brown dwarf 10.7~pc away \citep{hallinan_rotational_2006}. Also noted for the ECM emission and strong magnetic fields, it is often considered a benchmark for studying stellar magnetospheres. At the time of writing there has been no reported low frequency emission of TVLM 513-46 \citep{jaeger_325_2011}. As with CR Draconis there was no notable emission detected above the noise floor in each of the observation runs with both stations. 
+Similarly, 6 hours of observations of TVLM 513-46, which is an ultracool dwarf near a stellar brown dwarf 10.7~pc away \citep{hallinan_rotational_2006}. Also noted for the ECM emission and strong magnetic fields, it is often considered a benchmark for studying stellar magnetospheres. At the time of writing, there has been no reported low-frequency emission of TVLM 513-46 \citep{jaeger_325_2011}. As with CR Draconis, there was no notable emission detected above the noise floor in each of the observation runs with both stations. 
 
 % \subsection{Sensitivity Benchmarking}
 
@@ -1533,11 +1540,11 @@ Similarly, 6 hours of observations of TVLM 513-46, which is an ultracool dwarf n
 
 % Using the above expression contours for pulsewidth across the HBA for a single international station can be generated (shown in \cref{LOFTS_HBA_graphs}) demonstrating the level of fluxes that the survey is sensitive to. 
 
-\section{Results}\label{sec:results}
+\section{Results}\label{sec:results_lofts}
 
-At the time of writing approximately 30\% of the data has been searched for technosignatures and about 15\% has been searched for transients. No confirmed technosignatures or previously unknown astrophysical transients have been identified within the analysed observations. The effectiveness of the pipeline as outlined in \cref{sec:SETIchapter} still remains robust as no interesting in removing RFI candidates. Statistics on the currently observed and total amount of \textit{Gaia} sources present in the LOFTS dataset is shown in \cref{tab:LOFTS_stats}.
+At the time of writing, approximately 30\% of the data has been searched for technosignatures and about 15\% has been searched for transients. No confirmed technosignatures or previously unknown astrophysical transients have been identified within the analysed observations. The effectiveness of the pipeline as outlined in \cref{sec:SETIchapter} still remains robust as no interesting in removing RFI candidates. Statistics on the currently observed and total amount of \textit{Gaia} sources present in the LOFTS dataset is shown in \cref{tab:LOFTS_stats}.
 
-\begin{table}[h]
+\begin{table}[htbp]
 \centering
 
 
@@ -1547,13 +1554,8 @@ At the time of writing approximately 30\% of the data has been searched for tech
 \midrule
 Targets                             & 3,151,689 & 8,707,175 \\
 Mean distance (pc)                  & 1281.202  & 1332.634 \\
-Maximum distance (pc)               & 27191.936 & 28340.646 \\
-Maximum distance (ly)               & 88688.131 & 92434.717 \\
-Minimum distance (ly)               & 4178.718  & 4346.466 \\
-Mean distance $+1\sigma$ (ly)       & 6973.780  & 7343.725 \\
-Maximum $G$ magnitude               & 21.028    & 18.999 \\
-Minimum $G$ magnitude               & 1.943     & 3.3111 \\
-Mean $G$ magnitude                  & 18.102    & 17.202 \\
+Maximum distance (pc)               & 27191.94 & 31990.37 \\
+Mean $G$ magnitude                  & 16.86    & 17.20 \\
 \midrule
 O-type                              & 0.003\%   & 0.003\% \\
 B-type                              & 0.375\%   & 0.317\% \\
@@ -1569,7 +1571,7 @@ M-type                              & 1.768\%   & 2.612\% \\
 \end{table}
 
 
-Apart from the technosignature and transient searching that is being carried out as part of LOFTS two other novel contributions have been outlined. The implementation and benchmarking of searching using Lorentzian functions to search for narrowband technosignatures, showcasing the need to consider the effects of broadening at lower frequency. Additionally, the development of Siamese networks as been described detailing the viability of using machine learning to determine the origins of narrowband signals that appear throughout the LOFTS data. The immediate plan for LOFTS is to finish analysing the current observation sample a LOFTS I paper detailing the technosignature and transients search, followed by a paper detailing the efforts to implement Lorentizian searches into standard technosignature searches especially at low frequency along a fully developed machine learning model to compliment the `classical' search methods. 
+Apart from the technosignature and transient searching that is being carried out as part of LOFTS, two other novel contributions have been outlined. The implementation and benchmarking of searching using Lorentzian functions to search for narrowband technosignatures, showcasing the need to consider the effects of broadening at lower frequencies. Additionally, the development of Siamese networks as been described detailing the viability of using machine learning to determine the origins of narrowband signals that appear throughout the LOFTS data. The immediate plan for LOFTS is to finish analysing the current observation sample a LOFTS I paper detailing the technosignature and transients search, followed by a paper detailing the efforts to implement Lorentizian searches into standard technosignature searches especially at low frequency along a fully developed machine learning model to compliment the `classical' search methods. 
 
 % Mean Distance: 1281.202 pc
 % Max Distance: 27191.936 pc

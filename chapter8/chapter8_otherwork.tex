@@ -9,18 +9,18 @@ This chapter presents additional work undertaken by the author across a range of
 
 A significant portion of the research effort over the last four years was dedicated to maintenance and operation of the I-LOFAR station in Birr, Co. Offaly. This included replacing antennas, backend maintenance, software development and acting as a Chief Observer (CO). The work presented in this section doesn't fully reflect the invested time and effort as it wouldn't be beneficial to the reader to learn about various hard-drive replacements, observing scheduling, fixing boot drives and so on. So here some highlights of these efforts are mentioned. 
 
-\begin{figure}[h]
+\begin{figure}[htbp]
     \centering
     \includegraphics[width=0.9\linewidth]{chapter8/figs/I-LOFAR_drone.JPG}
     \caption{Aerial view  of I-LOFAR.}
     \label{fig:I-LOFAR_drone}
 \end{figure}
 
-As mentioned in both \cref{sec:LOFARchap2} and \cref{chap:LOFTS} I-LOFAR has been in local mode full-time for a significant portion of the last 4 years and part-time before that. Observing on I-LOFAR is co-ordinated within the consortium at with the directors' discretion. The vast majority observations on the I-LOFAR station are of the Sun, followed by observations contributing to pulsar timing (discussed below), transient searching and technosignature surveys, as discussed. These observations are scheduled and performed by the CO which is a weekly rota made up of primarily of PhD students and Postdoctoral researchers in the consortium. The CO ensures that station is performing optimally. This is done by that voltage packets are being recorded on disk from the LCU to the REALTA backend (\cref{sec:LOFARchap2}), checking spectra for irregularities, then ensuring that there is enough disk space to carry out the observing run successful. Once the run is complete the CO then either checks that the voltages have automatically started generating filterbanks or manual started based on the science use case. For a detail on the development of I-LOFAR recording capabilities and software in general see chapter 3 of \cite{mckennathesis2023}. 
+As mentioned in both \cref{sec:LOFARchap2} and \cref{chap:LOFTS} I-LOFAR has been in local mode full-time for a significant portion of the last 4 years and part-time before that. Observing on I-LOFAR is co-ordinated within the consortium at with the directors' discretion. The vast majority observations on the I-LOFAR station are of the Sun, followed by observations contributing to pulsar timing (discussed below), transient searching and technosignature surveys, as discussed. These observations are scheduled and performed by the CO which is a weekly rota made up of primarily of PhD students and Postdoctoral researchers in the consortium. The CO ensures that station is performing optimally. This is done by that voltage packets are being recorded on disk from the LCU to the REALTA backend (\cref{sec:LOFARchap2}), checking spectra for irregularities, then ensuring that there is enough disk space to carry out the observing run successful. Once the run is complete the CO then either checks that the voltages have automatically started generating filterbanks or manual started based on the science use case. For a detail on the development of I-LOFAR recording capabilities and software in general see chapter 3 of \cite{david_thesis}. 
 
 In addition to CO duties a tool was developed to assist in informing on the observation and their feasibility for both current and prospective observers. The visibility tool\footnote{\url{https://github.com/OwenJohnsons/pulsar-scripts/blob/main/Useful-Scripts/altaz-single-target.py}} provides a malleable CLI python script. The input can be as simple as providing a target name and references simbad and the ATNF catalogue to find source co-ordinates or manually providing them. Other parameters such as observation length and sensitivity estimation can also be called. In the case where the sensitivity estimation is referenced the radiometer equation (eq. \ref{eq:radiometer_equation}) is used. The user is prompted whether to calculate sensitivity using a burst or period mode for a given observation time. This outputs the plot shown in  \cref{fig:altaz2panel}
 
-\begin{figure}[h]
+\begin{figure}[htbp]
     \centering
     \includegraphics[width=0.9\linewidth]{chapter8/figs/altaz_double_panel.png}
     \caption[Example of the I-LOFAR observation planner.]{The left  two panels shows altitude and azimuth of the specified target (black), the Sun (yellow) and Moon (grey). The blue line indicates the peak elevation of the target during the queried window and the dotted green lines show the times before and after the peak that the target passes $30^\circ$ which is the limit of recommended observation at Birr. The middle panel shows an azimuthal projection with the tracks of the target and note-worthy objects for the specified duration. The right panel shows frequency as function of sensitivity for the object interest.}
@@ -51,7 +51,7 @@ To that end \cite{susarla_long-term_2025} presents a comprehensive dataset of ti
 
 The pulsars were chosen as they were exceptionally stable and used to study the effects that the solar wind had on the precision of pulsar timing as shown in \cite{susarla_exploring_2024}. They key properties of the pulsars can be seen in \cref{tab:ecliptic_pulsars}. 
 
-\begin{table}[h]
+\begin{table}[htbp]
 \centering
 \begin{tabular}{lccccccc}
 \toprule
@@ -91,7 +91,7 @@ This study also provided some insight into the emission mechanics of the observe
 
 However, J0826+2637 is characterised by its weak and sporadic emission. The pulse exhibits a state where radio emission ceases for one or more rotations and then `turns on' again, When it is emitting it is noted as being in a bright `B' mode and then `Q' for a quiet mode. This phenomemon is known as pulsar nulling and observed across many pulsars \citep{keane_radio_2013}, an example of nulling from J0826 is shown in \cref{fig:0826_nulling}. The reason for nulling is thought to be variation in the pulsars magnetosphere going to and from different stable states. These transitions may come about when pair production, current flow or plasma density that causes radio emission change geometry or cease emission all together before reverting to an active state \citep{jaroenjittichai_geometry_2025}. 
 
-\begin{figure}[h]
+\begin{figure}[htbp]
     \centering
     \includegraphics[width=\linewidth]{chapter8/figs/0826_nulling.png}
     \caption[Observation of PSR J0826+2637]{Observation of PSR J0826+2637 on April 18, 2023. Left column: emission as a function of time in 10-second sub-integrations. The transition in emission modes is evident. Middle column: pulse profile during the B mode (top) and Q mode (bottom). Right column: ‘Joy-Division’ plot, displaying rotation period numbers 650 to 800. The transition from the Q mode to the B mode is marked by a sudden increase in pulse brightness. \citep{susarla_long-term_2025}}
@@ -111,7 +111,7 @@ B0656+14 was observed 21.5 hours over 21 epochs in 2021 and 2022. Along with one
 
 In the 21 epochs only 103 pulses (shown in fig \ref{fig:B0656_jd}) were found demonstrating that B0656 is a highly variable, RRAT like emitter at low frequency. It was found that the emission was memory-less, with the detected pulse times showing random Poisson-like times between bursts (waiting times) oppose to regular or quasi-period burst patters seen in other sources \citep[i.e.][]{2018ApJ...868L..33L}. 
 
-\begin{figure}[h]
+\begin{figure}[htbp]
     \centering
     \includegraphics[width=0.8\linewidth]{chapter8/figs/jdplot.png}
     \caption[B0656+14 Joy Division plot]{`Joy division' style plot of all the single pulses from B0656+14 during observations taken in 2021-22 \citep{susarla_rrat-like_2025}.}
@@ -139,7 +139,7 @@ The results from \cite{susarla_rrat-like_2025} demonstrates highly variable, mem
 
 It is already been mentioned a few times that LOFAR's HBA beam is difficult to fully model and characterising the response of the station is a cumbersome task. The worked carried out in \cite{Vincetti2026} uses prolonged tracks of 11 bright pulsars at various declinations to quantify the response of LOFAR's HBA beam as a function of elevation as shown in \cref{fig:PulsarTracksBeam}. 
 
-\begin{figure}[h]
+\begin{figure}[htbp]
     \centering
     \includegraphics[width=0.6\linewidth]{chapter8/figs/plot_tracks_newticks_plasma.png}
     \caption[Synoptic plot of 11 pulsar observations tracking their path as they cross the I-LOFAR sky]{Synoptic plot of pulsar observations tracking their path as they cross the I-LOFAR sky. The colour-coded S/N is normalized

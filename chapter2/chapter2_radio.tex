@@ -3,9 +3,9 @@
 \epigraph{\small\itshape “You are the vast thing that you see far, far off with great telescopes.” \raggedleft\par--- \textup{Alan Watts}}
 
 
-Radio astronomy found its beginning at Bell labs when Karl Janksy announced in 1933 the discovery of radio emission coming from the Milky Way when observing the atmosphere at 20~MHz \citep{jansky_radio_1933}. This was soon expanded upon by Grote Reber, who built a radio telescope in his backyard and made deliberate observations of many radio bright objects, publishing them in astronomical journals \citep{reberPapers1923}. Radio transmitters and receivers made great strides during the war years due to the development of radar equipment for military purposes. In the following years many who had developed these technologies, turned to study the `noise' that was picked up from extraterrestrial sources, forming the foundation of modern radio astronomy. 
+Radio astronomy found its beginning at Bell Labs when Karl Jansky announced in 1933 the discovery of radio emission coming from the Milky Way when observing the atmosphere at 20~MHz \citep{jansky_radio_1933}. This was soon expanded upon by Grote Reber, who built a radio telescope in his backyard and made deliberate observations of many radio-bright objects, publishing them in astronomical journals \citep{reberPapers1923}. Radio transmitters and receivers made great strides during the war years due to the development of radar equipment for military purposes. In the following years, many who had developed these technologies turned to study the 'noise' that was picked up from extraterrestrial sources, forming the foundation of modern radio astronomy. 
 
-The radio window from the Earth's surface extends roughly from 30~MHz $(\lambda\sim10~\mathrm{m})$ up to about 1300~GHz $(\lambda\sim0.3~\mathrm{mm})$ as shown in \cref{fig:chpt2radiowindow}. The lower limit of this window arises from adsorption of radio waves by free electrons in the ionosphere. While radio waves can technically be observed down to 4.5~MHz if the frequency of the radio waves is below that of the plasma frequency, $\nu_p$ the adsorption becomes significantly more prominent such that
+The radio window from the Earth's surface extends roughly from 30~MHz $(\lambda\sim10~\mathrm{m})$ up to about 1300~GHz $(\lambda\sim0.3~\mathrm{mm})$ as shown in \cref{fig:chpt2radiowindow}. The lower limit of this window arises from reflection of radio waves by free electrons in the ionosphere. While radio waves can technically be observed down to 4.5~MHz if the frequency of the radio waves is below that of the plasma frequency, $\nu_p$, the absorption becomes significantly more prominent such that
 
 \begin{equation}
 \frac{\nu_{\mathrm P}}{\mathrm{kHz}}
@@ -14,9 +14,9 @@ The radio window from the Earth's surface extends roughly from 30~MHz $(\lambda\
 \sqrt{\dfrac{N_{\mathrm e}}{\mathrm{cm}^{-3}}}\;.
 \end{equation}
 
-Where $N_{\mathrm{e}}$ is the electron density of the plasma. There are also other contributions that effect this, such as solar activity which make this limit variable. This means that to study kHz frequencies or for an unrefracted view of $\lesssim 30~\mathrm{MHz}$ the radio sky must be observed from space. The upper radio limit isn't observed at any single wavelength, but considerations become important at mm wavelengths as resonant absorption comes into effect from the lowest rotation band of molecules in the troposphere \citep{WilsonToolsofRadioastron}. This is mainly attributed to water vapour $\mathrm{H}_2\mathrm{O}$ and $\mathrm{O_2}$, adsorption also occurs at higher frequencies, but here the atmosphere is opaque to radio waves. Around 300~GHz is considered to be the upper limit in a radio context where atmospheric absorption at sea level becomes very strong, with additional losses from clouds and rain, these effects are so prevalent that mm observatories are constructed at high altitudes. The work in this thesis is carried out from $0.1-4032~\mathrm{MHz}$. 
+Where $N_{\mathrm{e}}$ is the electron density of the plasma. There are also other contributions that affect this, such as solar activity, which makes this limit variable. This means that to study kHz frequencies or for an unrefracted view of $\lesssim 30~\mathrm{MHz}$ the radio sky must be observed from space. The upper radio limit isn't observed at any single wavelength, but considerations become important at mm wavelengths as resonant absorption comes into effect from the lowest rotation band of molecules in the troposphere \citep{WilsonToolsofRadioastron}. This is mainly attributed to water vapour $\mathrm{H}_2\mathrm{O}$ and $\mathrm{O_2}$, adsorption also occurs at higher frequencies, but here the atmosphere is opaque to radio waves. Around 300~GHz is considered to be the upper limit in a radio context where atmospheric absorption at sea level becomes very strong, with additional losses from clouds and rain; these effects are so prevalent that mm observatories are constructed at high altitudes. This thesis work is carried out from $0.1-4032~\mathrm{MHz}$. 
 
-The purpose of this chapter is to discuss some of the fundamentals of radio telescopes and the processes that go into generating science useable products and using them to explore attributes of the sources discussed in \cref{chap:introduction}.
+The purpose of this chapter is to discuss some of the fundamentals of radio telescopes and the processes that go into generating science-usable products and using them to explore attributes of the sources discussed in \cref{chap:introduction}.
 
 \begin{figure}
     \centering
@@ -27,18 +27,22 @@ The purpose of this chapter is to discuss some of the fundamentals of radio tele
 
 \section{From Photon to Filterbank} \label{sec:chap2photon2fil}
 
-Radio telescopes can often be seen as conceptually complex but share much common ground with contemporary optical telescopes. An antenna is often thought of as a `single pixel'\footnote{This is true, but single elements can also have many beams (pixels) at the same time in certain systems.} in a charged couple device (CCD) with an array of antennas forming an array of pixels that can be used to observe the sky. There are also parallels to be drawn between the mirrors in optical telescopes and the parabolic dishes seen on `single dish' radio telescopes which will later be discussed. This section aims to provide enough theoretical context to understand how an incident photon on a radio telescope gets turned into science useable data products such as filterbanks. Filterbanks are simply data cubes that store spectrographs over time or `dynamic spectra'. 
+Radio telescopes can often be seen as conceptually complex but share much common ground with contemporary optical telescopes. An antenna is often thought of as a `single pixel'\footnote{This is true, but single elements can also have many beams (pixels) at the same time in certain systems.} in a charge-coupled device (CCD), with an array of antennas forming an array of pixels that can be used to observe the sky. There are also parallels to be drawn between the mirrors in optical telescopes and the parabolic dishes seen on `single dish' radio telescopes which will later be discussed. This section aims to provide enough theoretical context to understand how an incident photon on a radio telescope gets turned into science-usable data products such as filterbanks. Filterbanks are simply data cubes that store spectrographs over time or `dynamic spectra'. 
 
-For any electromagnetic wave coming from an astronomical source the wave is in the far-field, and the wavefronts are therefore locally planar across the extent of a radio telescope. Radio telescopes sample the electric field associated with these incoming plane waves. The first mathematical formalism to introduce is the general time-dependent electric field vector can be expressed as,
+For any electromagnetic wave coming from an astronomical source, the wave is in the far-field, and the wavefronts are therefore locally planar across the extent of a radio telescope. Radio telescopes sample the electric field associated with these incoming plane waves. The first mathematical formalism to introduce is that the general time-dependent electric field vector can be expressed as,
+
 
 \begin{equation}
-    \textbf{E} (t,r) = (\hat a E_a + \hat b E_b) \ \exp(2 \pi i (ft-kr))
+    \mathbf{E}(t,r) =
+    (\hat{a}E_a + \hat{b}E_b)
+    \exp\left[i(2\pi ft - kr)\right],
     \label{eq:wave_equation}
 \end{equation}
 
+
 %TODO: talk about r_1, r_2, phase difference for interferometry down the line. Add references to the books used to come up with these derivations 
 
-where $\hat a$ and $\hat b$ are orthogonal polarisation basis vectors, $r$ is the orthogonal axis which the wave propagates forward with time, $t$. $E_a$ and $E_b$ are the corresponding complex amplitudes, $f$ is wave frequency, $k$ is the wavenumber, $2 \pi \lambda$. 
+where $\hat a$ and $\hat b$ are orthogonal polarisation basis vectors, $r$ is the orthogonal axis along which the wave propagates forward in time, $t$. $E_a$ and $E_b$ are the corresponding complex amplitudes, $f$ is wave frequency, $k$ is the wavenumber, $2\pi/\lambda$, where $\lambda$ is the wavelength. 
 In short, in \cref{eq:wave_equation} the first term dictates the wave polarisation and the second term dictates the wave propagation. If a radio telescope samples the plane wave at a given instant, the polarisation term\footnote{Independent of the propagation term and associated phase.} can be described by a Jones vector, 
 
 \begin{equation}
@@ -120,7 +124,7 @@ Next the signal is passed to the frontend. The polarizer depends on the setup of
 A local oscillator generates a stable wave then mixes the signal with the original input changing the frequency of the signal, this is done to make the signal easier to process. For example, if processing a 1400-MHz sample the setup would need analog to digital converter (ADC)'s to match the frequency which is expensive from a processing point of view, so the signal is usually mixed to lower frequencies. The Intermediate Frequency Amplifier (IF Amp) is then used to further amplify the signal, providing additional gain to the downconverted signal to match the dynamic range inputted into the ADC. Additional amplification at IF is easier to implement because the system’s overall noise performance is already set by the front-end low-noise amplifier, so the IF stage does not need to meet the same ultra-low-noise requirements \citep{warnick_generalized_2024}. The signal is then converted from an analog signal to digital time series. \\ 
 It's important to note that the system just described is not a generalised signal path for a radio telescope, this is a setup that would be similar to those found in a single dish system. There are many bespoke systems specific to different observing requirements. For example with the rise in RFI across the radio spectrum there is now the implementation of real-time RFI excision as part of the signal path \citep{buch_real-time_2025}. 
 
-\begin{figure}[h]
+\begin{figure}[htbp]
     
 \tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
 
@@ -328,7 +332,7 @@ where $k$ denotes the output frequency channel. The FFT separates the signal int
 
 Unlike a standard FFT, which performs an FFT on a single block of $P$ samples, the PFB combines information from $M$ consecutive FFT frames before the transform is applied. This additional filtering suppresses the sidelobes of the FFT channel response, reducing spectral leakage and improving channel isolation. 
 
-So for example if one considers a telescope that observes from $110-190$ MHz. If a PFB is applied with $P = 2^{12}$, the voltage stream will be channelised 4096 channels applied. Each channel corresponding to $\sim 0.02$ MHz, with the power of each channel equal to $|Y[k]|^2$, which produces a spectrum for a single time sample, $t_0$. The complex voltages therefore represent the signal power as a function of frequency channel $k$ and time sample $n$. Arranging these measurements in time order forms time-frequency array where each time sample and channel has an associated power. Data that is generated and saved in this format is known as a filterbank.
+So for example if one considers a telescope that observes from $110-250$ MHz. If a PFB is applied with $P = 2^{12}$, the voltage stream will be channelised 4096 channels applied. Each channel corresponding to $\sim 0.02$ MHz, with the power of each channel equal to $|Y[k]|^2$, which produces a spectrum for a single time sample, $t_0$. The complex voltages therefore represent the signal power as a function of frequency channel $k$ and time sample $n$. Arranging these measurements in time order forms time-frequency array where each time sample and channel has an associated power. Data that is generated and saved in this format is known as a filterbank.
 
 %TODO: possibly a good place to put a section on dedispersion 
 
@@ -565,7 +569,7 @@ However as established these two measurements of the plane wave will be offset b
     \Delta \phi = \frac{2 \pi}{\lambda} \delta l = 2 \pi f \delta t. 
 \end{equation}
 
-Phase differences cannot\footnote{This is not entirely true, phase can be measured, but astronomical radio signals are stochastic, noise-like processes, making only the relative phase recovered through cross-correlation physically meaningful.} The instantaneous phase of the electric field is not directly observable. Instead, the relative phase information is recovered statistically by cross-correlating the voltage streams measured at each antenna. By applying a relative delay and averaging over time, the degree of similarity between the two signals can be determined, 
+ The instantaneous phase of the electric field is not directly observable\footnote{This is not entirely true, phase can be measured, but astronomical radio signals are stochastic, noise-like processes, making only the relative phase recovered through cross-correlation physically meaningful.}. Instead, the relative phase information is recovered statistically by cross-correlating the voltage streams measured at each antenna. By applying a relative delay and averaging over time, the degree of similarity between the two signals can be determined, 
 
 \begin{equation}
     R_{12} = \langle  V_1 (t) V^*_2 (t - \tau) \rangle. 
@@ -633,9 +637,9 @@ Following beamforming, the resulting voltage stream as discussed in \cref{sec:ch
 
 \section{Brightness and Flux Density}
 
-One key concept has been neglected up to this point and that is on the question of measuring the radiative properties of an astronomical source. Astronomy is done by measuring the strength of radiation as a function of where it is on the sky (imaging) or frequency (spectroscopy). There are other measurables that are of use such as time and polarisation, that are also important but these supplementary. There are four common ways of describing the radiation properties of an astrophysical source, luminosity, flux density, intensity and temperature. The nomenclature is somewhat cumbersome, luminosity is the full power that the source emits, flux density is what an observer receives, intensity is how that received radiation is distributed on the sky, and brightness temperature is a temperature-like way to express intensity. Intensity and temperature depend on the source's size. Whereas, flux density is the only quantity that depends on distance. The following derivation loosely follows \citet[pp. 23 - 30][]{EssenRadio16}
+One key concept has been neglected up to this point, and that is the question of measuring the radiative properties of an astronomical source. Astronomy is done by measuring the strength of radiation as a function of where it is on the sky (imaging) or frequency (spectroscopy). There are other measurable quantities that are of use, such as time and polarisation, that are also important but are supplementary. Four commonly used quantities for describing the radiation properties of an astrophysical source are luminosity, flux density, specific intensity, and brightness temperature. Although closely related, these quantities describe distinct radiation properties. Luminosity represents the total power emitted by a source, flux density describes the radiation received by an observer per unit area and frequency, specific intensity characterises the angular distribution of that radiation on the sky, and brightness temperature expresses the specific intensity in terms of an equivalent blackbody temperature. The following derivation loosely follows \citet[pp. 23 - 30][]{EssenRadio16}
 
-\begin{figure}[h]
+\begin{figure}[htbp]
     \centering
 
 
@@ -749,9 +753,9 @@ T_{\text{source}} &= \frac{A_{\text{eff}} S_\nu}{2k_B }.
 
 The equations introduced here now have established a link between the intrinsic radiation properties of a source and the flux that is possible to measure by an observer. 
 
-\section{Radiometer Equation}
+\section{Radiometer Equation} \label{sec:chap2radiometer}
 
-The final core concept discussed is the radiometer equation, it's derivation in this section is a specialized extension of the derivation shown in \citet[§A1.4][]{pulsar_handbook}. The radiometer equation measures the flux received by a radio telescope. At its core it is just an application of the Central Limit Theorem\footnote{The central limit theorem states that the distribution of the sample mean approaches a normal distribution as the sample size grows, regardless of the original population's shape.}, as it describes the uncertainty in measuring a noise temperature $(\sigma_T)$, with the uncertainty decreasing as function of the number of the samples measured, 
+The final core concept discussed is the radiometer equation, it's derivation in this section is a specialized extension of the derivation shown in \citet[§A1.4][]{pulsar_handbook}. The radiometer equation measures the noise received by a radio telescope. At its core, it is just an application of the Central Limit Theorem\footnote{The central limit theorem states that the distribution of the sample mean approaches a normal distribution as the sample size grows, regardless of the original population's shape.}, as it describes the uncertainty in measuring a noise temperature $(\sigma_T)$, with the uncertainty decreasing as a function of the number of samples measured, 
 
 \begin{equation}
     \sigma_T = \frac{T_{\text{sys}}}{\sqrt{n_p t_{\text{obs}} \Delta f}}. 
@@ -814,11 +818,11 @@ S_{\min} (f, l, b) = \frac{1}{B_{\text{total}}} \sum_{f} \left(  \frac{\left[ T_
 
 \section{LOFAR} \label{sec:LOFARchap2}
 
-A significant amount of the work is carried out in this thesis using part of the LOw Frequency ARay \citep[LOFAR;][]{van_haarlem_lofar_2013}.  LOFAR is an aperture array interferometer with antennas all across Europe shown in \cref{fig:chap2lofarmap}, when the array is operating at full capacity it can rival Hubble's subarcsecond resolution. At the time of writing, there is currently no telescope in the world that can rival LOFAR at its operating frequencies. 
+A significant amount of the work is carried out in this thesis using part of the LOw Frequency ARay \citep[LOFAR;][]{van_haarlem_lofar_2013}.  LOFAR is an aperture array interferometer with antennas all across Europe, shown in \cref{fig:chap2lofarmap}; when the array is operating at full capacity, it can rival Hubble's subarcsecond resolution. At the time of writing, there is currently no telescope in the world that can rival LOFAR at its operating frequencies. 
 
-LOFAR is made up of 52 stations across Europe, with two more currently under construction in Italy and Bulgaria with further construction planned for the future. Each `station' is comprised of two sets of antennas, the Low Band Antennas (LBAs) which operate from 10-90~MHz and the High Band Antennas (HBAs), which operate at 110-190~MHz.  
+LOFAR is made up of 52 stations across Europe, with two more currently under construction in Italy and Bulgaria, with further construction planned for the future. Each 'station' is comprised of two sets of antennas, the Low Band Antennas (LBAs), which operate from 10-90~MHz and the High Band Antennas (HBAs), which operate at 110-250~MHz.  
 
-The center of LOFAR is based near Exloo in the Netherlands on what is known as the `superterp'. The superterp consists of 6 `core' stations with a max baseline of 240~m, in close proximity to the superterp there is further 24 stations with a max baseline of 3.5~km. There are also 16 remote Dutch stations placed up to 90~km away in the northeastern region of the Netherlands. To complete the array there 12 international stations based around Europe with the longest current baseline being Birr to Łazy at $\sim 1890~\textrm{km}$, this baseline will be extended to $\sim 2660~\textrm{km}$ with the addition of the Bulgarian station in Rozhen. 
+The centre of LOFAR is based near Exloo in the Netherlands on what is known as the 'superterp'. The superterp consists of 6 `core' stations with a max baseline of 240~m, in close proximity to the superterp there is further 18 stations with a max baseline of 3.5~km. The array also includes 14 remote Dutch stations placed up to 90~km away in the northeastern Netherlands. To complete the array, there are 14 international stations based around Europe, with the longest current baseline being Birr to Łazy at $\sim 1890~\textrm{km}$; this baseline will be extended to $\sim 2660~\textrm{km}$ with the addition of the Bulgarian station in Rozhen. 
 
 \begin{figure}[t]
     \centering
@@ -827,12 +831,12 @@ The center of LOFAR is based near Exloo in the Netherlands on what is known as t
     \label{fig:chap2lofarmap}
 \end{figure}
 
-The LBAs (see \cref{fig:chap2lofarantennas}) are two inverted dipoles that are 1.38~m in length, each has a rebar ground plane that acts as a reflector for incoming radio waves. The reflected radio waves are then sampled by the pair of antennas which is connected to an LNA in a moulded head on top of a pvc pipe. Each polarisation ($x$ and $y$ voltages) are ouputted through seperate coxial cable, with power supplied to the antenna through the $y$ coaxial cable.  The core stations have 48 LBAs, whereas the international stations have 96. 
+The LBAs (see \cref{fig:chap2lofarantennas}) are two inverted dipoles that are 1.38~m in length, each has a rebar ground plane that acts as a reflector for incoming radio waves. The reflected radio waves are then sampled by the pair of antennas, which is connected to an LNA in a moulded head on top of a PVC pipe. Each polarisation ($x$ and $y$ voltages) are ouputted through seperate coxial cable, with power supplied to the antenna through the $y$ coaxial cable.  The core stations have 48 LBAs, whereas the international stations have 96. 
 
 The HBAs (see \cref{fig:chap2lofarantennas}) cover the higher end of LOFARs spectral response. The HBAs can nominally operate from 110-250~MHz, but due to the large amount of RFI this is limited to 190~MHz. The HBAs are made up of sets of bowtie antennas each set of four forming a cross shape. In each `tile' there are 16 sets of bowties in a $4 \times 4$ grid, each of the bowtie elements are connected to a front end (FE) board which outputs to a $x$ and $y$ coaxial cables. The tiles are placed on a wire mesh ground plane. The core stations are made up of 48 tiles and the international stations have 96. 
 
 
-\begin{figure}[h]
+\begin{figure}[htbp]
     
 \centering
 \tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
@@ -967,14 +971,14 @@ The HBAs (see \cref{fig:chap2lofarantennas}) cover the higher end of LOFARs spec
 
 Each of the antennas in the field all fed into a heavily shielded cabinet or container. Here the receiver units (RCUs) and Remote Signal Processing compute boards (RSPs) are also stored. 
 
-The RCUs are directly connected to the coaxial cable coming from the field. The RCUs select the antenna input\footnote{At the time of writing the LOFAR 2 upgrade aims to rectify this such that both can be used simultaneously.} (either HBA or LBA). The selected signal then undergoes amplification and appropriate filters are applied to the signal, it is then digitized with a 12-bit ADC at either 200~MHz or 160~MHz. 
-The digitized samples are then passed to the RSP boards, these boards before all the digital signal processing at the station. This includes "first in first out" (FIFO) buffering, which holds all the packets in arrival order in a buffer to ensure that there is no signal delay added by the RCUs, following this polyphase-filter subbanding is used and beamlets are formed, which is discussed in further depth in the next section. The data from the RSP boards is then passed to the Central Processing Unity (CEP) which outputs the packet-stream of voltages. All of this is controlled by the Local Control Unit which is a Linux pc that monitors the station hardware and controls where the beams are `steered'. The LCU is also responsible for receiving time references from the stations GPS for ensuring phase coherence across the whole array.  
+The RCUs connect directly to the coaxial cable from the field. The RCUs select the antenna input\footnote{At the time of writing, the LOFAR 2 upgrade aims to rectify this such that both can be used simultaneously.} (either HBA or LBA). The selected signal then undergoes amplification and appropriate filters are applied to the signal, it is then digitized with a 12-bit ADC at either 200~MHz or 160~MHz. 
+The digitised samples are then passed to the RSP boards; these boards perform all the digital signal processing at the station. This includes "first-in, first-out" (FIFO) buffering, which holds all the packets in arrival order in a buffer to ensure that there is no signal delay added by the RCUs; following this, polyphase-filter subbanding is used, and beamlets are formed, which is discussed in further depth in the next section. The data from the RSP boards is then passed to the Central Processing Unity (CEP) which outputs the packet-stream of voltages. All of this is controlled by the Local Control Unit which is a Linux pc that monitors the station hardware and controls where the beams are `steered'. The LCU is also responsible for receiving time references from the stations GPS for ensuring phase coherence across the whole array.  
 
 \subsection{Beamforming with a LOFAR station}
 
-There are numerous ways to observe with LOFAR as an array and also with individual stations. As discussed the main data products of interest is dynamic spectra from the HBAs which is attained by beamforming. As mentioned above the ADC can work at a 200~MHz or 160~MHz clock rate, this corresponds to a base sampling time of 5~ns and $6.2~\upmu \text{s}$. A polyphase filterbank is applied to the data above channelizing it into sub-bands. Due to the Nyquist-Shannon sampling theorem ($B < f_s/2$), 200-MHz sampling gives a useable bandwidth of 100~MHz. A 1024-point FFT is applied to 1024 real-valued samples, producing 1024 complex Fourier coefficients. For real-valued input data, these coefficients are Hermitian symmetric, so only the 512 positive-frequency coefficients correspond to independent spectral channels. Dividing the subbands across the useable bandwidth gives 195.3~kHz to each subband. Following channelization, the station beamformer selects the desired subbands and coherently sums the antenna signals in the direction of interest. The resulting beamformed subbands are called beamlets, and in 8-bit mode LOFAR can form up to 488 beamlets. Although the polyphase filter produces 512 subbands, the station beamformer's ring architecture and output allocation mean that only 488 beamlets are available. 
+There are numerous ways to observe with LOFAR as an array and also with individual stations. As discussed, the main data products of interest are dynamic spectra from the HBAs, obtained by beamforming. As mentioned above the ADC can work at a 200~MHz or 160~MHz clock rate, this corresponds to a base sampling time of 5~ns and $6.2~ \text{ns}$. A polyphase filterbank is applied to the data above, channelising it into sub-bands. Due to the Nyquist-Shannon sampling theorem ($B < f_s/2$), 200-MHz sampling gives a usable bandwidth of 100~MHz. A 1024-point FFT is applied to 1024 real-valued samples, producing 1024 complex Fourier coefficients. For real-valued input data, these coefficients are Hermitian symmetric, so only the 512 positive-frequency coefficients correspond to independent spectral channels. Dividing the subbands across the usable bandwidth gives 195.3~kHz to each subband. Following channelisation, the station beamformer selects the desired subbands and coherently sums the antenna signals in the direction of interest. The resulting beamformed subbands are called beamlets, and in 8-bit mode LOFAR can form up to 488 beamlets. Although the polyphase filter produces 512 subbands, the station beamformer's ring architecture and output allocation mean that only 488 beamlets are available. 
 
-One unique thing about aperture arrays is that each beamlet can be individually pointed, this means that up to 488 beams can be formed on the sky with the bandwidth of one subband or one single coherent beam can be placed on the sky using the full bandwidth as shown in \cref{fig:chap2lofarbeams}, this can be any combination the observer desires as long as it amounts to 488 beams. Recalling that the S/N scaled with the number of channels by a factor of $\sqrt{n}$, the stations are primarily used with all beamlets on the same patch of sky  \citep{karastergiou_limits_2015}. 
+One unique thing about aperture arrays is that each beamlet can be individually pointed; this means that up to 488 beams can be formed on the sky with the bandwidth of one subband, or one single coherent beam can be placed on the sky using the full bandwidth, as shown in \cref{fig:chap2lofarbeams}. This can be any combination the observer desires as long as it amounts to 488 beams. Recalling that the S/N scales with the number of channels by a factor of $\sqrt{n}$, the stations are primarily used with all beamlets on the same patch of sky  \citep{karastergiou_limits_2015}. 
 
 \begin{figure}
     \centering
@@ -1021,17 +1025,17 @@ The cluster itself is broken up into 5 servers each adorned with the name of the
 
 The Breakthrough Listen backend is just one compute node and used specifically for SETI and any ancillary science that comes from the data collected. This is equipped with a Nvidia RTX 2080Ti 11~GB and twp Intel Xeon Silver 4110's. This server can also direct ingest CEP data streams for processing as well to create SETI specfic data products (discussed further in \cref{sec:SETIchapter}).
 
-For an in-depth review of the development of I-LOFAR's backend see \citet[chap. 3,][]{David_thesis_2023} and \cite{RealTa_paper}. 
+For an in-depth review of the development of I-LOFAR's backend see \citet[chap. 3,][]{david_thesis} and \cite{RealTa_paper}. 
 
 \subsection{Upgrading to LOFAR 2.0} \label{sec:upgradetoLOFAR2}
 
 In September of 2024 LOFAR paused observing with the whole array to start the rollout of a new upgrade. Dubbed LOFAR 2.0 the upgrade main goals are to increase the observing capability of each station and improve the central processing for the array as a whole.
 
-The most significant upgrade is the replacement of all the RCUs to enable simultaneous recording of both the HBA and LBA antennas, allowing for full 30--240~MHz of observing, this also extends to keeping voltages from both antennas in the ring buffer. The increased computing capacity allows for better methods of calibration at the lower end of the band improving the sensitivity of the LBAs by a factor of 5 in some fields. The existing timing distribution is being replaced by a central clock signal distributed over a White Rabbit optical fiber network which will improve ionospheric calibration. 
+The most significant upgrade is the replacement of all the RCUs to enable simultaneous recording of both the HBA and LBA antennas, allowing for full 10--240~MHz of observing, this also extends to keeping voltages from both antennas in the ring buffer. The increased computing capacity allows for better methods of calibration at the lower end of the band improving the sensitivity of the LBAs by a factor of 5 in some fields. The existing timing distribution is being replaced by a central clock signal distributed over a White Rabbit optical fiber network which will improve ionospheric calibration. 
 
 The array's central processing unit COBALT, is also getting refreshed with new GPUs and CPUs providing an order of magnitude increase in the available computing resources. The new hardware and software changes allow more parallel observing modes, including simultaneous imaging and beam-formed data products from different subsets of stations. Additionally a large effort is being made to make many quality of life implementations to station control and monitoring. 
 
-For a full discussion on the technical details and the effects on both the science cases and usability of the LOFAR upgrade see \cite{LOFAR2}. 
+For a full discussion on the technical details and the effects on both the science cases and usability of the LOFAR upgrade, see \cite{LOFAR2}. 
 
 At the time of writing core stations have been upgraded to LOFAR 2.0 and the upgrade is being rolled out to the international stations with the Swedish station currently the first to have deployed the upgrade. The current expected completion of the LOFAR 2.0 upgrade is Q4 2027. While the upgrade has been carried out the international stations have been operating in local mode 24/7, which has allowed for prolonged observation campaigns on various science projects. For example this work took advantage of this fact and used both the Swedish and Irish station for a prolonged survey which is discussed in \cref{chap:LOFTS}. 
 
@@ -1044,13 +1048,13 @@ The following sections briefly highlight instrumentation used at other observing
 
 Murriyang is the name given to the iconic 64-m Parkes telescope by the Wiradjuri Elders, the name represents the `Skyworld'. The telescope is located in New South Wales Australia and was originally completed in 1961 and since then Murriyang has made major contributions to both the field of radio astronomy and spaceflight. For example, in 2019 Murriyang celebrated the 50th anniversary of broadcasting humankind's first steps on the Moon. Parkes is a prime-focus parabolic reflector. At the time of writing there are currently 4 receivers available for observation on request which can be placed manually at prime focus.
 
-\begin{figure}[h]
+\begin{figure}[htbp]
     \centering
     \includegraphics[width=\linewidth]{chapter2/figures/parkes.png}
     \caption[The the 64m Murriyang telescope at Parkes ]{The the 64m Murriyang telescope at Parkes radio observatory in New South Wales, Australia, image credited to CSIRO/A. Cherney}
 \end{figure}
 
-\begin{table}[h]
+\begin{table}[htbp]
 \centering
 \caption{Current receiver suite for the Parkes (Murriyang) 64-m radio telescope. In \cref{chap:redback}, data from the UWL is used.}
 \label{tab:parkes_receivers}
@@ -1075,13 +1079,13 @@ MARS      & $\sim$20--30 GHz & --- & --- \\
 The Robert C. Byrd Green Bank Telescope (GBT) is the largest steerable object in the world and the second largest moveable object in the world behind the Chernobyl new safe confinement structure over reactor 4. First light took place in 2000, since GBT has been operating as one of the world's leading single dish telescopes. It is based in Green Bank, West Virginia in the United States. 
 There are numerous feeds installed on GBT. The telescope features a Gregorian design, which is equipped with rotating turret with 8 reciever bays. There are also three recievers at prime focus. The details of the instruments at the time of writing are shown in \cref{tab:GBTreceivers}. 
 
-\begin{figure}[h]
+\begin{figure}[htbp]
     \centering
     \includegraphics[width=\linewidth]{chapter2/figures/GBT.jpg}
     \caption[The 100~m Green Bank Telescope telescope at the Green Bank Observatory]{The 100~m Green Bank Telescope telescope at the Green Bank Observatory in West Virgina. Image credited to the NRAO.}
 \end{figure}
 
-\begin{table*}[h]
+\begin{table*}[htbp]
 \centering
 \caption{Current receiver suite for the GBT. In \cref{chap:redback}, data from L, S and Prime Focus 1 is used.}
 \label{tab:GBTreceivers}
@@ -1133,7 +1137,7 @@ MUSTANG-2 & 75--105 GHz    & --- & --- \\
 
 The New Extension in Nançay Upgrading LOFAR (NenuFAR) is located at the Naçay radio observatory in France. Located next to the French LOFAR station. NenuFAR operates at the same frequencies as the LBAs but uses a different design for its antennas and amplifiers (see. \cref{fig:chap2nenufar}). The  antennas were intially manufactured for the Long Wavelength Array (LWA) in Owen's Valley, with the novel amplifiers designed in Nançay.  The station shares much of the same electronics and systems as a standard LOFAR stations, so the description outlined above can also be applied here. The combination of both the antennas and the amplifiers translated to a flatter response curve than that of the LBAs. At present there are 80 out of a planned 96 array core constructed. Similarly, to LOFAR's core there are also remote stations called mini arrays (MAs) surrounding NenuFAR. Each MA consists of 19 antennas and is placed up to 3~km from the NenuFAR core. The telescope can also be used in tandem with the LOFAR array to add NenuFAR's sensitivity along with the other stations.  
 
-\begin{figure}[h]
+\begin{figure}[htbp]
     \centering
     \includegraphics[width=0.6\linewidth]{chapter2/figures/NenuFAR.png}
     \caption[Image of NenuFAR antennas]{Collection NenuFAR antennas based at the Naçay Radio Observatory in France. Image credited to the CNRS/NRO.}

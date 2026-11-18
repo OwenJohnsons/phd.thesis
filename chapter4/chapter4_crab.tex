@@ -1,5 +1,10 @@
 \chapter{Crab Giant Pulses} \label{chap:crabpulsar}
 
+
+\epigraph{\small\itshape “I'll give you some intelligent Crab like response before the day is out...” \raggedleft\par--- \textup{Evan F. Keane}}
+
+% I'll give you some intelligent Crab response before the day is out.
+
 This chapter outlines the analysis of over 6 years observations from Crab pulsar observed with I-LOFAR. The content closely follows that of \cite{Johnson2026Crab} which will be shortly submitted to the open journal of astrophysics for review. Some minor edits and expansion on jargon has been made for readability purposes. 
 
 \section{Introduction}
@@ -7,7 +12,7 @@ The Crab Pulsar (PSR~B0531$+$21) is one of the most notable and well-studied pul
 
 Due to its brightness and dynamic environment, the Crab Pulsar is also an excellent source for studying emission and probing the free-electron content of the surrounding nebula. At frequencies below 300 MHz, dispersion measure and scattering effects become particularly pronounced, and these effects have been observed consistently for decades in the Crab system~\citep{lyne_23_1993}. The evolving nebula causes time dependant propagation effects on monthly to yearly timescales. This work details over half a decade of low-frequency observations of the Crab pulsar and present the largest collection of single pulses from the Crab to date. 
 
-This work is structured as follows: \cref{sec:bkginfo} provides the scientific context and motivation for this study; \cref{sec:obsnmethod} describes the observations and methodology used for pulse detection and analysis; and \cref{sec:results} presents a statistical overview of the giant-pulse population and examines DM variations and scattering timescales; Finally, \cref{sec:results} gives concluding remarks and potential future work on the topic. 
+This work is structured as follows: \cref{sec:bkginfo} provides the scientific context and motivation for this study; \cref{sec:obsnmethod} describes the observations and methodology used for pulse detection and analysis; and \cref{sec:results_crab} presents a statistical overview of the giant-pulse population and examines DM variations and scattering timescales; Finally, \cref{sec:conclusion_crab} gives concluding remarks and potential future work on the topic. 
 
 \section{Background \& Motivation} \label{sec:bkginfo}
 
@@ -19,7 +24,7 @@ One of the most noteworthy things about GPs is their brightness temperature. Sin
 \subsection{The Crab Nebula}
 The Crab Nebula has a stratified structure, at its core lies the Crab surrounded by relativistic magnetized wind flowing outward~\citep{lyubarsky_structure_2002}. This wind interacts with a termination shock, a boundary region where the wind's kinetic energy is converted into heated plasma and magnetic compression \citep{lyubarsky_structure_2002, gaensler_evolution_2006}. The shocked wind forms a synchrotron-emitting nebular interior composed of electrons, positrons, and wound-up magnetic fields \citep{hester_crab_2008}. Beyond this inner region, the synchrotron nebula expands into supernova ejecta. This ejecta has cooled and condensed into regions made up primarily of ionized oxygen, forming a network of structures visible at optical wavelengths \citep{hester_crab_2008}. The filamentary structure exhibits both large-scale organization and small-scale turbulence, with the pulsar wind continuously pushing against these thermal structures creating a dynamic environment \citep{hester_crab_2008}.
 
-Of most relevance for our work we note that the Crab Nebula contains a substantial population of free electrons distributed throughout all three regions, the wind, shocked nebular interior and the ejecta filaments \citep{kuzmin_deviation_2008}. Within the nebula the average electron number density is $\Delta n_e \sim 0.018~\rm{cm}^{-3}$ and this results in a dispersion measure contribution $\Delta \mathrm{DM} \sim 0.03~\rm{cm}^{-3}$ when using a nebula radius of 1.7 pc \citep{kuzmin_deviation_2008, mckee_temporal_2018, hester_crab_2008}. 
+Of most relevance for our work we note that the Crab Nebula contains a substantial population of free electrons distributed throughout all three regions, the wind, shocked nebular interior and the ejecta filaments \citep{kuzmin_deviation_2008}. Within the nebula, the average electron number density is $\Delta n_e \sim 0.018~\rm{cm}^{-3}$ and this results in a dispersion measure contribution $\Delta \mathrm{DM} \sim 0.03$~\dm when using a nebula radius of 1.7 pc \citep{kuzmin_deviation_2008, mckee_temporal_2018, hester_crab_2008}. 
 
 
 \subsection{Probing the Free Electron Content}
@@ -38,9 +43,9 @@ The Sun continuously emits a magnetised plasma outflow, known as the solar wind,
 
 \subsection{Observations} 
 
-Observations were taken using the Irish LOw Frequency ARray station (I-LOFAR) using the REALTA backend \citep{RealTa_paper} for processing. Observations were taken over a time range from June 2020 to March 2026 totalling $\tobs$ hours and covering $\epochs$ epochs as shown in \cref{fig:crab_sun_seperation}. The High Band Antennas were used for each of the observations, which observed from $\approx 102-198$~MHz. During observations, UDP packets of beam-formed data are written to disk. The saved data are made up of coarse-channelized complex voltages.  The input data stream consists of two polarizations per antenna. After real Nyquist sampling with a 200-MHz clock and coarse channelization by a factor of 512, only 488 channels (or 244 channels) are recordable when the data is written as 8-bit (or 16-bit) complex samples, for this study 8-bit mode is used. The \textsc{udpPacketManager} \citep{David_JOSS} is then used to create \textsc{sigproc} \citep{lorimer_sigproc_2011} formatted filterbanks at the specifications detailed in \cref{tab:data_details}
+Observations were taken using the Irish LOw Frequency ARray station (I-LOFAR) using the REALTA backend \citep{RealTa_paper} for processing. Observations were taken over a time range from June 2020 to March 2026 totalling $\tobs$ hours and covering $\epochs$ epochs as shown in \cref{fig:crab_sun_seperation}. The High Band Antennas were used for each of the observations, which observed from $\approx 102-198$~MHz. During observations, UDP packets of beam-formed data are written to disk. The saved data are made up of coarse-channelized complex voltages.  The input data stream consists of two polarizations per antenna. After real Nyquist sampling with a 200-MHz clock and coarse channelization by a factor of 512, only 488 channels (or 244 channels) are recordable when the data is written as 8-bit (or 16-bit) complex samples, for this study 8-bit mode is used. The \textsc{udpPacketManager} \citep{David_JOSS} is then used to create \textsc{sigproc} \citep{lorimer_sigproc_2011} formatted filterbanks at the specifications detailed in \cref{tab:data_details_crab}
 
-\begin{table}[h]
+\begin{table}[htbp]
     \centering
 
     \begin{tabular}{lc}
@@ -49,12 +54,12 @@ Observations were taken using the Irish LOw Frequency ARray station (I-LOFAR) us
         \hline
         Frequency Start $(f_\text{start})$ & 102.234131 MHz \\
         Frequency End $(f_\text{end})$ & 197.546387 MHz \\
-        Frequency Resolution & $24.4414\,\mathrm{kHz}$ \\
-        Temporal Resolution & $655.36\,\upmu\mathrm{s}$ \\
+        Frequency Resolution & $24.4414~\mathrm{kHz}$ \\
+        Temporal Resolution & $655.36~\upmu\mathrm{s}$ \\
         \hline
     \end{tabular}
     \caption[Crab data sepecifications]{Specifications of data as generated with \textsc{udpPacketManager}~\citep{David_JOSS}.}
-    \label{tab:data_details}
+    \label{tab:data_details_crab}
 \end{table}
 
 
@@ -84,20 +89,20 @@ Single pulses with widths of $5-50$~ms were searched for to generate candidate l
 
 Due to the large amount of scattering present at lower frequency, traditional boxcar single-pulse searches can often over or underestimate the DM as they simply maximise S/N over a reasonably coarse search grid in DM and pulse width. An example of this is shown in \cref{fig:DMvariation}. The initial DM, from the \textsc{transientx} detection was corrected by using \textsc{DM\_phase} \citep{seymour_dm_phase_2019}, which optimises based on coherent radio power (phase of the pulse) across the band. This is done by ingesting RFI-cleaned archive files and dedispersing across a range of trial DMs. The trial DM that maximises inter-channel phase coherence, rather than the amplitude of the dedispersed time series, is selected. The corresponding dispersive delay, $\Delta t$ is applied. After dedispersion, the intensity waterfall $I(\nu_i,t)$ is Fourier transformed along the pulse phase/time axis to obtain $\tilde{I}_i(f)=\mathcal{F}_t\{I(\nu_i,t)\}$. The phase-only spectrum is then formed by normalising the amplitude like:
 \begin{equation}
-\hat{I}_i(f)=\frac{\tilde{I}_i(f)}{\left|\tilde{I}_i(f)\right|}\,.
+\hat{I}_i(f)=\frac{\tilde{I}_i(f)}{\left|\tilde{I}_i(f)\right|}~.
 \end{equation}
 This is then summed coherently across all frequency channels like:
 \begin{equation}
 C(f;\mathrm{DM})=\sum_{i=1}^{N_\nu}\hat{I}_i(f), \qquad
-P(f;\mathrm{DM})=\left|C(f;\mathrm{DM})\right|^2 \,.
+P(f;\mathrm{DM})=\left|C(f;\mathrm{DM})\right|^2 ~.
 \end{equation}
 A one-dimensional DM metric is obtained by integrating $P(f;\mathrm{DM})$ over a range in fluctuation frequency $f$,
 \begin{equation}
-S(\mathrm{DM})=\sum_{f=f_{\rm low}}^{f_{\rm high}} w(f)\,P(f;\mathrm{DM})\,,
+S(\mathrm{DM})=\sum_{f=f_{\rm low}}^{f_{\rm high}} w(f)~P(f;\mathrm{DM})~,
 \end{equation}
 and the best-fit DM is selected as the maximum $S(\text{DM})$. The DM uncertainty is estimated by fitting a polynomial to the peak of $S(\mathrm{DM})$ and using the curvature at the maximum (Hessian approximation) $\mathrm{DM}_0$, giving
 \begin{equation}
-\sigma_{\mathrm{DM}}=\sqrt{\left|\frac{2\,\varepsilon}{{S_{\text{max}}}''(\mathrm{DM}_0)}\right|}\, ,
+\sigma_{\mathrm{DM}}=\sqrt{\left|\frac{2~\varepsilon}{{S_{\text{max}}}''(\mathrm{DM}_0)}\right|}~ ,
 \end{equation}
 where $\varepsilon$ is a noise scale for the DM metric.
 
@@ -110,7 +115,7 @@ where $\varepsilon$ is a noise scale for the DM metric.
 
 \subsection{Modelling Scattering} \label{sec:modelScattering}
 
-Previously outlined by  \citet[][pp.~208--220]{mckennathesis2023}  due to high precision that DM can be determined with a single international LOFAR station its possible to model the scattering of individual pulses as a function of frequency. Splitting pulses into 10~MHz chunks, three models have been previously used to model scattering time as a function of frequency and time \citep{bhat_detection_2007, karuppusamy_giant_2010}. 
+Previously outlined by  \citet[][pp.~208--220]{david_thesis}  due to high precision that DM can be determined with a single international LOFAR station its possible to model the scattering of individual pulses as a function of frequency. Splitting pulses into 10~MHz chunks, three models have been previously used to model scattering time as a function of frequency and time \citep{bhat_detection_2007, karuppusamy_giant_2010}. 
 The thin screen model proposed by \cite{bhat_clean-based_2003}, assumes that scattering occurs within a narrow layer located on an infinite plane. Because the screen is sufficiently thin, photons crossing it experience no change in propagation speed, and the observed delay arises purely from the geometric path difference caused by the scattering event. It is described as follows: 
 
 \begin{equation}
@@ -125,26 +130,26 @@ This models the pulse with an exponential decay with a characteristic value for 
     \label{eq:thin_model_mod}
 \end{equation}
 
-Similarly \cite{williamson_pulse_1972} describes a thick model. In the thick model photons are continuously scattered during their propagation from the source to observer through a fraction of the medium. In this case \cref{eq:thick_model} places the screen close to the source which can be used to model the effect of the Crab's nebula on individual pulses. 
+Similarly \cite{williamson_pulse_1972} describes a thick model. In the thick model, photons are continuously scattered during their propagation from the source to observer through a fraction of the medium. In this case, \cref{eq:thick_model} places the screen close to the source, which can be used to model the effect of the Crab's nebula on individual pulses. 
 
 
 \begin{equation}
-    f_{\text{thick}} (t,t_0,\tau,A) = \sqrt{\frac{A \pi \tau}{4(t-t_0)^3}} \exp\left[ - \frac{\pi^2}{16(t-t_0)} \right] H(t -t_0)
+    f_{\text{thick}} (t,t_0,\tau,A) = \sqrt{\frac{A \pi \tau}{4(t-t_0)^3}} \exp\left[ - \frac{\pi^2 \tau}{16(t-t_0)} \right] H(t -t_0)
     \label{eq:thick_model}
 \end{equation}
 
-For each of the that have been DM corrected the respective archive file is read and split into 9.53~MHz subbands (see \cref{fig:scattering}). Each subband is then fitted to both \cref{eq:thin_model_mod} and \cref{eq:thick_model} using \textsc{lmfit} to compute statistical significance of each fit in a number of ways. \Cref{eq:thinmodel} was omitted from fitting due to previous studies \citep{karuppusamy_giant_2010} and preliminary work on this data set \citep[][pp. 208--220]{David_thesis_2023} as the model failed to converge with any of the subbands in this frequency range. 
+For each of those that have been DM corrected, the respective archive file is read and split into 9.53~MHz subbands (see \cref{fig:scattering}). Each subband is then fitted to both, \cref{eq:thin_model_mod} and \cref{eq:thick_model} using \textsc{lmfit} to compute statistical significance of each fit in a number of ways. In this case, Akaike Information Criterion (AIC) is used to determine which model fit was optimal for each subband. AIC was chosen as it quantifies the information loss between models \citep{akaike_new_1974} with the lowest scoring model being marked as the preferred in that specific subband for that burst. \Cref{eq:thinmodel} was omitted from fitting due to previous studies \citep{karuppusamy_giant_2010} and preliminary work on this data set, \citep[pp. 208--220,][]{david_thesis} as the model failed to converge with any of the subbands in the frequency range of this study. 
 
 \begin{figure}
     \centering
-    \includegraphics[width=0.58\linewidth]{chapter4/figures/Crab_scattering_fit.pdf}
-    \caption[Example of pulse scattering across the LOFAR band]{Example of the scattering fits applied to an example giant pulse that has a post corrected SNR of 291. Here the black line represents the fitted scattering model, scatter points are the observed data. }
+    \includegraphics[width=0.57\linewidth]{chapter4/figures/Crab_scattering_fit.pdf}
+    \caption[Example of pulse scattering across the LOFAR band]{Example of the scattering fits applied to an example giant pulse that has a post-corrected SNR of 291. Here the black line represents the fitted scattering model; the scatter points are the observed data. }
     \label{fig:scattering}
 \end{figure}
 
 \subsection{Folding}
 
-In addition to the analysis of the Crab GPs, each of the epochs were also folded for a comparison. For each epoch the Crab ephemeris measured monthly by Jodrell bank was used\footnote{\url{https://www.jb.man.ac.uk/pulsar/crab/}} \citep{lyne_23_1993} as a first guess, \textsc{PRESTO} was then used to further refine DM and period values before timing with \textsc{TEMPO2} \citep{hobbs_tempo2_2006}. Initial efforts were made to time each epoch as described in \citet{iraci_pulsar_2024} and \citet{susarla_long-term_2025}, however determining an accurate for ephemeris for the Crab across over half decade proved difficult due to scattering exhibited in the Crabs pulse profile along with DM variations on short timescales (see. \cref{fig:foldedprofile}). DM was determined using single epoch timing values through the creation of a template from a high SNR observation and then fitting DM to from Time of Arrivals (TOAs) for 8 subbands in the archive. Due to the scattering the error was on the order of $10^{-2}$~\dm~for each of the epochs, whereas for other pulsars without complex scattering its on the order of $10^{-5}$~\dm~\citep{susarla_long-term_2025}. Due to this the folded analysis was omitted from the DM time series as it provided no further insights than its higher frequency contemporaries. 
+In addition to the analysis of the Crab GPs, each of the epochs were also folded for a comparison. For each epoch, the Crab ephemeris measured monthly by Jodrell bank was used\footnote{\url{https://www.jb.man.ac.uk/pulsar/crab/}} \citep{lyne_23_1993} as a first guess, \textsc{PRESTO} was then used to further refine DM and period values before timing with \textsc{TEMPO2} \citep{hobbs_tempo2_2006}. Initial efforts were made to time each epoch as described in \citet{iraci_pulsar_2024} and \citet{susarla_long-term_2025}, however determining an accurate for ephemeris for the Crab across over half decade proved difficult due to scattering exhibited in the Crabs pulse profile along with DM variations on short timescales (see. \cref{fig:foldedprofile}). DM was determined using single epoch timing values through the creation of a template from a high SNR observation and then fitting DM to from Time of Arrivals (TOAs) for 8 subbands in the archive. Due to the scattering the error was on the order of $10^{-2}$~\dm~for each of the epochs, whereas for other pulsars without complex scattering its on the order of $10^{-5}$~\dm~\citep{susarla_long-term_2025}. As a result, the folded analysis was omitted from the DM time series as it provided no further insights than its higher frequency contemporaries. 
 
 \begin{figure}
     \centering
@@ -153,7 +158,7 @@ In addition to the analysis of the Crab GPs, each of the epochs were also folded
     \label{fig:foldedprofile}
 \end{figure}
 
-\section{Results} \label{sec:results}
+\section{Results} \label{sec:results_crab}
 
 This work details the analysis of $\tobs$ hours of Crab data over 6 years using the I-LOFAR telescope. In this dataset $\GPn$ giant pulses were detected in the dataset. Of these GPs $\GPhundred$ had an S/N greater than 100 and used to in DM correction and modelling scattering. 
 
@@ -162,13 +167,13 @@ This work details the analysis of $\tobs$ hours of Crab data over 6 years using 
 Overall $\cands$ candidates were detected above the average noise floor of 7.3, generating a histogram of just the $\GPn$ GPs and fitting a power law to this population of pulses is shown in \cref{fig:SNR_histogram}. Calculating the flux distribution was done using a modified version of the radiometer equation as described in \cite{Vincetti2026} and \cite{johnson_radio_2025}: 
 
 \begin{equation}
-S_{\min,\rm{chan}}(f, l, b) = \frac{\left[ T_{\text{sky}}(l,b) + T_{\text{int}}(f) \right] \cdot 2 k_B}{A_{\text{eff}}(f) \cdot m_{\text{II}} (f, l,b)} \cdot \beta  \times \frac{\text{S/N}_{\min} }{\sqrt{n_p\, \tau_{\mathrm{burst}}\, B_{\text{channel}}}} \cdot 
+S_{\min,\rm{chan}}(f, l, b) = \frac{\left[ T_{\text{sky}}(l,b) + T_{\text{int}}(f) \right] \cdot 2 k_B}{A_{\text{eff}}(f) \cdot m_{\text{II}} (f, l,b)} \cdot \beta  \times \frac{\text{S/N}_{\min} }{\sqrt{n_p~ \tau_{\mathrm{burst}}~ B_{\text{channel}}}} \cdot 
  % \label{eq:radiometer_equation}
 \end{equation}
 
-Here, $T_{\text{sky}}(l,b)$ is the sky temperature at Galactic coordinates $(l,b)$, $T_{\text{int}}(f)$ is the frequency-dependent instrumental temperature, $k_B$ is the Boltzmann constant, $A_{\text{eff}}(f)$ is the effective collecting area of the telescope, and $m_{\text{II}}(f,l,b)$ is the beam-model sensitivity correction factor. The factor $\beta$ accounts for instrumental losses, $\text{S/N}_{\min}$ is the minimum detectable signal-to-noise ratio, $n_p$ is the number of summed polarisations, and $B_{\text{channel}}$ is the channel bandwidth. The final term $\tau_{\mathrm{burst}}$ is the width of the pulse, but this can also be replaced with $\sqrt{W/(P-W)}$ which accounts for pulse broadening, where $P$ is the pulse period and $W$ is the observed pulse width, this is used in cases where the observations are folded. 
+Here, $T_{\text{sky}}(l,b)$ is the sky temperature at Galactic coordinates $(l,b)$, $T_{\text{int}}(f)$ is the frequency-dependent instrumental temperature, $k_B$ is the Boltzmann constant, $A_{\text{eff}}(f)$ is the effective collecting area of the telescope, and $m_{\text{II}}(f,l,b)$ is the beam-model sensitivity correction factor. The factor $\beta$ accounts for instrumental losses, $\text{S/N}_{\min}$ is the minimum detectable signal-to-noise ratio, $n_p$ is the number of summed polarizations, and $B_{\text{channel}}$ is the channel bandwidth. The final term $\tau_{\mathrm{burst}}$ is the width of the pulse, but this can also be replaced with $\sqrt{W/(P-W)}$ which accounts for pulse broadening, where $P$ is the pulse period and $W$ is the observed pulse width, this is used in cases where the observations are folded. 
 
-In the case of $T_{sys}$ and $T_{\mathrm{int}}$ the values are calculated as described in \cite{mckenna_census_2024}, values for $A_{\mathrm{eff, max}}$ are taken from \cite{van_haarlem_lofar_2013}. In the case of the $m_{\mathrm{II}}$, the values are taken as the average over a four-hour track above I-LOFAR, peaking at $60^{\circ}$ in elevation. 
+In the case of $T_{sys}$ and $T_{\mathrm{int}}$ the values are calculated as described in \cite{mckenna_census_2024}, values for $A_{\mathrm{eff, max}}$ are taken from \cite{van_haarlem_lofar_2013}. In the case of the $m_{\mathrm{II}}$, the values are taken as the average over a four-hour track above I-LOFAR, peaking at $60^{\circ}$ in elevation with the same method as described in \cite{Vincetti2026}. 
 
 The outputted value from \cref{eq:radiometer_equation} is the flux measurement for that channel, so the final flux value is calculated using quadrature summation as follows: 
 
@@ -186,43 +191,43 @@ The outputted value from \cref{eq:radiometer_equation} is the flux measurement f
 %     \label{fig:SNR_histogram}
 % \end{figure}
 
-\begin{figure}[h]
-    \centering
-        \begin{minipage}{0.48\linewidth}
-        \centering
-        \includegraphics[width=\linewidth]{chapter4/figures/CrabGP_Phase_histogram.pdf}
-        % \captionsetup{labelformat=empty}
-        \caption*{(a)}
-    \end{minipage}
-    \hfill
-    \begin{minipage}{0.48\linewidth}
-        \centering
-        \includegraphics[width=\linewidth]{chapter4/figures/CrabGP_SNR_histogram.pdf}
-        % \captionsetup{labelformat=empty}
-        \caption*{(b)}
-    \end{minipage}
-    \vspace{0.5cm}
-    \hfill
-    \begin{minipage}{0.48\linewidth}
-        \centering
-        \includegraphics[width=\linewidth]{chapter4/figures/CrabGP_Flux_histogram.pdf}
-        % \captionsetup{labelformat=empty}
-        \caption*{(c)}
-    \end{minipage}
-    \begin{minipage}{0.48\linewidth}
-        \centering
-        \includegraphics[width=\linewidth]{chapter4/figures/CrabGP_Fluence_histogram.pdf}
-        % \captionsetup{labelformat=empty}
-        \caption*{(d)}
-    \end{minipage}
+% \begin{figure}[htbp]
+%     \centering
+%         \begin{minipage}{0.48\linewidth}
+%         \centering
+%         \includegraphics[width=\linewidth]{chapter4/figures/CrabGP_MP_IP_windows.pdf}
+%         % \captionsetup{labelformat=empty}
+%         \caption*{(a)}
+%     \end{minipage}
+%     \hfill
+%     \begin{minipage}{0.48\linewidth}
+%         \centering
+%         \includegraphics[width=\linewidth]{chapter4/figures/CrabGP_SNR_histogram_MLE.pdf}
+%         % \captionsetup{labelformat=empty}
+%         \caption*{(b)}
+%     \end{minipage}
+%     \vspace{0.5cm}
+%     \hfill
+%     \begin{minipage}{0.48\linewidth}
+%         \centering
+%         \includegraphics[width=\linewidth]{chapter4/figures/CrabGP_Flux_histogram_MLE.pdf}
+%         % \captionsetup{labelformat=empty}
+%         \caption*{(c)}
+%     \end{minipage}
+%     \begin{minipage}{0.48\linewidth}
+%         \centering
+%         \includegraphics[width=\linewidth]{chapter4/figures/CrabGP_Fluence_histogram_MLE.pdf}
+%         % \captionsetup{labelformat=empty}
+%         \caption*{(d)}
+%     \end{minipage}
 
-    \caption[Properties of the detected Crab pulses]{Properties of the detected Crab pulses.\textit{a)}:  pulse phase distribution. \textit{b)}: signal-to-noise ratio distribution. \textit{c):} flux distribution. \textit{d):} fluence distribution.}
-    \label{fig:SNR_histogram}
-\end{figure}
+%     \caption[Properties of the detected Crab pulses]{Properties of the detected Crab pulses.\textit{a)}:  pulse phase distribution. \textit{b)}: signal-to-noise ratio distribution. \textit{c):} flux distribution. \textit{d):} fluence distribution.}
+%     \label{fig:SNR_histogram}
+% \end{figure}
 
     % \caption{Properties of the detected Crab pulses. Top left:  pulse phase distribution.  Top right: signal-to-noise ratio distribution. \textit{Bottom left:} flux distribution.\textit{Bottom right:} fluence distribution.}
 
-The details of the population of observed bursts from each day are shown in table \ref{tab:bursts}.
+The details of the population of observed bursts from each day are shown in table \ref{tab:bursts}. Note that the burst rate decreases with angular separation from the zenith, consistent with the decreased effective area. 
 
 % \begin{figure}[h]
 %     \centering
@@ -231,26 +236,110 @@ The details of the population of observed bursts from each day are shown in tabl
 %     \label{fig:placeholder}
 % \end{figure}
 
-\subsection{Fluence Measurement}
 
-Fluence, $\mathcal{F}$, for each pulse detected above the noise floor. For pulses with SNR $>$ 100 the fluence was calculated using the scattering timescale. For pulses that didn't meet this threshold, the determined boxcar width and SNR obtained from \textsc{TransientX} was used such that $\mathcal{F} = \sqrt{W} \cdot S_{\text{burst}}$, similar the scattering timescale was used for pulses where scattering was measured. For each sub-band the best fit model was taken to be the best representation of the timescale for that specific pulse and the values were then averaged. 
+% \subsection{Dispersion Measure}
+
+% The DM of each
+
+
+\subsection{Pulse Distributions}
+
+\Cref{fig:SNR_histogram} shows the distributions of pulses across phase, SNR and flux and fluence. Fluence, $\mathcal{F}$, was calculated for each pulse detected above the noise floor. The fluence calculation was done by using the determined boxcar width and SNR obtained from \textsc{TransientX} such that $\mathcal{F} = {W} \cdot S_{\text{burst}}$. The resultant distribution when first fitting the sample showed a bump towards the tail of the distribution. This bump is more pronounced in the flux distribution but present in all three. Initially, this was thought to be the contribution of two different populations with two different representative power-laws. The main pulse (MP) and the inter-pulse (IP), the MP is the dominant emission component and the IP is the secondary `bump' in the pulse profile shown in \cref{fig:foldedprofile} and \cref{fig:SNR_histogram} (a). The IP is usually treated as a distinct magnetospheric emission component that peaks around 0.9 in phase. It has been thought to be linked to the opposite pole or outer magnetosphere, although its high-frequency behaviour suggests a more complex geometry than the standard two-pole picture \citep{cordes_brightest_2004, petrova_physics_2008}. 
+
+Because of this, each burst was separated into either a population of MP or IP based on the calculated phase. Due to scattering the exact point in phase to delineate between IPs and MPs is difficult to determine. \cite{driessen_scattering_2019} investigated unique pulse morphologies based on variations in phase location and varying-rise and decay properties, and giving a set terminology for these features \citep[e.g. fig 7;][]{driessen_scattering_2019}. However, none of these features were present in the sample of GPs that were fitted with scattering models. This is likely due to any `echo' or `bump' being adsorbed into the broadened pulse. 
+
+To try and estimate the phase boundaries of the two pulse population a maximum likelihood estimation \citep[MLE;][]{clauset_power-law_2009} is used. This is done by binning each of the S/N values into phase bins of width 0.005 where a power law $(Ax^{-\alpha})$ fit is computed, shown in \cref{fig:MLEphase}. This shows two distinct features, one at $0.45-0.7$ where $\alpha=2.7$ and a much weaker feature at $0.9-1.005$ with a $\alpha=3.3$. These phase ranges $\alpha$ values are consistent with other studies \citep[i.e.][]{karuppusamy_crab_2012} where the MP population is considered to occur at $\phi \sim0.5$ and have a flatter component than that of the IP population which is noted to occur at $\phi \sim 0.9$. The error for each $\alpha$ value is calculated as follows: 
+
+\begin{equation}
+    \Delta\alpha = \frac{(\alpha - 1)}{\sqrt{n}}.
+\end{equation}
+
+This error estimation is purely statistical and assumes that each phase bin is a power-law \citep{clauset_power-law_2009}. The two features in \cref{fig:MLEphase} indicate that there are two populations as expected, but the presence of a baseline $\alpha$ of 3.6 implies that there are GPs that may have incorrect phase assignment due to scattering or other factors which is discussed below. 
+
+Assuming that there are only two populations within the dataset an estimation of the phase windows of MPs and IPs can be made. This is done using a sliding window of varying length ($L_{\phi}: 0.005 -0.5$) and start phase ($\phi_0  : 0.005-0.995$) is generated to represent the MP population with anything outside this window representing the IP population. Each population for a given window has a separate MLE power law fitted the same as above with the maximum log-likelihood values taken for each fit. These two likelihoods are summed to give that given window a `total' likelihood metric, with the window with the highest likelihood selected as the best phase ranges. This best windowed result is then compared to an overall fit of the entire population using Bayesian information criterion to ensure that the two population fit is preferred oppose to a single population. This method fitted the main MLE feature, as shown in \cref{fig:MLEphase} by the dashed vertical lines, however, this is inconsistent with the physical interpretation shown by the pulse profile (top panel fig. \ref{fig:MLEphase}). The determined window shows a one-sided fit that begins near the peak of the phase plot where MPs are seen at higher frequencies \citep[i.e.][]{lyne_23_1993} and ends before the scattering tail from the MP plateaus.  
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\linewidth]{chapter4/figures/phase_split_plot.pdf}
+    \caption{The top panel shows the number of pulses per phase bin of width 0.005. The bottom panel shows the MLE $\alpha$ value calculated for each phase bin. The dotted lines represent the best log-likelihood MP phase range.}
+    \label{fig:MLEphase}
+\end{figure}
+
+As a result, the population window was determined by fitting a 1D Gaussian filter\footnote{\url{https://docs.scipy.org/doc/scipy/reference/generated/scipy.ndimage.gaussian_filter1d.html}} to the phase profile and taking the points of inflection of the two peaks as the `start' point for MPs and IPs which was determined as 0.487 and 0.912 which is consistent with the literature.  The end of the window was then taken to be an estimation of the local minimum in the wells between the peaks of the phase profile, this was determined by using the middle of the 10\% lowest values in each well. MPs were considered the population that fell into the pink region in \cref{fig:SNR_histogram} (a) and IPs anywhere outside this region, marked in blue. The bump remained after the populations had been separated out (shown in \cref{fig:SNR_histogram}) with their respective fitted power law between the MP and IP populations, with IP population being steeper in the case of S/N and flux density but not for fluence. 
+
+\begin{figure}[htbp]
+    \centering
+        \begin{minipage}{0.48\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{chapter4/figures/CrabGP_MP_IP_windows.pdf}
+        % \captionsetup{labelformat=empty}
+        \caption*{(a)}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.48\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{chapter4/figures/CrabGP_SNR_histogram_MLE.pdf}
+        % \captionsetup{labelformat=empty}
+        \caption*{(b)}
+    \end{minipage}
+    \vspace{0.5cm}
+    \hfill
+    \begin{minipage}{0.48\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{chapter4/figures/CrabGP_Flux_histogram_MLE.pdf}
+        % \captionsetup{labelformat=empty}
+        \caption*{(c)}
+    \end{minipage}
+    \begin{minipage}{0.48\linewidth}
+        \centering
+        \includegraphics[width=\linewidth]{chapter4/figures/CrabGP_Fluence_histogram_MLE.pdf}
+        % \captionsetup{labelformat=empty}
+        \caption*{(d)}
+    \end{minipage}
+
+    \caption[Properties of the detected Crab pulses]{Properties of the detected Crab pulses.\textit{a)}:  pulse phase distribution. \textit{b)}: signal-to-noise ratio distribution. \textit{c):} flux distribution. \textit{d):} fluence distribution.}
+    \label{fig:SNR_histogram}
+\end{figure}
+
+These values are in-line with what is expected, the MP population has been well noted to be intrinsically brighter than the IP population. However, the fitted power law and average fluence between the two populations are inverted. This could reflect selection effects, incomplete phase tagging, and scattering-related smearing that makes the bright end of the sample harder to interpret cleanly. As discussed the separation of these two populations is difficult. The more pronounced `bump' in the fluence distribution is likely due to the higher S/N pulses introducing a bias as the fitted scattering timescale is easier to discern from the noise floor causing pulses in with a higher S/N have a more representative fluence and flux to the low S/N population. Overall the current results are therefore best interpreted as suggestive, but not as a definitive measurement of intrinsic pulse-phase or fluence boundaries between IP and MP population and the Crab as a whole with the measured slope per phase in \cref{fig:MLEphase} providing a more reasonable estimate. 
+
+A way to account for this could be the use of cyclic spectroscopy. Cyclic spectroscopy is a coherent folding technique that recovers phase‑preserving, high‑resolution frequency information by exploiting pulsar periodicity; it allows estimation and (where feasible) de-convolution of the ISM impulse response so that intrinsic pulse phase structure can be recovered and scattering‑induced broadening corrected \citep{demorest_cyclic_2011, turner_constraining_2026}. This would make it easier to discern the true phase of the single pulses, as it stands, the phase boundary is too `fuzzy' for a sharp separation in the pulse populations. 
+
+The fitted power‑law indices for S/N, flux and fluence in our Crab giant‑pulse sample (MP $\sim$3.0–3.4; IP $\sim$ 3.3–3.5) fall on the upper end of previously published ranges for Crab GPs, which typically report indices between 1.6–3.6 at these frequencies depending on the chosen observable \citep{karuppusamy_giant_2010, karuppusamy_crab_2012, sokolowski_100_2025}. The spread in fitted power-law indices reflects differences in observing frequency, observable definition, fit range, completeness, and scattering bias which has been showcased here. As a result, there is no universally accepted value for each population but rather an expected range based on frequency, chosen subband and so on.  
+
+\Cref{fig:GPspectra} shows the S/N, flux and fluence for the \GPhundred~GPs that are over 100 S/N along with the normalised bandpass response of I-LOFAR. The shape of each of the spectra follows a trend of the sensitivity of the LOFAR bandpass \citep{van_haarlem_lofar_2013} with both ends of the band being lower in sensitivity along with the loss in S/N as scattering increases towards the lower end of the band. 
+
+
+
+
+% \subsection{Fluence Measurement and Spectrum}
+
+% Fluence, $\mathcal{F}$, was calculated for each pulse detected above the noise floor. The fluence calculation was done by using the determined boxcar width and SNR obtained from \textsc{TransientX} such that $\mathcal{F} = {W} \cdot S_{\text{burst}}$. 
+
+% , similar the scattering timescale was used for pulses where scattering was measured. For each sub-band the best fit model was taken to be the best representation of the timescale for that specific pulse and the values were then averaged. 
 
 % \begin{equation}
-%     I(t) = \int_{-\infty}^{s} A \exp\left(-\frac{(t-s)^2}{2\sigma^2}\right) \exp\left(-\frac{s}{\tau}\right) H(s) \, ds
+%     I(t) = \int_{-\infty}^{s} A \exp\left(-\frac{(t-s)^2}{2\sigma^2}\right) \exp\left(-\frac{s}{\tau}\right) H(s) ~ ds
 %     \label{eq:convolved}
 % \end{equation}
 
 % Here $A$ is the amplitude, $\sigma$ is the Gaussian instrumental width, $\tau$ is the intrinsic exponential decay timescale, $t$ is observation time relative to pulse peak, $s$ is the dummy variable for intrinsic emission time, and $H(s)$ is the Heaviside step function (emission only for $s\geq 0$). The total fluence of a pulse is then given by, 
 
 % \begin{equation}
-%     \mathcal{F} = \int_{t_{\min}}^{t_{\max}} I(t) \, dt
+%     \mathcal{F} = \int_{t_{\min}}^{t_{\max}} I(t) ~ dt
 %     \label{eq:fluence}
 % \end{equation}
 
-Computing\footnote{\url{https://github.com/OwenJohnsons/Crab-Giant-Pulses/tree/main/modelling}} the fluence for each pulse gives an average fluence of $82.08~ \text{kJy~ms}$. The distribution of fluences for observed pulses is shown in the bottom right of \cref{fig:SNR_histogram}. 
-% \subsection{Dispersion Measure}
+% Computing\footnote{\url{https://github.com/OwenJohnsons/Crab-Giant-Pulses/tree/main/modelling}} the fluence for each pulse gives an average fluence of $189.5~ \text{Jy~ms}$ for MPs and $216.8~\text{Jy~ms}$ for IPs. The distribution of fluences for observed pulses is shown in the bottom right of \cref{fig:SNR_histogram}. 
 
-% The DM of each
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.96\linewidth]{chapter4/figures/CrabGP_Spectra.pdf}
+    \caption[Giant Pulse Spectra]{Frequency as a function of SNR \textit{(left)}, mean flux density \textit{(middle)} and mean fluence \textit{(right)} for GPs with an SNR over 100. The normalised bandpass response is shown in grey.} 
+    \label{fig:GPspectra}
+\end{figure}
+
 
 \begin{figure}
     \centering
@@ -259,23 +348,10 @@ Computing\footnote{\url{https://github.com/OwenJohnsons/Crab-Giant-Pulses/tree/m
     \label{fig:scatteringtDMtimeseries}
 \end{figure}
 
-\subsection{Pulse Distributions}
-
-\Cref{fig:SNR_histogram} shows the distributions of pulses across phase, SNR and flux and fluence. The resultant distribution when first fitting the sample showed a bump towards the tail of the distribution. This bump is more pronounced in the flux distribution but present in all three. Initially this was thought to be the contribution of two different population with two different representative power-laws. The main pulse (MP) and the inter-pulse (IP), the MP is the dominant emission component and the IP is the secondary `bump' in the pulse profile shown in \cref{fig:foldedprofile} and \cref{fig:SNR_histogram} (a). The IP is usually treated as a distinct magnetospheric emission component that peaks around 0.9 in phase. It is probably linked to the opposite pole or outer magnetosphere, although its high-frequency behaviour suggests a more complex geometry than the standard two-pole picture \citep{cordes_brightest_2004, petrova_physics_2008}. 
-
-In lieu of each burst was separated into either a population of MP or IP based on the calculated phase. MPs were considered the population that fell into the pink region in \cref{fig:SNR_histogram} (a) and IPs anywhere outside this region. The bump remained after the populations had been seperated out (what's shown in \cref{fig:SNR_histogram}) with the fitted slopes differ between the main pulse and interpulse populations, with the interpulse appearing systematically steeper in all three cases.
-
-There is a likelihood that there is a genuine difference in burst statistics between the two pulse windows. However, it could also reflect selection effects, incomplete phase tagging, and scattering-related smearing that makes the bright end of the sample harder to interpret cleanly. The scattering present in the Crab pulses at these lower frequencies makes it that the pulse broadening makes the exact pulse phase hard to determine as observed arrival times will be shifted from the point of their intrinsic emission. 
-
-A way to account for this could be the use of cyclic spectroscopy. Cyclic spectroscopy is a coherent folding technique that recovers phase‑preserving, high‑resolution frequency information by exploiting pulsar periodicity; it allows estimation and (where feasible) de-convolution of the ISM impulse response so that intrinsic pulse phase structure can be recovered and scattering‑induced broadening corrected \citep{demorest_cyclic_2011, turner_constraining_2026}. This would make it easier to discern the true phase of the single pulses, as it stands the phase boundary is too `fuzzy' for a sharp seperation in the pulse populations. 
-
-A further potential contribution to consider the higher S/N pulses may be bias as the fitted scattering timescale is easier to discern from the noise floor causing pulses in with a higher S/N have a more representative fluence and flux to the low S/N population. Overall the current results are therefore best interpreted as suggestive, but not as a definitive measurement of intrinsic pulse-phase or fluence boundaries between IP and MP population and the Crab as a whole. 
-
-A power law, $Ax^{-\alpha}$, was fitted by performing a weighted ($\sqrt{N}$) least-squares fit in logarithmic space. Parameter uncertainties were estimated from the covariance matrix returned by the weighted linear regression, taken as the square root of the diagonals in the covariance matrix, $\sqrt{\rm{Cov}(c,c)}$. The fitted power‑law indices for SNR, flux and fluence in our Crab giant‑pulse sample (MP $\sim$2.0–2.1; IP $\sim$ 2.4–2.8) are consistent with previously published ranges for Crab GPs, which typically report indices between 1.6–3.6 at these frequencies depending on the chosen observable \citep{karuppusamy_giant_2010, karuppusamy_crab_2012, sokolowski_100_2025}.  The spread in fitted power-law indices reflects differences in observing frequency, observable definition, fit range, completeness, and scattering bias which has been showcased here. As a result there is no universally accepted but rather an expected range based on frequency, chosen subband and so on.  
 
 \subsection{Scattering}
 
-As previously discussed scattering was fitted to each of the GPs above an SN of 100 after using \textsc{DM\_phase}. In observations where no GP greater than 100 was observed, the next brightest pulse was used. As described in §\ref{sec:modelScattering} both modified thin (eq. \ref{eq:thin_model_mod}) and thick (eq. \ref{eq:thick_model}) models was fitted to the data and their statistical significance noted. The scattering timescale in each sub-band of each pulse was measured, the median scattering value was taken for both the thin and thick scattering models and a power law in the following form.
+As previously discussed scattering was fitted to each of the GPs above an SN of 100 after using \textsc{DM\_phase}. In observations where no GP greater than 100 was observed, the next brightest pulse was used. As described in §\ref{sec:modelScattering} both modified thin (eq. \ref{eq:thin_model_mod}) and thick (eq. \ref{eq:thick_model}) models was fitted to the data and their statistical significance noted using \textsc{lmfit}. The scattering timescale in each sub-band of each pulse was measured, the median scattering value was taken for both the thin and thick scattering models and a power law in the following form.
 
 \begin{equation}
     \tau(f) = \tau_{\mathrm{150}} \left[\frac{f}{150~\text{MHz}} \right]^\alpha
@@ -288,40 +364,87 @@ The measured scattering parameters when compared to the DMs allow for an analysi
 
 The lower the observing frequency the better the delineation of DM as dispersion delay increases as with $f^{-2}$, in theory improving the accuracy of the determined DM. However, at these frequencies scattering is also substantially increased $\sim f^{-4}$, leading to large broadening in the observed pulse, as observed in \cref{fig:scattering}. Consequently, a trade-off arises in the ability to measure DM and the increased temporal offset that comes with scattering.  
 
-To quantify the trade-off the values obtained for the scattering power law, \cref{eq:powerlawscattering} was compared against the dispersive delay introduced by a finite DM uncertainty, $\sigma_{\mathrm{dm}}$ across the observed bandwidth. The `transition' frequency was estimated by equating the scattering timescale with the DM dispersion delay across the band, 
+Calculating the `raw' correlation between both the scattering models and measured DM shows a positive correlation. The thin model has a Pearson score, $r$, of $0.714 \pm 0.04$ and a Spearman score, $\rho$, of $0.777 \pm 0.04$, with the thick model having $r = 0.698 \pm 0.04$ and $\rho = 0.745 \pm 0.04$ respectively. The higher Spearman values in both cases suggest that the relationship is monotonic but not linear. The correlation here is higher to that found by \cite{mckee_temporal_2018} which was found to be $0.56\pm 0.1$. DM and scattering both drift with time and no neighbouring days were observed to be independent which is in-line with what's expected in the physical picture. 
+
+% To remove the long-term correlation a similar method to \cite{mckee_temporal_2018} and \cite{lam_systematic_2016} is employed to measure the variability of both DM and scattering using a second order structure function, 
+
+% \begin{equation}
+%     D(\Delta t) = \left\langle(x_j-x_i)\right\rangle - \langle (\sigma_j- \sigma_j^2)\rangle
+% \end{equation}
+
+% \begin{equation}
+%     D(\Delta t_k) = \frac{1}{N_k} \sum_{(i,j)~:\;\Delta t_{ij} \in \mathcal{B}_k}
+% \left[ \left( y_j - y_i \right)^2 - \left( \sigma_i^2 + \sigma_j^2 \right) \right].
+% \end{equation}
+
+% where DM and scattering timescale are $x(t)$ in this case and $\sigma$ is their respective error. The structure function is then calculated by averaging the squared differences of pairs of observations within bins of a given time separation, $\Delta t$. Using logarithmic time bins from 0 to 2200 days  
+
+To remove the long-term correlation a similar method to \cite{mckee_temporal_2018} and \cite{lam_systematic_2016} de-trending using a running median  that's centred on a give epoch, $t_c$, with a window in days denoted, $W$, 
 
 \begin{equation}
-    \tau (f) = \mathcal{D} \cdot \sigma_{\text{DM}} \left[ \left( f - \frac{\Delta f}{2}\right)^{-2} -\left( f +\frac{\Delta f}{2}\right)^{-2} \right] 
-    \label{eq:scat_dm}
+    \tilde{x}(t_c) = \text{med} \left[ x(t_i)~ | ~t_c - \frac{W}{2} \leq t_i \leq t_c + \frac{W}{2} \right].
 \end{equation}
 
-\Cref{eq:scat_dm} suggest that although very low frequencies provide strong dispersive sensitivity, the rapidly increasing scattering ultimately limits the achievable DM precision from single Crab GPs. Similarly, at sufficiently high frequencies the scattering becomes negligible but DM sensitivity also diminishes. 
+% DM vs tau_thin (N=141): max Pearson r = 0.475 ± 0.070 at W = 140 d; max Spearman rho = 0.517 ± 0.065 at W = 190 d
+% DM vs tau_thick (N=141): max Pearson r = 0.497 ± 0.080 at W = 125 d; max Spearman rho = 0.500 ± 0.066 at W = 180 d
+
+With the residuals then being $\Delta \text{DM}(t) = \text{DM}(t) - \widetilde{DM}(t)$ and $\Delta \tau = \tau (t) - \tilde \tau(t)$. The correlations for various windows are shown in \cref{fig:detrended_correlation}. The max point of correlation is for the thick model is $r = 0.475 \pm0.070$ at $W = 140$ d and $\rho = 0.517 \pm 0.065$ at $W = 190$ d, for the thin model $r = 0.497 \pm 0.080$ at $W = 125$ d and $\rho = 0.500 \pm 0.066$ at $W = 180$ d. Which is comparable to the 200 day de-trend timescale and correlation of 0.56 that \cite{mckee_temporal_2018} reported. 
 
 \begin{figure}
     \centering
-    \includegraphics[width=0.95\linewidth]{chapter4/figures/DMoffset_contours.pdf}
-    \caption[The DM offset of each pulse relative to the nearest measured reference DM ]{The DM offset of each pulse relative to the nearest measured DM from Jodrell Bank ephemeris plotted against the thick screen \textit{(top)} and modified thin screen \textit{(bottom)} scattering models. Each point corresponds to a measured scattering time of a burst with colour corresponding to the centre frequency of the subband.}
-    \label{fig:DMoffset}
+    \includegraphics[width=0.9\linewidth]{chapter4/figures/DM_tau_detrended_correlation.pdf}
+    \caption{De-trended correlation of DM and scattering for different running median windows.}
+    \label{fig:detrended_correlation}
 \end{figure}
 
 
+% To quantify the trade-off the values obtained for the scattering power law, \cref{eq:powerlawscattering} was compared against the dispersive delay introduced by a finite DM uncertainty, $\sigma_{\mathrm{dm}}$ across the observed bandwidth. The `transition' frequency was estimated by equating the scattering timescale with the DM dispersion delay across the band, 
+
+% \begin{equation}
+%     \tau (f) = \mathcal{D} \cdot \sigma_{\text{DM}} \left[ \left( f - \frac{\Delta f}{2}\right)^{-2} -\left( f +\frac{\Delta f}{2}\right)^{-2} \right] 
+%     \label{eq:scat_dm}
+% \end{equation}
+
+% \Cref{eq:scat_dm} suggest that although very low frequencies provide strong dispersive sensitivity, the rapidly increasing scattering ultimately limits the achievable DM precision from single Crab GPs. Similarly, at sufficiently high frequencies the scattering becomes negligible but DM sensitivity also diminishes. 
+
+% \begin{figure}
+%     \centering
+%     \includegraphics[width=0.95\linewidth]{chapter4/figures/DMoffset_contours.pdf}
+%     \caption[The DM offset of each pulse relative to the nearest measured reference DM ]{The DM offset of each pulse relative to the nearest measured DM from Jodrell Bank ephemeris plotted against the thick screen \textit{(top)} and modified thin screen \textit{(bottom)} scattering models. Each point corresponds to a measured scattering time of a burst with colour corresponding to the centre frequency of the subband.}
+%     \label{fig:DMoffset}
+% \end{figure}
+
+% As discussed disentangling the contributing scattering from DM is difficult and from this analysis, there is no clear universal relation that can describe these effects for large scattering values over long timescales. For each epoch if the DM uncertainty is plotted against scattering shown in \cref{fig:scatteringtDMtimeseries} 
 
 \subsection{Implications on the Crab Nebula}
 
-As previously discussed, scattering timescales and dispersion measure are not independent observables. The scattering variability coupled with the offsets of DMs measured of the single pulses in comparison to the Jodrell Bank ephemeris making it difficult to reliably distinguished true variation in DM. The time series itself regardless suggests that there are structures in the Crab nebula itself that vary significantly on small timescales (i.e. 2020-10 to 2021-04). As already mentioned as a possible solution is to use pulsar cyclic spectroscopy \citep{demorest_cyclic_2011,dolch_deconvolving_2021,turner_constraining_2026}. As the ISM is treated as a linear transfer function that convolves the intrinsic pulsar voltage signal, then uses the pulsar’s periodic coherence to estimate and de-convolve the ISM response from the observed voltages. This would be difficult due to the temporal variations in the local nebula itself, but may correct enough of the scattering that the DM precision improves sufficiently enough to further model the local nebulas electron content. 
+As previously discussed, scattering timescales and dispersion measure are not independent observables. The scattering variability coupled with the offsets of DMs measured of the single pulses in comparison to the Jodrell Bank ephemeris (as shown in \cref{fig:scatteringtDMtimeseries}) making it difficult to reliably distinguished true variation in DM. The time series itself regardless suggests that there are structures in the Crab nebula itself that vary significantly on small timescales (i.e. 2020-10 to 2021-04). 
 
-\begin{figure}[h]
+As already mentioned, as a possible solution is to use pulsar cyclic spectroscopy \citep{demorest_cyclic_2011,dolch_deconvolving_2021,turner_constraining_2026}. As the ISM is treated as a linear transfer function that convolves the intrinsic pulsar voltage signal, then uses the pulsar’s periodic coherence to estimate and de-convolve the ISM response from the observed voltages. This would be difficult due to the temporal variations in the local nebula itself, but may correct enough of the scattering that the DM precision improves sufficiently enough to further model the local nebulas electron content. 
+
+\begin{figure}[htbp]
     \centering
     \includegraphics[width=0.75\linewidth]{chapter4/figures/nebulaMovement_ne.pdf}
     \caption[Electron density, $n_e$ as a function of time.]{Electron density, $n_e$ as a function of time. With a Guassian fitted shown in pink and Jodrell bank Ephemeris shown in grey.}
     \label{fig:datevsNe}
 \end{figure}
 
-Taking the period of the distinct rise shown in \cref{fig:scatteringtDMtimeseries} from around September to November and plotting the average electron content as a function of time and fitting a Gaussian an estimate can be made to the transverse time of a filament along the LOS between the observer and the Crab assuming that the main contributions come of DM variations come from the clump itself and not the background electron density. 
+The DM and scattering time series (\cref{fig:scatteringtDMtimeseries}) are strongly correlated, with coefficients of $r = 0.71$ and $0.70$ for the thin and thick screen models respectively. Part of this reflects a long-term rise common to both DM and scattering over the past six years. De-trending with a running median of width 20--360 days, the correlation peaks at $r \approx 0.48$--$0.50$ ($\rho \approx 0.50$--$0.52$) for windows of $\sim$125--190 days, comparable to the $0.56 \pm 0.01$ found by \cite{mckee_temporal_2018} at 610~MHz. The cross-correlation of the de-trended series peaks at a lag consistent with zero, in agreement with the $-10 \pm 10$~day lag of \cite{mckee_temporal_2018} and, within the uncertainties, with the $\sim$30-day delay between scattering and DM peaks reported by \cite{kuzmin_deviation_2008} at 111~MHz. DM and scattering therefore vary together on timescales of months, consistent with discrete structures within the nebula varying the electron column density.
 
-Using the fitted Gaussian width as a crossing time as the filament the transverse velocity can be estimated as $v_\perp \approx L/\Delta t$, where $L$ is the width of the filament and $\Delta t$ is taken to be the Gaussian FWHM, 2.355 $\sigma$ where, $\sigma =20.22~\rm days $ which gives a $\Delta t \approx 47.6$ days.  \cite{arias_crab_2025} measure state the Crab filament core resolves at $\sim 0.03$ pc for the dense cores and $\sim 0.08-0.2$ pc for the broader diffuse envelope component. The value for $L$ then depends on whether the observed DM rise as whether that is indicative of a compact core filament or an extended absorbing envelope, in this case the density change from baseline to peak is $\sim 0.4\% $ are far below the reported densities of the Crab's filaments \citep{arias_crab_2025}, this points to the contribution being instead from a diffuse plasma. In any case using the values listed above for $L$ the transverse velocity yield a value of $190-380~\rm{km~s}^{-1}$ which is consistent with expected values for Crab filament and ejecta proper motion \citep{trimble_motions_1968}. 
+An individual DM event can be used to constrain the size of such a structure. Between August and October 2024 the DM shows a distinct rise while the scattering remains reasonably low (\cref{fig:scatteringtDMtimeseries}). Fitting a Gaussian to the electron content over this interval, and assuming the excess arises from a single structure crossing the line of sight rather than from the background electron density, the crossing time is taken as the Gaussian FWHM, $\Delta t = 2.355\sigma$, with $\sigma = 20.22$~days, giving $\Delta t \approx 47.6$~days. The peak excess above the baseline corresponds to $\Delta\mathrm{DM} \approx 0.02~$\dm, similar to the $\sim0.03$\dm variations reported by \cite{kuzmin_deviation_2008}.
 
-Taken together these constraints imply that DM excursion doesn't arise from the compact high-density filament core in the immediate vicinity of the pulsar and the envelope filaments are too far away to effect the line of sight. This is evidence that favours an origin more extended in a Rayleigh-Taylor-shaped filamentary ejecta. Further variations measured over time can rule out some nearby, compact plerionic\footnote{plerion - a filled-centre supernova remnant} structures and instead use the duration to place upper limits on the size and total emitting material of candidate filaments or wisps. 
+If the variation is driven by the motion of the pulsar behind the nebular material, the relevant velocity is the pulsar's transverse velocity, $v_\perp \approx 120~\mathrm{km~s^{-1}}$ \citep{kaplan_precise_2008}. The transverse size of the structure is then $L \approx v_\perp \Delta t \approx 3.3$~AU ($\approx 1.6\times10^{-5}$~pc), comparable to the $\sim$6~AU structures inferred by \cite{mckee_temporal_2018} from the characteristic $\sim$70-day timescale of their DM variations. Even if the material itself moves at the $\sim$$10^{3}~\mathrm{km~s^{-1}}$ typical of the filament proper motions \citep{trimble_motions_1968}, $L \lesssim 30$~AU ($\approx 1.3\times10^{-4}$~pc). In either case the structure is two to three orders of magnitude smaller than the $\sim$0.03~pc dense cores and $\sim$0.08--0.2~pc diffuse envelopes of the Crab's filaments resolved by \cite{arias_crab_2025}; at the pulsar's velocity a filament core would take $\sim$250~years to cross the line of sight. Assuming a depth along the line of sight comparable to its transverse size, the local electron density of the structure is $n_e \approx \Delta\mathrm{DM}/L \sim 10^{2}$--$10^{3}~\mathrm{cm^{-3}}$.
+
+Taken together, these constraints imply that the DM excursion is produced neither by the passage of a whole filament nor by the optical wisps, whose lateral scales of $\sim$$1.6\times10^{-3}$~pc correspond to crossing times of $\sim$13~years \citep{mckee_temporal_2018}. It instead points to compact, AU-scale density substructure, well below the resolution of current imaging, such as fine structure within the Rayleigh--Taylor-shaped filamentary ejecta. Continued monitoring and analysis across many wavelengths events will allow the distribution of crossing times to place limits on the sizes and densities of these structures, and to test whether nearby compact plerionic\footnote{plerion -- a filled-centre supernova remnant} structures contribute.
+
+
+% Taking the period of where there has been a distinct rise in DM but relativily low scattering values (\cref{fig:scatteringtDMtimeseries}) from around September to November as an example. \cite{mckee_temporal_2018} demonstrates that the relationship between scattering and dispersion is moderately correlated at $0.56 \pm 0.01$. 
+
+% and plotting the average electron content as a function of time and fitting a Gaussian an estimate can be made to the transverse time of a filament along the LOS between the observer and the Crab assuming that the main contributions come of DM variations come from the clump itself and not the background electron density. 
+
+% Using the fitted Gaussian width as a crossing time as the filament the transverse velocity can be estimated as $v_\perp \approx L/\Delta t$, where $L$ is the width of the filament and $\Delta t$ is taken to be the Gaussian FWHM, 2.355 $\sigma$ where, $\sigma =20.22~\rm days $ which gives a $\Delta t \approx 47.6$ days.  \cite{arias_crab_2025} measure state the Crab filament core resolves at $\sim 0.03$ pc for the dense cores and $\sim 0.08-0.2$ pc for the broader diffuse envelope component. The value for $L$ then depends on whether the observed DM rise as whether that is indicative of a compact core filament or an extended absorbing envelope, in this case the density change from baseline to peak is $\sim 0.4\% $ are far below the reported densities of the Crab's filaments \citep{arias_crab_2025}, this points to the contribution being instead from a diffuse plasma. In any case using the values listed above for $L$ the transverse velocity yield a value of $190-380~\rm{km~s}^{-1}$ which is consistent with expected values for Crab filament and ejecta proper motion \citep{trimble_motions_1968}. 
+
+% Taken together these constraints imply that DM excursion doesn't arise from the compact high-density filament core in the immediate vicinity of the pulsar and the envelope filaments are too far away to effect the line of sight. This is evidence that favours an origin more extended in a Rayleigh-Taylor-shaped filamentary ejecta. Further variations measured over time can rule out some nearby, compact plerionic\footnote{plerion - a filled-centre supernova remnant} structures and instead use the duration to place upper limits on the size and total emitting material of candidate filaments or wisps. 
 
 
 
@@ -337,7 +460,7 @@ Taken together these constraints imply that DM excursion doesn't arise from the 
 
 \subsection{Implications on the Solar Wind}
 
-Probing the Sun with GPs over long timescales prove to be more difficult, while some GPs can be clearly can be seen during radio solar bursts as shown in \cref{fig:GPthroughBurst}, the precision needed to probe the electron content from the Sun is on the order of $10^{-3}-10^{-4}$~\dm \citep{tiburzi_impact_2021, susarla_exploring_2024} the variations in the Crab nebula itself aren't constrained enough to making any meaningful long-term conclusions on the sun's electron content using GPs. As expected the number of observed bursts decreases with solar elongation (see table \ref{tab:bursts}).  
+Probing the Sun with GPs over long timescales prove to be more difficult, while some GPs can be clearly can be seen during radio solar bursts as shown in \cref{fig:GPthroughBurst}, the precision needed to probe the electron content from the Sun is on the order of $10^{-3}-10^{-4}$~\dm \citep{tiburzi_impact_2021, susarla_exploring_2024} the variations in the Crab nebula itself aren't constrained enough to making any meaningful long-term conclusions on the sun's electron content using GPs. As expected the number of observed bursts decreases along with solar elongation (see table \ref{tab:bursts}).  
 
 \begin{figure}
     \centering
@@ -346,7 +469,7 @@ Probing the Sun with GPs over long timescales prove to be more difficult, while 
     \label{fig:GPthroughBurst}
 \end{figure}
 
-\section{Conclusion \& Future Work} \label{sec:conclusion}
+\section{Conclusion \& Future Work} \label{sec:conclusion_crab}
 
 This work presents a six year observing campaign of the Crab pulsar using I-LOFAR. The dataset is comprised over a million single pulses and half a million giant pulses. The exceptional brightness of the Crab pulsar allowed for measurement of both dispersion measure and the pulse broadening due to scattering along the line of sight for over 5000 pulses above an S/N of 100.
 

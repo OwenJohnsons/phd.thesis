@@ -6,7 +6,7 @@ The required power for a certain extra terrestrial intelligent (ETI) transmitter
 We can measure the transmitter power of an ETI beacon in terms of the effective isotropic radiated power (EIRP; \citealt{Enriquez:2017}) as,
 \begin{equation}
 %    {\rm EIRP} = \sigma \times {4 \pi d_\star^2} \frac{\rm SEFD_{\rm HBA}}{\delta{\nu}_{t}} \sqrt{\frac{\delta{\nu}}{n_{p}t_{obs}{\omega}}}  \>\> W/Hz,
-    {\rm EIRP} = \sigma \times {4 \pi d_\star^2} \;\frac{{\rm SEFD}}{\delta{\nu_t}}\sqrt{\frac{\delta{\nu}}{n_{p}t_{obs}}}  \>\> \mathrm{W}\;
+    {\rm EIRP} = \sigma \times {4 \pi d_\star^2} \;\frac{{\rm SEFD}}{\delta{\nu_t}}\sqrt{\frac{\delta{\nu}}{n_{p}t_{obs}}}  \>\> \mathrm{[W]}\;
     \label{Eq:EIRP}
 \end{equation}
 Here, $\sigma$ is the required S/N, $\delta{\nu}$ is the bandwidth of the received signal, 
@@ -17,7 +17,7 @@ and $d_\star$ is the distance between the transmitter and the receiver, i.e., th
 %are assumed to be 3Hz. For PSM signals, we assumed the narrowest wide-band signal to be 3 kHz and $\omega$ to be 10\%. For the broadband aDM transients signals, we assumed $\delta{\nu}$ and $\delta{\nu}_{t}$ is assumed to be 80 MHz and $t_{obs}$ is assumed to be 1 msec. \\
 %The measured SEFD of the international HBA stations used in this survey is between 120 MHz and 180 MHz, is around 2 kJy, and increases significantly up to 12 kJy at 240 MHz. 
 
-The SEFD of the international HBA stations used in this survey is on average $\sim 900$~Jy for most of the band, rising to $\sim 1.2$~kJy at the band edges~\citep{2013arXiv1305.3550V}. For reference, the SEFD of the GBT at the $1.4$~GHz is around 10 Jy. This difference in sensitivity is 
+The SEFD of the international HBA stations used in this survey is on average $\sim 900$~Jy for most of the band, rising to $\sim 1.2$~kJy at the band edges~\citep{van_haarlem_lofar_2013}. For reference, the SEFD of the GBT at the $1.4$~GHz is around 10 Jy. This difference in sensitivity is 
 %due in small to the larger collecting area of the GBT and the cooled analogue front-end, but primarily 
 because sky temperature scales as $\nu^{-2.6}$ meaning it can be hundreds of times higher in the LOFAR band. However, the average values are of little use as there is also a large degree of variation in the sky temperature across the sky. For this reason, we perform a separate calculation for every target to determine the relevant luminosity limit in each case.  For example, the sensitivity to each off-boresight target is determined by its proximity to the pointing coordinates. Figure \ref{fig:off_beam_sens} depicts both the impact on sensitivity and the number of background stars within a given LOFAR beam. Figure \ref{fig:inbeam_trgts_SDSS} shows an example pointing from the survey and also well illustrates the vast volume of targets that appear in a LOFAR beam (pink).
 
@@ -40,7 +40,7 @@ A recent study by \cite{LOFAR-Starlink} has shown that unintended electromagneti
 
 
 \subsection{Figure of Merit}
-To compare SETI surveys, \cite{Enriquez:2017} introduced a figure of merit known as the Continuous Waveform Transmitter Rate (CWTFM), 
+To compare SETI surveys, \cite{Enriquez:2017} introduced a figure of merit known as the Continuous Waveform Transmitter Figure of Merit (CWTFM), 
 
 \begin{equation}
     \text{CWTFM} = \zeta_{\text{AO}} \dfrac{\text{EIRP}}{N_{\text{stars}} \nu_{\text{rel}}}
@@ -80,7 +80,7 @@ In \cite{2022VishalPulsed} a modified variation of the Drake equation (Equation.
     \label{eq:modified-drake}
 \end{equation}
 
-Here  $R_{\text{IP}}$ is defined as the emergence rate $(\text{yr}^{-1})$ of intelligent life in the Milky Way.  \Cref{fig:SETI-constraint} shows the constraint that this survey places on $f_c^n$ when using a Poisson sided upper limit at 95\% confidence which in this case is 2.995 as per \cite{1986_Poission_tables}. This provides the most strigent constraint of $f^n_c$ in this frequency range.
+Here  $R_{\text{IP}}$ is defined as the emergence rate $(\text{yr}^{-1})$ of intelligent life in the Milky Way.  \Cref{fig:SETI-constraint} shows the constraint that this survey places on $f_c^n$ when using a Poisson sided upper limit at 95\% confidence which in this case is 2.995 as per \cite{Gehrels:1986p10835}. This provides the most strigent constraint of $f^n_c$ in this frequency range.
  % Eq. \ref{eq:Drake_equation} isn't intended to be used for an exact number of civilizations in the Galaxy as every parameter in the equation is largely unconstrained in their own respective right. However, in can provide a broad estimation that lends itself very useful when performing a SETI search.  
 
 \begin{figure}
@@ -92,6 +92,6 @@ Here  $R_{\text{IP}}$ is defined as the emergence rate $(\text{yr}^{-1})$ of int
 
 \subsection{Future work using LOFAR 2.0}
 
-LOFAR is soon to undergo a staged series of upgrades across all stations in the array. These upgrades at individual stations across Europe will involve the installation of a new Receiver Control Unit (RCU) as described in \cite{LOFAR2}. These RCUs will enable the simultaneous use of both the LBA and HBA in the frequency range of 15 - 240 MHz. This enhancement will allow for a SETI survey across a broader low-frequency band.
+LOFAR is soon to undergo a staged series of upgrades across all stations in the array. These upgrades at individual stations across Europe will involve the installation of a new Receiver Control Unit (RCU) as described in \cite{LOFAR2}. These RCUs will enable the simultaneous use of both the LBA and HBA in the frequency range of 10 - 240 MHz. This enhancement will allow for a SETI survey across a broader low-frequency band.
 
-Specifically, at 30 MHz, the FWHM will cover an area of 19.39 deg$^2$, decreasing to 1.73 deg$^2$ at 190 MHz. This will enable follow-up LOFAR surveys to encompass a larger volume of stars and a broader frequency domain.
+Specifically, at 30 MHz, the FWHM will cover 19.39 deg, decreasing to 1.73 deg at 190 MHz. This will enable follow-up LOFAR surveys to encompass a larger volume of stars and a broader frequency domain.

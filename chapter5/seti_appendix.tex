@@ -5,7 +5,7 @@
 \chapter{Post-detection Barycentric Correction} \label{appen:barycenter}
 We have developed a novel barycentric correction code specifically designed for high-spectral resolution \texttt{sigproc} filterbank products for technosignature searches \citep{Vishal_Bary}. The code uses the TEMPO routine to calculate relative velocity towards the observing targets at both locations, thus allowing for precise correction of the barycentric drift.
 
-\begin{figure}[h]
+\begin{figure}[htbp]
     \centering
     \includegraphics[scale=0.45]{chapter5/figures/Barycentric_frequency_drift.pdf}
     \caption[Barycentric frequency drift]{Doppler drift of a narrowband signal in the topocentric observing frame at four different observing epochs. Simulated waterfalls with narrowband signals observed from the Irish LOFAR station towards the direction of TIC\,27677846 are shown for different times of the year in blue. The expected sign and direction of change of the relative velocity are labeled at the top of each plot. It is assumed that a hypothetical narrowband ETI signal is transmitted at a constant frequency of 1420\,MHz (with zero drift rate). As shown, the same signal is observed at different frequencies and drift rates depending on the sign and direction of change of the relative velocity at different epochs of observations. For instance, in the first panel, the relative velocity is positive and increases with observing time. Therefore, the observing frequency has been shifted to a lower frequency (as described by Equation \ref{eq:doppler}), and it continues to shift to even lower frequencies with time.}
@@ -21,7 +21,7 @@ Due to this shifts, we either replace empty channels at the edge of the spectra 
 
 As given in Equation \ref{eq:doppler}, the Doppler shifts are frequency-dependent, impacting higher frequencies more than lower frequencies. In other words, for spectra where frequencies are ordered from higher to lower frequency, the first channel will be shifted more compared to the last frequency channel. To compensate for this, we either expand or squeeze spectra as shown in Figure \ref{fig:spectra_expands_squeeze}. Figure \ref{fig:code_outline} outlines the logical flow of the code for a case of an input filterbank file with a descending order of frequency. By comparing Figure \ref{fig:bary_simulated_drift} and the code outline in Figure \ref{fig:code_outline}, we can consider one of the cases where the relative velocity is negative and increasing in absolute value with time. In this case, we need to shift consecutive spectra to lower and lower frequencies to match up their first frequency channel. Furthermore, for any negative relative velocity (either increasing or decreasing with time), we need to squeeze the individual spectra as shown in Figure \ref{fig:spectra_expands_squeeze}. Similarly, the same can be consider for the case of positive relative velocity. The code for this algorithm is publicly  available here\footnote{\url{https://github.com/gajjarv/BaryCentricCorrection}}.
 
-\begin{figure}[h]
+\begin{figure}[htbp]
 \centering
     \begin{tikzpicture}
     \draw[->, line width=1.5pt] (4.2,-0.2) -- (-1,-0.2) node[midway,below] {Frequency};
@@ -42,7 +42,7 @@ As given in Equation \ref{eq:doppler}, the Doppler shifts are frequency-dependen
     \label{fig:example_filterbank_file}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[htbp]
 \centering
 %    \subfloat{
     \begin{tikzpicture}
@@ -93,7 +93,7 @@ As given in Equation \ref{eq:doppler}, the Doppler shifts are frequency-dependen
     \label{fig:spectra_expands_squeeze}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[htbp]
     \centering
 \begin{tikzpicture}[node distance=2cm]
 % Define nodes
@@ -140,7 +140,7 @@ The code then writes each of these spectra into another \texttt{sigproc}  filter
 
 \section{Sensitivity of the Survey across the HBA}
 \label{SEC2:A2}
-As previously stated the high band antenna spans from 110 - 190 MHz. The system temperature across the band significantly, which reduces the sensitivity of LOFAR at the lower end of the band-pass (see. \Cref{fig:Cumulative_EIRP_plots}). Calculation of $T_{sys}$ and consquently SEFD follows a modified method as outlined in \S~3.3 of \cite{David-RRAT}. The method differs in the calculation of $T_{sky}$ as this is pointing dependent. This study uses the LWA1 Low Frequency Sky Survey \citep{LWA-survey} for sensitivity analysis. We calculate system equivalent flux density (SEFD; Jy) as follows, 
+As previously stated the high band antenna spans from 110 - 190 MHz. The system temperature across the band significantly, which reduces the sensitivity of LOFAR at the lower end of the band-pass (see. \Cref{fig:Cumulative_EIRP_plots}). Calculation of $T_{sys}$ and consquently SEFD follows a modified method as outlined in \S~3.3 of \cite{mckenna_census_2024}. The method differs in the calculation of $T_{sky}$ as this is pointing dependent. This study uses the LWA1 Low Frequency Sky Survey \citep{LWA-survey} for sensitivity analysis. We calculate system equivalent flux density (SEFD; Jy) as follows, 
 
 \begin{equation}
     \text{SEFD} = \frac{2 T_{\text{sys}} k_b}{A_e}

@@ -5,9 +5,10 @@
 \usepackage[utf8]{inputenc}
 \usepackage[pdftex]{graphicx}
 \usepackage{caption}
+\usepackage{verse}
+\usepackage{bashful}
 % \usepackage{subfigure} % Apparently no longer in use. 
 % \usepackage{subcaption}
-\usepackage{fancyhdr}
 \usepackage{eso-pic}
 \usepackage{enumerate}
 \usepackage[normalem]{ulem}
@@ -35,11 +36,17 @@
 \fancyhead[LE]{\leftmark}
 \fancyhead[RO]{\rightmark}  
 \fancyfoot[C]{\thepage} % offset on every other page because of the book template 
+% \setlength{\headheight}{23pt}
 
 \usepackage{xcolor}
 \definecolor{tcd-blue}{HTML}{0569b9}
 \definecolor{tcd-lightblue}{HTML}{448fcb}
 \usepackage[colorlinks=true,citecolor=tcd-blue,linkcolor=tcd-lightblue]{hyperref}
+
+% --- Poem --- 
+\newcommand{\attrib}[1]{%
+\nopagebreak{\raggedleft\footnotesize #1\par}}
+\renewcommand{\poemtitlefont}{\normalfont\large\itshape\centering}
 
 % --- Bib Stuff ---
 \input{misc/aas_journal_commands}
@@ -58,8 +65,11 @@
 \usepackage{adjustbox}
 
 % --- Drawing --- 
+\usepackage{silence}
+\WarningFilter{tikz-feynman}{The key you tried to use}
 \usepackage{tikz}
-\usepackage{tikz-feynman}
+\usepackage[compat=1.1.0]{tikz-feynman}
+\tikzfeynmanset{warn luatex=false}
 \usetikzlibrary{shapes.geometric, arrows}
 
 \tikzstyle{startstop} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm,text centered, draw=black, fill=red!30]
@@ -69,7 +79,7 @@
 \tikzstyle{arrow} = [thick,->,>=stealth]
 
 % --- Page Setup --- 
-\usepackage[a4paper,top=2.56cm,bottom=2.56cm,left=2.56cm,right=2.56cm, head = 16pt]{geometry}
+\usepackage[a4paper,top=2.56cm,bottom=2.56cm,left=2.56cm,right=2.56cm, head = 23pt]{geometry}
 \pagestyle{fancy}
 \usepackage{titlesec} % - Chapter Headings 
 \usepackage{epigraph}
@@ -111,11 +121,12 @@
 \newcommand{\dmmath}{\text{pc~cm}^{-3}}
 \newcommand{\dmn}{$\text{pc~cm}^{-3}$}
 \newcommand{\smass}{\, \text{M}_\odot}
+
 % Crab Paper Values 
 \newcommand{\tobs}{347.9}
-\newcommand{\epochs}{154}
+\newcommand{\epochs}{152}
 \newcommand{\GPn}{550,445}
-\newcommand{\GPhundred}{4,592}
+\newcommand{\GPhundred}{5,474}
 \newcommand{\cands}{1,048,138}
 \newcommand{\avgburstrate}{3390}
 
@@ -155,8 +166,7 @@
 \thispagestyle{empty}
 \vspace*{\fill}
 \begin{center}
- \Large \textit{For my parents, who supported me so much,\\
-  so I could chase the stars.}
+ \Large \textit{For my parents, who supported me so much, \\ so I could chase the stars.}
 \end{center}
 \vspace*{\fill}
 
@@ -220,7 +230,7 @@ Signed:~\rule{5cm}{0.3pt}\hfill Date:~\rule{5cm}{0.3pt}
 \hypersetup{linkcolor=black}
 \begingroup
   \renewcommand{\contentsname}{} % Remove title (optional)
-  \renewcommand{\addcontentsline}[3]{} % Prevent adding 'Table of Contents' to TOC
+  \renewcommand{\addcontentsline}[3]{} % Prevent adding 'Table of Content¯s' to TOC
   \tableofcontents
 \endgroup
 \listoffigures
